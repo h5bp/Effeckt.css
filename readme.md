@@ -5,8 +5,19 @@ UI-Less &amp; Performant Transitions &amp; Animations
 
 Originally started at [h5bp/lazyweb-requests#122](https://github.com/h5bp/lazyweb-requests/issues/122)
 
-### Wanna get involved?
-#### Head here: https://github.com/h5bp/Effeckt.css/issues
+### Issues or Feedback?
+Head here → [https://github.com/h5bp/Effeckt.css/issues](https://github.com/h5bp/Effeckt.css/issues)
+
+### ✭ Contributing & Pull Requests
+If you'd like to contribute to the [Effeckt.css](https://github.com/h5bp/Effeckt.css) project (btw you're awesome for doing so) then we suggest you do the following…
+
+1. [Fork this Repo](https://github.com/h5bp/Effeckt.css)
+2. Create a new branch on your forked copy of this project.
+3. Submit your branch to [this repo](https://github.com/h5bp/Effeckt.css) as a PR.
+4. Wait for 🌈 and 🐎 to appear.
+
+**aside**: please keep your commits targeted in a logical fashion in order to keep code review and merges as clean as a whistle yo.
+
 
 ### Exploratory demo
 
