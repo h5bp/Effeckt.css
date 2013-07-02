@@ -14,7 +14,7 @@ If you'd like to contribute to the [Effeckt.css](https://github.com/h5bp/Effeckt
 1. [Fork this Repo](https://github.com/h5bp/Effeckt.css)
 2. Create a new branch on your forked copy of this project.
 3. Submit your branch to [this repo](https://github.com/h5bp/Effeckt.css) as a PR.
-4. Wait for 🌈 and 🐎 to appear.
+4. Wait for unicorns appear.
 
 **aside**: please keep your commits targeted in a logical fashion in order to keep code review and merges as clean as a whistle yo.
 
