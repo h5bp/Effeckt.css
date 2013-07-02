@@ -8,6 +8,14 @@ Originally started at [h5bp/lazyweb-requests#122](https://github.com/h5bp/lazywe
 ### Wanna get involved?
 #### Head here: https://github.com/h5bp/Effeckt.css/issues
 
+### Exploratory demo
+
+<a href="http://codepen.io/chriscoyier/pen/enAsf">
+![image](https://f.cloud.github.com/assets/39191/739137/3a2d1800-e354-11e2-9de3-4a6d391c0dfa.png)
+</a>
+
+<hr>
+
 Ever notice how small flourishes and subtle transitions dramatically increases the value of the experience you enjoy with an app or site?
 
 Designing and developing UIs for the mobile web is tricky, but it's extremely difficult to do that while delivering something that performs at 60fps. The best opportunities to getting jank-free transitions on phones/tablets are css transition and keyframe animation based, especially tapping into hardware-accelerated transforms and opacity changes.
