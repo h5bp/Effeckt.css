@@ -50,13 +50,13 @@ body {
 }
 
 a {
-  color: #900;
   text-decoration: none;
+  color: #ccc;
 }
 
 a:hover,
 a:active {
-  color: red;
+  color: black;
 }
 
 subhead {
@@ -113,7 +113,7 @@ h1 span:nth-child(1) {
   -ms-transform: translateX(-50px);
   -o-transform: translateX(-50px);
   transform: translateX(-50px);
-  background: #3498db;
+  background: #666;
 }
 
 h1 span:nth-child(2) {
@@ -124,7 +124,7 @@ h1 span:nth-child(2) {
   -ms-transform: translateY(-50px);
   -o-transform: translateY(-50px);
   transform: translateY(-50px);
-  background: #2980b9;
+  background: #444;
 }
 
 h1 span:nth-child(3) {
@@ -135,7 +135,7 @@ h1 span:nth-child(3) {
   -ms-transform: translateX(50px);
   -o-transform: translateX(50px);
   transform: translateX(50px);
-  background: #3498db;
+  background: #666;
 }
 
 h1 span:nth-child(4) {
@@ -146,7 +146,7 @@ h1 span:nth-child(4) {
   -ms-transform: translateX(50px);
   -o-transform: translateX(50px);
   transform: translateX(50px);
-  background: #2980b9;
+  background: #444;
 }
 
 h1 span:nth-child(5) {
@@ -157,7 +157,7 @@ h1 span:nth-child(5) {
   -ms-transform: translateX(-50px);
   -o-transform: translateX(-50px);
   transform: translateX(-50px);
-  background: #3498db;
+  background: #666;
 }
 
 h1 span:nth-child(6) {
@@ -168,7 +168,7 @@ h1 span:nth-child(6) {
   -ms-transform: translateX(50px);
   -o-transform: translateX(50px);
   transform: translateX(50px);
-  background: #2980b9;
+  background: #444;
 }
 
 h1 span:nth-child(7) {
@@ -179,7 +179,7 @@ h1 span:nth-child(7) {
   -ms-transform: translateY(-50px);
   -o-transform: translateY(-50px);
   transform: translateY(-50px);
-  background: #3498db;
+  background: #666;
 }
 
 h1 span:nth-child(8) {
@@ -274,6 +274,15 @@ h1 span:nth-child(11) {
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+.button-demo-wrap {
+  width: 35%;
+  float: left;
+}
+
+.button-demo-wrap:nth-child(2n) {
+  clear: both;
 }
 
 .effeckt-list-wrap {
