@@ -1,3 +1,21 @@
+.effeckt-modal.subtle-fade {
+  opacity: 0;
+  transition: 0.3s;
+  box-shadow: 0 0 300px rgba(0, 0, 0, 0.3); }
+
+.effeckt-modal.subtle-fade.effeckt-show {
+  opacity: 1; }
+
+.effeckt-modal.subtle-zoom {
+  opacity: 0;
+  transition: 0.2s;
+  transform: scale(1.02) translateX(-50%) translateY(-50%); }
+
+.effeckt-modal.subtle-zoom.effeckt-show {
+  opacity: 1;
+  transform: scale(1) translateX(-50%) translateY(-50%);
+  box-shadow: 0 0 300px rgba(0, 0, 0, 0.3); }
+
 .effeckt-modal.from-above {
   opacity: 0;
   transition: 0.2s;
