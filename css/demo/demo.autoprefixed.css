@@ -18,16 +18,16 @@ body {
   font-size: large;
   line-height: 1.4;
   overflow-x: hidden;
-  -webkit-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  -o-transform: translateZ(0);
-  transform: translateZ(0);
 }
 
 .page-wrap {
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .effeckt {

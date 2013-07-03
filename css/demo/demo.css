@@ -12,13 +12,13 @@ body {
   font-family: 'Kite One', sans-serif;
   font-size: large;
   line-height: 1.4;
-  overflow-x: hidden;
-  transform: translateZ(0); }
+  overflow-x: hidden; }
 
 .page-wrap {
   max-width: 800px;
   margin: 0 auto;
-  padding: 2rem; }
+  padding: 2rem;
+  transform: translateZ(0); }
 
 .effeckt {
   padding: 2rem;
