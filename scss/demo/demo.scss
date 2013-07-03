@@ -1,27 +1,34 @@
 @import url(http://fonts.googleapis.com/css?family=Kite+One);
 
-// Additional Reset
+// Reset
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+// is needed for overlay
+html, body {
+  height: 100%;
 }
 
 body {
   background: #eee;
   font-family: 'Kite One', sans-serif;
-
+  font-size: large;
+  line-height: 1.4;
   overflow-x: hidden; // for logo effect
-
   transform: translateZ(0); // for performance
 }
 
 // Layout
 .page-wrap {
   max-width: 800px;
-  margin: 2rem auto;
-  padding: 1rem;
+  margin: 0 auto;
+  padding: 2rem;
 }
 .effeckt {
-  padding: 1rem;
+  padding: 2rem;
   background: white;
   margin: 0 1rem 1rem 0;
 }
@@ -35,7 +42,9 @@ a:hover, a:active {
   color: red;
 }
 subhead {
+  display: block;
   font-size: 1.4rem;
+  margin: 0 0 2rem 0;
 }
 h1 {
   font-size: 0;
@@ -48,11 +57,21 @@ h1 span {
   opacity: 0;
 }
 h2 {
+  margin: 0 0 1rem 0;
+  padding: 0 0 0.2rem 0;
   border-bottom: 2px solid #eee;
 }
 h2 a {
   font-size: 1rem;
 }
+p {
+  margin: 0 0 1rem 0;
+}
+
+button {
+  padding: 0.25rem;
+}
+
 h1 span:nth-child(1) {
   animation: logo-from-horz 0.5s ease forwards;
   transform: translateX(-50px);
