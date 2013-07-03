@@ -1,0 +1,205 @@
+@import url(http://fonts.googleapis.com/css?family=Kite+One);
+
+* {
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: 'Kite One', sans-serif;
+  font-size: large;
+  line-height: 1.4;
+  overflow-x: hidden;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.page-wrap {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.effeckt {
+  padding: 2rem;
+  background: white;
+  margin: 0 1rem 1rem 0;
+}
+
+a {
+  color: #900;
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  color: red;
+}
+
+subhead {
+  display: block;
+  font-size: 1.4rem;
+  margin: 0 0 2rem 0;
+}
+
+h1 {
+  font-size: 0;
+  margin: 0 0 0.5rem;
+}
+
+h1 span {
+  font-size: 3rem;
+  position: relative;
+  display: inline-block;
+  opacity: 0;
+}
+
+h2 {
+  margin: 0 0 1rem 0;
+  padding: 0 0 0.2rem 0;
+  border-bottom: 2px solid #eee;
+}
+
+h2 a {
+  font-size: 1rem;
+}
+
+p {
+  margin: 0 0 1rem 0;
+}
+
+button {
+  padding: 0.25rem;
+}
+
+h1 span:nth-child(1) {
+  -webkit-animation: logo-from-horz 0.5s ease forwards;
+  -o-animation: logo-from-horz 0.5s ease forwards;
+  animation: logo-from-horz 0.5s ease forwards;
+  -webkit-transform: translateX(-50px);
+  -ms-transform: translateX(-50px);
+  -o-transform: translateX(-50px);
+  transform: translateX(-50px);
+}
+
+h1 span:nth-child(2) {
+  -webkit-animation: logo-from-vert 0.5s ease forwards;
+  -o-animation: logo-from-vert 0.5s ease forwards;
+  animation: logo-from-vert 0.5s ease forwards;
+  -webkit-transform: translateY(-50px);
+  -ms-transform: translateY(-50px);
+  -o-transform: translateY(-50px);
+  transform: translateY(-50px);
+}
+
+h1 span:nth-child(3) {
+  -webkit-animation: logo-from-vert 0.5s ease forwards;
+  -o-animation: logo-from-vert 0.5s ease forwards;
+  animation: logo-from-vert 0.5s ease forwards;
+  -webkit-transform: translateX(50px);
+  -ms-transform: translateX(50px);
+  -o-transform: translateX(50px);
+  transform: translateX(50px);
+}
+
+h1 span:nth-child(4) {
+  -webkit-animation: logo-from-horz 0.3s ease forwards;
+  -o-animation: logo-from-horz 0.3s ease forwards;
+  animation: logo-from-horz 0.3s ease forwards;
+  -webkit-transform: translateX(50px);
+  -ms-transform: translateX(50px);
+  -o-transform: translateX(50px);
+  transform: translateX(50px);
+}
+
+h1 span:nth-child(5) {
+  -webkit-animation: logo-from-horz 0.3s ease forwards;
+  -o-animation: logo-from-horz 0.3s ease forwards;
+  animation: logo-from-horz 0.3s ease forwards;
+  -webkit-transform: translateX(-50px);
+  -ms-transform: translateX(-50px);
+  -o-transform: translateX(-50px);
+  transform: translateX(-50px);
+}
+
+h1 span:nth-child(6) {
+  -webkit-animation: logo-from-horz 0.3s ease forwards;
+  -o-animation: logo-from-horz 0.3s ease forwards;
+  animation: logo-from-horz 0.3s ease forwards;
+  -webkit-transform: translateX(50px);
+  -ms-transform: translateX(50px);
+  -o-transform: translateX(50px);
+  transform: translateX(50px);
+}
+
+h1 span:nth-child(7) {
+  -webkit-animation: logo-from-vert 0.3s ease forwards;
+  -o-animation: logo-from-vert 0.3s ease forwards;
+  animation: logo-from-vert 0.3s ease forwards;
+  -webkit-transform: translateX(-50px);
+  -ms-transform: translateX(-50px);
+  -o-transform: translateX(-50px);
+  transform: translateX(-50px);
+}
+
+h1 span:nth-child(8) {
+  -webkit-animation: logo-from-vert 0.2s 0.5s ease forwards;
+  -o-animation: logo-from-vert 0.2s 0.5s ease forwards;
+  animation: logo-from-vert 0.2s 0.5s ease forwards;
+  -webkit-transform: translateX(1000px);
+  -ms-transform: translateX(1000px);
+  -o-transform: translateX(1000px);
+  transform: translateX(1000px);
+}
+
+@-webkit-keyframes logo-from-horz {
+  100% {
+    -webkit-transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@-o-keyframes logo-from-horz {
+  100% {
+    -webkit-transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes logo-from-horz {
+  100% {
+    -webkit-transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes logo-from-vert {
+  100% {
+    -webkit-transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@-o-keyframes logo-from-vert {
+  100% {
+    -webkit-transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes logo-from-vert {
+  100% {
+    -webkit-transform: translateY(0);
+    opacity: 1;
+  }
+}
