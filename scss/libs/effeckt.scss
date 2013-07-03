@@ -1,0 +1,280 @@
+@import 'bourbon/bourbon';
+
+
+// Dan Eden's Animate.css -> Effeckt.css
+@include keyframes(flash) {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+}
+@include keyframes(shake) {
+    0%, 100% { @include transform(translateX(0)); }
+    10%, 30%, 50%, 70%, 90% { @include transform(translateX(-10px)); }
+    20%, 40%, 60%, 80% { @include transform(translateX(10px)); }
+}
+@include keyframes(bounce) {
+    0%, 20%, 50%, 80%, 100% { @include transform(translateY(0)); }
+    40% { @include transform(translateY(-30px)); }
+    60% { @include transform(translateY(-15px)); }
+}
+@include keyframes(tada) {
+    0% { @include transform(scale(1)); }
+    10%, 20% { @include transform(scale(0.9) rotate(-3deg)); }
+    30%, 50%, 70%, 90% { @include transform(scale(1.1) rotate(3deg)); }
+    40%, 60%, 80% { @include transform(scale(1.1) rotate(-3deg)); }
+    100% { @include transform(scale(1) rotate(0)); }
+}
+@include keyframes(swing) {
+    20%, 40%, 60%, 80%, 100% { @include transform-origin(top center); }
+    20% { @include transform(rotate(15deg)); }
+    40% { @include transform(rotate(-10deg)); }
+    60% { @include transform(rotate(5deg)); }
+    80% { @include transform(rotate(-5deg)); }
+    100% { @include transform(rotate(0deg)); }
+}
+@include keyframes(wobble) {
+    0% { @include transform(translateX(0%)); }
+    15% { @include transform(translateX(-25%) rotate(-5deg)); }
+    30% { @include transform(translateX(20%) rotate(3deg)); }
+    45% { @include transform(translateX(-15%) rotate(-3deg)); }
+    60% { @include transform(translateX(10%) rotate(2deg)); }
+    75% { @include transform(translateX(-5%) rotate(-1deg)); }
+    100% { @include transform(translateX(0%)); }
+}
+@include keyframes(pulse) {
+    0% { @include transform(scale(1)); }
+    50% { @include transform(scale(1.1)); }
+    100% { @include transform(scale(1)); }
+}
+@include keyframes(flip) {
+    0% { @include transform(perspective(400px) rotateY(0)); @include animation-timing-function(ease-out); }
+    40% { @include transform(perspective(400px) translateZ(150px) rotateY(170deg)); @include animation-timing-function(ease-out); }
+    50% { @include transform(perspective(400px) translateZ(150px) rotateY(190deg) scale(1)); @include animation-timing-function(ease-in); }
+    80% { @include transform(perspective(400px) rotateY(360deg) scale(.95)); @include animation-timing-function(ease-in); }
+    100% { @include transform(perspective(400px) scale(1)); @include animation-timing-function(ease-in); }
+}
+@include keyframes(flipInX) {
+    0% { @include transform(perspective(400px) rotateX(90deg)); opacity: 0; }
+    40% { @include transform(perspective(400px) rotateX(-10deg)); }
+    70% { @include transform(perspective(400px) rotateX(10deg)); }
+    100% { @include transform(perspective(400px) rotateX(0deg)); opacity: 1; }
+}
+@include keyframes(flipOutX) {
+    0% { @include transform(perspective(400px) rotateX(0deg)); opacity: 1; }
+    100% { @include transform(perspective(400px) rotateX(90deg)); opacity: 0; }
+}
+@include keyframes(flipInY) {
+    0% { @include transform(perspective(400px) rotateY(90deg)); opacity: 0; }
+    40% { @include transform(perspective(400px) rotateY(-10deg)); }
+    70% { @include transform(perspective(400px) rotateY(10deg)); }
+    100% { @include transform(perspective(400px) rotateY(0deg)); opacity: 1; }
+}
+@include keyframes(flipOutY) {
+    0% { @include transform(perspective(400px) rotateY(0deg)); opacity: 1; }
+    100% { @include transform(perspective(400px) rotateY(90deg)); opacity: 0; }
+}
+@include keyframes(fadeIn) {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@include keyframes(fadeInUp) {
+    0% { opacity: 0; @include transform(translateY(20px)); }
+    100% { opacity: 1; @include transform(translateY(0)); }
+}
+@include keyframes(fadeInDown) {
+    0% { opacity: 0; @include transform(translateY(-20px)); }
+    100% { opacity: 1; @include transform(translateY(0)); }
+}
+@include keyframes(fadeInLeft) {
+    0% { opacity: 0; @include transform(translateX(-20px)); }
+    100% { opacity: 1; @include transform(translateX(0)); }
+}
+@include keyframes(fadeInRight) {
+    0% { opacity: 0; @include transform(translateX(20px)); }
+    100% { opacity: 1; @include transform(translateX(0)); }
+}
+@include keyframes(fadeInUpBig) {
+    0% { opacity: 0; @include transform(translateY(2000px)); }
+    100% { opacity: 1; @include transform(translateY(0)); }
+}
+@include keyframes(fadeInDownBig) {
+    0% { opacity: 0; @include transform(translateY(-2000px)); }
+    100% { opacity: 0; @include transform(translateY(0)); }
+}
+@include keyframes(fadeInLeftBig) {
+    0% { opacity: 0; @include transform(translateX(-2000px)); }
+    100% { opacity: 1; @include transform(translateX(0)); }
+}
+@include keyframes(fadeInRightBig) {
+    0% { opacity: 0; @include transform(translateX(2000px)); }
+    100% { opacity: 1; @include transform(translateX(0)); }
+}
+@include keyframes(fadeOut) {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+@include keyframes(fadeOutUp) {
+    0% { opacity: 1; @include transform(translateY(0)); }
+    100% { opacity: 0; @include transform(translateY(-20px)); }
+}
+@include keyframes(fadeOutDown) {
+    0% { opacity: 1; @include transform(translateY(0)); }
+    100% { opacity: 0; @include transform(translateY(20px)); }
+}
+@include keyframes(fadeOutLeft) {
+    0% { opacity: 1; @include transform(translateX(0)); }
+    100% { opacity: 0; @include transform(translateX(-20px)); }
+}
+@include keyframes(fadeOutRight) {
+    0% { opacity: 1; @include transform(translateX(0)); }
+    100% { opacity: 0; @include transform(translateX(20px)); }
+}
+@include keyframes(fadeOutUpBig) {
+    0% { opacity: 1; @include transform(translateY(0)); }
+    100% { opacity: 0; @include transform(translateY(-2000px)); }
+}
+@include keyframes(fadeOutDownBig) {
+    0% { opacity: 1; @include transform(translateY(0)); }
+    100% { opacity: 0; @include transform(translateY(2000px)); }
+}
+@include keyframes(fadeOutLeftBig) {
+    0% { opacity: 1; @include transform(translateX(0)); }
+    100% { opacity: 0; @include transform(translateX(-2000px)); }
+}
+@include keyframes(fadeOutRightBig) {
+    0% { opacity: 1; @include transform(translateX(0)); }
+    100% { opacity: 0; @include transform(translateX(2000px)); }
+}
+@include keyframes(bounceIn) {
+    0% { opacity: 0; @include transform(scale(.3)); }
+    50% { opacity: 1; @include transform(scale(1.05)); }
+    70% { @include transform(scale(.9)); }
+    100% { @include transform(scale(1)); }
+}
+@include keyframes(bounceInUp) {
+    0% { opacity: 0; @include transform(translateY(2000px)); }
+    60% { opacity: 1; @include transform(translateY(-30px)); }
+    80% { @include transform(translateY(10px)); }
+    100% { @include transform(translateY(0)); }
+}
+@include keyframes(bounceInDown) {
+    0% { opacity: 0; @include transform(translateY(-2000px)); }
+    60% { opacity: 1; @include transform(translateY(30px)); }
+    80% { @include transform(translateY(-10px)); }
+    100% { @include transform(translateY(0)); }
+}
+@include keyframes(bounceInLeft) {
+    0% { opacity: 0; @include transform(translateX(-2000px)); }
+    60% { opacity: 1; @include transform(translateX(30px)); }
+    80% { @include transform(translateX(-10px)); }
+    100% { @include transform(translateX(0)); }
+}
+@include keyframes(bounceInRight) {
+    0% { opacity: 0; @include transform(translateX(2000px)); }
+    60% { opacity: 1; @include transform(translateX(-30px)); }
+    80% { @include transform(translateX(10px)); }
+    100% { @include transform(translateX(0)); }
+}
+@include keyframes(bounceOut) {
+    0% { @include transform(scale(1)); }
+    25% { @include transform(scale(.95)); }
+    50% { opacity: 1; @include transform(scale(1.1)); }
+    100% { opacity: 0; @include transform(scale(.3)); }
+}
+@include keyframes(bounceOutUp) {
+    0% { @include transform(translateY(0)); }
+    20% { opacity: 1; @include transform(translateY(20px)); }
+    100% { opacity: 0; @include transform(translateY(-2000px)); }
+}
+@include keyframes(bounceOutDown) {
+    0% { @include transform(translateY(0)); }
+    20% { opacity: 1; @include transform(translateY(-20px)); }
+    100% { opacity: 0; @include transform(translateY(2000px)); }
+}
+@include keyframes(bounceOutLeft) {
+    0% { @include transform(translateX(0)); }
+    20% { opacity: 1; @include transform(translateX(20px)); }
+    100% { opacity: 0; @include transform(translateX(-2000px)); }
+}
+@include keyframes(bounceOutRight) {
+    0% { @include transform(translateX(0)); }
+    20% { opacity: 1; @include transform(translateX(-20px)); }
+    100% { opacity: 0; @include transform(translateX(2000px)); }
+}
+@include keyframes(rotateIn) {
+    0% { @include transform-origin(center center); @include transform(rotate(-200deg)); opacity: 0; }
+    100% { @include transform-origin(center center); @include transform(rotate(0)); opacity: 1; }
+}
+@include keyframes(rotateInUpLeft) {
+    0% { @include transform-origin(left bottom); @include transform(rotate(90deg)); opacity: 0; }
+    100% { @include transform-origin(left bottom); @include transform(rotate(0)); opacity: 1; }
+}
+@include keyframes(rotateInDownLeft) {
+    0% { @include transform-origin(left bottom); @include transform(rotate(-90deg)); opacity: 0; }
+    100% { @include transform-origin(left bottom); @include transform(rotate(0)); opacity: 1; }
+}
+@include keyframes(rotateInUpRight) {
+    0% { @include transform-origin(right bottom); @include transform(rotate(-90deg)); opacity: 0; }
+    100% { @include transform-origin(right bottom); @include transform(rotate(0)); opacity: 1; }
+}
+@include keyframes(rotateInDownRight) {
+    0% { @include transform-origin(right bottom); @include transform(rotate(90deg)); opacity: 0; }
+    100% { @include transform-origin(right bottom); @include transform(rotate(0)); opacity: 1; }
+}
+@include keyframes(rotateOut) {
+    0% { @include transform-origin(center center); @include transform(rotate(0)); opacity: 1; }
+    100% { @include transform-origin(center center); @include transform(rotate(200deg)); opacity: 0; }
+}
+@include keyframes(rotateOutUpLeft) {
+    0% { @include transform-origin(left bottom); @include transform(rotate(0)); opacity: 1; }
+    100% { @include transform-origin(left bottom); @include transform(rotate(-90deg)); opacity: 0; }
+}
+@include keyframes(rotateOutDownLeft) {
+    0% { @include transform-origin(left bottom); @include transform(rotate(0)); opacity: 1; }
+    100% { @include transform-origin(left bottom); @include transform(rotate(90deg)); opacity: 0; }
+}
+@include keyframes(rotateOutUpRight) {
+    0% { @include transform-origin(right bottom); @include transform(rotate(0)); opacity: 1; }
+    100% { @include transform-origin(right bottom); @include transform(rotate(90deg)); opacity: 0; }
+}
+@include keyframes(rotateOutDownRight) {
+    0% { @include transform-origin(right bottom); @include transform(rotate(0)); opacity: 1; }
+    100% { @include transform-origin(right bottom); @include transform(rotate(-90deg)); opacity: 0; }
+}
+@include keyframes(hinge) {
+    0% { @include transform(rotate(0)); @include transform-origin(top left); @include animation-timing-function(ease-in-out); }
+    20%, 60% { @include transform(rotate(80deg)); @include transform-origin(top left); @include animation-timing-function(ease-in-out); }
+    40% { @include transform(rotate(60deg)); @include transform-origin(top left); @include animation-timing-function(ease-in-out); }
+    80% { @include transform(rotate(60deg) translateY(0)); opacity: 1; @include transform-origin(top left); @include animation-timing-function(ease-in-out); }
+    100% { @include transform(translateY(700px)); opacity: 0; }
+}
+@include keyframes(rollIn) {
+    0% { opacity: 0; @include transform(translateX(-100%) rotate(-120deg)); }
+    100% { opacity: 1; @include transform(translateX(0px) rotate(0deg)); }
+}
+@include keyframes(rollOut) {
+    0% { opacity: 1; @include transform(translateX(0px) rotate(0deg)); }
+    100% { opacity: 0; @include transform(translateX(100%) rotate(120deg)); }
+}
+@include keyframes(lightSpeedIn) {
+    0% { @include transform(translateX(100%) skewX(-30deg)); opacity: 0; }
+    60% { @include transform(translateX(-20%) skewX(30deg)); opacity: 1; }
+    80% { @include transform(translateX(0%) skewX(-15deg)); opacity: 1; }
+    100% { @include transform(translateX(0%) skewX(0deg)); opacity: 1; }
+}
+@include keyframes(lightSpeedOut) {
+    0% { @include transform(translateX(0%) skewX(0deg)); opacity: 1; }
+    100% { @include transform(translateX(100%) skewX(-30deg)); opacity: 0; }
+}
+@include keyframes(wiggle) {
+    0% { @include transform(skewX(9deg)); }
+    10% { @include transform(skewX(-8deg)); }
+    20% { @include transform(skewX(7deg)); }
+    30% { @include transform(skewX(-6deg)); }
+    40% { @include transform(skewX(5deg)); }
+    50% { @include transform(skewX(-4deg)); }
+    60% { @include transform(skewX(3deg)); }
+    70% { @include transform(skewX(-2deg)); }
+    80% { @include transform(skewX(1deg)); }
+    90% { @include transform(skewX(0deg)); }
+    100% { @include transform(skewX(0deg)); }
+}
