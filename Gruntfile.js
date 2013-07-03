@@ -13,23 +13,25 @@ module.exports = function(grunt) {
       }
     },
 
-    // TODO: Refactor this repetative stuff
-
     sass: {
       build: {
-        files: {
-          // destination, source
-          'css/demo/demo.css': 'scss/demo/demo.scss',
-          'css/modules/modals.css': 'scss/modules/modals.scss',
-          'css/modules/modals-1.css': 'scss/modules/modals-1.scss',
-          'css/modules/modals-2.css': 'scss/modules/modals-2.scss',
-          'css/modules/buttons-1.css': 'scss/modules/buttons-1.scss',
-          'css/modules/list-items-1.css': 'scss/modules/list-items-1.scss'
+        files : [
+          {
+            src : ['**/*.scss', '!**/_*.scss'],
+            cwd : 'scss',
+            dest : 'css',
+            ext : '.css',
+            expand : true
+          }
+        ],
+        options : {
+          style : 'expanded'
         }
       }
     },
 
     // https://github.com/nDmitry/grunt-autoprefixer
+    // Too repetative? Or good because we need a web builder with file list?
     autoprefixer: {
       build: {
         options: {

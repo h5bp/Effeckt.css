@@ -9,17 +9,21 @@
   transform: translateX(-50%) translateY(-50%);
   visibility: hidden;
   backface-visibility: hidden;
-  background: white; }
-  .effeckt-modal h3 {
-    padding: 1rem;
-    color: white;
-    background: #444; }
+  background: white;
+}
+.effeckt-modal h3 {
+  padding: 1rem;
+  color: white;
+  background: #444;
+}
 
 .effeckt-modal-content {
-  padding: 1rem; }
+  padding: 1rem;
+}
 
 .effeckt-show {
-  visibility: visible; }
+  visibility: visible;
+}
 
 .effeckt-overlay {
   position: fixed;
@@ -31,8 +35,10 @@
   z-index: 1000;
   opacity: 0;
   background: rgba(0, 0, 0, 0.5);
-  transition: 0.3s; }
+  transition: 0.3s;
+}
 
 .effeckt-overlay.effeckt-show {
   opacity: 1;
-  visibility: visible; }
+  visibility: visible;
+}
