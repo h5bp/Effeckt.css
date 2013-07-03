@@ -47,7 +47,7 @@ You'll have to:
 1. Fork the project and pull down your copy
 1. Run `npm install`
 1. Make sure you have the Grunt command-line interface with `npm install -g grunt-cli`
-1. Run `grunt watch` to start watching for file saves
+1. Run `grunt dev` to start watching for file saves & run a local web server at port 3000 (localhost:3000)
 1. Probably make a local development domain, because the plan is to `$.load` in the different individual modules, so each module can be it's own .html file, and that won't work at a file:// URL.
 
 
@@ -76,7 +76,7 @@ Because there are so many, I expect we could **group things by role**:
 * attention attractors
 
 
-## Goals 
+## Goals
 
 This library/framework would come with some **goals**:
 
@@ -85,7 +85,7 @@ This library/framework would come with some **goals**:
 1. Establish browser support guidelines (I expect Android 2.3 would gracefully degrade)
 1. CSS performance regression testing (a la [bench.topcoat.io](http://bench.topcoat.io))
 1. Deliver jank-free *60fps* performance on target browsers/devices
-1. If a particular effect cannot deliver target performance (hey `blur()` css filter), it cannot be included. 
+1. If a particular effect cannot deliver target performance (hey `blur()` css filter), it cannot be included.
 1. Guidelines on what to avoid when styling these affected elements (avoid expensive CSS)
 1. Deliver a builder so users can pull only the CSS they need.
 1. There is no hover on the mobile web, so any hover-based effects would be excluded.

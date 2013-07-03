@@ -47,11 +47,20 @@ module.exports = function(grunt) {
           }
         ]
       }
+    },
+
+    connect: {
+      server: {
+        options: {
+          port: 3000,
+          base: './'
+        }
+      }
     }
   });
 
   // Default task
   grunt.registerTask('default', ['sass', 'autoprefixer']);
+  grunt.registerTask('dev', ['connect', 'watch']);
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
-  
 };
