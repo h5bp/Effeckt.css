@@ -4,4 +4,5 @@ group :development do
   gem 'sass'
   gem 'guard'
   gem 'guard-livereload'
+  gem 'guard-sass'
 end
