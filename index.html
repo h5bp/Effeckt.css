@@ -16,9 +16,12 @@
 
     <!-- Individual module CSS files here -->
     <!-- Should we combine or not combine? -->
+
     <link rel="stylesheet" href="css/modules/modals.autoprefixed.css">
     <link rel="stylesheet" href="css/modules/modals-1.autoprefixed.css">
     <link rel="stylesheet" href="css/modules/modals-2.autoprefixed.css">
+
+    <link rel="stylesheet" href="css/modules/buttons-1.autoprefixed.css">
 </head>
 
 <body>
@@ -37,10 +40,15 @@
     </h1>
     <subhead>UI-Less & Performant Transitions & Animations</subhead>
 
-    <!-- maybe use https://github.com/vanetix/grunt-includes ?? -->
+    <!-- TODO: Break this up into separate files -->
+    <!-- Possibilities:
+        1. Grunt includes https://github.com/vanetix/grunt-includes
+        2. Jade includes
+        3. $.load with jQuery
+        4. Something else? PHP?
+    -->
 
-
-    <div class="effeckt">
+    <div class="effeckt effeckt-demo-modals-1">
       <h2>
         Modals 1
         <a href="http://codepen.io/chriscoyier/pen/EGbxc">(source)</a>
@@ -51,7 +59,7 @@
     </div>
 
 
-    <div class="effeckt">
+    <div class="effeckt effeckt-demo-modals-2">
       <h2>
         Modals 2
         <a href="http://tympanus.net/codrops/2013/06/25/nifty-modal-window-effects/">(source)</a>
@@ -76,10 +84,39 @@
 
     </div>
 
+
+    <div class="effeckt effeckt-demo-buttons-1">
+
+      <h2>
+        Buttons 1
+        <a href="http://lab.hakim.se/ladda/">(source)</a>
+      </h2>
+
+      <button class="ladda-button expand-right"><span class="label">Expand Right</span> <span class="spinner"></span></button>
+
+      <button class="ladda-button expand-left"><span class="label">Expand Left</span> <span class="spinner"></span></button>
+
+      <button class="ladda-button expand-up"><span class="label">Expand Up</span> <span class="spinner"></span></button>
+
+      <button class="ladda-button expand-down"><span class="label">Expand Down</span> <span class="spinner"></span></button>
+
+      <button class="ladda-button slide-left"><span class="label">Slide Left</span> <span class="spinner"></span></button>
+
+      <button class="ladda-button slide-right"><span class="label">Slide Right</span> <span class="spinner"></span></button>
+
+      <button class="ladda-button slide-up"><span class="label">Slide Up</span> <span class="spinner"></span></button>
+
+      <button class="ladda-button slide-down"><span class="label">Slide Down</span> <span class="spinner"></span></button>
+
+      <button class="ladda-button zoom-out"><span class="label">Zoom Out</span> <span class="spinner"></span></button>
+
+      <button class="ladda-button zoom-in"><span class="label">Zoom in</span> <span class="spinner"></span></button>
+
+    </div>
+
+
+
   </div><!-- div.page-wrap -->
-
-
-
 
 
 
@@ -110,6 +147,8 @@
   <!-- Should we provide minified versions? -->
   <script src="js/modules/modals-1.js"></script>
   <script src="js/modules/modals-2.js"></script>
+
+  <script src="js/modules/buttons-1.js"></script>
 </body>
 
 </html>

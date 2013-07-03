@@ -57,7 +57,6 @@ var Modals2 = {
       Modals2.modal.removeClass(Modals2.modalStyle);
     }, 300);
 
-    console.log("hiding");
     Modals2.hideOverlay();
 
   },
@@ -67,11 +66,9 @@ var Modals2 = {
   },
 
   hideOverlay: function() {
-
     Modals2.overlay.removeClass("effeckt-show");
   }
 
 }
-
 
 Modals2.init();

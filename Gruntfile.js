@@ -1,4 +1,5 @@
-module.exports = function( grunt ) {
+module.exports = function(grunt) {
+
   grunt.initConfig({
     pkg: grunt.file.readJSON( 'package.json' ),
 
@@ -21,7 +22,8 @@ module.exports = function( grunt ) {
           'css/demo/demo.css': 'scss/demo/demo.scss',
           'css/modules/modals.css': 'scss/modules/modals.scss',
           'css/modules/modals-1.css': 'scss/modules/modals-1.scss',
-          'css/modules/modals-2.css': 'scss/modules/modals-2.scss'
+          'css/modules/modals-2.css': 'scss/modules/modals-2.scss',
+          'css/modules/buttons-1.css': 'scss/modules/buttons-1.scss'
         }
       }
     },
@@ -37,7 +39,8 @@ module.exports = function( grunt ) {
           'css/demo/demo.autoprefixed.css': ['css/demo/demo.css'],
           'css/modules/modals.autoprefixed.css': ['css/modules/modals.css'],
           'css/modules/modals-1.autoprefixed.css': ['css/modules/modals-1.css'],
-          'css/modules/modals-2.autoprefixed.css': ['css/modules/modals-2.css']
+          'css/modules/modals-2.autoprefixed.css': ['css/modules/modals-2.css'],
+          'css/modules/buttons-1.autoprefixed.css': ['css/modules/buttons-1.css']
         }
       }
     }
@@ -46,4 +49,5 @@ module.exports = function( grunt ) {
   // Default task
   grunt.registerTask('default', ['sass', 'autoprefixer']);
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+  
 };
