@@ -37,15 +37,15 @@ module.exports = function(grunt) {
         options: {
           browsers: ['last 2 versions', '> 1%']
         },
-        files: {
-          // destination, source(s)
-          'css/demo/demo.autoprefixed.css': ['css/demo/demo.css'],
-          'css/modules/modals.autoprefixed.css': ['css/modules/modals.css'],
-          'css/modules/modals-1.autoprefixed.css': ['css/modules/modals-1.css'],
-          'css/modules/modals-2.autoprefixed.css': ['css/modules/modals-2.css'],
-          'css/modules/buttons-1.autoprefixed.css': ['css/modules/buttons-1.css'],
-          'css/modules/list-items-1.autoprefixed.css': ['css/modules/list-items-1.css']
-        }
+        files: [
+          {
+            src : ['**/*.css', '!**/*autoprefixed.css'],
+            cwd : 'css',
+            dest : 'css',
+            ext : '.autoprefixed.css',
+            expand : true
+          }
+        ]
       }
     }
   });
