@@ -14,6 +14,12 @@
   transition: none !important;
 }
 
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 html,
 body {
   height: 100%;
@@ -85,6 +91,10 @@ h2 {
 
 h2 a {
   font-size: 1rem;
+}
+
+h4 {
+  margin: 0 0 0.5rem 0;
 }
 
 p {
@@ -264,4 +274,9 @@ h1 span:nth-child(11) {
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+.effeckt-list-wrap {
+  width: 50%;
+  float: left;
 }

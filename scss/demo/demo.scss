@@ -12,6 +12,12 @@
   transition: none !important;
 }
 
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 // is needed for overlay
 html, body {
   height: 100%;
@@ -76,6 +82,9 @@ h2 {
 }
 h2 a {
   font-size: 1rem;
+}
+h4 {
+  margin: 0 0 0.5rem 0;
 }
 p {
   margin: 0 0 1rem 0;
@@ -143,4 +152,12 @@ h1 span:nth-child(11) {
 }
 @keyframes logo-from-vert {
   100% { transform: translateY(0); opacity: 1;}
+}
+
+
+
+// Individual demos, not specific to style
+.effeckt-list-wrap {
+  width: 50%;
+  float: left;
 }
