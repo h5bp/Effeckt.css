@@ -95,10 +95,10 @@ h1 span:nth-child(8) {
 
 @keyframes logo-from-horz {
   100% {
-    -webkit-transform: translateX(0);
+    transform: translateX(0);
     opacity: 1; } }
 
 @keyframes logo-from-vert {
   100% {
-    -webkit-transform: translateY(0);
+    transform: translateY(0);
     opacity: 1; } }
