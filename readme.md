@@ -26,26 +26,32 @@ If you'd like to contribute to the [Effeckt.css](https://github.com/h5bp/Effeckt
 
 Please keep your commits targeted in a logical fashion in order to keep code review and merges as clean.
 
+General CSS style guide:
+
+- Two spaces
+- Prefix classes with `effeckt-`
+
 
 ### Tech
 
 - [Sass](http://sass-lang.com/)
-- Ruby, so we can
-  1. Use [Guard](https://github.com/guard/guard)
-  1. Guard will process .scss on file saves
-  1. Guard will run [autoprefixer](https://github.com/ai/autoprefixer) (not done yet)
-  1. Guard will [LiveReload](http://livereload.com/) the browser (style injection, you'll need the [browser extensions](http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-))
+- [Node](http://nodejs.org/) and [npm](https://npmjs.org/) so we can...
+  1. Use [Grunt](http://gruntjs.com/)
+  1. Grunt will process .scss on file saves
+  1. Grunt will run [autoprefixer](https://github.com/ai/autoprefixer)
+  1. Grunt will [LiveReload](http://livereload.com/) the browser (style injection, you'll need the [browser extensions](http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-))
 - The demo page will use [jQuery](http://jquery.com/) to manipulate classes, but ultimately the styles are just CSS
 
 You'll have to:
 
 1. Fork the project and pull down your copy
-1. Run `bundle install`
-1. Run `bundle exec guard`
+1. Run `npm install`
+1. Make sure you have the Grunt command-line interface with `npm install -g grunt-cli`
+1. Run `grunt watch` to start watching for file saves
 1. Probably make a local development domain, because the plan is to `$.load` in the different individual modules, so each module can be it's own .html file, and that won't work at a file:// URL.
 
 
-### Examples to build in
+### Examples To Add
 
 Here's a **few pieces of excellent work**:
 
@@ -85,7 +91,7 @@ This library/framework would come with some **goals**:
 1. There is no hover on the mobile web, so any hover-based effects would be excluded.
 
 
-## Action:
+## Action
 
 * If you know other transition/keyframe animation based demos/experiments that make senes to include here, file a ticket.
 * If you're interested in helping to define the API let's hear it, comment on that ticket

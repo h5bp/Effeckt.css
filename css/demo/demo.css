@@ -1,5 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Kite+One);
+
 * {
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -7,6 +9,9 @@ body {
   background: #eee;
   font-family: 'Kite One', sans-serif;
   overflow-x: hidden;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
   transform: translateZ(0);
 }
 
@@ -27,7 +32,8 @@ a {
   text-decoration: none;
 }
 
-a:hover, a:active {
+a:hover,
+a:active {
   color: red;
 }
 
@@ -57,93 +63,99 @@ h2 a {
 
 h1 span:nth-child(1) {
   -webkit-animation: logo-from-horz 0.5s ease forwards;
-  -moz-animation: logo-from-horz 0.5s ease forwards;
-  -ms-animation: logo-from-horz 0.5s ease forwards;
+  -o-animation: logo-from-horz 0.5s ease forwards;
   animation: logo-from-horz 0.5s ease forwards;
   -webkit-transform: translateX(-50px);
-  -moz-transform: translateX(-50px);
   -ms-transform: translateX(-50px);
+  -o-transform: translateX(-50px);
   transform: translateX(-50px);
 }
 
 h1 span:nth-child(2) {
   -webkit-animation: logo-from-vert 0.5s ease forwards;
-  -moz-animation: logo-from-vert 0.5s ease forwards;
-  -ms-animation: logo-from-vert 0.5s ease forwards;
+  -o-animation: logo-from-vert 0.5s ease forwards;
   animation: logo-from-vert 0.5s ease forwards;
   -webkit-transform: translateY(-50px);
-  -moz-transform: translateY(-50px);
   -ms-transform: translateY(-50px);
+  -o-transform: translateY(-50px);
   transform: translateY(-50px);
 }
 
 h1 span:nth-child(3) {
   -webkit-animation: logo-from-vert 0.5s ease forwards;
-  -moz-animation: logo-from-vert 0.5s ease forwards;
-  -ms-animation: logo-from-vert 0.5s ease forwards;
+  -o-animation: logo-from-vert 0.5s ease forwards;
   animation: logo-from-vert 0.5s ease forwards;
   -webkit-transform: translateX(50px);
-  -moz-transform: translateX(50px);
   -ms-transform: translateX(50px);
+  -o-transform: translateX(50px);
   transform: translateX(50px);
 }
 
 h1 span:nth-child(4) {
   -webkit-animation: logo-from-horz 0.3s ease forwards;
-  -moz-animation: logo-from-horz 0.3s ease forwards;
-  -ms-animation: logo-from-horz 0.3s ease forwards;
+  -o-animation: logo-from-horz 0.3s ease forwards;
   animation: logo-from-horz 0.3s ease forwards;
   -webkit-transform: translateX(50px);
-  -moz-transform: translateX(50px);
   -ms-transform: translateX(50px);
+  -o-transform: translateX(50px);
   transform: translateX(50px);
 }
 
 h1 span:nth-child(5) {
   -webkit-animation: logo-from-horz 0.3s ease forwards;
-  -moz-animation: logo-from-horz 0.3s ease forwards;
-  -ms-animation: logo-from-horz 0.3s ease forwards;
+  -o-animation: logo-from-horz 0.3s ease forwards;
   animation: logo-from-horz 0.3s ease forwards;
   -webkit-transform: translateX(-50px);
-  -moz-transform: translateX(-50px);
   -ms-transform: translateX(-50px);
+  -o-transform: translateX(-50px);
   transform: translateX(-50px);
 }
 
 h1 span:nth-child(6) {
   -webkit-animation: logo-from-horz 0.3s ease forwards;
-  -moz-animation: logo-from-horz 0.3s ease forwards;
-  -ms-animation: logo-from-horz 0.3s ease forwards;
+  -o-animation: logo-from-horz 0.3s ease forwards;
   animation: logo-from-horz 0.3s ease forwards;
   -webkit-transform: translateX(50px);
-  -moz-transform: translateX(50px);
   -ms-transform: translateX(50px);
+  -o-transform: translateX(50px);
   transform: translateX(50px);
 }
 
 h1 span:nth-child(7) {
   -webkit-animation: logo-from-vert 0.3s ease forwards;
-  -moz-animation: logo-from-vert 0.3s ease forwards;
-  -ms-animation: logo-from-vert 0.3s ease forwards;
+  -o-animation: logo-from-vert 0.3s ease forwards;
   animation: logo-from-vert 0.3s ease forwards;
   -webkit-transform: translateX(-50px);
-  -moz-transform: translateX(-50px);
   -ms-transform: translateX(-50px);
+  -o-transform: translateX(-50px);
   transform: translateX(-50px);
 }
 
 h1 span:nth-child(8) {
   -webkit-animation: logo-from-vert 0.2s 0.5s ease forwards;
-  -moz-animation: logo-from-vert 0.2s 0.5s ease forwards;
-  -ms-animation: logo-from-vert 0.2s 0.5s ease forwards;
+  -o-animation: logo-from-vert 0.2s 0.5s ease forwards;
   animation: logo-from-vert 0.2s 0.5s ease forwards;
   -webkit-transform: translateX(1000px);
-  -moz-transform: translateX(1000px);
   -ms-transform: translateX(1000px);
+  -o-transform: translateX(1000px);
   transform: translateX(1000px);
 }
 
 @-webkit-keyframes logo-from-horz {
+  100% {
+    -webkit-transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@-o-keyframes logo-from-horz {
+  100% {
+    -webkit-transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes logo-from-horz {
   100% {
     -webkit-transform: translateX(0);
     opacity: 1;
@@ -157,44 +169,16 @@ h1 span:nth-child(8) {
   }
 }
 
-@-moz-keyframes logo-from-horz {
+@-o-keyframes logo-from-vert {
   100% {
-    -moz-transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@-moz-keyframes logo-from-vert {
-  100% {
-    -moz-transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@-ms-keyframes logo-from-horz {
-  100% {
-    -ms-transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@-ms-keyframes logo-from-vert {
-  100% {
-    -ms-transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes logo-from-horz {
-  100% {
-    transform: translateX(0);
+    -webkit-transform: translateY(0);
     opacity: 1;
   }
 }
 
 @keyframes logo-from-vert {
   100% {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
     opacity: 1;
   }
 }
