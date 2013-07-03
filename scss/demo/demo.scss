@@ -105,8 +105,8 @@ h1 span:nth-child(8) {
   transform: translateX(1000px);
 }
 @keyframes logo-from-horz {
-  100% { -webkit-transform: translateX(0); opacity: 1; }
+  100% { transform: translateX(0); opacity: 1; }
 }
 @keyframes logo-from-vert {
-  100% { -webkit-transform: translateY(0); opacity: 1;}
+  100% { transform: translateY(0); opacity: 1;}
 }
