@@ -18,12 +18,7 @@ module.exports = function(grunt) {
     sass: {
       build: {
         files: {
-          // destination, source
-          'css/demo/demo.css': 'scss/demo/demo.scss',
-          'css/modules/modals.css': 'scss/modules/modals.scss',
-          'css/modules/modals-1.css': 'scss/modules/modals-1.scss',
-          'css/modules/modals-2.css': 'scss/modules/modals-2.scss',
-          'css/modules/buttons-1.css': 'scss/modules/buttons-1.scss'
+          all: '**/*.scss'
         }
       }
     },
