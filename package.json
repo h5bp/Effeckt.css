@@ -1,0 +1,12 @@
+{
+  "name": "Effeckt",
+  "version": "1.0.0",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "matchdep": "~0.1.2",
+    "grunt-contrib-sass": "~0.4.0",
+    "autoprefixer": "~0.5.20130629",
+    "grunt-autoprefixer": "~0.1.20130615",
+    "grunt-contrib-watch": "~0.4.4"
+  }
+}
