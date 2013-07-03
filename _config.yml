@@ -1,0 +1,3 @@
+lsi: false # no index for related posts
+pygments: true # syntax highlighting
+safe: true # no plugins
