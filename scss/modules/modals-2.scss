@@ -384,43 +384,6 @@
   transition: all 0.5s 0.1s;
 }
 
-/*  Effect 20: Pulse behind modal after opening */
-.md-effect-20  {
-  transform: translateX(-50%) translateY(-50%);
-  opacity: 0;
-  transition: all 0.3s;
-}
-
-.effeckt-show.md-effect-20  {
-  transform: translateX(-50%) translateY(-50%);
-  opacity: 1;
-
-  &:before {
-    position: fixed;
-    top: 0px;
-
-    height: 100%;
-    width: 100%;
-    content: '';
-    background: #fff;
-    transform: scale(1);
-    opacity: 0.1;
-    z-index: -1;
-
-    animation: Pulse 0.6s forwards ease-in;
-  }
-}
-
-@keyframes Pulse {
-  20% { 
-    transform: scale(1.1);
-    opacity: 0.4;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
 @media screen and (max-width: 32em) {
   body { font-size: 75%; }
 }
