@@ -12,10 +12,13 @@
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <link rel="stylesheet" href="css/libs/normalize.css">
-    <link rel="stylesheet" href="css/demo/demo.css">
+    <link rel="stylesheet" href="css/demo/demo.autoprefixed.css">
 
     <!-- Individual module CSS files here -->
+    <!-- Should we combine or not combine? -->
+    <link rel="stylesheet" href="css/modules/modals.autoprefixed.css">
+    <link rel="stylesheet" href="css/modules/modals-1.autoprefixed.css">
+    <link rel="stylesheet" href="css/modules/modals-2.autoprefixed.css">
 </head>
 
 <body>
@@ -34,13 +37,79 @@
     </h1>
     <subhead>UI-Less & Performant Transitions & Animations</subhead>
 
+    <!-- maybe use https://github.com/vanetix/grunt-includes ?? -->
+
+
+    <div class="effeckt">
+      <h2>
+        Modals 1
+        <a href="http://codepen.io/chriscoyier/pen/EGbxc">(source)</a>
+      </h2>
+
+      <button class="modal-button" data-modal-type="from-above">From Above</button>
+      <button class="modal-button" data-modal-type="from-below">From Below</button> 
+    </div>
+
+
+    <div class="effeckt">
+      <h2>
+        Modals 2
+        <a href="http://tympanus.net/codrops/2013/06/25/nifty-modal-window-effects/">(source)</a>
+      </h2>
+
+      <button class="modal2-button" data-modal-type="modal-1">Fade in &amp; Scale</button>
+      <button class="modal2-button" data-modal-type="modal-2">Slide in (right)</button>
+      <button class="modal2-button" data-modal-type="modal-3">Slide in (bottom)</button>
+      <button class="modal2-button" data-modal-type="modal-4">Newspaper</button>
+      <button class="modal2-button" data-modal-type="modal-5">Fall</button>
+      <button class="modal2-button" data-modal-type="modal-6">Side Fall</button>
+      <button class="modal2-button" data-modal-type="modal-7">Sticky Up</button>
+      <button class="modal2-button" data-modal-type="modal-8">3D Flip (horizontal)</button>
+      <button class="modal2-button" data-modal-type="modal-9">3D Flip (vertical)</button>
+      <button class="modal2-button" data-modal-type="modal-10">3D Sign</button>
+      <button class="modal2-button" data-modal-type="modal-11">Super Scaled</button>
+      <button class="modal2-button" data-modal-type="modal-12">Just Me</button>
+      <button class="modal2-button" data-modal-type="modal-13">3D Slit</button>
+      <button class="modal2-button" data-modal-type="modal-14">3D Rotate Bottom</button>
+      <button class="modal2-button" data-modal-type="modal-15">3D Rotate In Left</button>
+      <button class="modal2-button" data-modal-type="modal-16">Blur</button>
+
+    </div>
+
+  </div><!-- div.page-wrap -->
+
+
+
+
+
+
+  <div class="effeckt-overlay" id="effeckt-overlay"></div>
+
+  <div class="effeckt-modal" id="effeckt-modal">
+    <h3>Modal Dialog</h3>
+    <div class="effeckt-modal-content">
+      <p>This is a modal window.</p>
+      <button class="effeckt-modal-close">Close me!</button>
+    </div>
   </div>
 
+
+
+  <!-- libs -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+  <!-- for modals-2 -->
+  <script src="js/libs/classie.js"></script>
+
+  <!-- demo -->
   <script src="js/demo/demo.js"></script>
 
+
   <!-- Individual module JS files here -->
+  <!-- Should we combine or not combine? -->
+  <!-- Should we provide minified versions? -->
+  <script src="js/modules/modals-1.js"></script>
+  <script src="js/modules/modals-2.js"></script>
 </body>
 
 </html>

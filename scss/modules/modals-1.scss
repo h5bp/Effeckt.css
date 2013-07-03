@@ -1,0 +1,25 @@
+// Prefix "from-above", etc too?
+
+.effeckt-modal.from-above {
+  opacity: 0;
+  transition: 0.2s;
+  transform: scale(2) translateX(-25%) translateY(-25%);
+}
+
+.effeckt-modal.from-above.effeckt-show {
+  opacity: 1;
+  transform: scale(1) translateX(-50%) translateY(-50%);
+  box-shadow: 0 0 300px rgba(black, 0.3);
+}
+
+.effeckt-modal.from-below {
+  opacity: 0;
+  transition: 0.2s;
+  transform: scale(0.5) translateX(-100%) translateY(-100%);
+}
+
+.effeckt-modal.from-below.effeckt-show {
+  opacity: 1;
+  transform: scale(1) translateX(-50%) translateY(-50%);
+  box-shadow: 0 0 300px rgba(black, 0.3);
+}
