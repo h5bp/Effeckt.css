@@ -39,9 +39,19 @@ var Modals2 = {
     // See: http://tympanus.net/Development/ModalWindowEffects/
     //      http://tympanus.net/Development/ModalWindowEffects/js/modalEffects.js
 
-    Modals2.modalStyle = "md-effect-" + $(el).data("modal-type").replace(/[^0-9]/g, '');
+    var button = $(el);
+
+    Modals2.modalStyle = "md-effect-" + button.data("modal-type").replace(/[^0-9]/g, '');
 
     Modals2.modal.addClass(Modals2.modalStyle);
+
+    console.log(button.data("needs-perspective"));
+
+    if (button.data("needs-perspective")) {
+      $("html").addClass("md-perspective");
+    }
+
+    // Using timeout so we can set style first, then show it so animations/transitions work. You normally wouldn't need to do this.
     setTimeout(function() {
       Modals2.modal.addClass("effeckt-show");
     }, 300);
@@ -55,6 +65,7 @@ var Modals2 = {
     Modals2.modal.removeClass("effeckt-show");
     setTimeout(function() {
       Modals2.modal.removeClass(Modals2.modalStyle);
+      $("html").removeClass("md-perspective");
     }, 300);
 
     Modals2.hideOverlay();
