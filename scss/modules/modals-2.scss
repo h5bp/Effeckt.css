@@ -259,6 +259,28 @@
   opacity: 1;
 }
 
+/* Effect 16:  Blur */
+.effeckt-show.md-effect-16 ~ .md-overlay {
+  background: rgba(180,46,32,0.5);
+}
+
+.effeckt-show.md-effect-16 ~ .page-wrap {
+  filter: blur(3px);
+}
+
+.md-effect-16  {
+  opacity: 0;
+}
+
+.effeckt-show.md-effect-16 ~ .page-wrap,
+.md-effect-16  {
+  transition: all 0.3s;
+}
+
+.effeckt-show.md-effect-16  {
+  opacity: 1;
+}
+
 /* Effect 17:  Slide in from bottom with perspective on container */
 .effeckt-show.md-effect-17 ~ .page-wrap {
   height: 100%;
