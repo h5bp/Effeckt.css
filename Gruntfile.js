@@ -18,8 +18,8 @@ module.exports = function(grunt) {
       dist: {
         files: [
           'scss/**/*.{sass,scss}', 
-          'pages/**/*.html',
-          'pages/**/*.ejs'
+          'layouts/**/*.html',
+          'layouts/**/*.ejs'
           ],
         tasks: 'dev',
         options: {
@@ -122,7 +122,7 @@ module.exports = function(grunt) {
           {expand: true, flatten: true, cwd: './', src: ['templates/global/scripts.ejs'], dest: 'optimized_dist/', filter: 'isFile'},
           // end temporary files for usemin task
           // temporary files for ejs_static task
-          {expand: true, cwd: './', src: ['pages/**'], dest: 'optimized_dist/'},
+          {expand: true, cwd: './', src: ['layouts/**'], dest: 'optimized_dist/'},
           {expand: true, cwd: './', src: ['templates/**'], dest: 'optimized_dist/'},
           // end temporary files for ejs_static task
           {expand: true, cwd: './', src: ['img/**'], dest: 'optimized_dist/'},
@@ -153,23 +153,23 @@ module.exports = function(grunt) {
       dist: {
         options: {
           src: './',
-          layout_src: 'pages/',
-          index_page: 'pages/demos/index.html',
+          layout_src: 'layouts/',
+          index_page: 'layouts/demos/index.html',
           data: 'data/pages.json'
         },
         files: {
-          'dist/': 'pages/**/index.html'
+          'dist/': 'layouts/**/index.html'
         },
       },
       optimize: {
         options: {
           src: 'optimized_dist/',
-          layout_src: 'optimized_dist/pages/',
-          index_page: 'optimized_dist/pages/demos/index.html',
+          layout_src: 'optimized_dist/layouts/',
+          index_page: 'optimized_dist/layouts/demos/index.html',
           data: 'optimized_dist/data/pages.json'
         },
         files: {
-          'optimized_dist/': 'optimized_dist/pages/**/index.html'
+          'optimized_dist/': 'optimized_dist/layouts/**/index.html'
         },
       }
     }
