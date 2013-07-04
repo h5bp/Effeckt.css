@@ -89,10 +89,10 @@ module.exports = function(grunt) {
       dist: ['dist'],
       optimize: ['production'],
       post_optimize: [
-        'production/pages', 
-        'production/templates',
-        'production/head.ejs',
-        'production/scripts.ejs'
+        'optimized_dist/pages', 
+        'optimized_dist/templates',
+        'optimized_dist/head.ejs',
+        'optimized_dist/scripts.ejs'
       ]
     },
 
@@ -118,17 +118,17 @@ module.exports = function(grunt) {
       optimize: {
         files: [
           // temporary files for usemin task
-          {expand: true, flatten: true, cwd: './', src: ['templates/global/head.ejs'], dest: 'production/', filter: 'isFile'},
-          {expand: true, flatten: true, cwd: './', src: ['templates/global/scripts.ejs'], dest: 'production/', filter: 'isFile'},
+          {expand: true, flatten: true, cwd: './', src: ['templates/global/head.ejs'], dest: 'optimized_dist/', filter: 'isFile'},
+          {expand: true, flatten: true, cwd: './', src: ['templates/global/scripts.ejs'], dest: 'optimized_dist/', filter: 'isFile'},
           // end temporary files for usemin task
           // temporary files for ejs_static task
-          {expand: true, cwd: './', src: ['pages/**'], dest: 'production/'},
-          {expand: true, cwd: './', src: ['templates/**'], dest: 'production/'},
+          {expand: true, cwd: './', src: ['pages/**'], dest: 'optimized_dist/'},
+          {expand: true, cwd: './', src: ['templates/**'], dest: 'optimized_dist/'},
           // end temporary files for ejs_static task
-          {expand: true, cwd: './', src: ['img/**'], dest: 'production/'},
-          {expand: true, cwd: './', src: ['css/**'], dest: 'production/'},
-          {expand: true, cwd: './', src: ['js/**'], dest: 'production/'},
-          {expand: true, cwd: './', src: ['data/**'], dest: 'production/'}
+          {expand: true, cwd: './', src: ['img/**'], dest: 'optimized_dist/'},
+          {expand: true, cwd: './', src: ['css/**'], dest: 'optimized_dist/'},
+          {expand: true, cwd: './', src: ['js/**'], dest: 'optimized_dist/'},
+          {expand: true, cwd: './', src: ['data/**'], dest: 'optimized_dist/'}
         ]
       }
     },
@@ -136,16 +136,16 @@ module.exports = function(grunt) {
     // get the scripts inside dist:js block
     'useminPrepare': {
       html: [
-        'production/head.ejs',
-        'production/scripts.ejs'
+        'optimized_dist/head.ejs',
+        'optimized_dist/scripts.ejs'
       ]     
     },
 
     // update the scripts links to point to the concatenated and minified js/main.js
     usemin: {
       html: [
-        'production/templates/global/head.ejs',
-        'production/templates/global/scripts.ejs'
+        'optimized_dist/templates/global/head.ejs',
+        'optimized_dist/templates/global/scripts.ejs'
       ]
     },
 
@@ -163,13 +163,13 @@ module.exports = function(grunt) {
       },
       optimize: {
         options: {
-          src: 'production/',
-          layout_src: 'production/pages/',
-          index_page: 'production/pages/demos/index.html',
-          data: 'production/data/pages.json'
+          src: 'optimized_dist/',
+          layout_src: 'optimized_dist/pages/',
+          index_page: 'optimized_dist/pages/demos/index.html',
+          data: 'optimized_dist/data/pages.json'
         },
         files: {
-          'production/': 'production/pages/**/index.html'
+          'optimized_dist/': 'optimized_dist/pages/**/index.html'
         },
       }
     }

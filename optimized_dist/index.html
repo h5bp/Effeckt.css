@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+  <meta charset="utf-8">
+
+  <title>Effeckt.css | Demos</title>
+
+  <meta name="description" content="UI-Less &amp; Performant Transitions &amp; Animations">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+  <link rel="stylesheet" href="css/demo/demo.autoprefixed.css">
+
+  <!-- Individual module CSS files here -->
+  <!-- Should we combine or not combine? -->
+
+  <!-- css -->
+  <link rel="stylesheet" href="css/main.css">
+  <!-- end css -->
+
+  <!-- google analytics -->
+  <script>
+    var _gaq=[['_setAccount','XXX000'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+  <!-- end google analytics -->
+
+</head>
+
+<body>
+
+  
+  <!-- dialogs first is important for ~ selector -->
+  <div class="effeckt-modal" id="effeckt-modal">
+    <h3>Modal Dialog</h3>
+    <div class="effeckt-modal-content">
+      <p>This is a modal window.</p>
+      <button class="effeckt-modal-close">Close me!</button>
+    </div>
+  </div>
+  <!-- overlay coming after is important for ~ selector -->
+  <div class="effeckt-overlay no-transitions" id="effeckt-overlay"></div>
+
+
+  
+  <div class="page-wrap no-transitions" id="page-wrap">
+
+    <h1> 
+      <span>E</span>
+      <span>f</span>
+      <span>f</span>
+      <span>e</span>
+      <span>c</span>
+      <span>k</span>
+      <span>t</span>
+      <span>.</span>
+      <span>c</span>
+      <span>s</span>
+      <span>s</span>
+    </h1>
+    <subhead>Performant CSS transitions & animations</subhead>
+
+    <!-- TODO: Break this up into separate files -->
+    <!-- Possibilities:
+        1. Grunt includes https://github.com/vanetix/grunt-includes
+        2. Jade includes
+        3. $.load with jQuery
+        4. Something else? PHP?
+        5. grunt-ejs-static?  Done!
+    -->
+
+
+    <div class="effeckt effeckt-demo-modals-1">
+      <h2>
+        Modals 1
+        <a href="http://codepen.io/chriscoyier/pen/EGbxc">(source)</a>
+      </h2>
+
+      <button class="modal-button" data-modal-type="from-above">From Above</button>
+      <button class="modal-button" data-modal-type="from-below">From Below</button> 
+    </div>
+
+
+    <div class="effeckt effeckt-demo-modals-2">
+      <h2>
+        Modals 2
+        <a href="http://tympanus.net/codrops/2013/06/25/nifty-modal-window-effects/">(source)</a>
+      </h2>
+
+      <button class="modal2-button" data-modal-type="modal-1">Fade in &amp; Scale</button>
+      <button class="modal2-button" data-modal-type="modal-2">Slide in (right)</button>
+      <button class="modal2-button" data-modal-type="modal-3">Slide in (bottom)</button>
+      <button class="modal2-button" data-modal-type="modal-4">Newspaper</button>
+      <button class="modal2-button" data-modal-type="modal-5">Fall</button>
+      <button class="modal2-button" data-modal-type="modal-6">Side Fall</button>
+      <button class="modal2-button" data-modal-type="modal-7">Sticky Up</button>
+      <button class="modal2-button" data-modal-type="modal-8">3D Flip (horizontal)</button>
+      <button class="modal2-button" data-modal-type="modal-9">3D Flip (vertical)</button>
+      <button class="modal2-button" data-modal-type="modal-10">3D Sign</button>
+      <button class="modal2-button" data-modal-type="modal-11">Super Scaled</button>
+      <button class="modal2-button" data-modal-type="modal-12">Just Me</button>
+      <button class="modal2-button" data-modal-type="modal-13">3D Slit</button>
+      <button class="modal2-button" data-modal-type="modal-14">3D Rotate Bottom</button>
+      <button class="modal2-button" data-modal-type="modal-15">3D Rotate In Left</button>
+
+      <button class="modal2-button" data-modal-type="modal-17" data-needs-perspective="true">Let me in</button>
+      <button class="modal2-button" data-modal-type="modal-18" data-needs-perspective="true">Make way!</button>
+      <button class="modal2-button" data-modal-type="modal-19" data-needs-perspective="true">Slip from top</button>
+
+    </div>
+
+
+    <div class="effeckt effeckt-demo-buttons-1 group">
+
+      <h2>
+        Buttons 1
+        <a href="http://lab.hakim.se/ladda/">(source)</a>
+      </h2>
+
+      <div class="button-demo-wrap">
+      <button class="ladda-button expand-right"><span class="label">Expand Right</span> <span class="spinner"></span></button>
+      </div>
+
+      <div class="button-demo-wrap">
+      <button class="ladda-button expand-left"><span class="label">Expand Left</span> <span class="spinner"></span></button>
+      </div>
+
+      <div class="button-demo-wrap">
+      <button class="ladda-button expand-up"><span class="label">Expand Up</span> <span class="spinner"></span></button>
+      </div>
+
+      <div class="button-demo-wrap">
+      <button class="ladda-button expand-down"><span class="label">Expand Down</span> <span class="spinner"></span></button>
+      </div>
+
+      <div class="button-demo-wrap">
+      <button class="ladda-button slide-left"><span class="label">Slide Left</span> <span class="spinner"></span></button>
+      </div>
+
+      <div class="button-demo-wrap">
+      <button class="ladda-button slide-right"><span class="label">Slide Right</span> <span class="spinner"></span></button>
+      </div>
+
+      <div class="button-demo-wrap">
+      <button class="ladda-button slide-up"><span class="label">Slide Up</span> <span class="spinner"></span></button>
+      </div>
+
+      <div class="button-demo-wrap">
+      <button class="ladda-button slide-down"><span class="label">Slide Down</span> <span class="spinner"></span></button>
+      </div>
+
+      <div class="button-demo-wrap">
+      <button class="ladda-button zoom-out"><span class="label">Zoom Out</span> <span class="spinner"></span></button>
+      </div>
+
+      <div class="button-demo-wrap">
+      <button class="ladda-button zoom-in"><span class="label">Zoom in</span> <span class="spinner"></span></button>
+      </div>
+
+    </div>
+
+
+    <div class="effeckt effeckt-demo-listitems-1 group">
+
+      <h2>
+        List Items 1
+        <a href="http://css-tricks.com/transitional-interfaces-coded/">(source)</a>
+      </h2>
+
+      <div class="effeckt-list-wrap" style="padding-right: 20px;">
+        <h4>Gap, Slide In</h4>
+        <ul class="effeckt-list" data-type="pop-in">
+          <li>list item</li>
+          <li>list item</li>
+          <li>list item</li>
+          <li>list item</li>
+        </ul>
+        <button class="">Add</button>
+      </div>
+
+      <div class="effeckt-list-wrap">
+        <h4>Expand In</h4>
+        <ul class="effeckt-list" data-type="expand-in">
+          <li>list item</li>
+          <li>list item</li>
+          <li>list item</li>
+          <li>list item</li>
+        </ul>
+        <button>Add</button>
+      </div>
+
+    </div>
+
+
+
+
+  <!-- footer -->
+  <footer></footer>
+  <!-- end footer -->
+
+  </div><!-- div.page-wrap -->
+
+
+  <!-- libs -->
+  <script src="//code.jquery.com/jquery-2.0.3.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-2.0.3.min.js"><\/script>')</script>
+
+  <script src="js/main.js"></script>
+
+
+  </body>
+</html>
