@@ -82,11 +82,16 @@ module.exports = function(grunt) {
           { expand: true, cwd: './css', src: ['./**/*.*'], dest: 'dist/assets/css' },
           { expand: true, cwd: './js', src: ['./**/*.*'], dest: 'dist/assets/js' }
         ]
-      },
-      deploy: {
-        files: [
-          { expand: true, cwd: './dist', src: ['./**/*.*'], dest: '../gh-pages' }
-        ]
+      }
+    },
+
+    'gh-pages': {
+      demo: {
+        options: {
+          base: './dist',
+          clone: 'tmp/gh-pages'
+        },
+        src: ['**/*']
       }
     }
 
@@ -96,7 +101,7 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['sass', 'autoprefixer']);
   grunt.registerTask('dev', ['connect', 'watch']);
   grunt.registerTask('demo', ['copy:demo', 'assemble:demo']);
-  grunt.registerTask('deploy', ['copy:deploy']);
+  grunt.registerTask('deploy', ['gh-pages']);
 
   grunt.loadNpmTasks('assemble');
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
