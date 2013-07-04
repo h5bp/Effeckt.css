@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+  <meta charset="utf-8">
+
+  <title><%= title %></title>
+
+  <meta name="description" content="<%= description %>">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+  <link rel="stylesheet" href="/css/demo/demo.autoprefixed.css">
+
+  <!-- Individual module CSS files here -->
+  <!-- Should we combine or not combine? -->
+
+  <!-- css -->
+  <!-- build:css css/main.css -->
+  <link rel="stylesheet" href="/css/modules/modals.autoprefixed.css">
+  <link rel="stylesheet" href="/css/modules/modals-1.autoprefixed.css">
+  <link rel="stylesheet" href="/css/modules/modals-2.autoprefixed.css">
+
+  <link rel="stylesheet" href="/css/modules/buttons-1.autoprefixed.css">
+
+  <link rel="stylesheet" href="/css/modules/list-items-1.autoprefixed.css">
+
+  <link rel="stylesheet" href="/css/modules/toggles-flipInOutX.autoprefixed.css">
+  <!-- endbuild -->
+  <!-- end css -->
+
+  <!-- google analytics -->
+  <script>
+    var _gaq=[['_setAccount','<%= global.google_analytics %>'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+  <!-- end google analytics -->
+
+</head>
+
+<body>

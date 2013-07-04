@@ -1,36 +1,42 @@
+
 <!DOCTYPE html>
 <html>
 
 <head>
-    <meta charset="utf-8">
+  
+  <meta charset="utf-8">
 
-    <title>Effeckt.css</title>
+  <title>Effeckt.css | Demos</title>
 
-    <meta name="description" content="UI-Less & Performant Transitions & Animations">
+  <meta name="description" content="UI-Less &amp; Performant Transitions &amp; Animations">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <link rel="stylesheet" href="css/demo/demo.autoprefixed.css">
+  <link rel="stylesheet" href="css/demo/demo.autoprefixed.css">
 
-    <!-- Individual module CSS files here -->
-    <!-- Should we combine or not combine? -->
+  <!-- Individual module CSS files here -->
+  <!-- Should we combine or not combine? -->
 
-    <link rel="stylesheet" href="css/modules/modals.autoprefixed.css">
-    <link rel="stylesheet" href="css/modules/modals-1.autoprefixed.css">
-    <link rel="stylesheet" href="css/modules/modals-2.autoprefixed.css">
+  <!-- css -->
+  <link rel="stylesheet" href="css/main.css">
+  <!-- end css -->
 
-    <link rel="stylesheet" href="css/modules/buttons-1.autoprefixed.css">
+  <!-- google analytics -->
+  <script>
+    var _gaq=[['_setAccount','XXX000'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+  <!-- end google analytics -->
 
-    <link rel="stylesheet" href="css/modules/list-items-1.autoprefixed.css">
-
-    <link rel="stylesheet" href="css/modules/toggles-flipInOutX.autoprefixed.css">
 </head>
 
 <body>
 
-
+  
   <!-- dialogs first is important for ~ selector -->
   <div class="effeckt-modal" id="effeckt-modal">
     <h3>Modal Dialog</h3>
@@ -67,7 +73,9 @@
         2. Jade includes
         3. $.load with jQuery
         4. Something else? PHP?
+        5. grunt-ejs-static?  Done!
     -->
+
 
     <div class="effeckt effeckt-demo-modals-1">
       <h2>
@@ -159,7 +167,6 @@
     </div>
 
 
-
     <div class="effeckt effeckt-demo-listitems-1 group">
 
       <h2>
@@ -191,40 +198,22 @@
 
     </div>
 
-    <!-- #Effeckt Toggle Demos  -->
-    <div class="effeckt effeckt-demo-listitems-1 group">
-      <h2>Toggle Effeckts <a href="#">(source)</a></h2>
 
-      <div class="effeckt-toggle-demo">
-        <button data-toggle-trigger="effeckt-flipInX">Flip In/OutX</button>
 
-        <div class="effeckt-togglecontent__flipInX visuallyhidden">
-          <p>Leo Fender† passed away on a rainy day in March of 1991, an event which shook the Music World: The father of modern music was gone. It was on that very day that Leo had completed his last prototype instrument, after which he declared to his wife Phyllis that he had given all he can to the musicians of the world.</p>
-        </div>
-      </div>
-    </div><!-- end/toggle demos -->
+
+  <!-- footer -->
+  <footer></footer>
+  <!-- end footer -->
 
   </div><!-- div.page-wrap -->
+
 
   <!-- libs -->
   <script src="//code.jquery.com/jquery-2.0.3.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/libs/jquery-2.0.3.min.js"><\/script>')</script>
-  <!-- for modals-2 -->
-  <script src="js/libs/classie.js"></script>
 
-  <!-- demo -->
-  <script src="js/demo/demo.js"></script>
+  <script src="js/main.js"></script>
 
-  <!-- Individual module JS files here -->
-  <!-- Should we combine or not combine? -->
-  <!-- Should we provide minified versions? -->
-  <script src="js/modules/modals-1.js"></script>
-  <script src="js/modules/modals-2.js"></script>
 
-  <script src="js/modules/buttons-1.js"></script>
-
-  <script src="js/modules/list-items-1.js"></script>
-  <script src="js/modules/toggles-flipInOutX.js"></script>
-</body>
-
+  </body>
 </html>
