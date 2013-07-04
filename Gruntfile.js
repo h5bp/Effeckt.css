@@ -56,11 +56,42 @@ module.exports = function(grunt) {
           base: './'
         }
       }
+    },
+
+    assemble: {
+      options: {
+        flatten: true,
+        layout: 'layout.hbs',
+        layoutdir: 'src/templates/layouts',
+        assets: 'dest/assets',
+        partials: ['src/templates/pages/*.hbs']
+      },
+      demo: {
+        options: {
+          data: ['src/data/*.{json,yml}']
+        },
+        files: {
+          'dest/': ['src/templates/pages/*.hbs']
+        }
+      }
+    },
+
+    copy: {
+      demo: {
+        files: [
+          { expand: true, cwd: './css', src: ['./**/*.*'], dest: 'dest/assets/css' },
+          { expand: true, cwd: './js', src: ['./**/*.*'], dest: 'dest/assets/js' }
+        ]
+      }
     }
+
   });
 
   // Default task
   grunt.registerTask('default', ['sass', 'autoprefixer']);
   grunt.registerTask('dev', ['connect', 'watch']);
+  grunt.registerTask('demo', ['copy', 'assemble']);
+
+  grunt.loadNpmTasks('assemble');
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 };
