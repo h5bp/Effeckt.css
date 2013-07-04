@@ -1,0 +1,14 @@
+{
+
+  "": {
+    "google_analytics": "XXX000"
+  },
+
+  "demos": {
+    "page_name": "demos",
+    "page_category": "page",
+    "title": "Effeckt.css | Demos",
+    "description": "UI-Less & Performant Transitions & Animations"
+  }
+
+}

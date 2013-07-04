@@ -15,13 +15,13 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON( 'package.json' ),
 
     watch: {
-      preview: {
+      dist: {
         files: [
-          'dev/scss/**/*.{sass,scss}', 
-          'dev/pages/**/*.html',
-          'dev/pages/**/*.ejs'
+          'scss/**/*.{sass,scss}', 
+          'pages/**/*.html',
+          'pages/**/*.ejs'
           ],
-        tasks: 'preview',
+        tasks: 'dist',
         options: {
           livereload: true
         }
@@ -33,8 +33,8 @@ module.exports = function(grunt) {
         files : [
           {
             src : ['**/*.scss', '!**/_*.scss'],
-            cwd : 'dev/scss',
-            dest : 'dev/css',
+            cwd : 'scss',
+            dest : 'css',
             ext : '.css',
             expand : true
           }
@@ -54,9 +54,9 @@ module.exports = function(grunt) {
         },
         files: [
           {
-            src : ['dev/css/**/*.css', '!dev/css/**/*autoprefixed.css'],
-            cwd : 'dev/css',
-            dest : 'dev/css',
+            src : ['css/**/*.css', '!css/**/*autoprefixed.css'],
+            cwd : 'css',
+            dest : 'css',
             ext : '.autoprefixed.css',
             expand : true
           }
@@ -65,11 +65,11 @@ module.exports = function(grunt) {
     },
 
     connect: {
-      preview: {
+      dist: {
         options: {
           port: 3000,
           keepalive: true,
-          base: './preview',
+          base: './dist',
           middleware: function(connect, options) {
             return [lrSnippet, folderMount(connect, options.base)]
           }
@@ -86,7 +86,7 @@ module.exports = function(grunt) {
 
     // Before generating any new files, remove any previously-created files.
     clean: {
-      preview: ['preview'],
+      dist: ['dist'],
       optimize: ['production'],
       post_optimize: [
         'production/pages', 
@@ -96,44 +96,44 @@ module.exports = function(grunt) {
       ]
     },
 
-    // start preview server as a background process
+    // start dist server as a background process
     // superuser.com/questions/178587/how-do-i-detach-a-process-from-terminal-entirely
     // askubuntu.com/questions/157779/how-to-determine-whether-a-process-is-running-or-not-and-make-use-f-it-to-make-a
     // https://gist.github.com/m-allanson/4637797
     // github.com/rma4ok/grunt-bg-shell
     exec: {
       start_server: {
-        command: 'grunt connect:preview &'
+        command: 'grunt connect:dist &'
       }
     }, 
 
     copy: {
-      preview: {
+      dist: {
         files: [
-          {expand: true, cwd: 'dev/', src: ['img/**'], dest: 'preview/'},
-          {expand: true, cwd: 'dev/', src: ['css/**'], dest: 'preview/'},
-          {expand: true, cwd: 'dev/', src: ['js/**'], dest: 'preview/'}
+          {expand: true, cwd: './', src: ['img/**'], dest: 'dist/'},
+          {expand: true, cwd: './', src: ['css/**'], dest: 'dist/'},
+          {expand: true, cwd: './', src: ['js/**'], dest: 'dist/'}
         ]
       },
       optimize: {
         files: [
           // temporary files for usemin task
-          {expand: true, flatten: true, cwd: 'dev/', src: ['templates/global/head.ejs'], dest: 'production/', filter: 'isFile'},
-          {expand: true, flatten: true, cwd: 'dev/', src: ['templates/global/scripts.ejs'], dest: 'production/', filter: 'isFile'},
+          {expand: true, flatten: true, cwd: './', src: ['templates/global/head.ejs'], dest: 'production/', filter: 'isFile'},
+          {expand: true, flatten: true, cwd: './', src: ['templates/global/scripts.ejs'], dest: 'production/', filter: 'isFile'},
           // end temporary files for usemin task
           // temporary files for ejs_static task
-          {expand: true, cwd: 'dev/', src: ['pages/**'], dest: 'production/'},
-          {expand: true, cwd: 'dev/', src: ['templates/**'], dest: 'production/'},
+          {expand: true, cwd: './', src: ['pages/**'], dest: 'production/'},
+          {expand: true, cwd: './', src: ['templates/**'], dest: 'production/'},
           // end temporary files for ejs_static task
-          {expand: true, cwd: 'dev/', src: ['img/**'], dest: 'production/'},
-          {expand: true, cwd: 'dev/', src: ['css/**'], dest: 'production/'},
-          {expand: true, cwd: 'dev/', src: ['js/**'], dest: 'production/'},
-          {expand: true, cwd: 'dev/', src: ['data/**'], dest: 'production/'}
+          {expand: true, cwd: './', src: ['img/**'], dest: 'production/'},
+          {expand: true, cwd: './', src: ['css/**'], dest: 'production/'},
+          {expand: true, cwd: './', src: ['js/**'], dest: 'production/'},
+          {expand: true, cwd: './', src: ['data/**'], dest: 'production/'}
         ]
       }
     },
 
-    // get the scripts inside preview:js block
+    // get the scripts inside dist:js block
     'useminPrepare': {
       html: [
         'production/head.ejs',
@@ -150,15 +150,15 @@ module.exports = function(grunt) {
     },
 
     ejs_static: {
-      preview: {
+      dist: {
         options: {
-          src: 'dev/',
-          layout_src: 'dev/pages/',
-          index_page: 'dev/pages/demos/index.html',
-          data: 'dev/data/pages.json'
+          src: './',
+          layout_src: 'pages/',
+          index_page: 'pages/demos/index.html',
+          data: 'data/pages.json'
         },
         files: {
-          'preview/': 'dev/pages/**/index.html'
+          'dist/': 'pages/**/index.html'
         },
       },
       optimize: {
@@ -176,15 +176,15 @@ module.exports = function(grunt) {
 
   });
 
-  // preview during development
-  grunt.registerTask('preview', [
+  // dist during development
+  grunt.registerTask('dist', [
     'sass',
     'autoprefixer',
-    'clean:preview',
-    'copy:preview', 
-    'ejs_static:preview',  
+    'clean:dist',
+    'copy:dist', 
+    'ejs_static:dist',  
     'exec:start_server',
-    'watch:preview'
+    'watch:dist'
   ]);
 
   // optimize before deploying to production
