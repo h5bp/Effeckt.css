@@ -186,3 +186,11 @@ h1 span:nth-child(11) {
   width: 50%;
   float: left;
 }
+
+.effeckt-toggle-demo {
+  min-height: 220px;
+}
+
+[data-toggle-trigger] {
+  margin-bottom: 20px;
+}
