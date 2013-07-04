@@ -495,40 +495,6 @@
   opacity: 1;
 }
 
-/* Effect 16:  Blur */
-
-.effeckt-show.md-effect-16 ~ .md-overlay {
-  background: rgba(180, 46, 32, 0.5);
-}
-
-.effeckt-show.md-effect-16 ~ .page-wrap {
-  -webkit-filter: blur(3px);
-  filter: blur(3px);
-}
-
-.md-effect-16 {
-  -webkit-transform: translateY(-5%);
-  -ms-transform: translateY(-5%);
-  -o-transform: translateY(-5%);
-  transform: translateY(-5%);
-  opacity: 0;
-}
-
-.effeckt-show.md-effect-16 ~ .page-wrap,
-.md-effect-16 {
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.effeckt-show.md-effect-16 {
-  -webkit-transform: translateY(0);
-  -ms-transform: translateY(0);
-  -o-transform: translateY(0);
-  transform: translateY(0);
-  opacity: 1;
-}
-
 /* Effect 17:  Slide in from bottom with perspective on container */
 
 .effeckt-show.md-effect-17 ~ .page-wrap {
