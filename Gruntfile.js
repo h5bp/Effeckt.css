@@ -4,8 +4,12 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON( 'package.json' ),
 
     watch: {
+      bake: {
+        files: [ "includes/**/*.html" ],
+        tasks: "bake:build"
+      },
       build: {
-        files: ['scss/**/*.{sass,scss}', '**/*.html'],
+        files: ['scss/**/*.{sass,scss}', '**/*.html', '!includes/**'],
         tasks: 'default',
         options: {
           livereload: true
@@ -59,8 +63,29 @@ module.exports = function(grunt) {
     }
   });
 
+  bake: {
+      build: {
+        options: {
+          content: "includes/content.json",
+          section: "default"
+        },
+
+        files: [
+          {
+            src : ['**/*.html', '!files/*.html'],
+            cwd : 'includes/',
+            dest : '.',
+            expand : true
+          }
+        ]
+      },
+    }
+  });
+
   // Default task
   grunt.registerTask('default', ['sass', 'autoprefixer']);
   grunt.registerTask('dev', ['connect', 'watch']);
+  grunt.registerTask('includes', ['bake']);
+
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 };
