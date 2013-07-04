@@ -1,25 +1,41 @@
-// TODO: Standardize with our jQuery / Module-pattern-esque thing.
+var Buttons1 = {
 
-var buttons = document.querySelectorAll( '.ladda-button' );
+  init: function() {
 
-Array.prototype.slice.call( buttons ).forEach( function( button ) {
+    this.bindUIActions();
 
-  var resetTimeout;
+  },
 
-  button.addEventListener( 'click', function() {
-    
-    if( typeof button.getAttribute( 'data-loading' ) === 'string' ) {
-      button.removeAttribute( 'data-loading' );
-    }
-    else {
-      button.setAttribute( 'data-loading', '' );
+  bindUIActions: function() {
+
+    $('.ladda-button').on( 'click', function(){
+      Buttons1.showLoader(this);
+    });
+
+  },
+
+  showLoader: function(el) {
+
+    var button = $(el),
+        resetTimeout;
+
+    if(button.attr( 'data-loading' )){
+
+      button.removeAttr( 'data-loading' );
+
+    } else {
+
+      button.attr( 'data-loading', true );
+
     }
 
     clearTimeout( resetTimeout );
     resetTimeout = setTimeout( function() {
-      button.removeAttribute( 'data-loading' );     
+      button.removeAttr( 'data-loading' );
     }, 2000 );
 
-  }, false );
+  }
 
-} );
+};
+
+Buttons1.init();
