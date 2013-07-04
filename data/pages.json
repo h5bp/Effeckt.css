@@ -9,6 +9,13 @@
     "page_category": "page",
     "title": "Effeckt.css | Demos",
     "description": "UI-Less & Performant Transitions & Animations"
+  },
+
+  "buttons": {
+    "page_name": "buttons",
+    "page_category": "page",
+    "title": "Effeckt.css | Buttons",
+    "description": "UI-Less & Performant Transitions & Animations"
   }
 
 }

@@ -21,7 +21,7 @@ module.exports = function(grunt) {
           'pages/**/*.html',
           'pages/**/*.ejs'
           ],
-        tasks: 'dist',
+        tasks: 'dev',
         options: {
           livereload: true
         }
@@ -176,8 +176,8 @@ module.exports = function(grunt) {
 
   });
 
-  // dist during development
-  grunt.registerTask('dist', [
+  // preview during development
+  grunt.registerTask('dev', [
     'sass',
     'autoprefixer',
     'clean:dist',
