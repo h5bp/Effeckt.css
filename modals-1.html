@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <title>Effeckt.css</title>
+
+    <meta name="description" content="UI-Less & Performant Transitions & Animations">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="assets/css/demo/demo.autoprefixed.css">
+
+    <!-- Individual module CSS files here -->
+    <!-- Should we combine or not combine? -->
+
+    <link rel="stylesheet" href="assets/css/modules/modals.autoprefixed.css">
+    <link rel="stylesheet" href="assets/css/modules/modals-1.autoprefixed.css">
+    <link rel="stylesheet" href="assets/css/modules/modals-2.autoprefixed.css">
+
+    <link rel="stylesheet" href="assets/css/modules/buttons-1.autoprefixed.css">
+
+    <link rel="stylesheet" href="assets/css/modules/list-items-1.autoprefixed.css">
+    <link rel="stylesheet" href="assets/css/modules/toggles-flipInOutX.autoprefixed.css">
+</head>
+
+<body>
+
+
+  <!-- dialogs first is important for ~ selector -->
+  <div class="effeckt-modal" id="effeckt-modal">
+    <h3>Modal Dialog</h3>
+    <div class="effeckt-modal-content">
+      <p>This is a modal window.</p>
+      <button class="effeckt-modal-close">Close me!</button>
+    </div>
+  </div>
+  <!-- overlay coming after is important for ~ selector -->
+  <div class="effeckt-overlay no-transitions" id="effeckt-overlay"></div>
+
+
+
+  <div class="page-wrap no-transitions" id="page-wrap">
+
+    <h1>
+      <span>E</span>
+      <span>f</span>
+      <span>f</span>
+      <span>e</span>
+      <span>c</span>
+      <span>k</span>
+      <span>t</span>
+      <span>.</span>
+      <span>c</span>
+      <span>s</span>
+      <span>s</span>
+    </h1>
+    <subhead>Performant CSS transitions & animations</subhead>
+
+    <!-- TODO: Break this up into separate files -->
+    <!-- Possibilities:
+        1. Grunt includes https://github.com/vanetix/grunt-includes
+        2. Jade includes
+        3. $.load with jQuery
+        4. Something else? PHP?
+    -->
+
+    <div class="effeckt effeckt-demo-modals-1">
+  <h2>
+    Modals 1
+    <a href="http://codepen.io/chriscoyier/pen/EGbxc">(source)</a>
+        <a href="modals-1.html">#</a>
+  </h2>
+
+  <button class="modal-button" data-modal-type="from-above">From Above</button>
+  <button class="modal-button" data-modal-type="from-below">From Below</button>
+</div>
+
+
+  </div><!-- div.page-wrap -->
+
+  <!-- libs -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+  <!-- for modals-2 -->
+  <script src="assets/js/libs/classie.js"></script>
+
+  <!-- demo -->
+  <script src="assets/js/demo/demo.js"></script>
+
+  <!-- Individual module JS files here -->
+  <!-- Should we combine or not combine? -->
+  <!-- Should we provide minified versions? -->
+  <script src="assets/js/modules/modals-1.js"></script>
+  <script src="assets/js/modules/modals-2.js"></script>
+
+  <script src="assets/js/modules/buttons-1.js"></script>
+
+  <script src="assets/js/modules/list-items-1.js"></script>
+
+  <script src="assets/js/modules/toggles-flipInOutX.js"></script>
+</body>
+
+</html>
