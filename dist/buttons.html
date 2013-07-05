@@ -24,12 +24,14 @@
 
 
   <!-- dialogs first is important for ~ selector -->
+  <div class="effeckt-modal-wrap" id="effeckt-modal-wrap"> <!-- for centering transform -->
   <div class="effeckt-modal" id="effeckt-modal">
     <h3>Modal Dialog</h3>
     <div class="effeckt-modal-content">
       <p>This is a modal window.</p>
       <button class="effeckt-modal-close">Close me!</button>
     </div>
+  </div>
   </div>
   <!-- overlay coming after is important for ~ selector -->
   <div class="effeckt-overlay no-transitions" id="effeckt-overlay"></div>
@@ -118,7 +120,6 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
   <!-- for modals-2 -->
-  <script src="assets/js/libs/classie.js"></script>
 
   <!-- demo -->
   <script src="assets/js/demo/demo.js"></script>
