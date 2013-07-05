@@ -5,7 +5,7 @@ module.exports = function(grunt) {
 
     watch: {
       build: {
-        files: ['scss/**/*.{sass,scss}', '**/*.html'],
+        files: ['scss/**/*.{sass,scss}', '**/*.html', '**/*.hbs'],
         tasks: 'default',
         options: {
           livereload: true
@@ -98,7 +98,7 @@ module.exports = function(grunt) {
   });
 
   // Default task
-  grunt.registerTask('default', ['sass', 'autoprefixer']);
+  grunt.registerTask('default', ['sass', 'autoprefixer', 'assemble']);
   grunt.registerTask('dev', ['connect', 'watch']);
   grunt.registerTask('demo', ['copy:demo', 'assemble:demo']);
   grunt.registerTask('deploy', ['gh-pages']);
