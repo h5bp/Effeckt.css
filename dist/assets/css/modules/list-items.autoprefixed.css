@@ -104,17 +104,29 @@
   to {
     max-height: 0px;
   }
+
+  from {
+    max-height: 50px;
+  }
 }
 
 @-o-keyframes closeSpace {
   to {
     max-height: 0px;
   }
+
+  from {
+    max-height: 50px;
+  }
 }
 
 @keyframes closeSpace {
   to {
     max-height: 0px;
+  }
+
+  from {
+    max-height: 50px;
   }
 }
 
@@ -351,7 +363,7 @@
   }
 }
 
-.effeckt-list[data-type='wobble-in'] .new-item {
+.effeckt-list[data-type='flip-in'] .new-item {
   -webkit-backface-visibility: visible;
   -ms-backface-visibility: visible;
   -o-backface-visibility: visible;
@@ -365,4 +377,14 @@
   -webkit-animation-name: flipOutX;
   -o-animation-name: flipOutX;
   animation-name: flipOutX;
+}
+
+.effeckt-list[data-type='flip-in'] .remove-item {
+  -webkit-backface-visibility: visible;
+  -ms-backface-visibility: visible;
+  -o-backface-visibility: visible;
+  backface-visibility: visible;
+  -webkit-animation: flipOutX 1s both 0.2s, closeSpace 0.2s ease forwards 1s;
+  -o-animation: flipOutX 1s both 0.2s, closeSpace 0.2s ease forwards 1s;
+  animation: flipOutX 1s both 0.2s, closeSpace 0.2s ease forwards 1s;
 }
