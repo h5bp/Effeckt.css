@@ -25,7 +25,7 @@ var ListItems1 = {
     $(el).parent().find("button.remove").show();
 
     $("<li />", {
-      'text': "New Item",
+      'text': "new item",
       'class': "new-item"
     }).insertAfter(insertPoint);
 
@@ -35,7 +35,22 @@ var ListItems1 = {
 
     var $parent = $(el).parent();
     var type = $parent.find("ul").attr("data-type");
-    var delay = type === "expand-in" ? 200: type === "flip-in" ? 1200: 500;
+
+    // Having the timing here in JS is kinda not great.
+    switch (type) {
+      case 'expand-in':
+        delay = 200;
+        break;
+      case 'wobble-in':
+        delay = 1200;
+        break;
+      case 'flip-in':
+        delay = 1000;
+        break;
+      default:
+        delay = 500;
+    }
+
     var elToRemove = $parent.find("li.new-item").last();
 
     elToRemove.toggleClass("remove-item new-item");
@@ -44,9 +59,9 @@ var ListItems1 = {
     }, delay);
 
     if (!$parent.find("li.new-item").length) {
-
       $parent.find("button.remove").hide();
     }
+
   }
 
 };
