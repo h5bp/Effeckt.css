@@ -6,6 +6,10 @@
 .md-perspective,
 .md-perspective body {
   height: 100%;
+
+  // This is necessary because the scrollbar is
+  // weird with this effect, but, it causes 
+  // jerky behavior when the scrollbar comes and goes.
   overflow: hidden;
 }
 .md-perspective body  {
