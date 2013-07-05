@@ -23,22 +23,44 @@
   max-height: 0;
   opacity: 0;
   transform: translateX(-300px);
-  animation: 
+  animation:
     openSpace 0.2s ease forwards,
     moveIn 0.3s 0.2s ease forwards;
 }
 @keyframes openSpace {
-  to { 
+  to {
     max-height: 50px;
   }
 }
 @keyframes moveIn {
-  to { 
+  to {
     opacity: 1;
     transform: translateX(0);
   }
 }
 
+@keyframes moveOut {
+  to {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+}
+@keyframes closeSpace {
+  to {
+    max-height: 0px;
+  }
+  from {
+    max-height: 50px;
+  }
+}
+
+.effeckt-list[data-type='pop-in'] .remove-item {
+  max-height: 50px;
+  opacity: 1;
+  animation:
+    moveOut 0.3s 0.2s ease forwards,
+    closeSpace  0.2s ease forwards 0.3s;
+}
 
 .effeckt-list[data-type='expand-in'] .new-item {
   max-height: 0;
@@ -47,13 +69,28 @@
   animation: growHeight 0.2s ease forwards;
 }
 @keyframes growHeight {
-  to { 
+  to {
     max-height: 50px;
     opacity: 1;
     transform: scale(1);
   }
 }
 
+.effeckt-list[data-type='expand-in'] .remove-item {
+  animation: shrinkHeight 0.2s ease forwards;
+}
+@keyframes shrinkHeight {
+  to {
+    max-height: 0;
+    opacity: 1;
+    transform: scale(0);
+  }
+  from {
+    max-height: 50px;
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 
 
 @keyframes flipInX {
@@ -84,10 +121,20 @@
   }
 }
 
-.effeckt-list[data-type='wobble-in'] .new-item {
+.effeckt-list[data-type='flip-in'] .new-item {
   backface-visibility: visible;
-  animation: flipInX 1s both;
+  animation:
+    flipInX 1s both 0.2s,
+    openSpace 0.2s ease forwards;
 }
 .effeckt-toggle__flipOutX {
   animation-name: flipOutX;
 }
+
+.effeckt-list[data-type='flip-in'] .remove-item {
+  backface-visibility: visible;
+  animation:
+    flipOutX 1s both 0.2s,
+    closeSpace 0.2s ease forwards 1s;
+}
+
