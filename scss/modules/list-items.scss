@@ -49,6 +49,9 @@
   to {
     max-height: 0px;
   }
+  from {
+    max-height: 50px;
+  }
 }
 
 .effeckt-list[data-type='pop-in'] .remove-item {
@@ -90,7 +93,6 @@
 }
 
 
-
 @keyframes flipInX {
   0% {
     transform: perspective(300px) rotateX(90deg);
@@ -119,7 +121,7 @@
   }
 }
 
-.effeckt-list[data-type='wobble-in'] .new-item {
+.effeckt-list[data-type='flip-in'] .new-item {
   backface-visibility: visible;
   animation:
     flipInX 1s both 0.2s,
@@ -127,5 +129,12 @@
 }
 .effeckt-toggle__flipOutX {
   animation-name: flipOutX;
+}
+
+.effeckt-list[data-type='flip-in'] .remove-item {
+  backface-visibility: visible;
+  animation:
+    flipOutX 1s both 0.2s,
+    closeSpace 0.2s ease forwards 1s;
 }
 

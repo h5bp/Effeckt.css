@@ -35,7 +35,7 @@ var ListItems1 = {
 
     var $parent = $(el).parent();
     var type = $parent.find("ul").attr("data-type");
-    var delay = type === "expand-in" ? 200: 500;
+    var delay = type === "expand-in" ? 200: type === "flip-in" ? 1200: 500;
     var elToRemove = $parent.find("li.new-item").last();
 
     elToRemove.toggleClass("remove-item new-item");
