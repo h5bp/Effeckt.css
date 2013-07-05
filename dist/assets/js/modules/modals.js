@@ -13,6 +13,7 @@
 var Modals = {
 
   overlay: $('#effeckt-overlay'),
+  modalWrap: $("#effeckt-modal-wrap"),
   modal: $("#effeckt-modal"),
   modalStyle: "",
 
@@ -28,7 +29,6 @@ var Modals = {
       Modals.openModal(this);
     });
 
-    // Is this a weird double binding problem with Modals1?
     $(".effeckt-modal-close").on("click", function() {
       Modals.closeModal(this);
     })
@@ -37,25 +37,22 @@ var Modals = {
 
   openModal: function(el) {
 
-    // TODO: do the 'md-perspective' stuff for the demos that need it.
-    // See: http://tympanus.net/Development/ModalWindowEffects/
-    //      http://tympanus.net/Development/ModalWindowEffects/js/modalEffects.js
-
     var button = $(el);
+
+    Modals.modalWrap.show();
 
     Modals.modalStyle = "md-effect-" + button.data("modal-type").replace(/[^0-9]/g, '');
 
-    Modals.modal.addClass(Modals.modalStyle);
-
-    console.log(button.data("needs-perspective"));
+    Modals.modalWrap.addClass(Modals.modalStyle);
 
     if (button.data("needs-perspective")) {
       $("html").addClass("md-perspective");
     }
 
     // Using timeout so we can set style first, then show it so animations/transitions work. You normally wouldn't need to do this.
+    // This is problematic because timings should be controlled in CSS
     setTimeout(function() {
-      Modals.modal.addClass("effeckt-show");
+      Modals.modalWrap.addClass("effeckt-show");
     }, 300);
 
     Modals.showOverlay();
@@ -64,10 +61,11 @@ var Modals = {
 
   closeModal: function(el) {
 
-    Modals.modal.removeClass("effeckt-show");
+    Modals.modalWrap.removeClass("effeckt-show");
     setTimeout(function() {
-      Modals.modal.removeClass(Modals.modalStyle);
+      Modals.modalWrap.removeClass(Modals.modalStyle);
       $("html").removeClass("md-perspective");
+      Modals.modalWrap.hide();
     }, 300);
 
     Modals.hideOverlay();
