@@ -1,0 +1,11 @@
+.effeckt-off-screen-nav {
+  positon: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow-y: auto;
+  background: #333;
+  a {
+    color: white;
+  }
+}
