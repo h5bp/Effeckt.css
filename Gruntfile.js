@@ -98,7 +98,7 @@ module.exports = function(grunt) {
   });
 
   // Default task
-  grunt.registerTask('default', ['sass', 'autoprefixer', 'assemble']);
+  grunt.registerTask('default', ['sass', 'autoprefixer', 'assemble', 'copy']);
   grunt.registerTask('dev', ['connect', 'watch']);
   grunt.registerTask('demo', ['copy:demo', 'assemble:demo']);
   grunt.registerTask('deploy', ['gh-pages']);

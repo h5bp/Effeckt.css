@@ -15,15 +15,9 @@
 
     <!-- Individual module CSS files here -->
     <!-- Should we combine or not combine? -->
-
     <link rel="stylesheet" href="assets/css/modules/modals.autoprefixed.css">
-    <link rel="stylesheet" href="assets/css/modules/modals-1.autoprefixed.css">
-    <link rel="stylesheet" href="assets/css/modules/modals-2.autoprefixed.css">
-
-    <link rel="stylesheet" href="assets/css/modules/buttons-1.autoprefixed.css">
-
-    <link rel="stylesheet" href="assets/css/modules/list-items-1.autoprefixed.css">
-    <link rel="stylesheet" href="assets/css/modules/toggles-flipInOutX.autoprefixed.css">
+    <link rel="stylesheet" href="assets/css/modules/buttons.autoprefixed.css">
+    <link rel="stylesheet" href="assets/css/modules/list-items.autoprefixed.css">
 </head>
 
 <body>
@@ -59,27 +53,71 @@
     </h1>
     <subhead>Performant CSS transitions & animations</subhead>
 
-    <!-- TODO: Break this up into separate files -->
-    <!-- Possibilities:
-        1. Grunt includes https://github.com/vanetix/grunt-includes
-        2. Jade includes
-        3. $.load with jQuery
-        4. Something else? PHP?
-    -->
+    <div class="effeckt effeckt-demo-listitems-1 group">
 
-    <div class="effeckt effeckt-demo-modals-1">
-  <h2>
-    Modals 1
-    <a href="http://codepen.io/chriscoyier/pen/EGbxc">(source)</a>
-        <a href="modals-1.html">#</a>
-  </h2>
+  <header>
+    <h2>
+      List Items
+      <a href="listitems.html">#</a>
+    </h2>
+    <span class="source">
+      Source:
+      <a href="http://css-tricks.com/transitional-interfaces-coded/">
+        CSS-Tricks
+      </a>
+    </span>
+  </header>
 
-  <button class="modal-button" data-modal-type="from-above">From Above</button>
-  <button class="modal-button" data-modal-type="from-below">From Below</button>
+  <div class="effeckt-list-wrap" style="padding-right: 20px;">
+    <h4>Gap, Slide In</h4>
+    <ul class="effeckt-list" data-type="pop-in">
+      <li>list item</li>
+      <li>list item</li>
+      <li>list item</li>
+      <li>list item</li>
+    </ul>
+    <button class="">Add</button>
+  </div>
+
+  <div class="effeckt-list-wrap">
+    <h4>Expand In</h4>
+    <ul class="effeckt-list" data-type="expand-in">
+      <li>list item</li>
+      <li>list item</li>
+      <li>list item</li>
+      <li>list item</li>
+    </ul>
+    <button>Add</button>
+  </div>
+
+  <div class="effeckt-list-wrap" style="padding-right: 20px;">
+    <h4>Wobble In</h4>
+    <ul class="effeckt-list" data-type="wobble-in">
+      <li>list item</li>
+      <li>list item</li>
+      <li>list item</li>
+      <li>list item</li>
+    </ul>
+    <button class="">Add</button>
+  </div>
+
+  <div class="effeckt-list-wrap" style="padding-right: 20px;">
+    <h4>Todo: Flip in</h4>
+    <ul class="effeckt-list" data-type="flip-in">
+      <li>list item</li>
+      <li>list item</li>
+      <li>list item</li>
+      <li>list item</li>
+    </ul>
+    <button class="">Add</button>
+  </div>
+
 </div>
 
 
   </div><!-- div.page-wrap -->
+
+
 
   <!-- libs -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
@@ -93,14 +131,9 @@
   <!-- Individual module JS files here -->
   <!-- Should we combine or not combine? -->
   <!-- Should we provide minified versions? -->
-  <script src="assets/js/modules/modals-1.js"></script>
-  <script src="assets/js/modules/modals-2.js"></script>
-
-  <script src="assets/js/modules/buttons-1.js"></script>
-
-  <script src="assets/js/modules/list-items-1.js"></script>
-
-  <script src="assets/js/modules/toggles-flipInOutX.js"></script>
+  <script src="assets/js/modules/modals.js"></script>
+  <script src="assets/js/modules/buttons.js"></script>
+  <script src="assets/js/modules/list-items.js"></script>
 </body>
 
 </html>
