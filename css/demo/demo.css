@@ -26,7 +26,6 @@ body {
   font-size: large;
   line-height: 1.4;
   overflow-x: hidden;
-  transform: translateZ(0);
 }
 
 .page-wrap {

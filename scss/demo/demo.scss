@@ -31,7 +31,10 @@ body {
   font-size: large;
   line-height: 1.4;
   overflow-x: hidden; // for logo effect
-  transform: translateZ(0); // for performance
+
+  // This is kinda good for performance overall
+  // But... you can't fixed position inside it then
+  // transform: translateZ(0);
 }
 
 // Layout
