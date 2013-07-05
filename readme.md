@@ -52,12 +52,6 @@ You'll have to:
 1. Run `grunt dev` to start watching for file saves & run a local web server at port 3000 ([localhost:3000](http://localhost:3000/)).
 1. Probably make a local development domain, because the plan is to `$.load` in the different individual modules, so each module can be it's own .html file, and that won't work at a file:// URL.
 
-Also, we're using regular ol' Ruby Sass at the moment, so that will need to be on your system:
-
-`sudo gem install sass`
-
-[We're hoping](https://github.com/h5bp/Effeckt.css/issues/35) to remove this dependancy and get it all in grunt/node land soon.
-
 
 ### Examples To Add
 
