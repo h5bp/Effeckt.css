@@ -1,3 +1,6 @@
+// TODO: Removal Animations as well
+
+
 .effeckt-list {
   list-style: none;
   li {
@@ -6,6 +9,9 @@
     overflow: hidden;
     margin-bottom: 2px;
     line-height: 2;
+    &.new-item {
+      background: #ccc;
+    }
   }
 }
 
@@ -14,7 +20,6 @@
   overflow: hidden;
 }
 .effeckt-list[data-type='pop-in'] .new-item {
-  background: #dbc0f7;
   max-height: 0;
   opacity: 0;
   transform: translateX(-300px);
@@ -36,7 +41,6 @@
 
 
 .effeckt-list[data-type='expand-in'] .new-item {
-  background: #aeec88;
   max-height: 0;
   opacity: 0;
   transform: scale(0);
@@ -48,4 +52,42 @@
     opacity: 1;
     transform: scale(1);
   }
+}
+
+
+
+@keyframes flipInX {
+  0% {
+    transform: perspective(300px) rotateX(90deg);
+    opacity: 0;
+  }
+  40% {
+    transform: perspective(300px) rotateX(-10deg);
+  }
+  70% {
+    transform: perspective(300px) rotateX(10deg);
+  }
+  100% {
+    transform: perspective(300px) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes flipOutX {
+  0% {
+    transform: perspective(400px) rotateX(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: perspective(400px) rotateX(90deg);
+    opacity: 0;
+  }
+}
+
+.effeckt-list[data-type='wobble-in'] .new-item {
+  backface-visibility: visible;
+  animation: flipInX 1s both;
+}
+.effeckt-toggle__flipOutX {
+  animation-name: flipOutX;
 }

@@ -40,6 +40,17 @@ body {
   background: white;
   margin: 0 1rem 1rem 0;
 }
+.effeckt header {
+  margin: 0 0 1rem 0;
+  padding: 0 0 0.2rem 0;
+  border-bottom: 2px solid #eee;
+  position: relative;
+}
+.effeckt header .source {
+  position: absolute;
+  right: 0;
+  bottom: 2px;
+}
 
 a {
   text-decoration: none;
@@ -72,16 +83,6 @@ h1 span {
   color: white;
   text-align: center;
   text-transform: uppercase;
-}
-
-h2 {
-  margin: 0 0 1rem 0;
-  padding: 0 0 0.2rem 0;
-  border-bottom: 2px solid #eee;
-}
-
-h2 a {
-  font-size: 1rem;
 }
 
 h4 {
@@ -185,6 +186,10 @@ h1 span:nth-child(11) {
 .effeckt-list-wrap {
   width: 50%;
   float: left;
+  margin: 0 0 2rem 0;
+}
+.effeckt-list-wrap:nth-child(even) {
+  clear: both;
 }
 
 .effeckt-toggle-demo {
@@ -193,4 +198,49 @@ h1 span:nth-child(11) {
 
 [data-toggle-trigger] {
   margin-bottom: 20px;
+}
+
+.effeckt-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  max-width: 630px;
+  min-width: 320px;
+  z-index: 2000;
+  transform: translateX(-50%) translateY(-50%);
+  visibility: hidden;
+  backface-visibility: hidden;
+  background: white;
+}
+.effeckt-modal h3 {
+  padding: 1rem;
+  color: white;
+  background: #444;
+}
+
+.effeckt-modal-content {
+  padding: 1rem;
+}
+
+.effeckt-show {
+  visibility: visible;
+}
+
+.effeckt-overlay.effeckt-show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.effeckt-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
 }
