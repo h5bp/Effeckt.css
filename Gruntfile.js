@@ -10,6 +10,13 @@ module.exports = function(grunt) {
         options: {
           livereload: true
         }
+      },
+      livereload: {
+        files: [
+          'dist/*.html',
+          'dist/assets/css/{,*/}*.css',
+          'dist/assets/js/{,*/}*.js'
+        ]
       }
     },
 
@@ -31,7 +38,6 @@ module.exports = function(grunt) {
     },
 
     // https://github.com/nDmitry/grunt-autoprefixer
-    // Too repetative? Or good because we need a web builder with file list?
     autoprefixer: {
       build: {
         options: {
