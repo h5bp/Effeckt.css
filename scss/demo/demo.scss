@@ -31,6 +31,7 @@ body {
   font-size: large;
   line-height: 1.4;
   overflow-x: hidden; // for logo effect
+  padding: 2rem;
 
   // This is kinda good for performance overall
   // But... you can't fixed position inside it then
@@ -39,9 +40,9 @@ body {
 
 // Layout
 .page-wrap {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 1rem;
+  // Required for non-janky off-screen squishing
+  float: right;
+  width: 100%;
 }
 .effeckt {
   padding: 2rem;
