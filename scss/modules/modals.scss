@@ -1,6 +1,6 @@
-/* 
+/*
   Styles for the html/body for some of the 3D effects.
-  Note that we need a container wrapping all content on the page for the 
+  Note that we need a container wrapping all content on the page for the
   perspective effects (not including the modals and the overlay).
 */
 .md-perspective,
@@ -8,7 +8,7 @@
   height: 100%;
 
   // This is necessary because the scrollbar is
-  // weird with this effect, but, it causes 
+  // weird with this effect, but, it causes
   // jerky behavior when the scrollbar comes and goes.
   overflow: hidden;
 }
@@ -72,9 +72,9 @@
 }
 
 
-/* 
-  Individual modal styles with animations/transitions 
-*/ 
+/*
+  Individual modal styles with animations/transitions
+*/
 
 /* Effect 1: From Above */
 .md-effect-1 .effeckt-modal {
@@ -142,7 +142,7 @@
   transform-style: preserve-3d;
 }
 .md-effect-6 .effeckt-modal {
-  transform: translateZ(600px) translateX(30%) rotate(10deg); 
+  transform: translateZ(600px) translateX(30%) rotate(10deg);
   opacity: 0;
 }
 
@@ -248,14 +248,14 @@
   animation: slit 0.7s forwards ease-out;
 }
 @keyframes slit {
-  50% { 
-    transform: translateZ(-250px) rotateY(89deg); 
-    opacity: 1; 
+  50% {
+    transform: translateZ(-250px) rotateY(89deg);
+    opacity: 1;
     animation-timing-function: ease-in;
   }
-  100% { 
-    transform: translateZ(0) rotateY(0deg); 
-    opacity: 1; 
+  100% {
+    transform: translateZ(0) rotateY(0deg);
+    opacity: 1;
   }
 }
 
@@ -318,7 +318,7 @@
   height: 100%;
   overflow: hidden;
   transition: transform 0.3s;
-} 
+}
 .effeckt-show.md-effect-17 ~ .page-wrap,
 .effeckt-show.md-effect-17 ~ .effeckt-overlay  {
   transform: rotateX(-2deg);
@@ -352,12 +352,12 @@
   animation: rotateRightSideFirst 0.5s forwards ease-in;
 }
 @keyframes rotateRightSideFirst {
-  50% { 
-    transform: translateZ(-50px) rotateY(5deg); 
-    animation-timing-function: ease-out; 
+  50% {
+    transform: translateZ(-50px) rotateY(5deg);
+    animation-timing-function: ease-out;
   }
-  100% { 
-    transform: translateZ(-200px); 
+  100% {
+    transform: translateZ(-200px);
   }
 }
 .md-effect-18 .effeckt-modal {
@@ -386,9 +386,9 @@
   animation: OpenTop 0.5s forwards ease-in;
 }
 @keyframes OpenTop {
-  50% { 
-    transform: rotateX(10deg); 
-    animation-timing-function: ease-out; 
+  50% {
+    transform: rotateX(10deg);
+    animation-timing-function: ease-out;
   }
 }
 .md-effect-19 .effeckt-modal {
@@ -399,4 +399,86 @@
   transform: translateY(0);
   opacity: 1;
   transition: all 0.5s 0.1s;
+}
+
+/* Effect 20: From the top to bottom with left tilt on the way out */
+.md-effect-20 {
+  transition: 0.3s ease-in-out;
+  transform: -50% -50%;
+  top: -100%;
+  opacity: 0;
+}
+.effeckt-show.md-effect-20 {
+  top: 50%;
+  opacity: 1;
+}
+.effeckt-hide.md-effect-20 {
+  top: 100%;
+  transform: translateX(-50%) rotate(-29deg);
+  opacity: 0;
+}
+
+/* Effect 21: From the top to bottom with right tilt on the way out */
+.md-effect-21 {
+  transition: 0.3s ease-in-out;
+  transform: -50% -50%;
+  top: -100%;
+  opacity: 0;
+}
+.effeckt-show.md-effect-21 {
+  top: 50%;
+  opacity: 1;
+}
+.effeckt-hide.md-effect-21 {
+  top: 100%;
+  transform: translateX(-50%) rotate(29deg);
+  opacity: 0;
+}
+
+/* Effect 22: From the top to bottom */
+.md-effect-22 {
+  transition: 0.3s ease-in-out;
+  transform: -50% -50%;
+  top: -100%;
+  opacity: 0;
+}
+.effeckt-show.md-effect-22 {
+  top: 50%;
+  opacity: 1;
+}
+.effeckt-hide.md-effect-22 {
+  top: 100%;
+  opacity: 0;
+}
+
+/* Effect 23: From the bottom to bottom */
+.md-effect-23 {
+  transition: 0.3s ease-in-out;
+  transform: -50% -50%;
+  top: 100%;
+  opacity: 0;
+}
+.effeckt-show.md-effect-23 {
+  top: 50%;
+  opacity: 1;
+}
+.effeckt-hide.md-effect-23 {
+  top: 100%;
+  opacity: 0;
+}
+
+/* Effect 24: From the top to top */
+.md-effect-24 {
+  transition: 0.3s ease-in-out;
+  transform: -50% -50%;
+  top: -100%;
+  opacity: 0;
+}
+.effeckt-show.md-effect-24 {
+  top: 50%;
+  opacity: 1;
+}
+.effeckt-hide.md-effect-24 {
+  top: -100%;
+  opacity: 0;
 }
