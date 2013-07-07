@@ -58,7 +58,7 @@
 }
 
 
-// 1
+// 1 Left Overlay
 .effeckt-off-screen-nav-left-overlay {
   transform: translateX(-100%);
   transition: 0.5s;
@@ -68,7 +68,7 @@
 }
 
 
-// 2
+// 2 Left Push
 .effeckt-off-screen-nav-left-push {
   // Needs to be fixed size so .page-wrap can move same distance
   transform: translateX(-12rem);
@@ -85,7 +85,7 @@
 }
 
 
-// 3
+// 3 Left Squeeze
 .effeckt-off-screen-nav-left-squeeze {
   // Needs to be percentage so can be equal parts with .page-wrap
   width: 20%;
@@ -100,5 +100,57 @@
   max-width: none; // reset from demo
 }
 .effeckt-off-screen-nav-left-squeeze.effeckt-off-screen-nav-show ~ .page-wrap {
+  width: 80%;
+}
+
+// 4 Right Overlay
+.effeckt-off-screen-nav-right-overlay {
+  right: 0;
+  left: auto;
+  transform: translateX(100%);
+  transition: 0.5s;
+}
+.effeckt-off-screen-nav-right-overlay.effeckt-off-screen-nav-show {
+  transform: translateX(0);
+}
+
+
+// 5 Right Push
+.effeckt-off-screen-nav-right-push {
+  // Needs to be fixed size so .page-wrap can move same distance
+  left: auto;
+  right: 0;
+  transform: translateX(12rem);
+  transition: 0.5s;
+}
+.effeckt-off-screen-nav-right-push.effeckt-off-screen-nav-show {
+  transform: translateX(0);
+}
+.effeckt-off-screen-nav-right-push ~ .page-wrap {
+  transition: 0.5s;
+}
+.effeckt-off-screen-nav-right-push.effeckt-off-screen-nav-show ~ .page-wrap {
+  transform: translateX(-12rem);
+}
+
+
+// 6 Right Squeeze
+.effeckt-off-screen-nav-right-squeeze {
+  // Needs to be percentage so can be equal parts with .page-wrap
+  left: auto;
+  right: 0;
+  width: 20%;
+  transform: translateX(100%);
+  transition: 0.5s;
+}
+.effeckt-off-screen-nav-right-squeeze.effeckt-off-screen-nav-show {
+  transform: translateX(0);
+}
+.effeckt-off-screen-nav-right-squeeze ~ .page-wrap {
+  float: left;
+  transition: width 0.5s;
+  max-width: none; // reset from demo
+}
+.effeckt-off-screen-nav-right-squeeze.effeckt-off-screen-nav-show ~ .page-wrap {
   width: 80%;
 }
