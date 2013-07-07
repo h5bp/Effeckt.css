@@ -4,16 +4,24 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON( 'package.json' ),
 
     watch: {
-      build: {
-        files: ['scss/**/*.scss', 'src/**/*.hbs', 'js/**/*.js'],
-        tasks: 'default',
-        options: {
-          livereload: true
-        }
+      scss: {
+        files: ['scss/**/*.scss'],
+        tasks: 'scss'
+      },
+      html: {
+        files: ['src/**/*.hbs'],
+        tasks: 'html'
+      },
+      js: {
+        files: ['js/**/*.js'],
+        tasks: 'js'
       },
       livereload: {
+        options: {
+          livereload: true
+        },
         files: [
-          'dist/*.html',
+          'dist/**/*.html',
           'dist/assets/css/{,*/}*.css',
           'dist/assets/js/{,*/}*.js'
         ]
@@ -88,6 +96,16 @@ module.exports = function(grunt) {
           { expand: true, cwd: './css', src: ['./**/*.*'], dest: 'dist/assets/css' },
           { expand: true, cwd: './js', src: ['./**/*.*'], dest: 'dist/assets/js' }
         ]
+      },
+      css: {
+        files: [
+          { expand: true, cwd: './css', src: ['./**/*.*'], dest: 'dist/assets/css' }
+        ]
+      },
+      js: {
+        files: [
+          { expand: true, cwd: './js', src: ['./**/*.*'], dest: 'dist/assets/js' }
+        ]
       }
     },
 
@@ -105,6 +123,11 @@ module.exports = function(grunt) {
 
   // Default task
   grunt.registerTask('default', ['sass', 'autoprefixer', 'assemble', 'copy']);
+
+  grunt.registerTask('scss', ['sass', 'autoprefixer', 'copy:css']);
+  grunt.registerTask('html', ['assemble']);
+  grunt.registerTask('js', ['copy:js']);
+
   grunt.registerTask('dev', ['connect', 'watch']);
   grunt.registerTask('demo', ['copy:demo', 'assemble:demo']);
   grunt.registerTask('deploy', ['gh-pages']);
