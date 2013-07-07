@@ -6,7 +6,7 @@
  *
  * Licensed under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
- * 
+ *
  * Copyright 2013, Codrops
  * http://www.codrops.com
  */
@@ -21,7 +21,7 @@ var Modals = {
 
     this.bindUIActions();
 
-  }, 
+  },
 
   bindUIActions: function() {
 
@@ -31,7 +31,7 @@ var Modals = {
 
     $(".effeckt-modal-close").on("click", function() {
       Modals.closeModal(this);
-    })
+    });
 
   },
 
@@ -48,6 +48,9 @@ var Modals = {
     if (button.data("needs-perspective")) {
       $("html").addClass("md-perspective");
     }
+    if (button.data("hide-class")) {
+      Modals.modalWrap.data("hide-class",true);
+    }
 
     // Using timeout so we can set style first, then show it so animations/transitions work. You normally wouldn't need to do this.
     // This is problematic because timings should be controlled in CSS
@@ -61,7 +64,23 @@ var Modals = {
 
   closeModal: function(el) {
 
-    Modals.modalWrap.removeClass("effeckt-show");
+    //Not the cleanest way
+    if( Modals.modalWrap.data("hide-class") ){
+
+      Modals.modalWrap.addClass("effeckt-hide");
+
+      setTimeout(function() {
+        Modals.modalWrap.removeClass("effeckt-show effeckt-hide");
+      }, 300);
+
+      Modals.modalWrap.data("hide-class",false);
+
+    } else {
+
+      Modals.modalWrap.removeClass("effeckt-show");
+
+    }
+
     setTimeout(function() {
       Modals.modalWrap.removeClass(Modals.modalStyle);
       $("html").removeClass("md-perspective");
@@ -80,6 +99,6 @@ var Modals = {
     Modals.overlay.removeClass("effeckt-show");
   }
 
-}
+};
 
 Modals.init();
