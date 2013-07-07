@@ -140,3 +140,86 @@
 .effeckt-off-screen-nav-left-squeeze.effeckt-off-screen-nav-show ~ .page-wrap {
   width: 80%;
 }
+
+.effeckt-off-screen-nav-right-overlay {
+  right: 0;
+  left: auto;
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.effeckt-off-screen-nav-right-overlay.effeckt-off-screen-nav-show {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.effeckt-off-screen-nav-right-push {
+  left: auto;
+  right: 0;
+  -webkit-transform: translateX(12rem);
+  -ms-transform: translateX(12rem);
+  -o-transform: translateX(12rem);
+  transform: translateX(12rem);
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.effeckt-off-screen-nav-right-push.effeckt-off-screen-nav-show {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.effeckt-off-screen-nav-right-push ~ .page-wrap {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.effeckt-off-screen-nav-right-push.effeckt-off-screen-nav-show ~ .page-wrap {
+  -webkit-transform: translateX(-12rem);
+  -ms-transform: translateX(-12rem);
+  -o-transform: translateX(-12rem);
+  transform: translateX(-12rem);
+}
+
+.effeckt-off-screen-nav-right-squeeze {
+  left: auto;
+  right: 0;
+  width: 20%;
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.effeckt-off-screen-nav-right-squeeze.effeckt-off-screen-nav-show {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.effeckt-off-screen-nav-right-squeeze ~ .page-wrap {
+  float: left;
+  -webkit-transition: width 0.5s;
+  -o-transition: width 0.5s;
+  transition: width 0.5s;
+  max-width: none;
+}
+
+.effeckt-off-screen-nav-right-squeeze.effeckt-off-screen-nav-show ~ .page-wrap {
+  width: 80%;
+}
