@@ -401,6 +401,7 @@
   transition: all 0.5s 0.1s;
 }
 
+
 /* Effect 20: From the top to bottom with left tilt on the way out */
 .md-effect-20 {
   transition: 0.3s ease-in-out;
@@ -418,22 +419,6 @@
   opacity: 0;
 }
 
-/* Effect 21: From the top to bottom with right tilt on the way out */
-.md-effect-21 {
-  transition: 0.3s ease-in-out;
-  transform: -50% -50%;
-  top: -100%;
-  opacity: 0;
-}
-.effeckt-show.md-effect-21 {
-  top: 50%;
-  opacity: 1;
-}
-.effeckt-hide.md-effect-21 {
-  top: 100%;
-  transform: translateX(-50%) rotate(29deg);
-  opacity: 0;
-}
 
 /* Effect 22: From the top to bottom */
 .md-effect-22 {
@@ -451,6 +436,7 @@
   opacity: 0;
 }
 
+
 /* Effect 23: From the bottom to bottom */
 .md-effect-23 {
   transition: 0.3s ease-in-out;
@@ -466,6 +452,7 @@
   top: 100%;
   opacity: 0;
 }
+
 
 /* Effect 24: From the top to top */
 .md-effect-24 {

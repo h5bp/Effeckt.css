@@ -67,3 +67,20 @@
   -o-transform: translateX(0);
   transform: translateX(0);
 }
+
+.effeckt-off-screen-nav-left-overlay {
+  -webkit-transform: translateX(-101%);
+  -ms-transform: translateX(-101%);
+  -o-transform: translateX(-101%);
+  transform: translateX(-101%);
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.effeckt-off-screen-nav-left-overlay.effeckt-off-screen-nav-show {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+}

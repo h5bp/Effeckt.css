@@ -1,4 +1,4 @@
-var ListItems1 = {
+var ListItems = {
 
   init: function() {
 
@@ -9,11 +9,11 @@ var ListItems1 = {
   bindUIActions: function() {
 
     $(".effeckt-list-wrap button.add").on("click", function() {
-      ListItems1.addListItem(this);
+      ListItems.addListItem(this);
     });
 
     $(".effeckt-list-wrap button.remove").on("click", function() {
-      ListItems1.removeListItem(this);
+      ListItems.removeListItem(this);
     });
 
     $("button.remove").hide();
@@ -66,4 +66,4 @@ var ListItems1 = {
 
 };
 
-ListItems1.init();
+ListItems.init();
