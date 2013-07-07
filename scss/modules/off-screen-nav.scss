@@ -46,7 +46,7 @@
 }
 
 
-// 1
+// 1 Left Overlay
 .effeckt-off-screen-nav-left-overlay {
   // Extra 1% just for good measure
   // Don't want a rounding error or something to expose a sliver
@@ -58,13 +58,52 @@
 }
 
 
-// 2
-.effeckt-off-screen-nav-left-overlay {
+// 2 Left Push
+.effeckt-off-screen-nav-left-push {
   // Extra 1% just for good measure
   // Don't want a rounding error or something to expose a sliver
   transform: translateX(-101%);
   transition: 0.5s;
 }
-.effeckt-off-screen-nav-left-overlay.effeckt-off-screen-nav-show {
+.effeckt-off-screen-nav-left-push ~ .page-wrap{
+  transition: 0.5s;
   transform: translateX(0);
+}
+.effeckt-off-screen-nav-left-push.effeckt-off-screen-nav-show {
+  transform: translateX(0);
+}
+.effeckt-off-screen-nav-left-push.effeckt-off-screen-nav-show ~ .page-wrap{
+  transform: translateX(10%);
+}
+
+// 3 Right Overlay
+.effeckt-off-screen-nav-right-overlay {
+  // Extra 1% just for good measure
+  // Don't want a rounding error or something to expose a sliver
+  left: auto;
+  right: 0;
+  transform: translateX(101%);
+  transition: 0.5s;
+}
+.effeckt-off-screen-nav-right-overlay.effeckt-off-screen-nav-show {
+  transform: translateX(0);
+}
+// 4 Right Push
+.effeckt-off-screen-nav-right-push {
+  // Extra 1% just for good measure
+  // Don't want a rounding error or something to expose a sliver
+  left: auto;
+  right: 0;
+  transform: translateX(101%);
+  transition: 0.5s;
+}
+.effeckt-off-screen-nav-right-push ~ .page-wrap{
+  transition: 0.5s;
+  transform: translateX(0);
+}
+.effeckt-off-screen-nav-right-push.effeckt-off-screen-nav-show {
+  transform: translateX(0);
+}
+.effeckt-off-screen-nav-right-push.effeckt-off-screen-nav-show ~ .page-wrap{
+  transform: translateX(-10%);
 }
