@@ -1,6 +1,6 @@
-/* 
+/*
   Styles for the html/body for some of the 3D effects.
-  Note that we need a container wrapping all content on the page for the 
+  Note that we need a container wrapping all content on the page for the
   perspective effects (not including the modals and the overlay).
 */
 
@@ -75,8 +75,8 @@
   transition: 0.3s;
 }
 
-/* 
-  Individual modal styles with animations/transitions 
+/*
+  Individual modal styles with animations/transitions
 */
 
 /* Effect 1: From Above */
@@ -762,4 +762,104 @@
   -webkit-transition: all 0.5s 0.1s;
   -o-transition: all 0.5s 0.1s;
   transition: all 0.5s 0.1s;
+}
+
+/* Effect 20: From the top to bottom with left tilt on the way out */
+
+.md-effect-20 {
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  -webkit-transform: -50% -50%;
+  -ms-transform: -50% -50%;
+  -o-transform: -50% -50%;
+  transform: -50% -50%;
+  top: -100%;
+  opacity: 0;
+}
+
+.effeckt-show.md-effect-20 {
+  top: 50%;
+  opacity: 1;
+}
+
+.effeckt-hide.md-effect-20 {
+  top: 100%;
+  -webkit-transform: translateX(-50%) rotate(-29deg);
+  -ms-transform: translateX(-50%) rotate(-29deg);
+  -o-transform: translateX(-50%) rotate(-29deg);
+  transform: translateX(-50%) rotate(-29deg);
+  opacity: 0;
+}
+
+/* Effect 22: From the top to bottom */
+
+.md-effect-22 {
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  -webkit-transform: -50% -50%;
+  -ms-transform: -50% -50%;
+  -o-transform: -50% -50%;
+  transform: -50% -50%;
+  top: -100%;
+  opacity: 0;
+}
+
+.effeckt-show.md-effect-22 {
+  top: 50%;
+  opacity: 1;
+}
+
+.effeckt-hide.md-effect-22 {
+  top: 100%;
+  opacity: 0;
+}
+
+/* Effect 23: From the bottom to bottom */
+
+.md-effect-23 {
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  -webkit-transform: -50% -50%;
+  -ms-transform: -50% -50%;
+  -o-transform: -50% -50%;
+  transform: -50% -50%;
+  top: 100%;
+  opacity: 0;
+}
+
+.effeckt-show.md-effect-23 {
+  top: 50%;
+  opacity: 1;
+}
+
+.effeckt-hide.md-effect-23 {
+  top: 100%;
+  opacity: 0;
+}
+
+/* Effect 24: From the top to top */
+
+.md-effect-24 {
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  -webkit-transform: -50% -50%;
+  -ms-transform: -50% -50%;
+  -o-transform: -50% -50%;
+  transform: -50% -50%;
+  top: -100%;
+  opacity: 0;
+}
+
+.effeckt-show.md-effect-24 {
+  top: 50%;
+  opacity: 1;
+}
+
+.effeckt-hide.md-effect-24 {
+  top: -100%;
+  opacity: 0;
 }
