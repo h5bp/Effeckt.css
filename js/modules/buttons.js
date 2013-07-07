@@ -1,4 +1,4 @@
-var Buttons1 = {
+var Buttons = {
 
   init: function() {
 
@@ -8,8 +8,8 @@ var Buttons1 = {
 
   bindUIActions: function() {
 
-    $('.ladda-button').on( 'click', function(){
-      Buttons1.showLoader(this);
+    $('.effeckt-button').on( 'click', function(){
+      Buttons.showLoader(this);
     });
 
   },
@@ -38,4 +38,4 @@ var Buttons1 = {
 
 };
 
-Buttons1.init();
+Buttons.init();
