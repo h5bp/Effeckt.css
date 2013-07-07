@@ -40,3 +40,10 @@
 
 .effeckt-off-screen-nav-left-overlay.effeckt-off-screen-nav-show {
   transform: translateX(0); }
+
+.effeckt-off-screen-nav-left-overlay {
+  transform: translateX(-101%);
+  transition: 0.5s; }
+
+.effeckt-off-screen-nav-left-overlay.effeckt-off-screen-nav-show {
+  transform: translateX(0); }

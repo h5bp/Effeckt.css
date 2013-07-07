@@ -78,7 +78,7 @@ module.exports = function(grunt) {
         layout: 'layout.hbs',
         layoutdir: 'src/templates/layouts',
         assets: 'dist/assets',
-        partials: ['src/templates/pages/*.hbs']
+        partials: ['src/templates/pages/*.hbs', 'src/templates/parts/*.hbs']
       },
       demo: {
         options: {

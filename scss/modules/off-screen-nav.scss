@@ -56,3 +56,15 @@
 .effeckt-off-screen-nav-left-overlay.effeckt-off-screen-nav-show {
   transform: translateX(0);
 }
+
+
+// 2
+.effeckt-off-screen-nav-left-overlay {
+  // Extra 1% just for good measure
+  // Don't want a rounding error or something to expose a sliver
+  transform: translateX(-101%);
+  transition: 0.5s;
+}
+.effeckt-off-screen-nav-left-overlay.effeckt-off-screen-nav-show {
+  transform: translateX(0);
+}
