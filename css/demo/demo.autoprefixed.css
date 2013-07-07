@@ -31,12 +31,12 @@ body {
   font-size: large;
   line-height: 1.4;
   overflow-x: hidden;
+  padding: 2rem;
 }
 
 .page-wrap {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 1rem;
+  float: right;
+  width: 100%;
 }
 
 .effeckt {

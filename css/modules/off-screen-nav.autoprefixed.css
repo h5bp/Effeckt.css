@@ -1,12 +1,13 @@
 .effeckt-off-screen-nav {
   position: fixed;
+  z-index: 1000;
   top: 0;
   left: 0;
   bottom: 0;
   overflow-y: auto;
   background: #333;
   visibility: hidden;
-  min-width: 10rem;
+  width: 12rem;
 }
 
 .effeckt-off-screen-nav ul {
@@ -21,19 +22,19 @@
   border-bottom: 0;
 }
 
-.effeckt-off-screen-nav a {
+.effeckt-off-screen-nav li a {
   display: block;
   padding: 0.3rem 1rem;
   color: white;
   border-bottom: 1px solid #444;
 }
 
-.effeckt-off-screen-nav a:hover,
-.effeckt-off-screen-nav a:focus {
+.effeckt-off-screen-nav li a:hover,
+.effeckt-off-screen-nav li a:focus {
   background: #444;
 }
 
-.effeckt-off-screen-nav a:active {
+.effeckt-off-screen-nav li a:active {
   background: #222;
 }
 
@@ -45,6 +46,19 @@
   text-transform: uppercase;
   font-size: 0.65rem;
   letter-spacing: 0.1rem;
+  position: relative;
+}
+
+.effeckt-off-screen-nav-close {
+  position: absolute;
+  right: 0;
+  top: 0.7rem;
+  font-size: 150%;
+}
+
+.effeckt-off-screen-nav-close:hover,
+.effeckt-off-screen-nav-close:focus {
+  color: red;
 }
 
 .effeckt-off-screen-nav-show {
@@ -52,10 +66,10 @@
 }
 
 .effeckt-off-screen-nav-left-overlay {
-  -webkit-transform: translateX(-101%);
-  -ms-transform: translateX(-101%);
-  -o-transform: translateX(-101%);
-  transform: translateX(-101%);
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
@@ -68,19 +82,61 @@
   transform: translateX(0);
 }
 
-.effeckt-off-screen-nav-left-overlay {
-  -webkit-transform: translateX(-101%);
-  -ms-transform: translateX(-101%);
-  -o-transform: translateX(-101%);
-  transform: translateX(-101%);
+.effeckt-off-screen-nav-left-push {
+  -webkit-transform: translateX(-12rem);
+  -ms-transform: translateX(-12rem);
+  -o-transform: translateX(-12rem);
+  transform: translateX(-12rem);
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 
-.effeckt-off-screen-nav-left-overlay.effeckt-off-screen-nav-show {
+.effeckt-off-screen-nav-left-push.effeckt-off-screen-nav-show {
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
   -o-transform: translateX(0);
   transform: translateX(0);
+}
+
+.effeckt-off-screen-nav-left-push ~ .page-wrap {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.effeckt-off-screen-nav-left-push.effeckt-off-screen-nav-show ~ .page-wrap {
+  -webkit-transform: translateX(12rem);
+  -ms-transform: translateX(12rem);
+  -o-transform: translateX(12rem);
+  transform: translateX(12rem);
+}
+
+.effeckt-off-screen-nav-left-squeeze {
+  width: 20%;
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.effeckt-off-screen-nav-left-squeeze.effeckt-off-screen-nav-show {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.effeckt-off-screen-nav-left-squeeze ~ .page-wrap {
+  -webkit-transition: width 0.5s;
+  -o-transition: width 0.5s;
+  transition: width 0.5s;
+  max-width: none;
+}
+
+.effeckt-off-screen-nav-left-squeeze.effeckt-off-screen-nav-show ~ .page-wrap {
+  width: 80%;
 }
