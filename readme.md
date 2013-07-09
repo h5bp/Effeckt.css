@@ -13,10 +13,10 @@ Originally started at [h5bp/lazyweb-requests#122](https://github.com/h5bp/lazywe
 
 
 ### Issues or Feedback?
-Head here → [github.com/h5bp/Effeckt.css/issues](https://github.com/h5bp/Effeckt.css/issues)
+Head here → [http://github.com/h5bp/Effeckt.css/issues](https://github.com/h5bp/Effeckt.css/issues)
 
 ### Work In Progress Demo Page
-Head here → [h5bp.github.io/Effeckt.css/dist/](http://h5bp.github.io/Effeckt.css/)
+Head here → [http://h5bp.github.io/Effeckt.css/dist/](http://h5bp.github.io/Effeckt.css/)
 
 ### ✭ Contributing & Pull Requests
 If you'd like to contribute to the [Effeckt.css](https://github.com/h5bp/Effeckt.css) project (btw you're awesome for doing so) then we suggest you do the following…
