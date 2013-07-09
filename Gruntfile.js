@@ -107,16 +107,6 @@ module.exports = function(grunt) {
           { expand: true, cwd: './js', src: ['./**/*.*'], dest: 'dist/assets/js' }
         ]
       }
-    },
-
-    'gh-pages': {
-      demo: {
-        options: {
-          base: './dist',
-          clone: 'tmp/gh-pages'
-        },
-        src: ['**/*']
-      }
     }
 
   });
