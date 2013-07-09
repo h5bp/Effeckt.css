@@ -33,6 +33,14 @@ var Modals = {
       Modals.closeModal(this);
     });
 
+    $(".effeckt-overlay").on("click", function() {
+      Modals.closeModal();
+    });
+
+    $(window).on("keyup", function(e) {
+      if ( e.keyCode === 27 ) Modals.closeModal();
+    });
+
   },
 
   openModal: function(el) {
