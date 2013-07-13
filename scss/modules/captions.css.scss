@@ -44,14 +44,15 @@
 // Effect 2: Slide Up
 .effeckt-caption-2 {
   figcaption {
-    bottom: -100%;
+    bottom: 0;
     left: 0;
     opacity: 0;
+    transform: translateY(100%);
   }
   &:hover, &:active {
     figcaption {
       opacity: 1;
-      bottom: 0;
+      transform: translateY(0);
     }
   }
 }
@@ -90,14 +91,15 @@
 // Effect 4: Slide Side
 .effeckt-caption-4 {
   figcaption {
-    left: 100%;
+    left: 0;
     bottom: 0;
     opacity: 0;
+    transform: translateX(100%);
   }
   &:hover, &:active {
     figcaption {
       opacity: 1;
-      left: 0;
+      transform: translateX(0);
     }
   }
 }
@@ -114,6 +116,47 @@
   &:hover, &:active {
     figcaption {
       opacity: 1;
+    }
+  }
+}
+
+
+// Effect 6 - Cover First
+.effeckt-caption-6 {
+  figcaption {
+    top: 0;
+    left: 0;
+    transform: translateX(100%) rotate(20deg);
+    opacity: 0;
+  }
+  &:hover, &:active {
+    figcaption {
+      transform: translateX(0) rotate(0deg);
+      opacity: 1;
+    }
+  }
+}
+
+
+// Effect 7 - Cover First
+.effeckt-caption-7 {
+  figcaption {
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  .effeckt-figcaption-wrap {
+    transition: 0.5s 0.25s;
+    transform: translateX(200%);
+  }
+  &:hover, &:active {
+    figcaption {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    .effeckt-figcaption-wrap {
+      transform: translateX(0);
     }
   }
 }

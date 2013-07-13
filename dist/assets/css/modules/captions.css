@@ -27,12 +27,13 @@
   opacity: 1; }
 
 .effeckt-caption-2 figcaption {
-  bottom: -100%;
+  bottom: 0;
   left: 0;
-  opacity: 0; }
+  opacity: 0;
+  transform: translateY(100%); }
 .effeckt-caption-2:hover figcaption, .effeckt-caption-2:active figcaption {
   opacity: 1;
-  bottom: 0; }
+  transform: translateY(0); }
 
 .effeckt-caption-3 figcaption {
   top: 0;
@@ -54,12 +55,13 @@
   transform: scale(0.5) translateY(-80px); }
 
 .effeckt-caption-4 figcaption {
-  left: 100%;
+  left: 0;
   bottom: 0;
-  opacity: 0; }
+  opacity: 0;
+  transform: translateX(100%); }
 .effeckt-caption-4:hover figcaption, .effeckt-caption-4:active figcaption {
   opacity: 1;
-  left: 0; }
+  transform: translateX(0); }
 
 .effeckt-caption-5 figcaption {
   top: 0;
@@ -68,3 +70,26 @@
   opacity: 0; }
 .effeckt-caption-5:hover figcaption, .effeckt-caption-5:active figcaption {
   opacity: 1; }
+
+.effeckt-caption-6 figcaption {
+  top: 0;
+  left: 0;
+  transform: translateX(100%) rotate(20deg);
+  opacity: 0; }
+.effeckt-caption-6:hover figcaption, .effeckt-caption-6:active figcaption {
+  transform: translateX(0) rotate(0deg);
+  opacity: 1; }
+
+.effeckt-caption-7 figcaption {
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  opacity: 0; }
+.effeckt-caption-7 .effeckt-figcaption-wrap {
+  transition: 0.5s 0.25s;
+  transform: translateX(200%); }
+.effeckt-caption-7:hover figcaption, .effeckt-caption-7:active figcaption {
+  transform: translateX(0);
+  opacity: 1; }
+.effeckt-caption-7:hover .effeckt-figcaption-wrap, .effeckt-caption-7:active .effeckt-figcaption-wrap {
+  transform: translateX(0); }

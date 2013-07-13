@@ -44,15 +44,22 @@
 }
 
 .effeckt-caption-2 figcaption {
-  bottom: -100%;
+  bottom: 0;
   left: 0;
   opacity: 0;
+  -webkit-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -o-transform: translateY(100%);
+  transform: translateY(100%);
 }
 
 .effeckt-caption-2:hover figcaption,
 .effeckt-caption-2:active figcaption {
   opacity: 1;
-  bottom: 0;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
 }
 
 .effeckt-caption-3 figcaption {
@@ -92,15 +99,22 @@
 }
 
 .effeckt-caption-4 figcaption {
-  left: 100%;
+  left: 0;
   bottom: 0;
   opacity: 0;
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
 }
 
 .effeckt-caption-4:hover figcaption,
 .effeckt-caption-4:active figcaption {
   opacity: 1;
-  left: 0;
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
 }
 
 .effeckt-caption-5 figcaption {
@@ -113,4 +127,60 @@
 .effeckt-caption-5:hover figcaption,
 .effeckt-caption-5:active figcaption {
   opacity: 1;
+}
+
+.effeckt-caption-6 figcaption {
+  top: 0;
+  left: 0;
+  -webkit-transform: translateX(100%) rotate(20deg);
+  -ms-transform: translateX(100%) rotate(20deg);
+  -o-transform: translateX(100%) rotate(20deg);
+  transform: translateX(100%) rotate(20deg);
+  opacity: 0;
+}
+
+.effeckt-caption-6:hover figcaption,
+.effeckt-caption-6:active figcaption {
+  -webkit-transform: translateX(0) rotate(0deg);
+  -ms-transform: translateX(0) rotate(0deg);
+  -o-transform: translateX(0) rotate(0deg);
+  transform: translateX(0) rotate(0deg);
+  opacity: 1;
+}
+
+.effeckt-caption-7 figcaption {
+  top: 0;
+  left: 0;
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.effeckt-caption-7 .effeckt-figcaption-wrap {
+  -webkit-transition: 0.5s 0.25s;
+  -o-transition: 0.5s 0.25s;
+  transition: 0.5s 0.25s;
+  -webkit-transform: translateX(200%);
+  -ms-transform: translateX(200%);
+  -o-transform: translateX(200%);
+  transform: translateX(200%);
+}
+
+.effeckt-caption-7:hover figcaption,
+.effeckt-caption-7:active figcaption {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.effeckt-caption-7:hover .effeckt-figcaption-wrap,
+.effeckt-caption-7:active .effeckt-figcaption-wrap {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
 }

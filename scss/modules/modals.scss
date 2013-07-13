@@ -1,8 +1,4 @@
-/*
-  Styles for the html/body for some of the 3D effects.
-  Note that we need a container wrapping all content on the page for the
-  perspective effects (not including the modals and the overlay).
-*/
+// Class name required for some body 3D effects
 .md-perspective,
 .md-perspective body {
   height: 100%;
