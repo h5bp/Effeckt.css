@@ -160,3 +160,52 @@
     }
   }
 }
+
+
+// Effect 8 - Move
+.effeckt-caption-8 {
+  figcaption {
+    top: 0;
+    left: 0;
+    height: 100%;
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  img {
+    transition: 0.5s;
+    transform: translateX(0);
+  }
+  &:hover, &:active {
+    figcaption {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    img {
+      transform: translateX(100%);
+    }
+  }
+}
+
+
+// Effect 9 - Scale
+.effeckt-caption-9 {
+  figcaption {
+    top: 0;
+    left: 0;
+    transform: scale(2);
+    opacity: 0;
+    text-align: center;
+  }
+  img {
+    transition: 0.5s;
+  }
+  &:hover, &:active {
+    figcaption {
+      transform: scale(1);
+      opacity: 1;
+    }
+    img {
+      transform: scale(1.1);
+    }
+  }
+}

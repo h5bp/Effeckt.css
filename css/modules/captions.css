@@ -93,3 +93,32 @@
   opacity: 1; }
 .effeckt-caption-7:hover .effeckt-figcaption-wrap, .effeckt-caption-7:active .effeckt-figcaption-wrap {
   transform: translateX(0); }
+
+.effeckt-caption-8 figcaption {
+  top: 0;
+  left: 0;
+  height: 100%;
+  transform: translateX(-100%);
+  opacity: 0; }
+.effeckt-caption-8 img {
+  transition: 0.5s;
+  transform: translateX(0); }
+.effeckt-caption-8:hover figcaption, .effeckt-caption-8:active figcaption {
+  transform: translateX(0);
+  opacity: 1; }
+.effeckt-caption-8:hover img, .effeckt-caption-8:active img {
+  transform: translateX(100%); }
+
+.effeckt-caption-9 figcaption {
+  top: 0;
+  left: 0;
+  transform: scale(2);
+  opacity: 0;
+  text-align: center; }
+.effeckt-caption-9 img {
+  transition: 0.5s; }
+.effeckt-caption-9:hover figcaption, .effeckt-caption-9:active figcaption {
+  transform: scale(1);
+  opacity: 1; }
+.effeckt-caption-9:hover img, .effeckt-caption-9:active img {
+  transform: scale(1.1); }
