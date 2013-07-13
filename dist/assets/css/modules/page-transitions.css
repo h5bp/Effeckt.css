@@ -14,7 +14,8 @@
   top: 50%;
   left: 50%;
   width: 200px;
-  margin: -100px 0 0 -100px; }
+  margin: -100px 0 0 -100px;
+  color: white; }
 
 .effeckt-page-transition.effeckt-page-transition-animating {
   visibility: visible; }

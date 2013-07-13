@@ -1,3 +1,4 @@
+// Base
 .effeckt-caption {
   position: relative;
   width: 300px;
@@ -24,6 +25,8 @@
   }
 }
 
+
+// Effect 1: Appear
 .effeckt-caption-1 {
   figcaption {
     bottom: 0;
@@ -37,6 +40,8 @@
   }
 }
 
+
+// Effect 2: Slide Up
 .effeckt-caption-2 {
   figcaption {
     bottom: -100%;
@@ -51,6 +56,8 @@
   }
 }
 
+
+// Effect 3: Sqwoosh
 .effeckt-caption-3 {
   figcaption {
     top: 0;
@@ -79,6 +86,8 @@
   }
 }
 
+
+// Effect 4: Slide Side
 .effeckt-caption-4 {
   figcaption {
     left: 100%;

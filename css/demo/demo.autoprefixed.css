@@ -123,6 +123,10 @@ h1 span {
   }
 }
 
+h2 {
+  margin: 0 0 0.5rem;
+}
+
 h4 {
   margin: 0 0 0.5rem 0;
 }
