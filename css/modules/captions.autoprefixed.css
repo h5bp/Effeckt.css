@@ -102,3 +102,15 @@
   opacity: 1;
   left: 0;
 }
+
+.effeckt-caption-5 figcaption {
+  top: 0;
+  left: 0;
+  height: 100%;
+  opacity: 0;
+}
+
+.effeckt-caption-5:hover figcaption,
+.effeckt-caption-5:active figcaption {
+  opacity: 1;
+}

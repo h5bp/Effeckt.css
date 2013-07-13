@@ -101,3 +101,19 @@
     }
   }
 }
+
+
+// Effect 5: Cover
+.effeckt-caption-5 {
+  figcaption {
+    top: 0;
+    left: 0;
+    height: 100%;
+    opacity: 0;
+  }
+  &:hover, &:active {
+    figcaption {
+      opacity: 1;
+    }
+  }
+}
