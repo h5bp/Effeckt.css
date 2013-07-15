@@ -22,12 +22,10 @@
 [data-effeckt="grow"] li {
   transition: all 600ms ease;
   transform-origin: 50% 50%; }
-
-[data-effeckt="grow"] li.past {
-  transform: scale(0.01); }
-
-[data-effeckt="grow"] li.future {
-  transform: scale(0.01); }
+  [data-effeckt="grow"] li.past {
+    transform: scale(0.01); }
+  [data-effeckt="grow"] li.future {
+    transform: scale(0.01); }
 
 [data-effeckt="curl"] li {
   perspective: 600px;
