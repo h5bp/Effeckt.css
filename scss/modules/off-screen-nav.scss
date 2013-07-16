@@ -61,7 +61,8 @@
 // 1 Left Overlay
 .effeckt-off-screen-nav-left-overlay {
   transform: translateX(-100%);
-  transition: 0.5s;
+  //preview http://cubic-bezier.com/#.09,.68,0,.99
+  transition: 0.5s cubic-bezier(.09,.68,0,.99);
 }
 .effeckt-off-screen-nav-left-overlay.effeckt-off-screen-nav-show {
   transform: translateX(0);
