@@ -1,5 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Kite+One);
-
 // This version of Sass doesn't like using string MQ's apparently.
 // $mini: "(max-width: 500px)";
 
@@ -30,7 +28,7 @@ html, body {
 
 body {
   background: #eee;
-  font-family: 'Kite One', sans-serif;
+  font-family: Sans-serif;
   font-size: large;
   line-height: 1.4;
   overflow-x: hidden; // for logo effect
