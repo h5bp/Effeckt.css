@@ -46,7 +46,7 @@
 
 .effeckt-off-screen-nav-left-overlay {
   transform: translateX(-100%);
-  transition: 0.5s; }
+  transition: 0.5s cubic-bezier(0.09, 0.68, 0, 0.99); }
 
 .effeckt-off-screen-nav-left-overlay.effeckt-off-screen-nav-show {
   transform: translateX(0); }
@@ -83,7 +83,7 @@
   right: 0;
   left: auto;
   transform: translateX(100%);
-  transition: 0.5s; }
+  transition: 0.5s cubic-bezier(0.09, 0.68, 0, 0.99); }
 
 .effeckt-off-screen-nav-right-overlay.effeckt-off-screen-nav-show {
   transform: translateX(0); }

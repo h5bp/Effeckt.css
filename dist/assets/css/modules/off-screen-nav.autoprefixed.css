@@ -70,9 +70,9 @@
   -ms-transform: translateX(-100%);
   -o-transform: translateX(-100%);
   transform: translateX(-100%);
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.5s cubic-bezier(0.09, 0.68, 0, 0.99);
+  -o-transition: 0.5s cubic-bezier(0.09, 0.68, 0, 0.99);
+  transition: 0.5s cubic-bezier(0.09, 0.68, 0, 0.99);
 }
 
 .effeckt-off-screen-nav-left-overlay.effeckt-off-screen-nav-show {
@@ -148,9 +148,9 @@
   -ms-transform: translateX(100%);
   -o-transform: translateX(100%);
   transform: translateX(100%);
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.5s cubic-bezier(0.09, 0.68, 0, 0.99);
+  -o-transition: 0.5s cubic-bezier(0.09, 0.68, 0, 0.99);
+  transition: 0.5s cubic-bezier(0.09, 0.68, 0, 0.99);
 }
 
 .effeckt-off-screen-nav-right-overlay.effeckt-off-screen-nav-show {

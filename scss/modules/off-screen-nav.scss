@@ -61,8 +61,8 @@
 // 1 Left Overlay
 .effeckt-off-screen-nav-left-overlay {
   transform: translateX(-100%);
-  //preview http://cubic-bezier.com/#.09,.68,0,.99
-  transition: 0.5s cubic-bezier(.09,.68,0,.99);
+  // preview http://cubic-bezier.com/#.09,.68,0,.99
+  transition: 0.5s cubic-bezier(.09, .68, 0, .99);
 }
 .effeckt-off-screen-nav-left-overlay.effeckt-off-screen-nav-show {
   transform: translateX(0);
@@ -109,7 +109,7 @@
   right: 0;
   left: auto;
   transform: translateX(100%);
-  transition: 0.5s;
+  transition: 0.5s cubic-bezier(.09, .68, 0, .99);
 }
 .effeckt-off-screen-nav-right-overlay.effeckt-off-screen-nav-show {
   transform: translateX(0);
