@@ -94,13 +94,13 @@
 
 // Wobble in
 .effeckt-list[data-type='wobble-in'] .new-item {
-  backface-visibility: visible;
+  @include backface-visibility(visible);
   @include animation(
     WobbleInX $effeckt-list-item-transition-duration*5 both $effeckt-list-item-transition-duration,
     openSpace $effeckt-list-item-transition-duration ease forwards);
 }
 .effeckt-list[data-type='wobble-in'] .remove-item {
-  backface-visibility: visible;
+  @include backface-visibility(visible);
   @include animation(
     WobbleOutX $effeckt-list-item-transition-duration*5 both $effeckt-list-item-transition-duration,
     closeSpace $effeckt-list-item-transition-duration*2 ease forwards $effeckt-list-item-transition-duration*3);
@@ -135,14 +135,14 @@
 
 // Flip in
 .effeckt-list[data-type='flip-in'] .new-item {
-  backface-visibility: visible;
+  @include backface-visibility(visible);
   @include transform-origin(top left);
   @include animation(
     FlipIn $effeckt-list-item-transition-duration*5 both $effeckt-list-item-transition-duration,
     openSpace $effeckt-list-item-transition-duration ease forwards);
 }
 .effeckt-list[data-type='flip-in'] .remove-item {
-  backface-visibility: visible;
+  @include backface-visibility(visible);
   @include transform-origin(top left);
   @include animation(
     FlipOut $effeckt-list-item-transition-duration*5 both $effeckt-list-item-transition-duration,

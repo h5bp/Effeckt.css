@@ -31,11 +31,11 @@
 }
 
 @mixin transform-origin($how) {
-  -moz-transition-origin: $how;
-  -webkit-transition-origin: $how;
-  -o-transition-origin: $how;
-  -ms-transition-origin: $how;
-  transition-origin: $how;
+  -moz-transform-origin: $how;
+  -webkit-transform-origin: $how;
+  -o-transform-origin: $how;
+  -ms-transform-origin: $how;
+  transform-origin: $how;
 }
 
 @mixin transform-style($how) {
@@ -44,6 +44,30 @@
   -o-transition-style: $how;
   -ms-transition-style: $how;
   transition-style: $how;
+}
+
+@mixin backface-visibility($backface-visibility...) {
+  -moz-backface-visibility: $backface-visibility;
+  -webkit-backface-visibility: $backface-visibility;
+  -o-backface-visibility: $backface-visibility;
+  -ms-backface-visibility: $backface-visibility;
+  backface-visibility: $backface-visibility;
+}
+
+@mixin perspective-origin($perspective-origin...) {
+  -moz-perspective-origin: $perspective-origin;
+  -webkit-perspective-origin: $perspective-origin;
+  -o-perspective-origin: $perspective-origin;
+  -ms-perspective-origin: $perspective-origin;
+  perspective-origin: $perspective-origin;
+}
+
+@mixin perspective($perspective...) {
+  -moz-perspective: $perspective;
+  -webkit-perspective: $perspective;
+  -o-perspective: $perspective;
+  -ms-perspective: $perspective;
+  perspective: $perspective;
 }
 
 @mixin animation($animation...) {

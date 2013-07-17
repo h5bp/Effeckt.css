@@ -8,7 +8,7 @@
   overflow-x: hidden;
   overflow-y: scroll;
   list-style: none;
-  perspective: 400px;
+  @include perspective(400px);
   > li {
     position: relative;
     padding: 0.5rem;
@@ -39,13 +39,13 @@
 
 // Curl
 [data-effeckt="curl"] li {
-  perspective: 600px;
-  perspective-origin: 0% 50%;
+  @include perspective(600px);
+  @include perspective-origin(0% 50%);
 }
 [data-effeckt="curl"] li {
   @include transition(all $effeckt-list-scroll-transition-duration ease, opacity $effeckt-list-scroll-transition-duration/3 ease);
   @include transform-origin(0% 0%);
-  backface-visibility: hidden;
+  @include backface-visibility(hidden);
 }
 [data-effeckt="curl"] li.past {
   @include opacity(0);
@@ -97,8 +97,8 @@
 
 // Fly
 [data-effeckt="fly"] {
-  perspective: 400px;
-  perspective-origin: 50% 50%;
+  @include perspective(400px);
+  @include perspective-origin(50% 50%);
 }
 [data-effeckt="fly"] li {
   @include transition(all $effeckt-list-scroll-transition-duration ease, opacity $effeckt-list-scroll-transition-duration/2 ease);
