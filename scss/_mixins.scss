@@ -1,0 +1,47 @@
+@mixin opacity($value) {
+  -moz-opacity: $value;
+  -webkit-opacity: $value;
+  -ms-opacity: $value;
+  -o-opacity: $value;
+  opacity: $value;
+}
+
+@mixin transform($how) {
+  -moz-transform: $how;
+  -webkit-transform: $how;
+  -o-transform: $how;
+  -ms-transform: $how;
+  transform: $how;
+}
+
+@mixin transition($how) {
+  -moz-transition: $how;
+  -webkit-transition: $how;
+  -o-transition: $how;
+  -ms-transition: $how;
+  transition: $how;
+}
+
+@mixin filter($filter) {
+  -moz-filter: $filter;
+  -webkit-filter: $filter;
+  -o-filter: $filter;
+  -ms-filter: $filter;
+  filter: $filter;
+}
+
+@mixin transform-origin($how) {
+  -moz-transition-origin: $how;
+  -webkit-transition-origin: $how;
+  -o-transition-origin: $how;
+  -ms-transition-origin: $how;
+  transition-origin: $how;
+}
+
+@mixin transform-style($how) {
+  -moz-transition-style: $how;
+  -webkit-transition-style: $how;
+  -o-transition-style: $how;
+  -ms-transition-style: $how;
+  transition-style: $how;
+}

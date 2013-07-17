@@ -237,4 +237,21 @@ h1 span:nth-of-type(11) {
   margin-bottom: 20px;
 }
 
+.effeckt-modal {
+  background: white;
+  h3 {
+    padding: 1rem;
+    color: white;
+    background: #444;
+  }
+}
 
+.effeckt-modal-content {
+  padding: 1rem;
+}
+
+// Modal Overlay
+.effeckt-overlay {
+  z-index: 1000;
+  background: rgba(black, 0.5);
+}
