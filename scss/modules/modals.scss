@@ -232,13 +232,13 @@
   @include opacity(0);
 }
 .effeckt-show.md-effect-13 .effeckt-modal {
-  animation: slit 0.7s forwards ease-out;
+  @include animation(slit 0.7s forwards ease-out);
 }
-@keyframes slit {
+@include keyframes(slit) {
   50% {
     @include transform(translateZ(-250px) rotateY(89deg));
     @include opacity(1);
-    animation-timing-function: ease-in;
+    @include animation-timing-function(ease-in);
   }
   100% {
     @include transform(translateZ(0) rotateY(0deg));
@@ -336,12 +336,12 @@
 .effeckt-show.md-effect-18 ~ .effeckt-overlay {
   @include transform-style(preserve-3d);
   @include transform-origin(0% 50%);
-  animation: rotateRightSideFirst 0.5s forwards ease-in;
+  @include animation(rotateRightSideFirst 0.5s forwards ease-in);
 }
-@keyframes rotateRightSideFirst {
+@include keyframes(rotateRightSideFirst) {
   50% {
     @include transform(translateZ(-50px) rotateY(5deg));
-    animation-timing-function: ease-out;
+    @include animation-timing-function(ease-out);
   }
   100% {
     @include transform(translateZ(-200px));
@@ -370,12 +370,12 @@
 .effeckt-show.md-effect-19 ~ .effeckt-overlay {
   @include transform-style(preserve-3d);
   @include transform-origin(50% 100%);
-  animation: OpenTop 0.5s forwards ease-in;
+  @include animation(OpenTop 0.5s forwards ease-in);
 }
-@keyframes OpenTop {
+@include keyframes(OpenTop) {
   50% {
     @include transform(rotateX(10deg));
-    animation-timing-function: ease-out;
+    @include animation-timing-function(ease-out);
   }
 }
 .md-effect-19 .effeckt-modal {

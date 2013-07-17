@@ -70,6 +70,14 @@
   perspective: $perspective;
 }
 
+@mixin animation-timing-function($animation-timing-function...) {
+  -moz-animation-timing-function: $animation-timing-function;
+  -webkit-animation-timing-function: $animation-timing-function;
+  -o-animation-timing-function: $animation-timing-function;
+  -ms-animation-timing-function: $animation-timing-function;
+  animation-timing-function: $animation-timing-function;
+}
+
 @mixin animation($animation...) {
   -moz-animation: $animation;
   -webkit-animation: $animation;
