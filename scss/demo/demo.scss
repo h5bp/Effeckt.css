@@ -255,3 +255,16 @@ h1 span:nth-of-type(11) {
   z-index: 1000;
   background: rgba(black, 0.5);
 }
+
+
+// Base
+.effeckt-button {
+  background: #444;
+  color: white;
+  border: 0;
+  padding: 0.8rem 1rem;
+  font-size: 1.3em;
+  margin: 0 0.25rem 0.6rem 0;
+
+  -webkit-tap-highlight-color: rgba(black, 0);
+}

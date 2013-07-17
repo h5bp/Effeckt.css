@@ -2,6 +2,9 @@ $effeckt-transition-duration: 300ms !default;
 
 $effeckt-modal-transition-duration: $effeckt-transition-duration !default;
 $effeckt-modal-perspective: 600px !default;
-$effeckt-modal-min-width: 630px;
-$effeckt-modal-max-width: 320px;
-$effeckt-modal-z-index: 2000;
+$effeckt-modal-min-width: 630px !default;
+$effeckt-modal-max-width: 320px !default;
+$effeckt-modal-z-index: 2000 !default;
+
+$effeckt-buttons-transition-duration: $effeckt-transition-duration !default;
+$effeckt-buttons-spinner-size: 32px;
