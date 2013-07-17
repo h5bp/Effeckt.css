@@ -21,6 +21,14 @@
   clear: both;
 }
 
+:root { // rem
+  font-size: large;
+  line-height: 1.4;
+  @media (max-width: 500px) {
+    font-size: small;
+  }
+}
+
 // is needed for overlay
 html, body {
   height: 100%;
@@ -29,8 +37,6 @@ html, body {
 body {
   background: #eee;
   font-family: Sans-serif;
-  font-size: large;
-  line-height: 1.4;
   overflow-x: hidden; // for logo effect
   padding: 4rem;
 
@@ -53,17 +59,27 @@ body {
   padding: 2rem;
   background: white;
   margin: 0 0 1rem 0;
+  @media (max-width: 500px) {
+    padding: 1.5rem;
+  }
   header {
     margin: 0 0 1rem 0;
-    padding: 0 0 0.2rem 0;
     border-bottom: 2px solid #eee;
     position: relative;
     .source {
       position: absolute;
       right: 0;
       bottom: 2px;
+      @media (max-width: 500px) {
+        position: relative;
+        display: block;
+        margin: 0.2rem 0;
+      }
     }
   }
+}
+.button-group {
+  line-height: 2;
 }
 
 
@@ -113,10 +129,10 @@ h1 span {
   }
 }
 h2 {
-  margin: 0 0 0.5rem;
+  margin: 0;
 }
 h3 {
-
+  margin: 0;
 }
 h4 {
   margin: 0 0 0.5rem 0;
@@ -191,6 +207,19 @@ h1 span:nth-of-type(11) {
 
 
 
+
+// Contributors
+.contributors {
+  background: #222;
+  color: #eee;
+  header {
+    border-bottom-color: #666;
+  }
+}
+
+
+
+
 // Individual demos, not specific to style
 
 // Buttons
@@ -199,6 +228,10 @@ h1 span:nth-of-type(11) {
   float: left;
   &:nth-child(2n) {
     clear: both;
+  }
+  @media (max-width: 500px) {
+    width: 100%;
+    float: none;
   }
 }
 
@@ -222,6 +255,12 @@ h1 span:nth-of-type(11) {
     margin-bottom: 2%;
     &:nth-of-type(3n) {
       margin-right: 0;
+    }
+    @media (max-width: 500px) {
+      width: 100%;
+      float: none;
+      height: 250px;
+      margin: 0 0 1rem 0;
     }
   }
 }

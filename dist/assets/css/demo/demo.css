@@ -11,14 +11,19 @@
   display: block;
   clear: both; }
 
+:root {
+  font-size: large;
+  line-height: 1.4; }
+  @media (max-width: 500px) {
+    :root {
+      font-size: small; } }
+
 html, body {
   height: 100%; }
 
 body {
   background: #eee;
   font-family: Sans-serif;
-  font-size: large;
-  line-height: 1.4;
   overflow-x: hidden;
   padding: 4rem; }
   @media (max-width: 500px) {
@@ -33,15 +38,25 @@ body {
   padding: 2rem;
   background: white;
   margin: 0 0 1rem 0; }
+  @media (max-width: 500px) {
+    .effeckt {
+      padding: 1.5rem; } }
   .effeckt header {
     margin: 0 0 1rem 0;
-    padding: 0 0 0.2rem 0;
     border-bottom: 2px solid #eee;
     position: relative; }
     .effeckt header .source {
       position: absolute;
       right: 0;
       bottom: 2px; }
+      @media (max-width: 500px) {
+        .effeckt header .source {
+          position: relative;
+          display: block;
+          margin: 0.2rem 0; } }
+
+.button-group {
+  line-height: 2; }
 
 a {
   text-decoration: none;
@@ -87,8 +102,10 @@ h1 span {
       line-height: 28px; } }
 
 h2 {
-  margin: 0 0 0.5rem; }
+  margin: 0; }
 
+h3 {
+  margin: 0; }
 
 h4 {
   margin: 0 0 0.5rem 0; }
@@ -162,11 +179,21 @@ h1 span:nth-of-type(11) {
     transform: translateY(0);
     opacity: 1; } }
 
+.contributors {
+  background: #222;
+  color: #eee; }
+  .contributors header {
+    border-bottom-color: #666; }
+
 .button-demo-wrap {
   width: 35%;
   float: left; }
   .button-demo-wrap:nth-child(2n) {
     clear: both; }
+  @media (max-width: 500px) {
+    .button-demo-wrap {
+      width: 100%;
+      float: none; } }
 
 .effeckt-list-wrap {
   width: 50%;
@@ -182,6 +209,12 @@ h1 span:nth-of-type(11) {
   margin-bottom: 2%; }
   .effeckt-demo-list-scroll > ul:nth-of-type(3n) {
     margin-right: 0; }
+  @media (max-width: 500px) {
+    .effeckt-demo-list-scroll > ul {
+      width: 100%;
+      float: none;
+      height: 250px;
+      margin: 0 0 1rem 0; } }
 
 .effeckt-toggle-demo {
   min-height: 220px; }

@@ -1,10 +1,13 @@
 .effeckt-caption {
   position: relative;
-  width: 300px;
+  width: 48%;
   float: left;
-  margin: 0 1rem 1rem 0;
+  margin: 0 4% 1rem 0;
   overflow: hidden; }
+  .effeckt-caption:nth-child(2n) {
+    margin-right: 0; }
   .effeckt-caption img {
+    width: 100%;
     display: block;
     transition: 0.5s; }
   .effeckt-caption figcaption {
