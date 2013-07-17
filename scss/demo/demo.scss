@@ -268,3 +268,24 @@ h1 span:nth-of-type(11) {
 
   -webkit-tap-highlight-color: rgba(black, 0);
 }
+
+.effeckt-page-transition {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  background: #555;
+}
+
+.effeckt-page-transition-content{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  margin: -100px 0 0 -100px;
+  color: white;
+}

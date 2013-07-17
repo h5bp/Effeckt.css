@@ -45,3 +45,26 @@
   -ms-transition-style: $how;
   transition-style: $how;
 }
+
+@mixin animation($animation) {
+  -moz-animation: $animation;
+  -webkit-animation: $animation;
+  -o-animation: $animation;
+  -ms-animation: $animation;
+  animation: $animation;
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content; 
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  } 
+}
