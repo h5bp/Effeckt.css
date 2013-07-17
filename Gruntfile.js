@@ -43,25 +43,7 @@ module.exports = function(grunt) {
           style : 'expanded'
         }
       }
-    },
-
-    // https://github.com/nDmitry/grunt-autoprefixer
-    autoprefixer: {
-      build: {
-        options: {
-          browsers: ['last 2 versions', '> 1%']
-        },
-        files: [
-          {
-            src : ['**/*.css', '!**/*autoprefixed.css'],
-            cwd : 'css',
-            dest : 'css',
-            ext : '.autoprefixed.css',
-            expand : true
-          }
-        ]
-      }
-    },
+    }, 
 
     connect: {
       server: {
@@ -112,9 +94,9 @@ module.exports = function(grunt) {
   });
 
   // Default task
-  grunt.registerTask('default', ['sass', 'autoprefixer', 'assemble', 'copy']);
+  grunt.registerTask('default', ['sass', 'assemble', 'copy']);
 
-  grunt.registerTask('scss', ['sass', 'autoprefixer', 'copy:css']);
+  grunt.registerTask('scss', ['sass', 'copy:css']);
   grunt.registerTask('html', ['assemble']);
   grunt.registerTask('js', ['copy:js']);
 
