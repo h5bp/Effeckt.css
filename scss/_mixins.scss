@@ -14,7 +14,7 @@
   transform: $how;
 }
 
-@mixin transition($how) {
+@mixin transition($how...) {
   -moz-transition: $how;
   -webkit-transition: $how;
   -o-transition: $how;
@@ -22,7 +22,7 @@
   transition: $how;
 }
 
-@mixin filter($filter) {
+@mixin filter($filter...) {
   -moz-filter: $filter;
   -webkit-filter: $filter;
   -o-filter: $filter;
@@ -46,7 +46,7 @@
   transition-style: $how;
 }
 
-@mixin animation($animation) {
+@mixin animation($animation...) {
   -moz-animation: $animation;
   -webkit-animation: $animation;
   -o-animation: $animation;

@@ -1,3 +1,4 @@
+@import "../_mixins";
 @import url(http://fonts.googleapis.com/css?family=Kite+One);
 
 // This version of Sass doesn't like using string MQ's apparently.
@@ -13,7 +14,7 @@
 // to avoid extranaous animations while page settles 
 .no-transitions,
 .no-transitions * {
-  transition: none !important;
+  @include transition(none !important);
 }
 
 // clearfix
@@ -38,7 +39,7 @@ body {
 
   // This is kinda good for performance overall
   // But... you can't fixed position inside it then
-  // transform: translateZ(0);
+  // @include transform(translateZ(0));
 
   @media (max-width: 500px) {
     padding: 1rem;
@@ -99,7 +100,7 @@ h1 span {
   font-size: 1.5rem;
   position: relative;
   display: inline-block;
-  opacity: 0;
+  @include opacity(0);
   width: 50px;
   height: 50px;
   line-height: 50px;
@@ -132,63 +133,63 @@ button {
 }
 
 h1 span:nth-of-type(1) {
-  animation: logo-from-horz 0.5s ease forwards;
-  transform: translateX(-50px);
+  @include animation(logo-from-horz 0.5s ease forwards);
+  @include transform(translateX(-50px));
   background: #666;
 }
 h1 span:nth-of-type(2) {
-  animation: logo-from-vert 0.5s 0.1s ease forwards;
-  transform: translateY(-50px);
+  @include animation(logo-from-vert 0.5s 0.1s ease forwards);
+  @include transform(translateY(-50px));
   background: #444;
 }
 h1 span:nth-of-type(3) {
-  animation: logo-from-vert 0.5s 0.2s ease forwards;
-  transform: translateX(50px);
+  @include animation(logo-from-vert 0.5s 0.2s ease forwards);
+  @include transform(translateX(50px));
   background: #666;
 }
 h1 span:nth-of-type(4) {
-  animation: logo-from-horz 0.3s 0.3s ease forwards;
-  transform: translateX(50px);
+  @include animation(logo-from-horz 0.3s 0.3s ease forwards);
+  @include transform(translateX(50px));
   background: #444;
 }
 h1 span:nth-of-type(5) {
-  animation: logo-from-horz 0.3s 0.4s ease forwards;
-  transform: translateX(-50px);
+  @include animation(logo-from-horz 0.3s 0.4s ease forwards);
+  @include transform(translateX(-50px));
   background: #666;
 }
 h1 span:nth-of-type(6) {
-  animation: logo-from-horz 0.3s 0.5s ease forwards;
-  transform: translateX(50px);
+  @include animation(logo-from-horz 0.3s 0.5s ease forwards);
+  @include transform(translateX(50px));
   background: #444;
 }
 h1 span:nth-of-type(7) {
-  animation: logo-from-vert 0.3s 0.6s ease forwards;
-  transform: translateY(-50px);
+  @include animation(logo-from-vert 0.3s 0.6s ease forwards);
+  @include transform(translateY(-50px));
   background: #666;
 }
 h1 span:nth-of-type(8) {
-  animation: logo-from-horz 0.2s 1.1s ease forwards;
-  transform: translateX(1000px);
+  @include animation(logo-from-horz 0.2s 1.1s ease forwards);
+  @include transform(translateX(1000px));
   background: none;
   color: black;
 }
 h1 span:nth-of-type(9) {
-  animation: logo-from-horz 0.2s 1.1s ease forwards;
-  transform: translateX(1000px);
+  @include animation(logo-from-horz 0.2s 1.1s ease forwards);
+  @include transform(translateX(1000px));
 }
 h1 span:nth-of-type(10) {
-  animation: logo-from-horz 0.2s 1.1s ease forwards;
-  transform: translateX(1000px);
+  @include animation(logo-from-horz 0.2s 1.1s ease forwards);
+  @include transform(translateX(1000px));
 }
 h1 span:nth-of-type(11) {
-  animation: logo-from-horz 0.2s 1.1s ease forwards;
-  transform: translateX(1000px);
+  @include animation(logo-from-horz 0.2s 1.1s ease forwards);
+  @include transform(translateX(1000px));
 }
-@keyframes logo-from-horz {
-  100% { transform: translateX(0); opacity: 1; }
+@include keyframes(logo-from-horz) {
+  100% { @include transform(translateX(0)); @include opacity(1); }
 }
-@keyframes logo-from-vert {
-  100% { transform: translateY(0); opacity: 1;}
+@include keyframes(logo-from-vert) {
+  100% { @include transform(translateY(0)); @include opacity(1);}
 }
 
 
@@ -289,3 +290,60 @@ h1 span:nth-of-type(11) {
   margin: -100px 0 0 -100px;
   color: white;
 }
+
+.effeckt-off-screen-nav {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow-y: auto;
+  background: #333;
+  visibility: hidden;
+  width: 12rem; // default, but some effects require different things
+  ul {
+    list-style: none;
+  }
+  li {
+    &:first-child {
+      a { border-top: 0; }
+    }
+    &:last-child {
+      a { border-bottom: 0; }
+    }
+    a {
+      display: block;
+      padding: 0.3rem 1rem;
+      color: white;
+      border-bottom: 1px solid #444;
+      &:hover, &:focus {
+        background: #444;
+      }
+      &:active {
+        background: #222;
+      }
+    }
+  }
+  h4 {
+    color: white;
+    border-bottom: 1px solid #eee;
+    padding: 1rem 0.5rem 0.2rem 0;
+    margin: 0 1rem 1rem;
+    text-transform: uppercase;
+    font-size: 0.65rem;
+    letter-spacing: 0.1rem;
+    position: relative;
+  }
+}
+
+.effeckt-off-screen-nav-close {
+  position: absolute;
+  right: 0;
+  top: 0.7rem;
+  font-size: 150%;
+  &:hover, &:focus {
+    color: red;
+  }
+}
+
+
