@@ -1,3 +1,21 @@
+// Also used in modals
+// Class name required for some body 3D effects
+.md-perspective,
+.md-perspective body {
+  height: 100%;
+
+  // This is necessary because the scrollbar is
+  // weird with this effect, but, it causes
+  // jerky behavior when the scrollbar comes and goes.
+  overflow: hidden;
+}
+.md-perspective body  {
+  perspective: 600px;
+}
+
+
+
+// Base
 .effeckt-off-screen-nav {
   position: fixed;
   z-index: 1000;
@@ -46,7 +64,7 @@
 .effeckt-off-screen-nav-close {
   position: absolute;
   right: 0;
-  top: 0.7rem;
+  top: 0.65rem;
   font-size: 150%;
   &:hover, &:focus {
     color: red;
@@ -154,4 +172,30 @@
 }
 .effeckt-off-screen-nav-right-squeeze.effeckt-off-screen-nav-show ~ .page-wrap {
   width: 80%;
+}
+
+
+// 7 Rotate
+.effeckt-off-screen-nav-rotate {
+  transform-origin: 100% 50%;
+  transition: 0.5s;
+  transform: translateX(-100%) translateX(6px) scale(1.01) rotateY(-30deg);
+}
+.effeckt-off-screen-nav-rotate.effeckt-off-screen-nav-show {
+  transform: none;
+}
+.effeckt-off-screen-nav-rotate ~ .page-wrap {
+  transform-origin: 0 50%;
+  transition: 0.5s;
+}
+.effeckt-off-screen-nav-rotate.effeckt-off-screen-nav-show ~ .page-wrap {
+  transform: translateX(260px) rotateY(15deg);
+}
+.effeckt-off-screen-nav-rotate.effeckt-off-screen-nav-show ~ .page-wrap .off-screen-nav-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(left, rgba(#eee, 0), rgba(#eee, 0.9));
 }

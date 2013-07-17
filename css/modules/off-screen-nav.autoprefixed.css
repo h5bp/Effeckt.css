@@ -1,3 +1,16 @@
+.md-perspective,
+.md-perspective body {
+  height: 100%;
+  overflow: hidden;
+}
+
+.md-perspective body {
+  -webkit-perspective: 600px;
+  -ms-perspective: 600px;
+  -o-perspective: 600px;
+  perspective: 600px;
+}
+
 .effeckt-off-screen-nav {
   position: fixed;
   z-index: 1000;
@@ -52,7 +65,7 @@
 .effeckt-off-screen-nav-close {
   position: absolute;
   right: 0;
-  top: 0.7rem;
+  top: 0.65rem;
   font-size: 150%;
 }
 
@@ -222,4 +235,53 @@
 
 .effeckt-off-screen-nav-right-squeeze.effeckt-off-screen-nav-show ~ .page-wrap {
   width: 80%;
+}
+
+.effeckt-off-screen-nav-rotate {
+  -webkit-transform-origin: 100% 50%;
+  -ms-transform-origin: 100% 50%;
+  -o-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: translateX(-100%) translateX(6px) scale(1.01) rotateY(-30deg);
+  -ms-transform: translateX(-100%) translateX(6px) scale(1.01) rotateY(-30deg);
+  -o-transform: translateX(-100%) translateX(6px) scale(1.01) rotateY(-30deg);
+  transform: translateX(-100%) translateX(6px) scale(1.01) rotateY(-30deg);
+}
+
+.effeckt-off-screen-nav-rotate.effeckt-off-screen-nav-show {
+  -webkit-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+}
+
+.effeckt-off-screen-nav-rotate ~ .page-wrap {
+  -webkit-transform-origin: 0 50%;
+  -ms-transform-origin: 0 50%;
+  -o-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.effeckt-off-screen-nav-rotate.effeckt-off-screen-nav-show ~ .page-wrap {
+  -webkit-transform: translateX(260px) rotateY(15deg);
+  -ms-transform: translateX(260px) rotateY(15deg);
+  -o-transform: translateX(260px) rotateY(15deg);
+  transform: translateX(260px) rotateY(15deg);
+}
+
+.effeckt-off-screen-nav-rotate.effeckt-off-screen-nav-show ~ .page-wrap .off-screen-nav-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(left, rgba(238, 238, 238, 0), rgba(238, 238, 238, 0.9));
+  background: -o-linear-gradient(left, rgba(238, 238, 238, 0), rgba(238, 238, 238, 0.9));
+  background: linear-gradient(left, rgba(238, 238, 238, 0), rgba(238, 238, 238, 0.9));
 }
