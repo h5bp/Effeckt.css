@@ -9,7 +9,7 @@ $effeckt-modal-z-index: 2000 !default;
 $effeckt-buttons-transition-duration: $effeckt-transition-duration !default;
 $effeckt-buttons-spinner-size: 32px !default;
 
-$effeckt-page-transition-duration: 700ms !default;
+$effeckt-page-transition-duration: $effeckt-transition-duration * 2 !default;
 
 $effeckt-off-screen-navigation-transition-duration: $effeckt-transition-duration !default;
 $effeckt-caption-transition-duration: $effeckt-transition-duration !default;

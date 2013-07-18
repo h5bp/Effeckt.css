@@ -3030,18 +3030,18 @@
   visibility: visible; }
 
 .effeckt-page-transition-left-slide-in {
-  -moz-animation: slideLeftIn 700ms forwards ease-out;
-  -webkit-animation: slideLeftIn 700ms forwards ease-out;
-  -o-animation: slideLeftIn 700ms forwards ease-out;
-  -ms-animation: slideLeftIn 700ms forwards ease-out;
-  animation: slideLeftIn 700ms forwards ease-out; }
+  -moz-animation: slideLeftIn 600ms forwards ease-out;
+  -webkit-animation: slideLeftIn 600ms forwards ease-out;
+  -o-animation: slideLeftIn 600ms forwards ease-out;
+  -ms-animation: slideLeftIn 600ms forwards ease-out;
+  animation: slideLeftIn 600ms forwards ease-out; }
 
 .effeckt-page-transition-left-slide-out {
-  -moz-animation: slideLeftOut 700ms forwards ease-out;
-  -webkit-animation: slideLeftOut 700ms forwards ease-out;
-  -o-animation: slideLeftOut 700ms forwards ease-out;
-  -ms-animation: slideLeftOut 700ms forwards ease-out;
-  animation: slideLeftOut 700ms forwards ease-out; }
+  -moz-animation: slideLeftOut 600ms forwards ease-out;
+  -webkit-animation: slideLeftOut 600ms forwards ease-out;
+  -o-animation: slideLeftOut 600ms forwards ease-out;
+  -ms-animation: slideLeftOut 600ms forwards ease-out;
+  animation: slideLeftOut 600ms forwards ease-out; }
 
 @-webkit-keyframes slideLeftIn {
   0% {
@@ -3164,18 +3164,18 @@
     transform: translateX(-100%); } }
 
 .effeckt-page-transition-right-slide-in {
-  -moz-animation: slideRightIn 700ms forwards ease-out;
-  -webkit-animation: slideRightIn 700ms forwards ease-out;
-  -o-animation: slideRightIn 700ms forwards ease-out;
-  -ms-animation: slideRightIn 700ms forwards ease-out;
-  animation: slideRightIn 700ms forwards ease-out; }
+  -moz-animation: slideRightIn 600ms forwards ease-out;
+  -webkit-animation: slideRightIn 600ms forwards ease-out;
+  -o-animation: slideRightIn 600ms forwards ease-out;
+  -ms-animation: slideRightIn 600ms forwards ease-out;
+  animation: slideRightIn 600ms forwards ease-out; }
 
 .effeckt-page-transition-right-slide-out {
-  -moz-animation: slideRightOut 700ms forwards ease-out;
-  -webkit-animation: slideRightOut 700ms forwards ease-out;
-  -o-animation: slideRightOut 700ms forwards ease-out;
-  -ms-animation: slideRightOut 700ms forwards ease-out;
-  animation: slideRightOut 700ms forwards ease-out; }
+  -moz-animation: slideRightOut 600ms forwards ease-out;
+  -webkit-animation: slideRightOut 600ms forwards ease-out;
+  -o-animation: slideRightOut 600ms forwards ease-out;
+  -ms-animation: slideRightOut 600ms forwards ease-out;
+  animation: slideRightOut 600ms forwards ease-out; }
 
 @-webkit-keyframes slideRightIn {
   0% {
