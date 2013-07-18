@@ -25,11 +25,11 @@
   figcaption {
     bottom: 0;
     left: 0;
-    opacity: 0;
+    @include opacity(0);
   }
   &:hover, &:active {
     figcaption {
-      opacity: 1;
+      @include opacity(1);
     }
   }
 }
@@ -40,12 +40,12 @@
   figcaption {
     bottom: 0;
     left: 0;
-    opacity: 0;
+    @include opacity(0);
     @include transform(translateY(100%));
   }
   &:hover, &:active {
     figcaption {
-      opacity: 1;
+      @include opacity(1);
       @include transform(translateY(0));
     }
   }
@@ -59,25 +59,24 @@
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0;
     @include transition(none);
     z-index: 0;
   }
   img {
     position: relative;
     z-index: 1;
-    transition-delay: 0.25s;
+    @include transition-delay(0.25s);
   }
   .effeckt-figcaption-wrap {
     position: absolute;
     bottom: 1rem;
-    opacity: 0;
-    transition: opacity 0.25s linear 0s;
+    @include opacity(0);
+    @include transition(opacity 0.25s linear 0s);
   }
   &:hover, &:active {
     .effeckt-figcaption-wrap {
-      opacity: 1;
-      transition-delay: 0.25s;
+      @include opacity(1);
+      @include transition-delay(0.25s);
     }
     img {
       @include transform(scale(0.5) translateY(-80px));
@@ -92,12 +91,12 @@
   figcaption {
     left: 0;
     bottom: 0;
-    opacity: 0;
+    @include opacity(0);
     @include transform(translateX(100%));
   }
   &:hover, &:active {
     figcaption {
-      opacity: 1;
+      @include opacity(1);
       @include transform(translateX(0));
     }
   }
@@ -110,11 +109,11 @@
     top: 0;
     left: 0;
     height: 100%;
-    opacity: 0;
+    @include opacity(0);
   }
   &:hover, &:active {
     figcaption {
-      opacity: 1;
+      @include opacity(1);
     }
   }
 }
@@ -126,12 +125,12 @@
     top: 0;
     left: 0;
     @include transform(translateX(100%) rotate(20deg));
-    opacity: 0;
+    @include opacity(0);
   }
   &:hover, &:active {
     figcaption {
       @include transform(translateX(0) rotate(0deg));
-      opacity: 1;
+      @include opacity(1);
     }
   }
 }
@@ -143,7 +142,8 @@
     top: 0;
     left: 0;
     @include transform(translateX(-100%));
-    opacity: 0;
+    @include opacity(0);
+    z-index: 2;
   }
   .effeckt-figcaption-wrap {
     @include transition($effeckt-caption-transition-duration $effeckt-caption-transition-duration/2);
@@ -152,7 +152,7 @@
   &:hover, &:active {
     figcaption {
       @include transform(translateX(0));
-      opacity: 1;
+      @include opacity(1);
     }
     .effeckt-figcaption-wrap {
       @include transform(translateX(0));
@@ -168,7 +168,7 @@
     left: 0;
     height: 100%;
     @include transform(translateX(-100%));
-    opacity: 0;
+    @include opacity(0);
   }
   img {
     @include transition($effeckt-caption-transition-duration);
@@ -177,7 +177,7 @@
   &:hover, &:active {
     figcaption {
       @include transform(translateX(0));
-      opacity: 1;
+      @include opacity(1);
     }
     img {
       @include transform(translateX(100%));
@@ -192,7 +192,6 @@
     top: 0;
     left: 0;
     @include transform(scale(2));
-    opacity: 0;
     text-align: center;
   }
   img {
@@ -201,7 +200,7 @@
   &:hover, &:active {
     figcaption {
       @include transform(scale(1));
-      opacity: 1;
+      @include opacity(1);
     }
     img {
       @include transform(scale(1.1));
@@ -213,7 +212,7 @@
 // Effect 10 - Flip
 .effeckt-caption-10 {
   overflow: visible;
-  perspective: 1300px;
+  @include perspective(1300px);
   figcaption {
     top: 0;
     left: 0;
