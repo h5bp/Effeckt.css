@@ -139,6 +139,10 @@
   @include transform(translateZ(0) translateX(0) rotate(0deg));
   @include opacity(1);
 }
+.effeckt-hide.md-effect-6 .effeckt-modal {
+  @include transition(all $effeckt-modal-transition-duration ease-out );
+  @include opacity(0);
+}
 
 
 /* Effect 7:  slide and stick to top */
@@ -235,6 +239,10 @@
 .effeckt-show.md-effect-13 .effeckt-modal {
   @include animation(slit 0.7s forwards ease-out);
 }
+.effeckt-hide.md-effect-13 .effeckt-modal {
+  @include opacity(0);
+  @include transition(all $effeckt-modal-transition-duration);
+}
 @include keyframes(slit) {
   50% {
     @include transform(translateZ(-250px) rotateY(89deg));
@@ -322,6 +330,12 @@
   @include opacity(1);
   @include transition(all $effeckt-modal-transition-duration 0.2s);
 }
+.effeckt-hide.md-effect-17 .effeckt-modal {
+  @include opacity(0);
+  @include transition(all $effeckt-modal-transition-duration 0.2s);
+}
+
+
 
 
 /* Effect 18:  Slide from right with perspective on container */
@@ -357,6 +371,10 @@
   @include opacity(1);
   @include transition(all 0.5s 0.1s);
 }
+.effeckt-hide.md-effect-18 .effeckt-modal {
+  @include opacity(0);
+  @include transition(all 0.5s 0.1s);
+}
 
 
 /* Effect 19:  Slip in from the top with perspective on container */
@@ -365,14 +383,15 @@
   overflow: hidden;
 }
 .effeckt-show.md-effect-19 ~ .effeckt-overlay {
-  @include transition(all 0.5s);
+  @include transition($effeckt-modal-transition-duration);
 }
 .effeckt-show.md-effect-19 ~ .page-wrap,
 .effeckt-show.md-effect-19 ~ .effeckt-overlay {
   @include transform-style(preserve-3d);
   @include transform-origin(50% 100%);
-  @include animation(OpenTop 0.5s forwards ease-in);
+  @include animation(OpenTop $effeckt-modal-transition-duration forwards ease-in);
 }
+
 @include keyframes(OpenTop) {
   50% {
     @include transform(rotateX(10deg));
@@ -386,8 +405,14 @@
 .effeckt-show.md-effect-19 .effeckt-modal {
   @include transform(translateY(0));
   @include opacity(1);
-  @include transition(all 0.5s 0.1s);
+  @include transition(all $effeckt-modal-transition-duration $effeckt-modal-transition-duration/5);
 }
+.effeckt-hide.md-effect-19 .effeckt-modal {
+  @include opacity(0);
+  @include transition(all $effeckt-modal-transition-duration $effeckt-modal-transition-duration/5);
+}
+
+
 
 
 /* Effect 20: From the top to bottom with left tilt on the way out */

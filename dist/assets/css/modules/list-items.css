@@ -13,11 +13,11 @@
   -o-transform: translateX(-300px);
   -ms-transform: translateX(-300px);
   transform: translateX(-300px);
-  -moz-animation: openSpace 300ms ease forwards, moveIn 450ms 300ms ease forwards;
-  -webkit-animation: openSpace 300ms ease forwards, moveIn 450ms 300ms ease forwards;
-  -o-animation: openSpace 300ms ease forwards, moveIn 450ms 300ms ease forwards;
-  -ms-animation: openSpace 300ms ease forwards, moveIn 450ms 300ms ease forwards;
-  animation: openSpace 300ms ease forwards, moveIn 450ms 300ms ease forwards; }
+  -moz-animation: openSpace 500ms ease forwards, moveIn 750ms 500ms ease forwards;
+  -webkit-animation: openSpace 500ms ease forwards, moveIn 750ms 500ms ease forwards;
+  -o-animation: openSpace 500ms ease forwards, moveIn 750ms 500ms ease forwards;
+  -ms-animation: openSpace 500ms ease forwards, moveIn 750ms 500ms ease forwards;
+  animation: openSpace 500ms ease forwards, moveIn 750ms 500ms ease forwards; }
 
 .effeckt-list[data-type='pop-in'] .remove-item {
   max-height: 50px;
@@ -26,11 +26,11 @@
   -ms-opacity: 1;
   -o-opacity: 1;
   opacity: 1;
-  -moz-animation: moveOut 450ms 300ms ease forwards, closeSpace 300ms ease forwards 450ms;
-  -webkit-animation: moveOut 450ms 300ms ease forwards, closeSpace 300ms ease forwards 450ms;
-  -o-animation: moveOut 450ms 300ms ease forwards, closeSpace 300ms ease forwards 450ms;
-  -ms-animation: moveOut 450ms 300ms ease forwards, closeSpace 300ms ease forwards 450ms;
-  animation: moveOut 450ms 300ms ease forwards, closeSpace 300ms ease forwards 450ms; }
+  -moz-animation: moveOut 750ms 500ms ease forwards, closeSpace 500ms ease forwards 750ms;
+  -webkit-animation: moveOut 750ms 500ms ease forwards, closeSpace 500ms ease forwards 750ms;
+  -o-animation: moveOut 750ms 500ms ease forwards, closeSpace 500ms ease forwards 750ms;
+  -ms-animation: moveOut 750ms 500ms ease forwards, closeSpace 500ms ease forwards 750ms;
+  animation: moveOut 750ms 500ms ease forwards, closeSpace 500ms ease forwards 750ms; }
 
 @-webkit-keyframes openSpace {
   to {
@@ -192,18 +192,18 @@
   -o-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
-  -moz-animation: growHeight 300ms ease forwards;
-  -webkit-animation: growHeight 300ms ease forwards;
-  -o-animation: growHeight 300ms ease forwards;
-  -ms-animation: growHeight 300ms ease forwards;
-  animation: growHeight 300ms ease forwards; }
+  -moz-animation: growHeight 500ms ease forwards;
+  -webkit-animation: growHeight 500ms ease forwards;
+  -o-animation: growHeight 500ms ease forwards;
+  -ms-animation: growHeight 500ms ease forwards;
+  animation: growHeight 500ms ease forwards; }
 
 .effeckt-list[data-type='expand-in'] .remove-item {
-  -moz-animation: shrinkHeight 300ms ease forwards;
-  -webkit-animation: shrinkHeight 300ms ease forwards;
-  -o-animation: shrinkHeight 300ms ease forwards;
-  -ms-animation: shrinkHeight 300ms ease forwards;
-  animation: shrinkHeight 300ms ease forwards; }
+  -moz-animation: shrinkHeight 500ms ease forwards;
+  -webkit-animation: shrinkHeight 500ms ease forwards;
+  -o-animation: shrinkHeight 500ms ease forwards;
+  -ms-animation: shrinkHeight 500ms ease forwards;
+  animation: shrinkHeight 500ms ease forwards; }
 
 @-webkit-keyframes growHeight {
   to {
@@ -375,11 +375,11 @@
   -o-backface-visibility: visible;
   -ms-backface-visibility: visible;
   backface-visibility: visible;
-  -moz-animation: WobbleInX 1500ms both 300ms, openSpace 300ms ease forwards;
-  -webkit-animation: WobbleInX 1500ms both 300ms, openSpace 300ms ease forwards;
-  -o-animation: WobbleInX 1500ms both 300ms, openSpace 300ms ease forwards;
-  -ms-animation: WobbleInX 1500ms both 300ms, openSpace 300ms ease forwards;
-  animation: WobbleInX 1500ms both 300ms, openSpace 300ms ease forwards; }
+  -moz-animation: WobbleInX 2500ms both 500ms, openSpace 500ms ease forwards;
+  -webkit-animation: WobbleInX 2500ms both 500ms, openSpace 500ms ease forwards;
+  -o-animation: WobbleInX 2500ms both 500ms, openSpace 500ms ease forwards;
+  -ms-animation: WobbleInX 2500ms both 500ms, openSpace 500ms ease forwards;
+  animation: WobbleInX 2500ms both 500ms, openSpace 500ms ease forwards; }
 
 .effeckt-list[data-type='wobble-in'] .remove-item {
   -moz-backface-visibility: visible;
@@ -387,11 +387,11 @@
   -o-backface-visibility: visible;
   -ms-backface-visibility: visible;
   backface-visibility: visible;
-  -moz-animation: WobbleOutX 1500ms both 300ms, closeSpace 600ms ease forwards 900ms;
-  -webkit-animation: WobbleOutX 1500ms both 300ms, closeSpace 600ms ease forwards 900ms;
-  -o-animation: WobbleOutX 1500ms both 300ms, closeSpace 600ms ease forwards 900ms;
-  -ms-animation: WobbleOutX 1500ms both 300ms, closeSpace 600ms ease forwards 900ms;
-  animation: WobbleOutX 1500ms both 300ms, closeSpace 600ms ease forwards 900ms; }
+  -moz-animation: WobbleOutX 2500ms both 500ms, closeSpace 1000ms ease forwards 1500ms;
+  -webkit-animation: WobbleOutX 2500ms both 500ms, closeSpace 1000ms ease forwards 1500ms;
+  -o-animation: WobbleOutX 2500ms both 500ms, closeSpace 1000ms ease forwards 1500ms;
+  -ms-animation: WobbleOutX 2500ms both 500ms, closeSpace 1000ms ease forwards 1500ms;
+  animation: WobbleOutX 2500ms both 500ms, closeSpace 1000ms ease forwards 1500ms; }
 
 @-webkit-keyframes WobbleInX {
   0% {
@@ -660,11 +660,11 @@
   -o-transform-origin: top left;
   -ms-transform-origin: top left;
   transform-origin: top left;
-  -moz-animation: FlipIn 1500ms both 300ms, openSpace 300ms ease forwards;
-  -webkit-animation: FlipIn 1500ms both 300ms, openSpace 300ms ease forwards;
-  -o-animation: FlipIn 1500ms both 300ms, openSpace 300ms ease forwards;
-  -ms-animation: FlipIn 1500ms both 300ms, openSpace 300ms ease forwards;
-  animation: FlipIn 1500ms both 300ms, openSpace 300ms ease forwards; }
+  -moz-animation: FlipIn 2500ms both 500ms, openSpace 500ms ease forwards;
+  -webkit-animation: FlipIn 2500ms both 500ms, openSpace 500ms ease forwards;
+  -o-animation: FlipIn 2500ms both 500ms, openSpace 500ms ease forwards;
+  -ms-animation: FlipIn 2500ms both 500ms, openSpace 500ms ease forwards;
+  animation: FlipIn 2500ms both 500ms, openSpace 500ms ease forwards; }
 
 .effeckt-list[data-type='flip-in'] .remove-item {
   -moz-backface-visibility: visible;
@@ -677,11 +677,11 @@
   -o-transform-origin: top left;
   -ms-transform-origin: top left;
   transform-origin: top left;
-  -moz-animation: FlipOut 1500ms both 300ms, closeSpace 600ms ease forwards 600ms;
-  -webkit-animation: FlipOut 1500ms both 300ms, closeSpace 600ms ease forwards 600ms;
-  -o-animation: FlipOut 1500ms both 300ms, closeSpace 600ms ease forwards 600ms;
-  -ms-animation: FlipOut 1500ms both 300ms, closeSpace 600ms ease forwards 600ms;
-  animation: FlipOut 1500ms both 300ms, closeSpace 600ms ease forwards 600ms; }
+  -moz-animation: FlipOut 2500ms both 500ms, closeSpace 1000ms ease forwards 1000ms;
+  -webkit-animation: FlipOut 2500ms both 500ms, closeSpace 1000ms ease forwards 1000ms;
+  -o-animation: FlipOut 2500ms both 500ms, closeSpace 1000ms ease forwards 1000ms;
+  -ms-animation: FlipOut 2500ms both 500ms, closeSpace 1000ms ease forwards 1000ms;
+  animation: FlipOut 2500ms both 500ms, closeSpace 1000ms ease forwards 1000ms; }
 
 @-webkit-keyframes FlipIn {
   0% {

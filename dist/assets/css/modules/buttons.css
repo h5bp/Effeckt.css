@@ -23,18 +23,18 @@
   background-size: 32px auto; }
 
 .effeckt-button, .effeckt-button .spinner, .effeckt-button .label {
-  -moz-transition: 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
-  -webkit-transition: 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
-  -o-transition: 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
-  -ms-transition: 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
-  transition: 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275) all; }
+  -moz-transition: 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
+  -webkit-transition: 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
+  -o-transition: 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
+  -ms-transition: 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
+  transition: 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275) all; }
 
 .effeckt-button.zoom-in, .effeckt-button.zoom-in .spinner, .effeckt-button.zoom-in .label, .effeckt-button.zoom-out, .effeckt-button.zoom-out .spinner, .effeckt-button.zoom-out .label {
-  -moz-transition: 300ms ease all;
-  -webkit-transition: 300ms ease all;
-  -o-transition: 300ms ease all;
-  -ms-transition: 300ms ease all;
-  transition: 300ms ease all; }
+  -moz-transition: 500ms ease all;
+  -webkit-transition: 500ms ease all;
+  -o-transition: 500ms ease all;
+  -ms-transition: 500ms ease all;
+  transition: 500ms ease all; }
 
 .effeckt-button.expand-right .spinner {
   right: 16px; }
