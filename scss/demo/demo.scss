@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 
-// to avoid extranaous animations while page settles 
+// to avoid extranaous animations while page settles
 .no-transitions,
 .no-transitions * {
   transition: none !important;
@@ -215,6 +215,15 @@ h1 span:nth-of-type(11) {
   header {
     border-bottom-color: #666;
   }
+  .readme {
+    display: none;
+    .effeckt-demo-captions + & {
+      display: block;
+    }
+  }
+
+  ol { margin-left: 35px; }
+  hr { margin: 15px 0; }
 }
 
 

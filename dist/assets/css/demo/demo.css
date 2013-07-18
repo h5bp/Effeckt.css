@@ -184,6 +184,14 @@ h1 span:nth-of-type(11) {
   color: #eee; }
   .contributors header {
     border-bottom-color: #666; }
+  .contributors .readme {
+    display: none; }
+    .effeckt-demo-captions + .contributors .readme {
+      display: block; }
+  .contributors ol {
+    margin-left: 35px; }
+  .contributors hr {
+    margin: 15px 0; }
 
 .button-demo-wrap {
   width: 35%;
