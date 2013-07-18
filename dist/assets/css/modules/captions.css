@@ -274,7 +274,12 @@
   -o-transform: scale(2);
   -ms-transform: scale(2);
   transform: scale(2);
-  text-align: center; }
+  text-align: center;
+  -moz-opacity: 0;
+  -webkit-opacity: 0;
+  -ms-opacity: 0;
+  -o-opacity: 0;
+  opacity: 0; }
 .effeckt-caption-9 img {
   -moz-transition: 300ms;
   -webkit-transition: 300ms;

@@ -193,6 +193,7 @@
     left: 0;
     @include transform(scale(2));
     text-align: center;
+    @include opacity(0);
   }
   img {
     @include transition($effeckt-caption-transition-duration);

@@ -26,9 +26,9 @@
   //preview http://cubic-bezier.com/#.09,.68,0,.99
   @include transition($effeckt-off-screen-navigation-transition-duration cubic-bezier(.09,.68,0,.99));
   // preview http://cubic-bezier.com/#.09,.68,0,.99
-}
-.effeckt-off-screen-nav-left-overlay.effeckt-off-screen-nav-show {
-  @include transform(translateX(0));
+  &.effeckt-off-screen-nav-show {
+    @include transform(translateX(0));
+  }
 }
 
 
@@ -37,17 +37,17 @@
   // Needs to be fixed size so .page-wrap can move same distance
   @include transform(translateX(-12rem));
   @include transition($effeckt-off-screen-navigation-transition-duration);
-}
-.effeckt-off-screen-nav-left-push.effeckt-off-screen-nav-show {
-  @include transform(translateX(0));
-}
-.effeckt-off-screen-nav-left-push ~ .page-wrap {
-  @include transition($effeckt-off-screen-navigation-transition-duration);
-}
-.effeckt-off-screen-nav-left-push.effeckt-off-screen-nav-show ~ .page-wrap {
-  @include transform(translateX(12rem));
-}
 
+  &.effeckt-off-screen-nav-show {
+    @include transform(translateX(0));
+    ~ .page-wrap {
+      @include transform(translateX(12rem));
+    }
+  }
+  ~ .page-wrap {
+    @include transition($effeckt-off-screen-navigation-transition-duration);
+  }
+}
 
 // 3 Left Squeeze
 .effeckt-off-screen-nav-left-squeeze {
@@ -55,16 +55,16 @@
   width: 20%;
   @include transform(translateX(-100%));
   @include transition($effeckt-off-screen-navigation-transition-duration);
-}
-.effeckt-off-screen-nav-left-squeeze.effeckt-off-screen-nav-show {
-  @include transform(translateX(0));
-}
-.effeckt-off-screen-nav-left-squeeze ~ .page-wrap {
-  @include transition(width $effeckt-off-screen-navigation-transition-duration);
-  max-width: none; // reset from demo
-}
-.effeckt-off-screen-nav-left-squeeze.effeckt-off-screen-nav-show ~ .page-wrap {
-  width: 80%;
+  &.effeckt-off-screen-nav-show {
+    @include transform(translateX(0));
+    ~ .page-wrap {
+      width: 80%;
+    }
+  }
+  ~ .page-wrap {
+    @include transition(width $effeckt-off-screen-navigation-transition-duration);
+    max-width: none; // reset from demo
+  }
 }
 
 // 4 Right Overlay
@@ -73,9 +73,9 @@
   left: auto;
   @include transform(translateX(100%));
   @include transition($effeckt-off-screen-navigation-transition-duration cubic-bezier(.09, .68, 0, .99));
-}
-.effeckt-off-screen-nav-right-overlay.effeckt-off-screen-nav-show {
-  @include transform(translateX(0));
+  &.effeckt-off-screen-nav-show {
+    @include transform(translateX(0));
+  }
 }
 
 
@@ -86,17 +86,16 @@
   right: 0;
   @include transform(translateX(12rem));
   @include transition($effeckt-off-screen-navigation-transition-duration);
+  &.effeckt-off-screen-nav-show {
+    @include transform(translateX(0));
+    ~ .page-wrap {
+      @include transform(translateX(-12rem));
+    }
+  }
+  ~ .page-wrap {
+    @include transition($effeckt-off-screen-navigation-transition-duration);
+  }
 }
-.effeckt-off-screen-nav-right-push.effeckt-off-screen-nav-show {
-  @include transform(translateX(0));
-}
-.effeckt-off-screen-nav-right-push ~ .page-wrap {
-  @include transition($effeckt-off-screen-navigation-transition-duration);
-}
-.effeckt-off-screen-nav-right-push.effeckt-off-screen-nav-show ~ .page-wrap {
-  @include transform(translateX(-12rem));
-}
-
 
 // 6 Right Squeeze
 .effeckt-off-screen-nav-right-squeeze {
@@ -106,40 +105,47 @@
   width: 20%;
   @include transform(translateX(100%));
   @include transition($effeckt-off-screen-navigation-transition-duration);
-}
-.effeckt-off-screen-nav-right-squeeze.effeckt-off-screen-nav-show {
-  @include transform(translateX(0));
-}
-.effeckt-off-screen-nav-right-squeeze ~ .page-wrap {
-  float: left;
-  @include transition(width $effeckt-off-screen-navigation-transition-duration);
-  max-width: none; // reset from demo
-}
-.effeckt-off-screen-nav-right-squeeze.effeckt-off-screen-nav-show ~ .page-wrap {
-  width: 80%;
+  &.effeckt-off-screen-nav-show {
+    @include transform(translateX(0));
+
+    ~ .page-wrap {
+      width: 80%;
+    }
+  }
+  ~ .page-wrap {
+    float: left;
+    @include transition(width $effeckt-off-screen-navigation-transition-duration);
+    max-width: none; // reset from demo
+  }
 }
 
 
 // 7 Rotate
 .effeckt-off-screen-nav-rotate {
-  transform-origin: 100% 50%;
-  transition: 0.5s;
-  transform: translateX(-100%) translateX(6px) scale(1.01) rotateY(-30deg);
-}
-.effeckt-off-screen-nav-rotate.effeckt-off-screen-nav-show {
-  transform: none;
-}
-.effeckt-off-screen-nav-rotate ~ .page-wrap {
-  transform-origin: 0 50%;
-  transition: 0.5s;
-}
-.effeckt-off-screen-nav-rotate.effeckt-off-screen-nav-show ~ .page-wrap {
-  transform: translateX(260px) rotateY(15deg);
-}
-.effeckt-off-screen-nav-rotate.effeckt-off-screen-nav-show ~ .page-wrap .off-screen-nav-cover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  @include transform-origin(100% 50%);
+  @include transition($effeckt-off-screen-navigation-transition-duration);
+  @include transform(translateX(-100%) translateX(6px) scale(1.01) rotateY(-30deg));
+
+  &.effeckt-off-screen-nav-show {
+    @include transform(none);
+
+    ~ .page-wrap {
+      @include transform(translateX(260px) rotateY(15deg));
+    }
+
+    // dont nest > 3 levels deep
+    ~ .page-wrap .off-screen-nav-cover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+  }
+
+  ~ .page-wrap {
+    @include transform-origin(0 50%);
+    @include transition(0.5s);
+  }
 }
