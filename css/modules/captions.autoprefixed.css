@@ -72,27 +72,32 @@
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0;
-  -webkit-transition: none;
-  -o-transition: none;
-  transition: none;
   z-index: 0;
 }
 
 .effeckt-caption-3 img {
   position: relative;
   z-index: 1;
+  -webkit-transition-delay: 0.25s;
+  -o-transition-delay: 0.25s;
+  transition-delay: 0.25s;
 }
 
-.effeckt-caption-3:hover figcaption,
-.effeckt-caption-3:active figcaption {
-  opacity: 1;
+.effeckt-caption-3 .effeckt-figcaption-wrap {
+  position: absolute;
+  bottom: 1rem;
+  opacity: 0;
+  -webkit-transition: opacity 0.25s linear 0s;
+  -o-transition: opacity 0.25s linear 0s;
+  transition: opacity 0.25s linear 0s;
 }
 
 .effeckt-caption-3:hover .effeckt-figcaption-wrap,
 .effeckt-caption-3:active .effeckt-figcaption-wrap {
-  position: absolute;
-  bottom: 1rem;
+  opacity: 1;
+  -webkit-transition-delay: 0.25s;
+  -o-transition-delay: 0.25s;
+  transition-delay: 0.25s;
 }
 
 .effeckt-caption-3:hover img,
@@ -101,6 +106,9 @@
   -ms-transform: scale(0.5) translateY(-80px);
   -o-transform: scale(0.5) translateY(-80px);
   transform: scale(0.5) translateY(-80px);
+  -webkit-transition-delay: 0;
+  -o-transition-delay: 0;
+  transition-delay: 0;
 }
 
 .effeckt-caption-4 figcaption {
