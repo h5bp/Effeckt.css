@@ -15,20 +15,6 @@
   perspective: 600px;
 }
 
-
-
-
-
-.effeckt-off-screen-nav-close {
-  position: absolute;
-  right: 0;
-  top: 0.65rem;
-  font-size: 150%;
-  &:hover, &:focus {
-    color: red;
-  }
-}
-
 .effeckt-off-screen-nav-show {
   visibility: visible;
 }
@@ -156,5 +142,4 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(left, rgba(#eee, 0), rgba(#eee, 0.9));
 }

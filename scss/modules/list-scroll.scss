@@ -5,25 +5,13 @@
 // Base
 .effeckt-list-scroll {
   position: relative;
-  width: 230px;
-  height: 480px;
-  margin: 0;
-  padding: 0;
   overflow-x: hidden;
   overflow-y: scroll;
-  list-style: none;
   @include perspective(400px);
   > li {
     position: relative;
-    padding: 0.5rem;
-    background: #eee;
-    color: #252525;
-    font-size: 18px;
     z-index: 2;
     @include transform(translateZ(0));
-    &:nth-child(odd) {
-      background: #e6e6e6;
-    }
   }
 }
 

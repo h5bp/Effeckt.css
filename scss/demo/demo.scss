@@ -388,11 +388,14 @@ h1 span:nth-of-type(11) {
 .effeckt-off-screen-nav-close {
   position: absolute;
   right: 0;
-  top: 0.7rem;
+  top: 0.65rem;
   font-size: 150%;
   &:hover, &:focus {
     color: red;
   }
+}
+.effeckt-off-screen-nav-rotate.effeckt-off-screen-nav-show ~ .page-wrap .off-screen-nav-cover {
+  background: linear-gradient(left, rgba(#eee, 0), rgba(#eee, 0.9));
 }
 
 .effeckt-caption {
@@ -414,6 +417,40 @@ h1 span:nth-of-type(11) {
     }
     p {
       margin: 0;
+    }
+  }
+}
+
+.effeckt-list {
+  list-style: none;
+  li {
+    background: #e6e6e6;
+    padding: 0 0.5rem;
+    overflow: hidden;
+    margin-bottom: 2px;
+    line-height: 2;
+    &.new-item {
+      background: #ccc;
+    }
+  }
+}
+
+// Base
+.effeckt-list-scroll {
+  width: 230px;
+  height: 480px;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  list-style: none;
+  > li {
+    padding: 0.5rem;
+    background: #eee;
+    color: #252525;
+    font-size: 18px;
+    &:nth-child(odd) {
+      background: #e6e6e6;
     }
   }
 }

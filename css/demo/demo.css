@@ -502,10 +502,13 @@ h1 span:nth-of-type(11) {
 .effeckt-off-screen-nav-close {
   position: absolute;
   right: 0;
-  top: 0.7rem;
+  top: 0.65rem;
   font-size: 150%; }
   .effeckt-off-screen-nav-close:hover, .effeckt-off-screen-nav-close:focus {
     color: red; }
+
+.effeckt-off-screen-nav-rotate.effeckt-off-screen-nav-show ~ .page-wrap .off-screen-nav-cover {
+  background: linear-gradient(left, rgba(238, 238, 238, 0), rgba(238, 238, 238, 0.9)); }
 
 .effeckt-caption {
   width: 48%;
@@ -523,3 +526,30 @@ h1 span:nth-of-type(11) {
       font-size: 1.2rem; }
     .effeckt-caption figcaption p {
       margin: 0; }
+
+.effeckt-list {
+  list-style: none; }
+  .effeckt-list li {
+    background: #e6e6e6;
+    padding: 0 0.5rem;
+    overflow: hidden;
+    margin-bottom: 2px;
+    line-height: 2; }
+    .effeckt-list li.new-item {
+      background: #ccc; }
+
+.effeckt-list-scroll {
+  width: 230px;
+  height: 480px;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  list-style: none; }
+  .effeckt-list-scroll > li {
+    padding: 0.5rem;
+    background: #eee;
+    color: #252525;
+    font-size: 18px; }
+    .effeckt-list-scroll > li:nth-child(odd) {
+      background: #e6e6e6; }

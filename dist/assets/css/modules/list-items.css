@@ -1,14 +1,3 @@
-.effeckt-list {
-  list-style: none; }
-  .effeckt-list li {
-    background: #e6e6e6;
-    padding: 0 0.5rem;
-    overflow: hidden;
-    margin-bottom: 2px;
-    line-height: 2; }
-    .effeckt-list li.new-item {
-      background: #ccc; }
-
 .effeckt-list[data-type='pop-in'] {
   overflow: hidden; }
 
