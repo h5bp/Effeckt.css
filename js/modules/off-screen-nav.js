@@ -4,20 +4,25 @@ var EffecktOffScreenNav = {
   closeButton: $("#effeckt-off-screen-nav-close"),
 
   init: function() {
-
+    
     this.bindUIActions();
-
+    
   },
 
   bindUIActions: function() {
 
     $(".off-screen-nav-button, #effeckt-off-screen-nav-close").on("click", function() {
       
-
       if (!EffecktOffScreenNav.nav.hasClass("effeckt-off-screen-nav-show")) {
 
-        // attempt to address issue #108
-        // don't set type, etc, if nav is currently shown.
+        // an attempt to address issue #108.
+        // don't set 'type' and 'threedee' vars if nav is currently shown;
+        // opening the hidden nav and clicking on other effeckt nav buttons
+        // causes unexpected behavior.
+        
+        // alternatively, we can also prevent (or ignore) clicks (on nav toggles)
+        // from setting 'type' and 'threedee' vars while the nav bar is shown.
+        
         var type = $(this).data("effeckt");
         var threedee = $(this).data("threedee");
 
@@ -33,6 +38,7 @@ var EffecktOffScreenNav = {
 
   },
 
+  // creating seperate show() and hide() methods allows for better modularity
   show: function(type, threedee) {
 
       EffecktOffScreenNav.nav.addClass(type);
