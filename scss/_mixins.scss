@@ -39,11 +39,19 @@
 }
 
 @mixin transform-style($how) {
-  -moz-transition-style: $how;
-  -webkit-transition-style: $how;
-  -o-transition-style: $how;
-  -ms-transition-style: $how;
-  transition-style: $how;
+  -moz-transform-style: $how;
+  -webkit-transform-style: $how;
+  -o-transform-style: $how;
+  -ms-transform-style: $how;
+  transform-style: $how;
+}
+
+@mixin transition-delay($how) {
+  -moz-transition-delay: $how;
+  -webkit-transition-delay: $how;
+  -o-transition-delay: $how;
+  -ms-transition-delay: $how;
+  transition-delay: $how;
 }
 
 @mixin backface-visibility($backface-visibility...) {

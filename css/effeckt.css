@@ -289,12 +289,11 @@
 
 .effeckt-caption {
   position: relative;
-  width: 300px;
   float: left;
-  margin: 0 1rem 1rem 0;
   overflow: hidden; }
+  .effeckt-caption:nth-child(2n) {
+    margin-right: 0; }
   .effeckt-caption img {
-    display: block;
     -moz-transition: 300ms;
     -webkit-transition: 300ms;
     -o-transition: 300ms;
@@ -302,19 +301,12 @@
     transition: 300ms; }
   .effeckt-caption figcaption {
     position: absolute;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
     -moz-transition: 300ms;
     -webkit-transition: 300ms;
     -o-transition: 300ms;
     -ms-transition: 300ms;
     transition: 300ms;
-    width: 100%;
-    padding: 1rem; }
-    .effeckt-caption figcaption h3 {
-      font-size: 1.2rem; }
-    .effeckt-caption figcaption p {
-      margin: 0; }
+    width: 100%; }
 
 .effeckt-caption-1 figcaption {
   bottom: 0;
@@ -354,18 +346,27 @@
   z-index: 0; }
 .effeckt-caption-3 img {
   position: relative;
-  z-index: 1; }
-.effeckt-caption-3:hover figcaption, .effeckt-caption-3:active figcaption {
-  opacity: 1; }
-.effeckt-caption-3:hover .effeckt-figcaption-wrap, .effeckt-caption-3:active .effeckt-figcaption-wrap {
+  z-index: 1;
+  transition-delay: 0.25s; }
+.effeckt-caption-3 .effeckt-figcaption-wrap {
   position: absolute;
-  bottom: 1rem; }
+  bottom: 1rem;
+  opacity: 0;
+  transition: opacity 0.25s linear 0s; }
+.effeckt-caption-3:hover .effeckt-figcaption-wrap, .effeckt-caption-3:active .effeckt-figcaption-wrap {
+  opacity: 1;
+  transition-delay: 0.25s; }
 .effeckt-caption-3:hover img, .effeckt-caption-3:active img {
   -moz-transform: scale(0.5) translateY(-80px);
   -webkit-transform: scale(0.5) translateY(-80px);
   -o-transform: scale(0.5) translateY(-80px);
   -ms-transform: scale(0.5) translateY(-80px);
-  transform: scale(0.5) translateY(-80px); }
+  transform: scale(0.5) translateY(-80px);
+  -moz-transition-delay: 0;
+  -webkit-transition-delay: 0;
+  -o-transition-delay: 0;
+  -ms-transition-delay: 0;
+  transition-delay: 0; }
 
 .effeckt-caption-4 figcaption {
   left: 0;
@@ -507,6 +508,43 @@
   -o-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1); }
+
+.effeckt-caption-10 {
+  overflow: visible;
+  perspective: 1300px; }
+  .effeckt-caption-10 figcaption {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -moz-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden; }
+  .effeckt-caption-10 img {
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    -ms-transition: 0.5s;
+    transition: 0.5s; }
+  .effeckt-caption-10:hover figcaption, .effeckt-caption-10:active figcaption {
+    -moz-transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    -o-transform: rotateY(360deg);
+    -ms-transform: rotateY(360deg);
+    transform: rotateY(360deg); }
+  .effeckt-caption-10:hover img, .effeckt-caption-10:active img {
+    -moz-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    transform: rotateY(180deg); }
 
 .effeckt-list {
   list-style: none; }
@@ -1850,11 +1888,11 @@
   -o-perspective: 1300px;
   -ms-perspective: 1300px;
   perspective: 1300px;
-  -moz-transition-style: preserve-3d;
-  -webkit-transition-style: preserve-3d;
-  -o-transition-style: preserve-3d;
-  -ms-transition-style: preserve-3d;
-  transition-style: preserve-3d; }
+  -moz-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d; }
 
 .md-effect-6 .effeckt-modal {
   -moz-transform: translateZ(600px) translateX(30%) rotate(10deg);
@@ -1930,11 +1968,11 @@
   -o-perspective: 1300px;
   -ms-perspective: 1300px;
   perspective: 1300px;
-  -moz-transition-style: preserve-3d;
-  -webkit-transition-style: preserve-3d;
-  -o-transition-style: preserve-3d;
-  -ms-transition-style: preserve-3d;
-  transition-style: preserve-3d; }
+  -moz-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d; }
 
 .md-effect-8 .effeckt-modal {
   -moz-transform: rotateY(-70deg);
@@ -1972,11 +2010,11 @@
   -o-perspective: 1300px;
   -ms-perspective: 1300px;
   perspective: 1300px;
-  -moz-transition-style: preserve-3d;
-  -webkit-transition-style: preserve-3d;
-  -o-transition-style: preserve-3d;
-  -ms-transition-style: preserve-3d;
-  transition-style: preserve-3d; }
+  -moz-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d; }
 
 .md-effect-9 .effeckt-modal {
   -moz-transform: rotateX(-70deg);
@@ -2014,11 +2052,11 @@
   -o-perspective: 1300px;
   -ms-perspective: 1300px;
   perspective: 1300px;
-  -moz-transition-style: preserve-3d;
-  -webkit-transition-style: preserve-3d;
-  -o-transition-style: preserve-3d;
-  -ms-transition-style: preserve-3d;
-  transition-style: preserve-3d; }
+  -moz-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d; }
 
 .md-effect-10 .effeckt-modal {
   -moz-transform: rotateX(-60deg);
@@ -2088,11 +2126,11 @@
   -o-perspective: 1300px;
   -ms-perspective: 1300px;
   perspective: 1300px;
-  -moz-transition-style: preserve-3d;
-  -webkit-transition-style: preserve-3d;
-  -o-transition-style: preserve-3d;
-  -ms-transition-style: preserve-3d;
-  transition-style: preserve-3d; }
+  -moz-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d; }
 
 .md-effect-13 .effeckt-modal {
   -moz-transform: translateZ(-3000px) rotateY(90deg);
@@ -2240,11 +2278,11 @@
   -o-perspective: 1300px;
   -ms-perspective: 1300px;
   perspective: 1300px;
-  -moz-transition-style: preserve-3d;
-  -webkit-transition-style: preserve-3d;
-  -o-transition-style: preserve-3d;
-  -ms-transition-style: preserve-3d;
-  transition-style: preserve-3d; }
+  -moz-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d; }
 
 .md-effect-14 .effeckt-modal {
   -moz-transform: translateY(100%) rotateX(90deg);
@@ -2287,11 +2325,11 @@
   -o-perspective: 1300px;
   -ms-perspective: 1300px;
   perspective: 1300px;
-  -moz-transition-style: preserve-3d;
-  -webkit-transition-style: preserve-3d;
-  -o-transition-style: preserve-3d;
-  -ms-transition-style: preserve-3d;
-  transition-style: preserve-3d; }
+  -moz-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d; }
 
 .md-effect-15 .effeckt-modal {
   -moz-transform: translateZ(100px) translateX(-30%) rotateY(90deg);
@@ -2376,11 +2414,11 @@
   -o-transform-origin: 50% 0%;
   -ms-transform-origin: 50% 0%;
   transform-origin: 50% 0%;
-  -moz-transition-style: preserve-3d;
-  -webkit-transition-style: preserve-3d;
-  -o-transition-style: preserve-3d;
-  -ms-transition-style: preserve-3d;
-  transition-style: preserve-3d; }
+  -moz-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d; }
 
 .md-effect-17 .effeckt-modal {
   -moz-opacity: 0;
@@ -2425,11 +2463,11 @@
   transition: all 0.5s; }
 
 .effeckt-show.md-effect-18 ~ .page-wrap, .effeckt-show.md-effect-18 ~ .effeckt-overlay {
-  -moz-transition-style: preserve-3d;
-  -webkit-transition-style: preserve-3d;
-  -o-transition-style: preserve-3d;
-  -ms-transition-style: preserve-3d;
-  transition-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
   -moz-transform-origin: 0% 50%;
   -webkit-transform-origin: 0% 50%;
   -o-transform-origin: 0% 50%;
@@ -2563,11 +2601,11 @@
   transition: all 0.5s; }
 
 .effeckt-show.md-effect-19 ~ .page-wrap, .effeckt-show.md-effect-19 ~ .effeckt-overlay {
-  -moz-transition-style: preserve-3d;
-  -webkit-transition-style: preserve-3d;
-  -o-transition-style: preserve-3d;
-  -ms-transition-style: preserve-3d;
-  transition-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
   -moz-transform-origin: 50% 100%;
   -webkit-transform-origin: 50% 100%;
   -o-transform-origin: 50% 100%;
@@ -2805,6 +2843,21 @@
   -o-opacity: 0;
   opacity: 0; }
 
+.md-perspective, .md-perspective body {
+  height: 100%;
+  overflow: hidden; }
+
+.md-perspective body {
+  perspective: 600px; }
+
+.effeckt-off-screen-nav-close {
+  position: absolute;
+  right: 0;
+  top: 0.65rem;
+  font-size: 150%; }
+  .effeckt-off-screen-nav-close:hover, .effeckt-off-screen-nav-close:focus {
+    color: red; }
+
 .effeckt-off-screen-nav-show {
   visibility: visible; }
 
@@ -2899,11 +2952,11 @@
   -o-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
-  -moz-transition: 300ms;
-  -webkit-transition: 300ms;
-  -o-transition: 300ms;
-  -ms-transition: 300ms;
-  transition: 300ms; }
+  -moz-transition: 300ms cubic-bezier(0.09, 0.68, 0, 0.99);
+  -webkit-transition: 300ms cubic-bezier(0.09, 0.68, 0, 0.99);
+  -o-transition: 300ms cubic-bezier(0.09, 0.68, 0, 0.99);
+  -ms-transition: 300ms cubic-bezier(0.09, 0.68, 0, 0.99);
+  transition: 300ms cubic-bezier(0.09, 0.68, 0, 0.99); }
 
 .effeckt-off-screen-nav-right-overlay.effeckt-off-screen-nav-show {
   -moz-transform: translateX(0);
@@ -2980,6 +3033,29 @@
 
 .effeckt-off-screen-nav-right-squeeze.effeckt-off-screen-nav-show ~ .page-wrap {
   width: 80%; }
+
+.effeckt-off-screen-nav-rotate {
+  transform-origin: 100% 50%;
+  transition: 0.5s;
+  transform: translateX(-100%) translateX(6px) scale(1.01) rotateY(-30deg); }
+
+.effeckt-off-screen-nav-rotate.effeckt-off-screen-nav-show {
+  transform: none; }
+
+.effeckt-off-screen-nav-rotate ~ .page-wrap {
+  transform-origin: 0 50%;
+  transition: 0.5s; }
+
+.effeckt-off-screen-nav-rotate.effeckt-off-screen-nav-show ~ .page-wrap {
+  transform: translateX(260px) rotateY(15deg); }
+
+.effeckt-off-screen-nav-rotate.effeckt-off-screen-nav-show ~ .page-wrap .off-screen-nav-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(left, rgba(238, 238, 238, 0), rgba(238, 238, 238, 0.9)); }
 
 .effeckt-page-transition.effeckt-page-transition-animating {
   visibility: visible; }

@@ -11,7 +11,7 @@
   box-sizing: border-box;
 }
 
-// to avoid extranaous animations while page settles 
+// to avoid extranaous animations while page settles
 .no-transitions,
 .no-transitions * {
   @include transition(none !important);
@@ -24,6 +24,14 @@
   clear: both;
 }
 
+:root { // rem
+  font-size: large;
+  line-height: 1.4;
+  @media (max-width: 500px) {
+    font-size: small;
+  }
+}
+
 // is needed for overlay
 html, body {
   height: 100%;
@@ -31,9 +39,7 @@ html, body {
 
 body {
   background: #eee;
-  font-family: 'Kite One', sans-serif;
-  font-size: large;
-  line-height: 1.4;
+  font-family: Sans-serif;
   overflow-x: hidden; // for logo effect
   padding: 4rem;
 
@@ -56,17 +62,27 @@ body {
   padding: 2rem;
   background: white;
   margin: 0 0 1rem 0;
+  @media (max-width: 500px) {
+    padding: 1.5rem;
+  }
   header {
     margin: 0 0 1rem 0;
-    padding: 0 0 0.2rem 0;
     border-bottom: 2px solid #eee;
     position: relative;
     .source {
       position: absolute;
       right: 0;
       bottom: 2px;
+      @media (max-width: 500px) {
+        position: relative;
+        display: block;
+        margin: 0.2rem 0;
+      }
     }
   }
+}
+.button-group {
+  line-height: 2;
 }
 
 
@@ -116,10 +132,10 @@ h1 span {
   }
 }
 h2 {
-  margin: 0 0 0.5rem;
+  margin: 0;
 }
 h3 {
-
+  margin: 0;
 }
 h4 {
   margin: 0 0 0.5rem 0;
@@ -194,6 +210,28 @@ h1 span:nth-of-type(11) {
 
 
 
+
+// Contributors
+.contributors {
+  background: #222;
+  color: #eee;
+  header {
+    border-bottom-color: #666;
+  }
+  .readme {
+    display: none;
+    .effeckt-demo-captions + & {
+      display: block;
+    }
+  }
+
+  ol { margin-left: 35px; }
+  hr { margin: 15px 0; }
+}
+
+
+
+
 // Individual demos, not specific to style
 
 // Buttons
@@ -202,6 +240,10 @@ h1 span:nth-of-type(11) {
   float: left;
   &:nth-child(2n) {
     clear: both;
+  }
+  @media (max-width: 500px) {
+    width: 100%;
+    float: none;
   }
 }
 
@@ -225,6 +267,12 @@ h1 span:nth-of-type(11) {
     margin-bottom: 2%;
     &:nth-of-type(3n) {
       margin-right: 0;
+    }
+    @media (max-width: 500px) {
+      width: 100%;
+      float: none;
+      height: 250px;
+      margin: 0 0 1rem 0;
     }
   }
 }
@@ -266,6 +314,7 @@ h1 span:nth-of-type(11) {
   padding: 0.8rem 1rem;
   font-size: 1.3em;
   margin: 0 0.25rem 0.6rem 0;
+  white-space: nowrap;
 
   -webkit-tap-highlight-color: rgba(black, 0);
 }
@@ -346,4 +395,25 @@ h1 span:nth-of-type(11) {
   }
 }
 
-
+.effeckt-caption {
+  width: 48%;
+  margin: 0 4% 1rem 0;
+  &:nth-child(2n) {
+    margin-right: 0;
+  }
+  img {
+    width: 100%;
+    display: block;
+  }
+  figcaption {
+    background: rgba(black, 0.8);
+    color: white;
+    padding: 1rem;
+    h3 {
+      font-size: 1.2rem;
+    }
+    p {
+      margin: 0;
+    }
+  }
+}

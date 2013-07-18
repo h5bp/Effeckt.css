@@ -4,27 +4,18 @@
 // Base
 .effeckt-caption {
   position: relative;
-  width: 300px;
   float: left;
-  margin: 0 1rem 1rem 0;
   overflow: hidden;
+  &:nth-child(2n) {
+    margin-right: 0;
+  }
   img {
-    display: block;
     @include transition($effeckt-caption-transition-duration);
   }
   figcaption {
     position: absolute;
-    background: rgba(black, 0.8);
-    color: white;
     @include transition($effeckt-caption-transition-duration);
     width: 100%;
-    padding: 1rem;
-    h3 {
-      font-size: 1.2rem;
-    }
-    p {
-      margin: 0;
-    }
   }
 }
 
@@ -75,17 +66,22 @@
   img {
     position: relative;
     z-index: 1;
+    transition-delay: 0.25s;
+  }
+  .effeckt-figcaption-wrap {
+    position: absolute;
+    bottom: 1rem;
+    opacity: 0;
+    transition: opacity 0.25s linear 0s;
   }
   &:hover, &:active {
-    figcaption {
-      opacity: 1;
-    }
     .effeckt-figcaption-wrap {
-      position: absolute;
-      bottom: 1rem;
+      opacity: 1;
+      transition-delay: 0.25s;
     }
     img {
       @include transform(scale(0.5) translateY(-80px));
+      @include transition-delay(0);
     }
   }
 }
@@ -209,6 +205,32 @@
     }
     img {
       @include transform(scale(1.1));
+    }
+  }
+}
+
+
+// Effect 10 - Flip
+.effeckt-caption-10 {
+  overflow: visible;
+  perspective: 1300px;
+  figcaption {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    @include transform(rotateY(180deg));
+    @include backface-visibility(hidden);
+  }
+  img {
+    @include transition(0.5s);
+  }
+  &:hover, &:active {
+    figcaption {
+     @include transform(rotateY(360deg));
+    }
+    img {
+      @include transform(rotateY(180deg));
     }
   }
 }
