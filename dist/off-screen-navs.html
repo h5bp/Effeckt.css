@@ -132,23 +132,25 @@
 
         <p>Ever notice how small flourishes and subtle transitions dramatically increases the value of the experience you enjoy with an app or site?
 
-        <p>Designing and developing UIs for the mobile web is tricky, but it's extremely difficult to do that while delivering something that performs at 60fps. The best opportunities to getting jank-free transitions on phones/tablets are css transition and keyframe animation based, especially tapping into hardware-accelerated transforms and opacity changes.
+        <p>Designing and developing UIs for the mobile web is tricky, but it's extremely difficult to do that while delivering something that performs at 60fps. The best opportunities to getting jank-free transitions on phones/tablets are CSS transition and keyframe animation based, especially tapping into hardware-accelerated transforms and opacity changes.
 
         <p>This library has a few <strong>goals</strong>:</p>
 
         <ol>
-        <li>It provides no UI of it's own. It's only hooks for transitions.</li>
+        <li>It provides very little UI of its own. It's only hooks for transitions/animations.</li>
         <li>Designer-curated set of classy and reasonable effects. (no <a href="http://easings.net/#easeInBounce"><code>easeInBounce</code></a>)</li>
-        <li>Establish browser support guidelines (I expect Android 2.3 would gracefully degrade)</li>
+        <li>Establish browser support guidelines (e.g. Android 2.3 would gracefully degrade)</li>
         <li>CSS performance regression testing (a la <a href="http://bench.topcoat.io">bench.topcoat.io</a>)</li>
         <li>Deliver jank-free <em>60fps</em> performance on target browsers/devices</li>
-        <li>If a particular effect cannot deliver target performance (hey <code>blur()</code> css filter), it cannot be included.</li>
+        <li>If a particular effect cannot deliver target performance (hey <code>blur()</code> CSS filter), it cannot be included.</li>
         <li>Guidelines on what to avoid when styling these affected elements (avoid expensive CSS)</li>
         <li>Deliver a builder so users can pull only the CSS they need.</li>
-        <li>There is no hover on the mobile web, so any hover-based effects would be excluded.</li>
+        <li>There is no hover on the mobile web, so any hover-based effects would be excluded or have a tap equivalent.</li>
         </ol>
 
-        <iframe width="640" height="480" src="//www.youtube.com/embed/Qc40YDFA4Bg" frameborder="0" allowfullscreen></iframe>
+        <div class="fluid-video">
+          <iframe width="640" height="480" src="//www.youtube.com/embed/Qc40YDFA4Bg" frameborder="0" allowfullscreen></iframe>
+        </div>
 
         <hr>
 
@@ -168,8 +170,7 @@
 
   <!-- libs -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
-  <!-- for modals-2 -->
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-2.0.3.min.js"><\/script>')</script>
 
   <!-- demo -->
   <script src="assets/js/demo/demo.js"></script>
@@ -184,6 +185,7 @@
   <script src="assets/js/modules/page-transitions.js"></script>
   <script src="assets/js/modules/list-scroll.js"></script>
 
+  <!-- ideally should kick this off in the demo js file itself -->
   <script>
     stroll.bind('.effeckt-demo-list-scroll ul');
   </script>
