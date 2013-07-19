@@ -8,6 +8,18 @@
   box-sizing: border-box;
 }
 
+.warning {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.5rem;
+  background: linear-gradient(#fff94d, #ddd610);
+  opacity: 0.95;
+  text-align: center;
+  z-index: 1000;
+}
+
 // to avoid extranaous animations while page settles
 .no-transitions,
 .no-transitions * {
