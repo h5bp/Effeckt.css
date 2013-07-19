@@ -1,26 +1,15 @@
 .effeckt-caption {
   position: relative;
-  width: 48%;
   float: left;
-  margin: 0 4% 1rem 0;
   overflow: hidden; }
   .effeckt-caption:nth-child(2n) {
     margin-right: 0; }
   .effeckt-caption img {
-    width: 100%;
-    display: block;
-    transition: 0.5s; }
+    transition: 500ms; }
   .effeckt-caption figcaption {
     position: absolute;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    transition: 0.5s;
-    width: 100%;
-    padding: 1rem; }
-    .effeckt-caption figcaption h3 {
-      font-size: 1.2rem; }
-    .effeckt-caption figcaption p {
-      margin: 0; }
+    transition: 500ms;
+    width: 100%; }
 
 .effeckt-caption-1 figcaption {
   bottom: 0;
@@ -43,6 +32,7 @@
   left: 0;
   width: 100%;
   height: 100%;
+  transition: none;
   z-index: 0; }
 .effeckt-caption-3 img {
   position: relative;
@@ -90,9 +80,10 @@
   top: 0;
   left: 0;
   transform: translateX(-100%);
-  opacity: 0; }
+  opacity: 0;
+  z-index: 2; }
 .effeckt-caption-7 .effeckt-figcaption-wrap {
-  transition: 0.5s 0.25s;
+  transition: 500ms 250ms;
   transform: translateX(200%); }
 .effeckt-caption-7:hover figcaption, .effeckt-caption-7:active figcaption {
   transform: translateX(0);
@@ -107,7 +98,7 @@
   transform: translateX(-100%);
   opacity: 0; }
 .effeckt-caption-8 img {
-  transition: 0.5s;
+  transition: 500ms;
   transform: translateX(0); }
 .effeckt-caption-8:hover figcaption, .effeckt-caption-8:active figcaption {
   transform: translateX(0);
@@ -119,10 +110,10 @@
   top: 0;
   left: 0;
   transform: scale(2);
-  opacity: 0;
-  text-align: center; }
+  text-align: center;
+  opacity: 0; }
 .effeckt-caption-9 img {
-  transition: 0.5s; }
+  transition: 500ms; }
 .effeckt-caption-9:hover figcaption, .effeckt-caption-9:active figcaption {
   transform: scale(1);
   opacity: 1; }

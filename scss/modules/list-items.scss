@@ -1,19 +1,6 @@
+@import "../_variables";
+
 // TODO: Removal Animations as well
-
-
-.effeckt-list {
-  list-style: none;
-  li {
-    background: #e6e6e6;
-    padding: 0 0.5rem;
-    overflow: hidden;
-    margin-bottom: 2px;
-    line-height: 2;
-    &.new-item {
-      background: #ccc;
-    }
-  }
-}
 
 // Pop-in
 .effeckt-list[data-type='pop-in'] {
@@ -24,15 +11,15 @@
   opacity: 0;
   transform: translateX(-300px);
   animation:
-    openSpace 0.2s ease forwards,
-    moveIn 0.3s 0.2s ease forwards;
+    openSpace $effeckt-list-item-transition-duration ease forwards,
+    moveIn $effeckt-list-item-transition-duration*1.5 $effeckt-list-item-transition-duration ease forwards;
 }
 .effeckt-list[data-type='pop-in'] .remove-item {
   max-height: 50px;
   opacity: 1;
   animation:
-    moveOut 0.3s 0.2s ease forwards,
-    closeSpace 0.2s ease forwards 0.3s;
+    moveOut $effeckt-list-item-transition-duration*1.5 $effeckt-list-item-transition-duration ease forwards,
+    closeSpace $effeckt-list-item-transition-duration ease forwards $effeckt-list-item-transition-duration*1.5;
 }
 @keyframes openSpace {
   to {
@@ -66,10 +53,10 @@
   max-height: 0;
   opacity: 0;
   transform: scale(0);
-  animation: growHeight 0.2s ease forwards;
+  animation: growHeight $effeckt-list-item-transition-duration ease forwards;
 }
 .effeckt-list[data-type='expand-in'] .remove-item {
-  animation: shrinkHeight 0.2s ease forwards;
+  animation: shrinkHeight $effeckt-list-item-transition-duration ease forwards;
 }
 @keyframes growHeight {
   to {
@@ -96,14 +83,14 @@
 .effeckt-list[data-type='wobble-in'] .new-item {
   backface-visibility: visible;
   animation:
-    WobbleInX 1s both 0.2s,
-    openSpace 0.2s ease forwards;
+    WobbleInX $effeckt-list-item-transition-duration*5 both $effeckt-list-item-transition-duration,
+    openSpace $effeckt-list-item-transition-duration ease forwards;
 }
 .effeckt-list[data-type='wobble-in'] .remove-item {
   backface-visibility: visible;
   animation:
-    WobbleOutX 1s both 0.2s,
-    closeSpace 0.2s ease forwards 1s;
+    WobbleOutX $effeckt-list-item-transition-duration*5 both $effeckt-list-item-transition-duration,
+    closeSpace $effeckt-list-item-transition-duration*2 ease forwards $effeckt-list-item-transition-duration*3;
 }
 @keyframes WobbleInX {
   0% {
@@ -138,15 +125,15 @@
   backface-visibility: visible;
   transform-origin: top left;
   animation:
-    FlipIn 1s both 0.2s,
-    openSpace 0.2s ease forwards;
+    FlipIn $effeckt-list-item-transition-duration*5 both $effeckt-list-item-transition-duration,
+    openSpace $effeckt-list-item-transition-duration ease forwards;
 }
 .effeckt-list[data-type='flip-in'] .remove-item {
   backface-visibility: visible;
   transform-origin: top left;
   animation:
-    FlipOut 1s both 0.2s,
-    closeSpace 0.6s ease forwards 0.6s;
+    FlipOut $effeckt-list-item-transition-duration*5 both $effeckt-list-item-transition-duration,
+    closeSpace $effeckt-list-item-transition-duration*2 ease forwards $effeckt-list-item-transition-duration*2;
 }
 @keyframes FlipIn {
   0% {

@@ -11,22 +11,14 @@
   top: 50%;
   left: 50%;
   width: 50%;
-  max-width: 630px;
-  min-width: 320px;
+  max-width: 320px;
+  min-width: 630px;
   z-index: 2000;
   display: none; }
 
 .effeckt-modal {
   visibility: hidden;
-  backface-visibility: hidden;
-  background: white; }
-  .effeckt-modal h3 {
-    padding: 1rem;
-    color: white;
-    background: #444; }
-
-.effeckt-modal-content {
-  padding: 1rem; }
+  backface-visibility: hidden; }
 
 .effeckt-show .effeckt-modal {
   visibility: visible; }
@@ -42,10 +34,8 @@
   visibility: hidden;
   top: 0;
   left: 0;
-  z-index: 1000;
   opacity: 0;
-  background: rgba(0, 0, 0, 0.5);
-  transition: 0.3s; }
+  transition: 500ms; }
 
 /*
   Individual modal styles with animations/transitions
@@ -54,7 +44,7 @@
 .md-effect-1 .effeckt-modal {
   transform: scale(0.5);
   opacity: 0;
-  transition: 0.3s; }
+  transition: 500ms; }
 
 .effeckt-show.md-effect-1 .effeckt-modal {
   transform: scale(1);
@@ -64,7 +54,7 @@
 .md-effect-5 .effeckt-modal {
   transform: scale(1.5);
   opacity: 0;
-  transition: 0.3s; }
+  transition: 500ms; }
 
 .effeckt-show.md-effect-5 .effeckt-modal {
   transform: scale(1);
@@ -74,7 +64,7 @@
 .md-effect-2 .effeckt-modal {
   transform: translateX(30%);
   opacity: 0;
-  transition: 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9); }
+  transition: 500ms cubic-bezier(0.25, 0.5, 0.5, 0.9); }
 
 .effeckt-show.md-effect-2 .effeckt-modal {
   transform: translateX(0);
@@ -84,7 +74,7 @@
 .md-effect-3 .effeckt-modal {
   transform: translateY(30%);
   opacity: 0;
-  transition: 0.3s; }
+  transition: 500ms; }
 
 .effeckt-show.md-effect-3 .effeckt-modal {
   transform: translateY(0);
@@ -110,9 +100,13 @@
   opacity: 0; }
 
 .effeckt-show.md-effect-6 .effeckt-modal {
-  transition: 0.3s ease-in;
+  transition: 500ms ease-in;
   transform: translateZ(0) translateX(0) rotate(0deg);
   opacity: 1; }
+
+.effeckt-hide.md-effect-6 .effeckt-modal {
+  transition: all 500ms ease-out;
+  opacity: 0; }
 
 /* Effect 7:  slide and stick to top */
 .md-effect-7 {
@@ -135,7 +129,7 @@
 
 .md-effect-8 .effeckt-modal {
   transform: rotateY(-70deg);
-  transition: all 0.3s;
+  transition: all 500ms;
   opacity: 0; }
 
 .effeckt-show.md-effect-8 .effeckt-modal {
@@ -149,7 +143,7 @@
 
 .md-effect-9 .effeckt-modal {
   transform: rotateX(-70deg);
-  transition: 0.3s;
+  transition: 500ms;
   opacity: 0; }
 
 .effeckt-show.md-effect-9 .effeckt-modal {
@@ -165,7 +159,7 @@
   transform: rotateX(-60deg);
   transform-origin: 50% 0;
   opacity: 0;
-  transition: 0.3s; }
+  transition: 500ms; }
 
 .effeckt-show.md-effect-10 .effeckt-modal {
   transform: rotateX(0deg);
@@ -174,7 +168,7 @@
 /* Effect 12:  Just me */
 .md-effect-12 .effeckt-modal {
   opacity: 0;
-  transition: 0.3s; }
+  transition: 500ms; }
 
 .effeckt-show.md-effect-12 .effeckt-modal {
   opacity: 1;
@@ -198,6 +192,10 @@
 .effeckt-show.md-effect-13 .effeckt-modal {
   animation: slit 0.7s forwards ease-out; }
 
+.effeckt-hide.md-effect-13 .effeckt-modal {
+  opacity: 0;
+  transition: all 500ms; }
+
 @keyframes slit {
   50% {
     transform: translateZ(-250px) rotateY(89deg);
@@ -217,7 +215,7 @@
   transform: translateY(100%) rotateX(90deg);
   transform-origin: 0 100%;
   opacity: 0;
-  transition: all 0.3s ease-out; }
+  transition: all 500ms ease-out; }
 
 .effeckt-show.md-effect-14 .effeckt-modal {
   transform: translateY(0%) rotateX(0deg);
@@ -232,7 +230,7 @@
   transform: translateZ(100px) translateX(-30%) rotateY(90deg);
   transform-origin: 0 100%;
   opacity: 0;
-  transition: all 0.3s; }
+  transition: all 500ms; }
 
 .effeckt-show.md-effect-15 .effeckt-modal {
   transform: translateZ(0px) translateX(0%) rotateY(0deg);
@@ -249,7 +247,7 @@
   opacity: 0; }
 
 .effeckt-show.md-effect-16 ~ .page-wrap, .md-effect-16 .effeckt-modal {
-  transition: all 0.3s; }
+  transition: all 500ms; }
 
 .effeckt-show.md-effect-16 .effeckt-modal {
   opacity: 1; }
@@ -258,7 +256,7 @@
 .effeckt-show.md-effect-17 ~ .page-wrap {
   height: 100%;
   overflow: hidden;
-  transition: transform 0.3s; }
+  transition: transform 500ms; }
 
 .effeckt-show.md-effect-17 ~ .page-wrap, .effeckt-show.md-effect-17 ~ .effeckt-overlay {
   transform: rotateX(-2deg);
@@ -272,7 +270,11 @@
 .effeckt-show.md-effect-17 .effeckt-modal {
   transform: translateY(-50%);
   opacity: 1;
-  transition: all 0.3s 0.2s; }
+  transition: all 500ms 0.2s; }
+
+.effeckt-hide.md-effect-17 .effeckt-modal {
+  opacity: 0;
+  transition: all 500ms 0.2s; }
 
 /* Effect 18:  Slide from right with perspective on container */
 .effeckt-show.md-effect-18 ~ .page-wrap {
@@ -305,18 +307,22 @@
   opacity: 1;
   transition: all 0.5s 0.1s; }
 
+.effeckt-hide.md-effect-18 .effeckt-modal {
+  opacity: 0;
+  transition: all 0.5s 0.1s; }
+
 /* Effect 19:  Slip in from the top with perspective on container */
 .effeckt-show.md-effect-19 ~ .page-wrap {
   height: 100%;
   overflow: hidden; }
 
 .effeckt-show.md-effect-19 ~ .effeckt-overlay {
-  transition: all 0.5s; }
+  transition: 500ms; }
 
 .effeckt-show.md-effect-19 ~ .page-wrap, .effeckt-show.md-effect-19 ~ .effeckt-overlay {
   transform-style: preserve-3d;
   transform-origin: 50% 100%;
-  animation: OpenTop 0.5s forwards ease-in; }
+  animation: OpenTop 500ms forwards ease-in; }
 
 @keyframes OpenTop {
   50% {
@@ -330,11 +336,15 @@
 .effeckt-show.md-effect-19 .effeckt-modal {
   transform: translateY(0);
   opacity: 1;
-  transition: all 0.5s 0.1s; }
+  transition: all 500ms 100ms; }
+
+.effeckt-hide.md-effect-19 .effeckt-modal {
+  opacity: 0;
+  transition: all 500ms 100ms; }
 
 /* Effect 20: From the top to bottom with left tilt on the way out */
 .md-effect-20 {
-  transition: 0.3s ease-in-out;
+  transition: 500ms ease-in-out;
   transform: -50% -50%;
   top: -100%;
   opacity: 0; }
@@ -350,7 +360,7 @@
 
 /* Effect 22: From the top to bottom */
 .md-effect-22 {
-  transition: 0.3s ease-in-out;
+  transition: 500ms ease-in-out;
   transform: -50% -50%;
   top: -100%;
   opacity: 0; }
@@ -365,7 +375,7 @@
 
 /* Effect 23: From the bottom to bottom */
 .md-effect-23 {
-  transition: 0.3s ease-in-out;
+  transition: 500ms ease-in-out;
   transform: -50% -50%;
   top: 100%;
   opacity: 0; }
@@ -380,7 +390,7 @@
 
 /* Effect 24: From the top to top */
 .md-effect-24 {
-  transition: 0.3s ease-in-out;
+  transition: 500ms ease-in-out;
   transform: -50% -50%;
   top: -100%;
   opacity: 0; }

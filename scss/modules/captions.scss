@@ -1,31 +1,20 @@
+@import "../_variables";
+
 // Base
 .effeckt-caption {
   position: relative;
-  width: 48%;
   float: left;
-  margin: 0 4% 1rem 0;
   overflow: hidden;
   &:nth-child(2n) {
     margin-right: 0;
   }
   img {
-    width: 100%;
-    display: block;
-    transition: 0.5s;
+    transition: $effeckt-caption-transition-duration;
   }
   figcaption {
     position: absolute;
-    background: rgba(black, 0.8);
-    color: white;
-    transition: 0.5s;
+    transition: $effeckt-caption-transition-duration;
     width: 100%;
-    padding: 1rem;
-    h3 {
-      font-size: 1.2rem;
-    }
-    p {
-      margin: 0;
-    }
   }
 }
 
@@ -69,6 +58,7 @@
     left: 0;
     width: 100%;
     height: 100%;
+    transition: none;
     z-index: 0;
   }
   img {
@@ -152,9 +142,10 @@
     left: 0;
     transform: translateX(-100%);
     opacity: 0;
+    z-index: 2;
   }
   .effeckt-figcaption-wrap {
-    transition: 0.5s 0.25s;
+    transition: $effeckt-caption-transition-duration $effeckt-caption-transition-duration/2;
     transform: translateX(200%);
   }
   &:hover, &:active {
@@ -179,7 +170,7 @@
     opacity: 0;
   }
   img {
-    transition: 0.5s;
+    transition: $effeckt-caption-transition-duration;
     transform: translateX(0);
   }
   &:hover, &:active {
@@ -200,11 +191,11 @@
     top: 0;
     left: 0;
     transform: scale(2);
-    opacity: 0;
     text-align: center;
+    opacity: 0;
   }
   img {
-    transition: 0.5s;
+    transition: $effeckt-caption-transition-duration;
   }
   &:hover, &:active {
     figcaption {

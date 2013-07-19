@@ -20,8 +20,8 @@
   top: 50%;
   left: 50%;
   width: 50%;
-  max-width: 630px;
-  min-width: 320px;
+  max-width: 320px;
+  min-width: 630px;
   z-index: 2000;
   display: none;
 }
@@ -32,17 +32,6 @@
   -ms-backface-visibility: hidden;
   -o-backface-visibility: hidden;
   backface-visibility: hidden;
-  background: white;
-}
-
-.effeckt-modal h3 {
-  padding: 1rem;
-  color: white;
-  background: #444;
-}
-
-.effeckt-modal-content {
-  padding: 1rem;
 }
 
 .effeckt-show .effeckt-modal {
@@ -61,12 +50,10 @@
   visibility: hidden;
   top: 0;
   left: 0;
-  z-index: 1000;
   opacity: 0;
-  background: rgba(0, 0, 0, 0.5);
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
 }
 
 /*
@@ -81,9 +68,9 @@
   -o-transform: scale(0.5);
   transform: scale(0.5);
   opacity: 0;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
 }
 
 .effeckt-show.md-effect-1 .effeckt-modal {
@@ -102,9 +89,9 @@
   -o-transform: scale(1.5);
   transform: scale(1.5);
   opacity: 0;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
 }
 
 .effeckt-show.md-effect-5 .effeckt-modal {
@@ -123,9 +110,9 @@
   -o-transform: translateX(30%);
   transform: translateX(30%);
   opacity: 0;
-  -webkit-transition: 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
-  -o-transition: 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
-  transition: 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+  -webkit-transition: 500ms cubic-bezier(0.25, 0.5, 0.5, 0.9);
+  -o-transition: 500ms cubic-bezier(0.25, 0.5, 0.5, 0.9);
+  transition: 500ms cubic-bezier(0.25, 0.5, 0.5, 0.9);
 }
 
 .effeckt-show.md-effect-2 .effeckt-modal {
@@ -144,9 +131,9 @@
   -o-transform: translateY(30%);
   transform: translateY(30%);
   opacity: 0;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
 }
 
 .effeckt-show.md-effect-3 .effeckt-modal {
@@ -200,14 +187,21 @@
 }
 
 .effeckt-show.md-effect-6 .effeckt-modal {
-  -webkit-transition: 0.3s ease-in;
-  -o-transition: 0.3s ease-in;
-  transition: 0.3s ease-in;
+  -webkit-transition: 500ms ease-in;
+  -o-transition: 500ms ease-in;
+  transition: 500ms ease-in;
   -webkit-transform: translateZ(0) translateX(0) rotate(0deg);
   -ms-transform: translateZ(0) translateX(0) rotate(0deg);
   -o-transform: translateZ(0) translateX(0) rotate(0deg);
   transform: translateZ(0) translateX(0) rotate(0deg);
   opacity: 1;
+}
+
+.effeckt-hide.md-effect-6 .effeckt-modal {
+  -webkit-transition: all 500ms ease-out;
+  -o-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
+  opacity: 0;
 }
 
 /* Effect 7:  slide and stick to top */
@@ -257,9 +251,9 @@
   -ms-transform: rotateY(-70deg);
   -o-transform: rotateY(-70deg);
   transform: rotateY(-70deg);
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 500ms;
+  -o-transition: all 500ms;
+  transition: all 500ms;
   opacity: 0;
 }
 
@@ -289,9 +283,9 @@
   -ms-transform: rotateX(-70deg);
   -o-transform: rotateX(-70deg);
   transform: rotateX(-70deg);
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
   opacity: 0;
 }
 
@@ -326,9 +320,9 @@
   -o-transform-origin: 50% 0;
   transform-origin: 50% 0;
   opacity: 0;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
 }
 
 .effeckt-show.md-effect-10 .effeckt-modal {
@@ -343,9 +337,9 @@
 
 .md-effect-12 .effeckt-modal {
   opacity: 0;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
 }
 
 .effeckt-show.md-effect-12 .effeckt-modal {
@@ -387,6 +381,13 @@
   -webkit-animation: slit 0.7s forwards ease-out;
   -o-animation: slit 0.7s forwards ease-out;
   animation: slit 0.7s forwards ease-out;
+}
+
+.effeckt-hide.md-effect-13 .effeckt-modal {
+  opacity: 0;
+  -webkit-transition: all 500ms;
+  -o-transition: all 500ms;
+  transition: all 500ms;
 }
 
 @-webkit-keyframes slit {
@@ -465,9 +466,9 @@
   -o-transform-origin: 0 100%;
   transform-origin: 0 100%;
   opacity: 0;
-  -webkit-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
+  -webkit-transition: all 500ms ease-out;
+  -o-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
 }
 
 .effeckt-show.md-effect-14 .effeckt-modal {
@@ -501,9 +502,9 @@
   -o-transform-origin: 0 100%;
   transform-origin: 0 100%;
   opacity: 0;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 500ms;
+  -o-transition: all 500ms;
+  transition: all 500ms;
 }
 
 .effeckt-show.md-effect-15 .effeckt-modal {
@@ -531,9 +532,9 @@
 
 .effeckt-show.md-effect-16 ~ .page-wrap,
 .md-effect-16 .effeckt-modal {
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 500ms;
+  -o-transition: all 500ms;
+  transition: all 500ms;
 }
 
 .effeckt-show.md-effect-16 .effeckt-modal {
@@ -545,10 +546,10 @@
 .effeckt-show.md-effect-17 ~ .page-wrap {
   height: 100%;
   overflow: hidden;
-  -webkit-transition: -webkit-transform 0.3s;
-  -o-transition: -o-transform 0.3s;
-  transition: -ms-transform 0.3s;
-  transition: transform 0.3s;
+  -webkit-transition: -webkit-transform 500ms;
+  -o-transition: -o-transform 500ms;
+  transition: -ms-transform 500ms;
+  transition: transform 500ms;
 }
 
 .effeckt-show.md-effect-17 ~ .page-wrap,
@@ -581,9 +582,16 @@
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
   opacity: 1;
-  -webkit-transition: all 0.3s 0.2s;
-  -o-transition: all 0.3s 0.2s;
-  transition: all 0.3s 0.2s;
+  -webkit-transition: all 500ms 0.2s;
+  -o-transition: all 500ms 0.2s;
+  transition: all 500ms 0.2s;
+}
+
+.effeckt-hide.md-effect-17 .effeckt-modal {
+  opacity: 0;
+  -webkit-transition: all 500ms 0.2s;
+  -o-transition: all 500ms 0.2s;
+  transition: all 500ms 0.2s;
 }
 
 /* Effect 18:  Slide from right with perspective on container */
@@ -681,6 +689,13 @@
   transition: all 0.5s 0.1s;
 }
 
+.effeckt-hide.md-effect-18 .effeckt-modal {
+  opacity: 0;
+  -webkit-transition: all 0.5s 0.1s;
+  -o-transition: all 0.5s 0.1s;
+  transition: all 0.5s 0.1s;
+}
+
 /* Effect 19:  Slip in from the top with perspective on container */
 
 .effeckt-show.md-effect-19 ~ .page-wrap {
@@ -689,9 +704,9 @@
 }
 
 .effeckt-show.md-effect-19 ~ .effeckt-overlay {
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
 }
 
 .effeckt-show.md-effect-19 ~ .page-wrap,
@@ -704,9 +719,9 @@
   -ms-transform-origin: 50% 100%;
   -o-transform-origin: 50% 100%;
   transform-origin: 50% 100%;
-  -webkit-animation: OpenTop 0.5s forwards ease-in;
-  -o-animation: OpenTop 0.5s forwards ease-in;
-  animation: OpenTop 0.5s forwards ease-in;
+  -webkit-animation: OpenTop 500ms forwards ease-in;
+  -o-animation: OpenTop 500ms forwards ease-in;
+  animation: OpenTop 500ms forwards ease-in;
 }
 
 @-webkit-keyframes OpenTop {
@@ -753,17 +768,24 @@
   -o-transform: translateY(0);
   transform: translateY(0);
   opacity: 1;
-  -webkit-transition: all 0.5s 0.1s;
-  -o-transition: all 0.5s 0.1s;
-  transition: all 0.5s 0.1s;
+  -webkit-transition: all 500ms 100ms;
+  -o-transition: all 500ms 100ms;
+  transition: all 500ms 100ms;
+}
+
+.effeckt-hide.md-effect-19 .effeckt-modal {
+  opacity: 0;
+  -webkit-transition: all 500ms 100ms;
+  -o-transition: all 500ms 100ms;
+  transition: all 500ms 100ms;
 }
 
 /* Effect 20: From the top to bottom with left tilt on the way out */
 
 .md-effect-20 {
-  -webkit-transition: 0.3s ease-in-out;
-  -o-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
+  -webkit-transition: 500ms ease-in-out;
+  -o-transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out;
   -webkit-transform: -50% -50%;
   -ms-transform: -50% -50%;
   -o-transform: -50% -50%;
@@ -789,9 +811,9 @@
 /* Effect 22: From the top to bottom */
 
 .md-effect-22 {
-  -webkit-transition: 0.3s ease-in-out;
-  -o-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
+  -webkit-transition: 500ms ease-in-out;
+  -o-transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out;
   -webkit-transform: -50% -50%;
   -ms-transform: -50% -50%;
   -o-transform: -50% -50%;
@@ -813,9 +835,9 @@
 /* Effect 23: From the bottom to bottom */
 
 .md-effect-23 {
-  -webkit-transition: 0.3s ease-in-out;
-  -o-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
+  -webkit-transition: 500ms ease-in-out;
+  -o-transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out;
   -webkit-transform: -50% -50%;
   -ms-transform: -50% -50%;
   -o-transform: -50% -50%;
@@ -837,9 +859,9 @@
 /* Effect 24: From the top to top */
 
 .md-effect-24 {
-  -webkit-transition: 0.3s ease-in-out;
-  -o-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
+  -webkit-transition: 500ms ease-in-out;
+  -o-transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out;
   -webkit-transform: -50% -50%;
   -ms-transform: -50% -50%;
   -o-transform: -50% -50%;
