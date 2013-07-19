@@ -3,52 +3,84 @@
 .effeckt-page-transition.effeckt-page-transition-animating {
   visibility: visible;
 }
-//Slide Left
-.effeckt-page-transition-left-slide-in {
-  animation: slideLeftIn $effeckt-page-transition-duration forwards ease-out;
+// Slide Transition Mixin
+@mixin global-transition($animation, $duration, $direction, $effect ) {
+  animation: #{$animation} #{$duration} #{$direction} #{$effect};
 }
-.effeckt-page-transition-left-slide-out {
-  animation: slideLeftOut $effeckt-page-transition-duration forwards ease-out;
-}
-
-@keyframes slideLeftIn {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-@keyframes slideLeftOut {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
+// Slide Keyframe mixin // https://github.com/nex3/sass/issues/860
+@mixin percent-keyframes($effect, $transform-start, $transform-start-amount, $transform-end, $transform-end-amount) {
+  @keyframes #{$effect} {
+    0% {
+      transform: #{$transform-start}(#{$transform-start-amount});
+    }
+    100% {
+      transform: #{$transform-end}(#{$transform-end-amount});
+    }
   }
 }
 
-//Slide Right
-.effeckt-page-transition-right-slide-in {
-  animation: slideRightIn $effeckt-page-transition-duration forwards ease-out;
-}
-.effeckt-page-transition-right-slide-out {
-  animation: slideRightOut $effeckt-page-transition-duration forwards ease-out;
+// To Keyframe Mixin W/ Opacity // https://github.com/nex3/sass/issues/860
+@mixin to-keyframes($animation, $opacity, $transform, $transform-amount) {
+  @keyframes #{$animation} {
+    to {
+      opacity: #{$opacity};
+      transform: #{$transform}(#{$transform-amount});
+    }
+  }
 }
 
-@keyframes slideRightIn {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-@keyframes slideRightOut {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(100%);
+// From Keyframe Mixin W/ Opacity // https://github.com/nex3/sass/issues/860
+@mixin from-keyframes($animation, $opacity, $transform, $transform-amount) {
+  @keyframes #{$animation} {
+    from {
+      opacity: #{$opacity};
+      transform: #{$transform}(#{$transform-amount});
+    }
   }
 }
+
+.effeckt-page-transition.effeckt-page-transition-animating {
+  visibility: visible;
+}
+
+// Slide
+.effeckt-page-transition-left-slide-in { @include global-transition(slideLeftIn, 0.7s, forwards, ease-out); }
+.effeckt-page-transition-left-slide-out { @include global-transition(slideLeftOut, 0.7s, forwards, ease-out); }
+.effeckt-page-transition-right-slide-in { @include global-transition(slideRightIn, 0.7s, forwards, ease-out); }
+.effeckt-page-transition-right-slide-out { @include global-transition(slideRightOut, 0.7s, forwards, ease-out); }
+.effeckt-page-transition-top-slide-in { @include global-transition(slideTopIn, 0.7s, forwards, ease-out); }
+.effeckt-page-transition-top-slide-out { @include global-transition(slideTopOut, 0.7s, forwards, ease-out); }
+.effeckt-page-transition-bottom-slide-in {  @include global-transition(slideBottomIn, 0.7s, forwards, ease-out); }
+.effeckt-page-transition-bottom-slide-out { @include global-transition(slideBottomOut, 0.7s, forwards, ease-out); }
+
+@include percent-keyframes(slideLeftIn, translateX, 100%, translateX, 0);
+@include percent-keyframes(slideLeftOut, translateX, 0%, translateX, -100%);
+@include percent-keyframes(slideRightIn, translateX, -100%, translateX, 0);
+@include percent-keyframes(slideRightOut, translateX, 0, translateX, 100%);
+@include percent-keyframes(slideTopIn, translateY, -100%, translateY, 0);
+@include percent-keyframes(slideTopOut, translateY, 0, translateY, 100%);
+@include percent-keyframes(slideBottomIn, translateY, 100%, translateY, 0);
+@include percent-keyframes(slideBottomOut, translateY, 0, translateY, -100%);
+
+// Scale
+.effeckt-page-transition-down-scale-out { @include global-transition(scaleDown, 0.7s, ease, both); }
+@include to-keyframes(scaleDown, 0, scale, .8);
+
+// Fade
+.effeckt-page-transition-left-fade-in { @include global-transition(fadeLeftIn, 0.7s, ease, both); }
+.effeckt-page-transition-left-fade-out { @include global-transition(fadeLeftOut, 0.7s, ease, both); }
+.effeckt-page-transition-right-fade-in { @include global-transition(fadeRightIn, 0.7s, ease, both); }
+.effeckt-page-transition-right-fade-out { @include global-transition(fadeRightOut, 0.7s, ease, both); }
+.effeckt-page-transition-top-fade-in { @include global-transition(fadeTopIn, 0.7s, ease, both); }
+.effeckt-page-transition-top-fade-out { @include global-transition(fadeTopOut, 0.7s, ease, both); }
+.effeckt-page-transition-bottom-fade-in { @include global-transition(fadeBottomIn, 0.7s, ease, both); }
+.effeckt-page-transition-bottom-fade-out { @include global-transition(fadeBottomOut, 0.7s, ease, both); }
+
+@include to-keyframes(fadeLeftIn, 0.3, translateX, -100%);
+@include from-keyframes(fadeLeftOut, 0.3, translateX, -100%);
+@include to-keyframes(fadeRightIn, 0.3, translateX, 100%);
+@include from-keyframes(fadeRightOut, 0.3, translateX, 100%);
+@include to-keyframes(fadeTopIn, 0.3, translateY, -100%);
+@include from-keyframes(fadeTopOut, 0.3, translateY, -100%);
+@include to-keyframes(fadeBottomIn, 0.3, translateY, 100%);
+@include from-keyframes(fadeBottomOut, 0.3, translateY, 100%);

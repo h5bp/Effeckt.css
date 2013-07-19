@@ -1,11 +1,32 @@
 .effeckt-page-transition.effeckt-page-transition-animating {
   visibility: visible; }
 
+.effeckt-page-transition.effeckt-page-transition-animating {
+  visibility: visible; }
+
 .effeckt-page-transition-left-slide-in {
-  animation: slideLeftIn 1000ms forwards ease-out; }
+  animation: slideLeftIn 0.7s forwards ease-out; }
 
 .effeckt-page-transition-left-slide-out {
-  animation: slideLeftOut 1000ms forwards ease-out; }
+  animation: slideLeftOut 0.7s forwards ease-out; }
+
+.effeckt-page-transition-right-slide-in {
+  animation: slideRightIn 0.7s forwards ease-out; }
+
+.effeckt-page-transition-right-slide-out {
+  animation: slideRightOut 0.7s forwards ease-out; }
+
+.effeckt-page-transition-top-slide-in {
+  animation: slideTopIn 0.7s forwards ease-out; }
+
+.effeckt-page-transition-top-slide-out {
+  animation: slideTopOut 0.7s forwards ease-out; }
+
+.effeckt-page-transition-bottom-slide-in {
+  animation: slideBottomIn 0.7s forwards ease-out; }
+
+.effeckt-page-transition-bottom-slide-out {
+  animation: slideBottomOut 0.7s forwards ease-out; }
 
 @keyframes slideLeftIn {
   0% {
@@ -16,16 +37,10 @@
 
 @keyframes slideLeftOut {
   0% {
-    transform: translateX(0); }
+    transform: translateX(0%); }
 
   100% {
     transform: translateX(-100%); } }
-
-.effeckt-page-transition-right-slide-in {
-  animation: slideRightIn 1000ms forwards ease-out; }
-
-.effeckt-page-transition-right-slide-out {
-  animation: slideRightOut 1000ms forwards ease-out; }
 
 @keyframes slideRightIn {
   0% {
@@ -40,3 +55,103 @@
 
   100% {
     transform: translateX(100%); } }
+
+@keyframes slideTopIn {
+  0% {
+    transform: translateY(-100%); }
+
+  100% {
+    transform: translateY(0); } }
+
+@keyframes slideTopOut {
+  0% {
+    transform: translateY(0); }
+
+  100% {
+    transform: translateY(100%); } }
+
+@keyframes slideBottomIn {
+  0% {
+    transform: translateY(100%); }
+
+  100% {
+    transform: translateY(0); } }
+
+@keyframes slideBottomOut {
+  0% {
+    transform: translateY(0); }
+
+  100% {
+    transform: translateY(-100%); } }
+
+.effeckt-page-transition-down-scale-out {
+  animation: scaleDown 0.7s ease both; }
+
+@keyframes scaleDown {
+  to {
+    opacity: 0;
+    transform: scale(0.8); } }
+
+.effeckt-page-transition-left-fade-in {
+  animation: fadeLeftIn 0.7s ease both; }
+
+.effeckt-page-transition-left-fade-out {
+  animation: fadeLeftOut 0.7s ease both; }
+
+.effeckt-page-transition-right-fade-in {
+  animation: fadeRightIn 0.7s ease both; }
+
+.effeckt-page-transition-right-fade-out {
+  animation: fadeRightOut 0.7s ease both; }
+
+.effeckt-page-transition-top-fade-in {
+  animation: fadeTopIn 0.7s ease both; }
+
+.effeckt-page-transition-top-fade-out {
+  animation: fadeTopOut 0.7s ease both; }
+
+.effeckt-page-transition-bottom-fade-in {
+  animation: fadeBottomIn 0.7s ease both; }
+
+.effeckt-page-transition-bottom-fade-out {
+  animation: fadeBottomOut 0.7s ease both; }
+
+@keyframes fadeLeftIn {
+  to {
+    opacity: 0.3;
+    transform: translateX(-100%); } }
+
+@keyframes fadeLeftOut {
+  from {
+    opacity: 0.3;
+    transform: translateX(-100%); } }
+
+@keyframes fadeRightIn {
+  to {
+    opacity: 0.3;
+    transform: translateX(100%); } }
+
+@keyframes fadeRightOut {
+  from {
+    opacity: 0.3;
+    transform: translateX(100%); } }
+
+@keyframes fadeTopIn {
+  to {
+    opacity: 0.3;
+    transform: translateY(-100%); } }
+
+@keyframes fadeTopOut {
+  from {
+    opacity: 0.3;
+    transform: translateY(-100%); } }
+
+@keyframes fadeBottomIn {
+  to {
+    opacity: 0.3;
+    transform: translateY(100%); } }
+
+@keyframes fadeBottomOut {
+  from {
+    opacity: 0.3;
+    transform: translateY(100%); } }
