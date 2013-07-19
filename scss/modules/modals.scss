@@ -12,7 +12,6 @@
   perspective: 600px;
 }
 
-
 // Modal itself
 .effeckt-modal-wrap {
 
@@ -20,6 +19,7 @@
   // But also that magically centers and means that we
   // don't need to handle centering in the effects themselves
   // Kinda a sucky double edged sword
+  // Possible alternative: used fixed sizes for the modals and center with negative margins.
   transform: translate(-50%, -50%);
 
   position: fixed;
