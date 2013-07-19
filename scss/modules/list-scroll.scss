@@ -1,28 +1,26 @@
 @import "../_variables";
-@import "../_mixins";
-
 
 // Base
 .effeckt-list-scroll {
   position: relative;
   overflow-x: hidden;
   overflow-y: scroll;
-  @include perspective(400px);
+  perspective: 400px;
 
   > li {
     position: relative;
     z-index: 2;
-    @include transform(translateZ(0));
+    transform: translateZ(0);
   }
 }
 
 
 // Grow
 [data-effeckt="grow"] li {
-  @include transition(all $effeckt-list-scroll-transition-duration ease);
-  @include transform-origin(50% 50%);
+  transition: all $effeckt-list-scroll-transition-duration ease;
+  transform-origin: 50% 50%;
   &.past, &.future {
-    @include transform(scale(0.01));
+    transform: scale(0.01);
   }
 }
 
@@ -32,69 +30,69 @@
   // this was originally applied to the 'li', 
   // was this a mistake? Seems like it should 
   // be part of the parent <ul>
-  @include perspective(600px);
-  @include perspective-origin(0% 50%);
-  @include transition(all $effeckt-list-scroll-transition-duration ease, opacity $effeckt-list-scroll-transition-duration/3 ease);
-  @include transform-origin(0% 0%);
-  @include backface-visibility(hidden);
+  perspective: 600px;
+  perspective-origin: 0% 50%;
+  transition: all $effeckt-list-scroll-transition-duration ease, opacity $effeckt-list-scroll-transition-duration/3 ease;
+  transform-origin: 0% 0%;
+  backface-visibility: hidden;
   &.past {
-    @include opacity(0);
-    @include transform(rotateY(90deg));
+    opacity: 0;
+    transform: rotateY(90deg);
   }
   &.future {
-    @include opacity(0);
-    @include transform(rotateY(90deg));
+    opacity: 0;
+    transform: rotateY(90deg);
   }
 }
 
 // Wave
 [data-effeckt="wave"] li {
-  @include transition(all $effeckt-list-scroll-transition-duration cubic-bezier(0.260, 0.860, 0.440, 0.985));
+  transition: all $effeckt-list-scroll-transition-duration cubic-bezier(0.260, 0.860, 0.440, 0.985);
   &.past {
-    @include transform(translateX(-70%));
+    transform: translateX(-70%);
   }
   &.future {
-    @include transform(translateX(-70%));
+    transform: translateX(-70%);
   }
 }
 
 // Fan
 [data-effeckt="fan"] li {
-  @include transition(all $effeckt-list-scroll-transition-duration cubic-bezier(0.390, 0.575, 0.565, 1.000));
-  @include transform-origin(0% 0%);
+  transition: all $effeckt-list-scroll-transition-duration cubic-bezier(0.390, 0.575, 0.565, 1.000);
+  transform-origin: 0% 0%;
   &.past {
-    @include transform(rotate(-60deg));
+    transform: rotate(-60deg);
   }
   &.future {
-    @include transform(rotate(70deg));
+    transform: rotate(70deg);
   }
 }
 
 // Fade
 [data-effeckt="fade"] li {
-  @include transition(opacity $effeckt-list-scroll-transition-duration/2 ease-in-out);
+  transition: opacity $effeckt-list-scroll-transition-duration/2 ease-in-out;
 
   &.past, &.future {
-    @include opacity(0);
+    opacity: 0;
   }
 }
 
 // Fly
 [data-effeckt="fly"] {
-  @include perspective(400px);
-  @include perspective-origin(50% 50%);
+  perspective: 400px;
+  perspective-origin: 50% 50%;
   li {
-    @include transition(all $effeckt-list-scroll-transition-duration ease, opacity $effeckt-list-scroll-transition-duration/2 ease);
-    @include transform-origin(50% 50% -50px);
+    transition: all $effeckt-list-scroll-transition-duration ease, opacity $effeckt-list-scroll-transition-duration/2 ease;
+    transform-origin: 50% 50% -50px;
 
     &.past, &.future {
-      @include opacity(0);
+      opacity: 0;
     }
     &.past {
-      @include transform(rotateX(180deg));
+      transform: rotateX(180deg);
     }
     &.future {
-      @include transform(rotateX(-180deg));
+      transform: rotateX(-180deg);
     }
   }
 }

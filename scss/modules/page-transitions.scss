@@ -1,55 +1,54 @@
 @import "../_variables";
-@import "../_mixins";
 
 .effeckt-page-transition.effeckt-page-transition-animating {
   visibility: visible;
 }
 //Slide Left
 .effeckt-page-transition-left-slide-in {
-  @include animation(slideLeftIn $effeckt-page-transition-duration forwards ease-out);
+  animation: slideLeftIn $effeckt-page-transition-duration forwards ease-out;
 }
 .effeckt-page-transition-left-slide-out {
-  @include animation(slideLeftOut $effeckt-page-transition-duration forwards ease-out);
+  animation: slideLeftOut $effeckt-page-transition-duration forwards ease-out;
 }
 
-@include keyframes(slideLeftIn) {
+@keyframes slideLeftIn {
   0% {
-    @include transform(translateX(100%));
+    transform: translateX(100%);
   }
   100% {
-    @include transform(translateX(0));
+    transform: translateX(0);
   }
 }
-@include keyframes(slideLeftOut) {
+@keyframes slideLeftOut {
   0% {
-    @include transform(translateX(0));
+    transform: translateX(0);
   }
   100% {
-    @include transform(translateX(-100%));
+    transform: translateX(-100%);
   }
 }
 
 //Slide Right
 .effeckt-page-transition-right-slide-in {
-  @include animation(slideRightIn $effeckt-page-transition-duration forwards ease-out);
+  animation: slideRightIn $effeckt-page-transition-duration forwards ease-out;
 }
 .effeckt-page-transition-right-slide-out {
-  @include animation(slideRightOut $effeckt-page-transition-duration forwards ease-out);
+  animation: slideRightOut $effeckt-page-transition-duration forwards ease-out;
 }
 
-@include keyframes(slideRightIn) {
+@keyframes slideRightIn {
   0% {
-    @include transform(translateX(-100%));
+    transform: translateX(-100%);
   }
   100% {
-    @include transform(translateX(0));
+    transform: translateX(0);
   }
 }
-@include keyframes(slideRightOut) {
+@keyframes slideRightOut {
   0% {
-    @include transform(translateX(0));
+    transform: translateX(0);
   }
   100% {
-    @include transform(translateX(100%));
+    transform: translateX(100%);
   }
 }

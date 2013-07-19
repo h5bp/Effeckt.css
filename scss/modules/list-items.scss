@@ -1,5 +1,4 @@
 @import "../_variables";
-@import "../_mixins";
 
 // TODO: Removal Animations as well
 
@@ -9,37 +8,37 @@
 }
 .effeckt-list[data-type='pop-in'] .new-item {
   max-height: 0;
-  @include opacity(0);
-  @include transform(translateX(-300px));
-  @include animation(
+  opacity: 0;
+  transform: translateX(-300px);
+  animation:
     openSpace $effeckt-list-item-transition-duration ease forwards,
-    moveIn $effeckt-list-item-transition-duration*1.5 $effeckt-list-item-transition-duration ease forwards);
+    moveIn $effeckt-list-item-transition-duration*1.5 $effeckt-list-item-transition-duration ease forwards;
 }
 .effeckt-list[data-type='pop-in'] .remove-item {
   max-height: 50px;
-  @include opacity(1);
-  @include animation(
+  opacity: 1;
+  animation:
     moveOut $effeckt-list-item-transition-duration*1.5 $effeckt-list-item-transition-duration ease forwards,
-    closeSpace $effeckt-list-item-transition-duration ease forwards $effeckt-list-item-transition-duration*1.5);
+    closeSpace $effeckt-list-item-transition-duration ease forwards $effeckt-list-item-transition-duration*1.5;
 }
-@include keyframes(openSpace) {
+@keyframes openSpace {
   to {
     max-height: 50px;
   }
 }
-@include keyframes(moveIn) {
+@keyframes moveIn {
   to {
-    @include opacity(1);
-    @include transform(translateX(0));
+    opacity: 1;
+    transform: translateX(0);
   }
 }
-@include keyframes(moveOut) {
+@keyframes moveOut {
   to {
-    @include opacity(0);
-    @include transform(translateX(-300px));
+    opacity: 0;
+    transform: translateX(-300px);
   }
 }
-@include keyframes(closeSpace) {
+@keyframes closeSpace {
   to {
     max-height: 0px;
   }
@@ -52,107 +51,107 @@
 // Expand in
 .effeckt-list[data-type='expand-in'] .new-item {
   max-height: 0;
-  @include opacity(0);
-  @include transform(scale(0));
-  @include animation(growHeight $effeckt-list-item-transition-duration ease forwards);
+  opacity: 0;
+  transform: scale(0);
+  animation: growHeight $effeckt-list-item-transition-duration ease forwards;
 }
 .effeckt-list[data-type='expand-in'] .remove-item {
-  @include animation(shrinkHeight $effeckt-list-item-transition-duration ease forwards);
+  animation: shrinkHeight $effeckt-list-item-transition-duration ease forwards;
 }
-@include keyframes(growHeight) {
+@keyframes growHeight {
   to {
     // max-height kinda janky way to do this
     max-height: 50px;
-    @include opacity(1);
-    @include transform(scale(1));
+    opacity: 1;
+    transform: scale(1);
   }
 }
-@include keyframes(shrinkHeight) {
+@keyframes shrinkHeight {
   to {
     max-height: 0;
-    @include opacity(1);
-    @include transform(scale(0));
+    opacity: 1;
+    transform: scale(0);
   }
   from {
     max-height: 50px;
-    @include opacity(1);
-    @include transform(scale(1));
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
 // Wobble in
 .effeckt-list[data-type='wobble-in'] .new-item {
-  @include backface-visibility(visible);
-  @include animation(
+  backface-visibility: visible;
+  animation:
     WobbleInX $effeckt-list-item-transition-duration*5 both $effeckt-list-item-transition-duration,
-    openSpace $effeckt-list-item-transition-duration ease forwards);
+    openSpace $effeckt-list-item-transition-duration ease forwards;
 }
 .effeckt-list[data-type='wobble-in'] .remove-item {
-  @include backface-visibility(visible);
-  @include animation(
+  backface-visibility: visible;
+  animation:
     WobbleOutX $effeckt-list-item-transition-duration*5 both $effeckt-list-item-transition-duration,
-    closeSpace $effeckt-list-item-transition-duration*2 ease forwards $effeckt-list-item-transition-duration*3);
+    closeSpace $effeckt-list-item-transition-duration*2 ease forwards $effeckt-list-item-transition-duration*3;
 }
-@include keyframes(WobbleInX) {
+@keyframes WobbleInX {
   0% {
-    @include transform(perspective(250px) rotateX(90deg));
-    @include opacity(0);
+    transform: perspective(250px) rotateX(90deg);
+    opacity: 0;
   }
   40% {
-    @include transform(perspective(250px) rotateX(-10deg));
+    transform: perspective(250px) rotateX(-10deg);
   }
   70% {
-    @include transform(perspective(250px) rotateX(10deg));
+    transform: perspective(250px) rotateX(10deg);
   }
   100% {
-    @include transform(perspective(250px) rotateX(0deg));
-    @include opacity(1);
+    transform: perspective(250px) rotateX(0deg);
+    opacity: 1;
   }
 }
-@include keyframes(WobbleOutX) {
+@keyframes WobbleOutX {
   0% {
-    @include transform(perspective(250px) rotateX(0deg));
-    @include opacity(1);
+    transform: perspective(250px) rotateX(0deg);
+    opacity: 1;
   }
   100% {
-    @include transform(perspective(250px) rotateX(90deg));
-    @include opacity(0);
+    transform: perspective(250px) rotateX(90deg);
+    opacity: 0;
   }
 }
 
 
 // Flip in
 .effeckt-list[data-type='flip-in'] .new-item {
-  @include backface-visibility(visible);
-  @include transform-origin(top left);
-  @include animation(
+  backface-visibility: visible;
+  transform-origin: top left;
+  animation:
     FlipIn $effeckt-list-item-transition-duration*5 both $effeckt-list-item-transition-duration,
-    openSpace $effeckt-list-item-transition-duration ease forwards);
+    openSpace $effeckt-list-item-transition-duration ease forwards;
 }
 .effeckt-list[data-type='flip-in'] .remove-item {
-  @include backface-visibility(visible);
-  @include transform-origin(top left);
-  @include animation(
+  backface-visibility: visible;
+  transform-origin: top left;
+  animation:
     FlipOut $effeckt-list-item-transition-duration*5 both $effeckt-list-item-transition-duration,
-    closeSpace $effeckt-list-item-transition-duration*2 ease forwards $effeckt-list-item-transition-duration*2);
+    closeSpace $effeckt-list-item-transition-duration*2 ease forwards $effeckt-list-item-transition-duration*2;
 }
-@include keyframes(FlipIn) {
+@keyframes FlipIn {
   0% {
-    @include transform(perspective(300px) rotateX(90deg));
-    @include opacity(0);
+    transform: perspective(300px) rotateX(90deg);
+    opacity: 0;
   }
   100% {
-    @include transform(perspective(300px) rotateX(0deg));
-    @include opacity(1);
+    transform: perspective(300px) rotateX(0deg);
+    opacity: 1;
   }
 }
-@include keyframes(FlipOut) {
+@keyframes FlipOut {
   0% {
-    @include transform(perspective(400px) rotateX(0deg));
-    @include opacity(1);
+    transform: perspective(400px) rotateX(0deg);
+    opacity: 1;
   }
   100% {
-    @include transform(perspective(400px) rotateX(90deg));
-    @include opacity(0);
+    transform: perspective(400px) rotateX(90deg);
+    opacity: 0;
   }
 }

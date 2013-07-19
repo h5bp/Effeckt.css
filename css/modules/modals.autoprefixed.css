@@ -1,0 +1,881 @@
+.md-perspective,
+.md-perspective body {
+  height: 100%;
+  overflow: hidden;
+}
+
+.md-perspective body {
+  -webkit-perspective: 600px;
+  -ms-perspective: 600px;
+  -o-perspective: 600px;
+  perspective: 600px;
+}
+
+.effeckt-modal-wrap {
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  max-width: 320px;
+  min-width: 630px;
+  z-index: 2000;
+  display: none;
+}
+
+.effeckt-modal {
+  visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.effeckt-show .effeckt-modal {
+  visibility: visible;
+}
+
+.effeckt-overlay.effeckt-show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.effeckt-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+}
+
+/*
+  Individual modal styles with animations/transitions
+*/
+
+/* Effect 1: From Above */
+
+.md-effect-1 .effeckt-modal {
+  -webkit-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  -o-transform: scale(0.5);
+  transform: scale(0.5);
+  opacity: 0;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+}
+
+.effeckt-show.md-effect-1 .effeckt-modal {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Effect 5: From below*/
+
+.md-effect-5 .effeckt-modal {
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  transform: scale(1.5);
+  opacity: 0;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+}
+
+.effeckt-show.md-effect-5 .effeckt-modal {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Effect 2: Slide from the right */
+
+.md-effect-2 .effeckt-modal {
+  -webkit-transform: translateX(30%);
+  -ms-transform: translateX(30%);
+  -o-transform: translateX(30%);
+  transform: translateX(30%);
+  opacity: 0;
+  -webkit-transition: 500ms cubic-bezier(0.25, 0.5, 0.5, 0.9);
+  -o-transition: 500ms cubic-bezier(0.25, 0.5, 0.5, 0.9);
+  transition: 500ms cubic-bezier(0.25, 0.5, 0.5, 0.9);
+}
+
+.effeckt-show.md-effect-2 .effeckt-modal {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Effect 3: Slide from the bottom */
+
+.md-effect-3 .effeckt-modal {
+  -webkit-transform: translateY(30%);
+  -ms-transform: translateY(30%);
+  -o-transform: translateY(30%);
+  transform: translateY(30%);
+  opacity: 0;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+}
+
+.effeckt-show.md-effect-3 .effeckt-modal {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Effect 4: Newspaper */
+
+.md-effect-4 .effeckt-modal {
+  -webkit-transform: scale(0.5) rotate(720deg);
+  -ms-transform: scale(0.5) rotate(720deg);
+  -o-transform: scale(0.5) rotate(720deg);
+  transform: scale(0.5) rotate(720deg);
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.effeckt-show.md-effect-4 .effeckt-modal {
+  -webkit-transform: scale(1) rotate(0deg);
+  -ms-transform: scale(1) rotate(0deg);
+  -o-transform: scale(1) rotate(0deg);
+  transform: scale(1) rotate(0deg);
+  opacity: 1;
+}
+
+/* Effect 6: side fall */
+
+.md-effect-6.effeckt-modal-wrap {
+  -webkit-perspective: 1300px;
+  -ms-perspective: 1300px;
+  -o-perspective: 1300px;
+  perspective: 1300px;
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.md-effect-6 .effeckt-modal {
+  -webkit-transform: translateZ(600px) translateX(30%) rotate(10deg);
+  -ms-transform: translateZ(600px) translateX(30%) rotate(10deg);
+  -o-transform: translateZ(600px) translateX(30%) rotate(10deg);
+  transform: translateZ(600px) translateX(30%) rotate(10deg);
+  opacity: 0;
+}
+
+.effeckt-show.md-effect-6 .effeckt-modal {
+  -webkit-transition: 500ms ease-in;
+  -o-transition: 500ms ease-in;
+  transition: 500ms ease-in;
+  -webkit-transform: translateZ(0) translateX(0) rotate(0deg);
+  -ms-transform: translateZ(0) translateX(0) rotate(0deg);
+  -o-transform: translateZ(0) translateX(0) rotate(0deg);
+  transform: translateZ(0) translateX(0) rotate(0deg);
+  opacity: 1;
+}
+
+.effeckt-hide.md-effect-6 .effeckt-modal {
+  -webkit-transition: all 500ms ease-out;
+  -o-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
+  opacity: 0;
+}
+
+/* Effect 7:  slide and stick to top */
+
+.md-effect-7 {
+  top: 0;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.md-effect-7 .effeckt-modal {
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+  opacity: 0;
+}
+
+.effeckt-show.md-effect-7 .effeckt-modal {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Effect 8: 3D flip horizontal */
+
+.md-effect-8 {
+  -webkit-perspective: 1300px;
+  -ms-perspective: 1300px;
+  -o-perspective: 1300px;
+  perspective: 1300px;
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.md-effect-8 .effeckt-modal {
+  -webkit-transform: rotateY(-70deg);
+  -ms-transform: rotateY(-70deg);
+  -o-transform: rotateY(-70deg);
+  transform: rotateY(-70deg);
+  -webkit-transition: all 500ms;
+  -o-transition: all 500ms;
+  transition: all 500ms;
+  opacity: 0;
+}
+
+.effeckt-show.md-effect-8 .effeckt-modal {
+  -webkit-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  opacity: 1;
+}
+
+/* Effect 9: 3D flip vertical */
+
+.md-effect-9 {
+  -webkit-perspective: 1300px;
+  -ms-perspective: 1300px;
+  -o-perspective: 1300px;
+  perspective: 1300px;
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.md-effect-9 .effeckt-modal {
+  -webkit-transform: rotateX(-70deg);
+  -ms-transform: rotateX(-70deg);
+  -o-transform: rotateX(-70deg);
+  transform: rotateX(-70deg);
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+  opacity: 0;
+}
+
+.effeckt-show.md-effect-9 .effeckt-modal {
+  -webkit-transform: rotateX(0deg);
+  -ms-transform: rotateX(0deg);
+  -o-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  opacity: 1;
+}
+
+/* Effect 10: 3D sign */
+
+.md-effect-10 {
+  -webkit-perspective: 1300px;
+  -ms-perspective: 1300px;
+  -o-perspective: 1300px;
+  perspective: 1300px;
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.md-effect-10 .effeckt-modal {
+  -webkit-transform: rotateX(-60deg);
+  -ms-transform: rotateX(-60deg);
+  -o-transform: rotateX(-60deg);
+  transform: rotateX(-60deg);
+  -webkit-transform-origin: 50% 0;
+  -ms-transform-origin: 50% 0;
+  -o-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  opacity: 0;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+}
+
+.effeckt-show.md-effect-10 .effeckt-modal {
+  -webkit-transform: rotateX(0deg);
+  -ms-transform: rotateX(0deg);
+  -o-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  opacity: 1;
+}
+
+/* Effect 12:  Just me */
+
+.md-effect-12 .effeckt-modal {
+  opacity: 0;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+}
+
+.effeckt-show.md-effect-12 .effeckt-modal {
+  opacity: 1;
+  background: #555;
+}
+
+.effeckt-show.md-effect-12 ~ .effeckt-overlay {
+  background: #555;
+}
+
+.md-effect-12,
+.md-effect-12 h3 {
+  background: transparent;
+}
+
+/* Effect 13: 3D slit */
+
+.md-effect-13 {
+  -webkit-perspective: 1300px;
+  -ms-perspective: 1300px;
+  -o-perspective: 1300px;
+  perspective: 1300px;
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.md-effect-13 .effeckt-modal {
+  -webkit-transform: translateZ(-3000px) rotateY(90deg);
+  -ms-transform: translateZ(-3000px) rotateY(90deg);
+  -o-transform: translateZ(-3000px) rotateY(90deg);
+  transform: translateZ(-3000px) rotateY(90deg);
+  opacity: 0;
+}
+
+.effeckt-show.md-effect-13 .effeckt-modal {
+  -webkit-animation: slit 0.7s forwards ease-out;
+  -o-animation: slit 0.7s forwards ease-out;
+  animation: slit 0.7s forwards ease-out;
+}
+
+.effeckt-hide.md-effect-13 .effeckt-modal {
+  opacity: 0;
+  -webkit-transition: all 500ms;
+  -o-transition: all 500ms;
+  transition: all 500ms;
+}
+
+@-webkit-keyframes slit {
+  50% {
+    -webkit-transform: translateZ(-250px) rotateY(89deg);
+    transform: translateZ(-250px) rotateY(89deg);
+    opacity: 1;
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  100% {
+    -webkit-transform: translateZ(0) rotateY(0deg);
+    transform: translateZ(0) rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+@-o-keyframes slit {
+  50% {
+    -o-transform: translateZ(-250px) rotateY(89deg);
+    transform: translateZ(-250px) rotateY(89deg);
+    opacity: 1;
+    -o-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  100% {
+    -o-transform: translateZ(0) rotateY(0deg);
+    transform: translateZ(0) rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes slit {
+  50% {
+    -webkit-transform: translateZ(-250px) rotateY(89deg);
+    -ms-transform: translateZ(-250px) rotateY(89deg);
+    -o-transform: translateZ(-250px) rotateY(89deg);
+    transform: translateZ(-250px) rotateY(89deg);
+    opacity: 1;
+    -webkit-animation-timing-function: ease-in;
+    -o-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  100% {
+    -webkit-transform: translateZ(0) rotateY(0deg);
+    -ms-transform: translateZ(0) rotateY(0deg);
+    -o-transform: translateZ(0) rotateY(0deg);
+    transform: translateZ(0) rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+/* Effect 14:  3D Rotate from bottom */
+
+.md-effect-14 {
+  -webkit-perspective: 1300px;
+  -ms-perspective: 1300px;
+  -o-perspective: 1300px;
+  perspective: 1300px;
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.md-effect-14 .effeckt-modal {
+  -webkit-transform: translateY(100%) rotateX(90deg);
+  -ms-transform: translateY(100%) rotateX(90deg);
+  -o-transform: translateY(100%) rotateX(90deg);
+  transform: translateY(100%) rotateX(90deg);
+  -webkit-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  -o-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  opacity: 0;
+  -webkit-transition: all 500ms ease-out;
+  -o-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
+}
+
+.effeckt-show.md-effect-14 .effeckt-modal {
+  -webkit-transform: translateY(0%) rotateX(0deg);
+  -ms-transform: translateY(0%) rotateX(0deg);
+  -o-transform: translateY(0%) rotateX(0deg);
+  transform: translateY(0%) rotateX(0deg);
+  opacity: 1;
+}
+
+/* Effect 15:  3D Rotate in from left */
+
+.md-effect-15 {
+  -webkit-perspective: 1300px;
+  -ms-perspective: 1300px;
+  -o-perspective: 1300px;
+  perspective: 1300px;
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.md-effect-15 .effeckt-modal {
+  -webkit-transform: translateZ(100px) translateX(-30%) rotateY(90deg);
+  -ms-transform: translateZ(100px) translateX(-30%) rotateY(90deg);
+  -o-transform: translateZ(100px) translateX(-30%) rotateY(90deg);
+  transform: translateZ(100px) translateX(-30%) rotateY(90deg);
+  -webkit-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  -o-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  opacity: 0;
+  -webkit-transition: all 500ms;
+  -o-transition: all 500ms;
+  transition: all 500ms;
+}
+
+.effeckt-show.md-effect-15 .effeckt-modal {
+  -webkit-transform: translateZ(0px) translateX(0%) rotateY(0deg);
+  -ms-transform: translateZ(0px) translateX(0%) rotateY(0deg);
+  -o-transform: translateZ(0px) translateX(0%) rotateY(0deg);
+  transform: translateZ(0px) translateX(0%) rotateY(0deg);
+  opacity: 1;
+}
+
+/* Effect 16:  Blur */
+
+.effeckt-show.md-effect-16 ~ .md-overlay {
+  background: rgba(180, 46, 32, 0.5);
+}
+
+.effeckt-show.md-effect-16 ~ .page-wrap {
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+}
+
+.md-effect-16 .effeckt-modal {
+  opacity: 0;
+}
+
+.effeckt-show.md-effect-16 ~ .page-wrap,
+.md-effect-16 .effeckt-modal {
+  -webkit-transition: all 500ms;
+  -o-transition: all 500ms;
+  transition: all 500ms;
+}
+
+.effeckt-show.md-effect-16 .effeckt-modal {
+  opacity: 1;
+}
+
+/* Effect 17:  Slide in from bottom with perspective on container */
+
+.effeckt-show.md-effect-17 ~ .page-wrap {
+  height: 100%;
+  overflow: hidden;
+  -webkit-transition: -webkit-transform 500ms;
+  -o-transition: -o-transform 500ms;
+  transition: -ms-transform 500ms;
+  transition: transform 500ms;
+}
+
+.effeckt-show.md-effect-17 ~ .page-wrap,
+.effeckt-show.md-effect-17 ~ .effeckt-overlay {
+  -webkit-transform: rotateX(-2deg);
+  -ms-transform: rotateX(-2deg);
+  -o-transform: rotateX(-2deg);
+  transform: rotateX(-2deg);
+  -webkit-transform-origin: 50% 0%;
+  -ms-transform-origin: 50% 0%;
+  -o-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.md-effect-17 .effeckt-modal {
+  opacity: 0;
+  -webkit-transform: translateY(200%);
+  -ms-transform: translateY(200%);
+  -o-transform: translateY(200%);
+  transform: translateY(200%);
+}
+
+.effeckt-show.md-effect-17 .effeckt-modal {
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  opacity: 1;
+  -webkit-transition: all 500ms 0.2s;
+  -o-transition: all 500ms 0.2s;
+  transition: all 500ms 0.2s;
+}
+
+.effeckt-hide.md-effect-17 .effeckt-modal {
+  opacity: 0;
+  -webkit-transition: all 500ms 0.2s;
+  -o-transition: all 500ms 0.2s;
+  transition: all 500ms 0.2s;
+}
+
+/* Effect 18:  Slide from right with perspective on container */
+
+.effeckt-show.md-effect-18 ~ .page-wrap {
+  height: 100%;
+  overflow: hidden;
+}
+
+.effeckt-show.md-effect-18 ~ .effeckt-overlay {
+  background: rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.effeckt-show.md-effect-18 ~ .page-wrap,
+.effeckt-show.md-effect-18 ~ .effeckt-overlay {
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform-origin: 0% 50%;
+  -ms-transform-origin: 0% 50%;
+  -o-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+  -webkit-animation: rotateRightSideFirst 0.5s forwards ease-in;
+  -o-animation: rotateRightSideFirst 0.5s forwards ease-in;
+  animation: rotateRightSideFirst 0.5s forwards ease-in;
+}
+
+@-webkit-keyframes rotateRightSideFirst {
+  50% {
+    -webkit-transform: translateZ(-50px) rotateY(5deg);
+    transform: translateZ(-50px) rotateY(5deg);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  100% {
+    -webkit-transform: translateZ(-200px);
+    transform: translateZ(-200px);
+  }
+}
+
+@-o-keyframes rotateRightSideFirst {
+  50% {
+    -o-transform: translateZ(-50px) rotateY(5deg);
+    transform: translateZ(-50px) rotateY(5deg);
+    -o-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  100% {
+    -o-transform: translateZ(-200px);
+    transform: translateZ(-200px);
+  }
+}
+
+@keyframes rotateRightSideFirst {
+  50% {
+    -webkit-transform: translateZ(-50px) rotateY(5deg);
+    -ms-transform: translateZ(-50px) rotateY(5deg);
+    -o-transform: translateZ(-50px) rotateY(5deg);
+    transform: translateZ(-50px) rotateY(5deg);
+    -webkit-animation-timing-function: ease-out;
+    -o-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  100% {
+    -webkit-transform: translateZ(-200px);
+    -ms-transform: translateZ(-200px);
+    -o-transform: translateZ(-200px);
+    transform: translateZ(-200px);
+  }
+}
+
+.md-effect-18 .effeckt-modal {
+  -webkit-transform: translateX(200%);
+  -ms-transform: translateX(200%);
+  -o-transform: translateX(200%);
+  transform: translateX(200%);
+  opacity: 0;
+}
+
+.effeckt-show.md-effect-18 .effeckt-modal {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  opacity: 1;
+  -webkit-transition: all 0.5s 0.1s;
+  -o-transition: all 0.5s 0.1s;
+  transition: all 0.5s 0.1s;
+}
+
+.effeckt-hide.md-effect-18 .effeckt-modal {
+  opacity: 0;
+  -webkit-transition: all 0.5s 0.1s;
+  -o-transition: all 0.5s 0.1s;
+  transition: all 0.5s 0.1s;
+}
+
+/* Effect 19:  Slip in from the top with perspective on container */
+
+.effeckt-show.md-effect-19 ~ .page-wrap {
+  height: 100%;
+  overflow: hidden;
+}
+
+.effeckt-show.md-effect-19 ~ .effeckt-overlay {
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+}
+
+.effeckt-show.md-effect-19 ~ .page-wrap,
+.effeckt-show.md-effect-19 ~ .effeckt-overlay {
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  -o-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-animation: OpenTop 500ms forwards ease-in;
+  -o-animation: OpenTop 500ms forwards ease-in;
+  animation: OpenTop 500ms forwards ease-in;
+}
+
+@-webkit-keyframes OpenTop {
+  50% {
+    -webkit-transform: rotateX(10deg);
+    transform: rotateX(10deg);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+
+@-o-keyframes OpenTop {
+  50% {
+    -o-transform: rotateX(10deg);
+    transform: rotateX(10deg);
+    -o-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes OpenTop {
+  50% {
+    -webkit-transform: rotateX(10deg);
+    -ms-transform: rotateX(10deg);
+    -o-transform: rotateX(10deg);
+    transform: rotateX(10deg);
+    -webkit-animation-timing-function: ease-out;
+    -o-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+
+.md-effect-19 .effeckt-modal {
+  -webkit-transform: translateY(-200%);
+  -ms-transform: translateY(-200%);
+  -o-transform: translateY(-200%);
+  transform: translateY(-200%);
+  opacity: 0;
+}
+
+.effeckt-show.md-effect-19 .effeckt-modal {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+  -webkit-transition: all 500ms 100ms;
+  -o-transition: all 500ms 100ms;
+  transition: all 500ms 100ms;
+}
+
+.effeckt-hide.md-effect-19 .effeckt-modal {
+  opacity: 0;
+  -webkit-transition: all 500ms 100ms;
+  -o-transition: all 500ms 100ms;
+  transition: all 500ms 100ms;
+}
+
+/* Effect 20: From the top to bottom with left tilt on the way out */
+
+.md-effect-20 {
+  -webkit-transition: 500ms ease-in-out;
+  -o-transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out;
+  -webkit-transform: -50% -50%;
+  -ms-transform: -50% -50%;
+  -o-transform: -50% -50%;
+  transform: -50% -50%;
+  top: -100%;
+  opacity: 0;
+}
+
+.effeckt-show.md-effect-20 {
+  top: 50%;
+  opacity: 1;
+}
+
+.effeckt-hide.md-effect-20 {
+  top: 100%;
+  -webkit-transform: translateX(-50%) rotate(-29deg);
+  -ms-transform: translateX(-50%) rotate(-29deg);
+  -o-transform: translateX(-50%) rotate(-29deg);
+  transform: translateX(-50%) rotate(-29deg);
+  opacity: 0;
+}
+
+/* Effect 22: From the top to bottom */
+
+.md-effect-22 {
+  -webkit-transition: 500ms ease-in-out;
+  -o-transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out;
+  -webkit-transform: -50% -50%;
+  -ms-transform: -50% -50%;
+  -o-transform: -50% -50%;
+  transform: -50% -50%;
+  top: -100%;
+  opacity: 0;
+}
+
+.effeckt-show.md-effect-22 {
+  top: 50%;
+  opacity: 1;
+}
+
+.effeckt-hide.md-effect-22 {
+  top: 100%;
+  opacity: 0;
+}
+
+/* Effect 23: From the bottom to bottom */
+
+.md-effect-23 {
+  -webkit-transition: 500ms ease-in-out;
+  -o-transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out;
+  -webkit-transform: -50% -50%;
+  -ms-transform: -50% -50%;
+  -o-transform: -50% -50%;
+  transform: -50% -50%;
+  top: 100%;
+  opacity: 0;
+}
+
+.effeckt-show.md-effect-23 {
+  top: 50%;
+  opacity: 1;
+}
+
+.effeckt-hide.md-effect-23 {
+  top: 100%;
+  opacity: 0;
+}
+
+/* Effect 24: From the top to top */
+
+.md-effect-24 {
+  -webkit-transition: 500ms ease-in-out;
+  -o-transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out;
+  -webkit-transform: -50% -50%;
+  -ms-transform: -50% -50%;
+  -o-transform: -50% -50%;
+  transform: -50% -50%;
+  top: -100%;
+  opacity: 0;
+}
+
+.effeckt-show.md-effect-24 {
+  top: 50%;
+  opacity: 1;
+}
+
+.effeckt-hide.md-effect-24 {
+  top: -100%;
+  opacity: 0;
+}
