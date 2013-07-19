@@ -1,11 +1,11 @@
 Effeckt.css
 ===========
 
-**UI-Less &amp; Performant Transitions &amp; Animations**
+**Performant Transitions &amp; Animations**
 
 Ever notice how small flourishes and subtle transitions dramatically increases the value of the experience you enjoy with an app or site?
 
-Designing and developing UIs for the mobile web is tricky, but it's extremely difficult to do that while delivering something that performs at 60fps. The best opportunities to getting jank-free transitions on phones/tablets are css transition and keyframe animation based, especially tapping into hardware-accelerated transforms and opacity changes.
+Designing and developing UIs for the mobile web is tricky, but it's extremely difficult to do that while delivering something that performs at 60fps. The best opportunities to getting jank-free transitions on phones/tablets are CSS transition and keyframe animation based, especially tapping into hardware-accelerated transforms and opacity changes.
 
 @daneden did really nice work with [Animate.css](http://daneden.me/animate/) but I think the web would benefit if we could take that work to the next level. There's already been fantastic experiments and demos exploring CSS-based transitions, but it's distributed all over.
 
@@ -31,7 +31,8 @@ Please keep your commits targeted in a logical fashion in order to keep code rev
 General CSS style guide:
 
 - Two spaces
-- Prefix classes with `effeckt-`
+- Prefix classes/variables with `effeckt-`
+- Data attributes can be `data-effeckt` or prefixed with that
 
 
 ### Tech
@@ -42,7 +43,7 @@ General CSS style guide:
   1. Grunt will process .scss on file saves
   1. Grunt will run [autoprefixer](https://github.com/ai/autoprefixer)
   1. Grunt will [LiveReload](http://livereload.com/) the browser (style injection, you'll need the [browser extensions](http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-))
-- The demo page will use [jQuery](http://jquery.com/) to manipulate classes, but ultimately the styles are just CSS
+- [jQuery](http://jquery.com/) manipulates the classes used for the effects.
 
 You'll have to:
 
@@ -50,7 +51,6 @@ You'll have to:
 1. Run `npm install`
 1. Make sure you have the Grunt command-line interface with `npm install -g grunt-cli`
 1. Run `grunt dev` to start watching for file saves & run a local web server at port 8000 ([localhost:8000](http://localhost:8000/)).
-1. Probably make a local development domain, because the plan is to `$.load` in the different individual modules, so each module can be it's own .html file, and that won't work at a file:// URL.
 
 
 ### Examples To Add
@@ -82,19 +82,19 @@ Because there are so many, I expect we could **group things by role**:
 
 This library/framework would come with some **goals**:
 
-1. It provides no UI of it's own. It's only hooks for transitions.
+1. It provides very little UI. It's only hooks for transitions/animations.
 1. Designer-curated set of classy and reasonable effects. (no [`easeInBounce`](http://easings.net/#easeInBounce))
-1. Establish browser support guidelines (I expect Android 2.3 would gracefully degrade)
+1. Establish browser support guidelines (e.g. Android 2.3 would gracefully degrade)
 1. CSS performance regression testing (a la [bench.topcoat.io](http://bench.topcoat.io))
 1. Deliver jank-free *60fps* performance on target browsers/devices
 1. If a particular effect cannot deliver target performance (hey `blur()` css filter), it cannot be included.
 1. Guidelines on what to avoid when styling these affected elements (avoid expensive CSS)
 1. Deliver a builder so users can pull only the CSS they need.
-1. There is no hover on the mobile web, so any hover-based effects would be excluded.
+1. There is no hover on the mobile web, so any hover-based effects would be excluded or have a tap-based equivalent.
 
 
 ## Action
 
-* If you know other transition/keyframe animation based demos/experiments that make senes to include here, file a ticket.
-* If you're interested in helping to define the API let's hear it, comment on that ticket
-* A web-based builder is a must. A cmd-line builder isn't important for this, I'd say.
+* If you know other transition/animation based demos/experiments that make sense to include here, file a ticket.
+* If you're interested in helping to define the API, let's hear it! File a ticket.
+* A web-based builder is a must. A command-line builder isn't important for this.
