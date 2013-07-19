@@ -4,6 +4,17 @@
   padding: 0;
   box-sizing: border-box; }
 
+.warning {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.5rem;
+  background: linear-gradient(#fff94d, #ddd610);
+  opacity: 0.95;
+  text-align: center;
+  z-index: 1000; }
+
 .no-transitions, .no-transitions * {
   transition: none !important; }
 
@@ -111,11 +122,16 @@ h3 {
 h4 {
   margin: 0 0 0.5rem 0; }
 
-p {
+p, ul, ol, blockquote, pre {
   margin: 0 0 1rem 0; }
 
 button {
   padding: 0.25rem; }
+
+hr {
+  height: 0;
+  border: 0;
+  border-top: 1px solid #ccc; }
 
 h1 span:nth-of-type(1) {
   animation: logo-from-horz 0.5s ease forwards;
@@ -193,6 +209,17 @@ h1 span:nth-of-type(11) {
     margin-left: 35px; }
   .contributors hr {
     margin: 15px 0; }
+
+.fluid-video {
+  height: 0;
+  padding-top: 62.5%;
+  position: relative; }
+  .fluid-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
 
 .button-demo-wrap {
   width: 35%;
