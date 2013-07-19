@@ -1,8 +1,6 @@
 .effeckt-caption {
   position: relative;
-  width: 48%;
   float: left;
-  margin: 0 4% 1rem 0;
   overflow: hidden;
 }
 
@@ -11,30 +9,17 @@
 }
 
 .effeckt-caption img {
-  width: 100%;
-  display: block;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
 }
 
 .effeckt-caption figcaption {
   position: absolute;
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
   width: 100%;
-  padding: 1rem;
-}
-
-.effeckt-caption figcaption h3 {
-  font-size: 1.2rem;
-}
-
-.effeckt-caption figcaption p {
-  margin: 0;
 }
 
 .effeckt-caption-1 figcaption {
@@ -72,6 +57,9 @@
   left: 0;
   width: 100%;
   height: 100%;
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
   z-index: 0;
 }
 
@@ -169,12 +157,13 @@
   -o-transform: translateX(-100%);
   transform: translateX(-100%);
   opacity: 0;
+  z-index: 2;
 }
 
 .effeckt-caption-7 .effeckt-figcaption-wrap {
-  -webkit-transition: 0.5s 0.25s;
-  -o-transition: 0.5s 0.25s;
-  transition: 0.5s 0.25s;
+  -webkit-transition: 500ms 250ms;
+  -o-transition: 500ms 250ms;
+  transition: 500ms 250ms;
   -webkit-transform: translateX(200%);
   -ms-transform: translateX(200%);
   -o-transform: translateX(200%);
@@ -210,9 +199,9 @@
 }
 
 .effeckt-caption-8 img {
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
   -o-transform: translateX(0);
@@ -243,14 +232,14 @@
   -ms-transform: scale(2);
   -o-transform: scale(2);
   transform: scale(2);
-  opacity: 0;
   text-align: center;
+  opacity: 0;
 }
 
 .effeckt-caption-9 img {
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
 }
 
 .effeckt-caption-9:hover figcaption,

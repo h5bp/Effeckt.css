@@ -1,38 +1,17 @@
-.effeckt-page-transition {
-  position: fixed;
-  z-index: 1000;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  visibility: hidden;
-  overflow: hidden;
-  background: #555;
-}
-
-.effeckt-page-transition-content {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  width: 200px;
-  margin: -100px 0 0 -100px;
-  color: white;
-}
-
 .effeckt-page-transition.effeckt-page-transition-animating {
   visibility: visible;
 }
 
 .effeckt-page-transition-left-slide-in {
-  -webkit-animation: slideLeftIn 0.7s forwards ease-out;
-  -o-animation: slideLeftIn 0.7s forwards ease-out;
-  animation: slideLeftIn 0.7s forwards ease-out;
+  -webkit-animation: slideLeftIn 1000ms forwards ease-out;
+  -o-animation: slideLeftIn 1000ms forwards ease-out;
+  animation: slideLeftIn 1000ms forwards ease-out;
 }
 
 .effeckt-page-transition-left-slide-out {
-  -webkit-animation: slideLeftOut 0.7s forwards ease-out;
-  -o-animation: slideLeftOut 0.7s forwards ease-out;
-  animation: slideLeftOut 0.7s forwards ease-out;
+  -webkit-animation: slideLeftOut 1000ms forwards ease-out;
+  -o-animation: slideLeftOut 1000ms forwards ease-out;
+  animation: slideLeftOut 1000ms forwards ease-out;
 }
 
 @-webkit-keyframes slideLeftIn {
@@ -116,15 +95,15 @@
 }
 
 .effeckt-page-transition-right-slide-in {
-  -webkit-animation: slideRightIn 0.7s forwards ease-out;
-  -o-animation: slideRightIn 0.7s forwards ease-out;
-  animation: slideRightIn 0.7s forwards ease-out;
+  -webkit-animation: slideRightIn 1000ms forwards ease-out;
+  -o-animation: slideRightIn 1000ms forwards ease-out;
+  animation: slideRightIn 1000ms forwards ease-out;
 }
 
 .effeckt-page-transition-right-slide-out {
-  -webkit-animation: slideRightOut 0.7s forwards ease-out;
-  -o-animation: slideRightOut 0.7s forwards ease-out;
-  animation: slideRightOut 0.7s forwards ease-out;
+  -webkit-animation: slideRightOut 1000ms forwards ease-out;
+  -o-animation: slideRightOut 1000ms forwards ease-out;
+  animation: slideRightOut 1000ms forwards ease-out;
 }
 
 @-webkit-keyframes slideRightIn {

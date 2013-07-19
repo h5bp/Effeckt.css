@@ -1,12 +1,7 @@
 .effeckt-list-scroll {
   position: relative;
-  width: 230px;
-  height: 480px;
-  margin: 0;
-  padding: 0;
   overflow-x: hidden;
   overflow-y: scroll;
-  list-style: none;
   -webkit-perspective: 400px;
   -ms-perspective: 400px;
   -o-perspective: 400px;
@@ -15,10 +10,6 @@
 
 .effeckt-list-scroll > li {
   position: relative;
-  padding: 0.5rem;
-  background: #eee;
-  color: #252525;
-  font-size: 18px;
   z-index: 2;
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
@@ -26,14 +17,10 @@
   transform: translateZ(0);
 }
 
-.effeckt-list-scroll > li:nth-child(odd) {
-  background: #e6e6e6;
-}
-
 [data-effeckt="grow"] li {
-  -webkit-transition: all 600ms ease;
-  -o-transition: all 600ms ease;
-  transition: all 600ms ease;
+  -webkit-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
   -webkit-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
   -o-transform-origin: 50% 50%;
@@ -48,7 +35,7 @@
   transform: scale(0.01);
 }
 
-[data-effeckt="curl"] {
+[data-effeckt="curl"] li {
   -webkit-perspective: 600px;
   -ms-perspective: 600px;
   -o-perspective: 600px;
@@ -57,12 +44,9 @@
   -ms-perspective-origin: 0% 50%;
   -o-perspective-origin: 0% 50%;
   perspective-origin: 0% 50%;
-}
-
-[data-effeckt="curl"] li {
-  -webkit-transition: all 600ms ease, opacity 200ms ease;
-  -o-transition: all 600ms ease, opacity 200ms ease;
-  transition: all 600ms ease, opacity 200ms ease;
+  -webkit-transition: all 500ms ease, opacity 166.66667ms ease;
+  -o-transition: all 500ms ease, opacity 166.66667ms ease;
+  transition: all 500ms ease, opacity 166.66667ms ease;
   -webkit-transform-origin: 0% 0%;
   -ms-transform-origin: 0% 0%;
   -o-transform-origin: 0% 0%;
@@ -73,7 +57,14 @@
   backface-visibility: hidden;
 }
 
-[data-effeckt="curl"] li.past,
+[data-effeckt="curl"] li.past {
+  opacity: 0;
+  -webkit-transform: rotateY(90deg);
+  -ms-transform: rotateY(90deg);
+  -o-transform: rotateY(90deg);
+  transform: rotateY(90deg);
+}
+
 [data-effeckt="curl"] li.future {
   opacity: 0;
   -webkit-transform: rotateY(90deg);
@@ -83,12 +74,18 @@
 }
 
 [data-effeckt="wave"] li {
-  -webkit-transition: all 600ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
-  -o-transition: all 600ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
-  transition: all 600ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -webkit-transition: all 500ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -o-transition: all 500ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  transition: all 500ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
 }
 
-[data-effeckt="wave"] li.past,
+[data-effeckt="wave"] li.past {
+  -webkit-transform: translateX(-70%);
+  -ms-transform: translateX(-70%);
+  -o-transform: translateX(-70%);
+  transform: translateX(-70%);
+}
+
 [data-effeckt="wave"] li.future {
   -webkit-transform: translateX(-70%);
   -ms-transform: translateX(-70%);
@@ -97,9 +94,9 @@
 }
 
 [data-effeckt="fan"] li {
-  -webkit-transition: all 600ms cubic-bezier(0.39, 0.575, 0.565, 1);
-  -o-transition: all 600ms cubic-bezier(0.39, 0.575, 0.565, 1);
-  transition: all 600ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  -webkit-transition: all 500ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  -o-transition: all 500ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: all 500ms cubic-bezier(0.39, 0.575, 0.565, 1);
   -webkit-transform-origin: 0% 0%;
   -ms-transform-origin: 0% 0%;
   -o-transform-origin: 0% 0%;
@@ -121,9 +118,9 @@
 }
 
 [data-effeckt="fade"] li {
-  -webkit-transition: opacity .35s ease-in-out;
-  -o-transition: opacity .35s ease-in-out;
-  transition: opacity .35s ease-in-out;
+  -webkit-transition: opacity 250ms ease-in-out;
+  -o-transition: opacity 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out;
 }
 
 [data-effeckt="fade"] li.past,
@@ -143,9 +140,9 @@
 }
 
 [data-effeckt="fly"] li {
-  -webkit-transition: all 600ms ease, opacity 300ms ease;
-  -o-transition: all 600ms ease, opacity 300ms ease;
-  transition: all 600ms ease, opacity 300ms ease;
+  -webkit-transition: all 500ms ease, opacity 250ms ease;
+  -o-transition: all 500ms ease, opacity 250ms ease;
+  transition: all 500ms ease, opacity 250ms ease;
   -webkit-transform-origin: 50% 50% -50px;
   -ms-transform-origin: 50% 50% -50px;
   -o-transform-origin: 50% 50% -50px;

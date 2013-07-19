@@ -36,28 +36,12 @@ var ListItems = {
     var $parent = $(el).parent();
     var type = $parent.find("ul").attr("data-type");
 
-    // Having the timing here in JS is kinda not great.
-    switch (type) {
-      case 'expand-in':
-        delay = 200;
-        break;
-      case 'wobble-in':
-        delay = 1200;
-        break;
-      case 'flip-in':
-        delay = 1000;
-        break;
-      default:
-        delay = 500;
-    }
-
     var elToRemove = $parent.find("li.new-item").last();
+    elToRemove.on(EffecktDemos.animationEndEventName + ' ' + EffecktDemos.transitionEndEventName , function () {
+      elToRemove.remove();
+    });
 
     elToRemove.toggleClass("remove-item new-item");
-    window.setTimeout(function () {
-      elToRemove.remove();
-    }, delay);
-
     if (!$parent.find("li.new-item").length) {
       $parent.find("button.remove").hide();
     }
