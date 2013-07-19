@@ -4,25 +4,42 @@ var EffecktOffScreenNav = {
   closeButton: $("#effeckt-off-screen-nav-close"),
 
   init: function() {
-
+    
     this.bindUIActions();
-
+    
   },
 
   bindUIActions: function() {
 
     $(".off-screen-nav-button, #effeckt-off-screen-nav-close").on("click", function() {
-      var type = $(this).data("effeckt");
-      var threedee = $(this).data("threedee");
-      EffecktOffScreenNav.toggleNav(type, threedee);
+      
+      if (!EffecktOffScreenNav.nav.hasClass("effeckt-off-screen-nav-show")) {
+
+        // an attempt to address issue #108.
+        // don't set 'type' and 'threedee' vars if nav is currently shown;
+        // opening the hidden nav and clicking on other effeckt nav buttons
+        // causes unexpected behavior.
+        
+        // alternatively, we can also prevent (or ignore) clicks (on nav toggles)
+        // from setting 'type' and 'threedee' vars while the nav bar is shown.
+        
+        var type = $(this).data("effeckt");
+        var threedee = $(this).data("threedee");
+
+        EffecktOffScreenNav.show(type, threedee)
+
+      } else {
+
+        EffecktOffScreenNav.hide(type, threedee)
+
+      }
+
     });
 
   },
 
-  toggleNav: function(type, threedee) {
-
-    // Show
-    if (!EffecktOffScreenNav.nav.hasClass("effeckt-off-screen-nav-show")) {
+  // creating seperate show() and hide() methods allows for better modularity
+  show: function(type, threedee) {
 
       EffecktOffScreenNav.nav.addClass(type);
       EffecktOffScreenNav.closeButton.data("effeckt", type);
@@ -30,13 +47,14 @@ var EffecktOffScreenNav = {
       if (threedee) {
         $("html").addClass("md-perspective");
       }
-
+    
       setTimeout(function() {
         EffecktOffScreenNav.nav.addClass("effeckt-off-screen-nav-show");
       }, 500);
 
-    // Hide
-    } else {
+  },
+
+  hide: function(type, threedee) {
 
       EffecktOffScreenNav.nav.removeClass("effeckt-off-screen-nav-show");
 
@@ -51,14 +69,13 @@ var EffecktOffScreenNav = {
         var blah = EffecktOffScreenNav.nav.width();
         EffecktOffScreenNav.nav.show();
 
-        $("html").removeClass("md-perspective");
-
+        if (threedee) {
+          $("html").removeClass("md-perspective");
+        }
+        
       }, 500);
 
     }    
-
-  }
-
 };
 
 EffecktOffScreenNav.init();
