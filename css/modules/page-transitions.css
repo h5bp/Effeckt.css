@@ -4,6 +4,27 @@
 .effeckt-page-transition.effeckt-page-transition-animating {
   visibility: visible; }
 
+.animation-delay-100 {
+  animation-delay: 0.1s; }
+
+.animation-delay-180 {
+  animation-delay: 0.18s; }
+
+.animation-delay-200 {
+  animation-delay: 0.2s; }
+
+.animation-delay-300 {
+  animation-delay: 0.3s; }
+
+.animation-delay-500 {
+  animation-delay: 0.5s; }
+
+.animation-delay-700 {
+  animation-delay: 0.7s; }
+
+.animation-delay-1000 {
+  animation-delay: 1s; }
+
 .effeckt-page-transition-left-slide-in {
   animation: slideLeftIn 0.7s forwards ease-out; }
 
@@ -87,8 +108,16 @@
 .effeckt-page-transition-down-scale-out {
   animation: scaleDown 0.7s ease both; }
 
+.effeckt-page-transition-up-scale-in {
+  animation: scaleUp 0.7s ease both; }
+
 @keyframes scaleDown {
   to {
+    opacity: 0;
+    transform: scale(0.8); } }
+
+@keyframes scaleUp {
+  from {
     opacity: 0;
     transform: scale(0.8); } }
 
@@ -155,3 +184,76 @@
   from {
     opacity: 0.3;
     transform: translateY(100%); } }
+
+.effeckt-page-transition-left-flip-in {
+  transform-origin: 50% 50%;
+  animation: flipInLeft 0.5s both ease-out; }
+
+.effeckt-page-transition-right-flip-out {
+  transform-origin: 50% 50%;
+  animation: flipOutRight 0.5s both ease-in; }
+
+@keyframes flipInLeft {
+  from {
+    opacity: 0.2;
+    transform: translateZ(-1000px) rotateY(-90deg); } }
+
+@keyframes flipOutRight {
+  to {
+    opacity: 0.2;
+    transform: translateZ(-1000px) rotateY(90deg); } }
+
+.effeckt-page-transition-newspaper-out {
+  transform-origin: 50% 50%;
+  animation: rotateOutNewspaper 0.5s both ease-in; }
+
+.effeckt-page-transition-newspaper-in {
+  animation-delay: 0.5s;
+  transform-origin: 50% 50%;
+  animation: rotateInNewspaper 0.5s both ease-out; }
+
+@keyframes rotateOutNewspaper {
+  to {
+    opacity: 1;
+    transform: translateZ(-3000px) rotateZ(360deg); } }
+
+@keyframes rotateInNewspaper {
+  from {
+    opacity: 1;
+    transform: translateZ(-3000px) rotateZ(-360deg); } }
+
+.effeckt-page-transition-left-rotate-push {
+  transform-origin: 0% 50%;
+  animation: rotatePushLeft 0.8s both ease; }
+
+.effeckt-page-transition-right-rotate-push {
+  transform-origin: 100% 50%;
+  animation: rotatePushRight 0.8s both ease; }
+
+.effeckt-page-transition-top-rotate-push {
+  transform-origin: 50% 0%;
+  animation: rotatePushTop 0.8s both ease; }
+
+.effeckt-page-transition-bottom-rotate-push {
+  transform-origin: 50% 100%;
+  animation: rotatePushBottom 0.8s both ease; }
+
+@keyframes rotatePushLeft {
+  to {
+    opacity: 0;
+    transform: rotateY(90deg); } }
+
+@keyframes rotatePushRight {
+  to {
+    opacity: 0;
+    transform: rotateY(-90deg); } }
+
+@keyframes rotatePushTop {
+  to {
+    opacity: 0;
+    transform: rotateX(-90deg); } }
+
+@keyframes rotatePushBottom {
+  to {
+    opacity: 0;
+    transform: rotateX(90deg); } }
