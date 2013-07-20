@@ -26,79 +26,79 @@
   animation-delay: 1s; }
 
 .effeckt-page-transition-left-slide-in {
-  animation: slideLeftIn 0.7s forwards ease-out; }
+  animation: slideInLeft 0.7s forwards ease-out; }
 
 .effeckt-page-transition-left-slide-out {
-  animation: slideLeftOut 0.7s forwards ease-out; }
+  animation: slideOutLeft 0.7s forwards ease-out; }
 
 .effeckt-page-transition-right-slide-in {
-  animation: slideRightIn 0.7s forwards ease-out; }
+  animation: slideInRight 0.7s forwards ease-out; }
 
 .effeckt-page-transition-right-slide-out {
-  animation: slideRightOut 0.7s forwards ease-out; }
+  animation: slideOutRight 0.7s forwards ease-out; }
 
 .effeckt-page-transition-top-slide-in {
-  animation: slideTopIn 0.7s forwards ease-out; }
+  animation: slideInTop 0.7s forwards ease-out; }
 
 .effeckt-page-transition-top-slide-out {
-  animation: slideTopOut 0.7s forwards ease-out; }
+  animation: slideOutTop 0.7s forwards ease-out; }
 
 .effeckt-page-transition-bottom-slide-in {
-  animation: slideBottomIn 0.7s forwards ease-out; }
+  animation: slideInBottom 0.7s forwards ease-out; }
 
 .effeckt-page-transition-bottom-slide-out {
-  animation: slideBottomOut 0.7s forwards ease-out; }
+  animation: slideOutBottom 0.7s forwards ease-out; }
 
-@keyframes slideLeftIn {
+@keyframes slideInLeft {
   0% {
     transform: translateX(100%); }
 
   100% {
     transform: translateX(0); } }
 
-@keyframes slideLeftOut {
+@keyframes slideOutLeft {
   0% {
     transform: translateX(0%); }
 
   100% {
     transform: translateX(-100%); } }
 
-@keyframes slideRightIn {
+@keyframes slideInRight {
   0% {
     transform: translateX(-100%); }
 
   100% {
     transform: translateX(0); } }
 
-@keyframes slideRightOut {
+@keyframes slideOutRight {
   0% {
     transform: translateX(0); }
 
   100% {
     transform: translateX(100%); } }
 
-@keyframes slideTopIn {
+@keyframes slideInTop {
   0% {
     transform: translateY(-100%); }
 
   100% {
     transform: translateY(0); } }
 
-@keyframes slideTopOut {
+@keyframes slideOutTop {
   0% {
     transform: translateY(0); }
 
   100% {
     transform: translateY(100%); } }
 
-@keyframes slideBottomIn {
+@keyframes slideInBottom {
   0% {
     transform: translateY(100%); }
 
   100% {
     transform: translateY(0); } }
 
-@keyframes slideBottomOut {
+@keyframes slideOutBottom {
   0% {
     transform: translateY(0); }
 
@@ -257,3 +257,75 @@
   to {
     opacity: 0;
     transform: rotateX(90deg); } }
+
+.effeckt-page-transition-left-rotate-pull {
+  transform-origin: 0% 50%;
+  animation: rotatePullLeft 0.5s both ease; }
+
+.effeckt-page-transition-right-rotate-pull {
+  transform-origin: 100% 50%;
+  animation: rotatePullRight 0.5s both ease; }
+
+.effeckt-page-transition-top-rotate-pull {
+  transform-origin: 50% 0%;
+  animation: rotatePullTop 0.5s both ease; }
+
+.effeckt-page-transition-bottom-rotate-pull {
+  transform-origin: 50% 100%;
+  animation: rotatePullBottom 0.5s both ease; }
+
+@keyframes rotatePullLeft {
+  from {
+    opacity: 0;
+    transform: rotateY(90deg); } }
+
+@keyframes rotatePullRight {
+  from {
+    opacity: 0;
+    transform: rotateY(-90deg); } }
+
+@keyframes rotatePullTop {
+  from {
+    opacity: 0;
+    transform: rotateX(-90deg); } }
+
+@keyframes rotatePullBottom {
+  from {
+    opacity: 0;
+    transform: rotateX(90deg); } }
+
+.effeckt-page-transition-left-rotate-fold {
+  transform-origin: 100% 50%;
+  animation: rotateFoldLeft 0.7s both ease; }
+
+.effeckt-page-transition-right-rotate-fold {
+  transform-origin: 0% 50%;
+  animation: rotateFoldRight 0.7s both ease; }
+
+.effeckt-page-transition-top-rotate-fold {
+  transform-origin: 50% 100%;
+  animation: rotateFoldTop 0.7s both ease; }
+
+.effeckt-page-transition-bottom-rotate-fold {
+  transform-origin: 50% 0%;
+  animation: rotateFoldBottom 0.7s both ease; }
+
+@keyframes rotateFoldLeft {
+  to {
+    opacity: 0;
+    transform: translateX(-100%) rotateY(-90deg); } }
+
+@keyframes rotateFoldRight {
+  to {
+    opacity: 0;
+    transform: translateX(100%) rotateY(90deg); } }
+
+@keyframes rotateFoldTop {
+  to {
+    opacity: 0;
+    transform: translateY(-100%) rotateX(90deg); } }
+
+@keyframes rotateFoldBottom {
+  to {
+    opacity: 0;
+    transform: translateY(100%) rotateX(-90deg); } }

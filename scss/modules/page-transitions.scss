@@ -104,38 +104,38 @@
 
 // Slide
 .effeckt-page-transition-left-slide-in {
-  @include global-transition(slideLeftIn, 0.7s, forwards, ease-out);
+  @include global-transition(slideInLeft, 0.7s, forwards, ease-out);
 }
 .effeckt-page-transition-left-slide-out {
-  @include global-transition(slideLeftOut, 0.7s, forwards, ease-out);
+  @include global-transition(slideOutLeft, 0.7s, forwards, ease-out);
 }
 .effeckt-page-transition-right-slide-in {
-  @include global-transition(slideRightIn, 0.7s, forwards, ease-out);
+  @include global-transition(slideInRight, 0.7s, forwards, ease-out);
 }
 .effeckt-page-transition-right-slide-out {
-  @include global-transition(slideRightOut, 0.7s, forwards, ease-out);
+  @include global-transition(slideOutRight, 0.7s, forwards, ease-out);
 }
 .effeckt-page-transition-top-slide-in {
-  @include global-transition(slideTopIn, 0.7s, forwards, ease-out);
+  @include global-transition(slideInTop, 0.7s, forwards, ease-out);
 }
 .effeckt-page-transition-top-slide-out {
-  @include global-transition(slideTopOut, 0.7s, forwards, ease-out);
+  @include global-transition(slideOutTop, 0.7s, forwards, ease-out);
 }
 .effeckt-page-transition-bottom-slide-in {
-  @include global-transition(slideBottomIn, 0.7s, forwards, ease-out);
+  @include global-transition(slideInBottom, 0.7s, forwards, ease-out);
 }
 .effeckt-page-transition-bottom-slide-out {
-  @include global-transition(slideBottomOut, 0.7s, forwards, ease-out);
+  @include global-transition(slideOutBottom, 0.7s, forwards, ease-out);
 }
 
-@include percent-keyframes(slideLeftIn, translateX, 100%, translateX, 0);
-@include percent-keyframes(slideLeftOut, translateX, 0%, translateX, -100%);
-@include percent-keyframes(slideRightIn, translateX, -100%, translateX, 0);
-@include percent-keyframes(slideRightOut, translateX, 0, translateX, 100%);
-@include percent-keyframes(slideTopIn, translateY, -100%, translateY, 0);
-@include percent-keyframes(slideTopOut, translateY, 0, translateY, 100%);
-@include percent-keyframes(slideBottomIn, translateY, 100%, translateY, 0);
-@include percent-keyframes(slideBottomOut, translateY, 0, translateY, -100%);
+@include percent-keyframes(slideInLeft, translateX, 100%, translateX, 0);
+@include percent-keyframes(slideOutLeft, translateX, 0%, translateX, -100%);
+@include percent-keyframes(slideInRight, translateX, -100%, translateX, 0);
+@include percent-keyframes(slideOutRight, translateX, 0, translateX, 100%);
+@include percent-keyframes(slideInTop, translateY, -100%, translateY, 0);
+@include percent-keyframes(slideOutTop, translateY, 0, translateY, 100%);
+@include percent-keyframes(slideInBottom, translateY, 100%, translateY, 0);
+@include percent-keyframes(slideOutBottom, translateY, 0, translateY, -100%);
 
 // Scale
 .effeckt-page-transition-down-scale-out {
@@ -144,6 +144,7 @@
 .effeckt-page-transition-up-scale-in {
   @include global-transition(scaleUp, 0.7s, ease, both);
 }
+
 @include to-keyframes(scaleDown, 0, scale, .8);
 @include from-keyframes(scaleUp, 0, scale, .8);
 
@@ -228,3 +229,46 @@
 @include to-keyframes(rotatePushRight, 0, rotateY, -90deg);
 @include to-keyframes(rotatePushTop, 0, rotateX, -90deg);
 @include to-keyframes(rotatePushBottom, 0, rotateX, 90deg);
+
+.effeckt-page-transition-left-rotate-pull {
+  @include global-transform-transition(0%, 50%, rotatePullLeft, 0.5s, both, ease);
+}
+
+.effeckt-page-transition-right-rotate-pull {
+  @include global-transform-transition(100%, 50%, rotatePullRight, 0.5s, both, ease);
+}
+
+.effeckt-page-transition-top-rotate-pull {
+  @include global-transform-transition(50%, 0%, rotatePullTop, 0.5s, both, ease);
+}
+
+.effeckt-page-transition-bottom-rotate-pull {
+  @include global-transform-transition(50%, 100%, rotatePullBottom, 0.5s, both, ease);
+}
+
+@include from-keyframes(rotatePullLeft, 0, rotateY, 90deg);
+@include from-keyframes(rotatePullRight, 0, rotateY, -90deg);
+@include from-keyframes(rotatePullTop, 0, rotateX, -90deg);
+@include from-keyframes(rotatePullBottom, 0, rotateX, 90deg);
+
+.effeckt-page-transition-left-rotate-fold {
+  @include global-transform-transition(100%, 50%, rotateFoldLeft, 0.7s, both, ease);
+}
+
+.effeckt-page-transition-right-rotate-fold {
+  @include global-transform-transition(0%, 50%, rotateFoldRight, 0.7s, both, ease);
+}
+
+.effeckt-page-transition-top-rotate-fold {
+  @include global-transform-transition(50%, 100%, rotateFoldTop, 0.7s, both, ease);
+}
+
+.effeckt-page-transition-bottom-rotate-fold {
+  @include global-transform-transition(50%, 0%, rotateFoldBottom, 0.7s, both, ease);
+}
+
+@include to-keyframes2(rotateFoldLeft, 0, translateX, -100%, rotateY, -90deg);
+@include to-keyframes2(rotateFoldRight, 0, translateX, 100%, rotateY, 90deg);
+@include to-keyframes2(rotateFoldTop, 0, translateY, -100%, rotateX, 90deg);
+@include to-keyframes2(rotateFoldBottom, 0, translateY, 100%, rotateX, -90deg);
+

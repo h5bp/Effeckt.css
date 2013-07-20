@@ -49,54 +49,54 @@
 }
 
 .effeckt-page-transition-left-slide-in {
-  -webkit-animation: slideLeftIn 0.7s forwards ease-out;
-  -o-animation: slideLeftIn 0.7s forwards ease-out;
-  animation: slideLeftIn 0.7s forwards ease-out;
+  -webkit-animation: slideInLeft 0.7s forwards ease-out;
+  -o-animation: slideInLeft 0.7s forwards ease-out;
+  animation: slideInLeft 0.7s forwards ease-out;
 }
 
 .effeckt-page-transition-left-slide-out {
-  -webkit-animation: slideLeftOut 0.7s forwards ease-out;
-  -o-animation: slideLeftOut 0.7s forwards ease-out;
-  animation: slideLeftOut 0.7s forwards ease-out;
+  -webkit-animation: slideOutLeft 0.7s forwards ease-out;
+  -o-animation: slideOutLeft 0.7s forwards ease-out;
+  animation: slideOutLeft 0.7s forwards ease-out;
 }
 
 .effeckt-page-transition-right-slide-in {
-  -webkit-animation: slideRightIn 0.7s forwards ease-out;
-  -o-animation: slideRightIn 0.7s forwards ease-out;
-  animation: slideRightIn 0.7s forwards ease-out;
+  -webkit-animation: slideInRight 0.7s forwards ease-out;
+  -o-animation: slideInRight 0.7s forwards ease-out;
+  animation: slideInRight 0.7s forwards ease-out;
 }
 
 .effeckt-page-transition-right-slide-out {
-  -webkit-animation: slideRightOut 0.7s forwards ease-out;
-  -o-animation: slideRightOut 0.7s forwards ease-out;
-  animation: slideRightOut 0.7s forwards ease-out;
+  -webkit-animation: slideOutRight 0.7s forwards ease-out;
+  -o-animation: slideOutRight 0.7s forwards ease-out;
+  animation: slideOutRight 0.7s forwards ease-out;
 }
 
 .effeckt-page-transition-top-slide-in {
-  -webkit-animation: slideTopIn 0.7s forwards ease-out;
-  -o-animation: slideTopIn 0.7s forwards ease-out;
-  animation: slideTopIn 0.7s forwards ease-out;
+  -webkit-animation: slideInTop 0.7s forwards ease-out;
+  -o-animation: slideInTop 0.7s forwards ease-out;
+  animation: slideInTop 0.7s forwards ease-out;
 }
 
 .effeckt-page-transition-top-slide-out {
-  -webkit-animation: slideTopOut 0.7s forwards ease-out;
-  -o-animation: slideTopOut 0.7s forwards ease-out;
-  animation: slideTopOut 0.7s forwards ease-out;
+  -webkit-animation: slideOutTop 0.7s forwards ease-out;
+  -o-animation: slideOutTop 0.7s forwards ease-out;
+  animation: slideOutTop 0.7s forwards ease-out;
 }
 
 .effeckt-page-transition-bottom-slide-in {
-  -webkit-animation: slideBottomIn 0.7s forwards ease-out;
-  -o-animation: slideBottomIn 0.7s forwards ease-out;
-  animation: slideBottomIn 0.7s forwards ease-out;
+  -webkit-animation: slideInBottom 0.7s forwards ease-out;
+  -o-animation: slideInBottom 0.7s forwards ease-out;
+  animation: slideInBottom 0.7s forwards ease-out;
 }
 
 .effeckt-page-transition-bottom-slide-out {
-  -webkit-animation: slideBottomOut 0.7s forwards ease-out;
-  -o-animation: slideBottomOut 0.7s forwards ease-out;
-  animation: slideBottomOut 0.7s forwards ease-out;
+  -webkit-animation: slideOutBottom 0.7s forwards ease-out;
+  -o-animation: slideOutBottom 0.7s forwards ease-out;
+  animation: slideOutBottom 0.7s forwards ease-out;
 }
 
-@-webkit-keyframes slideLeftIn {
+@-webkit-keyframes slideInLeft {
   0% {
     -webkit-transform: translateX(100%);
     transform: translateX(100%);
@@ -108,7 +108,7 @@
   }
 }
 
-@-o-keyframes slideLeftIn {
+@-o-keyframes slideInLeft {
   0% {
     -o-transform: translateX(100%);
     transform: translateX(100%);
@@ -120,7 +120,7 @@
   }
 }
 
-@keyframes slideLeftIn {
+@keyframes slideInLeft {
   0% {
     -webkit-transform: translateX(100%);
     -ms-transform: translateX(100%);
@@ -136,7 +136,7 @@
   }
 }
 
-@-webkit-keyframes slideLeftOut {
+@-webkit-keyframes slideOutLeft {
   0% {
     -webkit-transform: translateX(0%);
     transform: translateX(0%);
@@ -148,7 +148,7 @@
   }
 }
 
-@-o-keyframes slideLeftOut {
+@-o-keyframes slideOutLeft {
   0% {
     -o-transform: translateX(0%);
     transform: translateX(0%);
@@ -160,7 +160,7 @@
   }
 }
 
-@keyframes slideLeftOut {
+@keyframes slideOutLeft {
   0% {
     -webkit-transform: translateX(0%);
     -ms-transform: translateX(0%);
@@ -176,7 +176,7 @@
   }
 }
 
-@-webkit-keyframes slideRightIn {
+@-webkit-keyframes slideInRight {
   0% {
     -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
@@ -188,7 +188,7 @@
   }
 }
 
-@-o-keyframes slideRightIn {
+@-o-keyframes slideInRight {
   0% {
     -o-transform: translateX(-100%);
     transform: translateX(-100%);
@@ -200,7 +200,7 @@
   }
 }
 
-@keyframes slideRightIn {
+@keyframes slideInRight {
   0% {
     -webkit-transform: translateX(-100%);
     -ms-transform: translateX(-100%);
@@ -216,7 +216,7 @@
   }
 }
 
-@-webkit-keyframes slideRightOut {
+@-webkit-keyframes slideOutRight {
   0% {
     -webkit-transform: translateX(0);
     transform: translateX(0);
@@ -228,7 +228,7 @@
   }
 }
 
-@-o-keyframes slideRightOut {
+@-o-keyframes slideOutRight {
   0% {
     -o-transform: translateX(0);
     transform: translateX(0);
@@ -240,7 +240,7 @@
   }
 }
 
-@keyframes slideRightOut {
+@keyframes slideOutRight {
   0% {
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
@@ -256,7 +256,7 @@
   }
 }
 
-@-webkit-keyframes slideTopIn {
+@-webkit-keyframes slideInTop {
   0% {
     -webkit-transform: translateY(-100%);
     transform: translateY(-100%);
@@ -268,7 +268,7 @@
   }
 }
 
-@-o-keyframes slideTopIn {
+@-o-keyframes slideInTop {
   0% {
     -o-transform: translateY(-100%);
     transform: translateY(-100%);
@@ -280,7 +280,7 @@
   }
 }
 
-@keyframes slideTopIn {
+@keyframes slideInTop {
   0% {
     -webkit-transform: translateY(-100%);
     -ms-transform: translateY(-100%);
@@ -296,7 +296,7 @@
   }
 }
 
-@-webkit-keyframes slideTopOut {
+@-webkit-keyframes slideOutTop {
   0% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
@@ -308,7 +308,7 @@
   }
 }
 
-@-o-keyframes slideTopOut {
+@-o-keyframes slideOutTop {
   0% {
     -o-transform: translateY(0);
     transform: translateY(0);
@@ -320,7 +320,7 @@
   }
 }
 
-@keyframes slideTopOut {
+@keyframes slideOutTop {
   0% {
     -webkit-transform: translateY(0);
     -ms-transform: translateY(0);
@@ -336,7 +336,7 @@
   }
 }
 
-@-webkit-keyframes slideBottomIn {
+@-webkit-keyframes slideInBottom {
   0% {
     -webkit-transform: translateY(100%);
     transform: translateY(100%);
@@ -348,7 +348,7 @@
   }
 }
 
-@-o-keyframes slideBottomIn {
+@-o-keyframes slideInBottom {
   0% {
     -o-transform: translateY(100%);
     transform: translateY(100%);
@@ -360,7 +360,7 @@
   }
 }
 
-@keyframes slideBottomIn {
+@keyframes slideInBottom {
   0% {
     -webkit-transform: translateY(100%);
     -ms-transform: translateY(100%);
@@ -376,7 +376,7 @@
   }
 }
 
-@-webkit-keyframes slideBottomOut {
+@-webkit-keyframes slideOutBottom {
   0% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
@@ -388,7 +388,7 @@
   }
 }
 
-@-o-keyframes slideBottomOut {
+@-o-keyframes slideOutBottom {
   0% {
     -o-transform: translateY(0);
     transform: translateY(0);
@@ -400,7 +400,7 @@
   }
 }
 
-@keyframes slideBottomOut {
+@keyframes slideOutBottom {
   0% {
     -webkit-transform: translateY(0);
     -ms-transform: translateY(0);
@@ -1024,5 +1024,293 @@
     -ms-transform: rotateX(90deg);
     -o-transform: rotateX(90deg);
     transform: rotateX(90deg);
+  }
+}
+
+.effeckt-page-transition-left-rotate-pull {
+  -webkit-transform-origin: 0% 50%;
+  -ms-transform-origin: 0% 50%;
+  -o-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+  -webkit-animation: rotatePullLeft 0.5s both ease;
+  -o-animation: rotatePullLeft 0.5s both ease;
+  animation: rotatePullLeft 0.5s both ease;
+}
+
+.effeckt-page-transition-right-rotate-pull {
+  -webkit-transform-origin: 100% 50%;
+  -ms-transform-origin: 100% 50%;
+  -o-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-animation: rotatePullRight 0.5s both ease;
+  -o-animation: rotatePullRight 0.5s both ease;
+  animation: rotatePullRight 0.5s both ease;
+}
+
+.effeckt-page-transition-top-rotate-pull {
+  -webkit-transform-origin: 50% 0%;
+  -ms-transform-origin: 50% 0%;
+  -o-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+  -webkit-animation: rotatePullTop 0.5s both ease;
+  -o-animation: rotatePullTop 0.5s both ease;
+  animation: rotatePullTop 0.5s both ease;
+}
+
+.effeckt-page-transition-bottom-rotate-pull {
+  -webkit-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  -o-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-animation: rotatePullBottom 0.5s both ease;
+  -o-animation: rotatePullBottom 0.5s both ease;
+  animation: rotatePullBottom 0.5s both ease;
+}
+
+@-webkit-keyframes rotatePullLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+  }
+}
+
+@-o-keyframes rotatePullLeft {
+  from {
+    opacity: 0;
+    -o-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+  }
+}
+
+@keyframes rotatePullLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+  }
+}
+
+@-webkit-keyframes rotatePullRight {
+  from {
+    opacity: 0;
+    -webkit-transform: rotateY(-90deg);
+    transform: rotateY(-90deg);
+  }
+}
+
+@-o-keyframes rotatePullRight {
+  from {
+    opacity: 0;
+    -o-transform: rotateY(-90deg);
+    transform: rotateY(-90deg);
+  }
+}
+
+@keyframes rotatePullRight {
+  from {
+    opacity: 0;
+    -webkit-transform: rotateY(-90deg);
+    -ms-transform: rotateY(-90deg);
+    -o-transform: rotateY(-90deg);
+    transform: rotateY(-90deg);
+  }
+}
+
+@-webkit-keyframes rotatePullTop {
+  from {
+    opacity: 0;
+    -webkit-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+  }
+}
+
+@-o-keyframes rotatePullTop {
+  from {
+    opacity: 0;
+    -o-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+  }
+}
+
+@keyframes rotatePullTop {
+  from {
+    opacity: 0;
+    -webkit-transform: rotateX(-90deg);
+    -ms-transform: rotateX(-90deg);
+    -o-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+  }
+}
+
+@-webkit-keyframes rotatePullBottom {
+  from {
+    opacity: 0;
+    -webkit-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+  }
+}
+
+@-o-keyframes rotatePullBottom {
+  from {
+    opacity: 0;
+    -o-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+  }
+}
+
+@keyframes rotatePullBottom {
+  from {
+    opacity: 0;
+    -webkit-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+  }
+}
+
+.effeckt-page-transition-left-rotate-fold {
+  -webkit-transform-origin: 100% 50%;
+  -ms-transform-origin: 100% 50%;
+  -o-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-animation: rotateFoldLeft 0.7s both ease;
+  -o-animation: rotateFoldLeft 0.7s both ease;
+  animation: rotateFoldLeft 0.7s both ease;
+}
+
+.effeckt-page-transition-right-rotate-fold {
+  -webkit-transform-origin: 0% 50%;
+  -ms-transform-origin: 0% 50%;
+  -o-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+  -webkit-animation: rotateFoldRight 0.7s both ease;
+  -o-animation: rotateFoldRight 0.7s both ease;
+  animation: rotateFoldRight 0.7s both ease;
+}
+
+.effeckt-page-transition-top-rotate-fold {
+  -webkit-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  -o-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-animation: rotateFoldTop 0.7s both ease;
+  -o-animation: rotateFoldTop 0.7s both ease;
+  animation: rotateFoldTop 0.7s both ease;
+}
+
+.effeckt-page-transition-bottom-rotate-fold {
+  -webkit-transform-origin: 50% 0%;
+  -ms-transform-origin: 50% 0%;
+  -o-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+  -webkit-animation: rotateFoldBottom 0.7s both ease;
+  -o-animation: rotateFoldBottom 0.7s both ease;
+  animation: rotateFoldBottom 0.7s both ease;
+}
+
+@-webkit-keyframes rotateFoldLeft {
+  to {
+    opacity: 0;
+    -webkit-transform: translateX(-100%) rotateY(-90deg);
+    transform: translateX(-100%) rotateY(-90deg);
+  }
+}
+
+@-o-keyframes rotateFoldLeft {
+  to {
+    opacity: 0;
+    -o-transform: translateX(-100%) rotateY(-90deg);
+    transform: translateX(-100%) rotateY(-90deg);
+  }
+}
+
+@keyframes rotateFoldLeft {
+  to {
+    opacity: 0;
+    -webkit-transform: translateX(-100%) rotateY(-90deg);
+    -ms-transform: translateX(-100%) rotateY(-90deg);
+    -o-transform: translateX(-100%) rotateY(-90deg);
+    transform: translateX(-100%) rotateY(-90deg);
+  }
+}
+
+@-webkit-keyframes rotateFoldRight {
+  to {
+    opacity: 0;
+    -webkit-transform: translateX(100%) rotateY(90deg);
+    transform: translateX(100%) rotateY(90deg);
+  }
+}
+
+@-o-keyframes rotateFoldRight {
+  to {
+    opacity: 0;
+    -o-transform: translateX(100%) rotateY(90deg);
+    transform: translateX(100%) rotateY(90deg);
+  }
+}
+
+@keyframes rotateFoldRight {
+  to {
+    opacity: 0;
+    -webkit-transform: translateX(100%) rotateY(90deg);
+    -ms-transform: translateX(100%) rotateY(90deg);
+    -o-transform: translateX(100%) rotateY(90deg);
+    transform: translateX(100%) rotateY(90deg);
+  }
+}
+
+@-webkit-keyframes rotateFoldTop {
+  to {
+    opacity: 0;
+    -webkit-transform: translateY(-100%) rotateX(90deg);
+    transform: translateY(-100%) rotateX(90deg);
+  }
+}
+
+@-o-keyframes rotateFoldTop {
+  to {
+    opacity: 0;
+    -o-transform: translateY(-100%) rotateX(90deg);
+    transform: translateY(-100%) rotateX(90deg);
+  }
+}
+
+@keyframes rotateFoldTop {
+  to {
+    opacity: 0;
+    -webkit-transform: translateY(-100%) rotateX(90deg);
+    -ms-transform: translateY(-100%) rotateX(90deg);
+    -o-transform: translateY(-100%) rotateX(90deg);
+    transform: translateY(-100%) rotateX(90deg);
+  }
+}
+
+@-webkit-keyframes rotateFoldBottom {
+  to {
+    opacity: 0;
+    -webkit-transform: translateY(100%) rotateX(-90deg);
+    transform: translateY(100%) rotateX(-90deg);
+  }
+}
+
+@-o-keyframes rotateFoldBottom {
+  to {
+    opacity: 0;
+    -o-transform: translateY(100%) rotateX(-90deg);
+    transform: translateY(100%) rotateX(-90deg);
+  }
+}
+
+@keyframes rotateFoldBottom {
+  to {
+    opacity: 0;
+    -webkit-transform: translateY(100%) rotateX(-90deg);
+    -ms-transform: translateY(100%) rotateX(-90deg);
+    -o-transform: translateY(100%) rotateX(-90deg);
+    transform: translateY(100%) rotateX(-90deg);
   }
 }
