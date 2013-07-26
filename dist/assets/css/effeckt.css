@@ -921,13 +921,13 @@
     transition: 500ms; }
 
 .effeckt-off-screen-nav-left-squeeze {
-  width: 20%;
+  width: 40%;
   transform: translateX(-100%);
   transition: 500ms; }
   .effeckt-off-screen-nav-left-squeeze.effeckt-off-screen-nav-show {
     transform: translateX(0); }
     .effeckt-off-screen-nav-left-squeeze.effeckt-off-screen-nav-show ~ .page-wrap {
-      width: 80%; }
+      width: 60%; }
   .effeckt-off-screen-nav-left-squeeze ~ .page-wrap {
     transition: width 500ms;
     max-width: none; }
@@ -955,13 +955,13 @@
 .effeckt-off-screen-nav-right-squeeze {
   left: auto;
   right: 0;
-  width: 20%;
+  width: 40%;
   transform: translateX(100%);
   transition: 500ms; }
   .effeckt-off-screen-nav-right-squeeze.effeckt-off-screen-nav-show {
     transform: translateX(0); }
     .effeckt-off-screen-nav-right-squeeze.effeckt-off-screen-nav-show ~ .page-wrap {
-      width: 80%; }
+      width: 60%; }
   .effeckt-off-screen-nav-right-squeeze ~ .page-wrap {
     float: left;
     transition: width 500ms;
