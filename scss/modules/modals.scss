@@ -1,6 +1,8 @@
 @import "../_variables";
 
 // Class name required for some body 3D effects
+// Should probably be renamed, "md" is kinda meaningless
+// Perhaps "effeckt-fullpage-perspective"
 .md-perspective,
 .md-perspective body {
   height: 100%;
@@ -17,12 +19,17 @@
 // Modal itself
 .effeckt-modal-wrap {
 
-  // This is the line that causes the blur
-  // But also that magically centers and means that we
-  // don't need to handle centering in the effects themselves
-  // Kinda a sucky double edged sword
-  // Possible alternative: used fixed sizes for the modals and center with negative margins.
+  // Line that causes blur
   transform: translate(-50%, -50%);
+
+  // Possible blur fix
+  // https://twitter.com/iamwarry/status/354595007937789954
+  // Problems:
+  //   1) Autoprefixer (?) garbles this to -webkit-transform: translate(-webkit-calc(-50%1px), -webkit-calc(-50%1px));
+  //   2) Safari just doesn't allow it even when syntax is right.
+  //   3) It doesn't always work. Still blurry = http://cl.ly/QVGo ; Sharp = http://cl.ly/QUgo
+
+  // -webkit-transform: translate(-webkit-calc(-50% + 1px), -webkit-calc(-50% + 1px));
 
   position: fixed;
   top: 50%;
