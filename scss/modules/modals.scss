@@ -20,7 +20,8 @@
 .effeckt-modal-wrap {
 
   // Line that causes blur
-  transform: translate(-50%, -50%);
+  // But would be **SUPER RAD** if we could use so modals are centered no matter what author does
+  // transform: translate(-50%, -50%);
 
   // Possible blur fix
   // https://twitter.com/iamwarry/status/354595007937789954
@@ -32,11 +33,14 @@
   // -webkit-transform: translate(-webkit-calc(-50% + 1px), -webkit-calc(-50% + 1px));
 
   position: fixed;
-  top: 50%;
+
+  // Sizing with sloppy centering so at least not blurry
+  top: 40%;
   left: 50%;
-  width: 50%;
   max-width: $effeckt-modal-max-width;
   min-width: $effeckt-modal-min-width;
+  margin-left: -$effeckt-modal-max-width / 2;
+
   z-index: $effeckt-modal-z-index;
   display: none;
 }
@@ -247,7 +251,7 @@
 }
 .effeckt-hide.md-effect-13 .effeckt-modal {
   opacity: 0;
-  transition: all $effeckt-modal-transition-duration;
+  transition: $effeckt-modal-transition-duration;
 }
 @keyframes slit {
   50% {
@@ -351,7 +355,7 @@
 }
 .effeckt-show.md-effect-18 ~ .effeckt-overlay {
   background: rgba(black, 0.2);
-  transition: all 0.5s;
+  transition: 0.5s;
 }
 .effeckt-show.md-effect-18 ~ .page-wrap,
 .effeckt-show.md-effect-18 ~ .effeckt-overlay {
@@ -375,11 +379,11 @@
 .effeckt-show.md-effect-18 .effeckt-modal {
   transform: translateX(0);
   opacity: 1;
-  transition: all 0.5s 0.1s;
+  transition: 0.5s 0.1s;
 }
 .effeckt-hide.md-effect-18 .effeckt-modal {
   opacity: 0;
-  transition: all 0.5s 0.1s;
+  transition: 0.5s 0.1s;
 }
 
 
@@ -422,69 +426,48 @@
 
 
 /* Effect 20: From the top to bottom with left tilt on the way out */
-.md-effect-20 {
+.md-effect-20 .effeckt-modal {
   transition: $effeckt-modal-transition-duration ease-in-out;
-  transform: -50% -50%;
-  top: -100%;
+  transform: translateY(-100%);
   opacity: 0;
 }
-.effeckt-show.md-effect-20 {
-  top: 50%;
+.effeckt-show.md-effect-20 .effeckt-modal {
   opacity: 1;
+  transform: translateY(0);
 }
-.effeckt-hide.md-effect-20 {
-  top: 100%;
-  transform: translateX(-50%) rotate(-29deg);
+.effeckt-hide.md-effect-20 .effeckt-modal {
+  transform: translateY(100%) rotate(-25deg);
   opacity: 0;
 }
 
 
 /* Effect 22: From the top to bottom */
-.md-effect-22 {
+.md-effect-22 .effeckt-modal {
   transition: $effeckt-modal-transition-duration ease-in-out;
-  transform: -50% -50%;
-  top: -100%;
+  transform: translateY(-100%);
   opacity: 0;
 }
-.effeckt-show.md-effect-22 {
-  top: 50%;
+.effeckt-show.md-effect-22 .effeckt-modal {
+  transform: translateY(0);
   opacity: 1;
 }
-.effeckt-hide.md-effect-22 {
-  top: 100%;
-  opacity: 0;
-}
-
-
-/* Effect 23: From the bottom to bottom */
-.md-effect-23 {
-  transition: $effeckt-modal-transition-duration ease-in-out;
-  transform: -50% -50%;
-  top: 100%;
-  opacity: 0;
-}
-.effeckt-show.md-effect-23 {
-  top: 50%;
-  opacity: 1;
-}
-.effeckt-hide.md-effect-23 {
-  top: 100%;
+.effeckt-hide.md-effect-22 .effeckt-modal {
+  transform: translateY(100%);
   opacity: 0;
 }
 
 
 /* Effect 24: From the top to top */
-.md-effect-24 {
+.md-effect-24 .effeckt-modal {
   transition: $effeckt-modal-transition-duration ease-in-out;
-  transform: -50% -50%;
-  top: -100%;
   opacity: 0;
+  transform: translateY(-100%);
 }
-.effeckt-show.md-effect-24 {
-  top: 50%;
+.effeckt-show.md-effect-24 .effeckt-modal {
   opacity: 1;
+  transform: translateY(0);
 }
-.effeckt-hide.md-effect-24 {
-  top: -100%;
+.effeckt-hide.md-effect-24 .effeckt-modal {
   opacity: 0;
+  transform: translateY(-100%);
 }

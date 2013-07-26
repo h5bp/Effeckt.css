@@ -1,19 +1,42 @@
+// Overall
 $effeckt-transition-duration: 500ms !default;
 
+
+
+// Modals
 $effeckt-modal-transition-duration: $effeckt-transition-duration !default;
 $effeckt-modal-perspective: 600px !default;
+
+// Forcing size so we can center w/o translate()
 $effeckt-modal-min-width: 320px !default;
-$effeckt-modal-max-width: 640px !default;
+$effeckt-modal-max-width: 320px !default;
+
 $effeckt-modal-z-index: 2000 !default;
 
+
+
+// Buttons
 $effeckt-buttons-transition-duration: $effeckt-transition-duration !default;
 $effeckt-buttons-spinner-size: 32px !default;
 
+
+
+// Page Transitions
 $effeckt-page-transition-duration: $effeckt-transition-duration * 2 !default;
 
+
+
+
+// Off Screen Nav
 $effeckt-off-screen-navigation-transition-duration: $effeckt-transition-duration !default;
+
+
+
+// Captions
 $effeckt-caption-transition-duration: $effeckt-transition-duration !default;
 
-$effeckt-list-item-transition-duration: $effeckt-transition-duration !default;
 
+
+// Lit Items
+$effeckt-list-item-transition-duration: $effeckt-transition-duration !default;
 $effeckt-list-scroll-transition-duration: $effeckt-transition-duration !default;

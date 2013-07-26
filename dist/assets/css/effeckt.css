@@ -517,13 +517,12 @@
   perspective: 600px; }
 
 .effeckt-modal-wrap {
-  transform: translate(-50%, -50%);
   position: fixed;
-  top: 50%;
+  top: 40%;
   left: 50%;
-  width: 50%;
-  max-width: 640px;
+  max-width: 320px;
   min-width: 320px;
+  margin-left: -160px;
   z-index: 2000;
   display: none; }
 
@@ -705,7 +704,7 @@
 
 .effeckt-hide.md-effect-13 .effeckt-modal {
   opacity: 0;
-  transition: all 500ms; }
+  transition: 500ms; }
 
 @keyframes slit {
   50% {
@@ -794,7 +793,7 @@
 
 .effeckt-show.md-effect-18 ~ .effeckt-overlay {
   background: rgba(0, 0, 0, 0.2);
-  transition: all 0.5s; }
+  transition: 0.5s; }
 
 .effeckt-show.md-effect-18 ~ .page-wrap, .effeckt-show.md-effect-18 ~ .effeckt-overlay {
   transform-style: preserve-3d;
@@ -816,11 +815,11 @@
 .effeckt-show.md-effect-18 .effeckt-modal {
   transform: translateX(0);
   opacity: 1;
-  transition: all 0.5s 0.1s; }
+  transition: 0.5s 0.1s; }
 
 .effeckt-hide.md-effect-18 .effeckt-modal {
   opacity: 0;
-  transition: all 0.5s 0.1s; }
+  transition: 0.5s 0.1s; }
 
 /* Effect 19:  Slip in from the top with perspective on container */
 .effeckt-show.md-effect-19 ~ .page-wrap {
@@ -854,65 +853,46 @@
   transition: all 500ms 100ms; }
 
 /* Effect 20: From the top to bottom with left tilt on the way out */
-.md-effect-20 {
+.md-effect-20 .effeckt-modal {
   transition: 500ms ease-in-out;
-  transform: -50% -50%;
-  top: -100%;
+  transform: translateY(-100%);
   opacity: 0; }
 
-.effeckt-show.md-effect-20 {
-  top: 50%;
-  opacity: 1; }
+.effeckt-show.md-effect-20 .effeckt-modal {
+  opacity: 1;
+  transform: translateY(0); }
 
-.effeckt-hide.md-effect-20 {
-  top: 100%;
-  transform: translateX(-50%) rotate(-29deg);
+.effeckt-hide.md-effect-20 .effeckt-modal {
+  transform: translateY(100%) rotate(-25deg);
   opacity: 0; }
 
 /* Effect 22: From the top to bottom */
-.md-effect-22 {
+.md-effect-22 .effeckt-modal {
   transition: 500ms ease-in-out;
-  transform: -50% -50%;
-  top: -100%;
+  transform: translateY(-100%);
   opacity: 0; }
 
-.effeckt-show.md-effect-22 {
-  top: 50%;
+.effeckt-show.md-effect-22 .effeckt-modal {
+  transform: translateY(0);
   opacity: 1; }
 
-.effeckt-hide.md-effect-22 {
-  top: 100%;
-  opacity: 0; }
-
-/* Effect 23: From the bottom to bottom */
-.md-effect-23 {
-  transition: 500ms ease-in-out;
-  transform: -50% -50%;
-  top: 100%;
-  opacity: 0; }
-
-.effeckt-show.md-effect-23 {
-  top: 50%;
-  opacity: 1; }
-
-.effeckt-hide.md-effect-23 {
-  top: 100%;
+.effeckt-hide.md-effect-22 .effeckt-modal {
+  transform: translateY(100%);
   opacity: 0; }
 
 /* Effect 24: From the top to top */
-.md-effect-24 {
+.md-effect-24 .effeckt-modal {
   transition: 500ms ease-in-out;
-  transform: -50% -50%;
-  top: -100%;
-  opacity: 0; }
+  opacity: 0;
+  transform: translateY(-100%); }
 
-.effeckt-show.md-effect-24 {
-  top: 50%;
-  opacity: 1; }
+.effeckt-show.md-effect-24 .effeckt-modal {
+  opacity: 1;
+  transform: translateY(0); }
 
-.effeckt-hide.md-effect-24 {
-  top: -100%;
-  opacity: 0; }
+.effeckt-hide.md-effect-24 .effeckt-modal {
+  opacity: 0;
+  transform: translateY(-100%); }
 
 .md-perspective, .md-perspective body {
   height: 100%;
