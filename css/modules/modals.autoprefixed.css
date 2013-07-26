@@ -20,8 +20,8 @@
   top: 50%;
   left: 50%;
   width: 50%;
-  max-width: 320px;
-  min-width: 630px;
+  max-width: 640px;
+  min-width: 320px;
   z-index: 2000;
   display: none;
 }

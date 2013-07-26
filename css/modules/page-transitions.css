@@ -1,9 +1,6 @@
 .effeckt-page-transition.effeckt-page-transition-animating {
   visibility: visible; }
 
-.effeckt-page-transition.effeckt-page-transition-animating {
-  visibility: visible; }
-
 .animation-delay-100 {
   animation-delay: 0.1s; }
 
@@ -28,26 +25,14 @@
 .effeckt-page-transition-left-slide-in {
   animation: slideInLeft 0.7s forwards ease-out; }
 
-.effeckt-page-transition-left-slide-out {
-  animation: slideOutLeft 0.7s forwards ease-out; }
-
 .effeckt-page-transition-right-slide-in {
   animation: slideInRight 0.7s forwards ease-out; }
-
-.effeckt-page-transition-right-slide-out {
-  animation: slideOutRight 0.7s forwards ease-out; }
 
 .effeckt-page-transition-top-slide-in {
   animation: slideInTop 0.7s forwards ease-out; }
 
-.effeckt-page-transition-top-slide-out {
-  animation: slideOutTop 0.7s forwards ease-out; }
-
 .effeckt-page-transition-bottom-slide-in {
   animation: slideInBottom 0.7s forwards ease-out; }
-
-.effeckt-page-transition-bottom-slide-out {
-  animation: slideOutBottom 0.7s forwards ease-out; }
 
 @keyframes slideInLeft {
   0% {
@@ -56,26 +41,12 @@
   100% {
     transform: translateX(0); } }
 
-@keyframes slideOutLeft {
-  0% {
-    transform: translateX(0%); }
-
-  100% {
-    transform: translateX(-100%); } }
-
 @keyframes slideInRight {
   0% {
     transform: translateX(-100%); }
 
   100% {
     transform: translateX(0); } }
-
-@keyframes slideOutRight {
-  0% {
-    transform: translateX(0); }
-
-  100% {
-    transform: translateX(100%); } }
 
 @keyframes slideInTop {
   0% {
@@ -84,19 +55,45 @@
   100% {
     transform: translateY(0); } }
 
-@keyframes slideOutTop {
-  0% {
-    transform: translateY(0); }
-
-  100% {
-    transform: translateY(100%); } }
-
 @keyframes slideInBottom {
   0% {
     transform: translateY(100%); }
 
   100% {
     transform: translateY(0); } }
+
+.effeckt-page-transition-left-slide-out {
+  animation: slideOutLeft 0.7s forwards ease-out; }
+
+.effeckt-page-transition-right-slide-out {
+  animation: slideOutRight 0.7s forwards ease-out; }
+
+.effeckt-page-transition-top-slide-out {
+  animation: slideOutTop 0.7s forwards ease-out; }
+
+.effeckt-page-transition-bottom-slide-out {
+  animation: slideOutBottom 0.7s forwards ease-out; }
+
+@keyframes slideOutLeft {
+  0% {
+    transform: translateX(0%); }
+
+  100% {
+    transform: translateX(-100%); } }
+
+@keyframes slideOutRight {
+  0% {
+    transform: translateX(0); }
+
+  100% {
+    transform: translateX(100%); } }
+
+@keyframes slideOutTop {
+  0% {
+    transform: translateY(0); }
+
+  100% {
+    transform: translateY(100%); } }
 
 @keyframes slideOutBottom {
   0% {
@@ -124,34 +121,17 @@
 .effeckt-page-transition-left-fade-in {
   animation: fadeLeftIn 0.7s ease both; }
 
-.effeckt-page-transition-left-fade-out {
-  animation: fadeLeftOut 0.7s ease both; }
-
 .effeckt-page-transition-right-fade-in {
   animation: fadeRightIn 0.7s ease both; }
-
-.effeckt-page-transition-right-fade-out {
-  animation: fadeRightOut 0.7s ease both; }
 
 .effeckt-page-transition-top-fade-in {
   animation: fadeTopIn 0.7s ease both; }
 
-.effeckt-page-transition-top-fade-out {
-  animation: fadeTopOut 0.7s ease both; }
-
 .effeckt-page-transition-bottom-fade-in {
   animation: fadeBottomIn 0.7s ease both; }
 
-.effeckt-page-transition-bottom-fade-out {
-  animation: fadeBottomOut 0.7s ease both; }
-
 @keyframes fadeLeftIn {
   to {
-    opacity: 0.3;
-    transform: translateX(-100%); } }
-
-@keyframes fadeLeftOut {
-  from {
     opacity: 0.3;
     transform: translateX(-100%); } }
 
@@ -160,18 +140,8 @@
     opacity: 0.3;
     transform: translateX(100%); } }
 
-@keyframes fadeRightOut {
-  from {
-    opacity: 0.3;
-    transform: translateX(100%); } }
-
 @keyframes fadeTopIn {
   to {
-    opacity: 0.3;
-    transform: translateY(-100%); } }
-
-@keyframes fadeTopOut {
-  from {
     opacity: 0.3;
     transform: translateY(-100%); } }
 
@@ -179,6 +149,33 @@
   to {
     opacity: 0.3;
     transform: translateY(100%); } }
+
+.effeckt-page-transition-left-fade-out {
+  animation: fadeLeftOut 0.7s ease both; }
+
+.effeckt-page-transition-right-fade-out {
+  animation: fadeRightOut 0.7s ease both; }
+
+.effeckt-page-transition-top-fade-out {
+  animation: fadeTopOut 0.7s ease both; }
+
+.effeckt-page-transition-bottom-fade-out {
+  animation: fadeBottomOut 0.7s ease both; }
+
+@keyframes fadeLeftOut {
+  from {
+    opacity: 0.3;
+    transform: translateX(-100%); } }
+
+@keyframes fadeRightOut {
+  from {
+    opacity: 0.3;
+    transform: translateX(100%); } }
+
+@keyframes fadeTopOut {
+  from {
+    opacity: 0.3;
+    transform: translateY(-100%); } }
 
 @keyframes fadeBottomOut {
   from {
@@ -208,7 +205,6 @@
   animation: rotateOutNewspaper 0.5s both ease-in; }
 
 .effeckt-page-transition-newspaper-in {
-  animation-delay: 0.5s;
   transform-origin: 50% 50%;
   animation: rotateInNewspaper 0.5s both ease-out; }
 
