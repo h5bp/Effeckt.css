@@ -52,13 +52,13 @@
 // 3 Left Squeeze
 .effeckt-off-screen-nav-left-squeeze {
   // Needs to be percentage so can be equal parts with .page-wrap
-  width: 20%;
+  width: 40%;
   transform: translateX(-100%);
   transition: $effeckt-off-screen-navigation-transition-duration;
   &.effeckt-off-screen-nav-show {
     transform: translateX(0);
     ~ .page-wrap {
-      width: 80%;
+      width: 60%;
     }
   }
   ~ .page-wrap {
@@ -102,14 +102,14 @@
   // Needs to be percentage so can be equal parts with .page-wrap
   left: auto;
   right: 0;
-  width: 20%;
+  width: 40%;
   transform: translateX(100%);
   transition: $effeckt-off-screen-navigation-transition-duration;
   &.effeckt-off-screen-nav-show {
     transform: translateX(0);
 
     ~ .page-wrap {
-      width: 80%;
+      width: 60%;
     }
   }
   ~ .page-wrap {
