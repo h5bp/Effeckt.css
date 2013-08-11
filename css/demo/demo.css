@@ -203,7 +203,7 @@ h1 span:nth-of-type(11) {
     border-bottom-color: #666; }
   .contributors .readme {
     display: none; }
-    .effeckt-demo-captions + .contributors .readme {
+    .effeckt-demo-captions ~ .contributors .readme {
       display: block; }
   .contributors ol {
     margin-left: 35px; }

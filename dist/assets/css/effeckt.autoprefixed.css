@@ -3626,3 +3626,55 @@
     transform: translateY(100%) rotateX(-90deg);
   }
 }
+
+[data-effeckt-tooltip-text] {
+  position: relative;
+}
+
+.effeckt-tooltip-1[data-effeckt-tooltip-text]::before,
+.effeckt-tooltip-1[data-effeckt-tooltip-text]::after {
+  opacity: 0;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.effeckt-tooltip-1[data-effeckt-tooltip-text]::after {
+  content: attr(data-effeckt-tooltip-text);
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: 125%;
+  border-radius: 10px;
+  background: #333;
+  color: white;
+  padding: 0.45rem 0.8rem;
+  font-size: 90%;
+  white-space: nowrap;
+}
+
+.effeckt-tooltip-1[data-effeckt-tooltip-text]::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 5px solid #333;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  position: absolute;
+  bottom: 125%;
+  margin-bottom: -4px;
+  left: 50%;
+  margin-left: -5px;
+}
+
+.effeckt-tooltip-1[data-effeckt-tooltip-text]:hover::before,
+.effeckt-tooltip-1[data-effeckt-tooltip-text]:hover::after {
+  opacity: 1;
+  bottom: 115%;
+  -webkit-transition: 0.2s 0.3s;
+  -o-transition: 0.2s 0.3s;
+  transition: 0.2s 0.3s;
+}

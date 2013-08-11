@@ -12,22 +12,62 @@
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <link rel="stylesheet" href="{{assets}}/css/demo/demo.autoprefixed.css">
+    <link rel="stylesheet" href="assets/css/demo/demo.autoprefixed.css">
 
     <!-- Individual module CSS files here -->
     <!-- Should we combine or not combine? -->
-    <link rel="stylesheet" href="{{assets}}/css/effeckt.autoprefixed.css">
+    <link rel="stylesheet" href="assets/css/effeckt.autoprefixed.css">
 </head>
 
 <body>
 
   <div class="warning">Work in Progress! Not quite ready for prime-time</div>
 
-  {{> off-screen-nav}}
+  <nav class="effeckt-off-screen-nav" id="effeckt-off-screen-nav">
 
-  {{> page-transition}}
+  <h4>
+    Navigation
+    <a href="#0" id="effeckt-off-screen-nav-close" class="effeckt-off-screen-nav-close">×</a>
+  </h4>
 
-  {{> modal}}
+  <ul>
+    <li><a href="#0">This</a></li>
+    <li><a href="#0">Little</a></li>
+    <li><a href="#0">Piggy</a></li>
+    <li><a href="#0">Went</a></li>
+    <li><a href="#0">To</a></li>
+    <li><a href="#0">Market</a></li>
+  </ul>
+
+</nav>
+
+  <div class="effeckt-page-transition" id="effeckt-page-transition">
+
+    <div class="effeckt-page-transition-content">
+
+      <h2>Page Transition</h2>
+
+      <p>This is another page.</p>
+
+      <button class="page-transition-reset-button">Reset Transition</button>
+
+    </div>
+
+</div>
+
+
+    <!-- dialogs first is important for ~ selector -->
+  <div class="effeckt-modal-wrap" id="effeckt-modal-wrap"> <!-- for centering transform -->
+  <div class="effeckt-modal" id="effeckt-modal">
+    <h3>Modal Dialog</h3>
+    <div class="effeckt-modal-content">
+      <p>This is a modal window.</p>
+      <button class="effeckt-modal-close">Close me!</button>
+    </div>
+  </div>
+  </div>
+  <!-- overlay coming after is important for ~ selector -->
+  <div class="effeckt-overlay no-transitions" id="effeckt-overlay"></div>
 
   <div class="page-wrap no-transitions" id="page-wrap">
 
@@ -53,7 +93,22 @@
     </subhead>
 
 
-    {{>body}} 
+    <div class="effeckt effeckt-demo-tooltips">
+
+  <header>
+    <h2>
+      Tooltips
+      <a href="tooltips.html">#</a>
+    </h2>
+    <!-- <span class="source">
+      ...
+    </span> -->
+  </header>
+
+  <p>Lorem ipsum <a href="#" data-effeckt-tooltip-text="I am a tooltip." class="effeckt-tooltip-1">example one</a> dolor sit amet, consectetur adipisicing elit. Unde, dolor, ipsa, dolorem officia expedita error vel blanditiis tempore molestias voluptatem ducimus porro recusandae quo ex quisquam voluptas iure! Amet, dignissimos.</p>
+
+</div>
+ 
 
 
     <div class="effeckt contributors">
@@ -95,7 +150,7 @@
     </div>
 
 
-    {{> off-screen-nav-cover}}
+    <div class="off-screen-nav-cover"></div>
 
 
   </div><!-- div.page-wrap -->
@@ -107,17 +162,17 @@
   <script>window.jQuery || document.write('<script src="js/libs/jquery-2.0.3.min.js"><\/script>')</script>
 
   <!-- demo -->
-  <script src="{{assets}}/js/demo/demo.js"></script>
+  <script src="assets/js/demo/demo.js"></script>
 
   <!-- Individual module JS files here -->
   <!-- Should we combine or not combine? -->
   <!-- Should we provide minified versions? -->
-  <script src="{{assets}}/js/modules/modals.js"></script>
-  <script src="{{assets}}/js/modules/buttons.js"></script>
-  <script src="{{assets}}/js/modules/list-items.js"></script>
-  <script src="{{assets}}/js/modules/off-screen-nav.js"></script>
-  <script src="{{assets}}/js/modules/page-transitions.js"></script>
-  <script src="{{assets}}/js/modules/list-scroll.js"></script>
+  <script src="assets/js/modules/modals.js"></script>
+  <script src="assets/js/modules/buttons.js"></script>
+  <script src="assets/js/modules/list-items.js"></script>
+  <script src="assets/js/modules/off-screen-nav.js"></script>
+  <script src="assets/js/modules/page-transitions.js"></script>
+  <script src="assets/js/modules/list-scroll.js"></script>
 
   <!-- ideally should kick this off in the demo js file itself -->
   <script>

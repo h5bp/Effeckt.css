@@ -377,7 +377,7 @@ h1 span:nth-of-type(11) {
   display: none;
 }
 
-.effeckt-demo-captions + .contributors .readme {
+.effeckt-demo-captions ~ .contributors .readme {
   display: block;
 }
 

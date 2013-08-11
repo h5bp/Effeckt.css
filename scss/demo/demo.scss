@@ -237,7 +237,7 @@ h1 span:nth-of-type(11) {
   }
   .readme {
     display: none;
-    .effeckt-demo-captions + & {
+    .effeckt-demo-captions ~ & {
       display: block;
     }
   }
