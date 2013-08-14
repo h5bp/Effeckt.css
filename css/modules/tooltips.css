@@ -11,7 +11,7 @@
   transform: translateX(-50%);
   bottom: 125%;
   border-radius: 10px;
-  background: #333;
+  background: #333333;
   color: white;
   padding: 0.45rem 0.8rem;
   font-size: 90%;
@@ -20,7 +20,7 @@
   content: "";
   width: 0;
   height: 0;
-  border-top: 5px solid #333;
+  border-top: 5px solid #333333;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   position: absolute;
@@ -31,4 +31,36 @@
 .effeckt-tooltip-1[data-effeckt-tooltip-text]:hover::before, .effeckt-tooltip-1[data-effeckt-tooltip-text]:hover::after {
   opacity: 1;
   bottom: 115%;
+  transition: 0.2s 0.3s; }
+
+.effeckt-tooltip-2[data-effeckt-tooltip-text]::before, .effeckt-tooltip-2[data-effeckt-tooltip-text]::after {
+  opacity: 0;
+  transition: 0.2s; }
+.effeckt-tooltip-2[data-effeckt-tooltip-text]::after {
+  content: attr(data-effeckt-tooltip-text);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 125%;
+  border-radius: 10px;
+  background: #333333;
+  color: white;
+  padding: 0.45rem 0.8rem;
+  font-size: 90%;
+  white-space: nowrap; }
+.effeckt-tooltip-2[data-effeckt-tooltip-text]::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-bottom: 5px solid #333333;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  position: absolute;
+  top: 125%;
+  margin-top: -4px;
+  left: 50%;
+  margin-left: -5px; }
+.effeckt-tooltip-2[data-effeckt-tooltip-text]:hover::before, .effeckt-tooltip-2[data-effeckt-tooltip-text]:hover::after {
+  opacity: 1;
+  top: 115%;
   transition: 0.2s 0.3s; }
