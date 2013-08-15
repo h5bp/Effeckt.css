@@ -625,7 +625,7 @@
 
 .md-effect-7 .effeckt-modal {
   transform: translateY(-100%);
-  transition: all 0.3s;
+  transition: all .3s;
   opacity: 0; }
 
 .effeckt-show.md-effect-7 .effeckt-modal {
@@ -682,10 +682,10 @@
 
 .effeckt-show.md-effect-12 .effeckt-modal {
   opacity: 1;
-  background: #555555; }
+  background: #555; }
 
 .effeckt-show.md-effect-12 ~ .effeckt-overlay {
-  background: #555555; }
+  background: #555; }
 
 .md-effect-12, .md-effect-12 h3 {
   background: transparent; }
@@ -1326,16 +1326,17 @@
   transform: translateX(-50%);
   bottom: 125%;
   border-radius: 10px;
-  background: #333333;
+  background: #333;
   color: white;
   padding: 0.45rem 0.8rem;
   font-size: 90%;
-  white-space: nowrap; }
+  white-space: nowrap;
+  visibility: hidden; }
 .effeckt-tooltip-1[data-effeckt-tooltip-text]::before {
   content: "";
   width: 0;
   height: 0;
-  border-top: 5px solid #333333;
+  border-top: 5px solid #333;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   position: absolute;
@@ -1344,12 +1345,14 @@
   left: 50%;
   margin-left: -5px; }
 .effeckt-tooltip-1[data-effeckt-tooltip-text]:hover::before, .effeckt-tooltip-1[data-effeckt-tooltip-text]:hover::after {
+  visibility: visible;
   opacity: 1;
   bottom: 115%;
   transition: 0.2s 0.3s; }
 
 .effeckt-tooltip-2[data-effeckt-tooltip-text]::before, .effeckt-tooltip-2[data-effeckt-tooltip-text]::after {
   opacity: 0;
+  visibility: hidden;
   transition: 0.2s; }
 .effeckt-tooltip-2[data-effeckt-tooltip-text]::after {
   content: attr(data-effeckt-tooltip-text);
@@ -1358,7 +1361,7 @@
   transform: translateX(-50%);
   top: 125%;
   border-radius: 10px;
-  background: #333333;
+  background: #333;
   color: white;
   padding: 0.45rem 0.8rem;
   font-size: 90%;
@@ -1367,7 +1370,7 @@
   content: "";
   width: 0;
   height: 0;
-  border-bottom: 5px solid #333333;
+  border-bottom: 5px solid #333;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   position: absolute;
@@ -1377,5 +1380,6 @@
   margin-left: -5px; }
 .effeckt-tooltip-2[data-effeckt-tooltip-text]:hover::before, .effeckt-tooltip-2[data-effeckt-tooltip-text]:hover::after {
   opacity: 1;
+  visibility: visible;
   top: 115%;
   transition: 0.2s 0.3s; }

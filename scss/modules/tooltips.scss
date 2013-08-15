@@ -20,6 +20,7 @@
     padding: 0.45rem 0.8rem;
     font-size: 90%;
     white-space: nowrap;
+    visibility: hidden;
   }
   &::before { // triangle / speech bubble arrow
     content: "";
@@ -35,6 +36,7 @@
     margin-left: -5px;
   }
   &:hover::before, &:hover::after {
+    visibility: visible;
     opacity: 1;
     bottom: 115%;
     transition: 0.2s 0.3s; // slight delay on hover on
@@ -44,6 +46,7 @@
 .effeckt-tooltip-2[data-effeckt-tooltip-text] {
   &::before, &::after {
     opacity: 0;
+    visibility: hidden;
     transition: 0.2s; // no delay on hover off
   }
   &::after { // text of tooltip
@@ -74,6 +77,7 @@
   }
   &:hover::before, &:hover::after {
     opacity: 1;
+    visibility: visible;
     top: 115%;
     transition: 0.2s 0.3s; // slight delay on hover on
   }

@@ -1447,9 +1447,9 @@
   -ms-transform: translateY(-100%);
   -o-transform: translateY(-100%);
   transform: translateY(-100%);
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
   opacity: 0;
 }
 
@@ -1572,11 +1572,11 @@
 
 .effeckt-show.md-effect-12 .effeckt-modal {
   opacity: 1;
-  background: #555555;
+  background: #555;
 }
 
 .effeckt-show.md-effect-12 ~ .effeckt-overlay {
-  background: #555555;
+  background: #555;
 }
 
 .md-effect-12,
@@ -3649,18 +3649,19 @@
   transform: translateX(-50%);
   bottom: 125%;
   border-radius: 10px;
-  background: #333333;
+  background: #333;
   color: white;
   padding: 0.45rem 0.8rem;
   font-size: 90%;
   white-space: nowrap;
+  visibility: hidden;
 }
 
 .effeckt-tooltip-1[data-effeckt-tooltip-text]::before {
   content: "";
   width: 0;
   height: 0;
-  border-top: 5px solid #333333;
+  border-top: 5px solid #333;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   position: absolute;
@@ -3672,6 +3673,7 @@
 
 .effeckt-tooltip-1[data-effeckt-tooltip-text]:hover::before,
 .effeckt-tooltip-1[data-effeckt-tooltip-text]:hover::after {
+  visibility: visible;
   opacity: 1;
   bottom: 115%;
   -webkit-transition: 0.2s 0.3s;
@@ -3682,6 +3684,7 @@
 .effeckt-tooltip-2[data-effeckt-tooltip-text]::before,
 .effeckt-tooltip-2[data-effeckt-tooltip-text]::after {
   opacity: 0;
+  visibility: hidden;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
@@ -3697,7 +3700,7 @@
   transform: translateX(-50%);
   top: 125%;
   border-radius: 10px;
-  background: #333333;
+  background: #333;
   color: white;
   padding: 0.45rem 0.8rem;
   font-size: 90%;
@@ -3708,7 +3711,7 @@
   content: "";
   width: 0;
   height: 0;
-  border-bottom: 5px solid #333333;
+  border-bottom: 5px solid #333;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   position: absolute;
@@ -3721,6 +3724,7 @@
 .effeckt-tooltip-2[data-effeckt-tooltip-text]:hover::before,
 .effeckt-tooltip-2[data-effeckt-tooltip-text]:hover::after {
   opacity: 1;
+  visibility: visible;
   top: 115%;
   -webkit-transition: 0.2s 0.3s;
   -o-transition: 0.2s 0.3s;
