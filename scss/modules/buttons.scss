@@ -243,3 +243,26 @@
   opacity: 1;
   transform: none;
 }
+
+// Fill from left
+.effeckt-button.fill-from-left {
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: red;
+    transition: width $effeckt-buttons-transition-duration;
+  }
+  &:hover {
+    &:after {
+      width: 100%;
+    }
+  }
+  .label {
+    position: relative;
+    z-index: 1;
+  }
+}

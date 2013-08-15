@@ -34,7 +34,7 @@ html, body {
   height: 100%; }
 
 body {
-  background: #eee;
+  background: #eeeeee;
   font-family: Sans-serif;
   overflow-x: hidden;
   padding: 4rem; }
@@ -55,7 +55,7 @@ body {
       padding: 1.5rem; } }
   .effeckt header {
     margin: 0 0 1rem 0;
-    border-bottom: 2px solid #eee;
+    border-bottom: 2px solid #eeeeee;
     position: relative; }
     .effeckt header .source {
       position: absolute;
@@ -72,7 +72,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #ccc; }
+  color: #cccccc; }
 
 a:hover, a:active {
   color: black; }
@@ -102,7 +102,7 @@ h1 span {
   width: 50px;
   height: 50px;
   line-height: 50px;
-  background: #ccc;
+  background: #cccccc;
   color: white;
   text-align: center;
   text-transform: uppercase; }
@@ -131,42 +131,42 @@ button {
 hr {
   height: 0;
   border: 0;
-  border-top: 1px solid #ccc; }
+  border-top: 1px solid #cccccc; }
 
 h1 span:nth-of-type(1) {
   animation: logo-from-horz 0.5s ease forwards;
   transform: translateX(-50px);
-  background: #666; }
+  background: #666666; }
 
 h1 span:nth-of-type(2) {
   animation: logo-from-vert 0.5s 0.1s ease forwards;
   transform: translateY(-50px);
-  background: #444; }
+  background: #444444; }
 
 h1 span:nth-of-type(3) {
   animation: logo-from-vert 0.5s 0.2s ease forwards;
   transform: translateX(50px);
-  background: #666; }
+  background: #666666; }
 
 h1 span:nth-of-type(4) {
   animation: logo-from-horz 0.3s 0.3s ease forwards;
   transform: translateX(50px);
-  background: #444; }
+  background: #444444; }
 
 h1 span:nth-of-type(5) {
   animation: logo-from-horz 0.3s 0.4s ease forwards;
   transform: translateX(-50px);
-  background: #666; }
+  background: #666666; }
 
 h1 span:nth-of-type(6) {
   animation: logo-from-horz 0.3s 0.5s ease forwards;
   transform: translateX(50px);
-  background: #444; }
+  background: #444444; }
 
 h1 span:nth-of-type(7) {
   animation: logo-from-vert 0.3s 0.6s ease forwards;
   transform: translateY(-50px);
-  background: #666; }
+  background: #666666; }
 
 h1 span:nth-of-type(8) {
   animation: logo-from-horz 0.2s 1.1s ease forwards;
@@ -197,10 +197,10 @@ h1 span:nth-of-type(11) {
     opacity: 1; } }
 
 .contributors {
-  background: #222;
-  color: #eee; }
+  background: #222222;
+  color: #eeeeee; }
   .contributors header {
-    border-bottom-color: #666; }
+    border-bottom-color: #666666; }
   .contributors .readme {
     display: none; }
     .effeckt-demo-captions ~ .contributors .readme {
@@ -263,7 +263,7 @@ h1 span:nth-of-type(11) {
   .effeckt-modal h3 {
     padding: 1rem;
     color: white;
-    background: #444; }
+    background: #444444; }
 
 .effeckt-modal-content {
   padding: 1rem; }
@@ -273,7 +273,7 @@ h1 span:nth-of-type(11) {
   background: rgba(0, 0, 0, 0.5); }
 
 .effeckt-button {
-  background: #444;
+  background: #444444;
   color: white;
   border: 0;
   padding: 0.8rem 1rem;
@@ -291,7 +291,7 @@ h1 span:nth-of-type(11) {
   height: 100%;
   visibility: hidden;
   overflow: hidden;
-  background: #555; }
+  background: #555555; }
 
 .effeckt-page-transition-content {
   position: relative;
@@ -308,7 +308,7 @@ h1 span:nth-of-type(11) {
   left: 0;
   bottom: 0;
   overflow-y: auto;
-  background: #333;
+  background: #333333;
   visibility: hidden;
   width: 12rem; }
   .effeckt-off-screen-nav ul {
@@ -321,14 +321,14 @@ h1 span:nth-of-type(11) {
     display: block;
     padding: 0.3rem 1rem;
     color: white;
-    border-bottom: 1px solid #444; }
+    border-bottom: 1px solid #444444; }
     .effeckt-off-screen-nav li a:hover, .effeckt-off-screen-nav li a:focus {
-      background: #444; }
+      background: #444444; }
     .effeckt-off-screen-nav li a:active {
-      background: #222; }
+      background: #222222; }
   .effeckt-off-screen-nav h4 {
     color: white;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #eeeeee;
     padding: 1rem 0.5rem 0.2rem 0;
     margin: 0 1rem 1rem;
     text-transform: uppercase;
@@ -373,7 +373,7 @@ h1 span:nth-of-type(11) {
     margin-bottom: 2px;
     line-height: 2; }
     .effeckt-list li.new-item {
-      background: #ccc; }
+      background: #cccccc; }
 
 .effeckt-list-scroll {
   width: 230px;
@@ -385,7 +385,7 @@ h1 span:nth-of-type(11) {
   list-style: none; }
   .effeckt-list-scroll > li {
     padding: 0.5rem;
-    background: #eee;
+    background: #eeeeee;
     color: #252525;
     font-size: 18px; }
     .effeckt-list-scroll > li:nth-child(odd) {

@@ -264,3 +264,25 @@
   -o-transform: none;
   transform: none;
 }
+
+.effeckt-button.fill-from-left:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: red;
+  -webkit-transition: width 500ms;
+  -o-transition: width 500ms;
+  transition: width 500ms;
+}
+
+.effeckt-button.fill-from-left:hover:after {
+  width: 100%;
+}
+
+.effeckt-button.fill-from-left .label {
+  position: relative;
+  z-index: 1;
+}
