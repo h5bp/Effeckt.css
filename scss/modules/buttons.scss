@@ -244,6 +244,7 @@
   transform: none;
 }
 
+
 // Fill from left
 .effeckt-button.fill-from-left {
   &:after {
@@ -253,12 +254,84 @@
     left: 0;
     width: 0;
     height: 100%;
-    background: red;
+    background: #000;
     transition: width $effeckt-buttons-transition-duration;
   }
   &:hover {
     &:after {
       width: 100%;
+    }
+  }
+  .label {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+
+// Fill from right
+.effeckt-button.fill-from-right {
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background: #000;
+    transition: width $effeckt-buttons-transition-duration;
+  }
+  &:hover {
+    &:after {
+      width: 100%;
+    }
+  }
+  .label {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+
+// Fill from top
+.effeckt-button.fill-from-top {
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: #000;
+    transition: height $effeckt-buttons-transition-duration;
+  }
+  &:hover {
+    &:after {
+      height: 100%;
+    }
+  }
+  .label {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+
+// Fill from bottom
+.effeckt-button.fill-from-bottom {
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: #000;
+    transition: height $effeckt-buttons-transition-duration;
+  }
+  &:hover {
+    &:after {
+      height: 100%;
     }
   }
   .label {
