@@ -1888,6 +1888,239 @@
   transform: rotateX(-180deg);
 }
 
+[data-effeckt="landing"] {
+  -webkit-perspective: 400px;
+  -ms-perspective: 400px;
+  -o-perspective: 400px;
+  perspective: 400px;
+  -webkit-perspective-origin: 50% 50%;
+  -ms-perspective-origin: 50% 50%;
+  -o-perspective-origin: 50% 50%;
+  perspective-origin: 50% 50%;
+}
+
+[data-effeckt="landing"] li {
+  -webkit-transition: all 500ms ease, opacity 250ms ease;
+  -o-transition: all 500ms ease, opacity 250ms ease;
+  transition: all 500ms ease, opacity 250ms ease;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+
+[data-effeckt="landing"] li.past,
+[data-effeckt="landing"] li.future {
+  opacity: 0;
+}
+
+[data-effeckt="landing"] li.past {
+  -webkit-transform: scale(1.5) translate(10%, -50%);
+  -ms-transform: scale(1.5) translate(10%, -50%);
+  -o-transform: scale(1.5) translate(10%, -50%);
+  transform: scale(1.5) translate(10%, -50%);
+}
+
+[data-effeckt="landing"] li.future {
+  -webkit-transform: scale(1.5) translate(-10%, 50%);
+  -ms-transform: scale(1.5) translate(-10%, 50%);
+  -o-transform: scale(1.5) translate(-10%, 50%);
+  transform: scale(1.5) translate(-10%, 50%);
+}
+
+[data-effeckt="swing-front"] {
+  -webkit-perspective: 400px;
+  -ms-perspective: 400px;
+  -o-perspective: 400px;
+  perspective: 400px;
+  -webkit-perspective-origin: 50% 50%;
+  -ms-perspective-origin: 50% 50%;
+  -o-perspective-origin: 50% 50%;
+  perspective-origin: 50% 50%;
+}
+
+[data-effeckt="swing-front"] li {
+  -webkit-transition: all 500ms ease, opacity 250ms ease;
+  -o-transition: all 500ms ease, opacity 250ms ease;
+  transition: all 500ms ease, opacity 250ms ease;
+}
+
+[data-effeckt="swing-front"] li.past,
+[data-effeckt="swing-front"] li.future {
+  opacity: 0;
+}
+
+[data-effeckt="swing-front"] li.past {
+  -webkit-transform-origin: bottom;
+  -ms-transform-origin: bottom;
+  -o-transform-origin: bottom;
+  transform-origin: bottom;
+  -webkit-transform: rotateX(140deg);
+  -ms-transform: rotateX(140deg);
+  -o-transform: rotateX(140deg);
+  transform: rotateX(140deg);
+}
+
+[data-effeckt="swing-front"] li.future {
+  -webkit-transform-origin: top;
+  -ms-transform-origin: top;
+  -o-transform-origin: top;
+  transform-origin: top;
+  -webkit-transform: rotateX(-140deg);
+  -ms-transform: rotateX(-140deg);
+  -o-transform: rotateX(-140deg);
+  transform: rotateX(-140deg);
+}
+
+[data-effeckt="swing-back"] {
+  -webkit-perspective: 400px;
+  -ms-perspective: 400px;
+  -o-perspective: 400px;
+  perspective: 400px;
+  -webkit-perspective-origin: 50% 50%;
+  -ms-perspective-origin: 50% 50%;
+  -o-perspective-origin: 50% 50%;
+  perspective-origin: 50% 50%;
+}
+
+[data-effeckt="swing-back"] li {
+  -webkit-transition: all 500ms ease, opacity 250ms ease;
+  -o-transition: all 500ms ease, opacity 250ms ease;
+  transition: all 500ms ease, opacity 250ms ease;
+}
+
+[data-effeckt="swing-back"] li.past,
+[data-effeckt="swing-back"] li.future {
+  opacity: 0;
+}
+
+[data-effeckt="swing-back"] li.past {
+  -webkit-transform-origin: bottom;
+  -ms-transform-origin: bottom;
+  -o-transform-origin: bottom;
+  transform-origin: bottom;
+  -webkit-transform: rotateX(-140deg);
+  -ms-transform: rotateX(-140deg);
+  -o-transform: rotateX(-140deg);
+  transform: rotateX(-140deg);
+}
+
+[data-effeckt="swing-back"] li.future {
+  -webkit-transform-origin: top;
+  -ms-transform-origin: top;
+  -o-transform-origin: top;
+  transform-origin: top;
+  -webkit-transform: rotateX(140deg);
+  -ms-transform: rotateX(140deg);
+  -o-transform: rotateX(140deg);
+  transform: rotateX(140deg);
+}
+
+[data-effeckt="twist"] {
+  -webkit-perspective: 400px;
+  -ms-perspective: 400px;
+  -o-perspective: 400px;
+  perspective: 400px;
+  -webkit-perspective-origin: 50% 50%;
+  -ms-perspective-origin: 50% 50%;
+  -o-perspective-origin: 50% 50%;
+  perspective-origin: 50% 50%;
+}
+
+[data-effeckt="twist"] li {
+  -webkit-transition: all 500ms ease, opacity 250ms ease;
+  -o-transition: all 500ms ease, opacity 250ms ease;
+  transition: all 500ms ease, opacity 250ms ease;
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  -o-transform-origin: center;
+  transform-origin: center;
+}
+
+[data-effeckt="twist"] li.past,
+[data-effeckt="twist"] li.future {
+  opacity: 0;
+}
+
+[data-effeckt="twist"] li.past {
+  -webkit-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+
+[data-effeckt="twist"] li.future {
+  -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+[data-effeckt="door"] {
+  -webkit-perspective: 400px;
+  -ms-perspective: 400px;
+  -o-perspective: 400px;
+  perspective: 400px;
+  -webkit-perspective-origin: 50% 50%;
+  -ms-perspective-origin: 50% 50%;
+  -o-perspective-origin: 50% 50%;
+  perspective-origin: 50% 50%;
+}
+
+[data-effeckt="door"] li {
+  -webkit-transition: all 500ms ease, opacity 250ms ease;
+  -o-transition: all 500ms ease, opacity 250ms ease;
+  transition: all 500ms ease, opacity 250ms ease;
+  -webkit-transform-origin: 0% 0%;
+  -ms-transform-origin: 0% 0%;
+  -o-transform-origin: 0% 0%;
+  transform-origin: 0% 0%;
+}
+
+[data-effeckt="door"] li.past,
+[data-effeckt="door"] li.future {
+  opacity: 0;
+  -webkit-transform: rotateY(-90deg);
+  -ms-transform: rotateY(-90deg);
+  -o-transform: rotateY(-90deg);
+  transform: rotateY(-90deg);
+}
+
+[data-effeckt="climb"] {
+  -webkit-perspective: 400px;
+  -ms-perspective: 400px;
+  -o-perspective: 400px;
+  perspective: 400px;
+  -webkit-perspective-origin: 50% 50%;
+  -ms-perspective-origin: 50% 50%;
+  -o-perspective-origin: 50% 50%;
+  perspective-origin: 50% 50%;
+}
+
+[data-effeckt="climb"] li {
+  -webkit-transition: all 500ms ease, opacity 250ms ease;
+  -o-transition: all 500ms ease, opacity 250ms ease;
+  transition: all 500ms ease, opacity 250ms ease;
+  -webkit-transform-origin: 0% 0%;
+  -ms-transform-origin: 0% 0%;
+  -o-transform-origin: 0% 0%;
+  transform-origin: 0% 0%;
+}
+
+[data-effeckt="climb"] li.past {
+  -webkit-transform: translateY(-200%);
+  -ms-transform: translateY(-200%);
+  -o-transform: translateY(-200%);
+  transform: translateY(-200%);
+}
+
+[data-effeckt="climb"] li.future {
+  -webkit-transform: translateY(200%);
+  -ms-transform: translateY(200%);
+  -o-transform: translateY(200%);
+  transform: translateY(200%);
+}
+
 .md-perspective,
 .md-perspective body {
   height: 100%;
