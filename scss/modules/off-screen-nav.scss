@@ -49,7 +49,29 @@
   }
 }
 
-// 3 Left Squeeze
+
+// 3 Left Reveal
+.effeckt-off-screen-nav-left-reveal {
+  // Needs to be fixed size so .page-wrap can move same distance
+  width: 0px;
+  transform: translate3D(0, 0, 0);
+  transition: $effeckt-off-screen-navigation-transition-duration;
+  & h4 {
+    width: 10rem;
+  }
+  &.effeckt-off-screen-nav-show {
+    width: 12rem;
+    transform: translateX(0);
+    ~ .page-wrap {
+      transform: translateX(12rem);
+    }
+  }
+  ~ .page-wrap {
+    transition: $effeckt-off-screen-navigation-transition-duration;
+  }
+}
+
+// 4 Left Squeeze
 .effeckt-off-screen-nav-left-squeeze {
   // Needs to be percentage so can be equal parts with .page-wrap
   width: 40%;
@@ -67,7 +89,7 @@
   }
 }
 
-// 4 Right Overlay
+// 5 Right Overlay
 .effeckt-off-screen-nav-right-overlay {
   right: 0;
   left: auto;
@@ -79,7 +101,7 @@
 }
 
 
-// 5 Right Push
+// 6 Right Push
 .effeckt-off-screen-nav-right-push {
   // Needs to be fixed size so .page-wrap can move same distance
   left: auto;
@@ -97,7 +119,39 @@
   }
 }
 
-// 6 Right Squeeze
+// 7 Right Reveal
+.effeckt-off-screen-nav-right-reveal {
+  // Needs to be fixed size so .page-wrap can move same distance
+  width: 0;
+  overflow: hidden;
+  left: auto;
+  right: 0;
+  transform: translate3D(0, 0, 0);
+  transition: $effeckt-off-screen-navigation-transition-duration;
+  & h4 {
+    width: 10rem;
+    position: absolute;
+    top: 0px;
+    right: 0;
+  }
+  & ul {
+    width: 12rem;
+    position: absolute;
+    top: 3.2rem;
+    right: 0;
+  }
+  &.effeckt-off-screen-nav-show {
+    width: 12rem;
+    ~ .page-wrap {
+      transform: translateX(-12rem);
+    }
+  }
+  ~ .page-wrap {
+    transition: $effeckt-off-screen-navigation-transition-duration;
+  }
+}
+
+// 8 Right Squeeze
 .effeckt-off-screen-nav-right-squeeze {
   // Needs to be percentage so can be equal parts with .page-wrap
   left: auto;
@@ -120,7 +174,7 @@
 }
 
 
-// 7 Rotate
+// 9 Rotate
 .effeckt-off-screen-nav-rotate {
   transform-origin: 100% 50%;
   transition: $effeckt-off-screen-navigation-transition-duration;
