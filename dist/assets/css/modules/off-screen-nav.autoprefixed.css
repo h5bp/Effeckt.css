@@ -62,6 +62,42 @@
   transition: 500ms;
 }
 
+.effeckt-off-screen-nav-left-reveal {
+  width: 0px;
+  -webkit-transform: translate3D(0, 0, 0);
+  -ms-transform: translate3D(0, 0, 0);
+  -o-transform: translate3D(0, 0, 0);
+  transform: translate3D(0, 0, 0);
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+}
+
+.effeckt-off-screen-nav-left-reveal h4 {
+  width: 10rem;
+}
+
+.effeckt-off-screen-nav-left-reveal.effeckt-off-screen-nav-show {
+  width: 12rem;
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.effeckt-off-screen-nav-left-reveal.effeckt-off-screen-nav-show ~ .page-wrap {
+  -webkit-transform: translateX(12rem);
+  -ms-transform: translateX(12rem);
+  -o-transform: translateX(12rem);
+  transform: translateX(12rem);
+}
+
+.effeckt-off-screen-nav-left-reveal ~ .page-wrap {
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+}
+
 .effeckt-off-screen-nav-left-squeeze {
   width: 40%;
   -webkit-transform: translateX(-100%);
@@ -137,6 +173,51 @@
 }
 
 .effeckt-off-screen-nav-right-push ~ .page-wrap {
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+}
+
+.effeckt-off-screen-nav-right-reveal {
+  width: 0;
+  overflow: hidden;
+  left: auto;
+  right: 0;
+  -webkit-transform: translate3D(0, 0, 0);
+  -ms-transform: translate3D(0, 0, 0);
+  -o-transform: translate3D(0, 0, 0);
+  transform: translate3D(0, 0, 0);
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+}
+
+.effeckt-off-screen-nav-right-reveal h4 {
+  width: 10rem;
+  position: absolute;
+  top: 0px;
+  right: 0;
+}
+
+.effeckt-off-screen-nav-right-reveal ul {
+  width: 12rem;
+  position: absolute;
+  top: 3.2rem;
+  right: 0;
+}
+
+.effeckt-off-screen-nav-right-reveal.effeckt-off-screen-nav-show {
+  width: 12rem;
+}
+
+.effeckt-off-screen-nav-right-reveal.effeckt-off-screen-nav-show ~ .page-wrap {
+  -webkit-transform: translateX(-12rem);
+  -ms-transform: translateX(-12rem);
+  -o-transform: translateX(-12rem);
+  transform: translateX(-12rem);
+}
+
+.effeckt-off-screen-nav-right-reveal ~ .page-wrap {
   -webkit-transition: 500ms;
   -o-transition: 500ms;
   transition: 500ms;
