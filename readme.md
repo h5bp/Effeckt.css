@@ -49,7 +49,7 @@ You'll have to:
 
 1. Fork the project and pull down your copy
 1. Run `npm install`
-1. Make sure you have the Grunt command-line interface with `npm install -g grunt-cli`
+1. Make sure you have the Grunt command-line interface with `npm install -g grunt-cli` or alternatively `sudo npm install -g grunt-cli` if you encounter permissions issues
 1. Run `grunt dev` to start watching for file saves & run a local web server at port 8000 ([localhost:8000](http://localhost:8000/)).
 
 
