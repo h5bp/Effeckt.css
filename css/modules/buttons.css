@@ -194,7 +194,7 @@
   left: 0;
   width: 0;
   height: 100%;
-  background: black;
+  background: #000;
   transition: width 500ms; }
 .effeckt-button.fill-from-left:hover:after {
   width: 100%; }
@@ -209,7 +209,7 @@
   right: 0;
   width: 0;
   height: 100%;
-  background: black;
+  background: #000;
   transition: width 500ms; }
 .effeckt-button.fill-from-right:hover:after {
   width: 100%; }
@@ -224,7 +224,7 @@
   left: 0;
   width: 100%;
   height: 0;
-  background: black;
+  background: #000;
   transition: height 500ms; }
 .effeckt-button.fill-from-top:hover:after {
   height: 100%; }
@@ -239,7 +239,7 @@
   left: 0;
   width: 100%;
   height: 0;
-  background: black;
+  background: #000;
   transition: height 500ms; }
 .effeckt-button.fill-from-bottom:hover:after {
   height: 100%; }

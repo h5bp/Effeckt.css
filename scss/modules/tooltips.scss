@@ -2,83 +2,80 @@
   position: relative;
 }
 
-// probably should make various things into variables, like colors
-.effeckt-tooltip-1[data-effeckt-tooltip-text] {
+@mixin effeckt-tooltip($direction, $background: #333, $color: white) {
   &::before, &::after {
     opacity: 0;
     transition: 0.2s; // no delay on hover off
   }
+
   &::after { // text of tooltip
     content: attr(data-effeckt-tooltip-text);
     position: absolute;
     left: 50%;
     transform: translateX(-50%); // horizontal centering
-    bottom: 125%;
     border-radius: 10px;
-    background: #333;
-    color: white;
+    background: $background;
+    color: $color;
     padding: 0.45rem 0.8rem;
     font-size: 90%;
     white-space: nowrap;
-    visibility: hidden;
+    visibility: hidden; // makes un-hoverable when hidden (opacity alone doesn't work)
   }
+
   &::before { // triangle / speech bubble arrow
     content: "";
     width: 0;
     height: 0;
-    border-top: 5px solid #333;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
     position: absolute;
-    bottom: 125%;
-    margin-bottom: -4px; // one less pixel to prevent occational 1px gap
     left: 50%;
     margin-left: -5px;
   }
+
   &:hover::before, &:hover::after {
     visibility: visible;
     opacity: 1;
-    bottom: 115%;
     transition: 0.2s 0.3s; // slight delay on hover on
+  }
+
+  // direction specific
+  @if $direction == bottom {
+    &::after { // text of tooltip
+      top: 125%;
+    }
+
+    &::before {
+      border-bottom: 5px solid $background;
+      top: 125%;
+      margin-top: -4px; // one less pixel to prevent occational 1px gap
+    }
+
+    &:hover::before, &:hover::after {
+      top: 115%;
+    }
+  } @else {
+    &::after {
+      bottom: 125%;
+    }
+
+    &::before {
+      border-top: 5px solid $background;
+      bottom: 125%;
+      margin-bottom: -4px; // one less pixel to prevent occational 1px gap
+    }
+
+    &:hover::before, &:hover::after {
+      bottom: 115%;
+    }
   }
 }
 
-.effeckt-tooltip-2[data-effeckt-tooltip-text] {
-  &::before, &::after {
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.2s; // no delay on hover off
-  }
-  &::after { // text of tooltip
-    content: attr(data-effeckt-tooltip-text);
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%); // horizontal centering
-    top: 125%;
-    border-radius: 10px;
-    background: #333;
-    color: white;
-    padding: 0.45rem 0.8rem;
-    font-size: 90%;
-    white-space: nowrap;
-  }
-  &::before { // triangle / speech bubble arrow
-    content: "";
-    width: 0;
-    height: 0;
-    border-bottom: 5px solid #333;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    position: absolute;
-    top: 125%;
-    margin-top: -4px; // one less pixel to prevent occational 1px gap
-    left: 50%;
-    margin-left: -5px;
-  }
-  &:hover::before, &:hover::after {
-    opacity: 1;
-    visibility: visible;
-    top: 115%;
-    transition: 0.2s 0.3s; // slight delay on hover on
-  }
+// probably should make various things into variables, like colors
+.effeckt-tooltip-top[data-effeckt-tooltip-text] {
+  @include effeckt-tooltip(top);
+}
+
+.effeckt-tooltip-bottom[data-effeckt-tooltip-text] {
+  @include effeckt-tooltip(bottom);
 }
