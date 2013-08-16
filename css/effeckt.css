@@ -562,19 +562,19 @@
 @keyframes fallOffY {
   0% {
     opacity: 1;
-    transform: translateX(0) rotateZ(0); }
+    transform: translateX(0) translateY(0) rotateZ(0deg); }
 
   50% {
     opacity: 1;
-    transform: translateX(-200px) rotateZ(0); }
+    transform: translateX(-50%) translateY(0) rotateZ(0deg); }
 
   75% {
     opacity: 1;
-    transform: translateX(-220px) rotateZ(-30deg); }
+    transform: translateX(-50%) translateY(0) rotateZ(-30deg); }
 
   100% {
     opacity: 0;
-    transform: translateX(-600px) rotateZ(-60deg) translateY(400px); } }
+    transform: translateX(-50%) translateY(300px) rotateZ(-60deg); } }
 
 .effeckt-list-scroll {
   position: relative;

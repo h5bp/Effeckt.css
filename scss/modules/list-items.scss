@@ -236,7 +236,7 @@
 }
 .effeckt-list[data-type='wobble-out'] .remove-item {
   backface-visibility: visible;
-   transform-origin: top left;
+  transform-origin: top left;
   animation:
     wobbleOutY $effeckt-list-item-transition-duration*3 both $effeckt-list-item-transition-duration,
     closeSpace $effeckt-list-item-transition-duration ease forwards $effeckt-list-item-transition-duration*3;
@@ -303,19 +303,19 @@
 @keyframes fallOffY {
   0% {
     opacity: 1;
-    transform: translateX(0) rotateZ(0);
+    transform: translateX(0) translateY(0) rotateZ(0deg);
   }
   50% {
     opacity: 1;
-    transform: translateX(-200px) rotateZ(0);
+    transform: translateX(-50%) translateY(0) rotateZ(0deg);
   }
   75% {
     opacity: 1;
-    transform: translateX(-220px) rotateZ(-30deg);
+    transform: translateX(-50%) translateY(0) rotateZ(-30deg);
   }
   100% {
     opacity: 0;
-    transform: translateX(-600px) rotateZ(-60deg) translateY(400px);
+    transform: translateX(-50%) translateY(300px) rotateZ(-60deg);
   }
 }
 
