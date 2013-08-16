@@ -59,3 +59,78 @@
       transform: rotateX(180deg); }
     [data-effeckt="fly"] li.future {
       transform: rotateX(-180deg); }
+
+[data-effeckt="landing"] {
+  perspective: 400px;
+  perspective-origin: 50% 50%; }
+  [data-effeckt="landing"] li {
+    transition: all 500ms ease, opacity 250ms ease;
+    transform-origin: 50% 50%; }
+    [data-effeckt="landing"] li.past, [data-effeckt="landing"] li.future {
+      opacity: 0; }
+    [data-effeckt="landing"] li.past {
+      transform: scale(1.5) translate(10%, -50%); }
+    [data-effeckt="landing"] li.future {
+      transform: scale(1.5) translate(-10%, 50%); }
+
+[data-effeckt="swing-front"] {
+  perspective: 400px;
+  perspective-origin: 50% 50%; }
+  [data-effeckt="swing-front"] li {
+    transition: all 500ms ease, opacity 250ms ease; }
+    [data-effeckt="swing-front"] li.past, [data-effeckt="swing-front"] li.future {
+      opacity: 0; }
+    [data-effeckt="swing-front"] li.past {
+      transform-origin: bottom;
+      transform: rotateX(140deg); }
+    [data-effeckt="swing-front"] li.future {
+      transform-origin: top;
+      transform: rotateX(-140deg); }
+
+[data-effeckt="swing-back"] {
+  perspective: 400px;
+  perspective-origin: 50% 50%; }
+  [data-effeckt="swing-back"] li {
+    transition: all 500ms ease, opacity 250ms ease; }
+    [data-effeckt="swing-back"] li.past, [data-effeckt="swing-back"] li.future {
+      opacity: 0; }
+    [data-effeckt="swing-back"] li.past {
+      transform-origin: bottom;
+      transform: rotateX(-140deg); }
+    [data-effeckt="swing-back"] li.future {
+      transform-origin: top;
+      transform: rotateX(140deg); }
+
+[data-effeckt="twist"] {
+  perspective: 400px;
+  perspective-origin: 50% 50%; }
+  [data-effeckt="twist"] li {
+    transition: all 500ms ease, opacity 250ms ease;
+    transform-origin: center; }
+    [data-effeckt="twist"] li.past, [data-effeckt="twist"] li.future {
+      opacity: 0; }
+    [data-effeckt="twist"] li.past {
+      transform: rotateY(-180deg); }
+    [data-effeckt="twist"] li.future {
+      transform: rotateY(180deg); }
+
+[data-effeckt="door"] {
+  perspective: 400px;
+  perspective-origin: 50% 50%; }
+  [data-effeckt="door"] li {
+    transition: all 500ms ease, opacity 250ms ease;
+    transform-origin: 0% 0%; }
+    [data-effeckt="door"] li.past, [data-effeckt="door"] li.future {
+      opacity: 0;
+      transform: rotateY(-90deg); }
+
+[data-effeckt="climb"] {
+  perspective: 400px;
+  perspective-origin: 50% 50%; }
+  [data-effeckt="climb"] li {
+    transition: all 500ms ease, opacity 250ms ease;
+    transform-origin: 0% 0%; }
+    [data-effeckt="climb"] li.past {
+      transform: translateY(-200%); }
+    [data-effeckt="climb"] li.future {
+      transform: translateY(200%); }
