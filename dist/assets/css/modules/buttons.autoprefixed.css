@@ -264,3 +264,91 @@
   -o-transform: none;
   transform: none;
 }
+
+.effeckt-button.fill-from-left:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: black;
+  -webkit-transition: width 500ms;
+  -o-transition: width 500ms;
+  transition: width 500ms;
+}
+
+.effeckt-button.fill-from-left:hover:after {
+  width: 100%;
+}
+
+.effeckt-button.fill-from-left .label {
+  position: relative;
+  z-index: 1;
+}
+
+.effeckt-button.fill-from-right:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  background: black;
+  -webkit-transition: width 500ms;
+  -o-transition: width 500ms;
+  transition: width 500ms;
+}
+
+.effeckt-button.fill-from-right:hover:after {
+  width: 100%;
+}
+
+.effeckt-button.fill-from-right .label {
+  position: relative;
+  z-index: 1;
+}
+
+.effeckt-button.fill-from-top:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: black;
+  -webkit-transition: height 500ms;
+  -o-transition: height 500ms;
+  transition: height 500ms;
+}
+
+.effeckt-button.fill-from-top:hover:after {
+  height: 100%;
+}
+
+.effeckt-button.fill-from-top .label {
+  position: relative;
+  z-index: 1;
+}
+
+.effeckt-button.fill-from-bottom:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: black;
+  -webkit-transition: height 500ms;
+  -o-transition: height 500ms;
+  transition: height 500ms;
+}
+
+.effeckt-button.fill-from-bottom:hover:after {
+  height: 100%;
+}
+
+.effeckt-button.fill-from-bottom .label {
+  position: relative;
+  z-index: 1;
+}
