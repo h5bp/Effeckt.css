@@ -72,10 +72,10 @@
 }
 
 // probably should make various things into variables, like colors
-.effeckt-tooltip-top[data-effeckt-tooltip-text] {
+.effeckt-tooltip[data-effeckt-tooltip-text][data-effeckt-tooltip-position-top] {
   @include effeckt-tooltip(top);
 }
 
-.effeckt-tooltip-bottom[data-effeckt-tooltip-text] {
+.effeckt-tooltip[data-effeckt-tooltip-text][data-effeckt-tooltip-position-bottom] {
   @include effeckt-tooltip(bottom);
 }
