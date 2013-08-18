@@ -37,6 +37,15 @@ $effeckt-caption-transition-duration: $effeckt-transition-duration !default;
 
 
 
-// Lit Items
+// List Items
 $effeckt-list-item-transition-duration: $effeckt-transition-duration !default;
 $effeckt-list-scroll-transition-duration: $effeckt-transition-duration !default;
+
+
+
+// Form Elements
+// Radio and Checkboxes
+$effeckt-form-element-ckradio-ios7bg: #FFF !default;
+$effeckt-form-element-ckradio-ios7border-radius: 15px !default;
+$effeckt-form-element-ckradio-ios7transition: all .3s ease-out !default;
+$effeckt-form-element-ckradio-ios7transition-after: all 0.1s ease-in .1s !default;
