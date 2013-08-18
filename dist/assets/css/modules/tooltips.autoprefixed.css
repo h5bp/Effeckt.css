@@ -2,15 +2,15 @@
   position: relative;
 }
 
-.effeckt-tooltip-top[data-effeckt-tooltip-text]::before,
-.effeckt-tooltip-top[data-effeckt-tooltip-text]::after {
+.effeckt-tooltip[data-effeckt-tooltip-text][data-effeckt-tooltip-position-top]::before,
+.effeckt-tooltip[data-effeckt-tooltip-text][data-effeckt-tooltip-position-top]::after {
   opacity: 0;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
 }
 
-.effeckt-tooltip-top[data-effeckt-tooltip-text]::after {
+.effeckt-tooltip[data-effeckt-tooltip-text][data-effeckt-tooltip-position-top]::after {
   content: attr(data-effeckt-tooltip-text);
   position: absolute;
   left: 50%;
@@ -27,7 +27,7 @@
   visibility: hidden;
 }
 
-.effeckt-tooltip-top[data-effeckt-tooltip-text]::before {
+.effeckt-tooltip[data-effeckt-tooltip-text][data-effeckt-tooltip-position-top]::before {
   content: "";
   width: 0;
   height: 0;
@@ -38,8 +38,8 @@
   margin-left: -5px;
 }
 
-.effeckt-tooltip-top[data-effeckt-tooltip-text]:hover::before,
-.effeckt-tooltip-top[data-effeckt-tooltip-text]:hover::after {
+.effeckt-tooltip[data-effeckt-tooltip-text][data-effeckt-tooltip-position-top]:hover::before,
+.effeckt-tooltip[data-effeckt-tooltip-text][data-effeckt-tooltip-position-top]:hover::after {
   visibility: visible;
   opacity: 1;
   -webkit-transition: 0.2s 0.3s;
@@ -47,30 +47,30 @@
   transition: 0.2s 0.3s;
 }
 
-.effeckt-tooltip-top[data-effeckt-tooltip-text]::after {
+.effeckt-tooltip[data-effeckt-tooltip-text][data-effeckt-tooltip-position-top]::after {
   bottom: 125%;
 }
 
-.effeckt-tooltip-top[data-effeckt-tooltip-text]::before {
+.effeckt-tooltip[data-effeckt-tooltip-text][data-effeckt-tooltip-position-top]::before {
   border-top: 5px solid #333333;
   bottom: 125%;
   margin-bottom: -4px;
 }
 
-.effeckt-tooltip-top[data-effeckt-tooltip-text]:hover::before,
-.effeckt-tooltip-top[data-effeckt-tooltip-text]:hover::after {
+.effeckt-tooltip[data-effeckt-tooltip-text][data-effeckt-tooltip-position-top]:hover::before,
+.effeckt-tooltip[data-effeckt-tooltip-text][data-effeckt-tooltip-position-top]:hover::after {
   bottom: 115%;
 }
 
-.effeckt-tooltip-bottom[data-effeckt-tooltip-text]::before,
-.effeckt-tooltip-bottom[data-effeckt-tooltip-text]::after {
+.effeckt-tooltip[data-effeckt-tooltip-text][data-effeckt-tooltip-position-bottom]::before,
+.effeckt-tooltip[data-effeckt-tooltip-text][data-effeckt-tooltip-position-bottom]::after {
   opacity: 0;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
 }
 
-.effeckt-tooltip-bottom[data-effeckt-tooltip-text]::after {
+.effeckt-tooltip[data-effeckt-tooltip-text][data-effeckt-tooltip-position-bottom]::after {
   content: attr(data-effeckt-tooltip-text);
   position: absolute;
   left: 50%;
@@ -87,7 +87,7 @@
   visibility: hidden;
 }
 
-.effeckt-tooltip-bottom[data-effeckt-tooltip-text]::before {
+.effeckt-tooltip[data-effeckt-tooltip-text][data-effeckt-tooltip-position-bottom]::before {
   content: "";
   width: 0;
   height: 0;
@@ -98,8 +98,8 @@
   margin-left: -5px;
 }
 
-.effeckt-tooltip-bottom[data-effeckt-tooltip-text]:hover::before,
-.effeckt-tooltip-bottom[data-effeckt-tooltip-text]:hover::after {
+.effeckt-tooltip[data-effeckt-tooltip-text][data-effeckt-tooltip-position-bottom]:hover::before,
+.effeckt-tooltip[data-effeckt-tooltip-text][data-effeckt-tooltip-position-bottom]:hover::after {
   visibility: visible;
   opacity: 1;
   -webkit-transition: 0.2s 0.3s;
@@ -107,17 +107,17 @@
   transition: 0.2s 0.3s;
 }
 
-.effeckt-tooltip-bottom[data-effeckt-tooltip-text]::after {
+.effeckt-tooltip[data-effeckt-tooltip-text][data-effeckt-tooltip-position-bottom]::after {
   top: 125%;
 }
 
-.effeckt-tooltip-bottom[data-effeckt-tooltip-text]::before {
+.effeckt-tooltip[data-effeckt-tooltip-text][data-effeckt-tooltip-position-bottom]::before {
   border-bottom: 5px solid #333333;
   top: 125%;
   margin-top: -4px;
 }
 
-.effeckt-tooltip-bottom[data-effeckt-tooltip-text]:hover::before,
-.effeckt-tooltip-bottom[data-effeckt-tooltip-text]:hover::after {
+.effeckt-tooltip[data-effeckt-tooltip-text][data-effeckt-tooltip-position-bottom]:hover::before,
+.effeckt-tooltip[data-effeckt-tooltip-text][data-effeckt-tooltip-position-bottom]:hover::after {
   top: 115%;
 }
