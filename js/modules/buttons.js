@@ -8,8 +8,10 @@ var Buttons = {
 
   bindUIActions: function() {
 
+    var self = this;
+
     $('.effeckt-button').on( 'click', function(){
-      Buttons.showLoader(this);
+      self.showLoader(this);
     });
 
   },
