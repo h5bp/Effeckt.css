@@ -16,7 +16,7 @@
 
 
 // Grow
-[data-effeckt="grow"] li {
+[data-effeckt-type="grow"] li {
   transition: all $effeckt-list-scroll-transition-duration ease;
   transform-origin: 50% 50%;
   &.past, &.future {
@@ -26,7 +26,7 @@
 
 
 // Curl
-[data-effeckt="curl"] li {
+[data-effeckt-type="curl"] li {
   // this was originally applied to the 'li', 
   // was this a mistake? Seems like it should 
   // be part of the parent <ul>
@@ -46,7 +46,7 @@
 }
 
 // Wave
-[data-effeckt="wave"] li {
+[data-effeckt-type="wave"] li {
   transition: all $effeckt-list-scroll-transition-duration cubic-bezier(0.260, 0.860, 0.440, 0.985);
   &.past {
     transform: translateX(-70%);
@@ -57,7 +57,7 @@
 }
 
 // Fan
-[data-effeckt="fan"] li {
+[data-effeckt-type="fan"] li {
   transition: all $effeckt-list-scroll-transition-duration cubic-bezier(0.390, 0.575, 0.565, 1.000);
   transform-origin: 0% 0%;
   &.past {
@@ -69,7 +69,7 @@
 }
 
 // Fade
-[data-effeckt="fade"] li {
+[data-effeckt-type="fade"] li {
   transition: opacity $effeckt-list-scroll-transition-duration/2 ease-in-out;
 
   &.past, &.future {
@@ -78,7 +78,7 @@
 }
 
 // Fly
-[data-effeckt="fly"] {
+[data-effeckt-type="fly"] {
   perspective: 400px;
   perspective-origin: 50% 50%;
   li {
@@ -98,7 +98,7 @@
 }
 
 //landing
-[data-effeckt="landing"] {
+[data-effeckt-type="landing"] {
   perspective: 400px;
   perspective-origin: 50% 50%;
   li {
@@ -117,7 +117,7 @@
 }
 
 //swing from back to front
-[data-effeckt="swing-front"] {
+[data-effeckt-type="swing-front"] {
   perspective: 400px;
   perspective-origin: 50% 50%;
   li {
@@ -137,7 +137,7 @@
 }
 
 //swing from front to back
-[data-effeckt="swing-back"] {
+[data-effeckt-type="swing-back"] {
   perspective: 400px;
   perspective-origin: 50% 50%;
   li {
@@ -157,7 +157,7 @@
 }
 
 //swing from front to back
-[data-effeckt="twist"] {
+[data-effeckt-type="twist"] {
   perspective: 400px;
   perspective-origin: 50% 50%;
   li {
@@ -176,7 +176,7 @@
 }
 
 //open door effect
-[data-effeckt="door"] {
+[data-effeckt-type="door"] {
   perspective: 400px;
   perspective-origin: 50% 50%;
   li {
@@ -190,7 +190,7 @@
 }
 
 //climb effect
-[data-effeckt="climb"] {
+[data-effeckt-type="climb"] {
   perspective: 400px;
   perspective-origin: 50% 50%;
   li {
