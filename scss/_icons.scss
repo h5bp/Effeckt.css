@@ -1,0 +1,65 @@
+@font-face {
+  font-family: 'Buttons';
+  src:url('../fonts/Buttons.eot');
+  src:url('../fonts/Buttons.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Buttons.woff') format('woff'),
+    url('../fonts/Buttons.ttf') format('truetype'),
+    url('../fonts/Buttons.svg#Buttons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Pseudo elements for icons */
+[data-effeckt-icon*="icon-"]:before {
+  font-family: 'Buttons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+[data-effeckt-icon="icon-cart"]:before {
+  content: "\e000";
+}
+[data-effeckt-icon="icon-star"]:before {
+  content: "\e008";
+}
+[data-effeckt-icon="icon-heart"]:before {
+  content: "\e006";
+}
+[data-effeckt-icon="icon-cog"]:before {
+  content: "\e001";
+}
+[data-effeckt-icon="icon-arrow-up"]:before {
+  content: "\e002";
+}
+[data-effeckt-icon="icon-arrow-right"]:before {
+  content: "\e003";
+}
+[data-effeckt-icon="icon-arrow-down"]:before {
+  content: "\e004";
+}
+[data-effeckt-icon="icon-arrow-left"]:before {
+  content: "\e005";
+}
+[data-effeckt-icon="icon-remove"]:before {
+  content: "\e007";
+}
+[data-effeckt-icon="icon-truck"]:before {
+  content: "\e009";
+}
+[data-effeckt-icon="icon-envelop"]:before {
+  content: "\e00a";
+}
+[data-effeckt-icon="icon-heart-empty"]:before {
+  content: "\e00b";
+}
+[data-effeckt-icon="icon-star-empty"]:before {
+  content: "\e00c";
+}
+[data-effeckt-icon="icon-plus"]:before {
+  content: "\e00d";
+}

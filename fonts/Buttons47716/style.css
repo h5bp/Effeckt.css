@@ -1,0 +1,81 @@
+@font-face {
+	font-family: 'Buttons';
+	src:url('fonts/Buttons.eot');
+	src:url('fonts/Buttons.eot?#iefix') format('embedded-opentype'),
+		url('fonts/Buttons.woff') format('woff'),
+		url('fonts/Buttons.ttf') format('truetype'),
+		url('fonts/Buttons.svg#Buttons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'Buttons';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+.icon-cart, .icon-star, .icon-heart, .icon-cog, .icon-arrow-up, .icon-arrow-right, .icon-arrow-down, .icon-arrow-left, .icon-remove, .icon-truck, .icon-envelop, .icon-heart-2, .icon-star-2, .icon-plus {
+	font-family: 'Buttons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-cart:before {
+	content: "\e000";
+}
+.icon-star:before {
+	content: "\e008";
+}
+.icon-heart:before {
+	content: "\e006";
+}
+.icon-cog:before {
+	content: "\e001";
+}
+.icon-arrow-up:before {
+	content: "\e002";
+}
+.icon-arrow-right:before {
+	content: "\e003";
+}
+.icon-arrow-down:before {
+	content: "\e004";
+}
+.icon-arrow-left:before {
+	content: "\e005";
+}
+.icon-remove:before {
+	content: "\e007";
+}
+.icon-truck:before {
+	content: "\e009";
+}
+.icon-envelop:before {
+	content: "\e00a";
+}
+.icon-heart-2:before {
+	content: "\e00b";
+}
+.icon-star-2:before {
+	content: "\e00c";
+}
+.icon-plus:before {
+	content: "\e00d";
+}
