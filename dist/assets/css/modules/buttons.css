@@ -241,56 +241,55 @@
   position: relative;
   z-index: 1; }
 
-/* The effeckt-button--icon-slide__icon--demo data-URI and class are for demo purposes.
-A user could apply their own class to the button's label to designate
-the icon/image they want sliding in and out -- utilizing the :before
-pseudo-element to place a background image or character from an icon
-font. */
-.effeckt-button--icon-slide__icon--demo:before {
-  content: '';
-  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPCEtLSBHZW5lcmF0b3I6IEljb01vb24uaW8gLS0+IDwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+IDxzdmcgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiB2aWV3Qm94PSIwIDAgMzIgMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIGZpbGw9IiNmZmZmZmYiPjxnPjxwYXRoIGQ9Ik0gMTYsMyBDIDEyLjUyOCwzIDkuMjYzLDQuMzUyIDYuODA4LDYuODA4IEMgNC4zNTIsOS4yNjMgMywxMi41MjggMywxNiBDIDMsMTkuNDcyIDQuMzUyLDIyLjczNyA2LjgwOCwyNS4xOTIgQyA5LjI2MywyNy42NDggMTIuNTI4LDI5IDE2LDI5IEMgMTkuNDcyLDI5IDIyLjczNywyNy42NDggMjUuMTkyLDI1LjE5MiBDIDI3LjY0OCwyMi43MzcgMjksMTkuNDcyIDI5LDE2IEMgMjksMTIuNTI4IDI3LjY0OCw5LjI2MyAyNS4xOTIsNi44MDggQyAyMi43MzcsNC4zNTIgMTkuNDcyLDMgMTYsMyBaIE0gMTYsMCBMIDE2LDAgQyAyNC44MzcsMCAzMiw3LjE2MyAzMiwxNiBDIDMyLDI0LjgzNyAyNC44MzcsMzIgMTYsMzIgQyA3LjE2MywzMiAwLDI0LjgzNyAwLDE2IEMgMCw3LjE2MyA3LjE2MywwIDE2LDAgWk0gMTQsMjJMIDE4LDIyTCAxOCwyNkwgMTQsMjZ6TSAxNCw2TCAxOCw2TCAxOCwxOEwgMTQsMTh6Ij48L3BhdGg+PC9nPjwvc3ZnPg==) no-repeat center center;
-  background-size: 30px 30px; }
+/*==========================
+ICON SLIDE
 
-.effeckt-button--icon-slide {
+Example markup:
+<button class="effeckt-button" data-effeckt-type="icon-slide from-top">
+  <span class="effeckt-button-label demo-button-icon">Icon from top</span>
+</button>
+==========================*/
+.demo-button-icon:before {
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPCEtLSBHZW5lcmF0b3I6IEljb01vb24uaW8gLS0+IDwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+IDxzdmcgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiB2aWV3Qm94PSIwIDAgMzIgMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIGZpbGw9IiNmZmZmZmYiPjxnPjxwYXRoIGQ9Ik0gMTYsMyBDIDEyLjUyOCwzIDkuMjYzLDQuMzUyIDYuODA4LDYuODA4IEMgNC4zNTIsOS4yNjMgMywxMi41MjggMywxNiBDIDMsMTkuNDcyIDQuMzUyLDIyLjczNyA2LjgwOCwyNS4xOTIgQyA5LjI2MywyNy42NDggMTIuNTI4LDI5IDE2LDI5IEMgMTkuNDcyLDI5IDIyLjczNywyNy42NDggMjUuMTkyLDI1LjE5MiBDIDI3LjY0OCwyMi43MzcgMjksMTkuNDcyIDI5LDE2IEMgMjksMTIuNTI4IDI3LjY0OCw5LjI2MyAyNS4xOTIsNi44MDggQyAyMi43MzcsNC4zNTIgMTkuNDcyLDMgMTYsMyBaIE0gMTYsMCBMIDE2LDAgQyAyNC44MzcsMCAzMiw3LjE2MyAzMiwxNiBDIDMyLDI0LjgzNyAyNC44MzcsMzIgMTYsMzIgQyA3LjE2MywzMiAwLDI0LjgzNyAwLDE2IEMgMCw3LjE2MyA3LjE2MywwIDE2LDAgWk0gMTQsMjJMIDE4LDIyTCAxOCwyNkwgMTQsMjZ6TSAxNCw2TCAxOCw2TCAxOCwxOEwgMTQsMTh6Ij48L3BhdGg+PC9nPjwvc3ZnPg==) no-repeat center center;
+  background-size: 30px 100%; }
+
+.effeckt-button[data-effeckt-type~="icon-slide"] {
   overflow: hidden;
   padding: 0; }
-
-.effeckt-button--icon-slide__label {
-  padding: 0.8rem 1rem;
-  display: block;
-  position: relative;
-  transition: transform 500ms; }
-  .effeckt-button--icon-slide__label:before {
+  .effeckt-button[data-effeckt-type~="icon-slide"] .effeckt-button-label {
+    padding: 0.8rem 1rem;
     display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%; }
+    position: relative;
+    transition: transform 500ms; }
+    .effeckt-button[data-effeckt-type~="icon-slide"] .effeckt-button-label:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%; }
 
-.effeckt-button--icon-slide--from-top .effeckt-button--icon-slide__label:before {
-  top: -100%; }
-
-.effeckt-button--icon-slide--from-bottom .effeckt-button--icon-slide__label:before {
-  bottom: -100%; }
-
-.effeckt-button--icon-slide--from-left .effeckt-button--icon-slide__label:before {
-  left: -100%; }
-
-.effeckt-button--icon-slide--from-right .effeckt-button--icon-slide__label:before {
-  right: -100%; }
-
-.effeckt-button--icon-slide--from-top .effeckt-button--icon-slide__label:before, .effeckt-button--icon-slide--from-bottom .effeckt-button--icon-slide__label:before {
+.effeckt-button[data-effeckt-type~="icon-slide"][data-effeckt-type~="from-top"] .effeckt-button-label:before {
+  top: -100%;
   left: 0;
   right: 0; }
-
-.effeckt-button--icon-slide--from-left .effeckt-button--icon-slide__label:before, .effeckt-button--icon-slide--from-right .effeckt-button--icon-slide__label:before {
+.effeckt-button[data-effeckt-type~="icon-slide"][data-effeckt-type~="from-bottom"] .effeckt-button-label:before {
+  bottom: -100%;
+  left: 0;
+  right: 0; }
+.effeckt-button[data-effeckt-type~="icon-slide"][data-effeckt-type~="from-left"] .effeckt-button-label:before {
+  left: -100%;
+  top: 0;
+  bottom: 0; }
+.effeckt-button[data-effeckt-type~="icon-slide"][data-effeckt-type~="from-right"] .effeckt-button-label:before {
+  right: -100%;
   top: 0;
   bottom: 0; }
 
-.effeckt-button--icon-slide:hover.effeckt-button--icon-slide--from-top .effeckt-button--icon-slide__label {
+.effeckt-button[data-effeckt-type~="icon-slide"]:hover[data-effeckt-type~="from-top"] .effeckt-button-label {
   transform: translateY(100%); }
-.effeckt-button--icon-slide:hover.effeckt-button--icon-slide--from-bottom .effeckt-button--icon-slide__label {
+.effeckt-button[data-effeckt-type~="icon-slide"]:hover[data-effeckt-type~="from-bottom"] .effeckt-button-label {
   transform: translateY(-100%); }
-.effeckt-button--icon-slide:hover.effeckt-button--icon-slide--from-left .effeckt-button--icon-slide__label {
+.effeckt-button[data-effeckt-type~="icon-slide"]:hover[data-effeckt-type~="from-left"] .effeckt-button-label {
   transform: translateX(100%); }
-.effeckt-button--icon-slide:hover.effeckt-button--icon-slide--from-right .effeckt-button--icon-slide__label {
+.effeckt-button[data-effeckt-type~="icon-slide"]:hover[data-effeckt-type~="from-right"] .effeckt-button-label {
   transform: translateX(-100%); }
