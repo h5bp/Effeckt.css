@@ -13,7 +13,6 @@
   width: 52px;
   transition: all .3s ease-out;
   transform: scale(1);
-  /* Adjust size here */
   background: white; }
 
 .effeckt-ckbox-ios7[type=checkbox]:checked, .effeckt-rdio-ios7:checked {
