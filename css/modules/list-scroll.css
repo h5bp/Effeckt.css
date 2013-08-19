@@ -8,129 +8,129 @@
     z-index: 2;
     transform: translateZ(0); }
 
-[data-effeckt="grow"] li {
+[data-effeckt-type="grow"] li {
   transition: all 500ms ease;
   transform-origin: 50% 50%; }
-  [data-effeckt="grow"] li.past, [data-effeckt="grow"] li.future {
+  [data-effeckt-type="grow"] li.past, [data-effeckt-type="grow"] li.future {
     transform: scale(0.01); }
 
-[data-effeckt="curl"] li {
+[data-effeckt-type="curl"] li {
   perspective: 600px;
   perspective-origin: 0% 50%;
   transition: all 500ms ease, opacity 166.66667ms ease;
   transform-origin: 0% 0%;
   backface-visibility: hidden; }
-  [data-effeckt="curl"] li.past {
+  [data-effeckt-type="curl"] li.past {
     opacity: 0;
     transform: rotateY(90deg); }
-  [data-effeckt="curl"] li.future {
+  [data-effeckt-type="curl"] li.future {
     opacity: 0;
     transform: rotateY(90deg); }
 
-[data-effeckt="wave"] li {
+[data-effeckt-type="wave"] li {
   transition: all 500ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
-  [data-effeckt="wave"] li.past {
+  [data-effeckt-type="wave"] li.past {
     transform: translateX(-70%); }
-  [data-effeckt="wave"] li.future {
+  [data-effeckt-type="wave"] li.future {
     transform: translateX(-70%); }
 
-[data-effeckt="fan"] li {
+[data-effeckt-type="fan"] li {
   transition: all 500ms cubic-bezier(0.39, 0.575, 0.565, 1);
   transform-origin: 0% 0%; }
-  [data-effeckt="fan"] li.past {
+  [data-effeckt-type="fan"] li.past {
     transform: rotate(-60deg); }
-  [data-effeckt="fan"] li.future {
+  [data-effeckt-type="fan"] li.future {
     transform: rotate(70deg); }
 
-[data-effeckt="fade"] li {
+[data-effeckt-type="fade"] li {
   transition: opacity 250ms ease-in-out; }
-  [data-effeckt="fade"] li.past, [data-effeckt="fade"] li.future {
+  [data-effeckt-type="fade"] li.past, [data-effeckt-type="fade"] li.future {
     opacity: 0; }
 
-[data-effeckt="fly"] {
+[data-effeckt-type="fly"] {
   perspective: 400px;
   perspective-origin: 50% 50%; }
-  [data-effeckt="fly"] li {
+  [data-effeckt-type="fly"] li {
     transition: all 500ms ease, opacity 250ms ease;
     transform-origin: 50% 50% -50px; }
-    [data-effeckt="fly"] li.past, [data-effeckt="fly"] li.future {
+    [data-effeckt-type="fly"] li.past, [data-effeckt-type="fly"] li.future {
       opacity: 0; }
-    [data-effeckt="fly"] li.past {
+    [data-effeckt-type="fly"] li.past {
       transform: rotateX(180deg); }
-    [data-effeckt="fly"] li.future {
+    [data-effeckt-type="fly"] li.future {
       transform: rotateX(-180deg); }
 
-[data-effeckt="landing"] {
+[data-effeckt-type="landing"] {
   perspective: 400px;
   perspective-origin: 50% 50%; }
-  [data-effeckt="landing"] li {
+  [data-effeckt-type="landing"] li {
     transition: all 500ms ease, opacity 250ms ease;
     transform-origin: 50% 50%; }
-    [data-effeckt="landing"] li.past, [data-effeckt="landing"] li.future {
+    [data-effeckt-type="landing"] li.past, [data-effeckt-type="landing"] li.future {
       opacity: 0; }
-    [data-effeckt="landing"] li.past {
+    [data-effeckt-type="landing"] li.past {
       transform: scale(1.5) translate(10%, -50%); }
-    [data-effeckt="landing"] li.future {
+    [data-effeckt-type="landing"] li.future {
       transform: scale(1.5) translate(-10%, 50%); }
 
-[data-effeckt="swing-front"] {
+[data-effeckt-type="swing-front"] {
   perspective: 400px;
   perspective-origin: 50% 50%; }
-  [data-effeckt="swing-front"] li {
+  [data-effeckt-type="swing-front"] li {
     transition: all 500ms ease, opacity 250ms ease; }
-    [data-effeckt="swing-front"] li.past, [data-effeckt="swing-front"] li.future {
+    [data-effeckt-type="swing-front"] li.past, [data-effeckt-type="swing-front"] li.future {
       opacity: 0; }
-    [data-effeckt="swing-front"] li.past {
+    [data-effeckt-type="swing-front"] li.past {
       transform-origin: bottom;
       transform: rotateX(140deg); }
-    [data-effeckt="swing-front"] li.future {
+    [data-effeckt-type="swing-front"] li.future {
       transform-origin: top;
       transform: rotateX(-140deg); }
 
-[data-effeckt="swing-back"] {
+[data-effeckt-type="swing-back"] {
   perspective: 400px;
   perspective-origin: 50% 50%; }
-  [data-effeckt="swing-back"] li {
+  [data-effeckt-type="swing-back"] li {
     transition: all 500ms ease, opacity 250ms ease; }
-    [data-effeckt="swing-back"] li.past, [data-effeckt="swing-back"] li.future {
+    [data-effeckt-type="swing-back"] li.past, [data-effeckt-type="swing-back"] li.future {
       opacity: 0; }
-    [data-effeckt="swing-back"] li.past {
+    [data-effeckt-type="swing-back"] li.past {
       transform-origin: bottom;
       transform: rotateX(-140deg); }
-    [data-effeckt="swing-back"] li.future {
+    [data-effeckt-type="swing-back"] li.future {
       transform-origin: top;
       transform: rotateX(140deg); }
 
-[data-effeckt="twist"] {
+[data-effeckt-type="twist"] {
   perspective: 400px;
   perspective-origin: 50% 50%; }
-  [data-effeckt="twist"] li {
+  [data-effeckt-type="twist"] li {
     transition: all 500ms ease, opacity 250ms ease;
     transform-origin: center; }
-    [data-effeckt="twist"] li.past, [data-effeckt="twist"] li.future {
+    [data-effeckt-type="twist"] li.past, [data-effeckt-type="twist"] li.future {
       opacity: 0; }
-    [data-effeckt="twist"] li.past {
+    [data-effeckt-type="twist"] li.past {
       transform: rotateY(-180deg); }
-    [data-effeckt="twist"] li.future {
+    [data-effeckt-type="twist"] li.future {
       transform: rotateY(180deg); }
 
-[data-effeckt="door"] {
+[data-effeckt-type="door"] {
   perspective: 400px;
   perspective-origin: 50% 50%; }
-  [data-effeckt="door"] li {
+  [data-effeckt-type="door"] li {
     transition: all 500ms ease, opacity 250ms ease;
     transform-origin: 0% 0%; }
-    [data-effeckt="door"] li.past, [data-effeckt="door"] li.future {
+    [data-effeckt-type="door"] li.past, [data-effeckt-type="door"] li.future {
       opacity: 0;
       transform: rotateY(-90deg); }
 
-[data-effeckt="climb"] {
+[data-effeckt-type="climb"] {
   perspective: 400px;
   perspective-origin: 50% 50%; }
-  [data-effeckt="climb"] li {
+  [data-effeckt-type="climb"] li {
     transition: all 500ms ease, opacity 250ms ease;
     transform-origin: 0% 0%; }
-    [data-effeckt="climb"] li.past {
+    [data-effeckt-type="climb"] li.past {
       transform: translateY(-200%); }
-    [data-effeckt="climb"] li.future {
+    [data-effeckt-type="climb"] li.future {
       transform: translateY(200%); }
