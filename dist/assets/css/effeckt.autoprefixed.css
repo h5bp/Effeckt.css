@@ -1437,18 +1437,18 @@ Example markup:
   width: 100%;
 }
 
-.effeckt-caption-1 figcaption {
+.effeckt-caption[data-effeckt-type~="effeckt-caption-1"] figcaption {
   bottom: 0;
   left: 0;
   opacity: 0;
 }
 
-.effeckt-caption-1:hover figcaption,
-.effeckt-caption-1:active figcaption {
+.effeckt-caption[data-effeckt-type~="effeckt-caption-1"]:hover figcaption,
+.effeckt-caption[data-effeckt-type~="effeckt-caption-1"]:active figcaption {
   opacity: 1;
 }
 
-.effeckt-caption-2 figcaption {
+.effeckt-caption[data-effeckt-type~="effeckt-caption-2"] figcaption {
   bottom: 0;
   left: 0;
   opacity: 0;
@@ -1458,8 +1458,8 @@ Example markup:
   transform: translateY(100%);
 }
 
-.effeckt-caption-2:hover figcaption,
-.effeckt-caption-2:active figcaption {
+.effeckt-caption[data-effeckt-type~="effeckt-caption-2"]:hover figcaption,
+.effeckt-caption[data-effeckt-type~="effeckt-caption-2"]:active figcaption {
   opacity: 1;
   -webkit-transform: translateY(0);
   -ms-transform: translateY(0);
@@ -1467,7 +1467,7 @@ Example markup:
   transform: translateY(0);
 }
 
-.effeckt-caption-3 figcaption {
+.effeckt-caption[data-effeckt-type~="effeckt-caption-3"] figcaption {
   top: 0;
   left: 0;
   width: 100%;
@@ -1478,7 +1478,7 @@ Example markup:
   z-index: 0;
 }
 
-.effeckt-caption-3 img {
+.effeckt-caption[data-effeckt-type~="effeckt-caption-3"] img {
   position: relative;
   z-index: 1;
   -webkit-transition-delay: 0.25s;
@@ -1486,7 +1486,7 @@ Example markup:
   transition-delay: 0.25s;
 }
 
-.effeckt-caption-3 .effeckt-figcaption-wrap {
+.effeckt-caption[data-effeckt-type~="effeckt-caption-3"] .effeckt-figcaption-wrap {
   position: absolute;
   bottom: 1rem;
   opacity: 0;
@@ -1495,16 +1495,16 @@ Example markup:
   transition: opacity 0.25s linear 0s;
 }
 
-.effeckt-caption-3:hover .effeckt-figcaption-wrap,
-.effeckt-caption-3:active .effeckt-figcaption-wrap {
+.effeckt-caption[data-effeckt-type~="effeckt-caption-3"]:hover .effeckt-figcaption-wrap,
+.effeckt-caption[data-effeckt-type~="effeckt-caption-3"]:active .effeckt-figcaption-wrap {
   opacity: 1;
   -webkit-transition-delay: 0.25s;
   -o-transition-delay: 0.25s;
   transition-delay: 0.25s;
 }
 
-.effeckt-caption-3:hover img,
-.effeckt-caption-3:active img {
+.effeckt-caption[data-effeckt-type~="effeckt-caption-3"]:hover img,
+.effeckt-caption[data-effeckt-type~="effeckt-caption-3"]:active img {
   -webkit-transform: scale(0.5) translateY(-80px);
   -ms-transform: scale(0.5) translateY(-80px);
   -o-transform: scale(0.5) translateY(-80px);
@@ -1514,7 +1514,7 @@ Example markup:
   transition-delay: 0;
 }
 
-.effeckt-caption-4 figcaption {
+.effeckt-caption[data-effeckt-type~="effeckt-caption-4"] figcaption {
   left: 0;
   bottom: 0;
   opacity: 0;
@@ -1524,8 +1524,8 @@ Example markup:
   transform: translateX(100%);
 }
 
-.effeckt-caption-4:hover figcaption,
-.effeckt-caption-4:active figcaption {
+.effeckt-caption[data-effeckt-type~="effeckt-caption-4"]:hover figcaption,
+.effeckt-caption[data-effeckt-type~="effeckt-caption-4"]:active figcaption {
   opacity: 1;
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
@@ -1533,19 +1533,19 @@ Example markup:
   transform: translateX(0);
 }
 
-.effeckt-caption-5 figcaption {
+.effeckt-caption[data-effeckt-type~="effeckt-caption-5"] figcaption {
   top: 0;
   left: 0;
   height: 100%;
   opacity: 0;
 }
 
-.effeckt-caption-5:hover figcaption,
-.effeckt-caption-5:active figcaption {
+.effeckt-caption[data-effeckt-type~="effeckt-caption-5"]:hover figcaption,
+.effeckt-caption[data-effeckt-type~="effeckt-caption-5"]:active figcaption {
   opacity: 1;
 }
 
-.effeckt-caption-6 figcaption {
+.effeckt-caption[data-effeckt-type~="effeckt-caption-6"] figcaption {
   top: 0;
   left: 0;
   -webkit-transform: translateX(100%) rotate(20deg);
@@ -1555,8 +1555,8 @@ Example markup:
   opacity: 0;
 }
 
-.effeckt-caption-6:hover figcaption,
-.effeckt-caption-6:active figcaption {
+.effeckt-caption[data-effeckt-type~="effeckt-caption-6"]:hover figcaption,
+.effeckt-caption[data-effeckt-type~="effeckt-caption-6"]:active figcaption {
   -webkit-transform: translateX(0) rotate(0deg);
   -ms-transform: translateX(0) rotate(0deg);
   -o-transform: translateX(0) rotate(0deg);
@@ -1564,7 +1564,7 @@ Example markup:
   opacity: 1;
 }
 
-.effeckt-caption-7 figcaption {
+.effeckt-caption[data-effeckt-type~="effeckt-caption-7"] figcaption {
   top: 0;
   left: 0;
   -webkit-transform: translateX(-100%);
@@ -1575,7 +1575,7 @@ Example markup:
   z-index: 2;
 }
 
-.effeckt-caption-7 .effeckt-figcaption-wrap {
+.effeckt-caption[data-effeckt-type~="effeckt-caption-7"] .effeckt-figcaption-wrap {
   -webkit-transition: 500ms 250ms;
   -o-transition: 500ms 250ms;
   transition: 500ms 250ms;
@@ -1585,8 +1585,8 @@ Example markup:
   transform: translateX(200%);
 }
 
-.effeckt-caption-7:hover figcaption,
-.effeckt-caption-7:active figcaption {
+.effeckt-caption[data-effeckt-type~="effeckt-caption-7"]:hover figcaption,
+.effeckt-caption[data-effeckt-type~="effeckt-caption-7"]:active figcaption {
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
   -o-transform: translateX(0);
@@ -1594,15 +1594,15 @@ Example markup:
   opacity: 1;
 }
 
-.effeckt-caption-7:hover .effeckt-figcaption-wrap,
-.effeckt-caption-7:active .effeckt-figcaption-wrap {
+.effeckt-caption[data-effeckt-type~="effeckt-caption-7"]:hover .effeckt-figcaption-wrap,
+.effeckt-caption[data-effeckt-type~="effeckt-caption-7"]:active .effeckt-figcaption-wrap {
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
   -o-transform: translateX(0);
   transform: translateX(0);
 }
 
-.effeckt-caption-8 figcaption {
+.effeckt-caption[data-effeckt-type~="effeckt-caption-8"] figcaption {
   top: 0;
   left: 0;
   height: 100%;
@@ -1613,7 +1613,7 @@ Example markup:
   opacity: 0;
 }
 
-.effeckt-caption-8 img {
+.effeckt-caption[data-effeckt-type~="effeckt-caption-8"] img {
   -webkit-transition: 500ms;
   -o-transition: 500ms;
   transition: 500ms;
@@ -1623,8 +1623,8 @@ Example markup:
   transform: translateX(0);
 }
 
-.effeckt-caption-8:hover figcaption,
-.effeckt-caption-8:active figcaption {
+.effeckt-caption[data-effeckt-type~="effeckt-caption-8"]:hover figcaption,
+.effeckt-caption[data-effeckt-type~="effeckt-caption-8"]:active figcaption {
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
   -o-transform: translateX(0);
@@ -1632,15 +1632,15 @@ Example markup:
   opacity: 1;
 }
 
-.effeckt-caption-8:hover img,
-.effeckt-caption-8:active img {
+.effeckt-caption[data-effeckt-type~="effeckt-caption-8"]:hover img,
+.effeckt-caption[data-effeckt-type~="effeckt-caption-8"]:active img {
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   -o-transform: translateX(100%);
   transform: translateX(100%);
 }
 
-.effeckt-caption-9 figcaption {
+.effeckt-caption[data-effeckt-type~="effeckt-caption-9"] figcaption {
   top: 0;
   left: 0;
   -webkit-transform: scale(2);
@@ -1651,14 +1651,14 @@ Example markup:
   opacity: 0;
 }
 
-.effeckt-caption-9 img {
+.effeckt-caption[data-effeckt-type~="effeckt-caption-9"] img {
   -webkit-transition: 500ms;
   -o-transition: 500ms;
   transition: 500ms;
 }
 
-.effeckt-caption-9:hover figcaption,
-.effeckt-caption-9:active figcaption {
+.effeckt-caption[data-effeckt-type~="effeckt-caption-9"]:hover figcaption,
+.effeckt-caption[data-effeckt-type~="effeckt-caption-9"]:active figcaption {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   -o-transform: scale(1);
@@ -1666,15 +1666,15 @@ Example markup:
   opacity: 1;
 }
 
-.effeckt-caption-9:hover img,
-.effeckt-caption-9:active img {
+.effeckt-caption[data-effeckt-type~="effeckt-caption-9"]:hover img,
+.effeckt-caption[data-effeckt-type~="effeckt-caption-9"]:active img {
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   -o-transform: scale(1.1);
   transform: scale(1.1);
 }
 
-.effeckt-caption-10 {
+.effeckt-caption[data-effeckt-type~="effeckt-caption-10"] {
   overflow: visible;
   -webkit-perspective: 1300px;
   -ms-perspective: 1300px;
@@ -1682,7 +1682,7 @@ Example markup:
   perspective: 1300px;
 }
 
-.effeckt-caption-10 figcaption {
+.effeckt-caption[data-effeckt-type~="effeckt-caption-10"] figcaption {
   top: 0;
   left: 0;
   width: 100%;
@@ -1697,22 +1697,22 @@ Example markup:
   backface-visibility: hidden;
 }
 
-.effeckt-caption-10 img {
+.effeckt-caption[data-effeckt-type~="effeckt-caption-10"] img {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 
-.effeckt-caption-10:hover figcaption,
-.effeckt-caption-10:active figcaption {
+.effeckt-caption[data-effeckt-type~="effeckt-caption-10"]:hover figcaption,
+.effeckt-caption[data-effeckt-type~="effeckt-caption-10"]:active figcaption {
   -webkit-transform: rotateY(360deg);
   -ms-transform: rotateY(360deg);
   -o-transform: rotateY(360deg);
   transform: rotateY(360deg);
 }
 
-.effeckt-caption-10:hover img,
-.effeckt-caption-10:active img {
+.effeckt-caption[data-effeckt-type~="effeckt-caption-10"]:hover img,
+.effeckt-caption[data-effeckt-type~="effeckt-caption-10"]:active img {
   -webkit-transform: rotateY(180deg);
   -ms-transform: rotateY(180deg);
   -o-transform: rotateY(180deg);

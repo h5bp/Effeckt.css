@@ -16,221 +16,220 @@
     transition: $effeckt-caption-transition-duration;
     width: 100%;
   }
-}
 
-
-// Effect 1: Appear
-.effeckt-caption-1 {
-  figcaption {
-    bottom: 0;
-    left: 0;
-    opacity: 0;
-  }
-  &:hover, &:active {
+  // Effect 1: Appear
+  &[data-effeckt-type~="effeckt-caption-1"] {
     figcaption {
-      opacity: 1;
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+    }
+    &:hover, &:active {
+      figcaption {
+        opacity: 1;
+      }
     }
   }
-}
 
 
-// Effect 2: Slide Up
-.effeckt-caption-2 {
-  figcaption {
-    bottom: 0;
-    left: 0;
-    opacity: 0;
-    transform: translateY(100%);
-  }
-  &:hover, &:active {
+  // Effect 2: Slide Up
+  &[data-effeckt-type~="effeckt-caption-2"] {
     figcaption {
-      opacity: 1;
-      transform: translateY(0);
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    &:hover, &:active {
+      figcaption {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   }
-}
 
 
-// Effect 3: Sqwoosh
-.effeckt-caption-3 {
-  figcaption {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: none;
-    z-index: 0;
-  }
-  img {
-    position: relative;
-    z-index: 1;
-    transition-delay: 0.25s;
-  }
-  .effeckt-figcaption-wrap {
-    position: absolute;
-    bottom: 1rem;
-    opacity: 0;
-    transition: opacity 0.25s linear 0s;
-  }
-  &:hover, &:active {
-    .effeckt-figcaption-wrap {
-      opacity: 1;
+  // Effect 3: Sqwoosh
+  &[data-effeckt-type~="effeckt-caption-3"] {
+    figcaption {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: none;
+      z-index: 0;
+    }
+    img {
+      position: relative;
+      z-index: 1;
       transition-delay: 0.25s;
     }
-    img {
-      transform: scale(0.5) translateY(-80px);
-      transition-delay: 0;
-    }
-  }
-}
-
-
-// Effect 4: Slide Side
-.effeckt-caption-4 {
-  figcaption {
-    left: 0;
-    bottom: 0;
-    opacity: 0;
-    transform: translateX(100%);
-  }
-  &:hover, &:active {
-    figcaption {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-}
-
-
-// Effect 5: Cover
-.effeckt-caption-5 {
-  figcaption {
-    top: 0;
-    left: 0;
-    height: 100%;
-    opacity: 0;
-  }
-  &:hover, &:active {
-    figcaption {
-      opacity: 1;
-    }
-  }
-}
-
-
-// Effect 6 - Cover First
-.effeckt-caption-6 {
-  figcaption {
-    top: 0;
-    left: 0;
-    transform: translateX(100%) rotate(20deg);
-    opacity: 0;
-  }
-  &:hover, &:active {
-    figcaption {
-      transform: translateX(0) rotate(0deg);
-      opacity: 1;
-    }
-  }
-}
-
-
-// Effect 7 - Cover First
-.effeckt-caption-7 {
-  figcaption {
-    top: 0;
-    left: 0;
-    transform: translateX(-100%);
-    opacity: 0;
-    z-index: 2;
-  }
-  .effeckt-figcaption-wrap {
-    transition: $effeckt-caption-transition-duration $effeckt-caption-transition-duration/2;
-    transform: translateX(200%);
-  }
-  &:hover, &:active {
-    figcaption {
-      transform: translateX(0);
-      opacity: 1;
-    }
     .effeckt-figcaption-wrap {
-      transform: translateX(0);
+      position: absolute;
+      bottom: 1rem;
+      opacity: 0;
+      transition: opacity 0.25s linear 0s;
+    }
+    &:hover, &:active {
+      .effeckt-figcaption-wrap {
+        opacity: 1;
+        transition-delay: 0.25s;
+      }
+      img {
+        transform: scale(0.5) translateY(-80px);
+        transition-delay: 0;
+      }
     }
   }
-}
 
 
-// Effect 8 - Move
-.effeckt-caption-8 {
-  figcaption {
-    top: 0;
-    left: 0;
-    height: 100%;
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  img {
-    transition: $effeckt-caption-transition-duration;
-    transform: translateX(0);
-  }
-  &:hover, &:active {
+  // Effect 4: Slide Side
+  &[data-effeckt-type~="effeckt-caption-4"] {
     figcaption {
-      transform: translateX(0);
-      opacity: 1;
-    }
-    img {
+      left: 0;
+      bottom: 0;
+      opacity: 0;
       transform: translateX(100%);
     }
+    &:hover, &:active {
+      figcaption {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
   }
-}
 
 
-// Effect 9 - Scale
-.effeckt-caption-9 {
-  figcaption {
-    top: 0;
-    left: 0;
-    transform: scale(2);
-    text-align: center;
-    opacity: 0;
-  }
-  img {
-    transition: $effeckt-caption-transition-duration;
-  }
-  &:hover, &:active {
+  // Effect 5: Cover
+  &[data-effeckt-type~="effeckt-caption-5"] {
     figcaption {
-      transform: scale(1);
-      opacity: 1;
+      top: 0;
+      left: 0;
+      height: 100%;
+      opacity: 0;
+    }
+    &:hover, &:active {
+      figcaption {
+        opacity: 1;
+      }
+    }
+  }
+
+
+  // Effect 6 - Cover First
+  &[data-effeckt-type~="effeckt-caption-6"] {
+    figcaption {
+      top: 0;
+      left: 0;
+      transform: translateX(100%) rotate(20deg);
+      opacity: 0;
+    }
+    &:hover, &:active {
+      figcaption {
+        transform: translateX(0) rotate(0deg);
+        opacity: 1;
+      }
+    }
+  }
+
+
+  // Effect 7 - Cover First
+  &[data-effeckt-type~="effeckt-caption-7"] {
+    figcaption {
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      opacity: 0;
+      z-index: 2;
+    }
+    .effeckt-figcaption-wrap {
+      transition: $effeckt-caption-transition-duration $effeckt-caption-transition-duration/2;
+      transform: translateX(200%);
+    }
+    &:hover, &:active {
+      figcaption {
+        transform: translateX(0);
+        opacity: 1;
+      }
+      .effeckt-figcaption-wrap {
+        transform: translateX(0);
+      }
+    }
+  }
+
+
+  // Effect 8 - Move
+  &[data-effeckt-type~="effeckt-caption-8"] {
+    figcaption {
+      top: 0;
+      left: 0;
+      height: 100%;
+      transform: translateX(-100%);
+      opacity: 0;
     }
     img {
-      transform: scale(1.1);
+      transition: $effeckt-caption-transition-duration;
+      transform: translateX(0);
+    }
+    &:hover, &:active {
+      figcaption {
+        transform: translateX(0);
+        opacity: 1;
+      }
+      img {
+        transform: translateX(100%);
+      }
     }
   }
-}
 
 
-// Effect 10 - Flip
-// BUG: Super flickery in Safari 5.1.7 on Windows 7
-.effeckt-caption-10 {
-  overflow: visible;
-  perspective: 1300px;
-  figcaption {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform: rotateY(180deg);
-    backface-visibility: hidden;
-  }
-  img {
-    transition: 0.5s;
-  }
-  &:hover, &:active {
+  // Effect 9 - Scale
+  &[data-effeckt-type~="effeckt-caption-9"] {
     figcaption {
-     transform: rotateY(360deg);
+      top: 0;
+      left: 0;
+      transform: scale(2);
+      text-align: center;
+      opacity: 0;
     }
     img {
+      transition: $effeckt-caption-transition-duration;
+    }
+    &:hover, &:active {
+      figcaption {
+        transform: scale(1);
+        opacity: 1;
+      }
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+
+  // Effect 10 - Flip
+  // BUG: Super flickery in Safari 5.1.7 on Windows 7
+  &[data-effeckt-type~="effeckt-caption-10"] {
+    overflow: visible;
+    perspective: 1300px;
+    figcaption {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       transform: rotateY(180deg);
+      backface-visibility: hidden;
+    }
+    img {
+      transition: 0.5s;
+    }
+    &:hover, &:active {
+      figcaption {
+       transform: rotateY(360deg);
+      }
+      img {
+        transform: rotateY(180deg);
+      }
     }
   }
 }
