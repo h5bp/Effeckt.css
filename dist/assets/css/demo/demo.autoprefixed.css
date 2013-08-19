@@ -58,9 +58,7 @@ body {
 }
 
 @media (max-width: 500px) {
-  body {
-    padding: 1rem;
-  }
+
 }
 
 .page-wrap {
@@ -375,14 +373,6 @@ h1 span:nth-of-type(11) {
 
 .contributors header {
   border-bottom-color: #666;
-}
-
-.contributors .readme {
-  display: none;
-}
-
-.effeckt-demo-captions ~ .contributors .readme {
-  display: block;
 }
 
 .contributors ol {
