@@ -90,6 +90,9 @@ body {
         margin: 0.2rem 0;
       }
     }
+    &:nth-of-type(n+2) { // all but first
+      margin-top: 2rem;
+    }
   }
 }
 .button-group {
@@ -263,7 +266,6 @@ h1 span:nth-of-type(11) {
 
 // Individual demos, not specific to style
 
-// Buttons
 .button-demo-wrap {
   width: 35%;
   float: left;
@@ -276,7 +278,7 @@ h1 span:nth-of-type(11) {
   }
 }
 
-// Lists
+
 .effeckt-list-wrap {
   width: 50%;
   float: left;
@@ -287,7 +289,6 @@ h1 span:nth-of-type(11) {
 }
 
 
-// List Scroll
 .effeckt-demo-list-scroll {
   > ul {
     width: 32%;
@@ -307,7 +308,6 @@ h1 span:nth-of-type(11) {
 }
 
 
-// Toggle Demo
 .effeckt-toggle-demo {
   min-height: 220px;
 }
@@ -324,18 +324,17 @@ h1 span:nth-of-type(11) {
   }
 }
 
+
 .effeckt-modal-content {
   padding: 1rem;
 }
 
-// Modal Overlay
 .effeckt-overlay {
   z-index: 1000;
   background: rgba(black, 0.5);
 }
 
 
-// Base
 .effeckt-button {
   background: #444;
   color: white;
@@ -368,6 +367,7 @@ h1 span:nth-of-type(11) {
   margin: -100px 0 0 -100px;
   color: white;
 }
+
 
 .effeckt-off-screen-nav {
   position: fixed;
@@ -427,6 +427,7 @@ h1 span:nth-of-type(11) {
   background: linear-gradient(left, rgba(#eee, 0), rgba(#eee, 0.9));
 }
 
+
 .effeckt-caption {
   width: 48%;
   margin: 0 4% 1rem 0;
@@ -450,6 +451,7 @@ h1 span:nth-of-type(11) {
   }
 }
 
+
 .effeckt-list {
   list-style: none;
   li {
@@ -464,7 +466,7 @@ h1 span:nth-of-type(11) {
   }
 }
 
-// Base
+
 .effeckt-list-scroll {
   width: 230px;
   height: 480px;
@@ -481,5 +483,20 @@ h1 span:nth-of-type(11) {
     &:nth-child(odd) {
       background: #e6e6e6;
     }
+  }
+}
+
+
+// Contributors
+.contributors-list {
+  list-style: none;
+  overflow: hidden;
+  li {
+    float: left;
+    margin: 0 10px 10px 0;
+  }
+  img {
+    width: 40px;
+    height: 40px;
   }
 }

@@ -66,6 +66,8 @@ body {
           position: relative;
           display: block;
           margin: 0.2rem 0; } }
+    .effeckt header:nth-of-type(n+2) {
+      margin-top: 2rem; }
 
 .button-group {
   line-height: 2; }
@@ -390,3 +392,13 @@ h1 span:nth-of-type(11) {
     font-size: 18px; }
     .effeckt-list-scroll > li:nth-child(odd) {
       background: #e6e6e6; }
+
+.contributors-list {
+  list-style: none;
+  overflow: hidden; }
+  .contributors-list li {
+    float: left;
+    margin: 0 10px 10px 0; }
+  .contributors-list img {
+    width: 40px;
+    height: 40px; }
