@@ -303,3 +303,131 @@
   -o-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
+
+.effeckt-caption[data-effeckt-type~="effeckt-caption-11"] {
+  overflow: visible;
+}
+
+.effeckt-caption[data-effeckt-type~="effeckt-caption-11"] figcaption {
+  top: 0;
+  left: 0;
+  text-align: center;
+  opacity: 0;
+  height: 100%;
+}
+
+.effeckt-caption[data-effeckt-type~="effeckt-caption-11"] img {
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+}
+
+.effeckt-caption[data-effeckt-type~="effeckt-caption-11"]:hover figcaption,
+.effeckt-caption[data-effeckt-type~="effeckt-caption-11"]:active figcaption {
+  -webkit-transform: translate(15px, 15px);
+  -ms-transform: translate(15px, 15px);
+  -o-transform: translate(15px, 15px);
+  transform: translate(15px, 15px);
+  opacity: 1;
+}
+
+.effeckt-caption[data-effeckt-type~="effeckt-caption-12"] {
+  overflow: visible;
+}
+
+.effeckt-caption[data-effeckt-type~="effeckt-caption-12"] figcaption {
+  top: 0;
+  left: 0;
+  text-align: center;
+  height: 100%;
+}
+
+.effeckt-caption[data-effeckt-type~="effeckt-caption-12"] img {
+  display: block;
+  position: relative;
+  z-index: 10;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+}
+
+.effeckt-caption[data-effeckt-type~="effeckt-caption-12"]:hover img,
+.effeckt-caption[data-effeckt-type~="effeckt-caption-12"]:active img {
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+.effeckt-caption[data-effeckt-type~="effeckt-caption-13"] figcaption {
+  top: 0;
+  left: 0;
+  text-align: center;
+  height: 100%;
+  -webkit-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -o-transform: translateY(100%);
+  transform: translateY(100%);
+}
+
+.effeckt-caption[data-effeckt-type~="effeckt-caption-13"] img {
+  display: block;
+  position: relative;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+}
+
+.effeckt-caption[data-effeckt-type~="effeckt-caption-13"]:hover img,
+.effeckt-caption[data-effeckt-type~="effeckt-caption-13"]:active img {
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.effeckt-caption[data-effeckt-type~="effeckt-caption-13"]:hover figcaption,
+.effeckt-caption[data-effeckt-type~="effeckt-caption-13"]:active figcaption {
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  -o-transform: translateY(50%);
+  transform: translateY(50%);
+}
+
+.effeckt-caption[data-effeckt-type~="effeckt-caption-14"] figcaption {
+  top: 0;
+  left: 0;
+  text-align: center;
+  height: 100%;
+  opacity: 0;
+  -webkit-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  -o-transform: scale(0.7);
+  transform: scale(0.7);
+}
+
+.effeckt-caption[data-effeckt-type~="effeckt-caption-14"] img {
+  display: block;
+  position: relative;
+  z-index: 10;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+}
+
+.effeckt-caption[data-effeckt-type~="effeckt-caption-14"]:hover img,
+.effeckt-caption[data-effeckt-type~="effeckt-caption-14"]:active img {
+  -webkit-transform: scale(0.4);
+  -ms-transform: scale(0.4);
+  -o-transform: scale(0.4);
+  transform: scale(0.4);
+}
+
+.effeckt-caption[data-effeckt-type~="effeckt-caption-14"]:hover figcaption,
+.effeckt-caption[data-effeckt-type~="effeckt-caption-14"]:active figcaption {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}

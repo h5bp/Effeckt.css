@@ -59,7 +59,6 @@ body {
   // transform: translateZ(0);
 
   @media (max-width: 500px) {
-    padding: 1rem;
   }
 }
 
@@ -69,6 +68,7 @@ body {
   float: right;
   width: 100%;
 }
+
 .effeckt {
   padding: 2rem;
   background: white;
@@ -238,13 +238,6 @@ h1 span:nth-of-type(11) {
   header {
     border-bottom-color: #666;
   }
-  .readme {
-    display: none;
-    .effeckt-demo-captions ~ & {
-      display: block;
-    }
-  }
-
   ol { margin-left: 35px; }
   hr { margin: 15px 0; }
 }
