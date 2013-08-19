@@ -14,8 +14,8 @@ var EffecktPageTransitions = {
   bindUIActions: function() {
 
     $('.page-transition-button').on('click',function(){
-      var transitionIn = $(this).data('transition-in'),
-          transitionOut = $(this).data('transition-out');
+      var transitionIn = $(this).data('effeckt-transition-in'),
+          transitionOut = $(this).data('effeckt-transition-out');
           EffecktPageTransitions.transitionPage( transitionIn, transitionOut );
     });
 

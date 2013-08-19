@@ -49,19 +49,19 @@ var Modals = {
 
     Modals.modalWrap.show();
 
-    Modals.modalStyle = "md-effect-" + button.data("modal-type").replace(/[^0-9]/g, '');
+    Modals.modalStyle = "md-effect-" + button.data("effeckt-modal-type").replace(/[^0-9]/g, '');
 
     Modals.modalWrap.addClass(Modals.modalStyle);
 
-    if (button.data("needs-perspective")) {
+    if (button.data("effeckt-needs-perspective")) {
       setTimeout(function () {
         $("html").addClass("md-perspective");
       }, 50);
     }
-    if (button.data("hide-class")) {
-      Modals.modalWrap.data("hide-class",true);
+    if (button.data("effeckt-hide-class")) {
+      Modals.modalWrap.data("effeckt-hide-class",true);
     }
-    Modals.modalWrap.data("hide-class", button.data("hide-class"));
+    Modals.modalWrap.data("effeckt-hide-class", button.data("effeckt-hide-class"));
 
     var evt = EffecktDemos.animationEndEventName + ' ' + EffecktDemos.transitionEndEventName;
     Modals.overlay.on(evt, function () {
@@ -86,7 +86,7 @@ var Modals = {
     //Not the cleanest way
     Modals.modalWrap.removeClass("effeckt-show");
 
-    if( Modals.modalWrap.data("hide-class") ){
+    if( Modals.modalWrap.data("effeckt-hide-class") ){
       Modals.modalWrap.addClass("effeckt-hide");
     }
   },
