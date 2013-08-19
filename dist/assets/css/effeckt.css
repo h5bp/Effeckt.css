@@ -1664,6 +1664,8 @@ Example markup:
 
 [data-effeckt-tooltip-text] {
   position: relative; }
+  [data-effeckt-tooltip-text]::after {
+    z-index: 2; }
 
 .effeckt-tooltip[data-effeckt-tooltip-text][data-effeckt-tooltip-position-top]::before, .effeckt-tooltip[data-effeckt-tooltip-text][data-effeckt-tooltip-position-top]::after {
   opacity: 0;

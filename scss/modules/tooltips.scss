@@ -1,5 +1,8 @@
 [data-effeckt-tooltip-text] {
   position: relative;
+  &::after {
+    z-index: 2; //prevent collapse between another tooltip
+  }
 }
 
 @mixin effeckt-tooltip($direction, $background: #333, $color: white) {
