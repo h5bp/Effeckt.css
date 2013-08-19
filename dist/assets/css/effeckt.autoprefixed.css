@@ -1719,7 +1719,7 @@ Example markup:
   transform: rotateY(180deg);
 }
 
-.effeckt-list[data-type='pop-in'] {
+.effeckt-list[data-effeckt-type='pop-in'] {
   overflow: hidden;
 }
 
@@ -1735,7 +1735,7 @@ Example markup:
   animation: openSpace 500ms ease forwards, moveIn 750ms 500ms ease forwards;
 }
 
-.effeckt-list[data-type='pop-in'] .remove-item {
+.effeckt-list[data-effeckt-type='pop-in'] .remove-item {
   max-height: 50px;
   opacity: 1;
   -webkit-animation: moveOut 750ms 500ms ease forwards, closeSpace 500ms ease forwards 750ms;
@@ -1843,7 +1843,7 @@ Example markup:
   }
 }
 
-.effeckt-list[data-type='expand-in'] .new-item {
+.effeckt-list[data-effeckt-type='expand-in'] .new-item {
   max-height: 0;
   opacity: 0;
   -webkit-transform: scale(0);
@@ -1855,7 +1855,7 @@ Example markup:
   animation: growHeight 500ms ease forwards;
 }
 
-.effeckt-list[data-type='expand-in'] .remove-item {
+.effeckt-list[data-effeckt-type='expand-in'] .remove-item {
   -webkit-animation: shrinkHeight 500ms ease forwards;
   -o-animation: shrinkHeight 500ms ease forwards;
   animation: shrinkHeight 500ms ease forwards;
@@ -1942,7 +1942,7 @@ Example markup:
   }
 }
 
-.effeckt-list[data-type='wobble-in'] .new-item {
+.effeckt-list[data-effeckt-type='wobble-in'] .new-item {
   -webkit-backface-visibility: visible;
   -ms-backface-visibility: visible;
   -o-backface-visibility: visible;
@@ -2088,7 +2088,7 @@ Example markup:
   }
 }
 
-.effeckt-list[data-type='flip-in'] .new-item {
+.effeckt-list[data-effeckt-type='flip-in'] .new-item {
   -webkit-backface-visibility: visible;
   -ms-backface-visibility: visible;
   -o-backface-visibility: visible;
@@ -2102,7 +2102,7 @@ Example markup:
   animation: FlipIn 2500ms both 500ms, openSpace 500ms ease forwards;
 }
 
-.effeckt-list[data-type='flip-in'] .remove-item {
+.effeckt-list[data-effeckt-type='flip-in'] .remove-item {
   -webkit-backface-visibility: visible;
   -ms-backface-visibility: visible;
   -o-backface-visibility: visible;
@@ -2208,7 +2208,7 @@ Example markup:
   }
 }
 
-.effeckt-list[data-type='fall-in'] .new-item {
+.effeckt-list[data-effeckt-type='fall-in'] .new-item {
   -webkit-backface-visibility: visible;
   -ms-backface-visibility: visible;
   -o-backface-visibility: visible;
@@ -2218,7 +2218,7 @@ Example markup:
   animation: openSpace 1000ms ease forwards, fallInX 1000ms both;
 }
 
-.effeckt-list[data-type='fall-in'] .remove-item {
+.effeckt-list[data-effeckt-type='fall-in'] .remove-item {
   -webkit-backface-visibility: visible;
   -ms-backface-visibility: visible;
   -o-backface-visibility: visible;
@@ -2324,7 +2324,7 @@ Example markup:
   }
 }
 
-.effeckt-list[data-type='from-above'] .new-item {
+.effeckt-list[data-effeckt-type='from-above'] .new-item {
   -webkit-backface-visibility: visible;
   -ms-backface-visibility: visible;
   -o-backface-visibility: visible;
@@ -2334,7 +2334,7 @@ Example markup:
   animation: openSpace 1000ms ease forwards, fromAbove 1000ms both 500ms;
 }
 
-.effeckt-list[data-type='from-above'] .remove-item {
+.effeckt-list[data-effeckt-type='from-above'] .remove-item {
   -webkit-backface-visibility: visible;
   -ms-backface-visibility: visible;
   -o-backface-visibility: visible;
@@ -2436,7 +2436,7 @@ Example markup:
   }
 }
 
-.effeckt-list[data-type='wobble-out'] .new-item {
+.effeckt-list[data-effeckt-type='wobble-out'] .new-item {
   -webkit-backface-visibility: visible;
   -ms-backface-visibility: visible;
   -o-backface-visibility: visible;
@@ -2446,7 +2446,7 @@ Example markup:
   animation: openSpace 1000ms ease forwards, fallInX 1000ms both;
 }
 
-.effeckt-list[data-type='wobble-out'] .remove-item {
+.effeckt-list[data-effeckt-type='wobble-out'] .remove-item {
   -webkit-backface-visibility: visible;
   -ms-backface-visibility: visible;
   -o-backface-visibility: visible;
@@ -2606,7 +2606,7 @@ Example markup:
   }
 }
 
-.effeckt-list[data-type='bouncy-slide-in'] .new-item {
+.effeckt-list[data-effeckt-type='bouncy-slide-in'] .new-item {
   -webkit-backface-visibility: visible;
   -ms-backface-visibility: visible;
   -o-backface-visibility: visible;
@@ -2616,7 +2616,7 @@ Example markup:
   animation: bouncySlideIn 1000ms both, openSpace 500ms ease forwards;
 }
 
-.effeckt-list[data-type='bouncy-slide-in'] .remove-item {
+.effeckt-list[data-effeckt-type='bouncy-slide-in'] .remove-item {
   -webkit-backface-visibility: visible;
   -ms-backface-visibility: visible;
   -o-backface-visibility: visible;

@@ -3,7 +3,7 @@
 // TODO: Removal Animations as well
 
 // Pop-in
-.effeckt-list[data-type='pop-in'] {
+.effeckt-list[data-effeckt-type='pop-in'] {
   overflow: hidden;
 }
 .effeckt-list[data-type='pop-in'] .new-item {
@@ -14,7 +14,7 @@
     openSpace $effeckt-list-item-transition-duration ease forwards,
     moveIn $effeckt-list-item-transition-duration*1.5 $effeckt-list-item-transition-duration ease forwards;
 }
-.effeckt-list[data-type='pop-in'] .remove-item {
+.effeckt-list[data-effeckt-type='pop-in'] .remove-item {
   max-height: 50px;
   opacity: 1;
   animation:
@@ -49,13 +49,13 @@
 
 
 // Expand in
-.effeckt-list[data-type='expand-in'] .new-item {
+.effeckt-list[data-effeckt-type='expand-in'] .new-item {
   max-height: 0;
   opacity: 0;
   transform: scale(0);
   animation: growHeight $effeckt-list-item-transition-duration ease forwards;
 }
-.effeckt-list[data-type='expand-in'] .remove-item {
+.effeckt-list[data-effeckt-type='expand-in'] .remove-item {
   animation: shrinkHeight $effeckt-list-item-transition-duration ease forwards;
 }
 @keyframes growHeight {
@@ -80,7 +80,7 @@
 }
 
 // Wobble in
-.effeckt-list[data-type='wobble-in'] .new-item {
+.effeckt-list[data-effeckt-type='wobble-in'] .new-item {
   backface-visibility: visible;
   animation:
     WobbleInX $effeckt-list-item-transition-duration*5 both $effeckt-list-item-transition-duration,
@@ -121,14 +121,14 @@
 
 
 // Flip in
-.effeckt-list[data-type='flip-in'] .new-item {
+.effeckt-list[data-effeckt-type='flip-in'] .new-item {
   backface-visibility: visible;
   transform-origin: top left;
   animation:
     FlipIn $effeckt-list-item-transition-duration*5 both $effeckt-list-item-transition-duration,
     openSpace $effeckt-list-item-transition-duration ease forwards;
 }
-.effeckt-list[data-type='flip-in'] .remove-item {
+.effeckt-list[data-effeckt-type='flip-in'] .remove-item {
   backface-visibility: visible;
   transform-origin: top left;
   animation:
@@ -158,13 +158,13 @@
 
 
 // Fall in
-.effeckt-list[data-type='fall-in'] .new-item {
+.effeckt-list[data-effeckt-type='fall-in'] .new-item {
   backface-visibility: visible;
   animation:
     openSpace $effeckt-list-item-transition-duration*2 ease forwards,
     fallInX $effeckt-list-item-transition-duration*2 both;
 }
-.effeckt-list[data-type='fall-in'] .remove-item {
+.effeckt-list[data-effeckt-type='fall-in'] .remove-item {
   backface-visibility: visible;
   transform-origin: top left;
   animation:
@@ -194,13 +194,13 @@
 
 
 // From Above
-.effeckt-list[data-type='from-above'] .new-item {
+.effeckt-list[data-effeckt-type='from-above'] .new-item {
   backface-visibility: visible;
   animation:
     openSpace $effeckt-list-item-transition-duration*2 ease forwards,
     fromAbove $effeckt-list-item-transition-duration*2 both $effeckt-list-item-transition-duration;
 }
-.effeckt-list[data-type='from-above'] .remove-item {
+.effeckt-list[data-effeckt-type='from-above'] .remove-item {
   backface-visibility: visible;
   animation:
     toAbove $effeckt-list-item-transition-duration*2 both,
@@ -228,13 +228,13 @@
 }
 
 // Wobble Out
-.effeckt-list[data-type='wobble-out'] .new-item {
+.effeckt-list[data-effeckt-type='wobble-out'] .new-item {
   backface-visibility: visible;
   animation:
     openSpace $effeckt-list-item-transition-duration*2 ease forwards,
     fallInX $effeckt-list-item-transition-duration*2 both;
 }
-.effeckt-list[data-type='wobble-out'] .remove-item {
+.effeckt-list[data-effeckt-type='wobble-out'] .remove-item {
   backface-visibility: visible;
   transform-origin: top left;
   animation:
@@ -274,13 +274,13 @@
 
 
 // Bouncy Slide In
-.effeckt-list[data-type='bouncy-slide-in'] .new-item {
+.effeckt-list[data-effeckt-type='bouncy-slide-in'] .new-item {
   backface-visibility: visible;
   animation:
     bouncySlideIn $effeckt-list-item-transition-duration*2 both,
     openSpace $effeckt-list-item-transition-duration ease forwards;
 }
-.effeckt-list[data-type='bouncy-slide-in'] .remove-item {
+.effeckt-list[data-effeckt-type='bouncy-slide-in'] .remove-item {
   backface-visibility: visible;
   animation:
     fallOffY $effeckt-list-item-transition-duration*3 both $effeckt-list-item-transition-duration,
