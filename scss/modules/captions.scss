@@ -231,4 +231,96 @@
       }
     }
   }
+
+  // Effect 11 - UnnamedtranslateY(-90px)
+  &[data-effeckt-type~="effeckt-caption-11"] {
+    overflow: visible;
+    figcaption {
+      top: 0;
+      left: 0;
+      text-align: center;
+      opacity: 0;
+      height: 100%;
+    }
+    img {
+      transition: $effeckt-caption-transition-duration;
+    }
+    &:hover, &:active {
+      figcaption {
+        transform: translate(15px, 15px);
+        opacity: 1;
+      }
+    }
+  }
+  // Effect 12 - Reveal Up
+  &[data-effeckt-type~="effeckt-caption-12"] {
+    overflow: visible;
+    figcaption {
+      top: 0;
+      left: 0;
+      text-align: center;
+      height: 100%;
+    }
+    img {
+      display: block;
+      position:relative;
+      z-index:10;
+      transition: $effeckt-caption-transition-duration;
+    }
+    &:hover, &:active {
+      img {
+        transform: translateY(-100%);
+      }
+    }
+  }
+  // Effect 13 - Reveal Caption from bottom
+  &[data-effeckt-type~="effeckt-caption-13"] {
+    figcaption {
+      top: 0;
+      left: 0;
+      text-align: center;
+      height: 100%;
+      transform: translateY(100%);
+    }
+    img {
+      display: block;
+      position:relative;
+      transition: $effeckt-caption-transition-duration;
+    }
+    &:hover, &:active {
+      img {
+        transform: translateY(-50%);
+      }
+      figcaption {
+        transform: translateY(50%);
+      }
+    }
+  }
+
+  // Effect 14 - Reveal Zooming
+  &[data-effeckt-type~="effeckt-caption-14"] {
+    figcaption {
+      top: 0;
+      left: 0;
+      text-align: center;
+      height: 100%;
+      opacity: 0;
+      transform: scale(0.7);
+    }
+    img {
+      display: block;
+      position:relative;
+      z-index: 10;
+      transition: $effeckt-caption-transition-duration;
+    }
+    &:hover, &:active {
+      img {
+        transform: scale(0.4);
+      }
+      figcaption {
+        opacity:1;
+        transform: scale(1);
+      }
+    }
+  }
 }

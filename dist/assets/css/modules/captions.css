@@ -126,3 +126,61 @@
       transform: rotateY(360deg); }
     .effeckt-caption[data-effeckt-type~="effeckt-caption-10"]:hover img, .effeckt-caption[data-effeckt-type~="effeckt-caption-10"]:active img {
       transform: rotateY(180deg); }
+  .effeckt-caption[data-effeckt-type~="effeckt-caption-11"] {
+    overflow: visible; }
+    .effeckt-caption[data-effeckt-type~="effeckt-caption-11"] figcaption {
+      top: 0;
+      left: 0;
+      text-align: center;
+      opacity: 0;
+      height: 100%; }
+    .effeckt-caption[data-effeckt-type~="effeckt-caption-11"] img {
+      transition: 500ms; }
+    .effeckt-caption[data-effeckt-type~="effeckt-caption-11"]:hover figcaption, .effeckt-caption[data-effeckt-type~="effeckt-caption-11"]:active figcaption {
+      transform: translate(15px, 15px);
+      opacity: 1; }
+  .effeckt-caption[data-effeckt-type~="effeckt-caption-12"] {
+    overflow: visible; }
+    .effeckt-caption[data-effeckt-type~="effeckt-caption-12"] figcaption {
+      top: 0;
+      left: 0;
+      text-align: center;
+      height: 100%; }
+    .effeckt-caption[data-effeckt-type~="effeckt-caption-12"] img {
+      display: block;
+      position: relative;
+      z-index: 10;
+      transition: 500ms; }
+    .effeckt-caption[data-effeckt-type~="effeckt-caption-12"]:hover img, .effeckt-caption[data-effeckt-type~="effeckt-caption-12"]:active img {
+      transform: translateY(-100%); }
+  .effeckt-caption[data-effeckt-type~="effeckt-caption-13"] figcaption {
+    top: 0;
+    left: 0;
+    text-align: center;
+    height: 100%;
+    transform: translateY(100%); }
+  .effeckt-caption[data-effeckt-type~="effeckt-caption-13"] img {
+    display: block;
+    position: relative;
+    transition: 500ms; }
+  .effeckt-caption[data-effeckt-type~="effeckt-caption-13"]:hover img, .effeckt-caption[data-effeckt-type~="effeckt-caption-13"]:active img {
+    transform: translateY(-50%); }
+  .effeckt-caption[data-effeckt-type~="effeckt-caption-13"]:hover figcaption, .effeckt-caption[data-effeckt-type~="effeckt-caption-13"]:active figcaption {
+    transform: translateY(50%); }
+  .effeckt-caption[data-effeckt-type~="effeckt-caption-14"] figcaption {
+    top: 0;
+    left: 0;
+    text-align: center;
+    height: 100%;
+    opacity: 0;
+    transform: scale(0.7); }
+  .effeckt-caption[data-effeckt-type~="effeckt-caption-14"] img {
+    display: block;
+    position: relative;
+    z-index: 10;
+    transition: 500ms; }
+  .effeckt-caption[data-effeckt-type~="effeckt-caption-14"]:hover img, .effeckt-caption[data-effeckt-type~="effeckt-caption-14"]:active img {
+    transform: scale(0.4); }
+  .effeckt-caption[data-effeckt-type~="effeckt-caption-14"]:hover figcaption, .effeckt-caption[data-effeckt-type~="effeckt-caption-14"]:active figcaption {
+    opacity: 1;
+    transform: scale(1); }
