@@ -22,12 +22,12 @@
   width: 52px;
   transition: $effeckt-form-element-ckradio-ios7transition;
   transform: scale(1); // Adjust size here
-  background: $effeckt-form-element-ckradio-ios7bg;
+  background: $effeckt-form-element-ckradio-ios7bg-off;
 }
 
 .effeckt-ckbox-ios7[type=checkbox]:checked,
 .effeckt-rdio-ios7:checked {
-  box-shadow: inset 0px 0px 0px 20px #53d76a;
+  box-shadow: inset 0px 0px 0px 20px $effeckt-form-element-ckradio-ios7bg-on;
 }
 
 .effeckt-ckbox-ios7[type=checkbox]:after,
@@ -40,7 +40,7 @@
   position: absolute;
   width: 29px;
   transition: $effeckt-form-element-ckradio-ios7transition-after;
-  background: $effeckt-form-element-ckradio-ios7bg;
+  background: $effeckt-form-element-ckradio-ios7bg-off;
 }
 
 .effeckt-ckbox-ios7[type="checkbox"]:checked:after,

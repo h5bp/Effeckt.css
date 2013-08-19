@@ -4836,7 +4836,7 @@ Example markup:
 
 .effeckt-ckbox-ios7[type=checkbox]:checked,
 .effeckt-rdio-ios7:checked {
-  box-shadow: inset 0px 0px 0px 20px #53d76a;
+  box-shadow: inset 0px 0px 0px 20px #666666;
 }
 
 .effeckt-ckbox-ios7[type=checkbox]:after,

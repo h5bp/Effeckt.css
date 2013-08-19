@@ -45,7 +45,8 @@ $effeckt-list-scroll-transition-duration: $effeckt-transition-duration !default;
 
 // Form Elements
 // Radio and Checkboxes
-$effeckt-form-element-ckradio-ios7bg: #FFF !default;
+$effeckt-form-element-ckradio-ios7bg-off: #FFF !default;
+$effeckt-form-element-ckradio-ios7bg-on: #666 !default;
 $effeckt-form-element-ckradio-ios7border-radius: 15px !default;
 $effeckt-form-element-ckradio-ios7transition: all .3s ease-out !default;
 $effeckt-form-element-ckradio-ios7transition-after: all 0.1s ease-in .1s !default;
