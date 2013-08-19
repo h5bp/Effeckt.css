@@ -1,34 +1,3 @@
-/**
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    contenteditable attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that are clearfixed.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-
-.effeckt-tabs-wrap ul.effeckt-tabs:before,
-.effeckt-tabs-wrap ul.effeckt-tabs:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */
-}
-
-.effeckt-tabs-wrap ul.effeckt-tabs:after {
-  clear: both;
-}
-
-/**
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-
-.effeckt-tabs-wrap ul.effeckt-tabs {
-  *zoom: 1;
-}
-
 .effeckt-tabs-wrap {
   position: relative;
 }
@@ -37,6 +6,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  overflow: hidden;
 }
 
 .effeckt-tabs-wrap ul.effeckt-tabs li {
@@ -48,19 +18,19 @@
   display: block;
   padding: 10px 15px;
   color: #383838;
-  background-color: #eeeeee;
+  background-color: #EEEEEE;
 }
 
 .effeckt-tabs-wrap ul.effeckt-tabs li a.active,
 .effeckt-tabs-wrap ul.effeckt-tabs li a:hover {
-  background-color: #e8e8e8;
+  background-color: #E8E8E8;
 }
 
 .effeckt-tabs-wrap .tabs-container {
   position: relative;
   padding: 10px;
   margin-bottom: 20px;
-  border: 1px solid #dddddd;
+  border: 1px solid #DDD;
   -webkit-transition: all 500ms ease-in-out;
   -o-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;

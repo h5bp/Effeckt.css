@@ -11,7 +11,7 @@
   position: relative;
   margin: 0px;
   width: 52px;
-  transition: all 0.3s ease-out;
+  transition: all .3s ease-out;
   transform: scale(1);
   /* Adjust size here */
   background: white; }
@@ -27,7 +27,7 @@
   height: 29px;
   position: absolute;
   width: 29px;
-  transition: all 0.1s ease-in 0.1s;
+  transition: all 0.1s ease-in .1s;
   background: white; }
 
 .effeckt-ckbox-ios7[type="checkbox"]:checked:after, .effeckt-rdio-ios7[type="radio"]:checked:after {
