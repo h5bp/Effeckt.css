@@ -36,7 +36,6 @@ var ListItems = {
   removeListItem: function(el) {
 
     var $parent = $(el).parent();
-    var type = $parent.find("ul").attr("data-type");
 
     var elToRemove = $parent.find("li.new-item").last();
     elToRemove.on(EffecktDemos.animationEndEventName + ' ' + EffecktDemos.transitionEndEventName , function () {
