@@ -546,7 +546,7 @@ Example markup:
   backface-visibility: visible;
   animation: WobbleInX 2500ms both 500ms, openSpace 500ms ease forwards; }
 
-.effeckt-list[data-type='wobble-in'] .remove-item {
+.effeckt-list[data-effeckt-type='wobble-in'] .remove-item {
   backface-visibility: visible;
   animation: WobbleOutX 2500ms both 500ms, closeSpace 1000ms ease forwards 1500ms; }
 

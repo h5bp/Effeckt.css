@@ -86,7 +86,7 @@
     WobbleInX $effeckt-list-item-transition-duration*5 both $effeckt-list-item-transition-duration,
     openSpace $effeckt-list-item-transition-duration ease forwards;
 }
-.effeckt-list[data-type='wobble-in'] .remove-item {
+.effeckt-list[data-effeckt-type='wobble-in'] .remove-item {
   backface-visibility: visible;
   animation:
     WobbleOutX $effeckt-list-item-transition-duration*5 both $effeckt-list-item-transition-duration,
