@@ -231,7 +231,7 @@
   animation: WobbleInX 2500ms both 500ms, openSpace 500ms ease forwards;
 }
 
-.effeckt-list[data-type='wobble-in'] .remove-item {
+.effeckt-list[data-effeckt-type='wobble-in'] .remove-item {
   -webkit-backface-visibility: visible;
   -ms-backface-visibility: visible;
   -o-backface-visibility: visible;
