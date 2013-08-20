@@ -985,7 +985,7 @@
   }
 
   75% {
-    opacity: 1;
+    opacity: 0.75;
     -webkit-transform: translateX(-50%) translateY(0) rotateZ(-30deg);
     transform: translateX(-50%) translateY(0) rotateZ(-30deg);
   }
@@ -1011,7 +1011,7 @@
   }
 
   75% {
-    opacity: 1;
+    opacity: 0.75;
     -o-transform: translateX(-50%) translateY(0) rotateZ(-30deg);
     transform: translateX(-50%) translateY(0) rotateZ(-30deg);
   }
@@ -1041,7 +1041,7 @@
   }
 
   75% {
-    opacity: 1;
+    opacity: 0.75;
     -webkit-transform: translateX(-50%) translateY(0) rotateZ(-30deg);
     -ms-transform: translateX(-50%) translateY(0) rotateZ(-30deg);
     -o-transform: translateX(-50%) translateY(0) rotateZ(-30deg);
