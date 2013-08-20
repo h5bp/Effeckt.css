@@ -15,21 +15,23 @@ var Tooltip = {
     var self = this,
         evtIn  = 'mouseover',
         evtOut = 'mouseleave';
-
+    
     if ( this.isTouchDevice ) {
       evtIn = 'click touchstart';
-      evtOut= 'touchend';
+      evtOut= '';
+    }
+
+    if ( ! this.isTouchDevice ) {
+      this.$tooltip.on(evtOut, function(e){
+        e.preventDefault();
+        self.hide(this);
+      });
     }
 
     this.$tooltip.on(evtIn, function(e){
       e.preventDefault();
       self.show(this);
     });
-
-    this.$tooltip.on(evtOut, function(e){
-      e.preventDefault();
-      self.hide(this);
-    })
 
   },
 
