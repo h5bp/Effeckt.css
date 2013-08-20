@@ -54,3 +54,10 @@ $effeckt-form-element-ckradio-ios7transition-after: all 0.1s ease-in .1s !defaul
 
 // Tabs
 $effeckt-tabs-transition-duration: $effeckt-transition-duration !default;
+
+
+// Tooltips
+$effeckt-tooltip-transition-delay: .2s !default;
+$effeckt-tooltip-transition-duration: .3s !default;
+$effeckt-tooltip-background: black !default;
+$effeckt-tooltip-forground: white !default;

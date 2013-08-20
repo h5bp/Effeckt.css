@@ -3,31 +3,38 @@
 
 @import "../_variables";
 
-[data-effeckt-tooltip-text] {
+// Basic .effeck-tooltip
+.effeckt-tooltip[data-effeckt-tooltip-text] {
   position: relative;
-  &::after {
-    z-index: 2; //prevent collapse between another tooltip
+
+  &::before, &::after {
+    opacity: 0;
+    transition: $effeckt-tooltip-transition-delay; // no delay on hover off
+  }
+
+  &:hover::before, &:hover::after {
+    visibility: visible;
+    opacity: 1;
+    transition: $effeckt-tooltip-transition-delay $effeckt-tooltip-transition-duration; // slight delay on hover on
   }
 }
 
-@mixin effeckt-tooltip($direction, $background: #333, $color: white) {
-  &::before, &::after {
-    opacity: 0;
-    transition: 0.2s; // no delay on hover off
-  }
-
+// tooltip bubble
+.effeckt-tooltip[data-effeckt-tooltip-type="bubble"]{
   &::after { // text of tooltip
     content: attr(data-effeckt-tooltip-text);
     position: absolute;
     left: 50%;
     transform: translateX(-50%); // horizontal centering
     border-radius: 10px;
-    background: $background;
-    color: $color;
+    background: $effeckt-tooltip-background;
+    color: $effeckt-tooltip-forground;
     padding: 0.45rem 0.8rem;
     font-size: 90%;
     white-space: nowrap;
     visibility: hidden; // makes un-hoverable when hidden (opacity alone doesn't work)
+
+    z-index: 2; //prevent collapse between another tooltip
   }
 
   &::before { // triangle / speech bubble arrow
@@ -40,50 +47,35 @@
     left: 50%;
     margin-left: -5px;
   }
+}
+
+// bubble orientation top
+.effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="top"] {
+  &::after, &::before {
+    bottom: 125%;
+  }
+
+  &::before {
+    border-top: 5px solid $effeckt-tooltip-background;
+    margin-bottom: -4px; // one less pixel to prevent occational 1px gap
+  }
 
   &:hover::before, &:hover::after {
-    visibility: visible;
-    opacity: 1;
-    transition: 0.2s 0.3s; // slight delay on hover on
-  }
-
-  // direction specific
-  @if $direction == bottom {
-    &::after { // text of tooltip
-      top: 125%;
-    }
-
-    &::before {
-      border-bottom: 5px solid $background;
-      top: 125%;
-      margin-top: -4px; // one less pixel to prevent occational 1px gap
-    }
-
-    &:hover::before, &:hover::after {
-      top: 115%;
-    }
-  } @else {
-    &::after {
-      bottom: 125%;
-    }
-
-    &::before {
-      border-top: 5px solid $background;
-      bottom: 125%;
-      margin-bottom: -4px; // one less pixel to prevent occational 1px gap
-    }
-
-    &:hover::before, &:hover::after {
-      bottom: 115%;
-    }
+    bottom: 115%;
   }
 }
+// bubble orientation bottom
+.effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="bottom"] {
+  &::after, &::before {
+   top: 125%;
+  }
 
-// probably should make various things into variables, like colors
-.effeckt-tooltip[data-effeckt-tooltip-text][data-effeckt-tooltip-position-top] {
-  @include effeckt-tooltip(top);
-}
+  &::before {
+   border-bottom: 5px solid $effeckt-tooltip-background;
+   margin-top: -4px; // one less pixel to prevent occational 1px gap
+  }
 
-.effeckt-tooltip[data-effeckt-tooltip-text][data-effeckt-tooltip-position-bottom] {
-  @include effeckt-tooltip(bottom);
+  &:hover::before, &:hover::after {
+   top: 115%;
+  }
 }
