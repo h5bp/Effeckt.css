@@ -13,33 +13,35 @@ var EffecktPageTransitions = {
 
   bindUIActions: function() {
 
+    var self = this;
+
     $('.page-transition-button').on('click',function(){
       var transitionIn = $(this).data('effeckt-transition-in'),
           transitionOut = $(this).data('effeckt-transition-out');
-          EffecktPageTransitions.transitionPage( transitionIn, transitionOut );
+          self.transitionPage( transitionIn, transitionOut );
     });
 
     $('.page-transition-reset-button').on('click',function(){
-          EffecktPageTransitions.resetTransition();
+          self.resetTransition();
     });
 
   },
 
   transitionPage: function(transitionIn,transitionOut) {
 
-    if(EffecktPageTransitions.isAnimating){
+    if(this.isAnimating){
       return false;
     }
-    EffecktPageTransitions.isAnimating = true;
+    this.isAnimating = true;
 
-    EffecktPageTransitions.mainPage.addClass(transitionOut);
-    EffecktPageTransitions.secondaryPage.addClass(transitionIn + ' effeckt-page-transition-animating');
+    this.mainPage.addClass(transitionOut);
+    this.secondaryPage.addClass(transitionIn + ' effeckt-page-transition-animating');
 
   },
   resetTransition: function() {
-    EffecktPageTransitions.isAnimating = false;
-    EffecktPageTransitions.mainPage.removeClass().addClass('page-wrap');
-    EffecktPageTransitions.secondaryPage.removeClass().addClass('effeckt-page-transition');
+    this.isAnimating = false;
+    this.mainPage.removeClass().addClass('page-wrap');
+    this.secondaryPage.removeClass().addClass('effeckt-page-transition');
   }
 
 };
