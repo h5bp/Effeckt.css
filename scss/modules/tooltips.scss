@@ -11,11 +11,13 @@
     opacity: 0;
     transition: $effeckt-tooltip-transition-delay; // no delay on hover off
   }
-
-  &:hover::before, &:hover::after {
+  
+  &.show {
+    &:before, &:after {
     visibility: visible;
     opacity: 1;
     transition: $effeckt-tooltip-transition-delay $effeckt-tooltip-transition-duration; // slight delay on hover on
+    }
   }
 }
 
@@ -60,8 +62,10 @@
     margin-bottom: -4px; // one less pixel to prevent occational 1px gap
   }
 
-  &:hover::before, &:hover::after {
-    bottom: 115%;
+  &.show {
+    &:before, &:after {
+      bottom: 115%;
+    }
   }
 }
 // bubble orientation bottom
@@ -75,7 +79,9 @@
    margin-top: -4px; // one less pixel to prevent occational 1px gap
   }
 
-  &:hover::before, &:hover::after {
-   top: 115%;
+  &.show {
+    &:before, &:after {
+      top: 115%;
+    }
   }
 }

@@ -10,8 +10,8 @@
   transition: 0.2s;
 }
 
-.effeckt-tooltip[data-effeckt-tooltip-text]:hover::before,
-.effeckt-tooltip[data-effeckt-tooltip-text]:hover::after {
+.effeckt-tooltip[data-effeckt-tooltip-text].show:before,
+.effeckt-tooltip[data-effeckt-tooltip-text].show:after {
   visibility: visible;
   opacity: 1;
   -webkit-transition: 0.2s 0.3s;
@@ -58,8 +58,8 @@
   margin-bottom: -4px;
 }
 
-.effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="top"]:hover::before,
-.effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="top"]:hover::after {
+.effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="top"].show:before,
+.effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="top"].show:after {
   bottom: 115%;
 }
 
@@ -73,7 +73,7 @@
   margin-top: -4px;
 }
 
-.effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="bottom"]:hover::before,
-.effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="bottom"]:hover::after {
+.effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="bottom"].show:before,
+.effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="bottom"].show:after {
   top: 115%;
 }
