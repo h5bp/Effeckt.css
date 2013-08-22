@@ -10,7 +10,7 @@
  * Copyright 2013, Codrops
  * http://www.codrops.com
  */
-var Modals = {
+var EffecktModals = {
 
   overlay: $('#effeckt-overlay'),
   modalWrap: $("#effeckt-modal-wrap"),
@@ -104,4 +104,4 @@ var Modals = {
 
 };
 
-Modals.init();
+EffecktModals.init();

@@ -46,14 +46,14 @@ var EffecktOffScreenNav = {
 
       setTimeout(function() {
 
-        this.nav.removeClass(this.closeButton.data("effeckt-type"));
+        self.nav.removeClass(self.closeButton.data("effeckt-type"));
 
         // WEIRD BUG
         // Have to trigger redraw or it sometimes leaves
         // behind a black box (Chrome 27.0.1453.116)
-        this.nav.hide();
-        var blah = this.nav.width();
-        this.nav.show();
+        self.nav.hide();
+        var blah = self.nav.width();
+       	self.nav.show();
 
         $("html").removeClass("md-perspective");
 
