@@ -1,4 +1,4 @@
-var ListItems = {
+var EffecktListItems = {
 
   init: function() {
 
@@ -51,4 +51,4 @@ var ListItems = {
 
 };
 
-ListItems.init();
+EffecktListItems.init();
