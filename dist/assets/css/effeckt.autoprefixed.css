@@ -3522,6 +3522,10 @@ Example markup:
 
 .effeckt-page.effeckt-page-active {
   visibility: visible;
+}
+
+.effeckt-page.effeckt-page-animating {
+  overflow: hidden;
   z-index: 100;
 }
 

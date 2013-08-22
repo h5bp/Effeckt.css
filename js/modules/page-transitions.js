@@ -1,4 +1,3 @@
-//To Do: Add a better way to handle resetting transitions
 var EffecktPageTransitions = {
 
   fromPage: '',
@@ -47,14 +46,18 @@ var EffecktPageTransitions = {
 
     // Get Pages
     this.fromPage = $('.effeckt-page-active');
-    this.toPage = $('[data-effeckt-page="' + transitionPage + '"]');
+    this.toPage   = $('[data-effeckt-page="' + transitionPage + '"]');
 
     // Set Transition Class
     // Maybe this array class could be made using and array
     // Relationating the In Effect with the Out effect.
     this.toPage.addClass('effeckt-page-active');
-    this.fromPage.addClass(transitionEffect + '-out');
     this.toPage.addClass(transitionEffect + '-in');
+    this.fromPage.addClass(transitionEffect + '-out');
+
+    // Add this class to prevent scroll to be displayed
+    this.toPage.addClass('effeckt-page-animating');
+    this.fromPage.addClass('effeckt-page-animating');
 
     
     //event trigger after animation/transition end.
@@ -67,6 +70,9 @@ var EffecktPageTransitions = {
       self.fromPage.removeClass(transitionEffect + '-out');
       self.fromPage.removeClass('effeckt-page-active');
       self.toPage.removeClass(transitionEffect + '-in');
+
+      self.toPage.addClass('effeckt-page-animating');
+      self.fromPage.addClass('effeckt-page-animating');
 
     });
 

@@ -24,6 +24,10 @@
 
   &.effeckt-page-active {
     visibility: visible;
+  }
+
+  &.effeckt-page-animating {
+    overflow: hidden;
     z-index: 100;
   }
 
