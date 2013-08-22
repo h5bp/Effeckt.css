@@ -4,44 +4,22 @@
   display: none; }
   .effeckt-positional-modal-wrap .effeckt-positional-modal {
     visibility: hidden;
-    max-width: 320px;
-    max-height: 320px;
-    padding: 10px;
-    background-color: #e8e8e8;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
-    margin-bottom: 15px; }
+    background-color: #ccc;
+    margin-bottom: 15px;
+    padding: 10px; }
     .effeckt-positional-modal-wrap .effeckt-positional-modal:before {
-      position: absolute;
-      left: 50%;
-      bottom: -11px;
-      display: block;
-      width: 20px;
-      height: 20px;
-      margin-left: -10px;
       content: "";
-      background: #e8e8e8;
-      border-right: 1px solid #cccccc;
-      border-bottom: 1px solid #cccccc;
-      transform: rotate(45deg); }
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      margin-left: -10px;
+      border-top: 10px solid #ccc;
+      border-right: 10px solid transparent;
+      border-left: 10px solid transparent; }
   .effeckt-positional-modal-wrap.effeckt-front {
     z-index: 20; }
-  .effeckt-positional-modal-wrap .effeckt-positional-modal-close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 20px;
-    width: 20px;
-    padding: 0;
-    margin: -10px -10px 0 0;
-    line-height: 0;
-    background: #d8d8d8;
-    border: 1px solid #cccccc;
-    border-radius: 50%;
-    cursor: pointer; }
-    .effeckt-positional-modal-wrap .effeckt-positional-modal-close:hover {
-      background: #cbcbcb;
-      border-color: #bfbfbf; }
 
 .effeckt-positional-modal {
   opacity: 0;

@@ -7,53 +7,24 @@
 
   .effeckt-positional-modal {
     visibility: hidden;
-
-    max-width: 320px;
-    max-height: 320px;
-
-    padding: 10px;
-    background-color: #E8E8E8;
-    border:1px solid #CCC;
-    border-radius: 5px;
+    background-color: #ccc;
     margin-bottom: 15px;
-
+    padding: 10px;
     &:before {
-      position: absolute;
-      left: 50%;
-      bottom: -11px;
-      display: block;
-      width: 20px;
-      height: 20px;
-      margin-left: -10px;
       content: "";
-      background: #E8E8E8;
-      border-right:1px solid #CCC;
-      border-bottom:1px solid #CCC;
-      transform: rotate(45deg);
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      margin-left: -10px;
+      border-top: 10px solid #ccc;
+      border-right: 10px solid transparent;
+      border-left: 10px solid transparent;
     }
   }
-
   &.effeckt-front {
     z-index: 20;
-  }
-
-  .effeckt-positional-modal-close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 20px;
-    width: 20px;
-    padding: 0;
-    margin: -10px -10px 0 0;
-    line-height: 0;
-    background: #D8D8D8;
-    border: 1px solid #CCC;
-    border-radius: 50%;
-    cursor: pointer;
-    &:hover {
-      background: darken(#D8D8D8, 5%);
-      border-color: darken(#CCC, 5%);
-    }
   }
 }
 

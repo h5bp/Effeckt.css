@@ -1,18 +1,16 @@
 var EffecktPositionalModals = {
 
   modalButtonClass: '.effeckt-positional-modal-button',
-  modalCloseButtonClass: '.effeckt-positional-modal-close',
+  modalCloseButtonClass: '.effeckt-modal-close',
 
   modalWrapClass: 'effeckt-positional-modal-wrap',
 
-  isTouchDevice: !!( 'ontouchstart' in window ),
+  isTouchDevice: !!('ontouchstart' in window),
 
   modalsList: [],
 
   init: function() {
-
     this.bindUIActions();
-
   },
 
   bindUIActions: function() {
@@ -20,16 +18,16 @@ var EffecktPositionalModals = {
     var self = this,
         evt  = 'click';
     
-    if ( this.isTouchDevice ) {
+    if (this.isTouchDevice) {
       evt += ' touchstart';
     }
 
-    $(this.modalButtonClass).on(evt, function(e){
+    $(this.modalButtonClass).on(evt, function(e) {
       e.preventDefault();
       self.openModal($(this));
     });
 
-    $(document).on(evt, this.modalCloseButtonClass, function(e){
+    $(document).on(evt, this.modalCloseButtonClass, function(e) {
       e.preventDefault();
       self.close($(this));
     });
@@ -40,14 +38,13 @@ var EffecktPositionalModals = {
     var self = this,
         effect = $el.data('effeckt-positional-modal-type'),
         buttonPosition = $el.offset(),
-        buttonSize = {'width': $el.width(), 'height': $el.height()};
+        buttonSize = { 'width': $el.width(), 'height': $el.height() };
 
-
-    if ( this.contains($el) ) {
+    if (this.contains($el)) {
       return false;
     }
     
-    var modal = this.createModal('<p>a modal content</p><p>to test everything out</p>');
+    var modal = this.createModal($("#effeckt-modal-wrap").html());
 
     modal.show();
     this.add($el, modal);
@@ -71,7 +68,6 @@ var EffecktPositionalModals = {
     });
 
     modal.find('.effeckt-positional-modal').addClass('effeckt-show');
-
   },
 
   close: function($el) {
@@ -94,25 +90,22 @@ var EffecktPositionalModals = {
     }
   },
 
-
   createModal: function(content) {
-
     var modalWrap         = $('<div>').addClass('effeckt-positional-modal-wrap');
     var modal             = $('<div>').addClass('effeckt-positional-modal');
     var modalContent      = $('<div>').addClass('effeckt-positional-modal-content');
-    var modalCloseButton  = $('<button>').addClass('effeckt-positional-modal-close').html('x');
 
-    modalContent.html( content );
-    modalContent.appendTo( modal );
-    modalCloseButton.appendTo( modal );
+    modalContent.html(content);
+    modalContent.appendTo(modal);
     modal.appendTo(modalWrap);
 
     return modalWrap;
   },
 
   getSenderButton: function( modal ) {
-    for( var i = 0, len = this.modalsList.length; i < len; i++ ) {
-      if ( this.modalsList[i].modal.get(0) == modal.get(0) ) {
+    var i;
+    for (i = 0, len = this.modalsList.length; i < len; i++) {
+      if (this.modalsList[i].modal.get(0) == modal.get(0)) {
         return this.modalsList[i].element;
       }
     }
@@ -120,17 +113,17 @@ var EffecktPositionalModals = {
   },
 
   add: function($el, modal) {
-    //add element to DOM
+    // add element to DOM
     modal.appendTo("body");
 
-    //add element to modal list
-    this.modalsList.push({element: $el, 'modal': modal});
+    // add element to modal list
+    this.modalsList.push({ element: $el, 'modal': modal });
   },
 
-  remove: function(modal){
-    console.log(this.modalsList.length);
-    for( var i = 0, len = this.modalsList.length; i < len; i++ ) {
-      if ( this.modalsList[i].modal.get(0) == modal.get(0) ) {
+  remove: function(modal) {
+    var i;
+    for (i = 0, len = this.modalsList.length; i < len; i++) {
+      if (this.modalsList[i].modal.get(0) == modal.get(0)) {
         this.modalsList.splice( i, 1 );
         return true;
       }
@@ -140,10 +133,10 @@ var EffecktPositionalModals = {
   /**
    * Checks if the specified element has already open a modal window.
    */
-  contains: function( $el ) {
-
-    for( var i = 0, len = this.modalsList.length; i < len; i++ ) {
-      if ( this.modalsList[i].element.get(0) == $el.get(0) ) {
+  contains: function($el) {
+    var i;
+    for (i = 0, len = this.modalsList.length; i < len; i++) {
+      if (this.modalsList[i].element.get(0) == $el.get(0)) {
         return true;
       }
     }
