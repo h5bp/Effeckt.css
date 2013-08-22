@@ -3,6 +3,8 @@ var EffecktPageTransitions = {
   fromPage: '',
   toPage: '',
   isAnimating: false,
+  transitionInEffect: '',
+  transitionOutEffect: '',
 
   init: function() {
 
@@ -28,15 +30,16 @@ var EffecktPageTransitions = {
 
       e.preventDefault();
 
-      var transitionEffect  = $(this).data('effeckt-transition'),
-          transitionPage    = $(this).data('effeckt-transition-page');
+      var transitionInEffect  = $(this).data('effeckt-transition-in'),
+          transitionOutEffect = $(this).data('effeckt-transition-out')
+          transitionPage      = $(this).data('effeckt-transition-page');
 
-      self.transitionPage( transitionPage, transitionEffect );
+      self.transitionPage( transitionPage, transitionInEffect, transitionOutEffect );
 
     });
   },
 
-  transitionPage: function( transitionPage, transitionEffect ) {
+  transitionPage: function( transitionPage, transitionInEffect, transitionOutEffect ) {
 
     if ( this.isAnimating ) {
 
@@ -45,6 +48,8 @@ var EffecktPageTransitions = {
     }
 
     this.isAnimating = true;
+    this.transitionInEffect = transitionInEffect;
+    this.transitionOutEffect= transitionOutEffect;
 
     // Get Pages
     this.fromPage = $('.effeckt-page-active');
@@ -54,8 +59,8 @@ var EffecktPageTransitions = {
     // Maybe this array class could be made using and array
     // Relationating the In Effect with the Out effect.
     this.toPage.show().addClass('effeckt-page-active');
-    this.toPage.addClass(transitionEffect + '-in');
-    this.fromPage.addClass(transitionEffect + '-out');
+    this.toPage.addClass(this.transitionInEffect);
+    this.fromPage.addClass(this.transitionOutEffect);
 
     // Add this class to prevent scroll to be displayed
     this.toPage.addClass('effeckt-page-animating');
@@ -75,14 +80,14 @@ var EffecktPageTransitions = {
       self.toPage.removeClass('effeckt-page-animating');
 
       self.fromPage.hide();
-      self.fromPage.removeClass(transitionEffect + '-out');
+      self.fromPage.removeClass(self.transitionOutEffect);
 
-      self.toPage.removeClass(transitionEffect + '-in');
+      self.toPage.removeClass(self.transitionInEffect);
 
     });
 
   },
-  
+
 };
 
 EffecktPageTransitions.init();
