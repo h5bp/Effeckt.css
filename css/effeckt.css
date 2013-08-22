@@ -188,7 +188,7 @@
   left: 0;
   width: 0;
   height: 100%;
-  background: #000;
+  background: black;
   transition: width 500ms; }
 .effeckt-button[data-effeckt-type="fill-from-left"]:hover:after {
   width: 100%; }
@@ -203,7 +203,7 @@
   right: 0;
   width: 0;
   height: 100%;
-  background: #000;
+  background: black;
   transition: width 500ms; }
 .effeckt-button[data-effeckt-type="fill-from-right"]:hover:after {
   width: 100%; }
@@ -218,7 +218,7 @@
   left: 0;
   width: 100%;
   height: 0;
-  background: #000;
+  background: black;
   transition: height 500ms; }
 .effeckt-button[data-effeckt-type="fill-from-top"]:hover:after {
   height: 100%; }
@@ -233,7 +233,7 @@
   left: 0;
   width: 100%;
   height: 0;
-  background: #000;
+  background: black;
   transition: height 500ms; }
 .effeckt-button[data-effeckt-type="fill-from-bottom"]:hover:after {
   height: 100%; }
@@ -984,7 +984,7 @@ Example markup:
 
 .md-effect-7 .effeckt-modal {
   transform: translateY(-100%);
-  transition: all .3s;
+  transition: all 0.3s;
   opacity: 0; }
 
 .effeckt-show.md-effect-7 .effeckt-modal {
@@ -1041,10 +1041,10 @@ Example markup:
 
 .effeckt-show.md-effect-12 .effeckt-modal {
   opacity: 1;
-  background: #555; }
+  background: #555555; }
 
 .effeckt-show.md-effect-12 ~ .effeckt-overlay {
-  background: #555; }
+  background: #555555; }
 
 .md-effect-12, .md-effect-12 h3 {
   background: transparent; }
@@ -1382,333 +1382,62 @@ Example markup:
     transform-origin: 0 50%;
     transition: 0.5s; }
 
-.effeckt-page-transition.effeckt-page-transition-animating {
-  visibility: visible; }
+.pages-wrap {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden; }
 
-.animation-delay-100 {
-  animation-delay: 0.1s; }
+.effeckt-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 4rem;
+  overflow: auto;
+  visibility: hidden; }
+  .effeckt-page.effeckt-page-active {
+    visibility: visible; }
+  .effeckt-page.effeckt-page-animating {
+    overflow: hidden;
+    z-index: 100; }
 
-.animation-delay-180 {
-  animation-delay: 0.18s; }
+.slide-left-in {
+  animation: slideInLeft 1000ms forwards ease-in-out; }
 
-.animation-delay-200 {
-  animation-delay: 0.2s; }
-
-.animation-delay-300 {
-  animation-delay: 0.3s; }
-
-.animation-delay-500 {
-  animation-delay: 0.5s; }
-
-.animation-delay-700 {
-  animation-delay: 0.7s; }
-
-.animation-delay-1000 {
-  animation-delay: 1s; }
-
-.effeckt-page-transition-left-slide-in {
-  animation: slideInLeft 0.7s forwards ease-out; }
-
-.effeckt-page-transition-right-slide-in {
-  animation: slideInRight 0.7s forwards ease-out; }
-
-.effeckt-page-transition-top-slide-in {
-  animation: slideInTop 0.7s forwards ease-out; }
-
-.effeckt-page-transition-bottom-slide-in {
-  animation: slideInBottom 0.7s forwards ease-out; }
+.slide-left-out {
+  animation: slideOutLeft 1000ms forwards ease-in-out; }
 
 @keyframes slideInLeft {
-  0% {
+  from {
     transform: translateX(100%); }
 
-  100% {
-    transform: translateX(0); } }
-
-@keyframes slideInRight {
-  0% {
-    transform: translateX(-100%); }
-
-  100% {
-    transform: translateX(0); } }
-
-@keyframes slideInTop {
-  0% {
-    transform: translateY(-100%); }
-
-  100% {
-    transform: translateY(0); } }
-
-@keyframes slideInBottom {
-  0% {
-    transform: translateY(100%); }
-
-  100% {
-    transform: translateY(0); } }
-
-.effeckt-page-transition-left-slide-out {
-  animation: slideOutLeft 0.7s forwards ease-out; }
-
-.effeckt-page-transition-right-slide-out {
-  animation: slideOutRight 0.7s forwards ease-out; }
-
-.effeckt-page-transition-top-slide-out {
-  animation: slideOutTop 0.7s forwards ease-out; }
-
-.effeckt-page-transition-bottom-slide-out {
-  animation: slideOutBottom 0.7s forwards ease-out; }
+  to {
+    transform: translateX(0%); } }
 
 @keyframes slideOutLeft {
-  0% {
-    transform: translateX(0%); }
-
-  100% {
+  to {
     transform: translateX(-100%); } }
+
+.slide-right-in {
+  animation: slideInRight 0.7s forwards ease; }
+
+.slide-right-out {
+  animation: slideOutRight 0.7s forwards ease; }
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(-100%); }
+
+  to {
+    transform: translateX(0%); } }
 
 @keyframes slideOutRight {
-  0% {
-    transform: translateX(0); }
-
-  100% {
+  to {
     transform: translateX(100%); } }
-
-@keyframes slideOutTop {
-  0% {
-    transform: translateY(0); }
-
-  100% {
-    transform: translateY(100%); } }
-
-@keyframes slideOutBottom {
-  0% {
-    transform: translateY(0); }
-
-  100% {
-    transform: translateY(-100%); } }
-
-.effeckt-page-transition-down-scale-out {
-  animation: scaleDown 0.7s ease both; }
-
-.effeckt-page-transition-up-scale-in {
-  animation: scaleUp 0.7s ease both; }
-
-@keyframes scaleDown {
-  to {
-    opacity: 0;
-    transform: scale(0.8); } }
-
-@keyframes scaleUp {
-  from {
-    opacity: 0;
-    transform: scale(0.8); } }
-
-.effeckt-page-transition-left-fade-in {
-  animation: fadeLeftIn 0.7s ease both; }
-
-.effeckt-page-transition-right-fade-in {
-  animation: fadeRightIn 0.7s ease both; }
-
-.effeckt-page-transition-top-fade-in {
-  animation: fadeTopIn 0.7s ease both; }
-
-.effeckt-page-transition-bottom-fade-in {
-  animation: fadeBottomIn 0.7s ease both; }
-
-@keyframes fadeLeftIn {
-  to {
-    opacity: 0.3;
-    transform: translateX(-100%); } }
-
-@keyframes fadeRightIn {
-  to {
-    opacity: 0.3;
-    transform: translateX(100%); } }
-
-@keyframes fadeTopIn {
-  to {
-    opacity: 0.3;
-    transform: translateY(-100%); } }
-
-@keyframes fadeBottomIn {
-  to {
-    opacity: 0.3;
-    transform: translateY(100%); } }
-
-.effeckt-page-transition-left-fade-out {
-  animation: fadeLeftOut 0.7s ease both; }
-
-.effeckt-page-transition-right-fade-out {
-  animation: fadeRightOut 0.7s ease both; }
-
-.effeckt-page-transition-top-fade-out {
-  animation: fadeTopOut 0.7s ease both; }
-
-.effeckt-page-transition-bottom-fade-out {
-  animation: fadeBottomOut 0.7s ease both; }
-
-@keyframes fadeLeftOut {
-  from {
-    opacity: 0.3;
-    transform: translateX(-100%); } }
-
-@keyframes fadeRightOut {
-  from {
-    opacity: 0.3;
-    transform: translateX(100%); } }
-
-@keyframes fadeTopOut {
-  from {
-    opacity: 0.3;
-    transform: translateY(-100%); } }
-
-@keyframes fadeBottomOut {
-  from {
-    opacity: 0.3;
-    transform: translateY(100%); } }
-
-.effeckt-page-transition-left-flip-in {
-  transform-origin: 50% 50%;
-  animation: flipInLeft 0.5s both ease-out; }
-
-.effeckt-page-transition-right-flip-out {
-  transform-origin: 50% 50%;
-  animation: flipOutRight 0.5s both ease-in; }
-
-@keyframes flipInLeft {
-  from {
-    opacity: 0.2;
-    transform: translateZ(-1000px) rotateY(-90deg); } }
-
-@keyframes flipOutRight {
-  to {
-    opacity: 0.2;
-    transform: translateZ(-1000px) rotateY(90deg); } }
-
-.effeckt-page-transition-newspaper-out {
-  transform-origin: 50% 50%;
-  animation: rotateOutNewspaper 0.5s both ease-in; }
-
-.effeckt-page-transition-newspaper-in {
-  transform-origin: 50% 50%;
-  animation: rotateInNewspaper 0.5s both ease-out; }
-
-@keyframes rotateOutNewspaper {
-  to {
-    opacity: 1;
-    transform: translateZ(-3000px) rotateZ(360deg); } }
-
-@keyframes rotateInNewspaper {
-  from {
-    opacity: 1;
-    transform: translateZ(-3000px) rotateZ(-360deg); } }
-
-.effeckt-page-transition-left-rotate-push {
-  transform-origin: 0% 50%;
-  animation: rotatePushLeft 0.8s both ease; }
-
-.effeckt-page-transition-right-rotate-push {
-  transform-origin: 100% 50%;
-  animation: rotatePushRight 0.8s both ease; }
-
-.effeckt-page-transition-top-rotate-push {
-  transform-origin: 50% 0%;
-  animation: rotatePushTop 0.8s both ease; }
-
-.effeckt-page-transition-bottom-rotate-push {
-  transform-origin: 50% 100%;
-  animation: rotatePushBottom 0.8s both ease; }
-
-@keyframes rotatePushLeft {
-  to {
-    opacity: 0;
-    transform: rotateY(90deg); } }
-
-@keyframes rotatePushRight {
-  to {
-    opacity: 0;
-    transform: rotateY(-90deg); } }
-
-@keyframes rotatePushTop {
-  to {
-    opacity: 0;
-    transform: rotateX(-90deg); } }
-
-@keyframes rotatePushBottom {
-  to {
-    opacity: 0;
-    transform: rotateX(90deg); } }
-
-.effeckt-page-transition-left-rotate-pull {
-  transform-origin: 0% 50%;
-  animation: rotatePullLeft 0.5s both ease; }
-
-.effeckt-page-transition-right-rotate-pull {
-  transform-origin: 100% 50%;
-  animation: rotatePullRight 0.5s both ease; }
-
-.effeckt-page-transition-top-rotate-pull {
-  transform-origin: 50% 0%;
-  animation: rotatePullTop 0.5s both ease; }
-
-.effeckt-page-transition-bottom-rotate-pull {
-  transform-origin: 50% 100%;
-  animation: rotatePullBottom 0.5s both ease; }
-
-@keyframes rotatePullLeft {
-  from {
-    opacity: 0;
-    transform: rotateY(90deg); } }
-
-@keyframes rotatePullRight {
-  from {
-    opacity: 0;
-    transform: rotateY(-90deg); } }
-
-@keyframes rotatePullTop {
-  from {
-    opacity: 0;
-    transform: rotateX(-90deg); } }
-
-@keyframes rotatePullBottom {
-  from {
-    opacity: 0;
-    transform: rotateX(90deg); } }
-
-.effeckt-page-transition-left-rotate-fold {
-  transform-origin: 100% 50%;
-  animation: rotateFoldLeft 0.7s both ease; }
-
-.effeckt-page-transition-right-rotate-fold {
-  transform-origin: 0% 50%;
-  animation: rotateFoldRight 0.7s both ease; }
-
-.effeckt-page-transition-top-rotate-fold {
-  transform-origin: 50% 100%;
-  animation: rotateFoldTop 0.7s both ease; }
-
-.effeckt-page-transition-bottom-rotate-fold {
-  transform-origin: 50% 0%;
-  animation: rotateFoldBottom 0.7s both ease; }
-
-@keyframes rotateFoldLeft {
-  to {
-    opacity: 0;
-    transform: translateX(-100%) rotateY(-90deg); } }
-
-@keyframes rotateFoldRight {
-  to {
-    opacity: 0;
-    transform: translateX(100%) rotateY(90deg); } }
-
-@keyframes rotateFoldTop {
-  to {
-    opacity: 0;
-    transform: translateY(-100%) rotateX(90deg); } }
-
-@keyframes rotateFoldBottom {
-  to {
-    opacity: 0;
-    transform: translateY(100%) rotateX(-90deg); } }
 
 .effeckt-tooltip[data-effeckt-tooltip-text] {
   position: relative; }
@@ -1772,7 +1501,7 @@ Example markup:
   position: relative;
   margin: 0px;
   width: 52px;
-  transition: all .3s ease-out;
+  transition: all 0.3s ease-out;
   transform: scale(1);
   background: white; }
 
@@ -1787,7 +1516,7 @@ Example markup:
   height: 29px;
   position: absolute;
   width: 29px;
-  transition: all 0.1s ease-in .1s;
+  transition: all 0.1s ease-in 0.1s;
   background: white; }
 
 .effeckt-ckbox-ios7[type="checkbox"]:checked:after, .effeckt-rdio-ios7[type="radio"]:checked:after {
@@ -1807,14 +1536,14 @@ Example markup:
         display: block;
         padding: 10px 15px;
         color: #383838;
-        background-color: #EEEEEE; }
+        background-color: #eeeeee; }
         .effeckt-tabs-wrap ul.effeckt-tabs li a.active, .effeckt-tabs-wrap ul.effeckt-tabs li a:hover {
-          background-color: #E8E8E8; }
+          background-color: #e8e8e8; }
   .effeckt-tabs-wrap .tabs-container {
     position: relative;
     padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid #DDD;
+    border: 1px solid #dddddd;
     transition: all 500ms ease-in-out; }
     .effeckt-tabs-wrap .tabs-container .effeckt-tab-content {
       position: absolute;
@@ -1885,7 +1614,7 @@ Example markup:
   z-index: 10;
   display: none;
   padding: 10px;
-  background-color: #ccc; }
+  background-color: #cccccc; }
   .effeckt-positional-modal-wrap .effeckt-positional-modal:before {
     content: "";
     position: absolute;
@@ -1894,7 +1623,7 @@ Example markup:
     width: 0;
     height: 0;
     margin-left: -10px;
-    border-top: 10px solid #ccc;
+    border-top: 10px solid #cccccc;
     border-right: 10px solid transparent;
     border-left: 10px solid transparent; }
   .effeckt-positional-modal-wrap.effeckt-front {
