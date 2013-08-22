@@ -82,12 +82,7 @@ var EffecktPageTransitions = {
     });
 
   },
-  resetTransition: function() {
-    this.isAnimating = false;
-    this.mainPage.removeClass().addClass('page-wrap');
-    this.secondaryPage.removeClass().addClass('effeckt-page-transition');
-  }
-
+  
 };
 
 EffecktPageTransitions.init();
