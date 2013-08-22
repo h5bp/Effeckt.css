@@ -32,6 +32,11 @@
       transform: rotate(45deg);
     }
   }
+
+  &.effeckt-front {
+    z-index: 20;
+  }
+
   .effeckt-positional-modal-close {
     position: absolute;
     top: 0;

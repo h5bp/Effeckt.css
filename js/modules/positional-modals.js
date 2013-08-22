@@ -37,7 +37,8 @@ var EffecktPositionalModals = {
   },
 
   openModal: function($el) {
-    var effect = $el.data('effeckt-positional-modal-type'),
+    var self = this,
+        effect = $el.data('effeckt-positional-modal-type'),
         buttonPosition = $el.offset(),
         buttonSize = {'width': $el.width(), 'height': $el.height()};
 
@@ -56,7 +57,20 @@ var EffecktPositionalModals = {
       'left': buttonPosition.left - (modal.outerWidth()/2) + ($el.outerWidth()/2)
     });
 
-   modal.find('.effeckt-positional-modal').addClass('effeckt-show');
+    // add event to show bubble on front if you click on it
+    var evt  = 'click';
+    if ( this.isTouchDevice ) {
+      evt += ' touchstart';
+    }
+
+    modal.on(evt, function(e){
+      var allModals = $('[class~="'+self.modalWrapClass+'"]');
+
+      allModals.removeClass('effeckt-front');
+      modal.addClass('effeckt-front');
+    });
+
+    modal.find('.effeckt-positional-modal').addClass('effeckt-show');
 
   },
 

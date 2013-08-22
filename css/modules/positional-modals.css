@@ -24,6 +24,8 @@
       border-right: 1px solid #cccccc;
       border-bottom: 1px solid #cccccc;
       transform: rotate(45deg); }
+  .effeckt-positional-modal-wrap.effeckt-front {
+    z-index: 20; }
   .effeckt-positional-modal-wrap .effeckt-positional-modal-close {
     position: absolute;
     top: 0;
