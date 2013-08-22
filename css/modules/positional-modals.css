@@ -3,7 +3,7 @@
   z-index: 10;
   display: none;
   padding: 10px;
-  background-color: #ccc; }
+  background-color: #cccccc; }
   .effeckt-positional-modal-wrap .effeckt-positional-modal:before {
     content: "";
     position: absolute;
@@ -12,7 +12,7 @@
     width: 0;
     height: 0;
     margin-left: -10px;
-    border-top: 10px solid #ccc;
+    border-top: 10px solid #cccccc;
     border-right: 10px solid transparent;
     border-left: 10px solid transparent; }
   .effeckt-positional-modal-wrap.effeckt-front {
