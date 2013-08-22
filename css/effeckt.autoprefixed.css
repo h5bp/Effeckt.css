@@ -3530,15 +3530,15 @@ Example markup:
 }
 
 .slide-left-in {
-  -webkit-animation: slideInLeft 0.7s forwards ease;
-  -o-animation: slideInLeft 0.7s forwards ease;
-  animation: slideInLeft 0.7s forwards ease;
+  -webkit-animation: slideInLeft 1000ms forwards ease-in-out;
+  -o-animation: slideInLeft 1000ms forwards ease-in-out;
+  animation: slideInLeft 1000ms forwards ease-in-out;
 }
 
 .slide-left-out {
-  -webkit-animation: slideOutLeft 0.7s forwards ease;
-  -o-animation: slideOutLeft 0.7s forwards ease;
-  animation: slideOutLeft 0.7s forwards ease;
+  -webkit-animation: slideOutLeft 1000ms forwards ease-in-out;
+  -o-animation: slideOutLeft 1000ms forwards ease-in-out;
+  animation: slideOutLeft 1000ms forwards ease-in-out;
 }
 
 @-webkit-keyframes slideInLeft {
