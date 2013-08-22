@@ -64,15 +64,18 @@ var EffecktPageTransitions = {
     var evt = EffecktDemos.animationEndEventName + ' ' + EffecktDemos.transitionEndEventName,
         self= this;
 
-    this.toPage.on(evt, function () {
+    this.fromPage.on(evt, function () {
 
       self.isAnimating = false;
-      self.fromPage.removeClass(transitionEffect + '-out');
       self.fromPage.removeClass('effeckt-page-active');
-      self.toPage.removeClass(transitionEffect + '-in');
+      self.fromPage.removeClass('effeckt-page-animating');
 
-      self.toPage.addClass('effeckt-page-animating');
-      self.fromPage.addClass('effeckt-page-animating');
+    });
+
+    this.toPage.on(evt, function() {
+
+      self.isAnimating = false;
+      self.toPage.removeClass('effeckt-page-animating');
 
     });
 
