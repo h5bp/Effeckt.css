@@ -1,4 +1,4 @@
-var Buttons = {
+var EffecktButtons = {
 
   init: function() {
 
@@ -40,4 +40,4 @@ var Buttons = {
 
 };
 
-Buttons.init();
+EffecktButtons.init();
