@@ -14,7 +14,6 @@ var EffecktPositionalModals = {
   },
 
   bindUIActions: function() {
-
     var self = this,
         evt  = 'click';
     
@@ -31,38 +30,43 @@ var EffecktPositionalModals = {
       e.preventDefault();
       self.close($(this));
     });
-
   },
 
   openModal: function($el) {
     var self = this,
         effect = $el.data('effeckt-positional-modal-type'),
+        style = $el.attr('data-effeckt-modal-style'),
         buttonPosition = $el.offset(),
         buttonSize = { 'width': $el.width(), 'height': $el.height() };
 
-    if (this.contains($el)) {
-      return false;
-    }
+    // if (this.contains($el)) {
+    //   return false;
+    // }
     
-    var modal = this.createModal($("#effeckt-modal-wrap").html());
+    var modal = this.createModal(
+      $("#effeckt-modal-wrap").html(),
+      style
+    );
 
     modal.show();
     this.add($el, modal);
     
+    // This will depend on data-effeckt-positional-modal-type
+    // above / below / left / right
+    // ideally some edge detection as well
     modal.css({
-      'top': (buttonPosition.top - modal.outerHeight() ),
+      'top': (buttonPosition.top - modal.outerHeight()) - 15,
       'left': buttonPosition.left - (modal.outerWidth()/2) + ($el.outerWidth()/2)
     });
 
     // add event to show bubble on front if you click on it
     var evt  = 'click';
-    if ( this.isTouchDevice ) {
+    if (this.isTouchDevice) {
       evt += ' touchstart';
     }
 
     modal.on(evt, function(e){
       var allModals = $('[class~="'+self.modalWrapClass+'"]');
-
       allModals.removeClass('effeckt-front');
       modal.addClass('effeckt-front');
     });
@@ -70,28 +74,17 @@ var EffecktPositionalModals = {
     modal.find('.effeckt-positional-modal').addClass('effeckt-show');
   },
 
-  close: function($el) {
+  close: function() {
     var evt = EffecktDemos.animationEndEventName + ' ' + EffecktDemos.transitionEndEventName,
-        self = this;
-        
-    var modal = $el.parents('[class~="'+this.modalWrapClass+'"]'),
-        sender = this.getSenderButton(modal);
+      modal = $('.effeckt-positional-modal-wrap').removeClass("effeckt-show");
 
-    modal.on(evt, function () {
-      modal.find('.effeckt-positional-modal').removeClass("effeckt-show");
-      modal.hide().remove();
+    modal.on(evt, function() {
+      modal.remove();
     });
-
-    this.remove(modal);
-    modal.find('.effeckt-positional-modal').removeClass('effeckt-show');
-
-    if( sender && sender.data("effeckt-hide-class") ) {
-      modal.addClass("effeckt-hide");
-    }
   },
 
-  createModal: function(content) {
-    var modalWrap         = $('<div>').addClass('effeckt-positional-modal-wrap');
+  createModal: function(content, style) {
+    var modalWrap         = $('<div>').addClass('effeckt-positional-modal-wrap').addClass(style).addClass("effeckt-show");
     var modal             = $('<div>').addClass('effeckt-positional-modal');
     var modalContent      = $('<div>').addClass('effeckt-positional-modal-content');
 

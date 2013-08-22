@@ -4,12 +4,9 @@
   position: absolute;
   z-index: 10;
   display: none;
-
+  padding: 10px;
+  background-color: #ccc;
   .effeckt-positional-modal {
-    visibility: hidden;
-    background-color: #ccc;
-    margin-bottom: 15px;
-    padding: 10px;
     &:before {
       content: "";
       position: absolute;
@@ -26,16 +23,4 @@
   &.effeckt-front {
     z-index: 20;
   }
-}
-
-//zoom
-.effeckt-positional-modal {
-  opacity:0;
-  transition: all 0.3s ease;
-  transform: scale(0.5);
-}
-.effeckt-positional-modal.effeckt-show {
-  visibility: visible;
-  opacity: 1;
-  transform: scale(1);
 }
