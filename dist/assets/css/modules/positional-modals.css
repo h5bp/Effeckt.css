@@ -4,7 +4,7 @@
   display: none; }
   .effeckt-positional-modal-wrap .effeckt-modal {
     padding: 10px;
-    background: #ccc; }
+    background: #cccccc; }
   .effeckt-positional-modal-wrap .effeckt-modal-content {
     background: white; }
   .effeckt-positional-modal-wrap.effeckt-front {
@@ -20,7 +20,7 @@
     width: 0;
     height: 0;
     margin-left: -10px;
-    border-top: 10px solid #ccc;
+    border-top: 10px solid #cccccc;
     border-right: 10px solid transparent;
     border-left: 10px solid transparent; }
 .effeckt-positional-modal-wrap[data-effeckt-positional-modal-type="below"] {
@@ -33,6 +33,6 @@
     width: 0;
     height: 0;
     margin-left: -10px;
-    border-bottom: 10px solid #ccc;
+    border-bottom: 10px solid #cccccc;
     border-right: 10px solid transparent;
     border-left: 10px solid transparent; }

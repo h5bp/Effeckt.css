@@ -215,9 +215,9 @@
   -ms-transform: translateY(-100%);
   -o-transform: translateY(-100%);
   transform: translateY(-100%);
-  -webkit-transition: all .3s;
-  -o-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
   opacity: 0;
 }
 
@@ -340,11 +340,11 @@
 
 .effeckt-show.md-effect-12 .effeckt-modal {
   opacity: 1;
-  background: #555;
+  background: #555555;
 }
 
 .effeckt-show.md-effect-12 ~ .effeckt-overlay {
-  background: #555;
+  background: #555555;
 }
 
 .md-effect-12,
@@ -570,6 +570,9 @@
   -ms-transform: translateY(200%);
   -o-transform: translateY(200%);
   transform: translateY(200%);
+  -webkit-transition: all 500ms 0.2s;
+  -o-transition: all 500ms 0.2s;
+  transition: all 500ms 0.2s;
 }
 
 .effeckt-show.md-effect-17 .effeckt-modal {
