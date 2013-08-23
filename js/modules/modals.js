@@ -18,9 +18,7 @@ var EffecktModals = {
   modalStyle: "",
 
   init: function() {
-
     this.bindUIActions();
-
   },
 
   bindUIActions: function() {

@@ -266,7 +266,7 @@
   left: 0;
   width: 0;
   height: 100%;
-  background: black;
+  background: #000;
   -webkit-transition: width 500ms;
   -o-transition: width 500ms;
   transition: width 500ms;
@@ -288,7 +288,7 @@
   right: 0;
   width: 0;
   height: 100%;
-  background: black;
+  background: #000;
   -webkit-transition: width 500ms;
   -o-transition: width 500ms;
   transition: width 500ms;
@@ -310,7 +310,7 @@
   left: 0;
   width: 100%;
   height: 0;
-  background: black;
+  background: #000;
   -webkit-transition: height 500ms;
   -o-transition: height 500ms;
   transition: height 500ms;
@@ -332,7 +332,7 @@
   left: 0;
   width: 100%;
   height: 0;
-  background: black;
+  background: #000;
   -webkit-transition: height 500ms;
   -o-transition: height 500ms;
   transition: height 500ms;

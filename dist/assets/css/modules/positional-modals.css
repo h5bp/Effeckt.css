@@ -1,10 +1,18 @@
 .effeckt-positional-modal-wrap {
   position: absolute;
   z-index: 10;
-  display: none;
-  padding: 10px;
-  background-color: #cccccc; }
-  .effeckt-positional-modal-wrap .effeckt-positional-modal:before {
+  display: none; }
+  .effeckt-positional-modal-wrap .effeckt-modal {
+    padding: 10px;
+    background: #ccc; }
+  .effeckt-positional-modal-wrap .effeckt-modal-content {
+    background: white; }
+  .effeckt-positional-modal-wrap.effeckt-front {
+    z-index: 20; }
+
+.effeckt-positional-modal-wrap[data-effeckt-positional-modal-type="above"] {
+  margin-top: -15px; }
+  .effeckt-positional-modal-wrap[data-effeckt-positional-modal-type="above"] .effeckt-modal:before {
     content: "";
     position: absolute;
     top: 100%;
@@ -12,8 +20,19 @@
     width: 0;
     height: 0;
     margin-left: -10px;
-    border-top: 10px solid #cccccc;
+    border-top: 10px solid #ccc;
     border-right: 10px solid transparent;
     border-left: 10px solid transparent; }
-  .effeckt-positional-modal-wrap.effeckt-front {
-    z-index: 20; }
+.effeckt-positional-modal-wrap[data-effeckt-positional-modal-type="below"] {
+  margin-top: 15px; }
+  .effeckt-positional-modal-wrap[data-effeckt-positional-modal-type="below"] .effeckt-modal:before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: -10px;
+    border-bottom: 10px solid #ccc;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent; }

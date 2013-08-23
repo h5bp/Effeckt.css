@@ -51,7 +51,7 @@ body {
 }
 
 body {
-  background: #eeeeee;
+  background: #eee;
   font-family: Sans-serif;
   overflow-x: hidden;
   padding: 4rem;
@@ -80,7 +80,7 @@ body {
 
 .effeckt header {
   margin: 0 0 1rem 0;
-  border-bottom: 2px solid #eeeeee;
+  border-bottom: 2px solid #eee;
   position: relative;
 }
 
@@ -108,7 +108,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #cccccc;
+  color: #ccc;
 }
 
 a:hover,
@@ -150,7 +150,7 @@ h1 span {
   width: 50px;
   height: 50px;
   line-height: 50px;
-  background: #cccccc;
+  background: #ccc;
   color: white;
   text-align: center;
   text-transform: uppercase;
@@ -192,7 +192,7 @@ button {
 hr {
   height: 0;
   border: 0;
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid #ccc;
 }
 
 h1 span:nth-of-type(1) {
@@ -203,7 +203,7 @@ h1 span:nth-of-type(1) {
   -ms-transform: translateX(-50px);
   -o-transform: translateX(-50px);
   transform: translateX(-50px);
-  background: #666666;
+  background: #666;
 }
 
 h1 span:nth-of-type(2) {
@@ -214,7 +214,7 @@ h1 span:nth-of-type(2) {
   -ms-transform: translateY(-50px);
   -o-transform: translateY(-50px);
   transform: translateY(-50px);
-  background: #444444;
+  background: #444;
 }
 
 h1 span:nth-of-type(3) {
@@ -225,7 +225,7 @@ h1 span:nth-of-type(3) {
   -ms-transform: translateX(50px);
   -o-transform: translateX(50px);
   transform: translateX(50px);
-  background: #666666;
+  background: #666;
 }
 
 h1 span:nth-of-type(4) {
@@ -236,7 +236,7 @@ h1 span:nth-of-type(4) {
   -ms-transform: translateX(50px);
   -o-transform: translateX(50px);
   transform: translateX(50px);
-  background: #444444;
+  background: #444;
 }
 
 h1 span:nth-of-type(5) {
@@ -247,7 +247,7 @@ h1 span:nth-of-type(5) {
   -ms-transform: translateX(-50px);
   -o-transform: translateX(-50px);
   transform: translateX(-50px);
-  background: #666666;
+  background: #666;
 }
 
 h1 span:nth-of-type(6) {
@@ -258,7 +258,7 @@ h1 span:nth-of-type(6) {
   -ms-transform: translateX(50px);
   -o-transform: translateX(50px);
   transform: translateX(50px);
-  background: #444444;
+  background: #444;
 }
 
 h1 span:nth-of-type(7) {
@@ -269,7 +269,7 @@ h1 span:nth-of-type(7) {
   -ms-transform: translateY(-50px);
   -o-transform: translateY(-50px);
   transform: translateY(-50px);
-  background: #666666;
+  background: #666;
 }
 
 h1 span:nth-of-type(8) {
@@ -367,12 +367,12 @@ h1 span:nth-of-type(11) {
 }
 
 .contributors {
-  background: #222222;
-  color: #eeeeee;
+  background: #222;
+  color: #eee;
 }
 
 .contributors header {
-  border-bottom-color: #666666;
+  border-bottom-color: #666;
 }
 
 .contributors ol {
@@ -458,7 +458,7 @@ h1 span:nth-of-type(11) {
 .effeckt-modal h3 {
   padding: 1rem;
   color: white;
-  background: #444444;
+  background: #444;
 }
 
 .effeckt-modal-content {
@@ -471,7 +471,7 @@ h1 span:nth-of-type(11) {
 }
 
 .effeckt-button {
-  background: #444444;
+  background: #444;
   color: white;
   border: 0;
   padding: 0.8rem 1rem;
@@ -490,7 +490,7 @@ h1 span:nth-of-type(11) {
   height: 100%;
   visibility: hidden;
   overflow: hidden;
-  background: #555555;
+  background: #555;
 }
 
 .effeckt-page-transition-content {
@@ -509,7 +509,7 @@ h1 span:nth-of-type(11) {
   left: 0;
   bottom: 0;
   overflow-y: auto;
-  background: #333333;
+  background: #333;
   visibility: hidden;
   width: 12rem;
 }
@@ -530,21 +530,21 @@ h1 span:nth-of-type(11) {
   display: block;
   padding: 0.3rem 1rem;
   color: white;
-  border-bottom: 1px solid #444444;
+  border-bottom: 1px solid #444;
 }
 
 .effeckt-off-screen-nav li a:hover,
 .effeckt-off-screen-nav li a:focus {
-  background: #444444;
+  background: #444;
 }
 
 .effeckt-off-screen-nav li a:active {
-  background: #222222;
+  background: #222;
 }
 
 .effeckt-off-screen-nav h4 {
   color: white;
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid #eee;
   padding: 1rem 0.5rem 0.2rem 0;
   margin: 0 1rem 1rem;
   text-transform: uppercase;
@@ -612,7 +612,7 @@ h1 span:nth-of-type(11) {
 }
 
 .effeckt-list li.new-item {
-  background: #cccccc;
+  background: #ccc;
 }
 
 .effeckt-list-scroll {
@@ -627,7 +627,7 @@ h1 span:nth-of-type(11) {
 
 .effeckt-list-scroll > li {
   padding: 0.5rem;
-  background: #eeeeee;
+  background: #eee;
   color: #252525;
   font-size: 18px;
 }
