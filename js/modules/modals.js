@@ -78,9 +78,7 @@ var EffecktModals = {
         self = this;
 
     this.modalWrap.on(evt, function () {
-      self.modalWrap.removeClass("effeckt-show effeckt-hide " + self.modalStyle);
-      $("html").removeClass("md-perspective");
-      self.modalWrap.hide().off(evt);
+      self.hideModal();
     });
 
     this.hideOverlay();
@@ -98,6 +96,20 @@ var EffecktModals = {
 
   hideOverlay: function() {
     this.overlay.removeClass("effeckt-show");
+  },
+
+  hideModal: function() {
+
+    var evt = EffecktDemos.animationEndEventName + ' ' + EffecktDemos.transitionEndEventName;
+
+    // Only remove effeckt-hide class if it's any
+    if( this.modalWrap.data("effeckt-hide-class") ){
+      this.modalWrap.removeClass("effeckt-hide");
+    }
+
+    this.modalWrap.removeClass(this.modalStyle);
+    $("html").removeClass("md-perspective");
+    this.modalWrap.hide().off(evt);
   }
 
 };

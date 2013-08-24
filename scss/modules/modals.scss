@@ -334,6 +334,7 @@
 .md-effect-17 .effeckt-modal {
   opacity: 0;
   transform: translateY(200%);
+  transition: all $effeckt-modal-transition-duration 0.2s;
 }
 .effeckt-show.md-effect-17 .effeckt-modal {
   transform: translateY(-50%);
