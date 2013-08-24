@@ -188,7 +188,7 @@
   left: 0;
   width: 0;
   height: 100%;
-  background: #000;
+  background: black;
   transition: width 500ms; }
 .effeckt-button[data-effeckt-type="fill-from-left"]:hover:after {
   width: 100%; }
@@ -203,7 +203,7 @@
   right: 0;
   width: 0;
   height: 100%;
-  background: #000;
+  background: black;
   transition: width 500ms; }
 .effeckt-button[data-effeckt-type="fill-from-right"]:hover:after {
   width: 100%; }
@@ -218,7 +218,7 @@
   left: 0;
   width: 100%;
   height: 0;
-  background: #000;
+  background: black;
   transition: height 500ms; }
 .effeckt-button[data-effeckt-type="fill-from-top"]:hover:after {
   height: 100%; }
@@ -233,7 +233,7 @@
   left: 0;
   width: 100%;
   height: 0;
-  background: #000;
+  background: black;
   transition: height 500ms; }
 .effeckt-button[data-effeckt-type="fill-from-bottom"]:hover:after {
   height: 100%; }
@@ -984,7 +984,7 @@ Example markup:
 
 .md-effect-7 .effeckt-modal {
   transform: translateY(-100%);
-  transition: all .3s;
+  transition: all 0.3s;
   opacity: 0; }
 
 .effeckt-show.md-effect-7 .effeckt-modal {
@@ -1041,10 +1041,10 @@ Example markup:
 
 .effeckt-show.md-effect-12 .effeckt-modal {
   opacity: 1;
-  background: #555; }
+  background: #555555; }
 
 .effeckt-show.md-effect-12 ~ .effeckt-overlay {
-  background: #555; }
+  background: #555555; }
 
 .md-effect-12, .md-effect-12 h3 {
   background: transparent; }
@@ -1134,7 +1134,8 @@ Example markup:
 
 .md-effect-17 .effeckt-modal {
   opacity: 0;
-  transform: translateY(200%); }
+  transform: translateY(200%);
+  transition: all 500ms 0.2s; }
 
 .effeckt-show.md-effect-17 .effeckt-modal {
   transform: translateY(-50%);
@@ -1501,7 +1502,7 @@ Example markup:
   position: relative;
   margin: 0px;
   width: 52px;
-  transition: all .3s ease-out;
+  transition: all 0.3s ease-out;
   transform: scale(1);
   background: white; }
 
@@ -1516,7 +1517,7 @@ Example markup:
   height: 29px;
   position: absolute;
   width: 29px;
-  transition: all 0.1s ease-in .1s;
+  transition: all 0.1s ease-in 0.1s;
   background: white; }
 
 .effeckt-ckbox-ios7[type="checkbox"]:checked:after, .effeckt-rdio-ios7[type="radio"]:checked:after {
@@ -1536,14 +1537,14 @@ Example markup:
         display: block;
         padding: 10px 15px;
         color: #383838;
-        background-color: #EEEEEE; }
+        background-color: #eeeeee; }
         .effeckt-tabs-wrap ul.effeckt-tabs li a.active, .effeckt-tabs-wrap ul.effeckt-tabs li a:hover {
-          background-color: #E8E8E8; }
+          background-color: #e8e8e8; }
   .effeckt-tabs-wrap .tabs-container {
     position: relative;
     padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid #DDD;
+    border: 1px solid #dddddd;
     transition: all 500ms ease-in-out; }
     .effeckt-tabs-wrap .tabs-container .effeckt-tab-content {
       position: absolute;
@@ -1615,7 +1616,7 @@ Example markup:
   display: none; }
   .effeckt-positional-modal-wrap .effeckt-modal {
     padding: 10px;
-    background: #ccc; }
+    background: #cccccc; }
   .effeckt-positional-modal-wrap .effeckt-modal-content {
     background: white; }
   .effeckt-positional-modal-wrap.effeckt-front {
@@ -1631,7 +1632,7 @@ Example markup:
     width: 0;
     height: 0;
     margin-left: -10px;
-    border-top: 10px solid #ccc;
+    border-top: 10px solid #cccccc;
     border-right: 10px solid transparent;
     border-left: 10px solid transparent; }
 .effeckt-positional-modal-wrap[data-effeckt-positional-modal-type="below"] {
@@ -1644,6 +1645,6 @@ Example markup:
     width: 0;
     height: 0;
     margin-left: -10px;
-    border-bottom: 10px solid #ccc;
+    border-bottom: 10px solid #cccccc;
     border-right: 10px solid transparent;
     border-left: 10px solid transparent; }

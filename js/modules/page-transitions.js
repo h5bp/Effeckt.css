@@ -1,3 +1,5 @@
+// Page Transition does not work right now
+// Figuring out a better way to fix issue #167
 var EffecktPageTransitions = {
 
   fromPage: '',
@@ -15,7 +17,7 @@ var EffecktPageTransitions = {
 
   initPages: function(){
 
-    var $pages = $('[data-effeckt-page]');
+    var $pages = $('.page-wrap');
 
     $pages.hide();
     this.fromPage = $pages.first().addClass('effeckt-page-active');
@@ -29,6 +31,9 @@ var EffecktPageTransitions = {
     $('.effeckt-page-transition-button').on('click',function(e){
 
       e.preventDefault();
+
+      // Disable event until issue 167 is fixed
+      return false;
 
       var transitionInEffect  = $(this).data('effeckt-transition-in'),
           transitionOutEffect = $(this).data('effeckt-transition-out')
