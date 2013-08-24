@@ -37,7 +37,7 @@ body {
   background: #eeeeee;
   font-family: Sans-serif;
   overflow-x: hidden;
-  padding: 4rem; }
+  padding: 4rem 4rem 0; }
   @media (max-width: 500px) { }
 
 .page-wrap {
