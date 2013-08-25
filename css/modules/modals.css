@@ -313,17 +313,20 @@
   transition: 0.5s 0.1s; }
 
 /* Effect 19:  Slip in from the top with perspective on container */
-.effeckt-show.md-effect-19 ~ .page-wrap {
+.effeckt-show.md-effect-19 ~ [data-effeckt-page] {
   height: 100%;
   overflow: hidden; }
 
 .effeckt-show.md-effect-19 ~ .effeckt-overlay {
   transition: 500ms; }
 
-.effeckt-show.md-effect-19 ~ .page-wrap, .effeckt-show.md-effect-19 ~ .effeckt-overlay {
+.effeckt-show.md-effect-19 ~ [data-effeckt-page], .effeckt-show.md-effect-19 ~ .effeckt-overlay {
   transform-style: preserve-3d;
   transform-origin: 50% 100%;
   animation: OpenTop 500ms forwards ease-in; }
+
+.md-effect-19 .effeckt-modal {
+  transition: 500ms; }
 
 @keyframes OpenTop {
   50% {

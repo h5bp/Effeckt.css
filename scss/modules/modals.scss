@@ -390,18 +390,21 @@
 
 
 /* Effect 19:  Slip in from the top with perspective on container */
-.effeckt-show.md-effect-19 ~ .page-wrap {
+.effeckt-show.md-effect-19 ~ [data-effeckt-page] {
   height: 100%;
   overflow: hidden;
 }
 .effeckt-show.md-effect-19 ~ .effeckt-overlay {
   transition: $effeckt-modal-transition-duration;
 }
-.effeckt-show.md-effect-19 ~ .page-wrap,
+.effeckt-show.md-effect-19 ~ [data-effeckt-page],
 .effeckt-show.md-effect-19 ~ .effeckt-overlay {
   transform-style: preserve-3d;
   transform-origin: 50% 100%;
   animation: OpenTop $effeckt-modal-transition-duration forwards ease-in;
+}
+.md-effect-19 .effeckt-modal {
+  transition: $effeckt-modal-transition-duration;
 }
 
 @keyframes OpenTop {

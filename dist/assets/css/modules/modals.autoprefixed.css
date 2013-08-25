@@ -700,7 +700,7 @@
 
 /* Effect 19:  Slip in from the top with perspective on container */
 
-.effeckt-show.md-effect-19 ~ .page-wrap {
+.effeckt-show.md-effect-19 ~ [data-effeckt-page] {
   height: 100%;
   overflow: hidden;
 }
@@ -711,7 +711,7 @@
   transition: 500ms;
 }
 
-.effeckt-show.md-effect-19 ~ .page-wrap,
+.effeckt-show.md-effect-19 ~ [data-effeckt-page],
 .effeckt-show.md-effect-19 ~ .effeckt-overlay {
   -webkit-transform-style: preserve-3d;
   -ms-transform-style: preserve-3d;
@@ -724,6 +724,12 @@
   -webkit-animation: OpenTop 500ms forwards ease-in;
   -o-animation: OpenTop 500ms forwards ease-in;
   animation: OpenTop 500ms forwards ease-in;
+}
+
+.md-effect-19 .effeckt-modal {
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
 }
 
 @-webkit-keyframes OpenTop {
