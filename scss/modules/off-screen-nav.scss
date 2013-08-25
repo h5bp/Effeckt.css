@@ -209,4 +209,9 @@
     transform-origin: 0 50%;
     transition: 0.5s;
   }
+
+  ~ .effeckt-overlay {
+    z-index:900;
+    visibility: visible;
+  }
 }

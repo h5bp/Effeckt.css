@@ -3514,6 +3514,11 @@ Example markup:
   transition: 0.5s;
 }
 
+.effeckt-off-screen-nav-rotate ~ .effeckt-overlay {
+  z-index: 900;
+  visibility: visible;
+}
+
 [data-effeckt-page] {
   position: relative;
   top: 0;
