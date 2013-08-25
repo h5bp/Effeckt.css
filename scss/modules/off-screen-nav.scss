@@ -42,11 +42,11 @@
 
   &.effeckt-off-screen-nav-show {
     transform: translateX(0);
-    ~ .page-wrap {
+    ~ [data-effeckt-page] {
       transform: translateX(12rem);
     }
   }
-  ~ .page-wrap {
+  ~ [data-effeckt-page] {
     transition: $effeckt-off-screen-navigation-transition-duration;
   }
 }
@@ -64,11 +64,11 @@
   &.effeckt-off-screen-nav-show {
     width: 12rem;
     transform: translateX(0);
-    ~ .page-wrap {
+    ~ [data-effeckt-page] {
       transform: translateX(12rem);
     }
   }
-  ~ .page-wrap {
+  ~ [data-effeckt-page] {
     transition: $effeckt-off-screen-navigation-transition-duration;
   }
 }
@@ -81,11 +81,11 @@
   transition: $effeckt-off-screen-navigation-transition-duration;
   &.effeckt-off-screen-nav-show {
     transform: translateX(0);
-    ~ .page-wrap {
+    ~ [data-effeckt-page] {
       width: 60%;
     }
   }
-  ~ .page-wrap {
+  ~ [data-effeckt-page] {
     transition: width $effeckt-off-screen-navigation-transition-duration;
     max-width: none; // reset from demo
   }
@@ -112,11 +112,11 @@
   transition: $effeckt-off-screen-navigation-transition-duration;
   &.effeckt-off-screen-nav-show {
     transform: translateX(0);
-    ~ .page-wrap {
+    ~ [data-effeckt-page] {
       transform: translateX(-12rem);
     }
   }
-  ~ .page-wrap {
+  ~ [data-effeckt-page] {
     transition: $effeckt-off-screen-navigation-transition-duration;
   }
 }
@@ -144,11 +144,11 @@
   }
   &.effeckt-off-screen-nav-show {
     width: 12rem;
-    ~ .page-wrap {
+    ~ [data-effeckt-page] {
       transform: translateX(-12rem);
     }
   }
-  ~ .page-wrap {
+  ~ [data-effeckt-page] {
     transition: $effeckt-off-screen-navigation-transition-duration;
   }
 }
@@ -164,11 +164,11 @@
   &.effeckt-off-screen-nav-show {
     transform: translateX(0);
 
-    ~ .page-wrap {
+    ~ [data-effeckt-page] {
       width: 60%;
     }
   }
-  ~ .page-wrap {
+  ~ [data-effeckt-page] {
     float: left;
     transition: width $effeckt-off-screen-navigation-transition-duration;
     max-width: none; // reset from demo
@@ -185,12 +185,17 @@
   &.effeckt-off-screen-nav-show {
     transform: none;
 
-    ~ .page-wrap {
+    ~ [data-effeckt-page] {
       transform: translateX(260px) rotateY(15deg);
+      // This make the view bigger so when it rotates doesn't look cutted on bottom
+      // But NEED to do the same on top.
+      height: 200%;
+      // Prevent scrolling
+      overflow: hidden;
     }
 
     // dont nest > 3 levels deep
-    ~ .page-wrap .off-screen-nav-cover {
+    ~ [data-effeckt-page] .off-screen-nav-cover {
       position: absolute;
       top: 0;
       left: 0;
@@ -200,8 +205,13 @@
 
   }
 
-  ~ .page-wrap {
+  ~ [data-effeckt-page] {
     transform-origin: 0 50%;
     transition: 0.5s;
+  }
+
+  ~ .effeckt-overlay {
+    z-index:900;
+    visibility: visible;
   }
 }
