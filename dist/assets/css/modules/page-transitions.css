@@ -16,58 +16,58 @@
     z-index: 100;
     position: absolute; }
 
-.slide-left-in {
-  animation: slideInLeft 1000ms forwards ease-in-out; }
+.slide-from-left {
+  animation: slideFromLeft 1000ms forwards ease-in-out; }
 
-.slide-left-out {
-  animation: slideOutLeft 1000ms forwards ease-in-out; }
+.slide-to-left {
+  animation: slideToLeft 1000ms forwards ease-in-out; }
 
-@keyframes slideInLeft {
-  from {
-    transform: translateX(100%); } }
+.slide-from-right {
+  animation: slideFromRight 1000ms forwards ease-in-out; }
 
-@keyframes slideOutLeft {
-  to {
-    transform: translateX(-100%); } }
+.slide-to-right {
+  animation: slideToRight 1000ms forwards ease-in-out; }
 
-.slide-right-in {
-  animation: slideInRight 1000ms forwards ease-in-out; }
+.slide-from-top {
+  animation: slideFromTop 1000ms forwards ease-in-out; }
 
-.slide-right-out {
-  animation: slideOutRight 1000ms forwards ease-in-out; }
+.slide-to-top {
+  animation: slideToTop 1000ms forwards ease-in-out; }
 
-@keyframes slideInRight {
-  from {
-    transform: translateX(-100%); } }
+.slide-from-bottom {
+  animation: slideFromBottom 1000ms forwards ease-in-out; }
 
-@keyframes slideOutRight {
-  to {
-    transform: translateX(100%); } }
+.slide-to-bottom {
+  animation: slideToBottom 1000ms forwards ease-in-out; }
 
-.slide-bottom-in {
-  animation: slideInBottom 1000ms forwards ease-in-out; }
-
-.slide-bottom-out {
-  animation: slideOutBottom 1000ms forwards ease-in-out; }
-
-@keyframes slideInBottom {
-  from {
-    transform: translateY(100%); } }
-
-@keyframes slideOutBottom {
-  to {
-    transform: translateY(-100%); } }
-
-.slide-top-in {
-  animation: slideInTop 1000ms forwards ease-in-out; }
-
-.slide-top-out {
-  animation: slideOutTop 1000ms forwards ease-in-out; }
-
-@keyframes slideInTop {
+@keyframes slideFromTop {
   from {
     transform: translateY(-100%); } }
 
-@keyframes slideOutTop {
+@keyframes slideToTop {
+  to {
+    transform: translateY(-100%); } }
+
+@keyframes slideFromRight {
+  from {
+    transform: translateX(100%); } }
+
+@keyframes slideToRight {
+  to {
+    transform: translateX(100%); } }
+
+@keyframes slideFromBottom {
+  from {
+    transform: translateY(100%); } }
+
+@keyframes slideToBottom {
   to {
     transform: translateY(100%); } }
+
+@keyframes slideFromLeft {
+  from {
+    transform: translateX(-100%); } }
+
+@keyframes slideToLeft {
+  to {
+    transform: translateX(-100%); } }
