@@ -376,6 +376,7 @@
 .md-effect-18 .effeckt-modal {
   transform: translateX(200%);
   opacity: 0;
+  transition: 0.5s 0.1s;
 }
 .effeckt-show.md-effect-18 .effeckt-modal {
   transform: translateX(0);

@@ -3009,6 +3009,9 @@ Example markup:
   -o-transform: translateX(200%);
   transform: translateX(200%);
   opacity: 0;
+  -webkit-transition: 0.5s 0.1s;
+  -o-transition: 0.5s 0.1s;
+  transition: 0.5s 0.1s;
 }
 
 .effeckt-show.md-effect-18 .effeckt-modal {
