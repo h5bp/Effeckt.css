@@ -33,7 +33,7 @@ var EffecktPageTransitions = {
       e.preventDefault();
 
       // Disable event until issue 167 is fixed
-      return false;
+      // return false;
 
       var transitionInEffect  = $(this).data('effeckt-transition-in'),
           transitionOutEffect = $(this).data('effeckt-transition-out')
@@ -60,16 +60,16 @@ var EffecktPageTransitions = {
     this.fromPage = $('.effeckt-page-active');
     this.toPage   = $('[data-effeckt-page="' + transitionPage + '"]');
 
+    // Add this class to prevent scroll to be displayed
+    this.toPage.addClass('effeckt-page-animating');
+    this.fromPage.addClass('effeckt-page-animating');
+
     // Set Transition Class
     // Maybe this array class could be made using and array
     // Relationating the In Effect with the Out effect.
     this.toPage.show().addClass('effeckt-page-active');
     this.toPage.addClass(this.transitionInEffect);
     this.fromPage.addClass(this.transitionOutEffect);
-
-    // Add this class to prevent scroll to be displayed
-    this.toPage.addClass('effeckt-page-animating');
-    this.fromPage.addClass('effeckt-page-animating');
 
     
     //event trigger after animation/transition end.

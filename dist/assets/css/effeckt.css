@@ -1405,7 +1405,8 @@ Example markup:
     z-index: 10; }
   [data-effeckt-page].effeckt-page-animating {
     overflow: hidden;
-    z-index: 100; }
+    z-index: 100;
+    position: absolute; }
 
 .pages-wrap {
   position: fixed;

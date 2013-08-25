@@ -36,8 +36,7 @@ html, body {
 body {
   background: #eeeeee;
   font-family: Sans-serif;
-  overflow-x: hidden;
-  padding: 2rem 4rem 0; }
+  overflow-x: hidden; }
   @media (max-width: 500px) { }
 
 .page-wrap {
