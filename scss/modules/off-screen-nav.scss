@@ -190,6 +190,8 @@
       // This make the view bigger so when it rotates doesn't look cutted on bottom
       // But NEED to do the same on top.
       height: 200%;
+      // Prevent scrolling
+      overflow: hidden;
     }
 
     // dont nest > 3 levels deep

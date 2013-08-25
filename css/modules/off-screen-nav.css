@@ -117,7 +117,8 @@
     transform: none; }
     .effeckt-off-screen-nav-rotate.effeckt-off-screen-nav-show ~ [data-effeckt-page] {
       transform: translateX(260px) rotateY(15deg);
-      height: 200%; }
+      height: 200%;
+      overflow: hidden; }
     .effeckt-off-screen-nav-rotate.effeckt-off-screen-nav-show ~ [data-effeckt-page] .off-screen-nav-cover {
       position: absolute;
       top: 0;

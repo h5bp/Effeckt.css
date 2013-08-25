@@ -3493,6 +3493,7 @@ Example markup:
   -o-transform: translateX(260px) rotateY(15deg);
   transform: translateX(260px) rotateY(15deg);
   height: 200%;
+  overflow: hidden;
 }
 
 .effeckt-off-screen-nav-rotate.effeckt-off-screen-nav-show ~ [data-effeckt-page] .off-screen-nav-cover {
