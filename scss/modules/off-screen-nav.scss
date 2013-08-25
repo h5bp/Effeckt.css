@@ -187,6 +187,9 @@
 
     ~ [data-effeckt-page] {
       transform: translateX(260px) rotateY(15deg);
+      // This make the view bigger so when it rotates doesn't look cutted on bottom
+      // But NEED to do the same on top.
+      height: 200%;
     }
 
     // dont nest > 3 levels deep
