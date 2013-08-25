@@ -3586,22 +3586,12 @@ Example markup:
     -webkit-transform: translateX(100%);
     transform: translateX(100%);
   }
-
-  to {
-    -webkit-transform: translateX(0%);
-    transform: translateX(0%);
-  }
 }
 
 @-o-keyframes slideInLeft {
   from {
     -o-transform: translateX(100%);
     transform: translateX(100%);
-  }
-
-  to {
-    -o-transform: translateX(0%);
-    transform: translateX(0%);
   }
 }
 
@@ -3611,13 +3601,6 @@ Example markup:
     -ms-transform: translateX(100%);
     -o-transform: translateX(100%);
     transform: translateX(100%);
-  }
-
-  to {
-    -webkit-transform: translateX(0%);
-    -ms-transform: translateX(0%);
-    -o-transform: translateX(0%);
-    transform: translateX(0%);
   }
 }
 
@@ -3645,15 +3628,15 @@ Example markup:
 }
 
 .slide-right-in {
-  -webkit-animation: slideInRight 0.7s forwards ease;
-  -o-animation: slideInRight 0.7s forwards ease;
-  animation: slideInRight 0.7s forwards ease;
+  -webkit-animation: slideInRight 1000ms forwards ease-in-out;
+  -o-animation: slideInRight 1000ms forwards ease-in-out;
+  animation: slideInRight 1000ms forwards ease-in-out;
 }
 
 .slide-right-out {
-  -webkit-animation: slideOutRight 0.7s forwards ease;
-  -o-animation: slideOutRight 0.7s forwards ease;
-  animation: slideOutRight 0.7s forwards ease;
+  -webkit-animation: slideOutRight 1000ms forwards ease-in-out;
+  -o-animation: slideOutRight 1000ms forwards ease-in-out;
+  animation: slideOutRight 1000ms forwards ease-in-out;
 }
 
 @-webkit-keyframes slideInRight {
@@ -3661,22 +3644,12 @@ Example markup:
     -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
   }
-
-  to {
-    -webkit-transform: translateX(0%);
-    transform: translateX(0%);
-  }
 }
 
 @-o-keyframes slideInRight {
   from {
     -o-transform: translateX(-100%);
     transform: translateX(-100%);
-  }
-
-  to {
-    -o-transform: translateX(0%);
-    transform: translateX(0%);
   }
 }
 
@@ -3686,13 +3659,6 @@ Example markup:
     -ms-transform: translateX(-100%);
     -o-transform: translateX(-100%);
     transform: translateX(-100%);
-  }
-
-  to {
-    -webkit-transform: translateX(0%);
-    -ms-transform: translateX(0%);
-    -o-transform: translateX(0%);
-    transform: translateX(0%);
   }
 }
 

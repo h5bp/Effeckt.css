@@ -3,6 +3,8 @@ var EffecktPageTransitions = {
   fromPage: '',
   toPage: '',
   isAnimating: false,
+  isNextPageEnd: false,
+  isCurrentPageEnd: false,
   transitionInEffect: '',
   transitionOutEffect: '',
 
@@ -48,6 +50,8 @@ var EffecktPageTransitions = {
     }
 
     this.isAnimating = true;
+    this.isCurrentPageEnd = false;
+    this.isNextPageEnd = false;
     this.transitionInEffect = transitionInEffect;
     this.transitionOutEffect= transitionOutEffect;
 
@@ -69,22 +73,45 @@ var EffecktPageTransitions = {
     var evt = EffecktDemos.animationEndEventName + ' ' + EffecktDemos.transitionEndEventName,
         self= this;
 
-    // Let just wait for the new page to finish its animation
-    this.toPage.on(evt, function () {
+    
+    this.toPage.on(evt, function() {
+      
+      self.toPage.off(evt);
+      self.isNextPageEnd = true;
 
-      self.isAnimating = false;
-      self.fromPage.removeClass('effeckt-page-animating');
-      self.fromPage.removeClass('effeckt-page-active');
-      self.toPage.removeClass('effeckt-page-animating');
+      if ( self.isCurrentPageEnd ) {
+        self.resetTransition();
+      }
+    });
 
-      self.fromPage.hide();
-      self.fromPage.removeClass(self.transitionOutEffect);
+    this.fromPage.on(evt, function () {
 
-      self.toPage.removeClass(self.transitionInEffect);
+      self.fromPage.off(evt);
+      self.isCurrentPageEnd = true;
+
+      if ( self.isNextPageEnd ) {
+        self.resetTransition();
+      }
 
     });
 
   },
+
+  resetTransition: function() {
+
+    this.isAnimating = false;
+    this.isCurrentPageEnd = false;
+    this.isNextPageEnd = false;
+
+    this.fromPage.removeClass('effeckt-page-animating');
+    this.fromPage.removeClass('effeckt-page-active');
+    this.toPage.removeClass('effeckt-page-animating');
+
+    this.fromPage.hide();
+    this.fromPage.removeClass(this.transitionOutEffect);
+
+    this.toPage.removeClass(this.transitionInEffect);
+  }
 
 };
 

@@ -1430,27 +1430,21 @@ Example markup:
 
 @keyframes slideInLeft {
   from {
-    transform: translateX(100%); }
-
-  to {
-    transform: translateX(0%); } }
+    transform: translateX(100%); } }
 
 @keyframes slideOutLeft {
   to {
     transform: translateX(-100%); } }
 
 .slide-right-in {
-  animation: slideInRight 0.7s forwards ease; }
+  animation: slideInRight 1000ms forwards ease-in-out; }
 
 .slide-right-out {
-  animation: slideOutRight 0.7s forwards ease; }
+  animation: slideOutRight 1000ms forwards ease-in-out; }
 
 @keyframes slideInRight {
   from {
-    transform: translateX(-100%); }
-
-  to {
-    transform: translateX(0%); } }
+    transform: translateX(-100%); } }
 
 @keyframes slideOutRight {
   to {

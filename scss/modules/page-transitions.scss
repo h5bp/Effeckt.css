@@ -39,9 +39,6 @@
   from {
     transform: translateX(100%);
   }
-  to {
-    transform: translateX(0%);
-  }
 }
 
 @keyframes slideOutLeft {
@@ -55,19 +52,16 @@
 //
 
 .slide-right-in {
-  animation: slideInRight 0.7s forwards ease;
+  animation: slideInRight $effeckt-page-transition-duration forwards ease-in-out;
 }
 
 .slide-right-out {
-  animation: slideOutRight 0.7s forwards ease;
+  animation: slideOutRight $effeckt-page-transition-duration forwards ease-in-out;
 }
 
 @keyframes slideInRight {
   from {
     transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0%);
   }
 }
 
