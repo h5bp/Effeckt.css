@@ -55,14 +55,15 @@ var EffecktPositionalModals = {
     this.add($el, modal);
     
     // change based on position
+    var scrollTop = $('.effeckt-page-active').scrollTop();
     if (position == 'above') {
       modal.css({
-        'top': (buttonPosition.top - modal.outerHeight() ),
+        'top': (buttonPosition.top - modal.outerHeight() + scrollTop ),
         'left': buttonPosition.left - (modal.outerWidth()/2) + ($el.outerWidth()/2)
       });
     } else if (position == 'below') {
       modal.css({
-        'top': (buttonPosition.top + buttonSize.height),
+        'top': (buttonPosition.top + buttonSize.height + scrollTop),
         'left': buttonPosition.left - (modal.outerWidth()/2) + ($el.outerWidth()/2)
       });
     }
@@ -127,7 +128,8 @@ var EffecktPositionalModals = {
 
   add: function($el, modal) {
     // add element to dom
-    modal.appendTo("body");
+    // modal.appendTo("body");
+    $('.effeckt-page-active').append(modal);
 
     // add element to modal list
     this.modalsList.push({ 

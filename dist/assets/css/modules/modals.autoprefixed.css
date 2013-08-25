@@ -1,10 +1,12 @@
 .md-perspective,
-.md-perspective body {
+.md-perspective body,
+.md-perspective .pages {
   height: 100%;
   overflow: hidden;
 }
 
-.md-perspective body {
+.md-perspective body,
+.md-perspective .pages {
   -webkit-perspective: 600px;
   -ms-perspective: 600px;
   -o-perspective: 600px;
@@ -539,7 +541,7 @@
 
 /* Effect 17:  Slide in from bottom with perspective on container */
 
-.effeckt-show.md-effect-17 ~ .page-wrap {
+.effeckt-show.md-effect-17 ~ [data-effeckt-page] {
   height: 100%;
   overflow: hidden;
   -webkit-transition: -webkit-transform 500ms;
@@ -548,7 +550,7 @@
   transition: transform 500ms;
 }
 
-.effeckt-show.md-effect-17 ~ .page-wrap,
+.effeckt-show.md-effect-17 ~ [data-effeckt-page],
 .effeckt-show.md-effect-17 ~ .effeckt-overlay {
   -webkit-transform: rotateX(-2deg);
   -ms-transform: rotateX(-2deg);
@@ -595,7 +597,7 @@
 
 /* Effect 18:  Slide from right with perspective on container */
 
-.effeckt-show.md-effect-18 ~ .page-wrap {
+.effeckt-show.md-effect-18 ~ [data-effeckt-page] {
   height: 100%;
   overflow: hidden;
 }
@@ -607,7 +609,7 @@
   transition: 0.5s;
 }
 
-.effeckt-show.md-effect-18 ~ .page-wrap,
+.effeckt-show.md-effect-18 ~ [data-effeckt-page],
 .effeckt-show.md-effect-18 ~ .effeckt-overlay {
   -webkit-transform-style: preserve-3d;
   -ms-transform-style: preserve-3d;

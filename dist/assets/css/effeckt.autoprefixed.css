@@ -2333,12 +2333,14 @@ Example markup:
 }
 
 .md-perspective,
-.md-perspective body {
+.md-perspective body,
+.md-perspective .pages {
   height: 100%;
   overflow: hidden;
 }
 
-.md-perspective body {
+.md-perspective body,
+.md-perspective .pages {
   -webkit-perspective: 600px;
   -ms-perspective: 600px;
   -o-perspective: 600px;
@@ -2873,7 +2875,7 @@ Example markup:
 
 /* Effect 17:  Slide in from bottom with perspective on container */
 
-.effeckt-show.md-effect-17 ~ .page-wrap {
+.effeckt-show.md-effect-17 ~ [data-effeckt-page] {
   height: 100%;
   overflow: hidden;
   -webkit-transition: -webkit-transform 500ms;
@@ -2882,7 +2884,7 @@ Example markup:
   transition: transform 500ms;
 }
 
-.effeckt-show.md-effect-17 ~ .page-wrap,
+.effeckt-show.md-effect-17 ~ [data-effeckt-page],
 .effeckt-show.md-effect-17 ~ .effeckt-overlay {
   -webkit-transform: rotateX(-2deg);
   -ms-transform: rotateX(-2deg);
@@ -2929,7 +2931,7 @@ Example markup:
 
 /* Effect 18:  Slide from right with perspective on container */
 
-.effeckt-show.md-effect-18 ~ .page-wrap {
+.effeckt-show.md-effect-18 ~ [data-effeckt-page] {
   height: 100%;
   overflow: hidden;
 }
@@ -2941,7 +2943,7 @@ Example markup:
   transition: 0.5s;
 }
 
-.effeckt-show.md-effect-18 ~ .page-wrap,
+.effeckt-show.md-effect-18 ~ [data-effeckt-page],
 .effeckt-show.md-effect-18 ~ .effeckt-overlay {
   -webkit-transform-style: preserve-3d;
   -ms-transform-style: preserve-3d;
@@ -3501,6 +3503,36 @@ Example markup:
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+}
+
+.pages {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+[data-effeckt-page] {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  visibility: hidden;
+  z-index: 0;
+}
+
+[data-effeckt-page].effeckt-page-active {
+  visibility: visible;
+  z-index: 10;
+}
+
+[data-effeckt-page].effeckt-page-animating {
+  overflow: hidden;
+  z-index: 100;
 }
 
 .pages-wrap {

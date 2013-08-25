@@ -868,11 +868,11 @@ Example markup:
     [data-effeckt-type="climb"] li.future {
       transform: translateY(200%); }
 
-.md-perspective, .md-perspective body {
+.md-perspective, .md-perspective body, .md-perspective .pages {
   height: 100%;
   overflow: hidden; }
 
-.md-perspective body {
+.md-perspective body, .md-perspective .pages {
   perspective: 600px; }
 
 .effeckt-modal-wrap {
@@ -1122,12 +1122,12 @@ Example markup:
   opacity: 1; }
 
 /* Effect 17:  Slide in from bottom with perspective on container */
-.effeckt-show.md-effect-17 ~ .page-wrap {
+.effeckt-show.md-effect-17 ~ [data-effeckt-page] {
   height: 100%;
   overflow: hidden;
   transition: transform 500ms; }
 
-.effeckt-show.md-effect-17 ~ .page-wrap, .effeckt-show.md-effect-17 ~ .effeckt-overlay {
+.effeckt-show.md-effect-17 ~ [data-effeckt-page], .effeckt-show.md-effect-17 ~ .effeckt-overlay {
   transform: rotateX(-2deg);
   transform-origin: 50% 0%;
   transform-style: preserve-3d; }
@@ -1147,7 +1147,7 @@ Example markup:
   transition: all 500ms 0.2s; }
 
 /* Effect 18:  Slide from right with perspective on container */
-.effeckt-show.md-effect-18 ~ .page-wrap {
+.effeckt-show.md-effect-18 ~ [data-effeckt-page] {
   height: 100%;
   overflow: hidden; }
 
@@ -1155,7 +1155,7 @@ Example markup:
   background: rgba(0, 0, 0, 0.2);
   transition: 0.5s; }
 
-.effeckt-show.md-effect-18 ~ .page-wrap, .effeckt-show.md-effect-18 ~ .effeckt-overlay {
+.effeckt-show.md-effect-18 ~ [data-effeckt-page], .effeckt-show.md-effect-18 ~ .effeckt-overlay {
   transform-style: preserve-3d;
   transform-origin: 0% 50%;
   animation: rotateRightSideFirst 0.5s forwards ease-in; }
@@ -1382,6 +1382,30 @@ Example markup:
   .effeckt-off-screen-nav-rotate ~ .page-wrap {
     transform-origin: 0 50%;
     transition: 0.5s; }
+
+.pages {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden; }
+
+[data-effeckt-page] {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  visibility: hidden;
+  z-index: 0; }
+  [data-effeckt-page].effeckt-page-active {
+    visibility: visible;
+    z-index: 10; }
+  [data-effeckt-page].effeckt-page-animating {
+    overflow: hidden;
+    z-index: 100; }
 
 .pages-wrap {
   position: fixed;

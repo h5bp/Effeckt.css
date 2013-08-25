@@ -17,7 +17,7 @@ var EffecktPageTransitions = {
 
   initPages: function(){
 
-    var $pages = $('.page-wrap');
+    var $pages = $('[data-effeckt-page]');
 
     $pages.hide();
     this.fromPage = $pages.first().addClass('effeckt-page-active');
