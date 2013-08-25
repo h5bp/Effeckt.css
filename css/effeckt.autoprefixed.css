@@ -3685,6 +3685,122 @@ Example markup:
   }
 }
 
+.slide-bottom-in {
+  -webkit-animation: slideInBottom 1000ms forwards ease-in-out;
+  -o-animation: slideInBottom 1000ms forwards ease-in-out;
+  animation: slideInBottom 1000ms forwards ease-in-out;
+}
+
+.slide-bottom-out {
+  -webkit-animation: slideOutBottom 1000ms forwards ease-in-out;
+  -o-animation: slideOutBottom 1000ms forwards ease-in-out;
+  animation: slideOutBottom 1000ms forwards ease-in-out;
+}
+
+@-webkit-keyframes slideInBottom {
+  from {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+}
+
+@-o-keyframes slideInBottom {
+  from {
+    -o-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+}
+
+@keyframes slideInBottom {
+  from {
+    -webkit-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+}
+
+@-webkit-keyframes slideOutBottom {
+  to {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+}
+
+@-o-keyframes slideOutBottom {
+  to {
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes slideOutBottom {
+  to {
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+}
+
+.slide-top-in {
+  -webkit-animation: slideInTop 1000ms forwards ease-in-out;
+  -o-animation: slideInTop 1000ms forwards ease-in-out;
+  animation: slideInTop 1000ms forwards ease-in-out;
+}
+
+.slide-top-out {
+  -webkit-animation: slideOutTop 1000ms forwards ease-in-out;
+  -o-animation: slideOutTop 1000ms forwards ease-in-out;
+  animation: slideOutTop 1000ms forwards ease-in-out;
+}
+
+@-webkit-keyframes slideInTop {
+  from {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+}
+
+@-o-keyframes slideInTop {
+  from {
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes slideInTop {
+  from {
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+}
+
+@-webkit-keyframes slideOutTop {
+  to {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+}
+
+@-o-keyframes slideOutTop {
+  to {
+    -o-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+}
+
+@keyframes slideOutTop {
+  to {
+    -webkit-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+}
+
 .effeckt-tooltip[data-effeckt-tooltip-text] {
   position: relative;
 }

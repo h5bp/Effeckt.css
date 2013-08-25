@@ -43,3 +43,31 @@
 @keyframes slideOutRight {
   to {
     transform: translateX(100%); } }
+
+.slide-bottom-in {
+  animation: slideInBottom 1000ms forwards ease-in-out; }
+
+.slide-bottom-out {
+  animation: slideOutBottom 1000ms forwards ease-in-out; }
+
+@keyframes slideInBottom {
+  from {
+    transform: translateY(100%); } }
+
+@keyframes slideOutBottom {
+  to {
+    transform: translateY(-100%); } }
+
+.slide-top-in {
+  animation: slideInTop 1000ms forwards ease-in-out; }
+
+.slide-top-out {
+  animation: slideOutTop 1000ms forwards ease-in-out; }
+
+@keyframes slideInTop {
+  from {
+    transform: translateY(-100%); } }
+
+@keyframes slideOutTop {
+  to {
+    transform: translateY(100%); } }
