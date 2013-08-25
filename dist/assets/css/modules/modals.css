@@ -239,13 +239,13 @@
 .effeckt-show.md-effect-16 ~ .md-overlay {
   background: rgba(180, 46, 32, 0.5); }
 
-.effeckt-show.md-effect-16 ~ .page-wrap {
+.effeckt-show.md-effect-16 ~ [data-effeckt-page] {
   filter: blur(3px); }
 
 .md-effect-16 .effeckt-modal {
   opacity: 0; }
 
-.effeckt-show.md-effect-16 ~ .page-wrap, .md-effect-16 .effeckt-modal {
+.effeckt-show.md-effect-16 ~ [data-effeckt-page], .md-effect-16 .effeckt-modal {
   transition: all 500ms; }
 
 .effeckt-show.md-effect-16 .effeckt-modal {

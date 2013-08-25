@@ -2851,7 +2851,7 @@ Example markup:
   background: rgba(180, 46, 32, 0.5);
 }
 
-.effeckt-show.md-effect-16 ~ .page-wrap {
+.effeckt-show.md-effect-16 ~ [data-effeckt-page] {
   -webkit-filter: blur(3px);
   filter: blur(3px);
 }
@@ -2860,7 +2860,7 @@ Example markup:
   opacity: 0;
 }
 
-.effeckt-show.md-effect-16 ~ .page-wrap,
+.effeckt-show.md-effect-16 ~ [data-effeckt-page],
 .md-effect-16 .effeckt-modal {
   -webkit-transition: all 500ms;
   -o-transition: all 500ms;
