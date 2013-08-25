@@ -68,32 +68,34 @@
   </div>
   <!-- overlay coming after is important for ~ selector -->
   <div class="effeckt-overlay no-transitions" id="effeckt-overlay"></div>
-  
-  <div class="page-wrap no-transitions" id="page-wrap">
 
-    <h1>
-      <a href="/dist/">
-        <span>E</span>
-        <span>f</span>
-        <span>f</span>
-        <span>e</span>
-        <span>c</span>
-        <span>k</span>
-        <span>t</span>
-        <br class="mobile-break">
-        <span>.</span>
-        <span>c</span>
-        <span>s</span>
-        <span>s</span>
-      </a>
-    </h1>
-    <subhead>
-      Performant CSS transitions & animations
-      <a href="https://github.com/h5bp/Effeckt.css">on GitHub</a>
-    </subhead>
+  <div data-effeckt-page="page-1">
+    
+    <div class="page-wrap no-transitions" id="page-wrap">
+
+      <h1>
+        <a href="./">
+          <span>E</span>
+          <span>f</span>
+          <span>f</span>
+          <span>e</span>
+          <span>c</span>
+          <span>k</span>
+          <span>t</span>
+          <br class="mobile-break">
+          <span>.</span>
+          <span>c</span>
+          <span>s</span>
+          <span>s</span>
+        </a>
+      </h1>
+      <subhead>
+        Performant CSS transitions & animations
+        <a href="https://github.com/h5bp/Effeckt.css">on GitHub</a>
+      </subhead>
 
 
-    <div class="effeckt effeckt-captions group">
+      <div class="effeckt effeckt-captions group">
 
   <header>
     <h2>
@@ -250,67 +252,71 @@
  
 
 
-    <div class="effeckt contributors readme">
+      <div class="effeckt contributors readme">
 
-      <header>
-        <h2>About</h2>
-      </header>
+        <header>
+          <h2>About</h2>
+        </header>
 
-      <p>Ever notice how small flourishes and subtle transitions dramatically increases the value of the experience you enjoy with an app or site?
+        <p>Ever notice how small flourishes and subtle transitions dramatically increases the value of the experience you enjoy with an app or site?
 
-      <p>Designing and developing UIs for the mobile web is tricky, but it's extremely difficult to do that while delivering something that performs at 60fps. The best opportunities to getting jank-free transitions on phones/tablets are CSS transition and keyframe animation based, especially tapping into hardware-accelerated transforms and opacity changes.
+        <p>Designing and developing UIs for the mobile web is tricky, but it's extremely difficult to do that while delivering something that performs at 60fps. The best opportunities to getting jank-free transitions on phones/tablets are CSS transition and keyframe animation based, especially tapping into hardware-accelerated transforms and opacity changes.
 
-      <p>This library has a few <strong>goals</strong>:</p>
+        <p>This library has a few <strong>goals</strong>:</p>
 
-      <ol>
-        <li>It provides very little UI of its own. It's only hooks for transitions/animations.</li>
-        <li>Designer-curated set of classy and reasonable effects. (no <a href="http://easings.net/#easeInBounce"><code>easeInBounce</code></a>)</li>
-        <li>Establish browser support guidelines (e.g. Android 2.3 would gracefully degrade)</li>
-        <li>CSS performance regression testing (a la <a href="http://bench.topcoat.io">bench.topcoat.io</a>)</li>
-        <li>Deliver jank-free <em>60fps</em> performance on target browsers/devices</li>
-        <li>If a particular effect cannot deliver target performance (hey <code>blur()</code> CSS filter), it cannot be included.</li>
-        <li>Guidelines on what to avoid when styling these affected elements (avoid expensive CSS)</li>
-        <li>Deliver a builder so users can pull only the CSS they need.</li>
-        <li>There is no hover on the mobile web, so any hover-based effects would be excluded or have a tap equivalent.</li>
-      </ol>
+        <ol>
+          <li>It provides very little UI of its own. It's only hooks for transitions/animations.</li>
+          <li>Designer-curated set of classy and reasonable effects. (no <a href="http://easings.net/#easeInBounce"><code>easeInBounce</code></a>)</li>
+          <li>Establish browser support guidelines (e.g. Android 2.3 would gracefully degrade)</li>
+          <li>CSS performance regression testing (a la <a href="http://bench.topcoat.io">bench.topcoat.io</a>)</li>
+          <li>Deliver jank-free <em>60fps</em> performance on target browsers/devices</li>
+          <li>If a particular effect cannot deliver target performance (hey <code>blur()</code> CSS filter), it cannot be included.</li>
+          <li>Guidelines on what to avoid when styling these affected elements (avoid expensive CSS)</li>
+          <li>Deliver a builder so users can pull only the CSS they need.</li>
+          <li>There is no hover on the mobile web, so any hover-based effects would be excluded or have a tap equivalent.</li>
+        </ol>
 
-      <div class="fluid-video">
-        <iframe width="640" height="480" src="//www.youtube.com/embed/Qc40YDFA4Bg" frameborder="0" allowfullscreen></iframe>
+        <div class="fluid-video">
+          <iframe width="640" height="480" src="//www.youtube.com/embed/Qc40YDFA4Bg" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <header>
+          <h2>Contributors</h2>
+        </header>
+
+        <ul id="contributors-list" class="contributors-list"></ul>
+
       </div>
 
-      <header>
-        <h2>Contributors</h2>
-      </header>
 
-      <ul id="contributors-list" class="contributors-list"></ul>
+      <div class="off-screen-nav-cover"></div>
 
+    </div><!-- div.page-wrap -->
+  </div>
+
+  <div data-effeckt-page="page-2">
+    <div class="page-wrap" id="page-2">
+      <h2>Page Transition</h2>
+
+      <p>This is another page.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro nulla unde doloremque consequuntur illum quo dolor. Tenetur, voluptate temporibus fuga labore atque illum quas vel dignissimos impedit vitae corporis itaque!<p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, sunt tempora perspiciatis officia laudantium voluptas dicta! Nesciunt, magnam nostrum velit iste beatae totam voluptatibus sint quas amet modi architecto labore.</p>
+      <button class="effeckt-page-transition-button" data-effeckt-transition-in="slide-right-in"  data-effeckt-transition-out="slide-right-out" data-effeckt-transition-page="page-1">Go Left</button>
     </div>
-
-
-    <div class="off-screen-nav-cover"></div>
-
-  </div><!-- div.page-wrap -->
-
-  <div class="page-wrap" id="page-2">
-    <h2>Page Transition</h2>
-
-    <p>This is another page.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro nulla unde doloremque consequuntur illum quo dolor. Tenetur, voluptate temporibus fuga labore atque illum quas vel dignissimos impedit vitae corporis itaque!<p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, sunt tempora perspiciatis officia laudantium voluptas dicta! Nesciunt, magnam nostrum velit iste beatae totam voluptatibus sint quas amet modi architecto labore.</p>
-    <button class="effeckt-page-transition-button" data-effeckt-transition-in="slide-right-in"  data-effeckt-transition-out="slide-right-out" data-effeckt-transition-page="page-1">Go Left</button>
   </div>
 
-  <div class="page-wrap" id="page-3">
-    <h2>Page Transition</h2>
+  <div data-effeckt-page="page-3">
+    <div class="page-wrap" id="page-3">
+      <h2>Page Transition</h2>
 
-    <p>This is another page.</p>
+      <p>This is another page.</p>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, accusamus, aliquam error excepturi asperiores ipsum nobis molestias neque molestiae illum magnam mollitia nulla temporibus aliquid esse rem amet cumque facilis.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, accusamus, aliquam error excepturi asperiores ipsum nobis molestias neque molestiae illum magnam mollitia nulla temporibus aliquid esse rem amet cumque facilis.</p>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, temporibus, ducimus architecto quidem voluptatem sint maiores atque deserunt sed aspernatur eveniet vel perferendis corrupti impedit aut voluptates neque similique enim.</p>
-    <button class="effeckt-page-transition-button" data-effeckt-transition-in="slide-left-in" data-effeckt-transition-out="slide-left-out" data-effeckt-transition-page="page-1">Go Right</button>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, temporibus, ducimus architecto quidem voluptatem sint maiores atque deserunt sed aspernatur eveniet vel perferendis corrupti impedit aut voluptates neque similique enim.</p>
+      <button class="effeckt-page-transition-button" data-effeckt-transition-in="slide-left-in" data-effeckt-transition-out="slide-left-out" data-effeckt-transition-page="page-1">Go Right</button>
+    </div>
   </div>
-
 
   <!-- libs -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>

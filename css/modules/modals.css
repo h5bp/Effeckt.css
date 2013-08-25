@@ -239,25 +239,25 @@
 .effeckt-show.md-effect-16 ~ .md-overlay {
   background: rgba(180, 46, 32, 0.5); }
 
-.effeckt-show.md-effect-16 ~ .page-wrap {
+.effeckt-show.md-effect-16 ~ [data-effeckt-page] {
   filter: blur(3px); }
 
 .md-effect-16 .effeckt-modal {
   opacity: 0; }
 
-.effeckt-show.md-effect-16 ~ .page-wrap, .md-effect-16 .effeckt-modal {
+.effeckt-show.md-effect-16 ~ [data-effeckt-page], .md-effect-16 .effeckt-modal {
   transition: all 500ms; }
 
 .effeckt-show.md-effect-16 .effeckt-modal {
   opacity: 1; }
 
 /* Effect 17:  Slide in from bottom with perspective on container */
-.effeckt-show.md-effect-17 ~ .page-wrap {
+.effeckt-show.md-effect-17 ~ [data-effeckt-page] {
   height: 100%;
   overflow: hidden;
   transition: transform 500ms; }
 
-.effeckt-show.md-effect-17 ~ .page-wrap, .effeckt-show.md-effect-17 ~ .effeckt-overlay {
+.effeckt-show.md-effect-17 ~ [data-effeckt-page], .effeckt-show.md-effect-17 ~ .effeckt-overlay {
   transform: rotateX(-2deg);
   transform-origin: 50% 0%;
   transform-style: preserve-3d; }
@@ -277,7 +277,7 @@
   transition: all 500ms 0.2s; }
 
 /* Effect 18:  Slide from right with perspective on container */
-.effeckt-show.md-effect-18 ~ .page-wrap {
+.effeckt-show.md-effect-18 ~ [data-effeckt-page] {
   height: 100%;
   overflow: hidden; }
 
@@ -285,7 +285,7 @@
   background: rgba(0, 0, 0, 0.2);
   transition: 0.5s; }
 
-.effeckt-show.md-effect-18 ~ .page-wrap, .effeckt-show.md-effect-18 ~ .effeckt-overlay {
+.effeckt-show.md-effect-18 ~ [data-effeckt-page], .effeckt-show.md-effect-18 ~ .effeckt-overlay {
   transform-style: preserve-3d;
   transform-origin: 0% 50%;
   animation: rotateRightSideFirst 0.5s forwards ease-in; }
@@ -300,7 +300,8 @@
 
 .md-effect-18 .effeckt-modal {
   transform: translateX(200%);
-  opacity: 0; }
+  opacity: 0;
+  transition: 0.5s 0.1s; }
 
 .effeckt-show.md-effect-18 .effeckt-modal {
   transform: translateX(0);
@@ -312,17 +313,20 @@
   transition: 0.5s 0.1s; }
 
 /* Effect 19:  Slip in from the top with perspective on container */
-.effeckt-show.md-effect-19 ~ .page-wrap {
+.effeckt-show.md-effect-19 ~ [data-effeckt-page] {
   height: 100%;
   overflow: hidden; }
 
 .effeckt-show.md-effect-19 ~ .effeckt-overlay {
   transition: 500ms; }
 
-.effeckt-show.md-effect-19 ~ .page-wrap, .effeckt-show.md-effect-19 ~ .effeckt-overlay {
+.effeckt-show.md-effect-19 ~ [data-effeckt-page], .effeckt-show.md-effect-19 ~ .effeckt-overlay {
   transform-style: preserve-3d;
   transform-origin: 50% 100%;
   animation: OpenTop 500ms forwards ease-in; }
+
+.md-effect-19 .effeckt-modal {
+  transition: 500ms; }
 
 @keyframes OpenTop {
   50% {

@@ -1,5 +1,3 @@
-// Page Transition does not work right now
-// Figuring out a better way to fix issue #167
 var EffecktPageTransitions = {
 
   fromPage: '',
@@ -17,7 +15,7 @@ var EffecktPageTransitions = {
 
   initPages: function(){
 
-    var $pages = $('.page-wrap');
+    var $pages = $('[data-effeckt-page]');
 
     $pages.hide();
     this.fromPage = $pages.first().addClass('effeckt-page-active');
@@ -31,9 +29,6 @@ var EffecktPageTransitions = {
     $('.effeckt-page-transition-button').on('click',function(e){
 
       e.preventDefault();
-
-      // Disable event until issue 167 is fixed
-      return false;
 
       var transitionInEffect  = $(this).data('effeckt-transition-in'),
           transitionOutEffect = $(this).data('effeckt-transition-out')
@@ -60,16 +55,14 @@ var EffecktPageTransitions = {
     this.fromPage = $('.effeckt-page-active');
     this.toPage   = $('[data-effeckt-page="' + transitionPage + '"]');
 
-    // Set Transition Class
-    // Maybe this array class could be made using and array
-    // Relationating the In Effect with the Out effect.
-    this.toPage.show().addClass('effeckt-page-active');
-    this.toPage.addClass(this.transitionInEffect);
-    this.fromPage.addClass(this.transitionOutEffect);
-
     // Add this class to prevent scroll to be displayed
     this.toPage.addClass('effeckt-page-animating');
     this.fromPage.addClass('effeckt-page-animating');
+
+    // Set Transition Class
+    this.toPage.show().addClass('effeckt-page-active');
+    this.toPage.addClass(this.transitionInEffect);
+    this.fromPage.addClass(this.transitionOutEffect);
 
     
     //event trigger after animation/transition end.
