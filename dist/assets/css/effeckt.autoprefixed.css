@@ -3536,15 +3536,6 @@ Example markup:
   position: absolute;
 }
 
-.pages-wrap {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-}
-
 .slide-left-in {
   -webkit-animation: slideInLeft 1000ms forwards ease-in-out;
   -o-animation: slideInLeft 1000ms forwards ease-in-out;
