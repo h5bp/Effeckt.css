@@ -1276,9 +1276,9 @@ Example markup:
   transition: 500ms; }
   .effeckt-off-screen-nav-left-push.effeckt-off-screen-nav-show {
     transform: translateX(0); }
-    .effeckt-off-screen-nav-left-push.effeckt-off-screen-nav-show ~ .page-wrap {
+    .effeckt-off-screen-nav-left-push.effeckt-off-screen-nav-show ~ [data-effeckt-page] {
       transform: translateX(12rem); }
-  .effeckt-off-screen-nav-left-push ~ .page-wrap {
+  .effeckt-off-screen-nav-left-push ~ [data-effeckt-page] {
     transition: 500ms; }
 
 .effeckt-off-screen-nav-left-reveal {
@@ -1290,9 +1290,9 @@ Example markup:
   .effeckt-off-screen-nav-left-reveal.effeckt-off-screen-nav-show {
     width: 12rem;
     transform: translateX(0); }
-    .effeckt-off-screen-nav-left-reveal.effeckt-off-screen-nav-show ~ .page-wrap {
+    .effeckt-off-screen-nav-left-reveal.effeckt-off-screen-nav-show ~ [data-effeckt-page] {
       transform: translateX(12rem); }
-  .effeckt-off-screen-nav-left-reveal ~ .page-wrap {
+  .effeckt-off-screen-nav-left-reveal ~ [data-effeckt-page] {
     transition: 500ms; }
 
 .effeckt-off-screen-nav-left-squeeze {
@@ -1301,9 +1301,9 @@ Example markup:
   transition: 500ms; }
   .effeckt-off-screen-nav-left-squeeze.effeckt-off-screen-nav-show {
     transform: translateX(0); }
-    .effeckt-off-screen-nav-left-squeeze.effeckt-off-screen-nav-show ~ .page-wrap {
+    .effeckt-off-screen-nav-left-squeeze.effeckt-off-screen-nav-show ~ [data-effeckt-page] {
       width: 60%; }
-  .effeckt-off-screen-nav-left-squeeze ~ .page-wrap {
+  .effeckt-off-screen-nav-left-squeeze ~ [data-effeckt-page] {
     transition: width 500ms;
     max-width: none; }
 
@@ -1322,9 +1322,9 @@ Example markup:
   transition: 500ms; }
   .effeckt-off-screen-nav-right-push.effeckt-off-screen-nav-show {
     transform: translateX(0); }
-    .effeckt-off-screen-nav-right-push.effeckt-off-screen-nav-show ~ .page-wrap {
+    .effeckt-off-screen-nav-right-push.effeckt-off-screen-nav-show ~ [data-effeckt-page] {
       transform: translateX(-12rem); }
-  .effeckt-off-screen-nav-right-push ~ .page-wrap {
+  .effeckt-off-screen-nav-right-push ~ [data-effeckt-page] {
     transition: 500ms; }
 
 .effeckt-off-screen-nav-right-reveal {
@@ -1346,9 +1346,9 @@ Example markup:
     right: 0; }
   .effeckt-off-screen-nav-right-reveal.effeckt-off-screen-nav-show {
     width: 12rem; }
-    .effeckt-off-screen-nav-right-reveal.effeckt-off-screen-nav-show ~ .page-wrap {
+    .effeckt-off-screen-nav-right-reveal.effeckt-off-screen-nav-show ~ [data-effeckt-page] {
       transform: translateX(-12rem); }
-  .effeckt-off-screen-nav-right-reveal ~ .page-wrap {
+  .effeckt-off-screen-nav-right-reveal ~ [data-effeckt-page] {
     transition: 500ms; }
 
 .effeckt-off-screen-nav-right-squeeze {
@@ -1359,9 +1359,9 @@ Example markup:
   transition: 500ms; }
   .effeckt-off-screen-nav-right-squeeze.effeckt-off-screen-nav-show {
     transform: translateX(0); }
-    .effeckt-off-screen-nav-right-squeeze.effeckt-off-screen-nav-show ~ .page-wrap {
+    .effeckt-off-screen-nav-right-squeeze.effeckt-off-screen-nav-show ~ [data-effeckt-page] {
       width: 60%; }
-  .effeckt-off-screen-nav-right-squeeze ~ .page-wrap {
+  .effeckt-off-screen-nav-right-squeeze ~ [data-effeckt-page] {
     float: left;
     transition: width 500ms;
     max-width: none; }
@@ -1372,15 +1372,15 @@ Example markup:
   transform: translateX(-100%) translateX(6px) scale(1.01) rotateY(-30deg); }
   .effeckt-off-screen-nav-rotate.effeckt-off-screen-nav-show {
     transform: none; }
-    .effeckt-off-screen-nav-rotate.effeckt-off-screen-nav-show ~ .page-wrap {
+    .effeckt-off-screen-nav-rotate.effeckt-off-screen-nav-show ~ [data-effeckt-page] {
       transform: translateX(260px) rotateY(15deg); }
-    .effeckt-off-screen-nav-rotate.effeckt-off-screen-nav-show ~ .page-wrap .off-screen-nav-cover {
+    .effeckt-off-screen-nav-rotate.effeckt-off-screen-nav-show ~ [data-effeckt-page] .off-screen-nav-cover {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%; }
-  .effeckt-off-screen-nav-rotate ~ .page-wrap {
+  .effeckt-off-screen-nav-rotate ~ [data-effeckt-page] {
     transform-origin: 0 50%;
     transition: 0.5s; }
 
