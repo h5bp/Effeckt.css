@@ -14,7 +14,8 @@
   height: 100%;
   overflow-x: hidden;
   visibility: hidden;
-  z-index: 0; }
+  z-index: 0;
+  padding: 2rem 4rem 0; }
   [data-effeckt-page].effeckt-page-active {
     visibility: visible;
     z-index: 10; }
