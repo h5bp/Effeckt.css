@@ -4,8 +4,7 @@
 // Should probably be renamed, "md" is kinda meaningless
 // Perhaps "effeckt-fullpage-perspective"
 .md-perspective,
-.md-perspective body,
-.md-perspective .pages {
+.md-perspective body {
   height: 100%;
 
   // This is necessary because the scrollbar is
@@ -13,8 +12,7 @@
   // jerky behavior when the scrollbar comes and goes.
   overflow: hidden;
 }
-.md-perspective body,
-.md-perspective .pages  {
+.md-perspective body {
   perspective: $effeckt-modal-perspective;
 }
 

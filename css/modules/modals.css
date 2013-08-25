@@ -1,8 +1,8 @@
-.md-perspective, .md-perspective body, .md-perspective .pages {
+.md-perspective, .md-perspective body {
   height: 100%;
   overflow: hidden; }
 
-.md-perspective body, .md-perspective .pages {
+.md-perspective body {
   perspective: 600px; }
 
 .effeckt-modal-wrap {

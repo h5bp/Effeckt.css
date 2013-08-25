@@ -868,11 +868,11 @@ Example markup:
     [data-effeckt-type="climb"] li.future {
       transform: translateY(200%); }
 
-.md-perspective, .md-perspective body, .md-perspective .pages {
+.md-perspective, .md-perspective body {
   height: 100%;
   overflow: hidden; }
 
-.md-perspective body, .md-perspective .pages {
+.md-perspective body {
   perspective: 600px; }
 
 .effeckt-modal-wrap {
@@ -1383,14 +1383,6 @@ Example markup:
     transform-origin: 0 50%;
     transition: 0.5s; }
 
-.pages {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  overflow: hidden; }
-
 [data-effeckt-page] {
   position: relative;
   top: 0;
@@ -1416,21 +1408,6 @@ Example markup:
   top: 0;
   left: 0;
   overflow: hidden; }
-
-.effeckt-page {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 4rem;
-  overflow: auto;
-  visibility: hidden; }
-  .effeckt-page.effeckt-page-active {
-    visibility: visible; }
-  .effeckt-page.effeckt-page-animating {
-    overflow: hidden;
-    z-index: 100; }
 
 .slide-left-in {
   animation: slideInLeft 1000ms forwards ease-in-out; }

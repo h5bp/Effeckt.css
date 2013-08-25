@@ -1,12 +1,3 @@
-.pages {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-}
-
 [data-effeckt-page] {
   position: relative;
   top: 0;
@@ -37,26 +28,6 @@
   top: 0;
   left: 0;
   overflow: hidden;
-}
-
-.effeckt-page {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 4rem;
-  overflow: auto;
-  visibility: hidden;
-}
-
-.effeckt-page.effeckt-page-active {
-  visibility: visible;
-}
-
-.effeckt-page.effeckt-page-animating {
-  overflow: hidden;
-  z-index: 100;
 }
 
 .slide-left-in {

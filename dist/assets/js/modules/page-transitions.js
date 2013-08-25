@@ -1,5 +1,3 @@
-// Page Transition does not work right now
-// Figuring out a better way to fix issue #167
 var EffecktPageTransitions = {
 
   fromPage: '',
@@ -32,9 +30,6 @@ var EffecktPageTransitions = {
 
       e.preventDefault();
 
-      // Disable event until issue 167 is fixed
-      // return false;
-
       var transitionInEffect  = $(this).data('effeckt-transition-in'),
           transitionOutEffect = $(this).data('effeckt-transition-out')
           transitionPage      = $(this).data('effeckt-transition-page');
@@ -65,8 +60,6 @@ var EffecktPageTransitions = {
     this.fromPage.addClass('effeckt-page-animating');
 
     // Set Transition Class
-    // Maybe this array class could be made using and array
-    // Relationating the In Effect with the Out effect.
     this.toPage.show().addClass('effeckt-page-active');
     this.toPage.addClass(this.transitionInEffect);
     this.fromPage.addClass(this.transitionOutEffect);

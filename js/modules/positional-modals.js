@@ -40,7 +40,8 @@ var EffecktPositionalModals = {
         buttonSize = {
           'width': $el.outerWidth(),
           'height': $el.outerHeight()
-        };
+        },
+        scrollTop = $('.effeckt-page-active').scrollTop();
 
     // don't open if already open
     if (this.contains($el)) {
@@ -55,7 +56,6 @@ var EffecktPositionalModals = {
     this.add($el, modal);
     
     // change based on position
-    var scrollTop = $('.effeckt-page-active').scrollTop();
     if (position == 'above') {
       modal.css({
         'top': (buttonPosition.top - modal.outerHeight() + scrollTop ),
@@ -128,7 +128,7 @@ var EffecktPositionalModals = {
 
   add: function($el, modal) {
     // add element to dom
-    // modal.appendTo("body");
+    // on the active page wrap
     $('.effeckt-page-active').append(modal);
 
     // add element to modal list

@@ -1,12 +1,10 @@
 .md-perspective,
-.md-perspective body,
-.md-perspective .pages {
+.md-perspective body {
   height: 100%;
   overflow: hidden;
 }
 
-.md-perspective body,
-.md-perspective .pages {
+.md-perspective body {
   -webkit-perspective: 600px;
   -ms-perspective: 600px;
   -o-perspective: 600px;
