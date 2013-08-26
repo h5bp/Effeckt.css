@@ -416,3 +416,58 @@ $effeckt-button-icon: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmN
     transform: translateX(-100%);
   }
 }
+
+.perspective {
+  perspective-origin: 50% 50%;
+  perspective: 2000px;
+}
+
+.effeckt-button[data-effeckt-type="3d-rotate-success"],
+.effeckt-button[data-effeckt-type="3d-rotate-fail"] {
+  transition: all $effeckt-buttons-transition-duration;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.effeckt-button[data-effeckt-type="3d-rotate-fail"]:before {
+  white-space: nowrap; 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  line-height: 2em;
+  top: 100%;
+  background: #e96a6a;
+  color: #a33a3a;
+  content: attr(data-effeckt-message);
+  transform-origin: 0% 0%;
+  transform: rotateX(-90deg);
+  backface-visibility: hidden
+}
+
+.effeckt-button[data-effeckt-type="3d-rotate-fail"][data-loading] {
+  transform-origin: 50% 0%;
+  transform: rotateX(90deg) translateY(-100%);
+}
+
+.effeckt-button[data-effeckt-type="3d-rotate-success"]:after {
+  white-space: nowrap; 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  line-height: 2em;
+  top: -100%;
+  background: #7aca7c;
+  color: #358337;
+  content: attr(data-effeckt-message);
+  transform-origin: 0% 100%;
+  transform: rotateX(90deg);
+  backface-visibility: hidden;
+}
+
+.effeckt-button[data-effeckt-type="3d-rotate-success"][data-loading] {
+  transform-origin: 50% 100%;
+  transform: rotateX(-90deg) translateY(100%);
+}
+
