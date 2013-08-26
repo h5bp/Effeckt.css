@@ -1459,7 +1459,6 @@ Example markup:
   animation: scaleDownToBehind 1000ms forwards ease-in-out; }
 
 [data-effeckt-page].scale-down-from-front {
-  opacity: 0;
   animation: scaleDownFromFront 1000ms forwards ease-in-out; }
 
 [data-effeckt-page].scale-down-slide-to-left {

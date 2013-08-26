@@ -3648,7 +3648,6 @@ Example markup:
 }
 
 [data-effeckt-page].scale-down-from-front {
-  opacity: 0;
   -webkit-animation: scaleDownFromFront 1000ms forwards ease-in-out;
   -o-animation: scaleDownFromFront 1000ms forwards ease-in-out;
   animation: scaleDownFromFront 1000ms forwards ease-in-out;

@@ -1,3 +1,10 @@
+//------------------------------------------------------------
+// Page Transitions
+// Based on http://tympanus.net/Development/PageTransitions/
+//
+// Rewritten for effeckts project
+//------------------------------------------------------------
+
 @import "../_variables";
 
 [data-effeckt-page] {
@@ -25,6 +32,10 @@
     position: absolute;
   }
 }
+
+//-----------------------------------------------------
+// Slide's Classes
+//-----------------------------------------------------
 
 
 // Slide From/To Left
@@ -65,6 +76,12 @@
   @extend .animation-delay-300;
 }
 
+
+//-----------------------------------------------------
+// Scale's Classes
+//-----------------------------------------------------
+
+
 // Scale Up To Front
 [data-effeckt-page].scale-up-to-front {
   animation: scaleUpToFront $effeckt-page-transition-duration forwards ease-in-out;
@@ -81,7 +98,6 @@
 
 // Scale Down From Front
 [data-effeckt-page].scale-down-from-front {
-  opacity:0;
   animation: scaleDownFromFront $effeckt-page-transition-duration forwards ease-in-out;
   @extend %animation-delay-300;
   
@@ -130,6 +146,12 @@
   animation: scaleDownSlideToTop $effeckt-page-transition-duration * 2 forwards ease-in-out;
 }
 
+
+//-----------------------------------------------------
+// Rotate's Classes
+//-----------------------------------------------------
+
+
 // Rotate to Behind
 [data-effeckt-page].rotate-to-behind {
   transform-origin: -50% 50%;
@@ -141,6 +163,11 @@
   transform-origin: 150% 50%;
   animation: rotateToFront $effeckt-page-transition-duration/2 both ease-out;
 }
+
+
+//-----------------------------------------------------
+// Flip's Classes
+//-----------------------------------------------------
 
 
 // Flip to Right
@@ -187,9 +214,12 @@
   animation: flipToBottom $effeckt-page-transition-duration forwards ease;
 }
 
-//
+
+
+//-----------------------------------------------------
 // Animations
-// 
+//-----------------------------------------------------
+
 
 // Slides Animations
 
@@ -239,6 +269,7 @@
   }
 }
 
+
 // Scale Animations
 
 @keyframes scaleUpFromBehind {
@@ -272,6 +303,7 @@
 
 
 // Scale Down Slide Animations
+
 @keyframes scaleDownSlideToLeft {
   25% { opacity: .5; transform: translateZ(-500px); }
   75% { opacity: .5; transform: translateZ(-500px) translateX(-200%); }
@@ -313,6 +345,8 @@
   100% { opacity: .5; transform: translateZ(-500px) translateY(-200%); }
 }
 
+// Rotate Animations
+
 @keyframes rotateToBehind {
   to { opacity: 0; transform: translateZ(-500px) rotateY(90deg); }
 }
@@ -322,7 +356,7 @@
 }
 
 
-// Flips
+// Flip Animations
 
 @keyframes flipToRight {
   to {
@@ -368,8 +402,13 @@
   }
 }
 
-// Utils Class
+
+
+//-----------------------------------------------------
+// Utils Classes
 // If you want to use it againts normal definition
+//-----------------------------------------------------
+
 
 // Make this page on top
 .page-on-top {
