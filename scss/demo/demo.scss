@@ -494,6 +494,9 @@ h1 span:nth-of-type(11) {
 }
 
 // Extra pages (page transition testing)
+[data-effeckt-page="page-1"] {
+  background-color: #EEEEEE;
+}
 [data-effeckt-page="page-2"] {
   color: #203513;
   background-color: #99CF78;

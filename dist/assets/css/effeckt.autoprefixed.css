@@ -3556,6 +3556,18 @@ Example markup:
   visibility: hidden;
   z-index: 0;
   padding: 2rem 4rem 0;
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 
 [data-effeckt-page].effeckt-page-active {
@@ -3569,52 +3581,89 @@ Example markup:
   position: absolute;
 }
 
-.slide-from-left {
+[data-effeckt-page].slide-from-left {
   -webkit-animation: slideFromLeft 1000ms forwards ease-in-out;
   -o-animation: slideFromLeft 1000ms forwards ease-in-out;
   animation: slideFromLeft 1000ms forwards ease-in-out;
 }
 
-.slide-to-left {
+[data-effeckt-page].slide-to-left {
   -webkit-animation: slideToLeft 1000ms forwards ease-in-out;
   -o-animation: slideToLeft 1000ms forwards ease-in-out;
   animation: slideToLeft 1000ms forwards ease-in-out;
 }
 
-.slide-from-right {
+[data-effeckt-page].slide-from-right {
   -webkit-animation: slideFromRight 1000ms forwards ease-in-out;
   -o-animation: slideFromRight 1000ms forwards ease-in-out;
   animation: slideFromRight 1000ms forwards ease-in-out;
 }
 
-.slide-to-right {
+[data-effeckt-page].slide-to-right {
   -webkit-animation: slideToRight 1000ms forwards ease-in-out;
   -o-animation: slideToRight 1000ms forwards ease-in-out;
   animation: slideToRight 1000ms forwards ease-in-out;
 }
 
-.slide-from-top {
+[data-effeckt-page].slide-from-top {
   -webkit-animation: slideFromTop 1000ms forwards ease-in-out;
   -o-animation: slideFromTop 1000ms forwards ease-in-out;
   animation: slideFromTop 1000ms forwards ease-in-out;
 }
 
-.slide-to-top {
+[data-effeckt-page].slide-to-top {
   -webkit-animation: slideToTop 1000ms forwards ease-in-out;
   -o-animation: slideToTop 1000ms forwards ease-in-out;
   animation: slideToTop 1000ms forwards ease-in-out;
 }
 
-.slide-from-bottom {
+[data-effeckt-page].slide-from-bottom {
   -webkit-animation: slideFromBottom 1000ms forwards ease-in-out;
   -o-animation: slideFromBottom 1000ms forwards ease-in-out;
   animation: slideFromBottom 1000ms forwards ease-in-out;
 }
 
-.slide-to-bottom {
+[data-effeckt-page].slide-to-bottom {
   -webkit-animation: slideToBottom 1000ms forwards ease-in-out;
   -o-animation: slideToBottom 1000ms forwards ease-in-out;
   animation: slideToBottom 1000ms forwards ease-in-out;
+}
+
+[data-effeckt-page].scale-up-from-behind {
+  -webkit-animation: scaleUpFromBehind 1000ms forwards ease-in-out;
+  -o-animation: scaleUpFromBehind 1000ms forwards ease-in-out;
+  animation: scaleUpFromBehind 1000ms forwards ease-in-out;
+}
+
+[data-effeckt-page].scale-up-to-front {
+  -webkit-animation: scaleUpToFront 1000ms forwards ease-in-out;
+  -o-animation: scaleUpToFront 1000ms forwards ease-in-out;
+  animation: scaleUpToFront 1000ms forwards ease-in-out;
+}
+
+[data-effeckt-page].scale-down-to-behind {
+  -webkit-animation: scaleDownToBehind 1000ms forwards ease-in-out;
+  -o-animation: scaleDownToBehind 1000ms forwards ease-in-out;
+  animation: scaleDownToBehind 1000ms forwards ease-in-out;
+}
+
+[data-effeckt-page].scale-down-from-front {
+  opacity: 0;
+  -webkit-animation: scaleDownFromFront 1000ms forwards ease-in-out;
+  -o-animation: scaleDownFromFront 1000ms forwards ease-in-out;
+  animation: scaleDownFromFront 1000ms forwards ease-in-out;
+}
+
+[data-effeckt-page].scale-down-to-left {
+  -webkit-animation: scaleDownToLeft 2000ms forwards ease-in-out;
+  -o-animation: scaleDownToLeft 2000ms forwards ease-in-out;
+  animation: scaleDownToLeft 2000ms forwards ease-in-out;
+}
+
+[data-effeckt-page].scale-down-from-right {
+  -webkit-animation: scaleDownFromRight 2000ms forwards ease-in-out;
+  -o-animation: scaleDownFromRight 2000ms forwards ease-in-out;
+  animation: scaleDownFromRight 2000ms forwards ease-in-out;
 }
 
 @-webkit-keyframes slideFromTop {
@@ -3799,6 +3848,236 @@ Example markup:
     -o-transform: translateX(-100%);
     transform: translateX(-100%);
   }
+}
+
+@-webkit-keyframes scaleUpFromBehind {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+}
+
+@-o-keyframes scaleUpFromBehind {
+  from {
+    opacity: 0;
+    -o-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+}
+
+@keyframes scaleUpFromBehind {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -o-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+}
+
+@-webkit-keyframes scaleUpToFront {
+  to {
+    opacity: 0;
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+}
+
+@-o-keyframes scaleUpToFront {
+  to {
+    opacity: 0;
+    -o-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+}
+
+@keyframes scaleUpToFront {
+  to {
+    opacity: 0;
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -o-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+}
+
+@-webkit-keyframes scaleDownToBehind {
+  to {
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+}
+
+@-o-keyframes scaleDownToBehind {
+  to {
+    opacity: 0;
+    -o-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+}
+
+@keyframes scaleDownToBehind {
+  to {
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -o-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+}
+
+@-webkit-keyframes scaleDownFromFront {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes scaleDownFromFront {
+  from {
+    opacity: 0;
+    -o-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleDownFromFront {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -o-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes scaleDownToLeft {
+  25% {
+    opacity: 0.5;
+    -webkit-transform: translateZ(-500px);
+  }
+
+  75% {
+    opacity: 0.5;
+    -webkit-transform: translateZ(-500px) translateX(-200%);
+  }
+
+  100% {
+    opacity: 0.5;
+    -webkit-transform: translateZ(-500px) translateX(-200%);
+  }
+}
+
+@-o-keyframes scaleDownToLeft {
+  25% {
+    opacity: 0.5;
+    -webkit-transform: translateZ(-500px);
+  }
+
+  75% {
+    opacity: 0.5;
+    -webkit-transform: translateZ(-500px) translateX(-200%);
+  }
+
+  100% {
+    opacity: 0.5;
+    -webkit-transform: translateZ(-500px) translateX(-200%);
+  }
+}
+
+@keyframes scaleDownToLeft {
+  25% {
+    opacity: 0.5;
+    -webkit-transform: translateZ(-500px);
+  }
+
+  75% {
+    opacity: 0.5;
+    -webkit-transform: translateZ(-500px) translateX(-200%);
+  }
+
+  100% {
+    opacity: 0.5;
+    -webkit-transform: translateZ(-500px) translateX(-200%);
+  }
+}
+
+@-webkit-keyframes scaleDownFromRight {
+  0%, 25% {
+    opacity: 0.5;
+    -webkit-transform: translateZ(-500px) translateX(200%);
+  }
+
+  75% {
+    opacity: 0.5;
+    -webkit-transform: translateZ(-500px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateZ(0) translateX(0);
+  }
+}
+
+@-o-keyframes scaleDownFromRight {
+  0%, 25% {
+    opacity: 0.5;
+    -webkit-transform: translateZ(-500px) translateX(200%);
+  }
+
+  75% {
+    opacity: 0.5;
+    -webkit-transform: translateZ(-500px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateZ(0) translateX(0);
+  }
+}
+
+@keyframes scaleDownFromRight {
+  0%, 25% {
+    opacity: 0.5;
+    -webkit-transform: translateZ(-500px) translateX(200%);
+  }
+
+  75% {
+    opacity: 0.5;
+    -webkit-transform: translateZ(-500px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateZ(0) translateX(0);
+  }
+}
+
+[data-effeckt-page].scale-up-to-front.effeckt-page-animating,
+[data-effeckt-page].scale-down-from-front.effeckt-page-animating {
+  z-index: 999;
+}
+
+[data-effeckt-page].scale-up-from-behind,
+[data-effeckt-page].scale-down-from-front {
+  -webkit-animation-delay: 0.3s;
+  -o-animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 
 .effeckt-tooltip[data-effeckt-tooltip-text] {

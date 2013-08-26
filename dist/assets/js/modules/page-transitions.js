@@ -36,6 +36,10 @@ var EffecktPageTransitions = {
           transitionOutEffect = $(this).data('effeckt-transition-out')
           transitionPage      = $(this).data('effeckt-transition-page');
 
+      if ( $(this).data("effeckt-needs-perspective")) {
+        $("html").addClass("md-perspective");
+      }
+
       self.transitionPage( transitionPage, transitionInEffect, transitionOutEffect );
 
     });
@@ -67,7 +71,6 @@ var EffecktPageTransitions = {
     this.toPage.show().addClass('effeckt-page-active');
     this.toPage.addClass(this.transitionInEffect);
     this.fromPage.addClass(this.transitionOutEffect);
-
     
     //event trigger after animation/transition end.
     var evt = EffecktDemos.animationEndEventName + ' ' + EffecktDemos.transitionEndEventName,
@@ -111,6 +114,8 @@ var EffecktPageTransitions = {
     this.fromPage.removeClass(this.transitionOutEffect);
 
     this.toPage.removeClass(this.transitionInEffect);
+
+    $("html").removeClass("md-perspective");
   }
 
 };

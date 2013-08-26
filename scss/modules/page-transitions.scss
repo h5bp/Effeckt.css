@@ -10,6 +10,9 @@
   visibility: hidden;
   z-index:0;
   padding: 2rem 4rem 0;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  transform-style: preserve-3d;
 
   &.effeckt-page-active {
     visibility: visible;
@@ -25,40 +28,83 @@
 
 
 // Slide From/To Left
-.slide-from-left {
+[data-effeckt-page].slide-from-left {
   animation: slideFromLeft $effeckt-page-transition-duration forwards ease-in-out;
 }
-.slide-to-left {
+[data-effeckt-page].slide-to-left {
   animation: slideToLeft $effeckt-page-transition-duration forwards ease-in-out;
 }
 
 // Slide From/To Right
-.slide-from-right {
+[data-effeckt-page].slide-from-right {
   animation: slideFromRight $effeckt-page-transition-duration forwards ease-in-out;
 }
-.slide-to-right {
+[data-effeckt-page].slide-to-right {
   animation: slideToRight $effeckt-page-transition-duration forwards ease-in-out;
 }
 
 // Slide From/To Top
-.slide-from-top {
+[data-effeckt-page].slide-from-top {
   animation: slideFromTop $effeckt-page-transition-duration forwards ease-in-out;
 }
-.slide-to-top {
+[data-effeckt-page].slide-to-top {
   animation: slideToTop $effeckt-page-transition-duration forwards ease-in-out;
 }
 
 // Slide From/To Bottom
-.slide-from-bottom {
+[data-effeckt-page].slide-from-bottom {
   animation: slideFromBottom $effeckt-page-transition-duration forwards ease-in-out;
 }
-.slide-to-bottom {
+[data-effeckt-page].slide-to-bottom {
   animation: slideToBottom $effeckt-page-transition-duration forwards ease-in-out;
+}
+
+// Scale Up From Behind
+[data-effeckt-page].scale-up-from-behind {
+  animation: scaleUpFromBehind $effeckt-page-transition-duration forwards ease-in-out;
+  @extend %animation-delay-300;
+}
+
+// Scale Up To Front
+[data-effeckt-page].scale-up-to-front {
+  animation: scaleUpToFront $effeckt-page-transition-duration forwards ease-in-out;
+  
+  &.effeckt-page-animating {
+    @extend %page-on-top;
+  }
+}
+
+// Scale Down To Behind
+[data-effeckt-page].scale-down-to-behind {
+  animation: scaleDownToBehind $effeckt-page-transition-duration forwards ease-in-out;
+}
+
+// Scale Down From Front
+[data-effeckt-page].scale-down-from-front {
+  opacity:0;
+  animation: scaleDownFromFront $effeckt-page-transition-duration forwards ease-in-out;
+  @extend %animation-delay-300;
+  
+  &.effeckt-page-animating {
+    @extend %page-on-top;
+  }
+}
+
+// Scale Down To Left
+[data-effeckt-page].scale-down-to-left {
+  animation: scaleDownToLeft $effeckt-page-transition-duration * 2 forwards ease-in-out;
+}
+
+// Scale Down From Right
+[data-effeckt-page].scale-down-from-right {
+  animation: scaleDownFromRight $effeckt-page-transition-duration * 2 forwards ease-in-out;
 }
 
 //
 // Animations
 // 
+
+// Slides Animations
 
 @keyframes slideFromTop {
   from {
@@ -104,4 +150,76 @@
   to {
     transform: translateX(-100%);
   }
+}
+
+// Scale Animations
+
+@keyframes scaleUpFromBehind {
+  from {
+    opacity:0;
+    transform: scale(0.5);
+  }
+}
+@keyframes scaleUpToFront {
+  to {
+    opacity:0;
+    transform: scale(1.3);
+  }
+}
+
+@keyframes scaleDownToBehind {
+  to {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+@keyframes scaleDownFromFront {
+  from {
+    opacity: 0;
+    transform: scale(1.3);
+  }
+  to {
+   opacity:1; 
+  }
+}
+
+
+// Scale Down Slide Animations
+@keyframes scaleDownToLeft {
+  25% { opacity: .5; -webkit-transform: translateZ(-500px); }
+  75% { opacity: .5; -webkit-transform: translateZ(-500px) translateX(-200%); }
+  100% { opacity: .5; -webkit-transform: translateZ(-500px) translateX(-200%); }
+}
+@keyframes scaleDownFromRight {
+  0%, 25% { opacity: .5; -webkit-transform: translateZ(-500px) translateX(200%); }
+  75% { opacity: .5; -webkit-transform: translateZ(-500px); }
+  100% { opacity: 1; -webkit-transform: translateZ(0) translateX(0); }
+}
+
+
+// Utils
+
+// Make this page on top
+%page-on-top {
+  z-index:999;
+}
+
+// Animation Delay Classes
+%animation-delay-100 {
+  animation-delay: .100s;
+}
+%animation-delay-200 {
+  animation-delay: .200s;
+}
+%animation-delay-300 {
+  animation-delay: .300s;
+}
+%animation-delay-500 {
+  animation-delay: .500s;
+}
+%animation-delay-700 {
+  animation-delay: .700s;
+}
+%animation-delay-1000 {
+  animation-delay: 1000s;
 }
