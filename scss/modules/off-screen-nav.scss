@@ -86,6 +86,7 @@
     }
   }
   ~ [data-effeckt-page] {
+    float: right;
     transition: width $effeckt-off-screen-navigation-transition-duration;
     max-width: none; // reset from demo
   }
