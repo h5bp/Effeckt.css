@@ -419,7 +419,7 @@ $effeckt-button-icon: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmN
 
 .perspective {
   perspective-origin: 50% 50%;
-  perspective: 2000px;
+  perspective: $effeckt-perspective;
 }
 
 .effeckt-button[data-effeckt-type="3d-rotate-success"],

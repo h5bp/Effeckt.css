@@ -1,11 +1,10 @@
 // Overall
 $effeckt-transition-duration: 500ms !default;
-
+$effeckt-perspective: 600px !default;
 
 
 // Modals
 $effeckt-modal-transition-duration: $effeckt-transition-duration !default;
-$effeckt-modal-perspective: 600px !default;
 
 // Forcing size so we can center w/o translate()
 $effeckt-modal-min-width: 320px !default;
@@ -18,7 +17,6 @@ $effeckt-modal-z-index: 2000 !default;
 // Buttons
 $effeckt-buttons-transition-duration: $effeckt-transition-duration !default;
 $effeckt-buttons-spinner-size: 32px !default;
-
 
 
 // Page Transitions
