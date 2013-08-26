@@ -1307,6 +1307,7 @@ Example markup:
     .effeckt-off-screen-nav-left-squeeze.effeckt-off-screen-nav-show ~ [data-effeckt-page] {
       width: 60%; }
   .effeckt-off-screen-nav-left-squeeze ~ [data-effeckt-page] {
+    float: right;
     transition: width 500ms;
     max-width: none; }
 

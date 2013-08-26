@@ -121,6 +121,7 @@
 }
 
 .effeckt-off-screen-nav-left-squeeze ~ [data-effeckt-page] {
+  float: right;
   -webkit-transition: width 500ms;
   -o-transition: width 500ms;
   transition: width 500ms;
