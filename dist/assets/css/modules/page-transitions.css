@@ -88,6 +88,38 @@
   transform-origin: 150% 50%;
   animation: rotateToFront 500ms both ease-out; }
 
+[data-effeckt-page].flip-to-right-front {
+  backface-visibility: hidden;
+  animation: flipToRightBack 1000ms forwards ease; }
+
+[data-effeckt-page].flip-to-right-back {
+  backface-visibility: hidden;
+  animation: flipToRight 1000ms forwards ease; }
+
+[data-effeckt-page].flip-to-left-front {
+  backface-visibility: hidden;
+  animation: flipToLeftBack 1000ms forwards ease; }
+
+[data-effeckt-page].flip-to-left-back {
+  backface-visibility: hidden;
+  animation: flipToLeft 1000ms forwards ease; }
+
+[data-effeckt-page].flip-to-top-front {
+  backface-visibility: hidden;
+  animation: flipToTopBack 1000ms forwards ease; }
+
+[data-effeckt-page].flip-to-top-back {
+  backface-visibility: hidden;
+  animation: flipToTop 1000ms forwards ease; }
+
+[data-effeckt-page].flip-to-bottom-front {
+  backface-visibility: hidden;
+  animation: flipToBottomBack 1000ms forwards ease; }
+
+[data-effeckt-page].flip-to-bottom-back {
+  backface-visibility: hidden;
+  animation: flipToBottom 1000ms forwards ease; }
+
 @keyframes slideFromTop {
   from {
     transform: translateY(-100%); } }
@@ -256,6 +288,38 @@
   from {
     opacity: 0;
     transform: translateZ(-500px) rotateY(-90deg); } }
+
+@keyframes flipToRight {
+  to {
+    transform: rotateY(180deg); } }
+
+@keyframes flipToRightBack {
+  from {
+    transform: rotateY(-180deg); } }
+
+@keyframes flipToLeft {
+  to {
+    transform: rotateY(-180deg); } }
+
+@keyframes flipToLeftBack {
+  from {
+    transform: rotateY(180deg); } }
+
+@keyframes flipToTop {
+  to {
+    transform: rotateX(180deg); } }
+
+@keyframes flipToTopBack {
+  from {
+    transform: rotateX(-180deg); } }
+
+@keyframes flipToBottom {
+  to {
+    transform: rotateX(-180deg); } }
+
+@keyframes flipToBottomBack {
+  from {
+    transform: rotateX(180deg); } }
 
 .page-on-top, [data-effeckt-page].scale-up-to-front.effeckt-page-animating, [data-effeckt-page].scale-down-from-front.effeckt-page-animating {
   z-index: 999; }

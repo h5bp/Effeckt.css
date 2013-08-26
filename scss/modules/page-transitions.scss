@@ -142,6 +142,51 @@
   animation: rotateToFront $effeckt-page-transition-duration/2 both ease-out;
 }
 
+
+// Flip to Right
+[data-effeckt-page].flip-to-right-front {
+  backface-visibility: hidden;
+  animation: flipToRightBack $effeckt-page-transition-duration forwards ease;
+}
+
+[data-effeckt-page].flip-to-right-back {
+  backface-visibility: hidden;
+  animation: flipToRight $effeckt-page-transition-duration forwards ease;
+}
+
+// Flip to Left
+[data-effeckt-page].flip-to-left-front {
+  backface-visibility: hidden;
+  animation: flipToLeftBack $effeckt-page-transition-duration forwards ease;
+}
+
+[data-effeckt-page].flip-to-left-back {
+  backface-visibility: hidden;
+  animation: flipToLeft $effeckt-page-transition-duration forwards ease;
+}
+
+// Flip to Top
+[data-effeckt-page].flip-to-top-front {
+  backface-visibility: hidden;
+  animation: flipToTopBack $effeckt-page-transition-duration forwards ease;
+}
+
+[data-effeckt-page].flip-to-top-back {
+  backface-visibility: hidden;
+  animation: flipToTop $effeckt-page-transition-duration forwards ease;
+}
+
+// Flip to Bottom
+[data-effeckt-page].flip-to-bottom-front {
+  backface-visibility: hidden;
+  animation: flipToBottomBack $effeckt-page-transition-duration forwards ease;
+}
+
+[data-effeckt-page].flip-to-bottom-back {
+  backface-visibility: hidden;
+  animation: flipToBottom $effeckt-page-transition-duration forwards ease;
+}
+
 //
 // Animations
 // 
@@ -274,6 +319,53 @@
 
 @keyframes rotateToFront {
   from { opacity: 0; transform: translateZ(-500px) rotateY(-90deg); }
+}
+
+
+// Flips
+
+@keyframes flipToRight {
+  to {
+    transform: rotateY(180deg);
+  }
+}
+@keyframes flipToRightBack {
+  from {
+    transform: rotateY(-180deg);
+  }
+}
+
+@keyframes flipToLeft {
+  to {
+    transform: rotateY(-180deg);
+  }
+}
+@keyframes flipToLeftBack {
+  from {
+    transform: rotateY(180deg);
+  }
+}
+
+@keyframes flipToTop {
+  to {
+    transform: rotateX(180deg);
+  }
+}
+@keyframes flipToTopBack {
+  from {
+    transform: rotateX(-180deg);
+  }
+}
+
+@keyframes flipToBottom {
+  to {
+    transform: rotateX(-180deg);
+  }
+}
+@keyframes flipToBottomBack {
+  from {
+    transform: rotateX(180deg);
+  }
 }
 
 // Utils Class

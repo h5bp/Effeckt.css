@@ -174,6 +174,86 @@
   animation: rotateToFront 500ms both ease-out;
 }
 
+[data-effeckt-page].flip-to-right-front {
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-animation: flipToRightBack 1000ms forwards ease;
+  -o-animation: flipToRightBack 1000ms forwards ease;
+  animation: flipToRightBack 1000ms forwards ease;
+}
+
+[data-effeckt-page].flip-to-right-back {
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-animation: flipToRight 1000ms forwards ease;
+  -o-animation: flipToRight 1000ms forwards ease;
+  animation: flipToRight 1000ms forwards ease;
+}
+
+[data-effeckt-page].flip-to-left-front {
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-animation: flipToLeftBack 1000ms forwards ease;
+  -o-animation: flipToLeftBack 1000ms forwards ease;
+  animation: flipToLeftBack 1000ms forwards ease;
+}
+
+[data-effeckt-page].flip-to-left-back {
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-animation: flipToLeft 1000ms forwards ease;
+  -o-animation: flipToLeft 1000ms forwards ease;
+  animation: flipToLeft 1000ms forwards ease;
+}
+
+[data-effeckt-page].flip-to-top-front {
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-animation: flipToTopBack 1000ms forwards ease;
+  -o-animation: flipToTopBack 1000ms forwards ease;
+  animation: flipToTopBack 1000ms forwards ease;
+}
+
+[data-effeckt-page].flip-to-top-back {
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-animation: flipToTop 1000ms forwards ease;
+  -o-animation: flipToTop 1000ms forwards ease;
+  animation: flipToTop 1000ms forwards ease;
+}
+
+[data-effeckt-page].flip-to-bottom-front {
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-animation: flipToBottomBack 1000ms forwards ease;
+  -o-animation: flipToBottomBack 1000ms forwards ease;
+  animation: flipToBottomBack 1000ms forwards ease;
+}
+
+[data-effeckt-page].flip-to-bottom-back {
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-animation: flipToBottom 1000ms forwards ease;
+  -o-animation: flipToBottom 1000ms forwards ease;
+  animation: flipToBottom 1000ms forwards ease;
+}
+
 @-webkit-keyframes slideFromTop {
   from {
     -webkit-transform: translateY(-100%);
@@ -1051,6 +1131,190 @@
     -ms-transform: translateZ(-500px) rotateY(-90deg);
     -o-transform: translateZ(-500px) rotateY(-90deg);
     transform: translateZ(-500px) rotateY(-90deg);
+  }
+}
+
+@-webkit-keyframes flipToRight {
+  to {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+}
+
+@-o-keyframes flipToRight {
+  to {
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+}
+
+@keyframes flipToRight {
+  to {
+    -webkit-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+}
+
+@-webkit-keyframes flipToRightBack {
+  from {
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+  }
+}
+
+@-o-keyframes flipToRightBack {
+  from {
+    -o-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+  }
+}
+
+@keyframes flipToRightBack {
+  from {
+    -webkit-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+  }
+}
+
+@-webkit-keyframes flipToLeft {
+  to {
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+  }
+}
+
+@-o-keyframes flipToLeft {
+  to {
+    -o-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+  }
+}
+
+@keyframes flipToLeft {
+  to {
+    -webkit-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+  }
+}
+
+@-webkit-keyframes flipToLeftBack {
+  from {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+}
+
+@-o-keyframes flipToLeftBack {
+  from {
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+}
+
+@keyframes flipToLeftBack {
+  from {
+    -webkit-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+}
+
+@-webkit-keyframes flipToTop {
+  to {
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+  }
+}
+
+@-o-keyframes flipToTop {
+  to {
+    -o-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+  }
+}
+
+@keyframes flipToTop {
+  to {
+    -webkit-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    -o-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+  }
+}
+
+@-webkit-keyframes flipToTopBack {
+  from {
+    -webkit-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
+  }
+}
+
+@-o-keyframes flipToTopBack {
+  from {
+    -o-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
+  }
+}
+
+@keyframes flipToTopBack {
+  from {
+    -webkit-transform: rotateX(-180deg);
+    -ms-transform: rotateX(-180deg);
+    -o-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
+  }
+}
+
+@-webkit-keyframes flipToBottom {
+  to {
+    -webkit-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
+  }
+}
+
+@-o-keyframes flipToBottom {
+  to {
+    -o-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
+  }
+}
+
+@keyframes flipToBottom {
+  to {
+    -webkit-transform: rotateX(-180deg);
+    -ms-transform: rotateX(-180deg);
+    -o-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
+  }
+}
+
+@-webkit-keyframes flipToBottomBack {
+  from {
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+  }
+}
+
+@-o-keyframes flipToBottomBack {
+  from {
+    -o-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+  }
+}
+
+@keyframes flipToBottomBack {
+  from {
+    -webkit-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    -o-transform: rotateX(180deg);
+    transform: rotateX(180deg);
   }
 }
 
