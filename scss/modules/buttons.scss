@@ -16,6 +16,11 @@
   cursor: default;
 }
 
+// Container with perspective
+.perspective {
+  perspective-origin: 50% 50%;
+  perspective: $effeckt-perspective;
+}
 
 // Spinner animation
 .effeckt-button .spinner {
@@ -417,11 +422,7 @@ $effeckt-button-icon: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmN
   }
 }
 
-.perspective {
-  perspective-origin: 50% 50%;
-  perspective: $effeckt-perspective;
-}
-
+// 3D Rotate Success/Error
 .effeckt-button[data-effeckt-type="3d-rotate-success"],
 .effeckt-button[data-effeckt-type="3d-rotate-error"] {
   transition: all $effeckt-buttons-transition-duration;
@@ -429,6 +430,7 @@ $effeckt-button-icon: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmN
   backface-visibility: hidden;
 }
 
+// Hidden side of the button
 .effeckt-button[data-effeckt-type="3d-rotate-error"]:before {
   white-space: nowrap; 
   width: 100%;
@@ -442,14 +444,16 @@ $effeckt-button-icon: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmN
   content: attr(data-effeckt-message);
   transform-origin: 0% 0%;
   transform: rotateX(-90deg);
-  backface-visibility: hidden
+  backface-visibility: hidden;
 }
 
+// JS add's a 'data-loading' attr, which will triger the transition
 .effeckt-button[data-effeckt-type="3d-rotate-error"][data-loading] {
   transform-origin: 50% 0%;
   transform: rotateX(90deg) translateY(-100%);
 }
 
+// Hidden side of the button
 .effeckt-button[data-effeckt-type="3d-rotate-success"]:after {
   white-space: nowrap; 
   width: 100%;
@@ -466,6 +470,7 @@ $effeckt-button-icon: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmN
   backface-visibility: hidden;
 }
 
+// JS add's a 'data-loading' attr, which will triger the transition
 .effeckt-button[data-effeckt-type="3d-rotate-success"][data-loading] {
   transform-origin: 50% 100%;
   transform: rotateX(-90deg) translateY(100%);
