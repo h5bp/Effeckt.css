@@ -423,13 +423,13 @@ $effeckt-button-icon: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmN
 }
 
 .effeckt-button[data-effeckt-type="3d-rotate-success"],
-.effeckt-button[data-effeckt-type="3d-rotate-fail"] {
+.effeckt-button[data-effeckt-type="3d-rotate-error"] {
   transition: all $effeckt-buttons-transition-duration;
   transform-style: preserve-3d;
   backface-visibility: hidden;
 }
 
-.effeckt-button[data-effeckt-type="3d-rotate-fail"]:before {
+.effeckt-button[data-effeckt-type="3d-rotate-error"]:before {
   white-space: nowrap; 
   width: 100%;
   height: 100%;
@@ -445,7 +445,7 @@ $effeckt-button-icon: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmN
   backface-visibility: hidden
 }
 
-.effeckt-button[data-effeckt-type="3d-rotate-fail"][data-loading] {
+.effeckt-button[data-effeckt-type="3d-rotate-error"][data-loading] {
   transform-origin: 50% 0%;
   transform: rotateX(90deg) translateY(-100%);
 }
