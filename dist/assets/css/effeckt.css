@@ -393,6 +393,17 @@ Example markup:
     opacity: 1; }
   .effeckt-caption[data-effeckt-type~="effeckt-caption-8"]:hover img, .effeckt-caption[data-effeckt-type~="effeckt-caption-8"]:active img {
     transform: translateX(100%); }
+  .effeckt-caption[data-effeckt-type~="effeckt-caption-15"] figcaption {
+    top: 0;
+    left: 0;
+    height: 100%;
+    transform: translateY(-100%);
+    opacity: 0; }
+  .effeckt-caption[data-effeckt-type~="effeckt-caption-15"] img {
+    transition: 500ms; }
+  .effeckt-caption[data-effeckt-type~="effeckt-caption-15"]:hover figcaption, .effeckt-caption[data-effeckt-type~="effeckt-caption-15"]:active figcaption {
+    transform: translateY(0);
+    opacity: 1; }
   .effeckt-caption[data-effeckt-type~="effeckt-caption-9"] figcaption {
     top: 0;
     left: 0;

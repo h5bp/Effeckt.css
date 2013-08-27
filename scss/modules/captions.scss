@@ -31,7 +31,7 @@
   }
 
 
-  // Effect 2: Slide Up
+  // Effect 2: Quarter Slide Up
   &[data-effeckt-type~="effeckt-caption-2"] {
     figcaption {
       bottom: 0;
@@ -82,7 +82,7 @@
   }
 
 
-  // Effect 4: Slide Side
+  // Effect 4: Quarter Slide Side
   &[data-effeckt-type~="effeckt-caption-4"] {
     figcaption {
       left: 0;
@@ -99,7 +99,7 @@
   }
 
 
-  // Effect 5: Cover
+  // Effect 5: Cover Fade
   &[data-effeckt-type~="effeckt-caption-5"] {
     figcaption {
       top: 0;
@@ -115,7 +115,7 @@
   }
 
 
-  // Effect 6 - Cover First
+  // Effect 6 - Quarter Fall in
   &[data-effeckt-type~="effeckt-caption-6"] {
     figcaption {
       top: 0;
@@ -132,7 +132,7 @@
   }
 
 
-  // Effect 7 - Cover First
+  // Effect 7 - 3Quarter Two Step
   &[data-effeckt-type~="effeckt-caption-7"] {
     figcaption {
       top: 0;
@@ -157,7 +157,7 @@
   }
 
 
-  // Effect 8 - Move
+  // Effect 8 - Cover Push Right
   &[data-effeckt-type~="effeckt-caption-8"] {
     figcaption {
       top: 0;
@@ -181,8 +181,32 @@
     }
   }
 
+    // Effect 15 - Cover Slide Top
+  &[data-effeckt-type~="effeckt-caption-15"] {
+    figcaption {
+      top: 0;
+      left: 0;
+      height: 100%;
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    img {
+      transition: $effeckt-caption-transition-duration;
+      // transform: translateY(0);
+    }
+    &:hover, &:active {
+      figcaption {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      img {
+        // transform: translateY(100%);
+      }
+    }
+  }
 
-  // Effect 9 - Scale
+
+  // Effect 9 - Quarter Caption Zoom
   &[data-effeckt-type~="effeckt-caption-9"] {
     figcaption {
       top: 0;
@@ -206,7 +230,7 @@
   }
 
 
-  // Effect 10 - Flip
+  // Effect 10 - Revolving Door
   // BUG: Super flickery in Safari 5.1.7 on Windows 7
   &[data-effeckt-type~="effeckt-caption-10"] {
     overflow: visible;
@@ -232,7 +256,7 @@
     }
   }
 
-  // Effect 11 - UnnamedtranslateY(-90px)
+  // Effect 11 - Caption Offset
   &[data-effeckt-type~="effeckt-caption-11"] {
     overflow: visible;
     figcaption {
@@ -273,7 +297,7 @@
       }
     }
   }
-  // Effect 13 - Reveal Caption from bottom
+  // Effect 13 - Half Slide
   &[data-effeckt-type~="effeckt-caption-13"] {
     figcaption {
       top: 0;
@@ -297,7 +321,7 @@
     }
   }
 
-  // Effect 14 - Reveal Zooming
+  // Effect 14 -  Tunnel
   &[data-effeckt-type~="effeckt-caption-14"] {
     figcaption {
       top: 0;
