@@ -1453,11 +1453,8 @@ Example markup:
 
 .effeckt-off-screen-nav-from-top {
   width: 100%;
-  height: auto;
-  top: 0;
-  left: 0;
   bottom: auto;
-  transition: all 500ms;
+  transition: 500ms;
   transform: translateY(-100%); }
   .effeckt-off-screen-nav-from-top.effeckt-off-screen-nav-show {
     visibility: visible;
@@ -1471,6 +1468,32 @@ Example markup:
   .effeckt-off-screen-nav-from-bottom.effeckt-off-screen-nav-show {
     visibility: visible;
     transform: translateY(0%); }
+
+.effeckt-off-screen-nav-push-from-top {
+  width: 100%;
+  bottom: auto;
+  transition: 500ms;
+  transform: translateY(-100%); }
+  .effeckt-off-screen-nav-push-from-top.effeckt-off-screen-nav-show {
+    visibility: visible;
+    transform: translateY(0%); }
+    .effeckt-off-screen-nav-push-from-top.effeckt-off-screen-nav-show ~ [data-effeckt-page] {
+      transform: translateY(12rem); }
+  .effeckt-off-screen-nav-push-from-top ~ [data-effeckt-page] {
+    transition: 500ms; }
+
+.effeckt-off-screen-nav-push-from-bottom {
+  width: 100%;
+  top: auto;
+  transition: 500ms;
+  transform: translateY(100%); }
+  .effeckt-off-screen-nav-push-from-bottom.effeckt-off-screen-nav-show {
+    visibility: visible;
+    transform: translateY(0%); }
+    .effeckt-off-screen-nav-push-from-bottom.effeckt-off-screen-nav-show ~ [data-effeckt-page] {
+      transform: translateY(-12rem); }
+  .effeckt-off-screen-nav-push-from-bottom ~ [data-effeckt-page] {
+    transition: 500ms; }
 
 [data-effeckt-page] {
   position: relative;
