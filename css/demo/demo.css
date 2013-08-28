@@ -395,3 +395,22 @@ h1 span:nth-of-type(11) {
   .contributors-list img {
     width: 40px;
     height: 40px; }
+
+[data-effeckt-page="page-1"] {
+  background-color: #eeeeee; }
+
+[data-effeckt-page="page-2"] {
+  color: #203513;
+  background-color: #99cf78; }
+
+[data-effeckt-page="page-3"] {
+  color: #282828;
+  background-color: #fecd3d; }
+
+[data-effeckt-page="page-4"] {
+  color: #fffefe;
+  background-color: #cd4f5b; }
+
+[data-effeckt-page="page-5"] {
+  color: #194772;
+  background-color: #62a1dc; }
