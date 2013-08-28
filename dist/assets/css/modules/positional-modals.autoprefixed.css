@@ -6,7 +6,7 @@
 
 .effeckt-positional-modal-wrap .effeckt-modal {
   padding: 10px;
-  background: #ccc;
+  background: #cccccc;
 }
 
 .effeckt-positional-modal-wrap .effeckt-modal-content {
@@ -29,7 +29,7 @@
   width: 0;
   height: 0;
   margin-left: -10px;
-  border-top: 10px solid #ccc;
+  border-top: 10px solid #cccccc;
   border-right: 10px solid transparent;
   border-left: 10px solid transparent;
 }
@@ -46,7 +46,7 @@
   width: 0;
   height: 0;
   margin-left: -10px;
-  border-bottom: 10px solid #ccc;
+  border-bottom: 10px solid #cccccc;
   border-right: 10px solid transparent;
   border-left: 10px solid transparent;
 }

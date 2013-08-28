@@ -216,3 +216,72 @@
     visibility: visible;
   }
 }
+
+// 10 From Top
+.effeckt-off-screen-nav-from-top {
+  width: 100%;
+  bottom:auto;
+  transition: $effeckt-off-screen-navigation-transition-duration;
+  transform: translateY(-100%);
+
+  &.effeckt-off-screen-nav-show {
+    visibility: visible;
+    transform: translateY(0%);
+  }
+}
+
+// 11 From Bottom
+.effeckt-off-screen-nav-from-bottom {
+  width: 100%;
+  top:auto;
+  transition: $effeckt-off-screen-navigation-transition-duration;
+  transform: translateY(100%);
+
+  &.effeckt-off-screen-nav-show {
+    visibility: visible;
+    transform: translateY(0%);
+  }
+}
+
+// 12 Push From Top
+.effeckt-off-screen-nav-push-from-top {
+  width: 100%;
+  bottom:auto;
+  transition: $effeckt-off-screen-navigation-transition-duration;
+  transform: translateY(-100%);
+
+  &.effeckt-off-screen-nav-show {
+    visibility: visible;
+    transform: translateY(0%);
+
+    ~ [data-effeckt-page] {
+      transform: translateY(12rem);
+    }
+  }
+
+  ~ [data-effeckt-page] {
+    transition: $effeckt-off-screen-navigation-transition-duration;
+  }
+}
+
+
+// 13 Push From Bottom
+.effeckt-off-screen-nav-push-from-bottom {
+  width: 100%;
+  top:auto;
+  transition: $effeckt-off-screen-navigation-transition-duration;
+  transform: translateY(100%);
+
+  &.effeckt-off-screen-nav-show {
+    visibility: visible;
+    transform: translateY(0%);
+
+    ~ [data-effeckt-page] {
+      transform: translateY(-12rem);
+    }
+  }
+
+  ~ [data-effeckt-page] {
+    transition: $effeckt-off-screen-navigation-transition-duration;
+  }
+}
