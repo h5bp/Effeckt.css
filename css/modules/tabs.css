@@ -12,14 +12,14 @@
         display: block;
         padding: 10px 15px;
         color: #383838;
-        background-color: #eeeeee; }
+        background-color: #EEEEEE; }
         .effeckt-tabs-wrap ul.effeckt-tabs li a.active, .effeckt-tabs-wrap ul.effeckt-tabs li a:hover {
-          background-color: #e8e8e8; }
+          background-color: #E8E8E8; }
   .effeckt-tabs-wrap .tabs-container {
     position: relative;
     padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid #dddddd;
+    border: 1px solid #DDD;
     transition: all 500ms ease-in-out; }
     .effeckt-tabs-wrap .tabs-container .effeckt-tab-content {
       position: absolute;
