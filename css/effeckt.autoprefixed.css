@@ -266,7 +266,7 @@
   left: 0;
   width: 0;
   height: 100%;
-  background: black;
+  background: #000;
   -webkit-transition: width 500ms;
   -o-transition: width 500ms;
   transition: width 500ms;
@@ -288,7 +288,7 @@
   right: 0;
   width: 0;
   height: 100%;
-  background: black;
+  background: #000;
   -webkit-transition: width 500ms;
   -o-transition: width 500ms;
   transition: width 500ms;
@@ -310,7 +310,7 @@
   left: 0;
   width: 100%;
   height: 0;
-  background: black;
+  background: #000;
   -webkit-transition: height 500ms;
   -o-transition: height 500ms;
   transition: height 500ms;
@@ -332,7 +332,7 @@
   left: 0;
   width: 100%;
   height: 0;
-  background: black;
+  background: #000;
   -webkit-transition: height 500ms;
   -o-transition: height 500ms;
   transition: height 500ms;
@@ -434,6 +434,104 @@ Example markup:
   -ms-transform: translateX(-100%);
   -o-transform: translateX(-100%);
   transform: translateX(-100%);
+}
+
+.perspective {
+  -webkit-perspective-origin: 50% 50%;
+  -ms-perspective-origin: 50% 50%;
+  -o-perspective-origin: 50% 50%;
+  perspective-origin: 50% 50%;
+  -webkit-perspective: 2000px;
+  -ms-perspective: 2000px;
+  -o-perspective: 2000px;
+  perspective: 2000px;
+}
+
+.effeckt-button[data-effeckt-type="3d-rotate-success"],
+.effeckt-button[data-effeckt-type="3d-rotate-fail"] {
+  -webkit-transition: all 500ms;
+  -o-transition: all 500ms;
+  transition: all 500ms;
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.effeckt-button[data-effeckt-type="3d-rotate-fail"]:before {
+  white-space: nowrap;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  line-height: 2em;
+  top: 100%;
+  background: #e96a6a;
+  color: #a33a3a;
+  content: attr(data-effeckt-message);
+  -webkit-transform-origin: 0% 0%;
+  -ms-transform-origin: 0% 0%;
+  -o-transform-origin: 0% 0%;
+  transform-origin: 0% 0%;
+  -webkit-transform: rotateX(-90deg);
+  -ms-transform: rotateX(-90deg);
+  -o-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.effeckt-button[data-effeckt-type="3d-rotate-fail"][data-loading] {
+  -webkit-transform-origin: 50% 0%;
+  -ms-transform-origin: 50% 0%;
+  -o-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+  -webkit-transform: rotateX(90deg) translateY(-100%);
+  -ms-transform: rotateX(90deg) translateY(-100%);
+  -o-transform: rotateX(90deg) translateY(-100%);
+  transform: rotateX(90deg) translateY(-100%);
+}
+
+.effeckt-button[data-effeckt-type="3d-rotate-success"]:after {
+  white-space: nowrap;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  line-height: 2em;
+  top: -100%;
+  background: #7aca7c;
+  color: #358337;
+  content: attr(data-effeckt-message);
+  -webkit-transform-origin: 0% 100%;
+  -ms-transform-origin: 0% 100%;
+  -o-transform-origin: 0% 100%;
+  transform-origin: 0% 100%;
+  -webkit-transform: rotateX(90deg);
+  -ms-transform: rotateX(90deg);
+  -o-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.effeckt-button[data-effeckt-type="3d-rotate-success"][data-loading] {
+  -webkit-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  -o-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-transform: rotateX(-90deg) translateY(100%);
+  -ms-transform: rotateX(-90deg) translateY(100%);
+  -o-transform: rotateX(-90deg) translateY(100%);
+  transform: rotateX(-90deg) translateY(100%);
 }
 
 .effeckt-caption {
@@ -2575,9 +2673,9 @@ Example markup:
   -ms-transform: translateY(-100%);
   -o-transform: translateY(-100%);
   transform: translateY(-100%);
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
   opacity: 0;
 }
 
@@ -2700,11 +2798,11 @@ Example markup:
 
 .effeckt-show.md-effect-12 .effeckt-modal {
   opacity: 1;
-  background: #555555;
+  background: #555;
 }
 
 .effeckt-show.md-effect-12 ~ .effeckt-overlay {
-  background: #555555;
+  background: #555;
 }
 
 .md-effect-12,
@@ -3813,9 +3911,9 @@ Example markup:
   position: relative;
   margin: 0px;
   width: 52px;
-  -webkit-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
+  -webkit-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
+  transition: all .3s ease-out;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   -o-transform: scale(1);
@@ -3837,9 +3935,9 @@ Example markup:
   height: 29px;
   position: absolute;
   width: 29px;
-  -webkit-transition: all 0.1s ease-in 0.1s;
-  -o-transition: all 0.1s ease-in 0.1s;
-  transition: all 0.1s ease-in 0.1s;
+  -webkit-transition: all 0.1s ease-in .1s;
+  -o-transition: all 0.1s ease-in .1s;
+  transition: all 0.1s ease-in .1s;
   background: white;
 }
 
@@ -3868,19 +3966,19 @@ Example markup:
   display: block;
   padding: 10px 15px;
   color: #383838;
-  background-color: #eeeeee;
+  background-color: #EEEEEE;
 }
 
 .effeckt-tabs-wrap ul.effeckt-tabs li a.active,
 .effeckt-tabs-wrap ul.effeckt-tabs li a:hover {
-  background-color: #e8e8e8;
+  background-color: #E8E8E8;
 }
 
 .effeckt-tabs-wrap .tabs-container {
   position: relative;
   padding: 10px;
   margin-bottom: 20px;
-  border: 1px solid #dddddd;
+  border: 1px solid #DDD;
   -webkit-transition: all 500ms ease-in-out;
   -o-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
@@ -4055,7 +4153,7 @@ Example markup:
 
 .effeckt-positional-modal-wrap .effeckt-modal {
   padding: 10px;
-  background: #cccccc;
+  background: #ccc;
 }
 
 .effeckt-positional-modal-wrap .effeckt-modal-content {
@@ -4078,7 +4176,7 @@ Example markup:
   width: 0;
   height: 0;
   margin-left: -10px;
-  border-top: 10px solid #cccccc;
+  border-top: 10px solid #ccc;
   border-right: 10px solid transparent;
   border-left: 10px solid transparent;
 }
@@ -4095,7 +4193,7 @@ Example markup:
   width: 0;
   height: 0;
   margin-left: -10px;
-  border-bottom: 10px solid #cccccc;
+  border-bottom: 10px solid #ccc;
   border-right: 10px solid transparent;
   border-left: 10px solid transparent;
 }
