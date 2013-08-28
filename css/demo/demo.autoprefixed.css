@@ -53,7 +53,7 @@ body {
 body {
   background: #eeeeee;
   font-family: Sans-serif;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 @media (max-width: 500px) {

@@ -51,7 +51,7 @@ html, body {
 body {
   background: #eee;
   font-family: Sans-serif;
-  overflow-x: hidden; // for logo effect
+  overflow: hidden; // for logo effect
 
   // This is kinda good for performance overall
   // But... you can't fixed position inside it then
