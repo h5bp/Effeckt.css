@@ -308,3 +308,43 @@
   z-index: 900;
   visibility: visible;
 }
+
+.effeckt-off-screen-nav-from-top {
+  width: 100%;
+  bottom: auto;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+.effeckt-off-screen-nav-from-top.effeckt-off-screen-nav-show {
+  visibility: visible;
+  -webkit-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  -o-transform: translateY(0%);
+  transform: translateY(0%);
+}
+
+.effeckt-off-screen-nav-from-bottom {
+  width: 100%;
+  top: auto;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+  -webkit-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -o-transform: translateY(100%);
+  transform: translateY(100%);
+}
+
+.effeckt-off-screen-nav-from-bottom.effeckt-off-screen-nav-show {
+  visibility: visible;
+  -webkit-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  -o-transform: translateY(0%);
+  transform: translateY(0%);
+}

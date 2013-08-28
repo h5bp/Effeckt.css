@@ -8,6 +8,10 @@
 .effeckt-button[data-loading] {
   cursor: default; }
 
+.perspective {
+  perspective-origin: 50% 50%;
+  perspective: 600px; }
+
 .effeckt-button .spinner {
   position: absolute;
   width: 32px;
@@ -188,7 +192,7 @@
   left: 0;
   width: 0;
   height: 100%;
-  background: #000;
+  background: black;
   transition: width 500ms; }
 .effeckt-button[data-effeckt-type="fill-from-left"]:hover:after {
   width: 100%; }
@@ -203,7 +207,7 @@
   right: 0;
   width: 0;
   height: 100%;
-  background: #000;
+  background: black;
   transition: width 500ms; }
 .effeckt-button[data-effeckt-type="fill-from-right"]:hover:after {
   width: 100%; }
@@ -218,7 +222,7 @@
   left: 0;
   width: 100%;
   height: 0;
-  background: #000;
+  background: black;
   transition: height 500ms; }
 .effeckt-button[data-effeckt-type="fill-from-top"]:hover:after {
   height: 100%; }
@@ -233,7 +237,7 @@
   left: 0;
   width: 100%;
   height: 0;
-  background: #000;
+  background: black;
   transition: height 500ms; }
 .effeckt-button[data-effeckt-type="fill-from-bottom"]:hover:after {
   height: 100%; }
@@ -294,16 +298,12 @@ Example markup:
 .effeckt-button[data-effeckt-type~="icon-slide"]:hover[data-effeckt-type~="from-right"] .effeckt-button-label {
   transform: translateX(-100%); }
 
-.perspective {
-  perspective-origin: 50% 50%;
-  perspective: 2000px; }
-
-.effeckt-button[data-effeckt-type="3d-rotate-success"], .effeckt-button[data-effeckt-type="3d-rotate-fail"] {
+.effeckt-button[data-effeckt-type="3d-rotate-success"], .effeckt-button[data-effeckt-type="3d-rotate-error"] {
   transition: all 500ms;
   transform-style: preserve-3d;
   backface-visibility: hidden; }
 
-.effeckt-button[data-effeckt-type="3d-rotate-fail"]:before {
+.effeckt-button[data-effeckt-type="3d-rotate-error"]:before {
   white-space: nowrap;
   width: 100%;
   height: 100%;
@@ -318,7 +318,7 @@ Example markup:
   transform: rotateX(-90deg);
   backface-visibility: hidden; }
 
-.effeckt-button[data-effeckt-type="3d-rotate-fail"][data-loading] {
+.effeckt-button[data-effeckt-type="3d-rotate-error"][data-loading] {
   transform-origin: 50% 0%;
   transform: rotateX(90deg) translateY(-100%); }
 

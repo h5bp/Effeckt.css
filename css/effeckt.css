@@ -8,6 +8,10 @@
 .effeckt-button[data-loading] {
   cursor: default; }
 
+.perspective {
+  perspective-origin: 50% 50%;
+  perspective: 600px; }
+
 .effeckt-button .spinner {
   position: absolute;
   width: 32px;
@@ -188,7 +192,7 @@
   left: 0;
   width: 0;
   height: 100%;
-  background: #000;
+  background: black;
   transition: width 500ms; }
 .effeckt-button[data-effeckt-type="fill-from-left"]:hover:after {
   width: 100%; }
@@ -203,7 +207,7 @@
   right: 0;
   width: 0;
   height: 100%;
-  background: #000;
+  background: black;
   transition: width 500ms; }
 .effeckt-button[data-effeckt-type="fill-from-right"]:hover:after {
   width: 100%; }
@@ -218,7 +222,7 @@
   left: 0;
   width: 100%;
   height: 0;
-  background: #000;
+  background: black;
   transition: height 500ms; }
 .effeckt-button[data-effeckt-type="fill-from-top"]:hover:after {
   height: 100%; }
@@ -233,7 +237,7 @@
   left: 0;
   width: 100%;
   height: 0;
-  background: #000;
+  background: black;
   transition: height 500ms; }
 .effeckt-button[data-effeckt-type="fill-from-bottom"]:hover:after {
   height: 100%; }
@@ -294,16 +298,12 @@ Example markup:
 .effeckt-button[data-effeckt-type~="icon-slide"]:hover[data-effeckt-type~="from-right"] .effeckt-button-label {
   transform: translateX(-100%); }
 
-.perspective {
-  perspective-origin: 50% 50%;
-  perspective: 2000px; }
-
-.effeckt-button[data-effeckt-type="3d-rotate-success"], .effeckt-button[data-effeckt-type="3d-rotate-fail"] {
+.effeckt-button[data-effeckt-type="3d-rotate-success"], .effeckt-button[data-effeckt-type="3d-rotate-error"] {
   transition: all 500ms;
   transform-style: preserve-3d;
   backface-visibility: hidden; }
 
-.effeckt-button[data-effeckt-type="3d-rotate-fail"]:before {
+.effeckt-button[data-effeckt-type="3d-rotate-error"]:before {
   white-space: nowrap;
   width: 100%;
   height: 100%;
@@ -318,7 +318,7 @@ Example markup:
   transform: rotateX(-90deg);
   backface-visibility: hidden; }
 
-.effeckt-button[data-effeckt-type="3d-rotate-fail"][data-loading] {
+.effeckt-button[data-effeckt-type="3d-rotate-error"][data-loading] {
   transform-origin: 50% 0%;
   transform: rotateX(90deg) translateY(-100%); }
 
@@ -1019,7 +1019,7 @@ Example markup:
 
 /* Effect 6: side fall */
 .md-effect-6.effeckt-modal-wrap {
-  perspective: 1300px;
+  perspective: 600px;
   transform-style: preserve-3d; }
 
 .md-effect-6 .effeckt-modal {
@@ -1042,7 +1042,7 @@ Example markup:
 
 .md-effect-7 .effeckt-modal {
   transform: translateY(-100%);
-  transition: all .3s;
+  transition: all 0.3s;
   opacity: 0; }
 
 .effeckt-show.md-effect-7 .effeckt-modal {
@@ -1051,7 +1051,7 @@ Example markup:
 
 /* Effect 8: 3D flip horizontal */
 .md-effect-8 {
-  perspective: 1300px;
+  perspective: 600px;
   transform-style: preserve-3d; }
 
 .md-effect-8 .effeckt-modal {
@@ -1065,7 +1065,7 @@ Example markup:
 
 /* Effect 9: 3D flip vertical */
 .md-effect-9 {
-  perspective: 1300px;
+  perspective: 600px;
   transform-style: preserve-3d; }
 
 .md-effect-9 .effeckt-modal {
@@ -1079,7 +1079,7 @@ Example markup:
 
 /* Effect 10: 3D sign */
 .md-effect-10 {
-  perspective: 1300px;
+  perspective: 600px;
   transform-style: preserve-3d; }
 
 .md-effect-10 .effeckt-modal {
@@ -1099,17 +1099,17 @@ Example markup:
 
 .effeckt-show.md-effect-12 .effeckt-modal {
   opacity: 1;
-  background: #555; }
+  background: #555555; }
 
 .effeckt-show.md-effect-12 ~ .effeckt-overlay {
-  background: #555; }
+  background: #555555; }
 
 .md-effect-12, .md-effect-12 h3 {
   background: transparent; }
 
 /* Effect 13: 3D slit */
 .md-effect-13 {
-  perspective: 1300px;
+  perspective: 600px;
   transform-style: preserve-3d; }
 
 .md-effect-13 .effeckt-modal {
@@ -1135,7 +1135,7 @@ Example markup:
 
 /* Effect 14:  3D Rotate from bottom */
 .md-effect-14 {
-  perspective: 1300px;
+  perspective: 600px;
   transform-style: preserve-3d; }
 
 .md-effect-14 .effeckt-modal {
@@ -1150,7 +1150,7 @@ Example markup:
 
 /* Effect 15:  3D Rotate in from left */
 .md-effect-15 {
-  perspective: 1300px;
+  perspective: 600px;
   transform-style: preserve-3d; }
 
 .md-effect-15 .effeckt-modal {
@@ -1450,6 +1450,24 @@ Example markup:
   .effeckt-off-screen-nav-rotate ~ .effeckt-overlay {
     z-index: 900;
     visibility: visible; }
+
+.effeckt-off-screen-nav-from-top {
+  width: 100%;
+  bottom: auto;
+  transition: 500ms;
+  transform: translateY(-100%); }
+  .effeckt-off-screen-nav-from-top.effeckt-off-screen-nav-show {
+    visibility: visible;
+    transform: translateY(0%); }
+
+.effeckt-off-screen-nav-from-bottom {
+  width: 100%;
+  top: auto;
+  transition: 500ms;
+  transform: translateY(100%); }
+  .effeckt-off-screen-nav-from-bottom.effeckt-off-screen-nav-show {
+    visibility: visible;
+    transform: translateY(0%); }
 
 [data-effeckt-page] {
   position: relative;
@@ -1856,7 +1874,7 @@ Example markup:
   position: relative;
   margin: 0px;
   width: 52px;
-  transition: all .3s ease-out;
+  transition: all 0.3s ease-out;
   transform: scale(1);
   background: white; }
 
@@ -1871,7 +1889,7 @@ Example markup:
   height: 29px;
   position: absolute;
   width: 29px;
-  transition: all 0.1s ease-in .1s;
+  transition: all 0.1s ease-in 0.1s;
   background: white; }
 
 .effeckt-ckbox-ios7[type="checkbox"]:checked:after, .effeckt-rdio-ios7[type="radio"]:checked:after {
@@ -1891,14 +1909,14 @@ Example markup:
         display: block;
         padding: 10px 15px;
         color: #383838;
-        background-color: #EEEEEE; }
+        background-color: #eeeeee; }
         .effeckt-tabs-wrap ul.effeckt-tabs li a.active, .effeckt-tabs-wrap ul.effeckt-tabs li a:hover {
-          background-color: #E8E8E8; }
+          background-color: #e8e8e8; }
   .effeckt-tabs-wrap .tabs-container {
     position: relative;
     padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid #DDD;
+    border: 1px solid #dddddd;
     transition: all 500ms ease-in-out; }
     .effeckt-tabs-wrap .tabs-container .effeckt-tab-content {
       position: absolute;
@@ -1970,7 +1988,7 @@ Example markup:
   display: none; }
   .effeckt-positional-modal-wrap .effeckt-modal {
     padding: 10px;
-    background: #ccc; }
+    background: #cccccc; }
   .effeckt-positional-modal-wrap .effeckt-modal-content {
     background: white; }
   .effeckt-positional-modal-wrap.effeckt-front {
@@ -1986,7 +2004,7 @@ Example markup:
     width: 0;
     height: 0;
     margin-left: -10px;
-    border-top: 10px solid #ccc;
+    border-top: 10px solid #cccccc;
     border-right: 10px solid transparent;
     border-left: 10px solid transparent; }
 .effeckt-positional-modal-wrap[data-effeckt-positional-modal-type="below"] {
@@ -1999,6 +2017,6 @@ Example markup:
     width: 0;
     height: 0;
     margin-left: -10px;
-    border-bottom: 10px solid #ccc;
+    border-bottom: 10px solid #cccccc;
     border-right: 10px solid transparent;
     border-left: 10px solid transparent; }
