@@ -220,8 +220,11 @@
 // 10 From Top
 .effeckt-off-screen-nav-from-top {
   width: 100%;
+  height: auto;
+  top:0;
+  left:0;
   bottom:auto;
-  transition: $effeckt-off-screen-navigation-transition-duration;
+  transition: all $effeckt-off-screen-navigation-transition-duration;
   transform: translateY(-100%);
 
   &.effeckt-off-screen-nav-show {

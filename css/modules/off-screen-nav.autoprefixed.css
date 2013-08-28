@@ -311,10 +311,13 @@
 
 .effeckt-off-screen-nav-from-top {
   width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
   bottom: auto;
-  -webkit-transition: 500ms;
-  -o-transition: 500ms;
-  transition: 500ms;
+  -webkit-transition: all 500ms;
+  -o-transition: all 500ms;
+  transition: all 500ms;
   -webkit-transform: translateY(-100%);
   -ms-transform: translateY(-100%);
   -o-transform: translateY(-100%);
