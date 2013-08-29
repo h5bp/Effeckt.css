@@ -4,39 +4,15 @@
 	position: relative;
 
 	ul.effeckt-tabs {
-		margin: 0;
-		padding: 0;
-		list-style: none;
-
 		overflow: hidden; // used to be clearfix
-
-		li {
-			float: left;
-			margin-right:2px;
-
-			a {
-				display: block;
-				padding: 10px 15px;
-				color: #383838;
-				background-color: #EEEEEE;
-
-				&.active, &:hover {
-					background-color: #E8E8E8;
-				}
-			}
-		}
 	}
 
-	.tabs-container {
+	.effeckt-tabs-container {
 		position: relative;
-		padding:10px;
-		margin-bottom: 20px;
-		border:1px solid #DDD;
 		transition: all $effeckt-tabs-transition-duration ease-in-out;
 
 		.effeckt-tab-content {
 			position: absolute;
-			top: 10px;
 			transition: all $effeckt-tabs-transition-duration/2 ease-in-out;
 		}
 	}
@@ -70,7 +46,7 @@
 	}
 
 	&[data-effeckt-type='slide-left'] {
-		.tabs-container{
+		.effeckt-tabs-container{
 			overflow:hidden;
 			.effeckt-tab-content {
 				&.hide-slide-left {
@@ -87,7 +63,7 @@
 	}
 
 	&[data-effeckt-type='slide-right'] {
-		.tabs-container{
+		.effeckt-tabs-container{
 			overflow:hidden;
 			.effeckt-tab-content {
 				&.hide-slide-right {
@@ -104,7 +80,7 @@
 	}
 
 	&[data-effeckt-type='slide-up'] {
-		.tabs-container{
+		.effeckt-tabs-container{
 			overflow:hidden;
 			.effeckt-tab-content {
 				&.hide-slide-up {
@@ -121,7 +97,7 @@
 	}
 
 	&[data-effeckt-type='slide-down'] {
-		.tabs-container{
+		.effeckt-tabs-container{
 			overflow:hidden;
 			.effeckt-tab-content {
 				&.hide-slide-down {
@@ -138,7 +114,7 @@
 	}
 
 	&[data-effeckt-type='flip'] {
-		.tabs-container{
+		.effeckt-tabs-container{
 			overflow:hidden;
 			.effeckt-tab-content {
 				&.hide-flip {

@@ -513,3 +513,36 @@ h1 span:nth-of-type(11) {
   color: #194772;
   background-color:#62A1DC;
 }
+
+// Tabs
+ul.effeckt-tabs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  
+  li {
+    float: left;
+    margin-right:2px;
+
+    a {
+      display: block;
+      padding: 10px 15px;
+      color: #383838;
+      background-color: #EEEEEE;
+
+      &.active, &:hover {
+        background-color: #E8E8E8;
+      }
+    }
+  }
+}
+
+.effeckt-tabs-container {
+  padding:10px;
+  margin-bottom: 20px;
+  border:1px solid #DDD;
+
+  .effeckt-tab-content {
+    top: 10px;
+  }
+}
