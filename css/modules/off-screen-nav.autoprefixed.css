@@ -315,18 +315,161 @@
   -webkit-transition: 500ms;
   -o-transition: 500ms;
   transition: 500ms;
-  -webkit-transform: translateY(-100%);
-  -ms-transform: translateY(-100%);
-  -o-transform: translateY(-100%);
-  transform: translateY(-100%);
 }
 
 .effeckt-off-screen-nav-from-top.effeckt-off-screen-nav-show {
   visibility: visible;
-  -webkit-transform: translateY(0%);
-  -ms-transform: translateY(0%);
-  -o-transform: translateY(0%);
-  transform: translateY(0%);
+  -webkit-animation: navFromTopIn 500ms both ease;
+  -o-animation: navFromTopIn 500ms both ease;
+  animation: navFromTopIn 500ms both ease;
+}
+
+.effeckt-off-screen-nav-from-top.effeckt-off-screen-nav-hide {
+  -webkit-animation: navFromTopOut 500ms both ease;
+  -o-animation: navFromTopOut 500ms both ease;
+  animation: navFromTopOut 500ms both ease;
+}
+
+@-webkit-keyframes navFromTopIn {
+  0% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+
+  20% {
+    padding-top: 0px;
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+
+  60% {
+    padding-top: 20px;
+  }
+
+  100% {
+    padding-top: 0;
+  }
+}
+
+@-o-keyframes navFromTopIn {
+  0% {
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+
+  20% {
+    padding-top: 0px;
+    -o-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+
+  60% {
+    padding-top: 20px;
+  }
+
+  100% {
+    padding-top: 0;
+  }
+}
+
+@keyframes navFromTopIn {
+  0% {
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+
+  20% {
+    padding-top: 0px;
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -o-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+
+  60% {
+    padding-top: 20px;
+  }
+
+  100% {
+    padding-top: 0;
+  }
+}
+
+@-webkit-keyframes navFromTopOut {
+  0% {
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+    padding-top: 0px;
+  }
+
+  40% {
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+    padding-top: 20px;
+  }
+
+  80% {
+    padding-top: 0px;
+  }
+
+  90%, 100% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+}
+
+@-o-keyframes navFromTopOut {
+  0% {
+    -o-transform: translateY(0%);
+    transform: translateY(0%);
+    padding-top: 0px;
+  }
+
+  40% {
+    -o-transform: translateY(0%);
+    transform: translateY(0%);
+    padding-top: 20px;
+  }
+
+  80% {
+    padding-top: 0px;
+  }
+
+  90%, 100% {
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes navFromTopOut {
+  0% {
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -o-transform: translateY(0%);
+    transform: translateY(0%);
+    padding-top: 0px;
+  }
+
+  40% {
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -o-transform: translateY(0%);
+    transform: translateY(0%);
+    padding-top: 20px;
+  }
+
+  80% {
+    padding-top: 0px;
+  }
+
+  90%, 100% {
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
 }
 
 .effeckt-off-screen-nav-from-bottom {
@@ -335,18 +478,160 @@
   -webkit-transition: 500ms;
   -o-transition: 500ms;
   transition: 500ms;
-  -webkit-transform: translateY(100%);
-  -ms-transform: translateY(100%);
-  -o-transform: translateY(100%);
-  transform: translateY(100%);
 }
 
 .effeckt-off-screen-nav-from-bottom.effeckt-off-screen-nav-show {
-  visibility: visible;
-  -webkit-transform: translateY(0%);
-  -ms-transform: translateY(0%);
-  -o-transform: translateY(0%);
-  transform: translateY(0%);
+  -webkit-animation: navFromBottomIn 500ms both ease;
+  -o-animation: navFromBottomIn 500ms both ease;
+  animation: navFromBottomIn 500ms both ease;
+}
+
+.effeckt-off-screen-nav-from-bottom.effeckt-off-screen-nav-hide {
+  -webkit-animation: navFromBottomOut 500ms both ease;
+  -o-animation: navFromBottomOut 500ms both ease;
+  animation: navFromBottomOut 500ms both ease;
+}
+
+@-webkit-keyframes navFromBottomIn {
+  0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+
+  20% {
+    padding-bottom: 0px;
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+
+  60% {
+    padding-bottom: 20px;
+  }
+
+  100% {
+    padding-bottom: 0;
+  }
+}
+
+@-o-keyframes navFromBottomIn {
+  0% {
+    -o-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+
+  20% {
+    padding-bottom: 0px;
+    -o-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+
+  60% {
+    padding-bottom: 20px;
+  }
+
+  100% {
+    padding-bottom: 0;
+  }
+}
+
+@keyframes navFromBottomIn {
+  0% {
+    -webkit-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+
+  20% {
+    padding-bottom: 0px;
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -o-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+
+  60% {
+    padding-bottom: 20px;
+  }
+
+  100% {
+    padding-bottom: 0;
+  }
+}
+
+@-webkit-keyframes navFromBottomOut {
+  0% {
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+    padding-bottom: 0px;
+  }
+
+  40% {
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+    padding-bottom: 20px;
+  }
+
+  80% {
+    padding-bottom: 0;
+  }
+
+  90%, 100% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+}
+
+@-o-keyframes navFromBottomOut {
+  0% {
+    -o-transform: translateY(0%);
+    transform: translateY(0%);
+    padding-bottom: 0px;
+  }
+
+  40% {
+    -o-transform: translateY(0%);
+    transform: translateY(0%);
+    padding-bottom: 20px;
+  }
+
+  80% {
+    padding-bottom: 0;
+  }
+
+  90%, 100% {
+    -o-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+}
+
+@keyframes navFromBottomOut {
+  0% {
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -o-transform: translateY(0%);
+    transform: translateY(0%);
+    padding-bottom: 0px;
+  }
+
+  40% {
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -o-transform: translateY(0%);
+    transform: translateY(0%);
+    padding-bottom: 20px;
+  }
+
+  80% {
+    padding-bottom: 0;
+  }
+
+  90%, 100% {
+    -webkit-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    transform: translateY(100%);
+  }
 }
 
 .effeckt-off-screen-nav-push-from-top {

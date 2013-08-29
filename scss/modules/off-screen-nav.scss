@@ -222,12 +222,28 @@
   width: 100%;
   bottom:auto;
   transition: $effeckt-off-screen-navigation-transition-duration;
-  transform: translateY(-100%);
 
   &.effeckt-off-screen-nav-show {
     visibility: visible;
-    transform: translateY(0%);
+    animation: navFromTopIn $effeckt-off-screen-navigation-transition-duration both ease;
   }
+
+  &.effeckt-off-screen-nav-hide {
+    animation: navFromTopOut $effeckt-off-screen-navigation-transition-duration both ease;
+  }
+}
+
+@keyframes navFromTopIn {
+  0% { transform: translateY(-100%); }
+  20% { padding-top: 0px; transform: translateY(0%); }
+  60% { padding-top: 20px; }
+  100% { padding-top: 0; }
+}
+@keyframes navFromTopOut {
+  0% { transform: translateY(0%); padding-top: 0px; }
+  40%{ transform: translateY(0%); padding-top: 20px; }
+  80%{ padding-top: 0px; }
+  90%, 100%{ transform: translateY(-100%); }
 }
 
 // 11 From Bottom
@@ -235,12 +251,26 @@
   width: 100%;
   top:auto;
   transition: $effeckt-off-screen-navigation-transition-duration;
-  transform: translateY(100%);
 
   &.effeckt-off-screen-nav-show {
-    visibility: visible;
-    transform: translateY(0%);
+    animation: navFromBottomIn $effeckt-off-screen-navigation-transition-duration both ease;
   }
+  &.effeckt-off-screen-nav-hide {
+    animation: navFromBottomOut $effeckt-off-screen-navigation-transition-duration both ease;
+  }
+}
+
+@keyframes navFromBottomIn {
+  0% { transform: translateY(100%); }
+  20% { padding-bottom: 0px; transform: translateY(0%); }
+  60% { padding-bottom: 20px; }
+  100% { padding-bottom: 0; }
+}
+@keyframes navFromBottomOut {
+  0% { transform: translateY(0%); padding-bottom: 0px; }
+  40%{ transform: translateY(0%); padding-bottom: 20px; }
+  80%{ padding-bottom: 0; }
+  90%, 100%{ transform: translateY(100%); }
 }
 
 // 12 Push From Top
