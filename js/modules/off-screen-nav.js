@@ -74,6 +74,7 @@ var EffecktOffScreenNav = {
 
       self.nav.removeClass(self.closeButton.data("effeckt-type"));
       self.nav.removeClass("effeckt-off-screen-nav-hide");
+      self.nav.removeData("effeckt-hide");
 
       // WEIRD BUG
       // Have to trigger redraw or it sometimes leaves
