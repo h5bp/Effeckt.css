@@ -217,8 +217,8 @@
   }
 }
 
-// 10 From Top
-.effeckt-off-screen-nav-from-top {
+// 10 Top Overlay
+.effeckt-off-screen-nav-top-overlay {
   width: 100%;
   bottom:auto;
   transition: $effeckt-off-screen-navigation-transition-duration;
@@ -230,8 +230,8 @@
   }
 }
 
-// 11 From Bottom
-.effeckt-off-screen-nav-from-bottom {
+// 11 Bottom Overlay
+.effeckt-off-screen-nav-bottom-overlay {
   width: 100%;
   top:auto;
   transition: $effeckt-off-screen-navigation-transition-duration;
@@ -242,8 +242,8 @@
   }
 }
 
-// 12 From Top Bounce
-.effeckt-off-screen-nav-from-top-bounce {
+// 12 Top Bounce
+.effeckt-off-screen-nav-top-bounce {
   width: 100%;
   bottom:auto;
   transition: $effeckt-off-screen-navigation-transition-duration;
@@ -271,8 +271,8 @@
   90%, 100%{ transform: translateY(-100%); }
 }
 
-// 13 From Bottom Bounce
-.effeckt-off-screen-nav-from-bottom-bounce {
+// 13 Bottom Bounce
+.effeckt-off-screen-nav-bottom-bounce {
   width: 100%;
   top:auto;
   transition: $effeckt-off-screen-navigation-transition-duration;
@@ -298,8 +298,8 @@
   90%, 100%{ transform: translateY(100%); }
 }
 
-// 14 Push From Top
-.effeckt-off-screen-nav-push-from-top {
+// 14 Push Top
+.effeckt-off-screen-nav-push-top {
   width: 100%;
   bottom:auto;
   transition: $effeckt-off-screen-navigation-transition-duration;
@@ -320,8 +320,8 @@
 }
 
 
-// 15 Push From Bottom
-.effeckt-off-screen-nav-push-from-bottom {
+// 15 Push Bottom
+.effeckt-off-screen-nav-push-bottom {
   width: 100%;
   top:auto;
   transition: $effeckt-off-screen-navigation-transition-duration;
