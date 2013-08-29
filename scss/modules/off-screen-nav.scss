@@ -222,6 +222,31 @@
   width: 100%;
   bottom:auto;
   transition: $effeckt-off-screen-navigation-transition-duration;
+  transform: translateY(-100%);
+
+  &.effeckt-off-screen-nav-show {
+    visibility: visible;
+    transform: translateY(0%);
+  }
+}
+
+// 11 From Bottom
+.effeckt-off-screen-nav-from-bottom {
+  width: 100%;
+  top:auto;
+  transition: $effeckt-off-screen-navigation-transition-duration;
+  transform: translateY(100%);
+
+  &.effeckt-off-screen-nav-show {
+    transform: translateY(0%);
+  }
+}
+
+// 12 From Top Bounce
+.effeckt-off-screen-nav-from-top-bounce {
+  width: 100%;
+  bottom:auto;
+  transition: $effeckt-off-screen-navigation-transition-duration;
 
   &.effeckt-off-screen-nav-show {
     visibility: visible;
@@ -246,8 +271,8 @@
   90%, 100%{ transform: translateY(-100%); }
 }
 
-// 11 From Bottom
-.effeckt-off-screen-nav-from-bottom {
+// 13 From Bottom Bounce
+.effeckt-off-screen-nav-from-bottom-bounce {
   width: 100%;
   top:auto;
   transition: $effeckt-off-screen-navigation-transition-duration;
@@ -273,7 +298,7 @@
   90%, 100%{ transform: translateY(100%); }
 }
 
-// 12 Push From Top
+// 14 Push From Top
 .effeckt-off-screen-nav-push-from-top {
   width: 100%;
   bottom:auto;
@@ -295,7 +320,7 @@
 }
 
 
-// 13 Push From Bottom
+// 15 Push From Bottom
 .effeckt-off-screen-nav-push-from-bottom {
   width: 100%;
   top:auto;

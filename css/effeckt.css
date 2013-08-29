@@ -1454,11 +1454,28 @@ Example markup:
 .effeckt-off-screen-nav-from-top {
   width: 100%;
   bottom: auto;
-  transition: 500ms; }
+  transition: 500ms;
+  transform: translateY(-100%); }
   .effeckt-off-screen-nav-from-top.effeckt-off-screen-nav-show {
     visibility: visible;
+    transform: translateY(0%); }
+
+.effeckt-off-screen-nav-from-bottom {
+  width: 100%;
+  top: auto;
+  transition: 500ms;
+  transform: translateY(100%); }
+  .effeckt-off-screen-nav-from-bottom.effeckt-off-screen-nav-show {
+    transform: translateY(0%); }
+
+.effeckt-off-screen-nav-from-top-bounce {
+  width: 100%;
+  bottom: auto;
+  transition: 500ms; }
+  .effeckt-off-screen-nav-from-top-bounce.effeckt-off-screen-nav-show {
+    visibility: visible;
     animation: navFromTopIn 500ms both ease; }
-  .effeckt-off-screen-nav-from-top.effeckt-off-screen-nav-hide {
+  .effeckt-off-screen-nav-from-top-bounce.effeckt-off-screen-nav-hide {
     animation: navFromTopOut 500ms both ease; }
 
 @keyframes navFromTopIn {
@@ -1490,13 +1507,13 @@ Example markup:
   90%, 100% {
     transform: translateY(-100%); } }
 
-.effeckt-off-screen-nav-from-bottom {
+.effeckt-off-screen-nav-from-bottom-bounce {
   width: 100%;
   top: auto;
   transition: 500ms; }
-  .effeckt-off-screen-nav-from-bottom.effeckt-off-screen-nav-show {
+  .effeckt-off-screen-nav-from-bottom-bounce.effeckt-off-screen-nav-show {
     animation: navFromBottomIn 500ms both ease; }
-  .effeckt-off-screen-nav-from-bottom.effeckt-off-screen-nav-hide {
+  .effeckt-off-screen-nav-from-bottom-bounce.effeckt-off-screen-nav-hide {
     animation: navFromBottomOut 500ms both ease; }
 
 @keyframes navFromBottomIn {
