@@ -29,15 +29,15 @@ var Tabs = {
 
       var $el             = $(this);
       var effect          = $el.data('effeckt-type');
-      var tabContents     = $el.find( self.tabContentClass );
+      var tabContents     = $el.find(self.tabContentClass);
       var firstTabContent = tabContents.first();
-      var tabs            = $el.find( self.tabsClass );
+      var tabs            = $el.find(self.tabsClass);
 
       tabs.removeClass('active').first().addClass('active');
-      tabContents.not(':eq(0)').addClass( 'hide-' + effect );
+      tabContents.not(':eq(0)').addClass('effeckt-hide');
 
-      firstTabContent.addClass( 'show-' + effect );
-      tabContents.parent().height( firstTabContent.height() );
+      firstTabContent.addClass('effeckt-show');
+      tabContents.parent().height(firstTabContent.height());
 
     });
 
@@ -59,8 +59,8 @@ var Tabs = {
 
     var tab         = $(el);
     var tabsWrap    = tab.parents(this.tabsWrapClass);
-    var tabs        = tabsWrap.find( this.tabsClass );
-    var tabContents = tabsWrap.find( this.tabContentClass );
+    var tabs        = tabsWrap.find(this.tabsClass);
+    var tabContents = tabsWrap.find(this.tabContentClass);
     var effect      = tabsWrap.data('effeckt-type');
     
     //set active to this current clicked tab
@@ -68,13 +68,13 @@ var Tabs = {
     tab.addClass('active');
 
     var tabID = tab.attr('href');
-    var tabContent = tabContents.filter( tabID );
+    var tabContent = tabContents.filter(tabID);
 
-    tabContents.removeClass('show-' + effect).addClass('hide-' + effect);
-    tabContent.addClass('show-' + effect);
+    tabContents.removeClass('effeckt-show').addClass('effeckt-hide');
+    tabContent.addClass('effeckt-show');
 
     //add parent height, just because of position: absolute;
-    tabContents.parent().height( tabContent.height() );
+    tabContents.parent().height(tabContent.height());
   }
 
 };
