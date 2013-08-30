@@ -99,7 +99,7 @@
 // Scale Down From Front
 [data-effeckt-page].scale-down-from-front {
   animation: scaleDownFromFront $effeckt-page-transition-duration forwards ease-in-out;
-  @extend %animation-delay-300;
+  @extend .animation-delay-300;
   
   &.effeckt-page-animating {
     @extend .page-on-top;
