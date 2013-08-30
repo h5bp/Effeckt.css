@@ -1,5 +1,7 @@
 var EffecktListItems = {
 
+  isTouchDevice: Modernizr.touch,
+
   init: function() {
 
     this.bindUIActions();
@@ -8,13 +10,18 @@ var EffecktListItems = {
 
   bindUIActions: function() {
 
-    var self = this;
+    var self = this,
+        evt = 'click';
 
-    $(".effeckt-list-wrap button.add").on("click", function() {
+    if (this.isTouchDevice) {
+      evt += ' touchstart';
+    }
+
+    $(".effeckt-list-wrap button.add").on(evt, function() {
       self.addListItem(this);
     });
 
-    $(".effeckt-list-wrap button.remove").on("click", function() {
+    $(".effeckt-list-wrap button.remove").on(evt, function() {
       self.removeListItem(this);
     });
 
