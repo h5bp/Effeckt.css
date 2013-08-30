@@ -4,7 +4,7 @@ var EffecktPositionalModals = {
   modalCloseButtonClass: '.effeckt-modal-close',
   modalWrapClass: 'effeckt-positional-modal-wrap',
 
-  isTouchDevice: !!('ontouchstart' in window),
+  isTouchDevice: Modernizr.touch,
 
   modalsList: [],
 

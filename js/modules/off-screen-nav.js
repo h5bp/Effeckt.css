@@ -3,6 +3,9 @@ var EffecktOffScreenNav = {
   nav: $("#effeckt-off-screen-nav"),
   closeButton: $("#effeckt-off-screen-nav-close"),
 
+  isTouchDevice: Modernizr.touch,
+
+
   init: function() {
 
     this.bindUIActions();
@@ -11,9 +14,14 @@ var EffecktOffScreenNav = {
 
   bindUIActions: function() {
 
-    var self = this;
+    var self = this,
+        evt = 'click';
 
-    $(".off-screen-nav-button, #effeckt-off-screen-nav-close").on("click", function() {
+    if (this.isTouchDevice) {
+      evt += ' touchstart';
+    }
+
+    $(".off-screen-nav-button, #effeckt-off-screen-nav-close").on(evt, function() {
       self.toggleNav(this);
     });
 

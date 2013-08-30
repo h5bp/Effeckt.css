@@ -8,6 +8,8 @@ var EffecktPageTransitions = {
   transitionInEffect: '',
   transitionOutEffect: '',
 
+  isTouchDevice: Modernizr.touch,
+
   init: function() {
 
     this.initPages();
@@ -27,8 +29,14 @@ var EffecktPageTransitions = {
 
   bindUIActions: function() {
 
-    var self = this;
-    $('.effeckt-page-transition-button').on('click',function(e){
+    var self = this,
+        evt = 'click';
+
+    if (this.isTouchDevice) {
+      evt += ' touchstart';
+    }
+
+    $('.effeckt-page-transition-button').on(evt, function(e){
 
       e.preventDefault();
 

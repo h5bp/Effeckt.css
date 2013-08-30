@@ -1,5 +1,7 @@
 var EffecktButtons = {
 
+  isTouchDevice: Modernizr.touch,
+
   init: function() {
 
     this.bindUIActions();
@@ -8,9 +10,14 @@ var EffecktButtons = {
 
   bindUIActions: function() {
 
-    var self = this;
+    var self = this,
+        evt  = 'click';
+    
+    if (this.isTouchDevice) {
+      evt += ' touchstart';
+    }
 
-    $('.effeckt-button').on( 'click', function(){
+    $('.effeckt-button').on(evt, function(){
       self.showLoader(this);
     });
 
