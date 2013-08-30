@@ -34,8 +34,8 @@ var EffecktPositionalModals = {
   openModal: function($el) {
 
     var self = this,
-        style = $el.attr('data-effeckt-modal-style'), // not sure why .data() doesn't work
-        position = $el.attr('data-effeckt-positional-modal-type'),
+        style = $el.data('effeckt-modal-style'),
+        position = $el.data('effeckt-positional-modal-type'),
         buttonPosition = $el.offset(),
         buttonSize = {
           'width': $el.outerWidth(),
