@@ -358,18 +358,18 @@
 
 .effeckt-off-screen-nav-top-bounce.effeckt-off-screen-nav-show {
   visibility: visible;
-  -webkit-animation: navFromTopIn 500ms both ease;
-  -o-animation: navFromTopIn 500ms both ease;
-  animation: navFromTopIn 500ms both ease;
+  -webkit-animation: navFromTopBounceIn 500ms both ease;
+  -o-animation: navFromTopBounceIn 500ms both ease;
+  animation: navFromTopBounceIn 500ms both ease;
 }
 
 .effeckt-off-screen-nav-top-bounce.effeckt-off-screen-nav-hide {
-  -webkit-animation: navFromTopOut 500ms both ease;
-  -o-animation: navFromTopOut 500ms both ease;
-  animation: navFromTopOut 500ms both ease;
+  -webkit-animation: navFromTopBounceOut 500ms both ease;
+  -o-animation: navFromTopBounceOut 500ms both ease;
+  animation: navFromTopBounceOut 500ms both ease;
 }
 
-@-webkit-keyframes navFromTopIn {
+@-webkit-keyframes navFromTopBounceIn {
   0% {
     -webkit-transform: translateY(-100%);
     transform: translateY(-100%);
@@ -390,7 +390,7 @@
   }
 }
 
-@-o-keyframes navFromTopIn {
+@-o-keyframes navFromTopBounceIn {
   0% {
     -o-transform: translateY(-100%);
     transform: translateY(-100%);
@@ -411,7 +411,7 @@
   }
 }
 
-@keyframes navFromTopIn {
+@keyframes navFromTopBounceIn {
   0% {
     -webkit-transform: translateY(-100%);
     -ms-transform: translateY(-100%);
@@ -436,7 +436,7 @@
   }
 }
 
-@-webkit-keyframes navFromTopOut {
+@-webkit-keyframes navFromTopBounceOut {
   0% {
     -webkit-transform: translateY(0%);
     transform: translateY(0%);
@@ -459,7 +459,7 @@
   }
 }
 
-@-o-keyframes navFromTopOut {
+@-o-keyframes navFromTopBounceOut {
   0% {
     -o-transform: translateY(0%);
     transform: translateY(0%);
@@ -482,7 +482,7 @@
   }
 }
 
-@keyframes navFromTopOut {
+@keyframes navFromTopBounceOut {
   0% {
     -webkit-transform: translateY(0%);
     -ms-transform: translateY(0%);
@@ -520,18 +520,18 @@
 }
 
 .effeckt-off-screen-nav-bottom-bounce.effeckt-off-screen-nav-show {
-  -webkit-animation: navFromBottomIn 500ms both ease;
-  -o-animation: navFromBottomIn 500ms both ease;
-  animation: navFromBottomIn 500ms both ease;
+  -webkit-animation: navFromBottomBounceIn 500ms both ease;
+  -o-animation: navFromBottomBounceIn 500ms both ease;
+  animation: navFromBottomBounceIn 500ms both ease;
 }
 
 .effeckt-off-screen-nav-bottom-bounce.effeckt-off-screen-nav-hide {
-  -webkit-animation: navFromBottomOut 500ms both ease;
-  -o-animation: navFromBottomOut 500ms both ease;
-  animation: navFromBottomOut 500ms both ease;
+  -webkit-animation: navFromBottomBounceOut 500ms both ease;
+  -o-animation: navFromBottomBounceOut 500ms both ease;
+  animation: navFromBottomBounceOut 500ms both ease;
 }
 
-@-webkit-keyframes navFromBottomIn {
+@-webkit-keyframes navFromBottomBounceIn {
   0% {
     -webkit-transform: translateY(100%);
     transform: translateY(100%);
@@ -552,7 +552,7 @@
   }
 }
 
-@-o-keyframes navFromBottomIn {
+@-o-keyframes navFromBottomBounceIn {
   0% {
     -o-transform: translateY(100%);
     transform: translateY(100%);
@@ -573,7 +573,7 @@
   }
 }
 
-@keyframes navFromBottomIn {
+@keyframes navFromBottomBounceIn {
   0% {
     -webkit-transform: translateY(100%);
     -ms-transform: translateY(100%);
@@ -598,7 +598,7 @@
   }
 }
 
-@-webkit-keyframes navFromBottomOut {
+@-webkit-keyframes navFromBottomBounceOut {
   0% {
     -webkit-transform: translateY(0%);
     transform: translateY(0%);
@@ -621,7 +621,7 @@
   }
 }
 
-@-o-keyframes navFromBottomOut {
+@-o-keyframes navFromBottomBounceOut {
   0% {
     -o-transform: translateY(0%);
     transform: translateY(0%);
@@ -644,7 +644,7 @@
   }
 }
 
-@keyframes navFromBottomOut {
+@keyframes navFromBottomBounceOut {
   0% {
     -webkit-transform: translateY(0%);
     -ms-transform: translateY(0%);

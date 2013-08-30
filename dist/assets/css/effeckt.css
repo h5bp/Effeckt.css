@@ -1474,11 +1474,11 @@ Example markup:
   transition: 500ms; }
   .effeckt-off-screen-nav-top-bounce.effeckt-off-screen-nav-show {
     visibility: visible;
-    animation: navFromTopIn 500ms both ease; }
+    animation: navFromTopBounceIn 500ms both ease; }
   .effeckt-off-screen-nav-top-bounce.effeckt-off-screen-nav-hide {
-    animation: navFromTopOut 500ms both ease; }
+    animation: navFromTopBounceOut 500ms both ease; }
 
-@keyframes navFromTopIn {
+@keyframes navFromTopBounceIn {
   0% {
     transform: translateY(-100%); }
 
@@ -1492,7 +1492,7 @@ Example markup:
   100% {
     padding-top: 0; } }
 
-@keyframes navFromTopOut {
+@keyframes navFromTopBounceOut {
   0% {
     transform: translateY(0%);
     padding-top: 0px; }
@@ -1512,11 +1512,11 @@ Example markup:
   top: auto;
   transition: 500ms; }
   .effeckt-off-screen-nav-bottom-bounce.effeckt-off-screen-nav-show {
-    animation: navFromBottomIn 500ms both ease; }
+    animation: navFromBottomBounceIn 500ms both ease; }
   .effeckt-off-screen-nav-bottom-bounce.effeckt-off-screen-nav-hide {
-    animation: navFromBottomOut 500ms both ease; }
+    animation: navFromBottomBounceOut 500ms both ease; }
 
-@keyframes navFromBottomIn {
+@keyframes navFromBottomBounceIn {
   0% {
     transform: translateY(100%); }
 
@@ -1530,7 +1530,7 @@ Example markup:
   100% {
     padding-bottom: 0; } }
 
-@keyframes navFromBottomOut {
+@keyframes navFromBottomBounceOut {
   0% {
     transform: translateY(0%);
     padding-bottom: 0px; }

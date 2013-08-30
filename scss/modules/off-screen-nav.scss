@@ -250,21 +250,21 @@
 
   &.effeckt-off-screen-nav-show {
     visibility: visible;
-    animation: navFromTopIn $effeckt-off-screen-navigation-transition-duration both ease;
+    animation: navFromTopBounceIn $effeckt-off-screen-navigation-transition-duration both ease;
   }
 
   &.effeckt-off-screen-nav-hide {
-    animation: navFromTopOut $effeckt-off-screen-navigation-transition-duration both ease;
+    animation: navFromTopBounceOut $effeckt-off-screen-navigation-transition-duration both ease;
   }
 }
 
-@keyframes navFromTopIn {
+@keyframes navFromTopBounceIn {
   0% { transform: translateY(-100%); }
   20% { padding-top: 0px; transform: translateY(0%); }
   60% { padding-top: 20px; }
   100% { padding-top: 0; }
 }
-@keyframes navFromTopOut {
+@keyframes navFromTopBounceOut {
   0% { transform: translateY(0%); padding-top: 0px; }
   40%{ transform: translateY(0%); padding-top: 20px; }
   80%{ padding-top: 0px; }
@@ -278,20 +278,20 @@
   transition: $effeckt-off-screen-navigation-transition-duration;
 
   &.effeckt-off-screen-nav-show {
-    animation: navFromBottomIn $effeckt-off-screen-navigation-transition-duration both ease;
+    animation: navFromBottomBounceIn $effeckt-off-screen-navigation-transition-duration both ease;
   }
   &.effeckt-off-screen-nav-hide {
-    animation: navFromBottomOut $effeckt-off-screen-navigation-transition-duration both ease;
+    animation: navFromBottomBounceOut $effeckt-off-screen-navigation-transition-duration both ease;
   }
 }
 
-@keyframes navFromBottomIn {
+@keyframes navFromBottomBounceIn {
   0% { transform: translateY(100%); }
   20% { padding-bottom: 0px; transform: translateY(0%); }
   60% { padding-bottom: 20px; }
   100% { padding-bottom: 0; }
 }
-@keyframes navFromBottomOut {
+@keyframes navFromBottomBounceOut {
   0% { transform: translateY(0%); padding-bottom: 0px; }
   40%{ transform: translateY(0%); padding-bottom: 20px; }
   80%{ padding-bottom: 0; }
