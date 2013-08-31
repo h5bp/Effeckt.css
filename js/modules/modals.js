@@ -16,6 +16,7 @@ var EffecktModals = {
   modalWrap: $("#effeckt-modal-wrap"),
   modal: $("#effeckt-modal"),
   modalStyle: "",
+  isTouchDevice: Modernizr.touch,
 
   init: function() {
     this.bindUIActions();
@@ -23,16 +24,22 @@ var EffecktModals = {
 
   bindUIActions: function() {
 
-    var self = this;
-    $(".modal2-button").on("click", function() {
+    var self = this,
+        evt = 'click';
+
+    if (this.isTouchDevice) {
+      evt += ' touchstart';
+    }
+
+    $(".modal2-button").on(evt, function() {
       self.openModal(this);
     });
 
-    $(".effeckt-modal-close").on("click", function() {
+    $(".effeckt-modal-close").on(evt, function() {
       self.closeModal(this);
     });
 
-    $(".effeckt-overlay").on("click", function() {
+    $(".effeckt-overlay").on(evt, function() {
       self.closeModal();
     });
 
@@ -58,9 +65,7 @@ var EffecktModals = {
         $("html").addClass("md-perspective");
       }, 50);
     }
-    if (button.data("effeckt-hide-class")) {
-      this.modalWrap.data("effeckt-hide-class",true);
-    }
+
     this.modalWrap.data("effeckt-hide-class", button.data("effeckt-hide-class"));
 
     var evt = EffecktDemos.animationEndEventName + ' ' + EffecktDemos.transitionEndEventName;

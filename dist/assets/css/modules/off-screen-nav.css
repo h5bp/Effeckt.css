@@ -133,46 +133,122 @@
     z-index: 900;
     visibility: visible; }
 
-.effeckt-off-screen-nav-from-top {
+.effeckt-off-screen-nav-top-overlay {
   width: 100%;
   bottom: auto;
   transition: 500ms;
   transform: translateY(-100%); }
-  .effeckt-off-screen-nav-from-top.effeckt-off-screen-nav-show {
+  .effeckt-off-screen-nav-top-overlay.effeckt-off-screen-nav-show {
     visibility: visible;
     transform: translateY(0%); }
 
-.effeckt-off-screen-nav-from-bottom {
+.effeckt-off-screen-nav-bottom-overlay {
   width: 100%;
   top: auto;
   transition: 500ms;
   transform: translateY(100%); }
-  .effeckt-off-screen-nav-from-bottom.effeckt-off-screen-nav-show {
-    visibility: visible;
+  .effeckt-off-screen-nav-bottom-overlay.effeckt-off-screen-nav-show {
     transform: translateY(0%); }
 
-.effeckt-off-screen-nav-push-from-top {
+.effeckt-off-screen-nav-top-bounce {
+  width: 100%;
+  bottom: auto;
+  transition: 500ms; }
+  .effeckt-off-screen-nav-top-bounce.effeckt-off-screen-nav-show {
+    visibility: visible;
+    animation: navFromTopBounceIn 500ms both ease; }
+  .effeckt-off-screen-nav-top-bounce.effeckt-off-screen-nav-hide {
+    animation: navFromTopBounceOut 500ms both ease; }
+
+@keyframes navFromTopBounceIn {
+  0% {
+    transform: translateY(-100%); }
+
+  20% {
+    padding-top: 0px;
+    transform: translateY(0%); }
+
+  60% {
+    padding-top: 20px; }
+
+  100% {
+    padding-top: 0; } }
+
+@keyframes navFromTopBounceOut {
+  0% {
+    transform: translateY(0%);
+    padding-top: 0px; }
+
+  40% {
+    transform: translateY(0%);
+    padding-top: 20px; }
+
+  80% {
+    padding-top: 0px; }
+
+  90%, 100% {
+    transform: translateY(-100%); } }
+
+.effeckt-off-screen-nav-bottom-bounce {
+  width: 100%;
+  top: auto;
+  transition: 500ms; }
+  .effeckt-off-screen-nav-bottom-bounce.effeckt-off-screen-nav-show {
+    animation: navFromBottomBounceIn 500ms both ease; }
+  .effeckt-off-screen-nav-bottom-bounce.effeckt-off-screen-nav-hide {
+    animation: navFromBottomBounceOut 500ms both ease; }
+
+@keyframes navFromBottomBounceIn {
+  0% {
+    transform: translateY(100%); }
+
+  20% {
+    padding-bottom: 0px;
+    transform: translateY(0%); }
+
+  60% {
+    padding-bottom: 20px; }
+
+  100% {
+    padding-bottom: 0; } }
+
+@keyframes navFromBottomBounceOut {
+  0% {
+    transform: translateY(0%);
+    padding-bottom: 0px; }
+
+  40% {
+    transform: translateY(0%);
+    padding-bottom: 20px; }
+
+  80% {
+    padding-bottom: 0; }
+
+  90%, 100% {
+    transform: translateY(100%); } }
+
+.effeckt-off-screen-nav-push-top {
   width: 100%;
   bottom: auto;
   transition: 500ms;
   transform: translateY(-100%); }
-  .effeckt-off-screen-nav-push-from-top.effeckt-off-screen-nav-show {
+  .effeckt-off-screen-nav-push-top.effeckt-off-screen-nav-show {
     visibility: visible;
     transform: translateY(0%); }
-    .effeckt-off-screen-nav-push-from-top.effeckt-off-screen-nav-show ~ [data-effeckt-page] {
+    .effeckt-off-screen-nav-push-top.effeckt-off-screen-nav-show ~ [data-effeckt-page] {
       transform: translateY(12rem); }
-  .effeckt-off-screen-nav-push-from-top ~ [data-effeckt-page] {
+  .effeckt-off-screen-nav-push-top ~ [data-effeckt-page] {
     transition: 500ms; }
 
-.effeckt-off-screen-nav-push-from-bottom {
+.effeckt-off-screen-nav-push-bottom {
   width: 100%;
   top: auto;
   transition: 500ms;
   transform: translateY(100%); }
-  .effeckt-off-screen-nav-push-from-bottom.effeckt-off-screen-nav-show {
+  .effeckt-off-screen-nav-push-bottom.effeckt-off-screen-nav-show {
     visibility: visible;
     transform: translateY(0%); }
-    .effeckt-off-screen-nav-push-from-bottom.effeckt-off-screen-nav-show ~ [data-effeckt-page] {
+    .effeckt-off-screen-nav-push-bottom.effeckt-off-screen-nav-show ~ [data-effeckt-page] {
       transform: translateY(-12rem); }
-  .effeckt-off-screen-nav-push-from-bottom ~ [data-effeckt-page] {
+  .effeckt-off-screen-nav-push-bottom ~ [data-effeckt-page] {
     transition: 500ms; }

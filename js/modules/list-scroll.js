@@ -2,6 +2,8 @@
  * stroll.js 1.2 - CSS scroll effects
  * http://lab.hakim.se/scroll-effects
  * MIT licensed
+ *
+ * Modified to use Modernizer 
  * 
  * Copyright (C) 2012 Hakim El Hattab, http://hakim.se
  */
@@ -13,7 +15,7 @@
   // the DOM will be polled for changes
   var LIVE_INTERVAL = 500;
 
-  var IS_TOUCH_DEVICE = !!( 'ontouchstart' in window );
+  var IS_TOUCH_DEVICE = Modernizr.touch;
 
   // All of the lists that are currently bound
   var lists = [];

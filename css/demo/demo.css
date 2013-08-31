@@ -36,7 +36,7 @@ html, body {
 body {
   background: #eee;
   font-family: Sans-serif;
-  overflow-x: hidden; }
+  overflow: hidden; }
   @media (max-width: 500px) { }
 
 .page-wrap {
@@ -413,4 +413,30 @@ h1 span:nth-of-type(11) {
 
 [data-effeckt-page="page-5"] {
   color: #194772;
+<<<<<<< HEAD
   background-color: #62A1DC; }
+=======
+  background-color: #62a1dc; }
+
+ul.effeckt-tabs {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  ul.effeckt-tabs li {
+    float: left;
+    margin-right: 2px; }
+    ul.effeckt-tabs li a {
+      display: block;
+      padding: 10px 15px;
+      color: #383838;
+      background-color: #eeeeee; }
+      ul.effeckt-tabs li a.active, ul.effeckt-tabs li a:hover {
+        background-color: #e8e8e8; }
+
+.effeckt-tabs-container {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #dddddd; }
+  .effeckt-tabs-container .effeckt-tab-content {
+    top: 10px; }
+>>>>>>> ddf8f9ebe2bcf709b123e3b4d6d3fc629840ac59
