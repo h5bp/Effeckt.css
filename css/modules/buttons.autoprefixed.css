@@ -270,26 +270,48 @@
   transform: none;
 }
 
+/*==========================
+FILL
+==========================*/
+
+.effeckt-button[data-effeckt-type="fill-from-left"] {
+  overflow: hidden;
+  position: relative;
+}
+
 .effeckt-button[data-effeckt-type="fill-from-left"]:after {
   content: '';
   position: absolute;
   top: 0;
-  left: 0;
-  width: 0;
+  right: 0;
+  width: 100%;
   height: 100%;
   background: black;
-  -webkit-transition: width 500ms;
-  -o-transition: width 500ms;
-  transition: width 500ms;
+  -webkit-transform: translate(-100%, 0);
+  -ms-transform: translate(-100%, 0);
+  -o-transform: translate(-100%, 0);
+  transform: translate(-100%, 0);
+  -webkit-transition: -webkit-transform 500ms;
+  -o-transition: -o-transform 500ms;
+  transition: -ms-transform 500ms;
+  transition: transform 500ms;
 }
 
 .effeckt-button[data-effeckt-type="fill-from-left"]:hover:after {
-  width: 100%;
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
 }
 
-.effeckt-button[data-effeckt-type="fill-from-left"] .label {
+.effeckt-button[data-effeckt-type="fill-from-left"] .effeckt-button-label {
   position: relative;
   z-index: 1;
+}
+
+.effeckt-button[data-effeckt-type="fill-from-right"] {
+  overflow: hidden;
+  position: relative;
 }
 
 .effeckt-button[data-effeckt-type="fill-from-right"]:after {
@@ -297,63 +319,97 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 0;
+  width: 100%;
   height: 100%;
   background: black;
-  -webkit-transition: width 500ms;
-  -o-transition: width 500ms;
-  transition: width 500ms;
+  -webkit-transform: translate(100%, 0);
+  -ms-transform: translate(100%, 0);
+  -o-transform: translate(100%, 0);
+  transform: translate(100%, 0);
+  -webkit-transition: -webkit-transform 500ms;
+  -o-transition: -o-transform 500ms;
+  transition: -ms-transform 500ms;
+  transition: transform 500ms;
 }
 
 .effeckt-button[data-effeckt-type="fill-from-right"]:hover:after {
-  width: 100%;
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
 }
 
-.effeckt-button[data-effeckt-type="fill-from-right"] .label {
+.effeckt-button[data-effeckt-type="fill-from-right"] .effeckt-button-label {
   position: relative;
   z-index: 1;
+}
+
+.effeckt-button[data-effeckt-type="fill-from-top"] {
+  overflow: hidden;
+  position: relative;
 }
 
 .effeckt-button[data-effeckt-type="fill-from-top"]:after {
   content: '';
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   width: 100%;
-  height: 0;
+  height: 100%;
   background: black;
-  -webkit-transition: height 500ms;
-  -o-transition: height 500ms;
-  transition: height 500ms;
+  -webkit-transform: translate(0, -100%);
+  -ms-transform: translate(0, -100%);
+  -o-transform: translate(0, -100%);
+  transform: translate(0, -100%);
+  -webkit-transition: -webkit-transform 500ms;
+  -o-transition: -o-transform 500ms;
+  transition: -ms-transform 500ms;
+  transition: transform 500ms;
 }
 
 .effeckt-button[data-effeckt-type="fill-from-top"]:hover:after {
-  height: 100%;
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
 }
 
-.effeckt-button[data-effeckt-type="fill-from-top"] .label {
+.effeckt-button[data-effeckt-type="fill-from-top"] .effeckt-button-label {
   position: relative;
   z-index: 1;
+}
+
+.effeckt-button[data-effeckt-type="fill-from-bottom"] {
+  overflow: hidden;
+  position: relative;
 }
 
 .effeckt-button[data-effeckt-type="fill-from-bottom"]:after {
   content: '';
   position: absolute;
-  bottom: 0;
-  left: 0;
+  top: 0;
+  right: 0;
   width: 100%;
-  height: 0;
+  height: 100%;
   background: black;
-  -webkit-transition: height 500ms;
-  -o-transition: height 500ms;
-  transition: height 500ms;
+  -webkit-transform: translate(0, 100%);
+  -ms-transform: translate(0, 100%);
+  -o-transform: translate(0, 100%);
+  transform: translate(0, 100%);
+  -webkit-transition: -webkit-transform 500ms;
+  -o-transition: -o-transform 500ms;
+  transition: -ms-transform 500ms;
+  transition: transform 500ms;
 }
 
 .effeckt-button[data-effeckt-type="fill-from-bottom"]:hover:after {
-  height: 100%;
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
 }
 
-.effeckt-button[data-effeckt-type="fill-from-bottom"] .label {
+.effeckt-button[data-effeckt-type="fill-from-bottom"] .effeckt-button-label {
   position: relative;
   z-index: 1;
 }

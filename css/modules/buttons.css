@@ -185,65 +185,84 @@
   opacity: 1;
   transform: none; }
 
-.effeckt-button[data-effeckt-type="fill-from-left"]:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: black;
-  transition: width 500ms; }
-.effeckt-button[data-effeckt-type="fill-from-left"]:hover:after {
-  width: 100%; }
-.effeckt-button[data-effeckt-type="fill-from-left"] .label {
-  position: relative;
-  z-index: 1; }
+/*==========================
+FILL
+==========================*/
+.effeckt-button[data-effeckt-type="fill-from-left"] {
+  overflow: hidden;
+  position: relative; }
+  .effeckt-button[data-effeckt-type="fill-from-left"]:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    transform: translate(-100%, 0);
+    transition: transform 500ms; }
+  .effeckt-button[data-effeckt-type="fill-from-left"]:hover:after {
+    transform: translate(0, 0); }
+  .effeckt-button[data-effeckt-type="fill-from-left"] .effeckt-button-label {
+    position: relative;
+    z-index: 1; }
 
-.effeckt-button[data-effeckt-type="fill-from-right"]:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 0;
-  height: 100%;
-  background: black;
-  transition: width 500ms; }
-.effeckt-button[data-effeckt-type="fill-from-right"]:hover:after {
-  width: 100%; }
-.effeckt-button[data-effeckt-type="fill-from-right"] .label {
-  position: relative;
-  z-index: 1; }
+.effeckt-button[data-effeckt-type="fill-from-right"] {
+  overflow: hidden;
+  position: relative; }
+  .effeckt-button[data-effeckt-type="fill-from-right"]:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    transform: translate(100%, 0);
+    transition: transform 500ms; }
+  .effeckt-button[data-effeckt-type="fill-from-right"]:hover:after {
+    transform: translate(0, 0); }
+  .effeckt-button[data-effeckt-type="fill-from-right"] .effeckt-button-label {
+    position: relative;
+    z-index: 1; }
 
-.effeckt-button[data-effeckt-type="fill-from-top"]:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 0;
-  background: black;
-  transition: height 500ms; }
-.effeckt-button[data-effeckt-type="fill-from-top"]:hover:after {
-  height: 100%; }
-.effeckt-button[data-effeckt-type="fill-from-top"] .label {
-  position: relative;
-  z-index: 1; }
+.effeckt-button[data-effeckt-type="fill-from-top"] {
+  overflow: hidden;
+  position: relative; }
+  .effeckt-button[data-effeckt-type="fill-from-top"]:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    transform: translate(0, -100%);
+    transition: transform 500ms; }
+  .effeckt-button[data-effeckt-type="fill-from-top"]:hover:after {
+    transform: translate(0, 0); }
+  .effeckt-button[data-effeckt-type="fill-from-top"] .effeckt-button-label {
+    position: relative;
+    z-index: 1; }
 
-.effeckt-button[data-effeckt-type="fill-from-bottom"]:after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 0;
-  background: black;
-  transition: height 500ms; }
-.effeckt-button[data-effeckt-type="fill-from-bottom"]:hover:after {
-  height: 100%; }
-.effeckt-button[data-effeckt-type="fill-from-bottom"] .label {
-  position: relative;
-  z-index: 1; }
+.effeckt-button[data-effeckt-type="fill-from-bottom"] {
+  overflow: hidden;
+  position: relative; }
+  .effeckt-button[data-effeckt-type="fill-from-bottom"]:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    transform: translate(0, 100%);
+    transition: transform 500ms; }
+  .effeckt-button[data-effeckt-type="fill-from-bottom"]:hover:after {
+    transform: translate(0, 0); }
+  .effeckt-button[data-effeckt-type="fill-from-bottom"] .effeckt-button-label {
+    position: relative;
+    z-index: 1; }
 
 /*==========================
 ICON SLIDE
