@@ -55,8 +55,8 @@ var EffecktModals = {
         self = this;
 
     this.modalWrap.show();
-
-    this.modalStyle = "md-effect-" + button.data("effeckt-modal-type").replace(/[^0-9]/g, '');
+    
+    this.modalStyle = button.data("effeckt-type");
 
     this.modalWrap.addClass(this.modalStyle);
 
@@ -65,9 +65,7 @@ var EffecktModals = {
         $("html").addClass("md-perspective");
       }, 50);
     }
-    if (button.data("effeckt-hide-class")) {
-      this.modalWrap.data("effeckt-hide-class",true);
-    }
+
     this.modalWrap.data("effeckt-hide-class", button.data("effeckt-hide-class"));
 
     var evt = EffecktDemos.animationEndEventName + ' ' + EffecktDemos.transitionEndEventName;
