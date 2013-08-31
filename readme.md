@@ -26,7 +26,7 @@ If you'd like to contribute to the [Effeckt.css](https://github.com/h5bp/Effeckt
 3. Submit your branch to [this repo](https://github.com/h5bp/Effeckt.css) as a PR.
 4. Wait for unicorns to appear.
 
-**❗A Note Regarding Pull Requests :**
+**:heavy_exclamation_mark: A Note Regarding Pull Requests :**
 Please keep your commits targeted and in a logical fashion in order to keep code review and merges as clean as possible. Generally commits shouldn't be a "save" for authors. Multiple commits sent via a PR can also create chaos when doing something like a ``git bisect`` later on. Rebasing commits from a repo where other contributors have acces can cause major conflicts for those tracking the project through a fork.
 
 - How to rebase your commits before submitting a PR: [http://gitready.com/advanced/2009/02/10/squashing-commits-with-rebase.html](http://gitready.com/advanced/2009/02/10/squashing-commits-with-rebase.html)
