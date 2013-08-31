@@ -2,8 +2,26 @@
   position: relative; }
   .effeckt-tabs-wrap ul.effeckt-tabs {
     overflow: hidden; }
+<<<<<<< HEAD
+    .effeckt-tabs-wrap ul.effeckt-tabs li {
+      float: left;
+      margin-right: 2px; }
+      .effeckt-tabs-wrap ul.effeckt-tabs li a {
+        display: block;
+        padding: 10px 15px;
+        color: #383838;
+        background-color: #EEEEEE; }
+        .effeckt-tabs-wrap ul.effeckt-tabs li a.active, .effeckt-tabs-wrap ul.effeckt-tabs li a:hover {
+          background-color: #E8E8E8; }
+  .effeckt-tabs-wrap .tabs-container {
+    position: relative;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #DDD;
+=======
   .effeckt-tabs-wrap .effeckt-tabs-container {
     position: relative;
+>>>>>>> ddf8f9ebe2bcf709b123e3b4d6d3fc629840ac59
     transition: all 500ms ease-in-out; }
     .effeckt-tabs-wrap .effeckt-tabs-container .effeckt-tab-content {
       position: absolute;

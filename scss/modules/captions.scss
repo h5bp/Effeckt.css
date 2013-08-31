@@ -16,8 +16,8 @@
     width: 100%;
   }
 
-  // Effect 1: Appear
-  &[data-effeckt-type~="effeckt-caption-1"] {
+  // Appear
+  &[data-effeckt-type~="effeckt-caption-quarter-show"] {
     figcaption {
       bottom: 0;
       left: 0;
@@ -31,8 +31,8 @@
   }
 
 
-  // Effect 2: Quarter Slide Up
-  &[data-effeckt-type~="effeckt-caption-2"] {
+  // Quarter Slide Up
+  &[data-effeckt-type~="effeckt-caption-quarter-slide-up"] {
     figcaption {
       bottom: 0;
       left: 0;
@@ -48,8 +48,8 @@
   }
 
 
-  // Effect 3: Sqwoosh
-  &[data-effeckt-type~="effeckt-caption-3"] {
+  // Sqwoosh
+  &[data-effeckt-type~="effeckt-caption-sqkwoosh"] {
     figcaption {
       top: 0;
       left: 0;
@@ -82,8 +82,8 @@
   }
 
 
-  // Effect 4: Quarter Slide Side
-  &[data-effeckt-type~="effeckt-caption-4"] {
+  // Quarter Slide Right
+  &[data-effeckt-type~="effeckt-caption-quarter-slide-right"] {
     figcaption {
       left: 0;
       bottom: 0;
@@ -99,8 +99,8 @@
   }
 
 
-  // Effect 5: Cover Fade
-  &[data-effeckt-type~="effeckt-caption-5"] {
+  // Cover Fade
+  &[data-effeckt-type~="effeckt-caption-cover-fade"] {
     figcaption {
       top: 0;
       left: 0;
@@ -115,8 +115,8 @@
   }
 
 
-  // Effect 6 - Quarter Fall in
-  &[data-effeckt-type~="effeckt-caption-6"] {
+  // Quarter Fall from Right
+  &[data-effeckt-type~="effeckt-caption-quarter-fall-right"] {
     figcaption {
       top: 0;
       left: 0;
@@ -132,8 +132,8 @@
   }
 
 
-  // Effect 7 - 3Quarter Two Step
-  &[data-effeckt-type~="effeckt-caption-7"] {
+  // Quarter Slide Left/Right
+  &[data-effeckt-type~="effeckt-caption-quarter-slide-left-right"] {
     figcaption {
       top: 0;
       left: 0;
@@ -157,8 +157,8 @@
   }
 
 
-  // Effect 8 - Cover Push Right
-  &[data-effeckt-type~="effeckt-caption-8"] {
+  // Cover Push Right
+  &[data-effeckt-type~="effeckt-caption-cover-push-right"] {
     figcaption {
       top: 0;
       left: 0;
@@ -181,8 +181,8 @@
     }
   }
 
-    // Effect 15 - Cover Slide Top
-  &[data-effeckt-type~="effeckt-caption-15"] {
+  // Cover Slide Top
+  &[data-effeckt-type~="effeckt-caption-cover-slide-top"] {
     figcaption {
       top: 0;
       left: 0;
@@ -206,8 +206,8 @@
   }
 
 
-  // Effect 9 - Quarter Caption Zoom
-  &[data-effeckt-type~="effeckt-caption-9"] {
+  // Quarter Scale In/Out
+  &[data-effeckt-type~="effeckt-caption-quarter-scale-in-out"] {
     figcaption {
       top: 0;
       left: 0;
@@ -230,9 +230,10 @@
   }
 
 
-  // Effect 10 - Revolving Door
+  // Flip Card
   // BUG: Super flickery in Safari 5.1.7 on Windows 7
-  &[data-effeckt-type~="effeckt-caption-10"] {
+  // There is a strange behavior here when is on hover state
+  &[data-effeckt-type~="effeckt-caption-flip-card"] {
     overflow: visible;
     perspective: 1300px;
     figcaption {
@@ -256,8 +257,8 @@
     }
   }
 
-  // Effect 11 - Caption Offset
-  &[data-effeckt-type~="effeckt-caption-11"] {
+  // Offset to Right/Bottom
+  &[data-effeckt-type~="effeckt-caption-offset-right-bottom"] {
     overflow: visible;
     figcaption {
       top: 0;
@@ -276,8 +277,8 @@
       }
     }
   }
-  // Effect 12 - Reveal Up
-  &[data-effeckt-type~="effeckt-caption-12"] {
+  // Reveal Up
+  &[data-effeckt-type~="effeckt-caption-reveal-up"] {
     overflow: visible;
     figcaption {
       top: 0;
@@ -297,8 +298,8 @@
       }
     }
   }
-  // Effect 13 - Half Slide
-  &[data-effeckt-type~="effeckt-caption-13"] {
+  // Slide Half Up
+  &[data-effeckt-type~="effeckt-caption-slide-half-up"] {
     figcaption {
       top: 0;
       left: 0;
@@ -321,8 +322,8 @@
     }
   }
 
-  // Effect 14 -  Tunnel
-  &[data-effeckt-type~="effeckt-caption-14"] {
+  // Tunnel
+  &[data-effeckt-type~="effeckt-caption-tunnel"] {
     figcaption {
       top: 0;
       left: 0;

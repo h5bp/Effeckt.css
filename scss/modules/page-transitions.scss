@@ -99,7 +99,7 @@
 // Scale Down From Front
 [data-effeckt-page].scale-down-from-front {
   animation: scaleDownFromFront $effeckt-page-transition-duration forwards ease-in-out;
-  @extend %animation-delay-300;
+  @extend .animation-delay-300;
   
   &.effeckt-page-animating {
     @extend .page-on-top;
@@ -310,12 +310,12 @@
   100% { opacity: .5; transform: translateZ(-500px) translateX(-200%); }
 }
 @keyframes scaleDownSlideFromRight {
-  0%, 25% { opacity: .5; transform: translateZ(-500px) translateX(200%); }
+  25% { opacity: .5; transform: translateZ(-500px) translateX(200%); }
   75% { opacity: .5; transform: translateZ(-500px); }
   100% { opacity: 1; transform: translateZ(0) translateX(0); }
 }
 @keyframes scaleDownSlideFromLeft {
-  0%, 25% { opacity: .5; transform: translateZ(-500px) translateX(-200%); }
+  25% { opacity: .5; transform: translateZ(-500px) translateX(-200%); }
   75% { opacity: .5; transform: translateZ(-500px); }
   100% { opacity: 1; transform: translateZ(0) translateX(0%); }
 }
@@ -325,7 +325,7 @@
   100% { opacity: .5; transform: translateZ(-500px) translateX(200%); }
 }
 @keyframes scaleDownSlideFromTop {
-  0%, 25% { opacity: .5; transform: translateZ(-500px) translateY(-200%); }
+  25% { opacity: .5; transform: translateZ(-500px) translateY(-200%); }
   75% { opacity: .5; transform: translateZ(-500px); }
   100% { opacity: 1; transform: translateZ(0) translateY(0%); }
 }
@@ -335,7 +335,7 @@
   100% { opacity: .5; transform: translateZ(-500px) translateY(200%); }
 }
 @keyframes scaleDownSlideFromBottom {
-  0%, 25% { opacity: .5; transform: translateZ(-500px) translateY(200%); }
+  25% { opacity: .5; transform: translateZ(-500px) translateY(200%); }
   75% { opacity: .5; transform: translateZ(-500px); }
   100% { opacity: 1; transform: translateZ(0) translateY(0%); }
 }
