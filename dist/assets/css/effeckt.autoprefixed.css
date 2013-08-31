@@ -2704,10 +2704,6 @@ Example markup:
 
 .sticky-up {
   top: 0;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
 }
 
 .sticky-up .effeckt-modal {

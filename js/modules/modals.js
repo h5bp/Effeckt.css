@@ -25,11 +25,7 @@ var EffecktModals = {
   bindUIActions: function() {
 
     var self = this,
-        evt = 'click';
-
-    if (this.isTouchDevice) {
-      evt += ' touchstart';
-    }
+        evt  = ( this.isTouchDevice ) ? 'touchstart' : 'click';
 
     $(".effeckt-modal-button").on(evt, function() {
       self.openModal(this);

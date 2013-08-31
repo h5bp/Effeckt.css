@@ -30,11 +30,7 @@ var EffecktPageTransitions = {
   bindUIActions: function() {
 
     var self = this,
-        evt = 'click';
-
-    if (this.isTouchDevice) {
-      evt += ' touchstart';
-    }
+        evt  = ( this.isTouchDevice ) ? 'touchstart' : 'click';
 
     $('.effeckt-page-transition-button').on(evt, function(e){
 
