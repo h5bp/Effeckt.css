@@ -51,7 +51,7 @@ html, body {
 body {
   background: #eee;
   font-family: Sans-serif;
-  overflow-x: hidden; // for logo effect
+  overflow: hidden; // for logo effect
 
   // This is kinda good for performance overall
   // But... you can't fixed position inside it then
@@ -512,4 +512,37 @@ h1 span:nth-of-type(11) {
 [data-effeckt-page="page-5"] {
   color: #194772;
   background-color:#62A1DC;
+}
+
+// Tabs
+ul.effeckt-tabs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  
+  li {
+    float: left;
+    margin-right:2px;
+
+    a {
+      display: block;
+      padding: 10px 15px;
+      color: #383838;
+      background-color: #EEEEEE;
+
+      &.active, &:hover {
+        background-color: #E8E8E8;
+      }
+    }
+  }
+}
+
+.effeckt-tabs-container {
+  padding:10px;
+  margin-bottom: 20px;
+  border:1px solid #DDD;
+
+  .effeckt-tab-content {
+    top: 10px;
+  }
 }
