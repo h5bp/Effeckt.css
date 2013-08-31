@@ -65,9 +65,7 @@ var EffecktModals = {
         $("html").addClass("md-perspective");
       }, 50);
     }
-    if (button.data("effeckt-hide-class")) {
-      this.modalWrap.data("effeckt-hide-class",true);
-    }
+
     this.modalWrap.data("effeckt-hide-class", button.data("effeckt-hide-class"));
 
     var evt = EffecktDemos.animationEndEventName + ' ' + EffecktDemos.transitionEndEventName;
