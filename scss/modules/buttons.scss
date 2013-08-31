@@ -240,99 +240,53 @@
 }
 
 
-// Fill from left
-.effeckt-button[data-effeckt-type="fill-from-left"] {
-  &:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: #000;
-    transition: width $effeckt-buttons-transition-duration;
-  }
-  &:hover {
-    &:after {
-      width: 100%;
-    }
-  }
-  .label {
-    position: relative;
-    z-index: 1;
-  }
+/*==========================
+FILL
+==========================*/
+
+@mixin effeckt-button-fill($translateX:0, $translateY:0) {
+ overflow: hidden;
+   position: relative;
+   &:after {
+     content: '';
+     position: absolute;
+     top: 0;
+     right: 0;
+     width: 100%;
+     height: 100%;
+     background: #000;
+     transform: translate($translateX, $translateY);
+     transition: transform $effeckt-buttons-transition-duration;
+   }
+   &:hover {
+     &:after {
+       transform: translate(0, 0);
+     }
+   }
+   .effeckt-button-label {
+     position: relative;
+     z-index: 1;
+   }
 }
 
+// Fill from left
+.effeckt-button[data-effeckt-type="fill-from-left"] {
+  @include effeckt-button-fill(-100%,0);
+}
 
 // Fill from right
 .effeckt-button[data-effeckt-type="fill-from-right"] {
-  &:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 0;
-    height: 100%;
-    background: #000;
-    transition: width $effeckt-buttons-transition-duration;
-  }
-  &:hover {
-    &:after {
-      width: 100%;
-    }
-  }
-  .label {
-    position: relative;
-    z-index: 1;
-  }
+  @include effeckt-button-fill(100%,0);
 }
-
 
 // Fill from top
 .effeckt-button[data-effeckt-type="fill-from-top"] {
-  &:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 0;
-    background: #000;
-    transition: height $effeckt-buttons-transition-duration;
-  }
-  &:hover {
-    &:after {
-      height: 100%;
-    }
-  }
-  .label {
-    position: relative;
-    z-index: 1;
-  }
+  @include effeckt-button-fill(0,-100%);
 }
-
 
 // Fill from bottom
 .effeckt-button[data-effeckt-type="fill-from-bottom"] {
-  &:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 0;
-    background: #000;
-    transition: height $effeckt-buttons-transition-duration;
-  }
-  &:hover {
-    &:after {
-      height: 100%;
-    }
-  }
-  .label {
-    position: relative;
-    z-index: 1;
-  }
+  @include effeckt-button-fill(0,100%);
 }
 
 
@@ -432,7 +386,7 @@ $effeckt-button-icon: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmN
 
 // Hidden side of the button
 .effeckt-button[data-effeckt-type="3d-rotate-error"]:before {
-  white-space: nowrap; 
+  white-space: nowrap;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -455,7 +409,7 @@ $effeckt-button-icon: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmN
 
 // Hidden side of the button
 .effeckt-button[data-effeckt-type="3d-rotate-success"]:after {
-  white-space: nowrap; 
+  white-space: nowrap;
   width: 100%;
   height: 100%;
   position: absolute;
