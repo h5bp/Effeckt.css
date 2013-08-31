@@ -78,6 +78,7 @@ var EffecktModals = {
         self = this;
 
     this.modalWrap.on(evt, function () {
+      self.modalWrap.off(evt);
       self.hideModal();
     });
 
@@ -100,8 +101,6 @@ var EffecktModals = {
 
   hideModal: function() {
 
-    var evt = EffecktDemos.animationEndEventName + ' ' + EffecktDemos.transitionEndEventName;
-
     // Only remove effeckt-hide class if it's any
     if( this.modalWrap.data("effeckt-hide-class") ){
       this.modalWrap.removeClass("effeckt-hide");
@@ -109,7 +108,7 @@ var EffecktModals = {
 
     this.modalWrap.removeClass(this.modalStyle);
     $("html").removeClass("md-perspective");
-    this.modalWrap.hide().off(evt);
+    this.modalWrap.hide();
   }
 
 };

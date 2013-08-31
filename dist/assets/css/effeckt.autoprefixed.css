@@ -10,6 +10,17 @@
   cursor: default;
 }
 
+.perspective {
+  -webkit-perspective-origin: 50% 50%;
+  -ms-perspective-origin: 50% 50%;
+  -o-perspective-origin: 50% 50%;
+  perspective-origin: 50% 50%;
+  -webkit-perspective: 600px;
+  -ms-perspective: 600px;
+  -o-perspective: 600px;
+  perspective: 600px;
+}
+
 .effeckt-button .spinner {
   position: absolute;
   width: 32px;
@@ -266,7 +277,7 @@
   left: 0;
   width: 0;
   height: 100%;
-  background: #000;
+  background: black;
   -webkit-transition: width 500ms;
   -o-transition: width 500ms;
   transition: width 500ms;
@@ -288,7 +299,7 @@
   right: 0;
   width: 0;
   height: 100%;
-  background: #000;
+  background: black;
   -webkit-transition: width 500ms;
   -o-transition: width 500ms;
   transition: width 500ms;
@@ -310,7 +321,7 @@
   left: 0;
   width: 100%;
   height: 0;
-  background: #000;
+  background: black;
   -webkit-transition: height 500ms;
   -o-transition: height 500ms;
   transition: height 500ms;
@@ -332,7 +343,7 @@
   left: 0;
   width: 100%;
   height: 0;
-  background: #000;
+  background: black;
   -webkit-transition: height 500ms;
   -o-transition: height 500ms;
   transition: height 500ms;
@@ -436,19 +447,8 @@ Example markup:
   transform: translateX(-100%);
 }
 
-.perspective {
-  -webkit-perspective-origin: 50% 50%;
-  -ms-perspective-origin: 50% 50%;
-  -o-perspective-origin: 50% 50%;
-  perspective-origin: 50% 50%;
-  -webkit-perspective: 2000px;
-  -ms-perspective: 2000px;
-  -o-perspective: 2000px;
-  perspective: 2000px;
-}
-
 .effeckt-button[data-effeckt-type="3d-rotate-success"],
-.effeckt-button[data-effeckt-type="3d-rotate-fail"] {
+.effeckt-button[data-effeckt-type="3d-rotate-error"] {
   -webkit-transition: all 500ms;
   -o-transition: all 500ms;
   transition: all 500ms;
@@ -462,7 +462,7 @@ Example markup:
   backface-visibility: hidden;
 }
 
-.effeckt-button[data-effeckt-type="3d-rotate-fail"]:before {
+.effeckt-button[data-effeckt-type="3d-rotate-error"]:before {
   white-space: nowrap;
   width: 100%;
   height: 100%;
@@ -487,7 +487,7 @@ Example markup:
   backface-visibility: hidden;
 }
 
-.effeckt-button[data-effeckt-type="3d-rotate-fail"][data-loading] {
+.effeckt-button[data-effeckt-type="3d-rotate-error"][data-loading] {
   -webkit-transform-origin: 50% 0%;
   -ms-transform-origin: 50% 0%;
   -o-transform-origin: 50% 0%;
@@ -2622,10 +2622,10 @@ Example markup:
 /* Effect 6: side fall */
 
 .md-effect-6.effeckt-modal-wrap {
-  -webkit-perspective: 1300px;
-  -ms-perspective: 1300px;
-  -o-perspective: 1300px;
-  perspective: 1300px;
+  -webkit-perspective: 600px;
+  -ms-perspective: 600px;
+  -o-perspective: 600px;
+  perspective: 600px;
   -webkit-transform-style: preserve-3d;
   -ms-transform-style: preserve-3d;
   -o-transform-style: preserve-3d;
@@ -2673,9 +2673,9 @@ Example markup:
   -ms-transform: translateY(-100%);
   -o-transform: translateY(-100%);
   transform: translateY(-100%);
-  -webkit-transition: all .3s;
-  -o-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
   opacity: 0;
 }
 
@@ -2690,10 +2690,10 @@ Example markup:
 /* Effect 8: 3D flip horizontal */
 
 .md-effect-8 {
-  -webkit-perspective: 1300px;
-  -ms-perspective: 1300px;
-  -o-perspective: 1300px;
-  perspective: 1300px;
+  -webkit-perspective: 600px;
+  -ms-perspective: 600px;
+  -o-perspective: 600px;
+  perspective: 600px;
   -webkit-transform-style: preserve-3d;
   -ms-transform-style: preserve-3d;
   -o-transform-style: preserve-3d;
@@ -2722,10 +2722,10 @@ Example markup:
 /* Effect 9: 3D flip vertical */
 
 .md-effect-9 {
-  -webkit-perspective: 1300px;
-  -ms-perspective: 1300px;
-  -o-perspective: 1300px;
-  perspective: 1300px;
+  -webkit-perspective: 600px;
+  -ms-perspective: 600px;
+  -o-perspective: 600px;
+  perspective: 600px;
   -webkit-transform-style: preserve-3d;
   -ms-transform-style: preserve-3d;
   -o-transform-style: preserve-3d;
@@ -2754,10 +2754,10 @@ Example markup:
 /* Effect 10: 3D sign */
 
 .md-effect-10 {
-  -webkit-perspective: 1300px;
-  -ms-perspective: 1300px;
-  -o-perspective: 1300px;
-  perspective: 1300px;
+  -webkit-perspective: 600px;
+  -ms-perspective: 600px;
+  -o-perspective: 600px;
+  perspective: 600px;
   -webkit-transform-style: preserve-3d;
   -ms-transform-style: preserve-3d;
   -o-transform-style: preserve-3d;
@@ -2798,11 +2798,11 @@ Example markup:
 
 .effeckt-show.md-effect-12 .effeckt-modal {
   opacity: 1;
-  background: #555;
+  background: #555555;
 }
 
 .effeckt-show.md-effect-12 ~ .effeckt-overlay {
-  background: #555;
+  background: #555555;
 }
 
 .md-effect-12,
@@ -2813,10 +2813,10 @@ Example markup:
 /* Effect 13: 3D slit */
 
 .md-effect-13 {
-  -webkit-perspective: 1300px;
-  -ms-perspective: 1300px;
-  -o-perspective: 1300px;
-  perspective: 1300px;
+  -webkit-perspective: 600px;
+  -ms-perspective: 600px;
+  -o-perspective: 600px;
+  perspective: 600px;
   -webkit-transform-style: preserve-3d;
   -ms-transform-style: preserve-3d;
   -o-transform-style: preserve-3d;
@@ -2900,10 +2900,10 @@ Example markup:
 /* Effect 14:  3D Rotate from bottom */
 
 .md-effect-14 {
-  -webkit-perspective: 1300px;
-  -ms-perspective: 1300px;
-  -o-perspective: 1300px;
-  perspective: 1300px;
+  -webkit-perspective: 600px;
+  -ms-perspective: 600px;
+  -o-perspective: 600px;
+  perspective: 600px;
   -webkit-transform-style: preserve-3d;
   -ms-transform-style: preserve-3d;
   -o-transform-style: preserve-3d;
@@ -2936,10 +2936,10 @@ Example markup:
 /* Effect 15:  3D Rotate in from left */
 
 .md-effect-15 {
-  -webkit-perspective: 1300px;
-  -ms-perspective: 1300px;
-  -o-perspective: 1300px;
-  perspective: 1300px;
+  -webkit-perspective: 600px;
+  -ms-perspective: 600px;
+  -o-perspective: 600px;
+  perspective: 600px;
   -webkit-transform-style: preserve-3d;
   -ms-transform-style: preserve-3d;
   -o-transform-style: preserve-3d;
@@ -3642,6 +3642,112 @@ Example markup:
 .effeckt-off-screen-nav-rotate ~ .effeckt-overlay {
   z-index: 900;
   visibility: visible;
+}
+
+.effeckt-off-screen-nav-from-top {
+  width: 100%;
+  bottom: auto;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+.effeckt-off-screen-nav-from-top.effeckt-off-screen-nav-show {
+  visibility: visible;
+  -webkit-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  -o-transform: translateY(0%);
+  transform: translateY(0%);
+}
+
+.effeckt-off-screen-nav-from-bottom {
+  width: 100%;
+  top: auto;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+  -webkit-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -o-transform: translateY(100%);
+  transform: translateY(100%);
+}
+
+.effeckt-off-screen-nav-from-bottom.effeckt-off-screen-nav-show {
+  visibility: visible;
+  -webkit-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  -o-transform: translateY(0%);
+  transform: translateY(0%);
+}
+
+.effeckt-off-screen-nav-push-from-top {
+  width: 100%;
+  bottom: auto;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+.effeckt-off-screen-nav-push-from-top.effeckt-off-screen-nav-show {
+  visibility: visible;
+  -webkit-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  -o-transform: translateY(0%);
+  transform: translateY(0%);
+}
+
+.effeckt-off-screen-nav-push-from-top.effeckt-off-screen-nav-show ~ [data-effeckt-page] {
+  -webkit-transform: translateY(12rem);
+  -ms-transform: translateY(12rem);
+  -o-transform: translateY(12rem);
+  transform: translateY(12rem);
+}
+
+.effeckt-off-screen-nav-push-from-top ~ [data-effeckt-page] {
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+}
+
+.effeckt-off-screen-nav-push-from-bottom {
+  width: 100%;
+  top: auto;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+  -webkit-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -o-transform: translateY(100%);
+  transform: translateY(100%);
+}
+
+.effeckt-off-screen-nav-push-from-bottom.effeckt-off-screen-nav-show {
+  visibility: visible;
+  -webkit-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  -o-transform: translateY(0%);
+  transform: translateY(0%);
+}
+
+.effeckt-off-screen-nav-push-from-bottom.effeckt-off-screen-nav-show ~ [data-effeckt-page] {
+  -webkit-transform: translateY(-12rem);
+  -ms-transform: translateY(-12rem);
+  -o-transform: translateY(-12rem);
+  transform: translateY(-12rem);
+}
+
+.effeckt-off-screen-nav-push-from-bottom ~ [data-effeckt-page] {
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
 }
 
 [data-effeckt-page] {
@@ -5100,9 +5206,9 @@ Example markup:
   position: relative;
   margin: 0px;
   width: 52px;
-  -webkit-transition: all .3s ease-out;
-  -o-transition: all .3s ease-out;
-  transition: all .3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   -o-transform: scale(1);
@@ -5124,9 +5230,9 @@ Example markup:
   height: 29px;
   position: absolute;
   width: 29px;
-  -webkit-transition: all 0.1s ease-in .1s;
-  -o-transition: all 0.1s ease-in .1s;
-  transition: all 0.1s ease-in .1s;
+  -webkit-transition: all 0.1s ease-in 0.1s;
+  -o-transition: all 0.1s ease-in 0.1s;
+  transition: all 0.1s ease-in 0.1s;
   background: white;
 }
 
@@ -5155,19 +5261,19 @@ Example markup:
   display: block;
   padding: 10px 15px;
   color: #383838;
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
 }
 
 .effeckt-tabs-wrap ul.effeckt-tabs li a.active,
 .effeckt-tabs-wrap ul.effeckt-tabs li a:hover {
-  background-color: #E8E8E8;
+  background-color: #e8e8e8;
 }
 
 .effeckt-tabs-wrap .tabs-container {
   position: relative;
   padding: 10px;
   margin-bottom: 20px;
-  border: 1px solid #DDD;
+  border: 1px solid #dddddd;
   -webkit-transition: all 500ms ease-in-out;
   -o-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
@@ -5342,7 +5448,7 @@ Example markup:
 
 .effeckt-positional-modal-wrap .effeckt-modal {
   padding: 10px;
-  background: #ccc;
+  background: #cccccc;
 }
 
 .effeckt-positional-modal-wrap .effeckt-modal-content {
@@ -5365,7 +5471,7 @@ Example markup:
   width: 0;
   height: 0;
   margin-left: -10px;
-  border-top: 10px solid #ccc;
+  border-top: 10px solid #cccccc;
   border-right: 10px solid transparent;
   border-left: 10px solid transparent;
 }
@@ -5382,7 +5488,7 @@ Example markup:
   width: 0;
   height: 0;
   margin-left: -10px;
-  border-bottom: 10px solid #ccc;
+  border-bottom: 10px solid #cccccc;
   border-right: 10px solid transparent;
   border-left: 10px solid transparent;
 }
