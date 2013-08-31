@@ -31,7 +31,7 @@ var EffecktModals = {
       evt += ' touchstart';
     }
 
-    $(".modal2-button").on(evt, function() {
+    $(".effeckt-modal-button").on(evt, function() {
       self.openModal(this);
     });
 
