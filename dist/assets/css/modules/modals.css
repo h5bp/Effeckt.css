@@ -102,8 +102,7 @@
   opacity: 0; }
 
 .sticky-up {
-  top: 0;
-  transform: translateX(-50%); }
+  top: 0; }
 
 .sticky-up .effeckt-modal {
   transform: translateY(-100%);
