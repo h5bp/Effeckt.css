@@ -11,11 +11,7 @@ var EffecktButtons = {
   bindUIActions: function() {
 
     var self = this,
-        evt  = 'click';
-    
-    if (this.isTouchDevice) {
-      evt += ' touchstart';
-    }
+        evt  = ( this.isTouchDevice ) ? 'touchstart' : 'click';
 
     $('.effeckt-button').on(evt, function(){
       self.showLoader(this);
