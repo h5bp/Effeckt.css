@@ -2111,8 +2111,7 @@ Example markup:
 .effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="bottom"]:hover::before, .effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="bottom"]:hover::after {
   top: 115%; }
 
-.effeckt-ckbox-ios7[type=checkbox],
-.effeckt-rdio-ios7[type=radio] {
+.effeckt-ckbox-ios7[type=checkbox], .effeckt-rdio-ios7[type=radio] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -2125,23 +2124,14 @@ Example markup:
   position: relative;
   margin: 0px;
   width: 52px;
-  -webkit-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  -o-transform: scale(1);
   transform: scale(1);
-  background: white;
-}
+  background: white; }
 
-.effeckt-ckbox-ios7[type=checkbox]:checked,
-.effeckt-rdio-ios7:checked {
-  box-shadow: inset 0px 0px 0px 20px #666666;
-}
+.effeckt-ckbox-ios7[type=checkbox]:checked, .effeckt-rdio-ios7:checked {
+  box-shadow: inset 0px 0px 0px 20px #666666; }
 
-.effeckt-ckbox-ios7[type=checkbox]:after,
-.effeckt-rdio-ios7[type=radio]:after {
+.effeckt-ckbox-ios7[type=checkbox]:after, .effeckt-rdio-ios7[type=radio]:after {
   box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 15px;
   content: '';
@@ -2149,25 +2139,13 @@ Example markup:
   height: 29px;
   position: absolute;
   width: 29px;
-  -webkit-transition: all 0.1s ease-in 0.1s;
-  -o-transition: all 0.1s ease-in 0.1s;
   transition: all 0.1s ease-in 0.1s;
-  background: white;
-}
+  background: white; }
 
-.effeckt-ckbox-ios7[type="checkbox"]:checked:after,
-.effeckt-rdio-ios7[type="radio"]:checked:after {
-  left: 22px;
-}
+.effeckt-ckbox-ios7[type="checkbox"]:checked:after, .effeckt-rdio-ios7[type="radio"]:checked:after {
+  left: 22px; }
 
-
-
-
-
-
-
-.effeckt-ckbox-android[type=checkbox],
-.effeckt-rdio-android[type=radio] {
+.effeckt-ckbox-android[type=checkbox], .effeckt-rdio-android[type=radio] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -2187,17 +2165,13 @@ Example markup:
   -ms-transform: scale(1);
   -o-transform: scale(1);
   transform: scale(1);
-  background: #333;
-}
+  background: #333333; }
 
-.effeckt-ckbox-android[type=checkbox]:checked,
-.effeckt-rdio-android:checked {
-  box-shadow: inset 0px 0px 0px 20px #666666;
-}
+.effeckt-ckbox-android[type=checkbox]:checked, .effeckt-rdio-android:checked {
+  box-shadow: inset 0px 0px 0px 20px #666666; }
 
-.effeckt-ckbox-android[type=checkbox]:after,
-.effeckt-rdio-android[type=radio]:after {
-  box-shadow: 0px 0px 0px 0px ;
+.effeckt-ckbox-android[type=checkbox]:after, .effeckt-rdio-android[type=radio]:after {
+  box-shadow: 0px 0px 0px 0px;
   border-radius: 1px;
   content: '';
   cursor: pointer;
@@ -2207,14 +2181,10 @@ Example markup:
   -webkit-transition: all 0.1s ease-in 0.1s;
   -o-transition: all 0.1s ease-in 0.1s;
   transition: all 0.1s ease-in 0.1s;
-  background: #4d4d4d; 
-}
+  background: #4d4d4d; }
 
-.effeckt-ckbox-android[type="checkbox"]:checked:after,
-.effeckt-rdio-android[type="radio"]:checked:after {
-  left: 43px;
-}
-
+.effeckt-ckbox-android[type="checkbox"]:checked:after, .effeckt-rdio-android[type="radio"]:checked:after {
+  left: 43px; }
 
 .effeckt-tabs-wrap {
   position: relative; }
