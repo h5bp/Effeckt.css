@@ -6,7 +6,7 @@
 .effeckt-list[data-effeckt-type='pop-in'] {
   overflow: hidden;
 }
-.effeckt-list[data-type='pop-in'] .new-item {
+.effeckt-list[data-effeckt-type='pop-in'] .new-item {
   max-height: 0;
   opacity: 0;
   transform: translateX(-300px);

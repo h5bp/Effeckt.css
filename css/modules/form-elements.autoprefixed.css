@@ -47,12 +47,6 @@
   left: 22px;
 }
 
-
-
-
-
-
-
 .effeckt-ckbox-android[type=checkbox],
 .effeckt-rdio-android[type=radio] {
   -webkit-appearance: none;
@@ -74,7 +68,7 @@
   -ms-transform: scale(1);
   -o-transform: scale(1);
   transform: scale(1);
-  background: #333;
+  background: #333333;
 }
 
 .effeckt-ckbox-android[type=checkbox]:checked,
@@ -84,7 +78,7 @@
 
 .effeckt-ckbox-android[type=checkbox]:after,
 .effeckt-rdio-android[type=radio]:after {
-  box-shadow: 0px 0px 0px 0px ;
+  box-shadow: 0px 0px 0px 0px;
   border-radius: 1px;
   content: '';
   cursor: pointer;
@@ -94,7 +88,7 @@
   -webkit-transition: all 0.1s ease-in 0.1s;
   -o-transition: all 0.1s ease-in 0.1s;
   transition: all 0.1s ease-in 0.1s;
-  background: #4d4d4d; 
+  background: #4d4d4d;
 }
 
 .effeckt-ckbox-android[type="checkbox"]:checked:after,
