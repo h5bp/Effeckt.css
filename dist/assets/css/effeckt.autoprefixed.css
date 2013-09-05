@@ -6062,11 +6062,6 @@ Example markup:
 .effeckt-tooltip[data-effeckt-tooltip-type="bubble"]::after {
   content: attr(data-effeckt-tooltip-text);
   position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
   border-radius: 10px;
   background: black;
   color: white;
@@ -6081,9 +6076,20 @@ Example markup:
   content: "";
   width: 0;
   height: 0;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
   position: absolute;
+}
+
+.effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="top"]::after,
+.effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="bottom"]::after {
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  left: 50%;
+}
+
+.effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="top"]:before,
+.effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="bottom"]:before {
   left: 50%;
   margin-left: -5px;
 }
@@ -6095,6 +6101,8 @@ Example markup:
 
 .effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="top"]::before {
   border-top: 5px solid black;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
   margin-bottom: -4px;
 }
 
@@ -6110,12 +6118,60 @@ Example markup:
 
 .effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="bottom"]::before {
   border-bottom: 5px solid black;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
   margin-top: -4px;
 }
 
 .effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="bottom"]:hover::before,
 .effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="bottom"]:hover::after {
   top: 115%;
+}
+
+.effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="right"]::after,
+.effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="right"]:before,
+.effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="left"]::after,
+.effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="left"]:before {
+  top: 45%;
+  -webkit-transform: translateY(-45%);
+  -ms-transform: translateY(-45%);
+  -o-transform: translateY(-45%);
+  transform: translateY(-45%);
+  margin-top: 2px;
+}
+
+.effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="right"]::after,
+.effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="right"]::before {
+  left: 115%;
+}
+
+.effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="right"]::before {
+  border-right: 5px solid black;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  margin-left: -4px;
+}
+
+.effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="right"]:hover::before,
+.effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="right"]:hover::after {
+  left: 105%;
+}
+
+.effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="left"]::after,
+.effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="left"]::before {
+  right: 115%;
+}
+
+.effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="left"]::before {
+  border-left: 5px solid black;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  margin-right: -4px;
+}
+
+.effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="left"]:hover::before,
+.effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="left"]:hover::after {
+  right: 105%;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
