@@ -3,7 +3,12 @@
 // Notes: Only works in WebKit for now
 // is this acceptable to our goals?
 
-.effeckt-ckbox-ios7[type=checkbox],
+// Fallback
+// Apply this style only on WebKit
+// To prevent ugly styles on non-WebKit Browser
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  
+  .effeckt-ckbox-ios7[type=checkbox],
 .effeckt-rdio-ios7[type=radio] {
 
   // Not caught by autoprefixer
@@ -98,4 +103,6 @@
 .effeckt-ckbox-android[type="checkbox"]:checked:after,
 .effeckt-rdio-android[type="radio"]:checked:after {
   left: 43px;
+}
+
 }
