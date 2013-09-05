@@ -24,8 +24,6 @@
   &::after { // text of tooltip
     content: attr(data-effeckt-tooltip-text);
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%); // horizontal centering
     border-radius: 10px;
     background: $effeckt-tooltip-background;
     color: $effeckt-tooltip-forground;
@@ -41,9 +39,18 @@
     content: "";
     width: 0;
     height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
     position: absolute;
+  }
+}
+
+// bubble top and bottom
+.effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="top"],
+.effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="bottom"] {
+  &::after {
+    transform: translateX(-50%); // horizontal centering
+    left:50%;
+  }
+  &:before {
     left: 50%;
     margin-left: -5px;
   }
@@ -51,12 +58,15 @@
 
 // bubble orientation top
 .effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="top"] {
+
   &::after, &::before {
     bottom: 125%;
   }
 
   &::before {
     border-top: 5px solid $effeckt-tooltip-background;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
     margin-bottom: -4px; // one less pixel to prevent occational 1px gap
   }
 
@@ -67,15 +77,65 @@
 // bubble orientation bottom
 .effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="bottom"] {
   &::after, &::before {
-   top: 125%;
+    top: 125%;
   }
 
   &::before {
-   border-bottom: 5px solid $effeckt-tooltip-background;
-   margin-top: -4px; // one less pixel to prevent occational 1px gap
+    border-bottom: 5px solid $effeckt-tooltip-background;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-top: -4px; // one less pixel to prevent occational 1px gap
   }
 
   &:hover::before, &:hover::after {
-   top: 115%;
+    top: 115%;
+  }
+}
+
+// bubble top and bottom
+.effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="right"],
+.effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="left"] {
+  &::after, &:before {
+    top:45%;
+    transform: translateY(-45%); // half font-size size
+    margin-top:2px;
+  }
+}
+
+// bubble orientation right
+.effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="right"] {
+
+  &::after, &::before {
+    left: 115%;
+  }
+
+  &::before {
+    border-right: 5px solid $effeckt-tooltip-background;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    margin-left: -4px; // one less pixel to prevent occational 1px gap
+  }
+
+  &:hover::before, &:hover::after {
+    left: 105%;
+  }
+}
+
+// bubble orientation left
+.effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="left"] {
+
+  &::after, &::before {
+    right: 115%;
+  }
+
+  &::before {
+    border-left: 5px solid $effeckt-tooltip-background;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    margin-right: -4px; // one less pixel to prevent occational 1px gap
+  }
+
+  &:hover::before, &:hover::after {
+    right: 105%;
   }
 }
