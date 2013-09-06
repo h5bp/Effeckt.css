@@ -116,6 +116,27 @@
   opacity: 1;
 }
 
+// Effect: Slide from the left
+.slide-in-left .effeckt-modal {
+  transform: translateX(-30%);
+  opacity: 0;
+  transition: $effeckt-modal-transition-duration cubic-bezier(0.25, 0.5, 0.5, 0.9);
+}
+.effeckt-show.slide-in-left .effeckt-modal {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+// Effect: Slide from the top
+.slide-in-top .effeckt-modal {
+  transform: translateY(-30%);
+  opacity: 0;
+  transition: $effeckt-modal-transition-duration;
+}
+.effeckt-show.slide-in-top .effeckt-modal {
+  transform: translateY(0);
+  opacity: 1;
+}
 
 // Effect: Slide from the bottom
 .slide-in-bottom .effeckt-modal {
@@ -449,7 +470,7 @@
 }
 
 
-// Effect: From the top to bottom
+// Effect: From top to bottom
 .from-top-to-bottom .effeckt-modal {
   transition: $effeckt-modal-transition-duration ease-in-out;
   transform: translateY(-100%);
@@ -465,7 +486,7 @@
 }
 
 
-// Effect: From the top to top
+// Effect: From top to top
 .from-top-to-top .effeckt-modal {
   transition: $effeckt-modal-transition-duration ease-in-out;
   opacity: 0;
@@ -478,6 +499,158 @@
 .effeckt-hide.from-top-to-top .effeckt-modal {
   opacity: 0;
   transform: translateY(-100%);
+}
+
+// Effect: From bottom to top
+.from-bottom-to-top .effeckt-modal {
+  transition: $effeckt-modal-transition-duration ease-in-out;
+  transform: translateY(100%);
+  opacity: 0;
+}
+.effeckt-show.from-bottom-to-top .effeckt-modal {
+  transform: translateY(0);
+  opacity: 1;
+}
+.effeckt-hide.from-bottom-to-top .effeckt-modal {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+
+// Effect: From bottom to bottom
+.from-bottom-to-bottom .effeckt-modal {
+  transition: $effeckt-modal-transition-duration ease-in-out;
+  opacity: 0;
+  transform: translateY(100%);
+}
+.effeckt-show.from-bottom-to-bottom .effeckt-modal {
+  opacity: 1;
+  transform: translateY(0);
+}
+.effeckt-hide.from-bottom-to-bottom .effeckt-modal {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+// Effect: From right to left
+.from-right-to-left .effeckt-modal {
+  transition: $effeckt-modal-transition-duration ease-in-out;
+  transform: translateX(100%);
+  opacity: 0;
+}
+.effeckt-show.from-right-to-left .effeckt-modal {
+  transform: translateX(0);
+  opacity: 1;
+}
+.effeckt-hide.from-right-to-left .effeckt-modal {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+
+// Effect: From right to right
+.from-right-to-right .effeckt-modal {
+  transition: $effeckt-modal-transition-duration ease-in-out;
+  opacity: 0;
+  transform: translateX(100%);
+}
+.effeckt-show.from-right-to-right .effeckt-modal {
+  opacity: 1;
+  transform: translateX(0);
+}
+.effeckt-hide.from-right-to-right .effeckt-modal {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+// Effect: From left to right
+.from-left-to-right .effeckt-modal {
+  transition: $effeckt-modal-transition-duration ease-in-out;
+  transform: translateX(-100%);
+  opacity: 0;
+}
+.effeckt-show.from-left-to-right .effeckt-modal {
+  transform: translateX(0);
+  opacity: 1;
+}
+.effeckt-hide.from-left-to-right .effeckt-modal {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+// Effect: From left to left
+.from-left-to-left .effeckt-modal {
+  transition: $effeckt-modal-transition-duration ease-in-out;
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.effeckt-show.from-left-to-left .effeckt-modal {
+  opacity: 1;
+  transform: translateX(0);
+}
+.effeckt-hide.from-left-to-left .effeckt-modal {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+// Effect: From above to below
+.from-above-to-below .effeckt-modal {
+  transition: $effeckt-modal-transition-duration ease-in-out;
+  transform: scale(1.5);
+  opacity: 0;
+}
+.effeckt-show.from-above-to-below .effeckt-modal {
+  transform: scale(1);
+  opacity: 1;
+}
+.effeckt-hide.from-above-to-below .effeckt-modal {
+  transform: scale(0.5);
+  opacity: 0;
+}
+
+// Effect: From above to above
+.from-above-to-above .effeckt-modal {
+  transition: $effeckt-modal-transition-duration ease-in-out;
+  opacity: 0;
+  transform: scale(1.5);
+}
+.effeckt-show.from-above-to-above .effeckt-modal {
+  opacity: 1;
+  transform: scale(1);
+}
+.effeckt-hide.from-above-to-above .effeckt-modal {
+  opacity: 0;
+  transform: scale(1.5);
+}
+
+// Effect: From below to above
+.from-below-to-above .effeckt-modal {
+  transition: $effeckt-modal-transition-duration ease-in-out;
+  transform: scale(0.5);
+  opacity: 0;
+}
+.effeckt-show.from-below-to-above .effeckt-modal {
+  transform: scale(1);
+  opacity: 1;
+}
+.effeckt-hide.from-below-to-above .effeckt-modal {
+  transform: scale(1.5);
+  opacity: 0;
+}
+
+// Effect: From below to below
+.from-below-to-below .effeckt-modal {
+  transition: $effeckt-modal-transition-duration ease-in-out;
+  opacity: 0;
+  transform: scale(0.5);
+}
+.effeckt-show.from-below-to-below .effeckt-modal {
+  opacity: 1;
+  transform: scale(1);
+}
+.effeckt-hide.from-below-to-below .effeckt-modal {
+  opacity: 0;
+  transform: scale(0.5);
 }
 
 // Effect: Shake
