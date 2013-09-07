@@ -1700,28 +1700,27 @@ Example markup:
     transition: width 500ms;
     max-width: none; }
 
-.effeckt-off-screen-nav-rotate {
+.effeckt-off-screen-nav-rotate-left {
   transform-origin: 100% 50%;
   transition: 500ms;
-  transform: translateX(-100%) translateX(6px) scale(1.01) rotateY(-30deg); }
-  .effeckt-off-screen-nav-rotate.effeckt-off-screen-nav-show {
+  transform: translateX(-100%) scale(1.01) rotateY(-30deg); }
+  .effeckt-off-screen-nav-rotate-left ~ [data-effeckt-page] {
+    transform-origin: 0 50%;
+    transition: 0.5s; }
+  .effeckt-off-screen-nav-rotate-left ~ .effeckt-overlay {
+    z-index: 900;
+    visibility: visible; }
+  .effeckt-off-screen-nav-rotate-left.effeckt-off-screen-nav-show {
     transform: none; }
-    .effeckt-off-screen-nav-rotate.effeckt-off-screen-nav-show ~ [data-effeckt-page] {
+    .effeckt-off-screen-nav-rotate-left.effeckt-off-screen-nav-show ~ [data-effeckt-page] {
       transform: translateX(260px) rotateY(15deg);
-      height: 200%;
       overflow: hidden; }
-    .effeckt-off-screen-nav-rotate.effeckt-off-screen-nav-show ~ [data-effeckt-page] .off-screen-nav-cover {
+    .effeckt-off-screen-nav-rotate-left.effeckt-off-screen-nav-show ~ [data-effeckt-page] .off-screen-nav-cover {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%; }
-  .effeckt-off-screen-nav-rotate ~ [data-effeckt-page] {
-    transform-origin: 0 50%;
-    transition: 0.5s; }
-  .effeckt-off-screen-nav-rotate ~ .effeckt-overlay {
-    z-index: 900;
-    visibility: visible; }
 
 .effeckt-off-screen-nav-top-overlay {
   width: 100%;
@@ -1842,6 +1841,30 @@ Example markup:
       transform: translateY(-12rem); }
   .effeckt-off-screen-nav-push-bottom ~ [data-effeckt-page] {
     transition: 500ms; }
+
+.effeckt-off-screen-nav-rotate-right {
+  left: auto;
+  right: 0;
+  transform-origin: 100% 50%;
+  transition: 500ms;
+  transform: rotateY(30deg) translateX(100%) translateX(-2px) scale(1.01); }
+  .effeckt-off-screen-nav-rotate-right ~ [data-effeckt-page] {
+    transform-origin: 100% 50%;
+    transition: 0.5s; }
+  .effeckt-off-screen-nav-rotate-right ~ .effeckt-overlay {
+    z-index: 900;
+    visibility: visible; }
+  .effeckt-off-screen-nav-rotate-right.effeckt-off-screen-nav-show {
+    transform: none; }
+    .effeckt-off-screen-nav-rotate-right.effeckt-off-screen-nav-show ~ [data-effeckt-page] {
+      transform: translateX(-260px) rotateY(-15deg);
+      overflow: hidden; }
+    .effeckt-off-screen-nav-rotate-right.effeckt-off-screen-nav-show ~ [data-effeckt-page] .off-screen-nav-cover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
 
 [data-effeckt-page] {
   position: relative;
