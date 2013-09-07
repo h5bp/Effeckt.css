@@ -62,7 +62,7 @@ var EffecktModals = {
       }, 50);
     }
 
-    this.modalWrap.data("effeckt-hide-class", button.data("effeckt-hide-class"));
+    this.modalWrap.data("effeckt-needs-hide-class", button.data("effeckt-needs-hide-class"));
 
     var evt = EffecktDemos.animationEndEventName + ' ' + EffecktDemos.transitionEndEventName;
     this.overlay.on(evt, function () {
@@ -87,7 +87,7 @@ var EffecktModals = {
     //Not the cleanest way
     this.modalWrap.removeClass("effeckt-show");
 
-    if( this.modalWrap.data("effeckt-hide-class") ){
+    if( this.modalWrap.data("effeckt-needs-hide-class") ){
       this.modalWrap.addClass("effeckt-hide");
     }
   },
@@ -103,7 +103,7 @@ var EffecktModals = {
   hideModal: function() {
 
     // Only remove effeckt-hide class if it's any
-    if( this.modalWrap.data("effeckt-hide-class") ){
+    if( this.modalWrap.data("effeckt-needs-hide-class") ){
       this.modalWrap.removeClass("effeckt-hide");
     }
 

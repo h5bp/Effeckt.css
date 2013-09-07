@@ -159,7 +159,7 @@
 .newspaper .effeckt-modal {
   transform: scale(0.5) rotate(720deg);
   opacity: 0;
-  transition: 0.5s;
+  transition: $effeckt-modal-transition-duration;
 }
 .effeckt-show.newspaper .effeckt-modal {
   transform: scale(1) rotate(0deg);
@@ -194,7 +194,7 @@
 }
 .sticky-up .effeckt-modal {
   transform: translateY(-100%);
-  transition: all .3s;
+  transition: all $effeckt-modal-transition-duration;
   opacity: 0;
 }
 .effeckt-show.sticky-up .effeckt-modal {
@@ -386,27 +386,27 @@
 }
 .effeckt-show.make-way ~ .effeckt-overlay {
   background: rgba(black, 0.2);
-  transition: 0.5s;
+  transition: $effeckt-modal-transition-duration;
 }
 .effeckt-show.make-way ~ [data-effeckt-page],
 .effeckt-show.make-way ~ .effeckt-overlay {
   transform-style: preserve-3d;
   transform-origin: 0% 50%;
-  animation: makeWay 0.5s forwards ease-in;
+  animation: makeWay $effeckt-modal-transition-duration forwards ease-in;
 }
 .make-way .effeckt-modal {
   transform: translateX(200%);
   opacity: 0;
-  transition: 0.5s 0.1s;
+  transition: $effeckt-modal-transition-duration;
 }
 .effeckt-show.make-way .effeckt-modal {
   transform: translateX(0);
   opacity: 1;
-  transition: 0.5s 0.1s;
+  transition: $effeckt-modal-transition-duration;
 }
 .effeckt-hide.make-way .effeckt-modal {
   opacity: 0;
-  transition: 0.5s 0.1s;
+  transition: $effeckt-modal-transition-duration;
 }
 
 @keyframes makeWay {
@@ -417,6 +417,28 @@
   100% {
     transform: translateZ(-200px);
   }
+}
+
+// Effect: Deep Content
+.deep-content .effeckt-modal {
+  transform: scale(0.7);
+  opacity: 0;
+  transition: $effeckt-modal-transition-duration;
+}
+.deep-content ~ [data-effeckt-page] {
+  transform: scale(1);
+  transition: $effeckt-modal-transition-duration;
+}
+
+.effeckt-show.deep-content ~ [data-effeckt-page] {
+  height: 100%;
+  overflow: hidden;
+  transform: scale(0.85);
+  filter: blur(3px);
+}
+.effeckt-show.deep-content .effeckt-modal {
+  transform: scale(1.1);
+  opacity: 1;
 }
 
 
@@ -635,7 +657,7 @@
 }
 .effeckt-show.shake .effeckt-modal {
   opacity: 1;
-  animation: modalShake 1s forwards ease;
+  animation: modalShake $effeckt-modal-transition-duration*2 forwards ease;
 }
 .effeckt-hide.shake .effeckt-modal {
   opacity: 0;
@@ -654,7 +676,7 @@
 }
 .effeckt-show.bounce .effeckt-modal {
   opacity: 1;
-  animation: modalBounce 1s forwards ease;
+  animation: modalBounce $effeckt-modal-transition-duration*2 forwards ease;
 }
 .effeckt-hide.bounce .effeckt-modal {
   opacity: 0;
@@ -673,7 +695,7 @@
 }
 .effeckt-show.pulse .effeckt-modal {
   opacity: 1;
-  animation: modalPulse 1s forwards ease;
+  animation: modalPulse $effeckt-modal-transition-duration*2 forwards ease;
 }
 .effeckt-hide.pulse .effeckt-modal {
   opacity: 0;
@@ -691,7 +713,7 @@
 }
 .effeckt-show.wobble .effeckt-modal {
   opacity: 1;
-  animation: modalWobble 1s forwards ease;
+  animation: modalWobble $effeckt-modal-transition-duration*2 forwards ease;
 }
 .effeckt-hide.wobble .effeckt-modal {
   opacity: 0;
@@ -715,7 +737,7 @@
 }
 .effeckt-show.swing .effeckt-modal {
   opacity: 1;
-  animation: modalSwing 1s forwards ease;
+  animation: modalSwing $effeckt-modal-transition-duration*2 forwards ease;
 }
 .effeckt-hide.swing .effeckt-modal {
   opacity: 0;
@@ -736,7 +758,7 @@
 }
 .effeckt-show.tada .effeckt-modal {
   opacity: 1;
-  animation: modalTada 1s forwards ease;
+  animation: modalTada $effeckt-modal-transition-duration*2 forwards ease;
 }
 .effeckt-hide.tada .effeckt-modal {
   opacity: 0;
