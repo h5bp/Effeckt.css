@@ -39,21 +39,21 @@
 /*
   Individual modal styles with animations/transitions
 */
-.from-above .effeckt-modal {
+.from-above .effeckt-modal, .from-above-to-above .effeckt-modal {
   transform: scale(1.5);
   opacity: 0;
   transition: 500ms; }
 
-.effeckt-show.from-above .effeckt-modal {
+.effeckt-show.from-above .effeckt-modal, .effeckt-show.from-above-to-above .effeckt-modal {
   transform: scale(1);
   opacity: 1; }
 
-.from-below .effeckt-modal {
+.from-below .effeckt-modal, .from-below-to-below .effeckt-modal {
   transform: scale(0.5);
   opacity: 0;
   transition: 500ms; }
 
-.effeckt-show.from-below .effeckt-modal {
+.effeckt-show.from-below .effeckt-modal, .effeckt-show.from-below-to-below .effeckt-modal {
   transform: scale(1);
   opacity: 1; }
 
@@ -475,19 +475,6 @@
   transform: scale(0.5);
   opacity: 0; }
 
-.from-above-to-above .effeckt-modal {
-  transition: 500ms ease-in-out;
-  opacity: 0;
-  transform: scale(1.5); }
-
-.effeckt-show.from-above-to-above .effeckt-modal {
-  opacity: 1;
-  transform: scale(1); }
-
-.effeckt-hide.from-above-to-above .effeckt-modal {
-  opacity: 0;
-  transform: scale(1.5); }
-
 .from-below-to-above .effeckt-modal {
   transition: 500ms ease-in-out;
   transform: scale(0.5);
@@ -500,19 +487,6 @@
 .effeckt-hide.from-below-to-above .effeckt-modal {
   transform: scale(1.5);
   opacity: 0; }
-
-.from-below-to-below .effeckt-modal {
-  transition: 500ms ease-in-out;
-  opacity: 0;
-  transform: scale(0.5); }
-
-.effeckt-show.from-below-to-below .effeckt-modal {
-  opacity: 1;
-  transform: scale(1); }
-
-.effeckt-hide.from-below-to-below .effeckt-modal {
-  opacity: 0;
-  transform: scale(0.5); }
 
 .shake .effeckt-modal {
   transition: 500ms ease-in-out;

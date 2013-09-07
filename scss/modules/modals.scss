@@ -82,28 +82,33 @@
 */
 
 // Effect: From Above
-.from-above .effeckt-modal {
+// Effect: From Above to above
+.from-above .effeckt-modal,
+.from-above-to-above .effeckt-modal {
   transform: scale(1.5);
   opacity: 0;
   transition: $effeckt-modal-transition-duration;
 }
-.effeckt-show.from-above .effeckt-modal {
+.effeckt-show.from-above .effeckt-modal,
+.effeckt-show.from-above-to-above .effeckt-modal {
   transform: scale(1);
   opacity: 1;
 }
 
 
 // Effect: From below
-.from-below .effeckt-modal {
+// Effect: From below to below
+.from-below .effeckt-modal,
+.from-below-to-below .effeckt-modal {
   transform: scale(0.5);
   opacity: 0;
   transition: $effeckt-modal-transition-duration;
 }
-.effeckt-show.from-below .effeckt-modal {
+.effeckt-show.from-below .effeckt-modal,
+.effeckt-show.from-below-to-below .effeckt-modal {
   transform: scale(1);
   opacity: 1;
 }
-
 
 // Effect: Slide from the right
 .slide-in-right .effeckt-modal {
@@ -608,21 +613,6 @@
   opacity: 0;
 }
 
-// Effect: From above to above
-.from-above-to-above .effeckt-modal {
-  transition: $effeckt-modal-transition-duration ease-in-out;
-  opacity: 0;
-  transform: scale(1.5);
-}
-.effeckt-show.from-above-to-above .effeckt-modal {
-  opacity: 1;
-  transform: scale(1);
-}
-.effeckt-hide.from-above-to-above .effeckt-modal {
-  opacity: 0;
-  transform: scale(1.5);
-}
-
 // Effect: From below to above
 .from-below-to-above .effeckt-modal {
   transition: $effeckt-modal-transition-duration ease-in-out;
@@ -636,21 +626,6 @@
 .effeckt-hide.from-below-to-above .effeckt-modal {
   transform: scale(1.5);
   opacity: 0;
-}
-
-// Effect: From below to below
-.from-below-to-below .effeckt-modal {
-  transition: $effeckt-modal-transition-duration ease-in-out;
-  opacity: 0;
-  transform: scale(0.5);
-}
-.effeckt-show.from-below-to-below .effeckt-modal {
-  opacity: 1;
-  transform: scale(1);
-}
-.effeckt-hide.from-below-to-below .effeckt-modal {
-  opacity: 0;
-  transform: scale(0.5);
 }
 
 // Effect: Shake

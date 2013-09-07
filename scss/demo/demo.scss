@@ -277,6 +277,7 @@ h1 span:nth-of-type(11) {
   margin: 0 0 2rem 0;
   &:nth-child(even) {
     clear: both;
+    padding-right: 20px;
   }
 }
 

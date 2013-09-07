@@ -420,6 +420,7 @@ h1 span:nth-of-type(11) {
 
 .effeckt-list-wrap:nth-child(even) {
   clear: both;
+  padding-right: 20px;
 }
 
 .effeckt-demo-list-scroll > ul {

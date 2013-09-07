@@ -231,7 +231,8 @@ h1 span:nth-of-type(11) {
   float: left;
   margin: 0 0 2rem 0; }
   .effeckt-list-wrap:nth-child(even) {
-    clear: both; }
+    clear: both;
+    padding-right: 20px; }
 
 .effeckt-demo-list-scroll > ul {
   width: 32%;

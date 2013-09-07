@@ -23,7 +23,7 @@
 
 .effeckt-positional-modal-wrap {
 
-  &[data-effeckt-positional-modal-type="above"] {
+  &[data-effeckt-position="above"] {
     margin-top: -15px;
     .effeckt-modal {
       &:before {
@@ -41,7 +41,7 @@
     }
   }
 
-  &[data-effeckt-positional-modal-type="below"] {
+  &[data-effeckt-position="below"] {
     margin-top: 15px;
     .effeckt-modal {
       &:before {

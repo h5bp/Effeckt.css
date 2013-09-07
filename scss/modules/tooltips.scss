@@ -20,7 +20,7 @@
 }
 
 // tooltip bubble
-.effeckt-tooltip[data-effeckt-tooltip-type="bubble"]{
+.effeckt-tooltip[data-effeckt-type="bubble"]{
   &::after { // text of tooltip
     content: attr(data-effeckt-tooltip-text);
     position: absolute;
@@ -44,8 +44,8 @@
 }
 
 // bubble top and bottom
-.effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="top"],
-.effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="bottom"] {
+.effeckt-tooltip[data-effeckt-type="bubble"][data-effeckt-position="top"],
+.effeckt-tooltip[data-effeckt-type="bubble"][data-effeckt-position="bottom"] {
   &::after {
     transform: translateX(-50%); // horizontal centering
     left:50%;
@@ -57,7 +57,7 @@
 }
 
 // bubble orientation top
-.effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="top"] {
+.effeckt-tooltip[data-effeckt-type="bubble"][data-effeckt-position="top"] {
 
   &::after, &::before {
     bottom: 125%;
@@ -75,7 +75,7 @@
   }
 }
 // bubble orientation bottom
-.effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="bottom"] {
+.effeckt-tooltip[data-effeckt-type="bubble"][data-effeckt-position="bottom"] {
   &::after, &::before {
     top: 125%;
   }
@@ -93,8 +93,8 @@
 }
 
 // bubble top and bottom
-.effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="right"],
-.effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="left"] {
+.effeckt-tooltip[data-effeckt-type="bubble"][data-effeckt-position="right"],
+.effeckt-tooltip[data-effeckt-type="bubble"][data-effeckt-position="left"] {
   &::after, &:before {
     top:45%;
     transform: translateY(-45%); // half font-size size
@@ -103,7 +103,7 @@
 }
 
 // bubble orientation right
-.effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="right"] {
+.effeckt-tooltip[data-effeckt-type="bubble"][data-effeckt-position="right"] {
 
   &::after, &::before {
     left: 115%;
@@ -122,7 +122,7 @@
 }
 
 // bubble orientation left
-.effeckt-tooltip[data-effeckt-tooltip-type="bubble"][data-effeckt-tooltip-position="left"] {
+.effeckt-tooltip[data-effeckt-type="bubble"][data-effeckt-position="left"] {
 
   &::after, &::before {
     right: 115%;
