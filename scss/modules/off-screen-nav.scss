@@ -176,21 +176,28 @@
   }
 }
 
-
-// 9 Rotate
-.effeckt-off-screen-nav-rotate {
+// 9 Rotate from Left
+.effeckt-off-screen-nav-rotate-left {
   transform-origin: 100% 50%;
   transition: $effeckt-off-screen-navigation-transition-duration;
-  transform: translateX(-100%) translateX(6px) scale(1.01) rotateY(-30deg);
+  transform: translateX(-100%) scale(1.01) rotateY(-30deg);
+
+  ~ [data-effeckt-page] {
+    transform-origin: 0 50%;
+    transition: 0.5s;
+  }
+
+  ~ .effeckt-overlay {
+    z-index:900;
+    visibility: visible;
+  }
 
   &.effeckt-off-screen-nav-show {
     transform: none;
 
     ~ [data-effeckt-page] {
       transform: translateX(260px) rotateY(15deg);
-      // This make the view bigger so when it rotates doesn't look cutted on bottom
-      // But NEED to do the same on top.
-      height: 200%;
+      
       // Prevent scrolling
       overflow: hidden;
     }
@@ -204,16 +211,6 @@
       height: 100%;
     }
 
-  }
-
-  ~ [data-effeckt-page] {
-    transform-origin: 0 50%;
-    transition: 0.5s;
-  }
-
-  ~ .effeckt-overlay {
-    z-index:900;
-    visibility: visible;
   }
 }
 
@@ -338,5 +335,45 @@
 
   ~ [data-effeckt-page] {
     transition: $effeckt-off-screen-navigation-transition-duration;
+  }
+}
+
+// 16 Rotate from Right
+.effeckt-off-screen-nav-rotate-right {
+  left: auto;
+  right: 0;
+  transform-origin: 100% 50%;
+  transition: $effeckt-off-screen-navigation-transition-duration;
+  transform: rotateY(30deg) translateX(100%) translateX(-2px) scale(1.01);
+
+  ~ [data-effeckt-page] {
+    transform-origin: 100% 50%;
+    transition: 0.5s;
+  }
+
+  ~ .effeckt-overlay {
+    z-index:900;
+    visibility: visible;
+  }
+
+  &.effeckt-off-screen-nav-show {
+    transform: none;
+
+    ~ [data-effeckt-page] {
+      transform: translateX(-260px) rotateY(-15deg);
+      
+      // Prevent scrolling
+      overflow: hidden;
+    }
+
+    // dont nest > 3 levels deep
+    ~ [data-effeckt-page] .off-screen-nav-cover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
   }
 }
