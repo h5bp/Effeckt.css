@@ -31,7 +31,7 @@ var EffecktOffScreenNav = {
         self = this;
 
     // Show
-    if (!this.nav.hasClass("effeckt-off-screen-nav-show")) {
+    if (!this.nav.hasClass("effeckt-show")) {
 
       this.nav.addClass(type);
       this.closeButton.data("effeckt-type", type);
@@ -40,13 +40,13 @@ var EffecktOffScreenNav = {
         $("html").addClass("md-perspective");
       }
 
-      if (button.data("effeckt-hide")) {
-        this.nav.data("effeckt-hide", button.data("effeckt-hide"));
+      if (button.data("effeckt-needs-hide-class")) {
+        this.nav.data("effeckt-needs-hide-class", button.data("effeckt-needs-hide-class"));
       }
 
       setTimeout(function() {
 
-        self.nav.addClass("effeckt-off-screen-nav-show");
+        self.nav.addClass("effeckt-show");
       }, 500);
 
     // Hide
@@ -60,10 +60,10 @@ var EffecktOffScreenNav = {
         self.hideNav();
       });
 
-      this.nav.removeClass("effeckt-off-screen-nav-show");
+      this.nav.removeClass("effeckt-show");
       
-      if( this.nav.data("effeckt-hide") ){
-        this.nav.addClass("effeckt-off-screen-nav-hide");
+      if( this.nav.data("effeckt-needs-hide-class") ){
+        this.nav.addClass("effeckt-hide");
       }
 
     }    
@@ -75,8 +75,8 @@ var EffecktOffScreenNav = {
     var self = this;
 
     self.nav.removeClass(self.closeButton.data("effeckt-type"));
-    self.nav.removeClass("effeckt-off-screen-nav-hide");
-    self.nav.removeData("effeckt-hide");
+    self.nav.removeClass("effeckt-hide");
+    self.nav.removeData("effeckt-needs-hide-class");
 
     // WEIRD BUG
     // Have to trigger redraw or it sometimes leaves
