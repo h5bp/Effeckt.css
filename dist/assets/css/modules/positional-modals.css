@@ -10,9 +10,9 @@
   .effeckt-positional-modal-wrap.effeckt-front {
     z-index: 20; }
 
-.effeckt-positional-modal-wrap[data-effeckt-positional-modal-type="above"] {
+.effeckt-positional-modal-wrap[data-effeckt-position="above"] {
   margin-top: -15px; }
-  .effeckt-positional-modal-wrap[data-effeckt-positional-modal-type="above"] .effeckt-modal:before {
+  .effeckt-positional-modal-wrap[data-effeckt-position="above"] .effeckt-modal:before {
     content: "";
     position: absolute;
     top: 100%;
@@ -23,9 +23,9 @@
     border-top: 10px solid #cccccc;
     border-right: 10px solid transparent;
     border-left: 10px solid transparent; }
-.effeckt-positional-modal-wrap[data-effeckt-positional-modal-type="below"] {
+.effeckt-positional-modal-wrap[data-effeckt-position="below"] {
   margin-top: 15px; }
-  .effeckt-positional-modal-wrap[data-effeckt-positional-modal-type="below"] .effeckt-modal:before {
+  .effeckt-positional-modal-wrap[data-effeckt-position="below"] .effeckt-modal:before {
     content: "";
     position: absolute;
     bottom: 100%;
