@@ -37,7 +37,6 @@ var EffecktPositionalModals = {
           'width': $el.outerWidth(),
           'height': $el.outerHeight()
         },
-
         // This only work with page transition
         scrollTop = $('.effeckt-page-active').scrollTop();
 
@@ -52,21 +51,42 @@ var EffecktPositionalModals = {
 
     // append to dom, add to list
     this.add($el, modal);
+
+    // TODO: check if modal window is outside the view.
+    // If it's outside switch position
     
     // change based on position
-    if (position == 'above') {
-      modal.css({
-        'top': (buttonPosition.top - modal.outerHeight() + scrollTop ),
-        'left': buttonPosition.left - (modal.outerWidth()/2) + ($el.outerWidth()/2)
-      });
-    } else if (position == 'below') {
-      modal.css({
-        'top': (buttonPosition.top + buttonSize.height + scrollTop),
-        'left': buttonPosition.left - (modal.outerWidth()/2) + ($el.outerWidth()/2)
-      });
-    }
+    switch ( position ) {
 
-    
+      case 'below':
+        modal.css({
+          'top': buttonPosition.top + buttonSize.height + scrollTop,
+          'left': buttonPosition.left - (modal.outerWidth()/2) + buttonSize.width/2
+        });
+        break;
+
+      case 'right':
+        modal.css({
+          'top': buttonPosition.top - (modal.outerHeight()/2) + scrollTop + (buttonSize.height/2),
+          'left': buttonPosition.left + buttonSize.width
+        });
+        break;
+
+      case 'left':
+        modal.css({
+          'top': buttonPosition.top - (modal.outerHeight()/2) + scrollTop + (buttonSize.height/2),
+          'left': buttonPosition.left - (modal.outerWidth())
+        });
+        break;
+
+      default:
+      case 'above':
+        modal.css({
+          'top': buttonPosition.top - modal.outerHeight() + scrollTop,
+          'left': buttonPosition.left - (modal.outerWidth()/2) + (buttonSize.width/2)
+        });
+        break;
+    }
 
     // todo: ensure is on top here.
 

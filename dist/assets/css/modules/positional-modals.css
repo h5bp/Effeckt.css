@@ -36,3 +36,29 @@
     border-bottom: 10px solid #cccccc;
     border-right: 10px solid transparent;
     border-left: 10px solid transparent; }
+.effeckt-positional-modal-wrap[data-effeckt-position="right"] {
+  margin-left: 15px; }
+  .effeckt-positional-modal-wrap[data-effeckt-position="right"] .effeckt-modal:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    width: 0;
+    height: 0;
+    margin-top: -10px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #cccccc; }
+.effeckt-positional-modal-wrap[data-effeckt-position="left"] {
+  margin-left: -15px; }
+  .effeckt-positional-modal-wrap[data-effeckt-position="left"] .effeckt-modal:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 0;
+    height: 0;
+    margin-top: -10px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #cccccc; }
