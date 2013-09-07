@@ -31,12 +31,14 @@ var EffecktPositionalModals = {
 
     var self = this,
         style = $el.data('effeckt-type'),
-        position = $el.data('effeckt-positional-modal-position'),
+        position = $el.data('effeckt-position'),
         buttonPosition = $el.offset(),
         buttonSize = {
           'width': $el.outerWidth(),
           'height': $el.outerHeight()
         },
+
+        // This only work with page transition
         scrollTop = $('.effeckt-page-active').scrollTop();
 
     // don't open if already open
@@ -105,7 +107,7 @@ var EffecktPositionalModals = {
     var modalWrap = 
       $('<div>')
         .addClass('effeckt-positional-modal-wrap ' + style)
-        .attr('data-effeckt-positional-modal-type', position);
+        .attr('data-effeckt-position', position);
 
     modalWrap.html(content);
 
