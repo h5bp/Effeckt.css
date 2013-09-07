@@ -2696,9 +2696,9 @@ Example markup:
   -o-transform: scale(0.5) rotate(720deg);
   transform: scale(0.5) rotate(720deg);
   opacity: 0;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
 }
 
 .effeckt-show.newspaper .effeckt-modal {
@@ -2755,9 +2755,9 @@ Example markup:
   -ms-transform: translateY(-100%);
   -o-transform: translateY(-100%);
   transform: translateY(-100%);
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 500ms;
+  -o-transition: all 500ms;
+  transition: all 500ms;
   opacity: 0;
 }
 
@@ -3122,9 +3122,9 @@ Example markup:
 
 .effeckt-show.make-way ~ .effeckt-overlay {
   background: rgba(0, 0, 0, 0.2);
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
 }
 
 .effeckt-show.make-way ~ [data-effeckt-page],
@@ -3137,9 +3137,9 @@ Example markup:
   -ms-transform-origin: 0% 50%;
   -o-transform-origin: 0% 50%;
   transform-origin: 0% 50%;
-  -webkit-animation: makeWay 0.5s forwards ease-in;
-  -o-animation: makeWay 0.5s forwards ease-in;
-  animation: makeWay 0.5s forwards ease-in;
+  -webkit-animation: makeWay 500ms forwards ease-in;
+  -o-animation: makeWay 500ms forwards ease-in;
+  animation: makeWay 500ms forwards ease-in;
 }
 
 .make-way .effeckt-modal {
@@ -3148,9 +3148,9 @@ Example markup:
   -o-transform: translateX(200%);
   transform: translateX(200%);
   opacity: 0;
-  -webkit-transition: 0.5s 0.1s;
-  -o-transition: 0.5s 0.1s;
-  transition: 0.5s 0.1s;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
 }
 
 .effeckt-show.make-way .effeckt-modal {
@@ -3159,16 +3159,16 @@ Example markup:
   -o-transform: translateX(0);
   transform: translateX(0);
   opacity: 1;
-  -webkit-transition: 0.5s 0.1s;
-  -o-transition: 0.5s 0.1s;
-  transition: 0.5s 0.1s;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
 }
 
 .effeckt-hide.make-way .effeckt-modal {
   opacity: 0;
-  -webkit-transition: 0.5s 0.1s;
-  -o-transition: 0.5s 0.1s;
-  transition: 0.5s 0.1s;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
 }
 
 @-webkit-keyframes makeWay {
@@ -3216,6 +3216,46 @@ Example markup:
     -o-transform: translateZ(-200px);
     transform: translateZ(-200px);
   }
+}
+
+.deep-content .effeckt-modal {
+  -webkit-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  -o-transform: scale(0.7);
+  transform: scale(0.7);
+  opacity: 0;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+}
+
+.deep-content ~ [data-effeckt-page] {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+}
+
+.effeckt-show.deep-content ~ [data-effeckt-page] {
+  height: 100%;
+  overflow: hidden;
+  -webkit-transform: scale(0.85);
+  -ms-transform: scale(0.85);
+  -o-transform: scale(0.85);
+  transform: scale(0.85);
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+}
+
+.effeckt-show.deep-content .effeckt-modal {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+  opacity: 1;
 }
 
 .effeckt-show.slip-in-from-top ~ [data-effeckt-page] {
@@ -3612,9 +3652,9 @@ Example markup:
 
 .effeckt-show.shake .effeckt-modal {
   opacity: 1;
-  -webkit-animation: modalShake 1s forwards ease;
-  -o-animation: modalShake 1s forwards ease;
-  animation: modalShake 1s forwards ease;
+  -webkit-animation: modalShake 1000ms forwards ease;
+  -o-animation: modalShake 1000ms forwards ease;
+  animation: modalShake 1000ms forwards ease;
 }
 
 .effeckt-hide.shake .effeckt-modal {
@@ -3687,9 +3727,9 @@ Example markup:
 
 .effeckt-show.bounce .effeckt-modal {
   opacity: 1;
-  -webkit-animation: modalBounce 1s forwards ease;
-  -o-animation: modalBounce 1s forwards ease;
-  animation: modalBounce 1s forwards ease;
+  -webkit-animation: modalBounce 1000ms forwards ease;
+  -o-animation: modalBounce 1000ms forwards ease;
+  animation: modalBounce 1000ms forwards ease;
 }
 
 .effeckt-hide.bounce .effeckt-modal {
@@ -3762,9 +3802,9 @@ Example markup:
 
 .effeckt-show.pulse .effeckt-modal {
   opacity: 1;
-  -webkit-animation: modalPulse 1s forwards ease;
-  -o-animation: modalPulse 1s forwards ease;
-  animation: modalPulse 1s forwards ease;
+  -webkit-animation: modalPulse 1000ms forwards ease;
+  -o-animation: modalPulse 1000ms forwards ease;
+  animation: modalPulse 1000ms forwards ease;
 }
 
 .effeckt-hide.pulse .effeckt-modal {
@@ -3837,9 +3877,9 @@ Example markup:
 
 .effeckt-show.wobble .effeckt-modal {
   opacity: 1;
-  -webkit-animation: modalWobble 1s forwards ease;
-  -o-animation: modalWobble 1s forwards ease;
-  animation: modalWobble 1s forwards ease;
+  -webkit-animation: modalWobble 1000ms forwards ease;
+  -o-animation: modalWobble 1000ms forwards ease;
+  animation: modalWobble 1000ms forwards ease;
 }
 
 .effeckt-hide.wobble .effeckt-modal {
@@ -3984,9 +4024,9 @@ Example markup:
 
 .effeckt-show.swing .effeckt-modal {
   opacity: 1;
-  -webkit-animation: modalSwing 1s forwards ease;
-  -o-animation: modalSwing 1s forwards ease;
-  animation: modalSwing 1s forwards ease;
+  -webkit-animation: modalSwing 1000ms forwards ease;
+  -o-animation: modalSwing 1000ms forwards ease;
+  animation: modalSwing 1000ms forwards ease;
 }
 
 .effeckt-hide.swing .effeckt-modal {
@@ -4093,9 +4133,9 @@ Example markup:
 
 .effeckt-show.tada .effeckt-modal {
   opacity: 1;
-  -webkit-animation: modalTada 1s forwards ease;
-  -o-animation: modalTada 1s forwards ease;
-  animation: modalTada 1s forwards ease;
+  -webkit-animation: modalTada 1000ms forwards ease;
+  -o-animation: modalTada 1000ms forwards ease;
+  animation: modalTada 1000ms forwards ease;
 }
 
 .effeckt-hide.tada .effeckt-modal {
@@ -4206,7 +4246,7 @@ Example markup:
   perspective: 600px;
 }
 
-.effeckt-off-screen-nav-show {
+.effeckt-show {
   visibility: visible;
 }
 
@@ -4220,7 +4260,7 @@ Example markup:
   transition: 500ms cubic-bezier(0.09, 0.68, 0, 0.99);
 }
 
-.effeckt-off-screen-nav-left-overlay.effeckt-off-screen-nav-show {
+.effeckt-off-screen-nav-left-overlay.effeckt-show {
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
   -o-transform: translateX(0);
@@ -4237,14 +4277,14 @@ Example markup:
   transition: 500ms;
 }
 
-.effeckt-off-screen-nav-left-push.effeckt-off-screen-nav-show {
+.effeckt-off-screen-nav-left-push.effeckt-show {
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
   -o-transform: translateX(0);
   transform: translateX(0);
 }
 
-.effeckt-off-screen-nav-left-push.effeckt-off-screen-nav-show ~ [data-effeckt-page] {
+.effeckt-off-screen-nav-left-push.effeckt-show ~ [data-effeckt-page] {
   -webkit-transform: translateX(12rem);
   -ms-transform: translateX(12rem);
   -o-transform: translateX(12rem);
@@ -4272,7 +4312,7 @@ Example markup:
   width: 10rem;
 }
 
-.effeckt-off-screen-nav-left-reveal.effeckt-off-screen-nav-show {
+.effeckt-off-screen-nav-left-reveal.effeckt-show {
   width: 12rem;
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
@@ -4280,7 +4320,7 @@ Example markup:
   transform: translateX(0);
 }
 
-.effeckt-off-screen-nav-left-reveal.effeckt-off-screen-nav-show ~ [data-effeckt-page] {
+.effeckt-off-screen-nav-left-reveal.effeckt-show ~ [data-effeckt-page] {
   -webkit-transform: translateX(12rem);
   -ms-transform: translateX(12rem);
   -o-transform: translateX(12rem);
@@ -4304,14 +4344,14 @@ Example markup:
   transition: 500ms;
 }
 
-.effeckt-off-screen-nav-left-squeeze.effeckt-off-screen-nav-show {
+.effeckt-off-screen-nav-left-squeeze.effeckt-show {
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
   -o-transform: translateX(0);
   transform: translateX(0);
 }
 
-.effeckt-off-screen-nav-left-squeeze.effeckt-off-screen-nav-show ~ [data-effeckt-page] {
+.effeckt-off-screen-nav-left-squeeze.effeckt-show ~ [data-effeckt-page] {
   width: 60%;
 }
 
@@ -4335,7 +4375,7 @@ Example markup:
   transition: 500ms cubic-bezier(0.09, 0.68, 0, 0.99);
 }
 
-.effeckt-off-screen-nav-right-overlay.effeckt-off-screen-nav-show {
+.effeckt-off-screen-nav-right-overlay.effeckt-show {
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
   -o-transform: translateX(0);
@@ -4354,14 +4394,14 @@ Example markup:
   transition: 500ms;
 }
 
-.effeckt-off-screen-nav-right-push.effeckt-off-screen-nav-show {
+.effeckt-off-screen-nav-right-push.effeckt-show {
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
   -o-transform: translateX(0);
   transform: translateX(0);
 }
 
-.effeckt-off-screen-nav-right-push.effeckt-off-screen-nav-show ~ [data-effeckt-page] {
+.effeckt-off-screen-nav-right-push.effeckt-show ~ [data-effeckt-page] {
   -webkit-transform: translateX(-12rem);
   -ms-transform: translateX(-12rem);
   -o-transform: translateX(-12rem);
@@ -4402,11 +4442,11 @@ Example markup:
   right: 0;
 }
 
-.effeckt-off-screen-nav-right-reveal.effeckt-off-screen-nav-show {
+.effeckt-off-screen-nav-right-reveal.effeckt-show {
   width: 12rem;
 }
 
-.effeckt-off-screen-nav-right-reveal.effeckt-off-screen-nav-show ~ [data-effeckt-page] {
+.effeckt-off-screen-nav-right-reveal.effeckt-show ~ [data-effeckt-page] {
   -webkit-transform: translateX(-12rem);
   -ms-transform: translateX(-12rem);
   -o-transform: translateX(-12rem);
@@ -4432,14 +4472,14 @@ Example markup:
   transition: 500ms;
 }
 
-.effeckt-off-screen-nav-right-squeeze.effeckt-off-screen-nav-show {
+.effeckt-off-screen-nav-right-squeeze.effeckt-show {
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
   -o-transform: translateX(0);
   transform: translateX(0);
 }
 
-.effeckt-off-screen-nav-right-squeeze.effeckt-off-screen-nav-show ~ [data-effeckt-page] {
+.effeckt-off-screen-nav-right-squeeze.effeckt-show ~ [data-effeckt-page] {
   width: 60%;
 }
 
@@ -4480,14 +4520,14 @@ Example markup:
   visibility: visible;
 }
 
-.effeckt-off-screen-nav-rotate-left.effeckt-off-screen-nav-show {
+.effeckt-off-screen-nav-rotate-left.effeckt-show {
   -webkit-transform: none;
   -ms-transform: none;
   -o-transform: none;
   transform: none;
 }
 
-.effeckt-off-screen-nav-rotate-left.effeckt-off-screen-nav-show ~ [data-effeckt-page] {
+.effeckt-off-screen-nav-rotate-left.effeckt-show ~ [data-effeckt-page] {
   -webkit-transform: translateX(260px) rotateY(15deg);
   -ms-transform: translateX(260px) rotateY(15deg);
   -o-transform: translateX(260px) rotateY(15deg);
@@ -4495,7 +4535,7 @@ Example markup:
   overflow: hidden;
 }
 
-.effeckt-off-screen-nav-rotate-left.effeckt-off-screen-nav-show ~ [data-effeckt-page] .off-screen-nav-cover {
+.effeckt-off-screen-nav-rotate-left.effeckt-show ~ [data-effeckt-page] .off-screen-nav-cover {
   position: absolute;
   top: 0;
   left: 0;
@@ -4515,7 +4555,7 @@ Example markup:
   transform: translateY(-100%);
 }
 
-.effeckt-off-screen-nav-top-overlay.effeckt-off-screen-nav-show {
+.effeckt-off-screen-nav-top-overlay.effeckt-show {
   visibility: visible;
   -webkit-transform: translateY(0%);
   -ms-transform: translateY(0%);
@@ -4535,7 +4575,7 @@ Example markup:
   transform: translateY(100%);
 }
 
-.effeckt-off-screen-nav-bottom-overlay.effeckt-off-screen-nav-show {
+.effeckt-off-screen-nav-bottom-overlay.effeckt-show {
   -webkit-transform: translateY(0%);
   -ms-transform: translateY(0%);
   -o-transform: translateY(0%);
@@ -4550,14 +4590,40 @@ Example markup:
   transition: 500ms;
 }
 
-.effeckt-off-screen-nav-top-bounce.effeckt-off-screen-nav-show {
+.effeckt-off-screen-nav-top-bounce.effeckt-show {
   visibility: visible;
   -webkit-animation: navFromTopBounceIn 500ms both ease;
   -o-animation: navFromTopBounceIn 500ms both ease;
   animation: navFromTopBounceIn 500ms both ease;
 }
 
-.effeckt-off-screen-nav-top-bounce.effeckt-off-screen-nav-hide {
+.effeckt-off-screen-nav-top-bounce.effeckt-hide {
+  -webkit-animation: navFromTopBounceOut 500ms both ease;
+  -o-animation: navFromTopBounceOut 500ms both ease;
+  animation: navFromTopBounceOut 500ms both ease;
+}
+
+.effeckt-off-screen-nav-top-bounce-out {
+  width: 100%;
+  bottom: auto;
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+}
+
+.effeckt-off-screen-nav-top-bounce-out.effeckt-show {
+  visibility: visible;
+  -webkit-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  -o-transform: translateY(0%);
+  transform: translateY(0%);
+}
+
+.effeckt-off-screen-nav-top-bounce-out.effeckt-hide {
   -webkit-animation: navFromTopBounceOut 500ms both ease;
   -o-animation: navFromTopBounceOut 500ms both ease;
   animation: navFromTopBounceOut 500ms both ease;
@@ -4713,13 +4779,38 @@ Example markup:
   transition: 500ms;
 }
 
-.effeckt-off-screen-nav-bottom-bounce.effeckt-off-screen-nav-show {
+.effeckt-off-screen-nav-bottom-bounce.effeckt-show {
   -webkit-animation: navFromBottomBounceIn 500ms both ease;
   -o-animation: navFromBottomBounceIn 500ms both ease;
   animation: navFromBottomBounceIn 500ms both ease;
 }
 
-.effeckt-off-screen-nav-bottom-bounce.effeckt-off-screen-nav-hide {
+.effeckt-off-screen-nav-bottom-bounce.effeckt-hide {
+  -webkit-animation: navFromBottomBounceOut 500ms both ease;
+  -o-animation: navFromBottomBounceOut 500ms both ease;
+  animation: navFromBottomBounceOut 500ms both ease;
+}
+
+.effeckt-off-screen-nav-bottom-bounce-out {
+  width: 100%;
+  top: auto;
+  -webkit-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -o-transform: translateY(100%);
+  transform: translateY(100%);
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+}
+
+.effeckt-off-screen-nav-bottom-bounce-out.effeckt-show {
+  -webkit-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  -o-transform: translateY(0%);
+  transform: translateY(0%);
+}
+
+.effeckt-off-screen-nav-bottom-bounce-out.effeckt-hide {
   -webkit-animation: navFromBottomBounceOut 500ms both ease;
   -o-animation: navFromBottomBounceOut 500ms both ease;
   animation: navFromBottomBounceOut 500ms both ease;
@@ -4879,7 +4970,7 @@ Example markup:
   transform: translateY(-100%);
 }
 
-.effeckt-off-screen-nav-push-top.effeckt-off-screen-nav-show {
+.effeckt-off-screen-nav-push-top.effeckt-show {
   visibility: visible;
   -webkit-transform: translateY(0%);
   -ms-transform: translateY(0%);
@@ -4887,7 +4978,7 @@ Example markup:
   transform: translateY(0%);
 }
 
-.effeckt-off-screen-nav-push-top.effeckt-off-screen-nav-show ~ [data-effeckt-page] {
+.effeckt-off-screen-nav-push-top.effeckt-show ~ [data-effeckt-page] {
   -webkit-transform: translateY(12rem);
   -ms-transform: translateY(12rem);
   -o-transform: translateY(12rem);
@@ -4912,7 +5003,7 @@ Example markup:
   transform: translateY(100%);
 }
 
-.effeckt-off-screen-nav-push-bottom.effeckt-off-screen-nav-show {
+.effeckt-off-screen-nav-push-bottom.effeckt-show {
   visibility: visible;
   -webkit-transform: translateY(0%);
   -ms-transform: translateY(0%);
@@ -4920,7 +5011,7 @@ Example markup:
   transform: translateY(0%);
 }
 
-.effeckt-off-screen-nav-push-bottom.effeckt-off-screen-nav-show ~ [data-effeckt-page] {
+.effeckt-off-screen-nav-push-bottom.effeckt-show ~ [data-effeckt-page] {
   -webkit-transform: translateY(-12rem);
   -ms-transform: translateY(-12rem);
   -o-transform: translateY(-12rem);
@@ -4964,14 +5055,14 @@ Example markup:
   visibility: visible;
 }
 
-.effeckt-off-screen-nav-rotate-right.effeckt-off-screen-nav-show {
+.effeckt-off-screen-nav-rotate-right.effeckt-show {
   -webkit-transform: none;
   -ms-transform: none;
   -o-transform: none;
   transform: none;
 }
 
-.effeckt-off-screen-nav-rotate-right.effeckt-off-screen-nav-show ~ [data-effeckt-page] {
+.effeckt-off-screen-nav-rotate-right.effeckt-show ~ [data-effeckt-page] {
   -webkit-transform: translateX(-260px) rotateY(-15deg);
   -ms-transform: translateX(-260px) rotateY(-15deg);
   -o-transform: translateX(-260px) rotateY(-15deg);
@@ -4979,7 +5070,7 @@ Example markup:
   overflow: hidden;
 }
 
-.effeckt-off-screen-nav-rotate-right.effeckt-off-screen-nav-show ~ [data-effeckt-page] .off-screen-nav-cover {
+.effeckt-off-screen-nav-rotate-right.effeckt-show ~ [data-effeckt-page] .off-screen-nav-cover {
   position: absolute;
   top: 0;
   left: 0;

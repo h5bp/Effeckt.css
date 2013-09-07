@@ -97,7 +97,7 @@ var EffecktPositionalModals = {
     this.remove(modal);
     modal.find('.effeckt-positional-modal').removeClass('effeckt-show');
 
-    if (sender && sender.data("effeckt-hide-class")) {
+    if (sender && sender.data("effeckt-needs-hide-class")) {
       modal.addClass("effeckt-hide");
     }
 

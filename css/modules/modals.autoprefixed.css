@@ -180,9 +180,9 @@
   -o-transform: scale(0.5) rotate(720deg);
   transform: scale(0.5) rotate(720deg);
   opacity: 0;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
 }
 
 .effeckt-show.newspaper .effeckt-modal {
@@ -239,9 +239,9 @@
   -ms-transform: translateY(-100%);
   -o-transform: translateY(-100%);
   transform: translateY(-100%);
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 500ms;
+  -o-transition: all 500ms;
+  transition: all 500ms;
   opacity: 0;
 }
 
@@ -606,9 +606,9 @@
 
 .effeckt-show.make-way ~ .effeckt-overlay {
   background: rgba(0, 0, 0, 0.2);
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
 }
 
 .effeckt-show.make-way ~ [data-effeckt-page],
@@ -621,9 +621,9 @@
   -ms-transform-origin: 0% 50%;
   -o-transform-origin: 0% 50%;
   transform-origin: 0% 50%;
-  -webkit-animation: makeWay 0.5s forwards ease-in;
-  -o-animation: makeWay 0.5s forwards ease-in;
-  animation: makeWay 0.5s forwards ease-in;
+  -webkit-animation: makeWay 500ms forwards ease-in;
+  -o-animation: makeWay 500ms forwards ease-in;
+  animation: makeWay 500ms forwards ease-in;
 }
 
 .make-way .effeckt-modal {
@@ -632,9 +632,9 @@
   -o-transform: translateX(200%);
   transform: translateX(200%);
   opacity: 0;
-  -webkit-transition: 0.5s 0.1s;
-  -o-transition: 0.5s 0.1s;
-  transition: 0.5s 0.1s;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
 }
 
 .effeckt-show.make-way .effeckt-modal {
@@ -643,16 +643,16 @@
   -o-transform: translateX(0);
   transform: translateX(0);
   opacity: 1;
-  -webkit-transition: 0.5s 0.1s;
-  -o-transition: 0.5s 0.1s;
-  transition: 0.5s 0.1s;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
 }
 
 .effeckt-hide.make-way .effeckt-modal {
   opacity: 0;
-  -webkit-transition: 0.5s 0.1s;
-  -o-transition: 0.5s 0.1s;
-  transition: 0.5s 0.1s;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
 }
 
 @-webkit-keyframes makeWay {
@@ -700,6 +700,46 @@
     -o-transform: translateZ(-200px);
     transform: translateZ(-200px);
   }
+}
+
+.deep-content .effeckt-modal {
+  -webkit-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  -o-transform: scale(0.7);
+  transform: scale(0.7);
+  opacity: 0;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+}
+
+.deep-content ~ [data-effeckt-page] {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+}
+
+.effeckt-show.deep-content ~ [data-effeckt-page] {
+  height: 100%;
+  overflow: hidden;
+  -webkit-transform: scale(0.85);
+  -ms-transform: scale(0.85);
+  -o-transform: scale(0.85);
+  transform: scale(0.85);
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+}
+
+.effeckt-show.deep-content .effeckt-modal {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+  opacity: 1;
 }
 
 .effeckt-show.slip-in-from-top ~ [data-effeckt-page] {
@@ -1096,9 +1136,9 @@
 
 .effeckt-show.shake .effeckt-modal {
   opacity: 1;
-  -webkit-animation: modalShake 1s forwards ease;
-  -o-animation: modalShake 1s forwards ease;
-  animation: modalShake 1s forwards ease;
+  -webkit-animation: modalShake 1000ms forwards ease;
+  -o-animation: modalShake 1000ms forwards ease;
+  animation: modalShake 1000ms forwards ease;
 }
 
 .effeckt-hide.shake .effeckt-modal {
@@ -1171,9 +1211,9 @@
 
 .effeckt-show.bounce .effeckt-modal {
   opacity: 1;
-  -webkit-animation: modalBounce 1s forwards ease;
-  -o-animation: modalBounce 1s forwards ease;
-  animation: modalBounce 1s forwards ease;
+  -webkit-animation: modalBounce 1000ms forwards ease;
+  -o-animation: modalBounce 1000ms forwards ease;
+  animation: modalBounce 1000ms forwards ease;
 }
 
 .effeckt-hide.bounce .effeckt-modal {
@@ -1246,9 +1286,9 @@
 
 .effeckt-show.pulse .effeckt-modal {
   opacity: 1;
-  -webkit-animation: modalPulse 1s forwards ease;
-  -o-animation: modalPulse 1s forwards ease;
-  animation: modalPulse 1s forwards ease;
+  -webkit-animation: modalPulse 1000ms forwards ease;
+  -o-animation: modalPulse 1000ms forwards ease;
+  animation: modalPulse 1000ms forwards ease;
 }
 
 .effeckt-hide.pulse .effeckt-modal {
@@ -1321,9 +1361,9 @@
 
 .effeckt-show.wobble .effeckt-modal {
   opacity: 1;
-  -webkit-animation: modalWobble 1s forwards ease;
-  -o-animation: modalWobble 1s forwards ease;
-  animation: modalWobble 1s forwards ease;
+  -webkit-animation: modalWobble 1000ms forwards ease;
+  -o-animation: modalWobble 1000ms forwards ease;
+  animation: modalWobble 1000ms forwards ease;
 }
 
 .effeckt-hide.wobble .effeckt-modal {
@@ -1468,9 +1508,9 @@
 
 .effeckt-show.swing .effeckt-modal {
   opacity: 1;
-  -webkit-animation: modalSwing 1s forwards ease;
-  -o-animation: modalSwing 1s forwards ease;
-  animation: modalSwing 1s forwards ease;
+  -webkit-animation: modalSwing 1000ms forwards ease;
+  -o-animation: modalSwing 1000ms forwards ease;
+  animation: modalSwing 1000ms forwards ease;
 }
 
 .effeckt-hide.swing .effeckt-modal {
@@ -1577,9 +1617,9 @@
 
 .effeckt-show.tada .effeckt-modal {
   opacity: 1;
-  -webkit-animation: modalTada 1s forwards ease;
-  -o-animation: modalTada 1s forwards ease;
-  animation: modalTada 1s forwards ease;
+  -webkit-animation: modalTada 1000ms forwards ease;
+  -o-animation: modalTada 1000ms forwards ease;
+  animation: modalTada 1000ms forwards ease;
 }
 
 .effeckt-hide.tada .effeckt-modal {
