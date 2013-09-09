@@ -6,6 +6,9 @@
 // Basic .effeck-tooltip
 .effeckt-tooltip[data-effeckt-tooltip-text] {
   position: relative;
+  // make tooltip text to be always on the same line
+  // this prevent out of position tooltip
+  display: inline-block;
 
   &::before, &::after {
     opacity: 0;

@@ -6442,6 +6442,7 @@ Example markup:
 
 .effeckt-tooltip[data-effeckt-tooltip-text] {
   position: relative;
+  display: inline-block;
 }
 
 .effeckt-tooltip[data-effeckt-tooltip-text]::before,
