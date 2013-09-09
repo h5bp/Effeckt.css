@@ -1,5 +1,6 @@
 .effeckt-tooltip[data-effeckt-tooltip-text] {
-  position: relative; }
+  position: relative;
+  display: inline-block; }
   .effeckt-tooltip[data-effeckt-tooltip-text]::before, .effeckt-tooltip[data-effeckt-tooltip-text]::after {
     opacity: 0;
     transition: 0.2s; }
