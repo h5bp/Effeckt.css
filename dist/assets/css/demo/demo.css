@@ -324,6 +324,7 @@ h1 span:nth-of-type(11) {
       background: #222222; }
   .effeckt-off-screen-nav h4 {
     color: white;
+    background: #333333;
     border-bottom: 1px solid #eeeeee;
     padding: 1rem 0.5rem 0.2rem 0;
     margin: 0 1rem 1rem;
@@ -342,6 +343,28 @@ h1 span:nth-of-type(11) {
 
 .effeckt-off-screen-nav-rotate.effeckt-off-screen-nav-show ~ .page-wrap .off-screen-nav-cover {
   background: linear-gradient(left, rgba(238, 238, 238, 0), rgba(238, 238, 238, 0.9)); }
+
+.effeckt-off-screen-nav-card-deck-top, .effeckt-off-screen-nav-card-deck-bottom {
+  cursor: pointer;
+  background: transparent; }
+  .effeckt-off-screen-nav-card-deck-top h4, .effeckt-off-screen-nav-card-deck-bottom h4 {
+    margin: 0;
+    padding: 1rem;
+    border-bottom: 0; }
+  .effeckt-off-screen-nav-card-deck-top li, .effeckt-off-screen-nav-card-deck-bottom li {
+    background-color: #333333;
+    border-bottom: 1px solid #eeeeee; }
+  .effeckt-off-screen-nav-card-deck-top a, .effeckt-off-screen-nav-card-deck-bottom a {
+    height: 100%; }
+  .effeckt-off-screen-nav-card-deck-top .effeckt-off-screen-nav-close, .effeckt-off-screen-nav-card-deck-bottom .effeckt-off-screen-nav-close {
+    right: 1rem; }
+
+.effeckt-off-screen-nav-card-deck-bottom li {
+  border-top: 1px solid #eeeeee;
+  border-bottom: none; }
+
+.effeckt-off-screen-nav-left-bounce, .effeckt-off-screen-nav-left-bounce-out, .effeckt-off-screen-nav-right-bounce, .effeckt-off-screen-nav-right-bounce-out {
+  box-sizing: content-box; }
 
 .effeckt-caption {
   width: 48%;

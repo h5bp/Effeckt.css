@@ -296,3 +296,167 @@
       left: 0;
       width: 100%;
       height: 100%; }
+
+.effeckt-off-screen-nav-card-deck-top {
+  perspective: 800px;
+  bottom: auto;
+  transform: translateY(-100%);
+  width: 100%;
+  overflow: visible;
+  transition: transform 250ms; }
+  .effeckt-off-screen-nav-card-deck-top.effeckt-show {
+    transform: translateY(0%); }
+  .effeckt-off-screen-nav-card-deck-top h4 {
+    position: relative;
+    z-index: 300;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transform-origin: 50% 0%;
+    transition: all 250ms ease-out;
+    display: block; }
+    .effeckt-off-screen-nav-card-deck-top h4:active {
+      transform: rotateX(60deg); }
+  .effeckt-off-screen-nav-card-deck-top ul {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    margin: 0; }
+    .effeckt-off-screen-nav-card-deck-top ul li {
+      transition: all 250ms ease-out;
+      position: absolute;
+      top: 0;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      transform: translateY(0px); }
+
+.effeckt-off-screen-nav-card-deck-bottom {
+  perspective: 800px;
+  top: auto;
+  transform: translateY(100%);
+  width: 100%;
+  overflow: visible;
+  transition: transform 250ms; }
+  .effeckt-off-screen-nav-card-deck-bottom.effeckt-show {
+    transform: translateY(0%); }
+  .effeckt-off-screen-nav-card-deck-bottom h4 {
+    position: relative;
+    z-index: 300;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transform-origin: 50% 100%;
+    transition: all 250ms ease-out;
+    display: block; }
+    .effeckt-off-screen-nav-card-deck-bottom h4:active {
+      transform: rotateX(-60deg); }
+  .effeckt-off-screen-nav-card-deck-bottom ul {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    margin: 0; }
+    .effeckt-off-screen-nav-card-deck-bottom ul li {
+      transition: all 250ms ease-out;
+      position: absolute;
+      top: 0;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      transform: translateY(300px); }
+
+.effeckt-off-screen-nav-left-bounce {
+  transition: 500ms; }
+  .effeckt-off-screen-nav-left-bounce.effeckt-show {
+    visibility: visible;
+    animation: navFromLeftBounceIn 500ms both ease; }
+  .effeckt-off-screen-nav-left-bounce.effeckt-hide {
+    animation: navFromLeftBounceOut 500ms both ease; }
+
+@keyframes navFromLeftBounceIn {
+  0% {
+    transform: translateX(-100%); }
+
+  20% {
+    padding-left: 0px;
+    transform: translateX(0%); }
+
+  60% {
+    padding-left: 20px; }
+
+  100% {
+    padding-left: 0px; } }
+
+@keyframes navFromLeftBounceOut {
+  0% {
+    transform: translateX(0%);
+    padding-left: 0px; }
+
+  40% {
+    transform: translateX(0%);
+    padding-left: 20px; }
+
+  80% {
+    padding-left: 0px; }
+
+  90%, 100% {
+    transform: translateX(-100%); } }
+
+.effeckt-off-screen-nav-left-bounce-out {
+  transform: translateX(-100%);
+  transition: 500ms; }
+  .effeckt-off-screen-nav-left-bounce-out.effeckt-show {
+    visibility: visible;
+    transform: translateY(0%); }
+  .effeckt-off-screen-nav-left-bounce-out.effeckt-hide {
+    animation: navFromLeftBounceOut 500ms both ease; }
+
+.effeckt-off-screen-nav-right-bounce {
+  left: auto;
+  right: 0;
+  transition: 500ms; }
+  .effeckt-off-screen-nav-right-bounce.effeckt-show {
+    visibility: visible;
+    animation: navFromRightBounceIn 500ms both ease; }
+  .effeckt-off-screen-nav-right-bounce.effeckt-hide {
+    animation: navFromRightBounceOut 500ms both ease; }
+
+@keyframes navFromRightBounceIn {
+  0% {
+    transform: translateX(100%); }
+
+  20% {
+    padding-right: 0px;
+    transform: translateX(0%); }
+
+  60% {
+    padding-right: 20px; }
+
+  100% {
+    padding-right: 0px; } }
+
+@keyframes navFromRightBounceOut {
+  0% {
+    transform: translateX(0%);
+    padding-right: 0px; }
+
+  40% {
+    transform: translateX(0%);
+    padding-right: 20px; }
+
+  80% {
+    padding-right: 0px; }
+
+  90%, 100% {
+    transform: translateX(100%); } }
+
+.effeckt-off-screen-nav-right-bounce-out {
+  left: auto;
+  right: 0;
+  transform: translateX(100%);
+  transition: 500ms; }
+  .effeckt-off-screen-nav-right-bounce-out.effeckt-show {
+    visibility: visible;
+    transform: translateY(0%); }
+  .effeckt-off-screen-nav-right-bounce-out.effeckt-hide {
+    animation: navFromRightBounceOut 500ms both ease; }
