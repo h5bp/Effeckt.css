@@ -422,8 +422,8 @@ h1 span:nth-of-type(11) {
   background: linear-gradient(left, rgba(#eee, 0), rgba(#eee, 0.9));
 }
 
-.effeckt-off-screen-nav-card-deck-top,
-.effeckt-off-screen-nav-card-deck-bottom {
+.effeckt-off-screen-nav-top-card-deck,
+.effeckt-off-screen-nav-bottom-card-deck {
   cursor: pointer;
   background: transparent;
 
@@ -447,7 +447,7 @@ h1 span:nth-of-type(11) {
   }
 }
 
-.effeckt-off-screen-nav-card-deck-bottom {
+.effeckt-off-screen-nav-bottom-card-deck {
   li {
     border-top:1px solid #eee;
     border-bottom:none;

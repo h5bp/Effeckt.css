@@ -110,22 +110,22 @@
     transition: width 500ms;
     max-width: none; }
 
-.effeckt-off-screen-nav-rotate-left {
+.effeckt-off-screen-nav-left-rotate {
   transform-origin: 100% 50%;
   transition: 500ms;
   transform: translateX(-100%) scale(1.01) rotateY(-30deg); }
-  .effeckt-off-screen-nav-rotate-left ~ [data-effeckt-page] {
+  .effeckt-off-screen-nav-left-rotate ~ [data-effeckt-page] {
     transform-origin: 0 50%;
     transition: 0.5s; }
-  .effeckt-off-screen-nav-rotate-left ~ .effeckt-overlay {
+  .effeckt-off-screen-nav-left-rotate ~ .effeckt-overlay {
     z-index: 900;
     visibility: visible; }
-  .effeckt-off-screen-nav-rotate-left.effeckt-show {
+  .effeckt-off-screen-nav-left-rotate.effeckt-show {
     transform: none; }
-    .effeckt-off-screen-nav-rotate-left.effeckt-show ~ [data-effeckt-page] {
+    .effeckt-off-screen-nav-left-rotate.effeckt-show ~ [data-effeckt-page] {
       transform: translateX(260px) rotateY(15deg);
       overflow: hidden; }
-    .effeckt-off-screen-nav-rotate-left.effeckt-show ~ [data-effeckt-page] .off-screen-nav-cover {
+    .effeckt-off-screen-nav-left-rotate.effeckt-show ~ [data-effeckt-page] .off-screen-nav-cover {
       position: absolute;
       top: 0;
       left: 0;
@@ -273,40 +273,40 @@
   .effeckt-off-screen-nav-push-bottom ~ [data-effeckt-page] {
     transition: 500ms; }
 
-.effeckt-off-screen-nav-rotate-right {
+.effeckt-off-screen-nav-right-rotate {
   left: auto;
   right: 0;
   transform-origin: 100% 50%;
   transition: 500ms;
   transform: rotateY(30deg) translateX(100%) translateX(-2px) scale(1.01); }
-  .effeckt-off-screen-nav-rotate-right ~ [data-effeckt-page] {
+  .effeckt-off-screen-nav-right-rotate ~ [data-effeckt-page] {
     transform-origin: 100% 50%;
     transition: 0.5s; }
-  .effeckt-off-screen-nav-rotate-right ~ .effeckt-overlay {
+  .effeckt-off-screen-nav-right-rotate ~ .effeckt-overlay {
     z-index: 900;
     visibility: visible; }
-  .effeckt-off-screen-nav-rotate-right.effeckt-show {
+  .effeckt-off-screen-nav-right-rotate.effeckt-show {
     transform: none; }
-    .effeckt-off-screen-nav-rotate-right.effeckt-show ~ [data-effeckt-page] {
+    .effeckt-off-screen-nav-right-rotate.effeckt-show ~ [data-effeckt-page] {
       transform: translateX(-260px) rotateY(-15deg);
       overflow: hidden; }
-    .effeckt-off-screen-nav-rotate-right.effeckt-show ~ [data-effeckt-page] .off-screen-nav-cover {
+    .effeckt-off-screen-nav-right-rotate.effeckt-show ~ [data-effeckt-page] .off-screen-nav-cover {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%; }
 
-.effeckt-off-screen-nav-card-deck-top {
+.effeckt-off-screen-nav-top-card-deck {
   perspective: 800px;
   bottom: auto;
   transform: translateY(-100%);
   width: 100%;
   overflow: visible;
   transition: transform 250ms; }
-  .effeckt-off-screen-nav-card-deck-top.effeckt-show {
+  .effeckt-off-screen-nav-top-card-deck.effeckt-show {
     transform: translateY(0%); }
-  .effeckt-off-screen-nav-card-deck-top h4 {
+  .effeckt-off-screen-nav-top-card-deck h4 {
     position: relative;
     z-index: 300;
     backface-visibility: hidden;
@@ -314,15 +314,15 @@
     transform-origin: 50% 0%;
     transition: all 250ms ease-out;
     display: block; }
-    .effeckt-off-screen-nav-card-deck-top h4:active {
+    .effeckt-off-screen-nav-top-card-deck h4:active {
       transform: rotateX(60deg); }
-  .effeckt-off-screen-nav-card-deck-top ul {
+  .effeckt-off-screen-nav-top-card-deck ul {
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     margin: 0; }
-    .effeckt-off-screen-nav-card-deck-top ul li {
+    .effeckt-off-screen-nav-top-card-deck ul li {
       transition: all 250ms ease-out;
       position: absolute;
       top: 0;
@@ -331,16 +331,16 @@
       height: 100%;
       transform: translateY(0px); }
 
-.effeckt-off-screen-nav-card-deck-bottom {
+.effeckt-off-screen-nav-bottom-card-deck {
   perspective: 800px;
   top: auto;
   transform: translateY(100%);
   width: 100%;
   overflow: visible;
   transition: transform 250ms; }
-  .effeckt-off-screen-nav-card-deck-bottom.effeckt-show {
+  .effeckt-off-screen-nav-bottom-card-deck.effeckt-show {
     transform: translateY(0%); }
-  .effeckt-off-screen-nav-card-deck-bottom h4 {
+  .effeckt-off-screen-nav-bottom-card-deck h4 {
     position: relative;
     z-index: 300;
     backface-visibility: hidden;
@@ -348,15 +348,15 @@
     transform-origin: 50% 100%;
     transition: all 250ms ease-out;
     display: block; }
-    .effeckt-off-screen-nav-card-deck-bottom h4:active {
+    .effeckt-off-screen-nav-bottom-card-deck h4:active {
       transform: rotateX(-60deg); }
-  .effeckt-off-screen-nav-card-deck-bottom ul {
+  .effeckt-off-screen-nav-bottom-card-deck ul {
     position: absolute;
     width: 100%;
     height: 100%;
     bottom: 0;
     margin: 0; }
-    .effeckt-off-screen-nav-card-deck-bottom ul li {
+    .effeckt-off-screen-nav-bottom-card-deck ul li {
       transition: all 250ms ease-out;
       position: absolute;
       top: 0;

@@ -9,13 +9,13 @@ var EffecktOffScreenNav = {
   threedee: false,
 
   _checkForMore: {
-    'effeckt-off-screen-nav-card-deck-top': {
+    'effeckt-off-screen-nav-top-card-deck': {
       'showMethod': '_showCardDeckTop',
       'hideMethod': '_hideCardDeckTop',
       'initMethod': '_initCardDeckTop',
       'endMethod': '_endCardDeck'
     },
-    'effeckt-off-screen-nav-card-deck-bottom': {
+    'effeckt-off-screen-nav-bottom-card-deck': {
       'showMethod': '_showCardDeckBottom',
       'hideMethod': '_hideCardDeckBottom',
       'initMethod': '_initCardDeckBottom',

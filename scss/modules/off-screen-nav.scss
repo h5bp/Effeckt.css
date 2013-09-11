@@ -177,7 +177,7 @@
 }
 
 // 9 Rotate from Left
-.effeckt-off-screen-nav-rotate-left {
+.effeckt-off-screen-nav-left-rotate {
   transform-origin: 100% 50%;
   transition: $effeckt-off-screen-navigation-transition-duration;
   transform: translateX(-100%) scale(1.01) rotateY(-30deg);
@@ -371,7 +371,7 @@
 }
 
 // 16 Rotate from Right
-.effeckt-off-screen-nav-rotate-right {
+.effeckt-off-screen-nav-right-rotate {
   left: auto;
   right: 0;
   transform-origin: 100% 50%;
@@ -412,7 +412,7 @@
 
 
 // 17 Card Deck From Top
-.effeckt-off-screen-nav-card-deck-top {
+.effeckt-off-screen-nav-top-card-deck {
   perspective: 800px;
   bottom: auto;
   transform: translateY(-100%);
@@ -459,7 +459,7 @@
 }
 
 // 18 Card Deck From Bottom
-.effeckt-off-screen-nav-card-deck-bottom {
+.effeckt-off-screen-nav-bottom-card-deck {
   perspective: 800px;
   top: auto;
   transform: translateY(100%);
