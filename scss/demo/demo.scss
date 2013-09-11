@@ -397,6 +397,7 @@ h1 span:nth-of-type(11) {
   }
   h4 {
     color: white;
+    background: #333;
     border-bottom: 1px solid #eee;
     padding: 1rem 0.5rem 0.2rem 0;
     margin: 0 1rem 1rem;
@@ -405,6 +406,7 @@ h1 span:nth-of-type(11) {
     letter-spacing: 0.1rem;
     position: relative;
   }
+
 }
 
 .effeckt-off-screen-nav-close {
@@ -418,6 +420,45 @@ h1 span:nth-of-type(11) {
 }
 .effeckt-off-screen-nav-rotate.effeckt-off-screen-nav-show ~ .page-wrap .off-screen-nav-cover {
   background: linear-gradient(left, rgba(#eee, 0), rgba(#eee, 0.9));
+}
+
+.effeckt-off-screen-nav-top-card-deck,
+.effeckt-off-screen-nav-bottom-card-deck {
+  cursor: pointer;
+  background: transparent;
+
+  h4 {
+    margin:0;
+    padding: 1rem;
+    border-bottom: 0;
+  }
+
+  li {
+    background-color: #333;
+    border-bottom:1px solid #eee;
+  }
+
+  a {
+    height: 100%;
+  }
+
+  .effeckt-off-screen-nav-close {
+    right: 1rem;
+  }
+}
+
+.effeckt-off-screen-nav-bottom-card-deck {
+  li {
+    border-top:1px solid #eee;
+    border-bottom:none;
+  }
+}
+
+.effeckt-off-screen-nav-left-bounce,
+.effeckt-off-screen-nav-left-bounce-out,
+.effeckt-off-screen-nav-right-bounce,
+.effeckt-off-screen-nav-right-bounce-out {
+  box-sizing: content-box;
 }
 
 
