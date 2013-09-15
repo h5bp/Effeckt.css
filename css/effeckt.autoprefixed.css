@@ -879,10 +879,6 @@ Example markup:
 
 .effeckt-caption[data-effeckt-type="revolving-door"] {
   overflow: visible;
-  -webkit-perspective: 1300px;
-  -ms-perspective: 1300px;
-  -o-perspective: 1300px;
-  perspective: 1300px;
 }
 
 .effeckt-caption[data-effeckt-type="revolving-door"] figcaption {
@@ -890,10 +886,10 @@ Example markup:
   left: 0;
   width: 100%;
   height: 100%;
-  -webkit-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  -o-transform: rotateY(180deg);
-  transform: rotateY(180deg);
+  -webkit-transform: perspective(1300px) rotateY(180deg);
+  -ms-transform: perspective(1300px) rotateY(180deg);
+  -o-transform: perspective(1300px) rotateY(180deg);
+  transform: perspective(1300px) rotateY(180deg);
   -webkit-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
   -o-backface-visibility: hidden;
@@ -901,25 +897,29 @@ Example markup:
 }
 
 .effeckt-caption[data-effeckt-type="revolving-door"] img {
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transform: perspective(1300px);
+  -ms-transform: perspective(1300px);
+  -o-transform: perspective(1300px);
+  transform: perspective(1300px);
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
 }
 
 .effeckt-caption[data-effeckt-type="revolving-door"]:hover figcaption,
 .effeckt-caption[data-effeckt-type="revolving-door"]:active figcaption {
-  -webkit-transform: rotateY(360deg);
-  -ms-transform: rotateY(360deg);
-  -o-transform: rotateY(360deg);
-  transform: rotateY(360deg);
+  -webkit-transform: perspective(1300px) rotateY(0deg);
+  -ms-transform: perspective(1300px) rotateY(0deg);
+  -o-transform: perspective(1300px) rotateY(0deg);
+  transform: perspective(1300px) rotateY(0deg);
 }
 
 .effeckt-caption[data-effeckt-type="revolving-door"]:hover img,
 .effeckt-caption[data-effeckt-type="revolving-door"]:active img {
-  -webkit-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  -o-transform: rotateY(180deg);
-  transform: rotateY(180deg);
+  -webkit-transform: perspective(1300px) rotateY(-180deg);
+  -ms-transform: perspective(1300px) rotateY(-180deg);
+  -o-transform: perspective(1300px) rotateY(-180deg);
+  transform: perspective(1300px) rotateY(-180deg);
 }
 
 .effeckt-caption[data-effeckt-type="offset"] {
