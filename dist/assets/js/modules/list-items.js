@@ -1,7 +1,5 @@
 var EffecktListItems = {
 
-  isTouchDevice: Modernizr.touch,
-
   init: function() {
 
     this.bindUIActions();
@@ -10,14 +8,13 @@ var EffecktListItems = {
 
   bindUIActions: function() {
 
-    var self = this,
-        evt  = ( this.isTouchDevice ) ? 'touchstart' : 'click';
+    var self = this;
 
-    $(".effeckt-list-wrap button.add").on(evt, function() {
+    $(".effeckt-list-wrap button.add").on( Effeckt.buttonPressedEvent, function() {
       self.addListItem(this);
     });
 
-    $(".effeckt-list-wrap button.remove").on(evt, function() {
+    $(".effeckt-list-wrap button.remove").on( Effeckt.buttonPressedEvent, function() {
       self.removeListItem(this);
     });
 
@@ -38,10 +35,12 @@ var EffecktListItems = {
 
   removeListItem: function(el) {
 
-    var $parent = $(el).parent();
+    var $parent = $(el).parent(),
+        self = this;
 
     var elToRemove = $parent.find("li.new-item").last();
-    elToRemove.on(EffecktDemos.animationEndEventName + ' ' + EffecktDemos.transitionEndEventName , function () {
+    elToRemove.on( Effeckt.transitionAnimationEndEvent, function () {
+      elToRemove.off( Effeckt.transitionAnimationEndEvent );
       elToRemove.remove();
     });
 

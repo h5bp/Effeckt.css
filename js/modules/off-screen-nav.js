@@ -3,8 +3,6 @@ var EffecktOffScreenNav = {
   nav: $("#effeckt-off-screen-nav"),
   closeButton: $("#effeckt-off-screen-nav-close"),
 
-  isTouchDevice: Modernizr.touch,
-
   effeckt_type: '',
   threedee: false,
 
@@ -32,10 +30,9 @@ var EffecktOffScreenNav = {
 
   bindUIActions: function() {
 
-    var self = this,
-        evt  = ( this.isTouchDevice ) ? 'touchstart' : 'click';
+    var self = this;
 
-    $(".off-screen-nav-button, #effeckt-off-screen-nav-close").on(evt, function() {
+    $(".off-screen-nav-button, #effeckt-off-screen-nav-close").on( Effeckt.buttonPressedEvent, function() {
       self.toggleNav(this);
     });
 
@@ -51,7 +48,7 @@ var EffecktOffScreenNav = {
 
     // Show
     if (!this.nav.hasClass("effeckt-show")) {
-
+      
       this.nav.addClass(this.effeckt_type);
       this.closeButton.data("effeckt-type", this.effeckt_type);
 
@@ -63,10 +60,10 @@ var EffecktOffScreenNav = {
         this.nav.data("effeckt-needs-hide-class", button.data("effeckt-needs-hide-class"));
       }
 
-      setTimeout(function() {
-
+      this.nav.on( Effeckt.transitionAnimationEndEvent, function () {
+        self.nav.off( Effeckt.transitionAnimationEndEvent );
         self.nav.addClass("effeckt-show");
-      }, 500);
+      });
 
       // check if need more coding done
       // to make the effect works
@@ -76,15 +73,14 @@ var EffecktOffScreenNav = {
     // Hide
     } else {
       
-      var evt = EffecktDemos.animationEndEventName + ' ' + EffecktDemos.transitionEndEventName,
-          self = this;
-
-      this.nav.on( evt, function () {
-        self.nav.off( evt );
-        self.hideNav();
-      });
+      var self = this;
 
       this.nav.removeClass("effeckt-show");
+
+      this.nav.on( Effeckt.transitionAnimationEndEvent, function () {
+        self.nav.off( Effeckt.transitionAnimationEndEvent );
+        self.hideNav();
+      });
       
       if( this.nav.data("effeckt-needs-hide-class") ){
         this.nav.addClass("effeckt-hide");
@@ -101,18 +97,11 @@ var EffecktOffScreenNav = {
 
   hideNav: function() {
 
-    var self = this;
+    //var self = this;
 
-    self.nav.removeClass(self.closeButton.data("effeckt-type"));
-    self.nav.removeClass("effeckt-hide");
-    self.nav.removeData("effeckt-needs-hide-class");
-
-    // WEIRD BUG
-    // Have to trigger redraw or it sometimes leaves
-    // behind a black box (Chrome 27.0.1453.116)
-    self.nav.hide();
-    var blah = self.nav.width();
-    self.nav.show();
+    this.nav.removeClass(this.closeButton.data("effeckt-type"));
+    this.nav.removeClass("effeckt-hide");
+    this.nav.removeData("effeckt-needs-hide-class");
 
     $("html").removeClass("md-perspective");
   },
@@ -170,7 +159,7 @@ var EffecktOffScreenNav = {
 
     var self = this;
 
-    this.nav.find('h4').on('click', function(e){
+    this.nav.find('h4').on( Effeckt.buttonPressedEvent, function(e){
       e.preventDefault();
 
       if ( self.nav.hasClass('shown') ) {
@@ -216,7 +205,7 @@ var EffecktOffScreenNav = {
 
     var self = this;
 
-    this.nav.find('h4').on('click', function(e){
+    this.nav.find('h4').on( Effeckt.buttonPressedEvent, function(e){
       e.preventDefault();
 
       if ( self.nav.hasClass('shown') ) {
@@ -261,7 +250,7 @@ var EffecktOffScreenNav = {
   _endCardDeck: function() {
     var li = this.nav.find('li');
     li.removeAttr('style');
-    this.nav.find('h4').off('click');
+    this.nav.find('h4').off( Effeckt.buttonPressedEvent );
   },
 
   // This check if the method exists first

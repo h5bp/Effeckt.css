@@ -20,8 +20,10 @@
   backface-visibility: hidden;
   transform: translate3d(0, 0, 0);
   transform-style: preserve-3d;
+  display: none;
 
   &.effeckt-page-active {
+    display: block;
     visibility: visible;
     z-index:10;
   }

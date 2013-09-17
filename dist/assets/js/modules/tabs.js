@@ -13,8 +13,6 @@ var Tabs = {
   tabsClass:      '.effeckt-tabs a.effeckt-tab',
   tabContentClass:'.effeckt-tab-content',
 
-  isTouchDevice: Modernizr.touch,
-
   init: function() {
 
     this.initComponent();
@@ -48,10 +46,9 @@ var Tabs = {
   bindUIActions: function() {
 
     //keep a reference to this (Tabs) object.
-    var self = this,
-        evt  = ( this.isTouchDevice ) ? 'touchstart' : 'click';
+    var self = this;
 
-    $(this.tabsClass).on(evt, function(e) {
+    $(this.tabsClass).on( Effeckt.buttonPressedEvent, function(e) {
       e.preventDefault();
       self.showTab(this);
     });

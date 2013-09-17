@@ -1,5 +1,8 @@
 @import "../_variables";
 
+// TODO: translateX(-260px) or translateY(-260px) need to be nav size
+// this need to be handle by JS or CSS Variable
+
 // Also used in modals
 // Class name required for some body 3D effects
 // Should probably be renamed, "md" is kinda meaningless
@@ -25,9 +28,8 @@
 // 1 Left Overlay
 .effeckt-off-screen-nav-left-overlay {
   transform: translateX(-100%);
-  //preview http://cubic-bezier.com/#.09,.68,0,.99
   transition: $effeckt-off-screen-navigation-transition-duration cubic-bezier(.09,.68,0,.99);
-  // preview http://cubic-bezier.com/#.09,.68,0,.99
+  
   &.effeckt-show {
     transform: translateX(0);
   }
@@ -42,12 +44,14 @@
 
   &.effeckt-show {
     transform: translateX(0);
-    ~ [data-effeckt-page] {
+    ~ [data-effeckt-page].effeckt-page-active {
       transform: translateX(12rem);
     }
   }
-  ~ [data-effeckt-page] {
+
+  ~ [data-effeckt-page].effeckt-page-active {
     transition: $effeckt-off-screen-navigation-transition-duration;
+    transform: translateX(0);
   }
 }
 
@@ -182,9 +186,9 @@
   transition: $effeckt-off-screen-navigation-transition-duration;
   transform: translateX(-100%) scale(1.01) rotateY(-30deg);
 
-  ~ [data-effeckt-page] {
+  ~ [data-effeckt-page].effeckt-page-active {
     transform-origin: 0 50%;
-    transition: 0.5s;
+    transition: $effeckt-off-screen-navigation-transition-duration;
   }
 
   ~ .effeckt-overlay {
@@ -195,7 +199,7 @@
   &.effeckt-show {
     transform: none;
 
-    ~ [data-effeckt-page] {
+    ~ [data-effeckt-page].effeckt-page-active {
       transform: translateX(260px) rotateY(15deg);
       
       // Prevent scrolling
@@ -376,11 +380,11 @@
   right: 0;
   transform-origin: 100% 50%;
   transition: $effeckt-off-screen-navigation-transition-duration;
-  transform: rotateY(30deg) translateX(100%) translateX(-2px) scale(1.01);
+  transform: rotateY(30deg) translateX(100%) scale(1.01);
 
   ~ [data-effeckt-page] {
     transform-origin: 100% 50%;
-    transition: 0.5s;
+    transition: $effeckt-off-screen-navigation-transition-duration;
   }
 
   ~ .effeckt-overlay {
@@ -508,13 +512,16 @@
 // 19.1 Left Bounce
 .effeckt-off-screen-nav-left-bounce {
   transition: $effeckt-off-screen-navigation-transition-duration;
+  transform: translateX(-100%);
 
   &.effeckt-show {
     visibility: visible;
+    transform: translateX(0%);
     animation: navFromLeftBounceIn $effeckt-off-screen-navigation-transition-duration both ease;
   }
 
   &.effeckt-hide {
+    transform: translateX(-100%);
     animation: navFromLeftBounceOut $effeckt-off-screen-navigation-transition-duration both ease;
   }
 }
@@ -590,5 +597,86 @@
 
   &.effeckt-hide {
     animation: navFromRightBounceOut $effeckt-off-screen-navigation-transition-duration both ease;
+  }
+}
+
+
+// 21 Rotate from Bottom
+.effeckt-off-screen-nav-bottom-rotate {
+  top: auto;
+  width: 100%;
+  transform-origin: 100% 50%;
+  transition: $effeckt-off-screen-navigation-transition-duration;
+  transform: translateY(100%) scale(1.01) rotateX(-30deg);
+
+  ~ [data-effeckt-page].effeckt-page-active {
+    transform-origin: 0% 100%;
+    transition: $effeckt-off-screen-navigation-transition-duration;
+  }
+
+  ~ .effeckt-overlay {
+    z-index:900;
+    visibility: visible;
+  }
+
+  &.effeckt-show {
+    transform: none;
+
+    ~ [data-effeckt-page].effeckt-page-active {
+      transform: translateY(-260px) rotateX(15deg);
+      
+      // Prevent scrolling
+      overflow: hidden;
+    }
+
+    // dont nest > 3 levels deep
+    ~ [data-effeckt-page] .off-screen-nav-cover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+  }
+}
+
+// 22 Rotate from Top
+.effeckt-off-screen-nav-top-rotate {
+  bottom: auto;
+  width: 100%;
+  transform-origin: 50% 0%;
+  transition: $effeckt-off-screen-navigation-transition-duration;
+  transform: translateY(-100%) scale(1.01) rotateX(30deg);
+
+  ~ [data-effeckt-page].effeckt-page-active {
+    transform-origin: 100% 0%;
+    transition: $effeckt-off-screen-navigation-transition-duration;
+  }
+
+  ~ .effeckt-overlay {
+    z-index:900;
+    visibility: visible;
+  }
+
+  &.effeckt-show {
+    transform: none;
+
+    ~ [data-effeckt-page].effeckt-page-active {
+      transform: translateY(260px) rotateX(-15deg);
+      
+      // Prevent scrolling
+      overflow: hidden;
+    }
+
+    // dont nest > 3 levels deep
+    ~ [data-effeckt-page] .off-screen-nav-cover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
   }
 }
