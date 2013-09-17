@@ -19,9 +19,7 @@ var EffecktPageTransitions = {
 
     var $pages = $('[data-effeckt-page]');
 
-    //$pages.hide();
     this.fromPage = $pages.first().addClass('effeckt-page-active');
-    //this.fromPage.show();
 
   },
 
@@ -65,12 +63,10 @@ var EffecktPageTransitions = {
     this.toPage   = $('[data-effeckt-page="' + transitionPage + '"]');
 
     // Add this class to prevent scroll to be displayed
-    this.toPage.addClass('effeckt-page-animating effeckt-page-active ' + this.transitionInEffect);//.show();
+    this.toPage.addClass('effeckt-page-animating effeckt-page-active ' + this.transitionInEffect);
     this.fromPage.addClass('effeckt-page-animating');
 
     // Set Transition Class
-    //this.toPage.show().addClass('effeckt-page-active');
-    //this.toPage.addClass(this.transitionInEffect);
     this.fromPage.addClass(this.transitionOutEffect);
     
     var self= this;
@@ -105,13 +101,7 @@ var EffecktPageTransitions = {
     this.isNextPageEnd = false;
 
     this.fromPage.removeClass('effeckt-page-animating effeckt-page-active ' + this.transitionOutEffect);//.hide();
-    //this.fromPage.removeClass('effeckt-page-active');
     this.toPage.removeClass('effeckt-page-animating ' + this.transitionInEffect);
-
-    //this.fromPage.hide();
-    //this.fromPage.removeClass(this.transitionOutEffect);
-
-    //this.toPage.removeClass(this.transitionInEffect);
 
     $("html").removeClass("md-perspective");
   }

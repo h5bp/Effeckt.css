@@ -86,14 +86,8 @@ var EffecktPositionalModals = {
     }
 
     // todo: ensure is on top here.
-
-    // ghetto, should fix
-    //setTimeout(function() {
-
-      // apply effect
-      modal.addClass('effeckt-show');
-
-    //}, 50);
+    // apply effect
+    modal.addClass('effeckt-show');
 
   },
 

@@ -63,9 +63,7 @@ var EffecktModals = {
       self.modalWrap.addClass("effeckt-show");
 
       if (button.data("effeckt-needs-perspective")) {
-      //setTimeout(function () {
         $("html").addClass("md-perspective");
-      //}, 50);
       }
     });
 
