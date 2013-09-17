@@ -228,7 +228,7 @@
 
   // Effect 10 - Revolving Door
   // BUG: Super flickery in Safari 5.1.7 on Windows 7
-  &[data-effeckt-type="revolving-door"] {
+  &[data-effeckt-type="revolving-door-left"] {
     overflow: visible;
     figcaption {
       top: 0;
@@ -248,6 +248,78 @@
       }
       img {
         transform: perspective(1300px) rotateY(-180deg);
+      }
+    }
+  }
+
+  &[data-effeckt-type="revolving-door-right"] {
+    overflow: visible;
+    figcaption {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform: perspective(1300px) rotateY(180deg);
+      backface-visibility: hidden;
+    }
+    img {
+      transform: perspective(1300px);
+      transition: $effeckt-caption-transition-duration;
+    }
+    &:hover, &:active {
+      figcaption {
+        transform: perspective(1300px) rotateY(360deg);
+      }
+      img {
+        transform: perspective(1300px) rotateY(180deg);
+      }
+    }
+  }
+
+  &[data-effeckt-type="revolving-door-top"] {
+    overflow: visible;
+    figcaption {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform: perspective(1300px) rotateX(180deg);
+      backface-visibility: hidden;
+    }
+    img {
+      transform: perspective(1300px);
+      transition: $effeckt-caption-transition-duration;
+    }
+    &:hover, &:active {
+      figcaption {
+        transform: perspective(1300px) rotateX(360deg);
+      }
+      img {
+        transform: perspective(1300px) rotateX(180deg);
+      }
+    }
+  }
+
+  &[data-effeckt-type="revolving-door-bottom"] {
+    overflow: visible;
+    figcaption {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform: perspective(1300px) rotateX(180deg);
+      backface-visibility: hidden;
+    }
+    img {
+      transform: perspective(1300px);
+      transition: $effeckt-caption-transition-duration;
+    }
+    &:hover, &:active {
+      figcaption {
+        transform: perspective(1300px) rotateX(0deg);
+      }
+      img {
+        transform: perspective(1300px) rotateX(-180deg);
       }
     }
   }

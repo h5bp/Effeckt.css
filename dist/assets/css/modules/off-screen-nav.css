@@ -279,10 +279,10 @@
   right: 0;
   transform-origin: 100% 50%;
   transition: 500ms;
-  transform: rotateY(30deg) translateX(100%) translateX(-2px) scale(1.01); }
+  transform: rotateY(30deg) translateX(100%) scale(1.01); }
   .effeckt-off-screen-nav-right-rotate ~ [data-effeckt-page] {
     transform-origin: 100% 50%;
-    transition: 0.5s; }
+    transition: 500ms; }
   .effeckt-off-screen-nav-right-rotate ~ .effeckt-overlay {
     z-index: 900;
     visibility: visible; }
@@ -464,3 +464,51 @@
     transform: translateY(0%); }
   .effeckt-off-screen-nav-right-bounce-out.effeckt-hide {
     animation: navFromRightBounceOut 500ms both ease; }
+
+.effeckt-off-screen-nav-bottom-rotate {
+  top: auto;
+  width: 100%;
+  transform-origin: 100% 50%;
+  transition: 500ms;
+  transform: translateY(100%) scale(1.01) rotateX(-30deg); }
+  .effeckt-off-screen-nav-bottom-rotate ~ [data-effeckt-page].effeckt-page-active {
+    transform-origin: 0% 100%;
+    transition: 500ms; }
+  .effeckt-off-screen-nav-bottom-rotate ~ .effeckt-overlay {
+    z-index: 900;
+    visibility: visible; }
+  .effeckt-off-screen-nav-bottom-rotate.effeckt-show {
+    transform: none; }
+    .effeckt-off-screen-nav-bottom-rotate.effeckt-show ~ [data-effeckt-page].effeckt-page-active {
+      transform: translateY(-260px) rotateX(15deg);
+      overflow: hidden; }
+    .effeckt-off-screen-nav-bottom-rotate.effeckt-show ~ [data-effeckt-page] .off-screen-nav-cover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
+
+.effeckt-off-screen-nav-top-rotate {
+  bottom: auto;
+  width: 100%;
+  transform-origin: 50% 0%;
+  transition: 500ms;
+  transform: translateY(-100%) scale(1.01) rotateX(30deg); }
+  .effeckt-off-screen-nav-top-rotate ~ [data-effeckt-page].effeckt-page-active {
+    transform-origin: 100% 0%;
+    transition: 500ms; }
+  .effeckt-off-screen-nav-top-rotate ~ .effeckt-overlay {
+    z-index: 900;
+    visibility: visible; }
+  .effeckt-off-screen-nav-top-rotate.effeckt-show {
+    transform: none; }
+    .effeckt-off-screen-nav-top-rotate.effeckt-show ~ [data-effeckt-page].effeckt-page-active {
+      transform: translateY(260px) rotateX(-15deg);
+      overflow: hidden; }
+    .effeckt-off-screen-nav-top-rotate.effeckt-show ~ [data-effeckt-page] .off-screen-nav-cover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }

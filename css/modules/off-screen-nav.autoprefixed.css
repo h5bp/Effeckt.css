@@ -803,10 +803,10 @@
   -webkit-transition: 500ms;
   -o-transition: 500ms;
   transition: 500ms;
-  -webkit-transform: rotateY(30deg) translateX(100%) translateX(-2px) scale(1.01);
-  -ms-transform: rotateY(30deg) translateX(100%) translateX(-2px) scale(1.01);
-  -o-transform: rotateY(30deg) translateX(100%) translateX(-2px) scale(1.01);
-  transform: rotateY(30deg) translateX(100%) translateX(-2px) scale(1.01);
+  -webkit-transform: rotateY(30deg) translateX(100%) scale(1.01);
+  -ms-transform: rotateY(30deg) translateX(100%) scale(1.01);
+  -o-transform: rotateY(30deg) translateX(100%) scale(1.01);
+  transform: rotateY(30deg) translateX(100%) scale(1.01);
 }
 
 .effeckt-off-screen-nav-right-rotate ~ [data-effeckt-page] {
@@ -814,9 +814,9 @@
   -ms-transform-origin: 100% 50%;
   -o-transform-origin: 100% 50%;
   transform-origin: 100% 50%;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
 }
 
 .effeckt-off-screen-nav-right-rotate ~ .effeckt-overlay {
@@ -1383,4 +1383,112 @@
   -webkit-animation: navFromRightBounceOut 500ms both ease;
   -o-animation: navFromRightBounceOut 500ms both ease;
   animation: navFromRightBounceOut 500ms both ease;
+}
+
+.effeckt-off-screen-nav-bottom-rotate {
+  top: auto;
+  width: 100%;
+  -webkit-transform-origin: 100% 50%;
+  -ms-transform-origin: 100% 50%;
+  -o-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+  -webkit-transform: translateY(100%) scale(1.01) rotateX(-30deg);
+  -ms-transform: translateY(100%) scale(1.01) rotateX(-30deg);
+  -o-transform: translateY(100%) scale(1.01) rotateX(-30deg);
+  transform: translateY(100%) scale(1.01) rotateX(-30deg);
+}
+
+.effeckt-off-screen-nav-bottom-rotate ~ [data-effeckt-page].effeckt-page-active {
+  -webkit-transform-origin: 0% 100%;
+  -ms-transform-origin: 0% 100%;
+  -o-transform-origin: 0% 100%;
+  transform-origin: 0% 100%;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+}
+
+.effeckt-off-screen-nav-bottom-rotate ~ .effeckt-overlay {
+  z-index: 900;
+  visibility: visible;
+}
+
+.effeckt-off-screen-nav-bottom-rotate.effeckt-show {
+  -webkit-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+}
+
+.effeckt-off-screen-nav-bottom-rotate.effeckt-show ~ [data-effeckt-page].effeckt-page-active {
+  -webkit-transform: translateY(-260px) rotateX(15deg);
+  -ms-transform: translateY(-260px) rotateX(15deg);
+  -o-transform: translateY(-260px) rotateX(15deg);
+  transform: translateY(-260px) rotateX(15deg);
+  overflow: hidden;
+}
+
+.effeckt-off-screen-nav-bottom-rotate.effeckt-show ~ [data-effeckt-page] .off-screen-nav-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.effeckt-off-screen-nav-top-rotate {
+  bottom: auto;
+  width: 100%;
+  -webkit-transform-origin: 50% 0%;
+  -ms-transform-origin: 50% 0%;
+  -o-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+  -webkit-transform: translateY(-100%) scale(1.01) rotateX(30deg);
+  -ms-transform: translateY(-100%) scale(1.01) rotateX(30deg);
+  -o-transform: translateY(-100%) scale(1.01) rotateX(30deg);
+  transform: translateY(-100%) scale(1.01) rotateX(30deg);
+}
+
+.effeckt-off-screen-nav-top-rotate ~ [data-effeckt-page].effeckt-page-active {
+  -webkit-transform-origin: 100% 0%;
+  -ms-transform-origin: 100% 0%;
+  -o-transform-origin: 100% 0%;
+  transform-origin: 100% 0%;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+}
+
+.effeckt-off-screen-nav-top-rotate ~ .effeckt-overlay {
+  z-index: 900;
+  visibility: visible;
+}
+
+.effeckt-off-screen-nav-top-rotate.effeckt-show {
+  -webkit-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+}
+
+.effeckt-off-screen-nav-top-rotate.effeckt-show ~ [data-effeckt-page].effeckt-page-active {
+  -webkit-transform: translateY(260px) rotateX(-15deg);
+  -ms-transform: translateY(260px) rotateX(-15deg);
+  -o-transform: translateY(260px) rotateX(-15deg);
+  transform: translateY(260px) rotateX(-15deg);
+  overflow: hidden;
+}
+
+.effeckt-off-screen-nav-top-rotate.effeckt-show ~ [data-effeckt-page] .off-screen-nav-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
