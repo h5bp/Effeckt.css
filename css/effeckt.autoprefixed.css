@@ -4284,17 +4284,21 @@ Example markup:
   transform: translateX(0);
 }
 
-.effeckt-off-screen-nav-left-push.effeckt-show ~ [data-effeckt-page] {
+.effeckt-off-screen-nav-left-push.effeckt-show ~ [data-effeckt-page].effeckt-page-active {
   -webkit-transform: translateX(12rem);
   -ms-transform: translateX(12rem);
   -o-transform: translateX(12rem);
   transform: translateX(12rem);
 }
 
-.effeckt-off-screen-nav-left-push ~ [data-effeckt-page] {
+.effeckt-off-screen-nav-left-push ~ [data-effeckt-page].effeckt-page-active {
   -webkit-transition: 500ms;
   -o-transition: 500ms;
   transition: 500ms;
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
 }
 
 .effeckt-off-screen-nav-left-reveal {
@@ -4505,14 +4509,14 @@ Example markup:
   transform: translateX(-100%) scale(1.01) rotateY(-30deg);
 }
 
-.effeckt-off-screen-nav-left-rotate ~ [data-effeckt-page] {
+.effeckt-off-screen-nav-left-rotate ~ [data-effeckt-page].effeckt-page-active {
   -webkit-transform-origin: 0 50%;
   -ms-transform-origin: 0 50%;
   -o-transform-origin: 0 50%;
   transform-origin: 0 50%;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
 }
 
 .effeckt-off-screen-nav-left-rotate ~ .effeckt-overlay {
@@ -4527,7 +4531,7 @@ Example markup:
   transform: none;
 }
 
-.effeckt-off-screen-nav-left-rotate.effeckt-show ~ [data-effeckt-page] {
+.effeckt-off-screen-nav-left-rotate.effeckt-show ~ [data-effeckt-page].effeckt-page-active {
   -webkit-transform: translateX(260px) rotateY(15deg);
   -ms-transform: translateX(260px) rotateY(15deg);
   -o-transform: translateX(260px) rotateY(15deg);
@@ -5234,16 +5238,28 @@ Example markup:
   -webkit-transition: 500ms;
   -o-transition: 500ms;
   transition: 500ms;
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
 }
 
 .effeckt-off-screen-nav-left-bounce.effeckt-show {
   visibility: visible;
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  -o-transform: translateX(0%);
+  transform: translateX(0%);
   -webkit-animation: navFromLeftBounceIn 500ms both ease;
   -o-animation: navFromLeftBounceIn 500ms both ease;
   animation: navFromLeftBounceIn 500ms both ease;
 }
 
 .effeckt-off-screen-nav-left-bounce.effeckt-hide {
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
   -webkit-animation: navFromLeftBounceOut 500ms both ease;
   -o-animation: navFromLeftBounceOut 500ms both ease;
   animation: navFromLeftBounceOut 500ms both ease;
@@ -5626,9 +5642,11 @@ Example markup:
   -ms-transform-style: preserve-3d;
   -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
+  display: none;
 }
 
 [data-effeckt-page].effeckt-page-active {
+  display: block;
   visibility: visible;
   z-index: 10;
 }

@@ -25,9 +25,8 @@
 // 1 Left Overlay
 .effeckt-off-screen-nav-left-overlay {
   transform: translateX(-100%);
-  //preview http://cubic-bezier.com/#.09,.68,0,.99
   transition: $effeckt-off-screen-navigation-transition-duration cubic-bezier(.09,.68,0,.99);
-  // preview http://cubic-bezier.com/#.09,.68,0,.99
+  
   &.effeckt-show {
     transform: translateX(0);
   }
@@ -42,12 +41,14 @@
 
   &.effeckt-show {
     transform: translateX(0);
-    ~ [data-effeckt-page] {
+    ~ [data-effeckt-page].effeckt-page-active {
       transform: translateX(12rem);
     }
   }
-  ~ [data-effeckt-page] {
+
+  ~ [data-effeckt-page].effeckt-page-active {
     transition: $effeckt-off-screen-navigation-transition-duration;
+    transform: translateX(0);
   }
 }
 
@@ -182,9 +183,9 @@
   transition: $effeckt-off-screen-navigation-transition-duration;
   transform: translateX(-100%) scale(1.01) rotateY(-30deg);
 
-  ~ [data-effeckt-page] {
+  ~ [data-effeckt-page].effeckt-page-active {
     transform-origin: 0 50%;
-    transition: 0.5s;
+    transition: $effeckt-off-screen-navigation-transition-duration;
   }
 
   ~ .effeckt-overlay {
@@ -195,7 +196,7 @@
   &.effeckt-show {
     transform: none;
 
-    ~ [data-effeckt-page] {
+    ~ [data-effeckt-page].effeckt-page-active {
       transform: translateX(260px) rotateY(15deg);
       
       // Prevent scrolling
@@ -508,13 +509,16 @@
 // 19.1 Left Bounce
 .effeckt-off-screen-nav-left-bounce {
   transition: $effeckt-off-screen-navigation-transition-duration;
+  transform: translateX(-100%);
 
   &.effeckt-show {
     visibility: visible;
+    transform: translateX(0%);
     animation: navFromLeftBounceIn $effeckt-off-screen-navigation-transition-duration both ease;
   }
 
   &.effeckt-hide {
+    transform: translateX(-100%);
     animation: navFromLeftBounceOut $effeckt-off-screen-navigation-transition-duration both ease;
   }
 }

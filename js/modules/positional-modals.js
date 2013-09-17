@@ -4,8 +4,6 @@ var EffecktPositionalModals = {
   modalCloseButtonClass: '.effeckt-modal-close',
   modalWrapClass: 'effeckt-positional-modal-wrap',
 
-  isTouchDevice: Modernizr.touch,
-
   modalsList: [],
 
   init: function() {
@@ -13,15 +11,14 @@ var EffecktPositionalModals = {
   },
 
   bindUIActions: function() {
-    var self = this,
-        evt  = ( this.isTouchDevice ) ? 'touchstart' : 'click';
+    var self = this;
 
-    $(this.modalButtonClass).on(evt, function(e) {
+    $(this.modalButtonClass).on( Effeckt.buttonPressedEvent, function(e) {
       e.preventDefault();
       self.openModal($(this));
     });
 
-    $(document).on(evt, this.modalCloseButtonClass, function(e) {
+    $(document).on( Effeckt.buttonPressedEvent, this.modalCloseButtonClass, function(e) {
       e.preventDefault();
       self.close($(this));
     });
@@ -91,26 +88,26 @@ var EffecktPositionalModals = {
     // todo: ensure is on top here.
 
     // ghetto, should fix
-    setTimeout(function() {
+    //setTimeout(function() {
 
       // apply effect
       modal.addClass('effeckt-show');
 
-    }, 50);
+    //}, 50);
 
   },
 
   close: function($el) {
 
-    var evt = EffecktDemos.animationEndEventName + ' ' + EffecktDemos.transitionEndEventName,
-        self = this;
+    var self = this;
 
     var modal = $el.parents('[class~="'+this.modalWrapClass+'"]'),
         sender = this.getSenderButton(modal);
 
     modal.removeClass("effeckt-show");
 
-    modal.on(evt, function() {
+    modal.on( Effeckt.transitionAnimationEndEvent, function() {
+      modal.off( Effeckt.transitionAnimationEndEvent );
       modal.hide().remove();
     });
 

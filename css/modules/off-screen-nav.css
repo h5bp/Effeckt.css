@@ -19,10 +19,11 @@
   transition: 500ms; }
   .effeckt-off-screen-nav-left-push.effeckt-show {
     transform: translateX(0); }
-    .effeckt-off-screen-nav-left-push.effeckt-show ~ [data-effeckt-page] {
+    .effeckt-off-screen-nav-left-push.effeckt-show ~ [data-effeckt-page].effeckt-page-active {
       transform: translateX(12rem); }
-  .effeckt-off-screen-nav-left-push ~ [data-effeckt-page] {
-    transition: 500ms; }
+  .effeckt-off-screen-nav-left-push ~ [data-effeckt-page].effeckt-page-active {
+    transition: 500ms;
+    transform: translateX(0); }
 
 .effeckt-off-screen-nav-left-reveal {
   width: 0px;
@@ -114,15 +115,15 @@
   transform-origin: 100% 50%;
   transition: 500ms;
   transform: translateX(-100%) scale(1.01) rotateY(-30deg); }
-  .effeckt-off-screen-nav-left-rotate ~ [data-effeckt-page] {
+  .effeckt-off-screen-nav-left-rotate ~ [data-effeckt-page].effeckt-page-active {
     transform-origin: 0 50%;
-    transition: 0.5s; }
+    transition: 500ms; }
   .effeckt-off-screen-nav-left-rotate ~ .effeckt-overlay {
     z-index: 900;
     visibility: visible; }
   .effeckt-off-screen-nav-left-rotate.effeckt-show {
     transform: none; }
-    .effeckt-off-screen-nav-left-rotate.effeckt-show ~ [data-effeckt-page] {
+    .effeckt-off-screen-nav-left-rotate.effeckt-show ~ [data-effeckt-page].effeckt-page-active {
       transform: translateX(260px) rotateY(15deg);
       overflow: hidden; }
     .effeckt-off-screen-nav-left-rotate.effeckt-show ~ [data-effeckt-page] .off-screen-nav-cover {
@@ -366,11 +367,14 @@
       transform: translateY(300px); }
 
 .effeckt-off-screen-nav-left-bounce {
-  transition: 500ms; }
+  transition: 500ms;
+  transform: translateX(-100%); }
   .effeckt-off-screen-nav-left-bounce.effeckt-show {
     visibility: visible;
+    transform: translateX(0%);
     animation: navFromLeftBounceIn 500ms both ease; }
   .effeckt-off-screen-nav-left-bounce.effeckt-hide {
+    transform: translateX(-100%);
     animation: navFromLeftBounceOut 500ms both ease; }
 
 @keyframes navFromLeftBounceIn {
