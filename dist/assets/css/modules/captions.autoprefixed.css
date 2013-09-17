@@ -285,11 +285,11 @@
   transform: scale(1.1);
 }
 
-.effeckt-caption[data-effeckt-type="revolving-door"] {
+.effeckt-caption[data-effeckt-type="revolving-door-left"] {
   overflow: visible;
 }
 
-.effeckt-caption[data-effeckt-type="revolving-door"] figcaption {
+.effeckt-caption[data-effeckt-type="revolving-door-left"] figcaption {
   top: 0;
   left: 0;
   width: 100%;
@@ -304,7 +304,7 @@
   backface-visibility: hidden;
 }
 
-.effeckt-caption[data-effeckt-type="revolving-door"] img {
+.effeckt-caption[data-effeckt-type="revolving-door-left"] img {
   -webkit-transform: perspective(1300px);
   -ms-transform: perspective(1300px);
   -o-transform: perspective(1300px);
@@ -314,20 +314,155 @@
   transition: 500ms;
 }
 
-.effeckt-caption[data-effeckt-type="revolving-door"]:hover figcaption,
-.effeckt-caption[data-effeckt-type="revolving-door"]:active figcaption {
+.effeckt-caption[data-effeckt-type="revolving-door-left"]:hover figcaption,
+.effeckt-caption[data-effeckt-type="revolving-door-left"]:active figcaption {
   -webkit-transform: perspective(1300px) rotateY(0deg);
   -ms-transform: perspective(1300px) rotateY(0deg);
   -o-transform: perspective(1300px) rotateY(0deg);
   transform: perspective(1300px) rotateY(0deg);
 }
 
-.effeckt-caption[data-effeckt-type="revolving-door"]:hover img,
-.effeckt-caption[data-effeckt-type="revolving-door"]:active img {
+.effeckt-caption[data-effeckt-type="revolving-door-left"]:hover img,
+.effeckt-caption[data-effeckt-type="revolving-door-left"]:active img {
   -webkit-transform: perspective(1300px) rotateY(-180deg);
   -ms-transform: perspective(1300px) rotateY(-180deg);
   -o-transform: perspective(1300px) rotateY(-180deg);
   transform: perspective(1300px) rotateY(-180deg);
+}
+
+.effeckt-caption[data-effeckt-type="revolving-door-right"] {
+  overflow: visible;
+}
+
+.effeckt-caption[data-effeckt-type="revolving-door-right"] figcaption {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: perspective(1300px) rotateY(180deg);
+  -ms-transform: perspective(1300px) rotateY(180deg);
+  -o-transform: perspective(1300px) rotateY(180deg);
+  transform: perspective(1300px) rotateY(180deg);
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.effeckt-caption[data-effeckt-type="revolving-door-right"] img {
+  -webkit-transform: perspective(1300px);
+  -ms-transform: perspective(1300px);
+  -o-transform: perspective(1300px);
+  transform: perspective(1300px);
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+}
+
+.effeckt-caption[data-effeckt-type="revolving-door-right"]:hover figcaption,
+.effeckt-caption[data-effeckt-type="revolving-door-right"]:active figcaption {
+  -webkit-transform: perspective(1300px) rotateY(360deg);
+  -ms-transform: perspective(1300px) rotateY(360deg);
+  -o-transform: perspective(1300px) rotateY(360deg);
+  transform: perspective(1300px) rotateY(360deg);
+}
+
+.effeckt-caption[data-effeckt-type="revolving-door-right"]:hover img,
+.effeckt-caption[data-effeckt-type="revolving-door-right"]:active img {
+  -webkit-transform: perspective(1300px) rotateY(180deg);
+  -ms-transform: perspective(1300px) rotateY(180deg);
+  -o-transform: perspective(1300px) rotateY(180deg);
+  transform: perspective(1300px) rotateY(180deg);
+}
+
+.effeckt-caption[data-effeckt-type="revolving-door-top"] {
+  overflow: visible;
+}
+
+.effeckt-caption[data-effeckt-type="revolving-door-top"] figcaption {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: perspective(1300px) rotateX(180deg);
+  -ms-transform: perspective(1300px) rotateX(180deg);
+  -o-transform: perspective(1300px) rotateX(180deg);
+  transform: perspective(1300px) rotateX(180deg);
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.effeckt-caption[data-effeckt-type="revolving-door-top"] img {
+  -webkit-transform: perspective(1300px);
+  -ms-transform: perspective(1300px);
+  -o-transform: perspective(1300px);
+  transform: perspective(1300px);
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+}
+
+.effeckt-caption[data-effeckt-type="revolving-door-top"]:hover figcaption,
+.effeckt-caption[data-effeckt-type="revolving-door-top"]:active figcaption {
+  -webkit-transform: perspective(1300px) rotateX(360deg);
+  -ms-transform: perspective(1300px) rotateX(360deg);
+  -o-transform: perspective(1300px) rotateX(360deg);
+  transform: perspective(1300px) rotateX(360deg);
+}
+
+.effeckt-caption[data-effeckt-type="revolving-door-top"]:hover img,
+.effeckt-caption[data-effeckt-type="revolving-door-top"]:active img {
+  -webkit-transform: perspective(1300px) rotateX(180deg);
+  -ms-transform: perspective(1300px) rotateX(180deg);
+  -o-transform: perspective(1300px) rotateX(180deg);
+  transform: perspective(1300px) rotateX(180deg);
+}
+
+.effeckt-caption[data-effeckt-type="revolving-door-bottom"] {
+  overflow: visible;
+}
+
+.effeckt-caption[data-effeckt-type="revolving-door-bottom"] figcaption {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: perspective(1300px) rotateX(180deg);
+  -ms-transform: perspective(1300px) rotateX(180deg);
+  -o-transform: perspective(1300px) rotateX(180deg);
+  transform: perspective(1300px) rotateX(180deg);
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.effeckt-caption[data-effeckt-type="revolving-door-bottom"] img {
+  -webkit-transform: perspective(1300px);
+  -ms-transform: perspective(1300px);
+  -o-transform: perspective(1300px);
+  transform: perspective(1300px);
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+}
+
+.effeckt-caption[data-effeckt-type="revolving-door-bottom"]:hover figcaption,
+.effeckt-caption[data-effeckt-type="revolving-door-bottom"]:active figcaption {
+  -webkit-transform: perspective(1300px) rotateX(0deg);
+  -ms-transform: perspective(1300px) rotateX(0deg);
+  -o-transform: perspective(1300px) rotateX(0deg);
+  transform: perspective(1300px) rotateX(0deg);
+}
+
+.effeckt-caption[data-effeckt-type="revolving-door-bottom"]:hover img,
+.effeckt-caption[data-effeckt-type="revolving-door-bottom"]:active img {
+  -webkit-transform: perspective(1300px) rotateX(-180deg);
+  -ms-transform: perspective(1300px) rotateX(-180deg);
+  -o-transform: perspective(1300px) rotateX(-180deg);
+  transform: perspective(1300px) rotateX(-180deg);
 }
 
 .effeckt-caption[data-effeckt-type="offset"] {

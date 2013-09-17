@@ -10,8 +10,10 @@
   padding: 2rem 4rem 0;
   backface-visibility: hidden;
   transform: translate3d(0, 0, 0);
-  transform-style: preserve-3d; }
+  transform-style: preserve-3d;
+  display: none; }
   [data-effeckt-page].effeckt-page-active {
+    display: block;
     visibility: visible;
     z-index: 10; }
   [data-effeckt-page].effeckt-page-animating {

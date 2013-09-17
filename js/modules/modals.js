@@ -16,7 +16,6 @@ var EffecktModals = {
   modalWrap: $("#effeckt-modal-wrap"),
   modal: $("#effeckt-modal"),
   modalStyle: "",
-  isTouchDevice: Modernizr.touch,
 
   init: function() {
     this.bindUIActions();
@@ -24,18 +23,17 @@ var EffecktModals = {
 
   bindUIActions: function() {
 
-    var self = this,
-        evt  = ( this.isTouchDevice ) ? 'touchstart' : 'click';
+    var self = this;
 
-    $(".effeckt-modal-button").on(evt, function() {
+    $(".effeckt-modal-button").on( Effeckt.buttonPressedEvent, function() {
       self.openModal(this);
     });
 
-    $(".effeckt-modal-close").on(evt, function() {
+    $(".effeckt-modal-close").on( Effeckt.buttonPressedEvent, function() {
       self.closeModal(this);
     });
 
-    $(".effeckt-overlay").on(evt, function() {
+    $(".effeckt-overlay").on( Effeckt.buttonPressedEvent, function() {
       self.closeModal();
     });
 
@@ -56,18 +54,17 @@ var EffecktModals = {
 
     this.modalWrap.addClass(this.modalStyle);
 
-    if (button.data("effeckt-needs-perspective")) {
-      setTimeout(function () {
-        $("html").addClass("md-perspective");
-      }, 50);
-    }
-
     this.modalWrap.data("effeckt-needs-hide-class", button.data("effeckt-needs-hide-class"));
 
-    var evt = EffecktDemos.animationEndEventName + ' ' + EffecktDemos.transitionEndEventName;
-    this.overlay.on(evt, function () {
+    
+    
+    this.overlay.on( Effeckt.transitionAnimationEndEvent, function () {
+      self.overlay.off( Effeckt.transitionAnimationEndEvent );
       self.modalWrap.addClass("effeckt-show");
-      self.overlay.off(evt);
+
+      if (button.data("effeckt-needs-perspective")) {
+        $("html").addClass("md-perspective");
+      }
     });
 
     this.showOverlay();
@@ -75,11 +72,10 @@ var EffecktModals = {
   },
 
   closeModal: function(el) {
-    var evt = EffecktDemos.animationEndEventName + ' ' + EffecktDemos.transitionEndEventName,
-        self = this;
+    var self = this;
 
-    this.modalWrap.on(evt, function () {
-      self.modalWrap.off(evt);
+    this.modalWrap.on( Effeckt.transitionAnimationEndEvent, function () {
+      self.modalWrap.off( Effeckt.transitionAnimationEndEvent );
       self.hideModal();
     });
 

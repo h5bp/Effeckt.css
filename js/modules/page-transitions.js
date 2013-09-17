@@ -8,8 +8,6 @@ var EffecktPageTransitions = {
   transitionInEffect: '',
   transitionOutEffect: '',
 
-  isTouchDevice: Modernizr.touch,
-
   init: function() {
 
     this.initPages();
@@ -21,18 +19,15 @@ var EffecktPageTransitions = {
 
     var $pages = $('[data-effeckt-page]');
 
-    $pages.hide();
     this.fromPage = $pages.first().addClass('effeckt-page-active');
-    this.fromPage.show();
 
   },
 
   bindUIActions: function() {
 
-    var self = this,
-        evt  = ( this.isTouchDevice ) ? 'touchstart' : 'click';
+    var self = this;
 
-    $('.effeckt-page-transition-button').on(evt, function(e){
+    $('.effeckt-page-transition-button').on( Effeckt.buttonPressedEvent, function(e){
 
       e.preventDefault();
 
@@ -64,26 +59,21 @@ var EffecktPageTransitions = {
     this.transitionOutEffect= transitionOutEffect;
 
     // Get Pages
-    this.fromPage = $('.effeckt-page-active');
+    this.fromPage = $('[data-effeckt-page].effeckt-page-active');
     this.toPage   = $('[data-effeckt-page="' + transitionPage + '"]');
 
     // Add this class to prevent scroll to be displayed
-    this.toPage.addClass('effeckt-page-animating');
+    this.toPage.addClass('effeckt-page-animating effeckt-page-active ' + this.transitionInEffect);
     this.fromPage.addClass('effeckt-page-animating');
 
     // Set Transition Class
-    this.toPage.show().addClass('effeckt-page-active');
-    this.toPage.addClass(this.transitionInEffect);
     this.fromPage.addClass(this.transitionOutEffect);
     
-    //event trigger after animation/transition end.
-    var evt = EffecktDemos.animationEndEventName + ' ' + EffecktDemos.transitionEndEventName,
-        self= this;
-
+    var self= this;
     
-    this.toPage.on(evt, function() {
+    this.toPage.on( Effeckt.transitionAnimationEndEvent, function() {
       
-      self.toPage.off(evt);
+      self.toPage.off( Effeckt.transitionAnimationEndEvent );
       self.isNextPageEnd = true;
 
       if ( self.isCurrentPageEnd ) {
@@ -91,9 +81,9 @@ var EffecktPageTransitions = {
       }
     });
 
-    this.fromPage.on(evt, function () {
+    this.fromPage.on( Effeckt.transitionAnimationEndEvent, function () {
 
-      self.fromPage.off(evt);
+      self.fromPage.off( Effeckt.transitionAnimationEndEvent );
       self.isCurrentPageEnd = true;
 
       if ( self.isNextPageEnd ) {
@@ -110,14 +100,8 @@ var EffecktPageTransitions = {
     this.isCurrentPageEnd = false;
     this.isNextPageEnd = false;
 
-    this.fromPage.removeClass('effeckt-page-animating');
-    this.fromPage.removeClass('effeckt-page-active');
-    this.toPage.removeClass('effeckt-page-animating');
-
-    this.fromPage.hide();
-    this.fromPage.removeClass(this.transitionOutEffect);
-
-    this.toPage.removeClass(this.transitionInEffect);
+    this.fromPage.removeClass('effeckt-page-animating effeckt-page-active ' + this.transitionOutEffect);//.hide();
+    this.toPage.removeClass('effeckt-page-animating ' + this.transitionInEffect);
 
     $("html").removeClass("md-perspective");
   }

@@ -8,36 +8,22 @@ var EffecktDemos = {
       $(".no-transitions").removeClass("no-transitions");
     });
 
-    EffecktDemos.transitionEndEventName = EffecktDemos.transitionEndEventNames[Modernizr.prefixed('transition')];
-    EffecktDemos.animationEndEventName = EffecktDemos.animationEndEventNames[Modernizr.prefixed('animation')];
-
     this.getContributorsData();
 
   },
 
-  animationEndEventNames: {
-    'WebkitAnimation' : 'webkitAnimationEnd',
-    'OAnimation' : 'oAnimationEnd',
-    'msAnimation' : 'MSAnimationEnd',
-    'animation' : 'animationend'
-  },
-
-  transitionEndEventNames: {
-    'WebkitTransition' : 'webkitTransitionEnd',
-    'OTransition' : 'oTransitionEnd',
-    'msTransition' : 'MSTransitionEnd',
-    'transition' : 'transitionend'
-  },
-
   getContributorsData: function() {
+
+    var self = this;
+
     $.ajax({
       type: 'GET',
-      url: EffecktDemos.contribURL,
+      url: this.contribURL,
       async: false,
       contentType: "application/json",
       dataType: 'jsonp',
       success: function(data){
-        EffecktDemos.listContributors(data.data);
+        self.listContributors(data.data);
       },
       error: function(e) {
         console.log(e.message);
