@@ -29,7 +29,7 @@
 .effeckt-off-screen-nav-left-overlay {
   transform: translateX(-100%);
   transition: $effeckt-off-screen-navigation-transition-duration cubic-bezier(.09,.68,0,.99);
-  
+
   &.effeckt-show {
     transform: translateX(0);
   }
@@ -201,7 +201,7 @@
 
     ~ [data-effeckt-page].effeckt-page-active {
       transform: translateX(260px) rotateY(15deg);
-      
+
       // Prevent scrolling
       overflow: hidden;
     }
@@ -397,7 +397,7 @@
 
     ~ [data-effeckt-page] {
       transform: translateX(-260px) rotateY(-15deg);
-      
+
       // Prevent scrolling
       overflow: hidden;
     }
@@ -427,7 +427,7 @@
   &.effeckt-show {
     transform: translateY(0%);
   }
-  
+
   h4 {
     position: relative;
     z-index: 300;
@@ -474,7 +474,7 @@
   &.effeckt-show {
     transform: translateY(0%);
   }
-  
+
   h4 {
     position: relative;
     z-index: 300;
@@ -624,7 +624,7 @@
 
     ~ [data-effeckt-page].effeckt-page-active {
       transform: translateY(-260px) rotateX(15deg);
-      
+
       // Prevent scrolling
       overflow: hidden;
     }
@@ -664,7 +664,7 @@
 
     ~ [data-effeckt-page].effeckt-page-active {
       transform: translateY(260px) rotateX(-15deg);
-      
+
       // Prevent scrolling
       overflow: hidden;
     }
@@ -680,3 +680,71 @@
 
   }
 }
+
+
+
+// 23 Minimize then reveal
+// based on left-reveal (2) and Rotate from Top (22)
+
+@mixin effeckt-off-screen-nav-minimize-reveal-list-items-hidden {
+  li, h4 {
+    transition: $effeckt-off-screen-navigation-transition-duration;
+    transform: translateX(20px);
+    opacity: 0;
+  }
+}
+@mixin effeckt-off-screen-nav-minimize-reveal-list-items-shown {
+  @mixin effeckt-off-screen-nav-minimize-reveal-list-items {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  h4 {
+    @include effeckt-off-screen-nav-minimize-reveal-list-items();
+    transition-delay: $effeckt-off-screen-navigation-transition-duration;
+  }
+  @for $i from 1 through 50 {
+    li:nth-child(#{$i}) {
+      @include effeckt-off-screen-nav-minimize-reveal-list-items();
+      transition-delay: $effeckt-off-screen-navigation-transition-duration * 2 + $effeckt-off-screen-navigation-transition-duration * $i * 0.25;
+    }
+  }
+}
+
+.effeckt-off-screen-nav-minimize-reaveal {
+  width: 100%;
+  transition: $effeckt-off-screen-navigation-transition-duration;
+  opacity: 0;
+  padding-right: 35%;
+
+  ~ [data-effeckt-page].effeckt-page-active {
+    transition: $effeckt-off-screen-navigation-transition-duration;
+    box-shadow: 0px 0px 50px #CACACA;
+    z-index: 1000;
+  }
+
+  @include effeckt-off-screen-nav-minimize-reveal-list-items-hidden();
+
+  &.effeckt-show {
+    opacity: 1;
+
+    @include effeckt-off-screen-nav-minimize-reveal-list-items-shown();
+
+    ~ [data-effeckt-page].effeckt-page-active {
+      transition: $effeckt-off-screen-navigation-transition-duration * 2 cubic-bezier(.16,.86,.33,.97);
+      transform: translateX(50%) scale(0.5);
+      overflow: hidden;
+    }
+
+    // dont nest > 3 levels deep
+    ~ [data-effeckt-page] .off-screen-nav-cover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+  }
+}
+
+
