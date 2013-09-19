@@ -717,7 +717,7 @@
   padding-right: 35%;
 
   ~ [data-effeckt-page].effeckt-page-active {
-    transition: $effeckt-off-screen-navigation-transition-duration cubic-bezier(.16,.86,.33,.97);
+    transition: $effeckt-off-screen-navigation-transition-duration;
     box-shadow: 0px 0px 50px #CACACA;
     z-index: 1000;
   }
@@ -730,8 +730,7 @@
     @include effeckt-off-screen-nav-minimize-reveal-list-items-shown();
 
     ~ [data-effeckt-page].effeckt-page-active {
-      transition: $effeckt-off-screen-navigation-transition-duration * 1.5 cubic-bezier(.16,.86,.33,.97);
-      overflow: hidden;
+      transition: $effeckt-off-screen-navigation-transition-duration * 2 cubic-bezier(.16,.86,.33,.97);
       transform: translateX(50%) scale(0.5);
       overflow: hidden;
     }
