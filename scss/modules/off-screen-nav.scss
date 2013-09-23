@@ -680,3 +680,64 @@
 
   }
 }
+// 23 Minimize then reveal
+// based on left-reveal (2) and Rotate from Top (22)
+@mixin minimize-reveal-list-items-hidden {
+  li, h4 {
+    transition: $effeckt-off-screen-navigation-transition-duration  cubic-bezier(.16,.86,.33,.97);
+    transform: translateX(5%);
+    opacity: 0;
+  }
+}
+
+@mixin minimize-reveal-list-items-shown {
+  @mixin minimize-reveal-list-items-fade {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  h4 {
+    @include minimize-reveal-list-items-fade();
+    //fade in header first.
+    transition-delay: $effeckt-off-screen-navigation-transition-duration;
+  }
+  @for $i from 1 through 50 {
+    li:nth-child(#{$i}) {
+      @include minimize-reveal-list-items-fade();
+      //wait until the header has finished
+      transition-delay: $effeckt-off-screen-navigation-transition-duration * 2 + $effeckt-off-screen-navigation-transition-duration * $i * 0.25;
+    }
+  }
+}
+
+.effeckt-off-screen-nav-minimize-reaveal {
+  width: 100%;
+  transition: $effeckt-off-screen-navigation-transition-duration;
+  padding-right: 35%;
+
+  ~ [data-effeckt-page].effeckt-page-active {
+    transition: $effeckt-off-screen-navigation-transition-duration;
+    box-shadow: 0px 0px 50px #CACACA;
+    z-index: 1000;
+  }
+
+  @include minimize-reveal-list-items-hidden();
+  &.effeckt-show {
+    @include minimize-reveal-list-items-shown();
+
+    ~ [data-effeckt-page].effeckt-page-active {
+      transition: $effeckt-off-screen-navigation-transition-duration * 1.5  cubic-bezier(.16,.86,.33,.97);
+      transform: translateX(50%) scale3d(0.5,0.5,1);
+      overflow: hidden;
+    }
+
+    // dont nest > 3 levels deep
+    ~ [data-effeckt-page] .off-screen-nav-cover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
