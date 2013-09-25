@@ -750,3 +750,47 @@ ul.effeckt-tabs li a:hover {
 .effeckt-tabs-container .effeckt-tab-content {
   top: 10px;
 }
+
+.effeckt-lazy-loading-options {
+  margin: 0 0 15px;
+}
+
+.effeckt-lazy-loading-options label {
+  margin: 0 5px;
+}
+
+.effeckt-lazy-loading {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  -webkit-column-gap: 0;
+  -moz-column-gap: 0;
+  column-gap: 0;
+}
+
+.effeckt-lazy-loading li {
+  display: block;
+  list-style-type: none;
+  padding: 0 5px 5px 0;
+}
+
+.effeckt-lazy-loading a {
+  display: inline-block;
+  background: #dddddd;
+  border: 1px solid #cccccc;
+  width: 100%;
+  height: 250px;
+}
+
+.effeckt-lazy-loading li:nth-child(1) a,
+.effeckt-lazy-loading li:nth-child(12n+12) a {
+  height: 500px;
+}
+
+.effeckt-lazy-loading li:nth-child(3n+3) a {
+  height: 350px;
+}
+
+.effeckt-lazy-loading li:nth-child(5n+5) a {
+  height: 200px;
+}

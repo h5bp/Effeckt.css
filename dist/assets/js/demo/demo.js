@@ -8,6 +8,8 @@ var EffecktDemos = {
       $(".no-transitions").removeClass("no-transitions");
     });
 
+    stroll.bind('.effeckt-demo-list-scroll ul');
+
     this.getContributorsData();
 
   },

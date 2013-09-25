@@ -24,7 +24,19 @@ var Effeckt = {
     this.animationEndEventName = this.animationEndEventNames[Modernizr.prefixed('animation')];
     this.transitionAnimationEndEvent = this.animationEndEventName + ' ' + this.transitionEndEventName;
 
-  }
+  },
+
+  getViewportHeight: function() {
+
+    var docElement = document.documentElement,
+      client = docElement['clientHeight'],
+      inner = window['innerHeight'];
+
+    if( client < inner )
+      return inner;
+    else
+      return client;
+  },
 }
 
 Effeckt.init();

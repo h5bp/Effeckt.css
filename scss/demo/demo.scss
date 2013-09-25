@@ -588,3 +588,39 @@ ul.effeckt-tabs {
     top: 10px;
   }
 }
+
+.effeckt-lazy-loading-options {
+  margin:0 0 15px;
+  label {
+    margin: 0 5px;
+  }
+}
+.effeckt-lazy-loading {
+  // Maybe this won't work on many browsers
+  // But the animations looks cooler like this.
+  column-count:3;
+  column-gap:0;
+  li {
+    display: block;
+    list-style-type: none;
+    padding: 0 5px 5px 0;
+  }
+  a {
+    display: inline-block;
+    background: #DDD;
+    border:1px solid #ccc;
+    width: 100%;
+    height: 250px;
+  }
+
+  li:nth-child(1) a,
+  li:nth-child(12n+12) a {
+    height: 500px;
+  }
+  li:nth-child(3n+3) a {
+    height: 350px;
+  }
+  li:nth-child(5n+5) a {
+    height: 200px;
+  }
+}
