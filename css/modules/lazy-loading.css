@@ -1,0 +1,116 @@
+.effeckt-lazy-loading-element {
+  opacity: 0; }
+  .effeckt-lazy-loading-element.shown {
+    opacity: 1; }
+
+[data-effeckt-type="fade"] .effeckt-lazy-loading-element.animating {
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards; }
+
+@keyframes fadeIn {
+  to {
+    opacity: 1; } }
+
+[data-effeckt-type="slide-up"] .effeckt-lazy-loading-element.animating {
+  opacity: 0;
+  transform: translateY(200px);
+  animation: slideUp 0.5s ease forwards; }
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0px); } }
+
+[data-effeckt-type="scale-up"] .effeckt-lazy-loading-element.animating {
+  opacity: 0;
+  transform: scale(0.6);
+  animation: scaleUp 0.5s ease forwards; }
+
+@keyframes scaleUp {
+  to {
+    opacity: 1;
+    transform: scale(1); } }
+
+[data-effeckt-type="scale-down"] {
+  perspective: 1300px; }
+  [data-effeckt-type="scale-down"] .effeckt-lazy-loading-element.animating {
+    opacity: 0;
+    transform-style: preserve-3d;
+    transform: scale(1.4);
+    animation: scaleDown 0.5s ease forwards; }
+
+@keyframes scaleDown {
+  to {
+    opacity: 1;
+    transform: scale(1); } }
+
+[data-effeckt-type="fall"] {
+  perspective: 1300px; }
+  [data-effeckt-type="fall"] .effeckt-lazy-loading-element.animating {
+    opacity: 0;
+    transform-style: preserve-3d;
+    transform: translateZ(400px) translateY(300px) rotateX(-90deg);
+    animation: fall 0.75s ease forwards; }
+
+@keyframes fall {
+  to {
+    opacity: 1;
+    transform: translateZ(0px) translateY(0px) rotateX(0deg); } }
+
+[data-effeckt-type="fly"] {
+  perspective: 1300px; }
+  [data-effeckt-type="fly"] .effeckt-lazy-loading-element.animating {
+    transform-style: preserve-3d;
+    transform-origin: 50% 50% -300px;
+    transform: rotateX(-180deg);
+    animation: fly 0.5s ease-in-out forwards; }
+
+@keyframes fly {
+  to {
+    opacity: 1;
+    transform: rotateX(0deg); } }
+
+[data-effeckt-type="sign-3D"] {
+  perspective: 1300px; }
+  [data-effeckt-type="sign-3D"] .effeckt-lazy-loading-element.animating {
+    opacity: 0;
+    transform-style: preserve-3d;
+    transform-origin: 0% 0%;
+    transform: rotateX(-80deg);
+    animation: sign3D 0.5s ease-in-out forwards; }
+
+@keyframes sign3D {
+  to {
+    opacity: 1;
+    transform: rotateX(0deg); } }
+
+[data-effeckt-type="helix"] {
+  perspective: 1300px; }
+  [data-effeckt-type="helix"] .effeckt-lazy-loading-element.animating {
+    opacity: 0;
+    transform-style: preserve-3d;
+    transform: rotateY(-180deg);
+    animation: helix 0.5s ease-in-out forwards; }
+
+@keyframes helix {
+  to {
+    opacity: 1;
+    transform: rotateY(0deg); } }
+
+[data-effeckt-type="popup"] {
+  perspective: 1300px; }
+  [data-effeckt-type="popup"] .effeckt-lazy-loading-element.animating {
+    opacity: 0;
+    transform-style: preserve-3d;
+    transform: scale(0.4);
+    animation: popup 0.5s ease-in-out forwards; }
+
+@keyframes popup {
+  70% {
+    transform: scale(1.1);
+    opacity: 0.8;
+    animation-timing-function: ease-out; }
+
+  100% {
+    opacity: 1;
+    transform: scale(1); } }
