@@ -28,7 +28,7 @@
 
 @keyframes closeSpace {
   to {
-    max-height: 0px; }
+    max-height: 0; }
 
   from {
     max-height: 50px; } }

@@ -26,13 +26,13 @@
 
 // Curl
 [data-effeckt-type="curl"] li {
-  // this was originally applied to the 'li', 
-  // was this a mistake? Seems like it should 
+  // this was originally applied to the 'li',
+  // was this a mistake? Seems like it should
   // be part of the parent <ul>
   perspective: 600px;
-  perspective-origin: 0% 50%;
+  perspective-origin: 0 50%;
   transition: all $effeckt-list-scroll-transition-duration ease, opacity $effeckt-list-scroll-transition-duration/3 ease;
-  transform-origin: 0% 0%;
+  transform-origin: 0 0;
   backface-visibility: hidden;
   &.past {
     opacity: 0;
@@ -58,7 +58,7 @@
 // Fan
 [data-effeckt-type="fan"] li {
   transition: all $effeckt-list-scroll-transition-duration cubic-bezier(0.390, 0.575, 0.565, 1.000);
-  transform-origin: 0% 0%;
+  transform-origin: 0 0;
   &.past {
     transform: rotate(-60deg);
   }
@@ -180,7 +180,7 @@
   perspective-origin: 50% 50%;
   li {
     transition: all $effeckt-list-scroll-transition-duration ease, opacity $effeckt-list-scroll-transition-duration/2 ease;
-    transform-origin: 0% 0%;
+    transform-origin: 0 0;
     &.past, &.future {
       opacity: 0;
       transform: rotateY(-90deg);
@@ -194,7 +194,7 @@
   perspective-origin: 50% 50%;
   li {
     transition: all $effeckt-list-scroll-transition-duration ease, opacity $effeckt-list-scroll-transition-duration/2 ease;
-    transform-origin: 0% 0%;
+    transform-origin: 0 0;
     &.past {
       transform: translateY(-200%);
     }

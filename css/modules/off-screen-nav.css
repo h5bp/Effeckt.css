@@ -26,7 +26,7 @@
     transform: translateX(0); }
 
 .effeckt-off-screen-nav-left-reveal {
-  width: 0px;
+  width: 0;
   transform: translate3D(0, 0, 0);
   transition: 500ms; }
   .effeckt-off-screen-nav-left-reveal h4 {
@@ -82,7 +82,7 @@
   .effeckt-off-screen-nav-right-reveal h4 {
     width: 10rem;
     position: absolute;
-    top: 0px;
+    top: 0;
     right: 0; }
   .effeckt-off-screen-nav-right-reveal ul {
     width: 12rem;
@@ -172,11 +172,11 @@
     animation: navFromTopBounceOut 500ms both ease; }
 
 @keyframes navFromTopBounceIn {
-  0% {
+  0 {
     transform: translateY(-100%); }
 
   20% {
-    padding-top: 0px;
+    padding-top: 0;
     transform: translateY(0%); }
 
   60% {
@@ -186,16 +186,16 @@
     padding-top: 0; } }
 
 @keyframes navFromTopBounceOut {
-  0% {
+  0 {
     transform: translateY(0%);
-    padding-top: 0px; }
+    padding-top: 0; }
 
   40% {
     transform: translateY(0%);
     padding-top: 20px; }
 
   80% {
-    padding-top: 0px; }
+    padding-top: 0; }
 
   90%, 100% {
     transform: translateY(-100%); } }
@@ -220,11 +220,11 @@
     animation: navFromBottomBounceOut 500ms both ease; }
 
 @keyframes navFromBottomBounceIn {
-  0% {
+  0 {
     transform: translateY(100%); }
 
   20% {
-    padding-bottom: 0px;
+    padding-bottom: 0;
     transform: translateY(0%); }
 
   60% {
@@ -234,9 +234,9 @@
     padding-bottom: 0; } }
 
 @keyframes navFromBottomBounceOut {
-  0% {
+  0 {
     transform: translateY(0%);
-    padding-bottom: 0px; }
+    padding-bottom: 0; }
 
   40% {
     transform: translateY(0%);
@@ -312,7 +312,7 @@
     z-index: 300;
     backface-visibility: hidden;
     transform-style: preserve-3d;
-    transform-origin: 50% 0%;
+    transform-origin: 50% 0;
     transition: all 250ms ease-out;
     display: block; }
     .effeckt-off-screen-nav-top-card-deck h4:active {
@@ -378,30 +378,30 @@
     animation: navFromLeftBounceOut 500ms both ease; }
 
 @keyframes navFromLeftBounceIn {
-  0% {
+  0 {
     transform: translateX(-100%); }
 
   20% {
-    padding-left: 0px;
+    padding-left: 0;
     transform: translateX(0%); }
 
   60% {
     padding-left: 20px; }
 
   100% {
-    padding-left: 0px; } }
+    padding-left: 0; } }
 
 @keyframes navFromLeftBounceOut {
-  0% {
+  0 {
     transform: translateX(0%);
-    padding-left: 0px; }
+    padding-left: 0; }
 
   40% {
     transform: translateX(0%);
     padding-left: 20px; }
 
   80% {
-    padding-left: 0px; }
+    padding-left: 0; }
 
   90%, 100% {
     transform: translateX(-100%); } }
@@ -426,30 +426,30 @@
     animation: navFromRightBounceOut 500ms both ease; }
 
 @keyframes navFromRightBounceIn {
-  0% {
+  0 {
     transform: translateX(100%); }
 
   20% {
-    padding-right: 0px;
+    padding-right: 0;
     transform: translateX(0%); }
 
   60% {
     padding-right: 20px; }
 
   100% {
-    padding-right: 0px; } }
+    padding-right: 0; } }
 
 @keyframes navFromRightBounceOut {
-  0% {
+  0 {
     transform: translateX(0%);
-    padding-right: 0px; }
+    padding-right: 0; }
 
   40% {
     transform: translateX(0%);
     padding-right: 20px; }
 
   80% {
-    padding-right: 0px; }
+    padding-right: 0; }
 
   90%, 100% {
     transform: translateX(100%); } }
@@ -472,7 +472,7 @@
   transition: 500ms;
   transform: translateY(100%) scale(1.01) rotateX(-30deg); }
   .effeckt-off-screen-nav-bottom-rotate ~ [data-effeckt-page].effeckt-page-active {
-    transform-origin: 0% 100%;
+    transform-origin: 0 100%;
     transition: 500ms; }
   .effeckt-off-screen-nav-bottom-rotate ~ .effeckt-overlay {
     z-index: 900;
@@ -492,11 +492,11 @@
 .effeckt-off-screen-nav-top-rotate {
   bottom: auto;
   width: 100%;
-  transform-origin: 50% 0%;
+  transform-origin: 50% 0;
   transition: 500ms;
   transform: translateY(-100%) scale(1.01) rotateX(30deg); }
   .effeckt-off-screen-nav-top-rotate ~ [data-effeckt-page].effeckt-page-active {
-    transform-origin: 100% 0%;
+    transform-origin: 100% 0;
     transition: 500ms; }
   .effeckt-off-screen-nav-top-rotate ~ .effeckt-overlay {
     z-index: 900;
@@ -519,7 +519,7 @@
   padding-right: 35%; }
   .effeckt-off-screen-nav-minimize-reaveal ~ [data-effeckt-page].effeckt-page-active {
     transition: 500ms;
-    box-shadow: 0px 0px 50px #cacaca;
+    box-shadow: 0 0 50px #cacaca;
     z-index: 1000; }
   .effeckt-off-screen-nav-minimize-reaveal li, .effeckt-off-screen-nav-minimize-reaveal h4 {
     transition: 500ms cubic-bezier(0.16, 0.86, 0.33, 0.97);

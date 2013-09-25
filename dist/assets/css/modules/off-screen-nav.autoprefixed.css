@@ -67,7 +67,7 @@
 }
 
 .effeckt-off-screen-nav-left-reveal {
-  width: 0px;
+  width: 0;
   -webkit-transform: translate3D(0, 0, 0);
   -ms-transform: translate3D(0, 0, 0);
   -o-transform: translate3D(0, 0, 0);
@@ -200,7 +200,7 @@
 .effeckt-off-screen-nav-right-reveal h4 {
   width: 10rem;
   position: absolute;
-  top: 0px;
+  top: 0;
   right: 0;
 }
 
@@ -405,7 +405,7 @@
   }
 
   20% {
-    padding-top: 0px;
+    padding-top: 0;
     -webkit-transform: translateY(0%);
     transform: translateY(0%);
   }
@@ -426,7 +426,7 @@
   }
 
   20% {
-    padding-top: 0px;
+    padding-top: 0;
     -o-transform: translateY(0%);
     transform: translateY(0%);
   }
@@ -449,7 +449,7 @@
   }
 
   20% {
-    padding-top: 0px;
+    padding-top: 0;
     -webkit-transform: translateY(0%);
     -ms-transform: translateY(0%);
     -o-transform: translateY(0%);
@@ -469,7 +469,7 @@
   0% {
     -webkit-transform: translateY(0%);
     transform: translateY(0%);
-    padding-top: 0px;
+    padding-top: 0;
   }
 
   40% {
@@ -479,7 +479,7 @@
   }
 
   80% {
-    padding-top: 0px;
+    padding-top: 0;
   }
 
   90%, 100% {
@@ -492,7 +492,7 @@
   0% {
     -o-transform: translateY(0%);
     transform: translateY(0%);
-    padding-top: 0px;
+    padding-top: 0;
   }
 
   40% {
@@ -502,7 +502,7 @@
   }
 
   80% {
-    padding-top: 0px;
+    padding-top: 0;
   }
 
   90%, 100% {
@@ -517,7 +517,7 @@
     -ms-transform: translateY(0%);
     -o-transform: translateY(0%);
     transform: translateY(0%);
-    padding-top: 0px;
+    padding-top: 0;
   }
 
   40% {
@@ -529,7 +529,7 @@
   }
 
   80% {
-    padding-top: 0px;
+    padding-top: 0;
   }
 
   90%, 100% {
@@ -592,7 +592,7 @@
   }
 
   20% {
-    padding-bottom: 0px;
+    padding-bottom: 0;
     -webkit-transform: translateY(0%);
     transform: translateY(0%);
   }
@@ -613,7 +613,7 @@
   }
 
   20% {
-    padding-bottom: 0px;
+    padding-bottom: 0;
     -o-transform: translateY(0%);
     transform: translateY(0%);
   }
@@ -636,7 +636,7 @@
   }
 
   20% {
-    padding-bottom: 0px;
+    padding-bottom: 0;
     -webkit-transform: translateY(0%);
     -ms-transform: translateY(0%);
     -o-transform: translateY(0%);
@@ -656,7 +656,7 @@
   0% {
     -webkit-transform: translateY(0%);
     transform: translateY(0%);
-    padding-bottom: 0px;
+    padding-bottom: 0;
   }
 
   40% {
@@ -679,7 +679,7 @@
   0% {
     -o-transform: translateY(0%);
     transform: translateY(0%);
-    padding-bottom: 0px;
+    padding-bottom: 0;
   }
 
   40% {
@@ -704,7 +704,7 @@
     -ms-transform: translateY(0%);
     -o-transform: translateY(0%);
     transform: translateY(0%);
-    padding-bottom: 0px;
+    padding-bottom: 0;
   }
 
   40% {
@@ -1037,7 +1037,7 @@
   }
 
   20% {
-    padding-left: 0px;
+    padding-left: 0;
     -webkit-transform: translateX(0%);
     transform: translateX(0%);
   }
@@ -1047,7 +1047,7 @@
   }
 
   100% {
-    padding-left: 0px;
+    padding-left: 0;
   }
 }
 
@@ -1058,7 +1058,7 @@
   }
 
   20% {
-    padding-left: 0px;
+    padding-left: 0;
     -o-transform: translateX(0%);
     transform: translateX(0%);
   }
@@ -1068,7 +1068,7 @@
   }
 
   100% {
-    padding-left: 0px;
+    padding-left: 0;
   }
 }
 
@@ -1081,7 +1081,7 @@
   }
 
   20% {
-    padding-left: 0px;
+    padding-left: 0;
     -webkit-transform: translateX(0%);
     -ms-transform: translateX(0%);
     -o-transform: translateX(0%);
@@ -1093,7 +1093,7 @@
   }
 
   100% {
-    padding-left: 0px;
+    padding-left: 0;
   }
 }
 
@@ -1101,7 +1101,7 @@
   0% {
     -webkit-transform: translateX(0%);
     transform: translateX(0%);
-    padding-left: 0px;
+    padding-left: 0;
   }
 
   40% {
@@ -1111,7 +1111,7 @@
   }
 
   80% {
-    padding-left: 0px;
+    padding-left: 0;
   }
 
   90%, 100% {
@@ -1124,7 +1124,7 @@
   0% {
     -o-transform: translateX(0%);
     transform: translateX(0%);
-    padding-left: 0px;
+    padding-left: 0;
   }
 
   40% {
@@ -1134,7 +1134,7 @@
   }
 
   80% {
-    padding-left: 0px;
+    padding-left: 0;
   }
 
   90%, 100% {
@@ -1149,7 +1149,7 @@
     -ms-transform: translateX(0%);
     -o-transform: translateX(0%);
     transform: translateX(0%);
-    padding-left: 0px;
+    padding-left: 0;
   }
 
   40% {
@@ -1161,7 +1161,7 @@
   }
 
   80% {
-    padding-left: 0px;
+    padding-left: 0;
   }
 
   90%, 100% {
@@ -1224,7 +1224,7 @@
   }
 
   20% {
-    padding-right: 0px;
+    padding-right: 0;
     -webkit-transform: translateX(0%);
     transform: translateX(0%);
   }
@@ -1234,7 +1234,7 @@
   }
 
   100% {
-    padding-right: 0px;
+    padding-right: 0;
   }
 }
 
@@ -1245,7 +1245,7 @@
   }
 
   20% {
-    padding-right: 0px;
+    padding-right: 0;
     -o-transform: translateX(0%);
     transform: translateX(0%);
   }
@@ -1255,7 +1255,7 @@
   }
 
   100% {
-    padding-right: 0px;
+    padding-right: 0;
   }
 }
 
@@ -1268,7 +1268,7 @@
   }
 
   20% {
-    padding-right: 0px;
+    padding-right: 0;
     -webkit-transform: translateX(0%);
     -ms-transform: translateX(0%);
     -o-transform: translateX(0%);
@@ -1280,7 +1280,7 @@
   }
 
   100% {
-    padding-right: 0px;
+    padding-right: 0;
   }
 }
 
@@ -1288,7 +1288,7 @@
   0% {
     -webkit-transform: translateX(0%);
     transform: translateX(0%);
-    padding-right: 0px;
+    padding-right: 0;
   }
 
   40% {
@@ -1298,7 +1298,7 @@
   }
 
   80% {
-    padding-right: 0px;
+    padding-right: 0;
   }
 
   90%, 100% {
@@ -1311,7 +1311,7 @@
   0% {
     -o-transform: translateX(0%);
     transform: translateX(0%);
-    padding-right: 0px;
+    padding-right: 0;
   }
 
   40% {
@@ -1321,7 +1321,7 @@
   }
 
   80% {
-    padding-right: 0px;
+    padding-right: 0;
   }
 
   90%, 100% {
@@ -1336,7 +1336,7 @@
     -ms-transform: translateX(0%);
     -o-transform: translateX(0%);
     transform: translateX(0%);
-    padding-right: 0px;
+    padding-right: 0;
   }
 
   40% {
@@ -1348,7 +1348,7 @@
   }
 
   80% {
-    padding-right: 0px;
+    padding-right: 0;
   }
 
   90%, 100% {
@@ -1505,7 +1505,7 @@
   -webkit-transition: 500ms;
   -o-transition: 500ms;
   transition: 500ms;
-  box-shadow: 0px 0px 50px #cacaca;
+  box-shadow: 0 0 50px #cacaca;
   z-index: 1000;
 }
 

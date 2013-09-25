@@ -101,7 +101,7 @@
   position: relative; }
 
 .effeckt-button[data-effeckt-type="slide-right"] .spinner {
-  left: 0%; }
+  left: 0; }
 
 .effeckt-button[data-effeckt-type="slide-right"][data-loading] .label {
   opacity: 0;
@@ -137,7 +137,7 @@
 
 .effeckt-button[data-effeckt-type="slide-down"] .spinner {
   left: 50%;
-  top: 0%; }
+  top: 0; }
 
 .effeckt-button[data-effeckt-type="slide-down"][data-loading] .label {
   opacity: 0;
@@ -333,12 +333,12 @@ Example markup:
   background: #e96a6a;
   color: #a33a3a;
   content: attr(data-effeckt-message);
-  transform-origin: 0% 0%;
+  transform-origin: 0 0;
   transform: rotateX(-90deg);
   backface-visibility: hidden; }
 
 .effeckt-button[data-effeckt-type="3d-rotate-error"][data-loading] {
-  transform-origin: 50% 0%;
+  transform-origin: 50% 0;
   transform: rotateX(90deg) translateY(-100%); }
 
 .effeckt-button[data-effeckt-type="3d-rotate-success"]:after {
@@ -352,7 +352,7 @@ Example markup:
   background: #7aca7c;
   color: #358337;
   content: attr(data-effeckt-message);
-  transform-origin: 0% 100%;
+  transform-origin: 0 100%;
   transform: rotateX(90deg);
   backface-visibility: hidden; }
 
@@ -638,7 +638,7 @@ Example markup:
 
 @keyframes closeSpace {
   to {
-    max-height: 0px; }
+    max-height: 0; }
 
   from {
     max-height: 50px; } }
@@ -678,7 +678,7 @@ Example markup:
   animation: WobbleOutX 2500ms both 500ms, closeSpace 1000ms ease forwards 1500ms; }
 
 @keyframes WobbleInX {
-  0% {
+  0 {
     transform: perspective(250px) rotateX(90deg);
     opacity: 0; }
 
@@ -693,7 +693,7 @@ Example markup:
     opacity: 1; } }
 
 @keyframes WobbleOutX {
-  0% {
+  0 {
     transform: perspective(250px) rotateX(0deg);
     opacity: 1; }
 
@@ -712,7 +712,7 @@ Example markup:
   animation: FlipOut 2500ms both 500ms, closeSpace 1000ms ease forwards 1000ms; }
 
 @keyframes FlipIn {
-  0% {
+  0 {
     transform: perspective(300px) rotateX(90deg);
     opacity: 0; }
 
@@ -721,7 +721,7 @@ Example markup:
     opacity: 1; } }
 
 @keyframes FlipOut {
-  0% {
+  0 {
     transform: perspective(400px) rotateX(0deg);
     opacity: 1; }
 
@@ -739,7 +739,7 @@ Example markup:
   animation: fallOffX 1000ms both, closeSpace 750ms ease forwards 500ms; }
 
 @keyframes fallInX {
-  0% {
+  0 {
     opacity: 0;
     transform: translateY(-200px); }
 
@@ -748,7 +748,7 @@ Example markup:
     transform: translateY(0); } }
 
 @keyframes fallOffX {
-  0% {
+  0 {
     opacity: 1;
     transform: rotateZ(0); }
 
@@ -765,7 +765,7 @@ Example markup:
   animation: toAbove 1000ms both, closeSpace 500ms ease forwards 650ms; }
 
 @keyframes fromAbove {
-  0% {
+  0 {
     opacity: 0;
     transform: scale(3); }
 
@@ -774,7 +774,7 @@ Example markup:
     transform: scale(1); } }
 
 @keyframes toAbove {
-  0% {
+  0 {
     opacity: 1;
     transform: scale(1); }
 
@@ -792,7 +792,7 @@ Example markup:
   animation: wobbleOutY 1500ms both 500ms, closeSpace 500ms ease forwards 1500ms; }
 
 @keyframes wobbleOutY {
-  0% {
+  0 {
     opacity: 1;
     transform: rotateZ(0); }
 
@@ -829,7 +829,7 @@ Example markup:
   animation: fallOffY 1500ms both 500ms, closeSpace 500ms ease forwards 1625ms; }
 
 @keyframes bouncySlideIn {
-  0% {
+  0 {
     opacity: 0;
     transform: translateX(300px); }
 
@@ -842,7 +842,7 @@ Example markup:
     transform: translateX(0); } }
 
 @keyframes fallOffY {
-  0% {
+  0 {
     opacity: 1;
     transform: translateX(0) translateY(0) rotateZ(0deg); }
 
@@ -876,9 +876,9 @@ Example markup:
 
 [data-effeckt-type="curl"] li {
   perspective: 600px;
-  perspective-origin: 0% 50%;
+  perspective-origin: 0 50%;
   transition: all 500ms ease, opacity 166.66667ms ease;
-  transform-origin: 0% 0%;
+  transform-origin: 0 0;
   backface-visibility: hidden; }
   [data-effeckt-type="curl"] li.past {
     opacity: 0;
@@ -896,7 +896,7 @@ Example markup:
 
 [data-effeckt-type="fan"] li {
   transition: all 500ms cubic-bezier(0.39, 0.575, 0.565, 1);
-  transform-origin: 0% 0%; }
+  transform-origin: 0 0; }
   [data-effeckt-type="fan"] li.past {
     transform: rotate(-60deg); }
   [data-effeckt-type="fan"] li.future {
@@ -979,7 +979,7 @@ Example markup:
   perspective-origin: 50% 50%; }
   [data-effeckt-type="door"] li {
     transition: all 500ms ease, opacity 250ms ease;
-    transform-origin: 0% 0%; }
+    transform-origin: 0 0; }
     [data-effeckt-type="door"] li.past, [data-effeckt-type="door"] li.future {
       opacity: 0;
       transform: rotateY(-90deg); }
@@ -989,7 +989,7 @@ Example markup:
   perspective-origin: 50% 50%; }
   [data-effeckt-type="climb"] li {
     transition: all 500ms ease, opacity 250ms ease;
-    transform-origin: 0% 0%; }
+    transform-origin: 0 0; }
     [data-effeckt-type="climb"] li.past {
       transform: translateY(-200%); }
     [data-effeckt-type="climb"] li.future {
@@ -1257,7 +1257,7 @@ Example markup:
 
 .effeckt-show.let-me-in ~ [data-effeckt-page], .effeckt-show.let-me-in ~ .effeckt-overlay {
   transform: rotateX(-2deg);
-  transform-origin: 50% 0%;
+  transform-origin: 50% 0;
   transform-style: preserve-3d; }
 
 .let-me-in .effeckt-modal {
@@ -1284,7 +1284,7 @@ Example markup:
 
 .effeckt-show.make-way ~ [data-effeckt-page], .effeckt-show.make-way ~ .effeckt-overlay {
   transform-style: preserve-3d;
-  transform-origin: 0% 50%;
+  transform-origin: 0 50%;
   animation: makeWay 500ms forwards ease-in; }
 
 .make-way .effeckt-modal {
@@ -1516,7 +1516,7 @@ Example markup:
   opacity: 0; }
 
 @keyframes modalShake {
-  0%, 100% {
+  0, 100% {
     transform: translateX(0); }
 
   10%, 30%, 50%, 70%, 90% {
@@ -1537,7 +1537,7 @@ Example markup:
   opacity: 0; }
 
 @keyframes modalBounce {
-  0%, 20%, 50%, 80%, 100% {
+  0, 20%, 50%, 80%, 100% {
     transform: translateY(0); }
 
   40% {
@@ -1558,7 +1558,7 @@ Example markup:
   opacity: 0; }
 
 @keyframes modalPulse {
-  0% {
+  0 {
     transform: scale(1); }
 
   50% {
@@ -1579,7 +1579,7 @@ Example markup:
   opacity: 0; }
 
 @keyframes modalWobble {
-  0% {
+  0 {
     transform: translateX(0%); }
 
   15% {
@@ -1601,7 +1601,7 @@ Example markup:
     transform: translateX(0%); } }
 
 .swing .effeckt-modal {
-  transform-origin: 50% 0%;
+  transform-origin: 50% 0;
   transition: 500ms ease-in-out;
   opacity: 0; }
 
@@ -1640,7 +1640,7 @@ Example markup:
   opacity: 0; }
 
 @keyframes modalTada {
-  0% {
+  0 {
     transform: scale(1); }
 
   10%, 20% {
@@ -1683,7 +1683,7 @@ Example markup:
     transform: translateX(0); }
 
 .effeckt-off-screen-nav-left-reveal {
-  width: 0px;
+  width: 0;
   transform: translate3D(0, 0, 0);
   transition: 500ms; }
   .effeckt-off-screen-nav-left-reveal h4 {
@@ -1739,7 +1739,7 @@ Example markup:
   .effeckt-off-screen-nav-right-reveal h4 {
     width: 10rem;
     position: absolute;
-    top: 0px;
+    top: 0;
     right: 0; }
   .effeckt-off-screen-nav-right-reveal ul {
     width: 12rem;
@@ -1829,11 +1829,11 @@ Example markup:
     animation: navFromTopBounceOut 500ms both ease; }
 
 @keyframes navFromTopBounceIn {
-  0% {
+  0 {
     transform: translateY(-100%); }
 
   20% {
-    padding-top: 0px;
+    padding-top: 0;
     transform: translateY(0%); }
 
   60% {
@@ -1843,16 +1843,16 @@ Example markup:
     padding-top: 0; } }
 
 @keyframes navFromTopBounceOut {
-  0% {
+  0 {
     transform: translateY(0%);
-    padding-top: 0px; }
+    padding-top: 0; }
 
   40% {
     transform: translateY(0%);
     padding-top: 20px; }
 
   80% {
-    padding-top: 0px; }
+    padding-top: 0; }
 
   90%, 100% {
     transform: translateY(-100%); } }
@@ -1877,11 +1877,11 @@ Example markup:
     animation: navFromBottomBounceOut 500ms both ease; }
 
 @keyframes navFromBottomBounceIn {
-  0% {
+  0 {
     transform: translateY(100%); }
 
   20% {
-    padding-bottom: 0px;
+    padding-bottom: 0;
     transform: translateY(0%); }
 
   60% {
@@ -1891,9 +1891,9 @@ Example markup:
     padding-bottom: 0; } }
 
 @keyframes navFromBottomBounceOut {
-  0% {
+  0 {
     transform: translateY(0%);
-    padding-bottom: 0px; }
+    padding-bottom: 0; }
 
   40% {
     transform: translateY(0%);
@@ -1969,7 +1969,7 @@ Example markup:
     z-index: 300;
     backface-visibility: hidden;
     transform-style: preserve-3d;
-    transform-origin: 50% 0%;
+    transform-origin: 50% 0;
     transition: all 250ms ease-out;
     display: block; }
     .effeckt-off-screen-nav-top-card-deck h4:active {
@@ -2035,30 +2035,30 @@ Example markup:
     animation: navFromLeftBounceOut 500ms both ease; }
 
 @keyframes navFromLeftBounceIn {
-  0% {
+  0 {
     transform: translateX(-100%); }
 
   20% {
-    padding-left: 0px;
+    padding-left: 0;
     transform: translateX(0%); }
 
   60% {
     padding-left: 20px; }
 
   100% {
-    padding-left: 0px; } }
+    padding-left: 0; } }
 
 @keyframes navFromLeftBounceOut {
-  0% {
+  0 {
     transform: translateX(0%);
-    padding-left: 0px; }
+    padding-left: 0; }
 
   40% {
     transform: translateX(0%);
     padding-left: 20px; }
 
   80% {
-    padding-left: 0px; }
+    padding-left: 0; }
 
   90%, 100% {
     transform: translateX(-100%); } }
@@ -2083,30 +2083,30 @@ Example markup:
     animation: navFromRightBounceOut 500ms both ease; }
 
 @keyframes navFromRightBounceIn {
-  0% {
+  0 {
     transform: translateX(100%); }
 
   20% {
-    padding-right: 0px;
+    padding-right: 0;
     transform: translateX(0%); }
 
   60% {
     padding-right: 20px; }
 
   100% {
-    padding-right: 0px; } }
+    padding-right: 0; } }
 
 @keyframes navFromRightBounceOut {
-  0% {
+  0 {
     transform: translateX(0%);
-    padding-right: 0px; }
+    padding-right: 0; }
 
   40% {
     transform: translateX(0%);
     padding-right: 20px; }
 
   80% {
-    padding-right: 0px; }
+    padding-right: 0; }
 
   90%, 100% {
     transform: translateX(100%); } }
@@ -2129,7 +2129,7 @@ Example markup:
   transition: 500ms;
   transform: translateY(100%) scale(1.01) rotateX(-30deg); }
   .effeckt-off-screen-nav-bottom-rotate ~ [data-effeckt-page].effeckt-page-active {
-    transform-origin: 0% 100%;
+    transform-origin: 0 100%;
     transition: 500ms; }
   .effeckt-off-screen-nav-bottom-rotate ~ .effeckt-overlay {
     z-index: 900;
@@ -2149,11 +2149,11 @@ Example markup:
 .effeckt-off-screen-nav-top-rotate {
   bottom: auto;
   width: 100%;
-  transform-origin: 50% 0%;
+  transform-origin: 50% 0;
   transition: 500ms;
   transform: translateY(-100%) scale(1.01) rotateX(30deg); }
   .effeckt-off-screen-nav-top-rotate ~ [data-effeckt-page].effeckt-page-active {
-    transform-origin: 100% 0%;
+    transform-origin: 100% 0;
     transition: 500ms; }
   .effeckt-off-screen-nav-top-rotate ~ .effeckt-overlay {
     z-index: 900;
@@ -2176,7 +2176,7 @@ Example markup:
   padding-right: 35%; }
   .effeckt-off-screen-nav-minimize-reaveal ~ [data-effeckt-page].effeckt-page-active {
     transition: 500ms;
-    box-shadow: 0px 0px 50px #cacaca;
+    box-shadow: 0 0 50px #cacaca;
     z-index: 1000; }
   .effeckt-off-screen-nav-minimize-reaveal li, .effeckt-off-screen-nav-minimize-reaveal h4 {
     transition: 500ms cubic-bezier(0.16, 0.86, 0.33, 0.97);
@@ -2589,7 +2589,7 @@ Example markup:
     transform: translateZ(-500px) translateX(-200%); } }
 
 @keyframes scaleDownSlideFromRight {
-  0%, 25% {
+  0, 25% {
     opacity: 0.5;
     transform: translateZ(-500px) translateX(200%); }
 
@@ -2602,7 +2602,7 @@ Example markup:
     transform: translateZ(0) translateX(0); } }
 
 @keyframes scaleDownSlideFromLeft {
-  0%, 25% {
+  0, 25% {
     opacity: 0.5;
     transform: translateZ(-500px) translateX(-200%); }
 
@@ -2628,7 +2628,7 @@ Example markup:
     transform: translateZ(-500px) translateX(200%); } }
 
 @keyframes scaleDownSlideFromTop {
-  0%, 25% {
+  0, 25% {
     opacity: 0.5;
     transform: translateZ(-500px) translateY(-200%); }
 
@@ -2654,7 +2654,7 @@ Example markup:
     transform: translateZ(-500px) translateY(200%); } }
 
 @keyframes scaleDownSlideFromBottom {
-  0%, 25% {
+  0, 25% {
     opacity: 0.5;
     transform: translateZ(-500px) translateY(200%); }
 
@@ -2827,22 +2827,22 @@ Example markup:
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    box-shadow: inset 0px 0px 0px 1px #e6e6e6;
+    box-shadow: inset 0 0 0 1px #e6e6e6;
     border-radius: 15px;
     cursor: pointer;
     display: inline-block;
     height: 31px;
     padding: 1px;
     position: relative;
-    margin: 0px;
+    margin: 0;
     width: 52px;
     transition: all 0.3s ease-out;
     transform: scale(1);
     background: white; }
   .effeckt-ckbox-ios7[type=checkbox]:checked, .effeckt-rdio-ios7:checked {
-    box-shadow: inset 0px 0px 0px 20px #666666; }
+    box-shadow: inset 0 0 0 20px #666666; }
   .effeckt-ckbox-ios7[type=checkbox]:after, .effeckt-rdio-ios7[type=radio]:after {
-    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 15px;
     content: '';
     cursor: pointer;
@@ -2857,14 +2857,14 @@ Example markup:
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    box-shadow: inset 0px 0px 0px 1px #e6e6e6;
+    box-shadow: inset 0 0 0 1px #e6e6e6;
     border-radius: 1px;
     cursor: pointer;
     display: inline-block;
     height: 21px;
     padding: 1px;
     position: relative;
-    margin: 0px;
+    margin: 0;
     width: 72px;
     -webkit-transition: all 0.3s ease-out;
     -o-transition: all 0.3s ease-out;
@@ -2875,9 +2875,9 @@ Example markup:
     transform: scale(1);
     background: #333333; }
   .effeckt-ckbox-android[type=checkbox]:checked, .effeckt-rdio-android:checked {
-    box-shadow: inset 0px 0px 0px 20px #666666; }
+    box-shadow: inset 0 0 0 20px #666666; }
   .effeckt-ckbox-android[type=checkbox]:after, .effeckt-rdio-android[type=radio]:after {
-    box-shadow: 0px 0px 0px 0px;
+    box-shadow: 0 0 0 0;
     border-radius: 1px;
     content: '';
     cursor: pointer;
@@ -3103,7 +3103,7 @@ Example markup:
   [data-effeckt-type="sign-3D"] .effeckt-lazy-loading-element.animating {
     opacity: 0;
     transform-style: preserve-3d;
-    transform-origin: 0% 0%;
+    transform-origin: 0 0;
     transform: rotateX(-80deg);
     animation: sign3D 0.5s ease-in-out forwards; }
 
