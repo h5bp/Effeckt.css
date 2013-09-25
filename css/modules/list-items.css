@@ -28,7 +28,7 @@
 
 @keyframes closeSpace {
   to {
-    max-height: 0px; }
+    max-height: 0; }
 
   from {
     max-height: 50px; } }
@@ -68,7 +68,7 @@
   animation: WobbleOutX 2500ms both 500ms, closeSpace 1000ms ease forwards 1500ms; }
 
 @keyframes WobbleInX {
-  0% {
+  0 {
     transform: perspective(250px) rotateX(90deg);
     opacity: 0; }
 
@@ -83,7 +83,7 @@
     opacity: 1; } }
 
 @keyframes WobbleOutX {
-  0% {
+  0 {
     transform: perspective(250px) rotateX(0deg);
     opacity: 1; }
 
@@ -102,7 +102,7 @@
   animation: FlipOut 2500ms both 500ms, closeSpace 1000ms ease forwards 1000ms; }
 
 @keyframes FlipIn {
-  0% {
+  0 {
     transform: perspective(300px) rotateX(90deg);
     opacity: 0; }
 
@@ -111,7 +111,7 @@
     opacity: 1; } }
 
 @keyframes FlipOut {
-  0% {
+  0 {
     transform: perspective(400px) rotateX(0deg);
     opacity: 1; }
 
@@ -129,7 +129,7 @@
   animation: fallOffX 1000ms both, closeSpace 750ms ease forwards 500ms; }
 
 @keyframes fallInX {
-  0% {
+  0 {
     opacity: 0;
     transform: translateY(-200px); }
 
@@ -138,7 +138,7 @@
     transform: translateY(0); } }
 
 @keyframes fallOffX {
-  0% {
+  0 {
     opacity: 1;
     transform: rotateZ(0); }
 
@@ -155,7 +155,7 @@
   animation: toAbove 1000ms both, closeSpace 500ms ease forwards 650ms; }
 
 @keyframes fromAbove {
-  0% {
+  0 {
     opacity: 0;
     transform: scale(3); }
 
@@ -164,7 +164,7 @@
     transform: scale(1); } }
 
 @keyframes toAbove {
-  0% {
+  0 {
     opacity: 1;
     transform: scale(1); }
 
@@ -182,7 +182,7 @@
   animation: wobbleOutY 1500ms both 500ms, closeSpace 500ms ease forwards 1500ms; }
 
 @keyframes wobbleOutY {
-  0% {
+  0 {
     opacity: 1;
     transform: rotateZ(0); }
 
@@ -219,7 +219,7 @@
   animation: fallOffY 1500ms both 500ms, closeSpace 500ms ease forwards 1625ms; }
 
 @keyframes bouncySlideIn {
-  0% {
+  0 {
     opacity: 0;
     transform: translateX(300px); }
 
@@ -232,7 +232,7 @@
     transform: translateX(0); } }
 
 @keyframes fallOffY {
-  0% {
+  0 {
     opacity: 1;
     transform: translateX(0) translateY(0) rotateZ(0deg); }
 

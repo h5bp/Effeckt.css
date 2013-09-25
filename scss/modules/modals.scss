@@ -360,7 +360,7 @@
 .effeckt-show.let-me-in ~ [data-effeckt-page],
 .effeckt-show.let-me-in ~ .effeckt-overlay  {
   transform: rotateX(-2deg);
-  transform-origin: 50% 0%;
+  transform-origin: 50% 0;
   transform-style: preserve-3d;
 }
 .let-me-in .effeckt-modal {
@@ -391,7 +391,7 @@
 .effeckt-show.make-way ~ [data-effeckt-page],
 .effeckt-show.make-way ~ .effeckt-overlay {
   transform-style: preserve-3d;
-  transform-origin: 0% 50%;
+  transform-origin: 0 50%;
   animation: makeWay $effeckt-modal-transition-duration forwards ease-in;
 }
 .make-way .effeckt-modal {
@@ -664,7 +664,7 @@
 }
 
 @keyframes modalShake {
-  0%, 100% { transform: translateX(0); }
+  0, 100% { transform: translateX(0); }
   10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
   20%, 40%, 60%, 80% {transform: translateX(10px);}
 }
@@ -682,7 +682,7 @@
   opacity: 0;
 }
 @keyframes modalBounce {
-  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+  0, 20%, 50%, 80%, 100% {transform: translateY(0);}
   40% {transform: translateY(-30px);}
   60% {transform: translateY(-15px);}
 }
@@ -701,7 +701,7 @@
   opacity: 0;
 }
 @keyframes modalPulse {
-  0% { transform: scale(1); } 
+  0 { transform: scale(1); }
   50% { transform: scale(1.1); }
   100% { transform: scale(1); }
 }
@@ -720,7 +720,7 @@
 }
 
 @keyframes modalWobble {
-  0% { transform: translateX(0%); }
+  0 { transform: translateX(0%); }
   15% { transform: translateX(-25%) rotate(-5deg); }
   30% { transform: translateX(20%) rotate(3deg); }
   45% { transform: translateX(-15%) rotate(-3deg); }
@@ -731,7 +731,7 @@
 
 // Effect: Swing
 .swing .effeckt-modal {
-  transform-origin: 50% 0%;
+  transform-origin: 50% 0;
   transition: $effeckt-modal-transition-duration ease-in-out;
   opacity: 0;
 }
@@ -744,10 +744,10 @@
 }
 
 @keyframes modalSwing {
-  20% { transform: rotate(15deg); } 
+  20% { transform: rotate(15deg); }
   40% { transform: rotate(-10deg); }
-  60% { transform: rotate(5deg); }  
-  80% { transform: rotate(-5deg); } 
+  60% { transform: rotate(5deg); }
+  80% { transform: rotate(-5deg); }
   100% { transform: rotate(0deg); }
 }
 
@@ -765,7 +765,7 @@
 }
 
 @keyframes modalTada {
-  0% {transform: scale(1);} 
+  0 {transform: scale(1);}
   10%, 20% {transform: scale(0.9) rotate(-3deg);}
   30%, 50%, 70%, 90% {transform: scale(1.1) rotate(3deg);}
   40%, 60%, 80% {transform: scale(1.1) rotate(-3deg);}

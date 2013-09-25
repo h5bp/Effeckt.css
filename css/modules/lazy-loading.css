@@ -75,7 +75,7 @@
   [data-effeckt-type="sign-3D"] .effeckt-lazy-loading-element.animating {
     opacity: 0;
     transform-style: preserve-3d;
-    transform-origin: 0% 0%;
+    transform-origin: 0 0;
     transform: rotateX(-80deg);
     animation: sign3D 0.5s ease-in-out forwards; }
 

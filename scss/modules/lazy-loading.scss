@@ -114,7 +114,7 @@
     &.animating {
       opacity:0;
       transform-style: preserve-3d;
-      transform-origin: 0% 0%;
+      transform-origin: 0 0;
       transform: rotateX(-80deg);
       animation: sign3D $effeckt-lazy-loading-transition-duration ease-in-out forwards;
     }
