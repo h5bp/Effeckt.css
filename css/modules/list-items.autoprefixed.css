@@ -94,7 +94,7 @@
 
 @-webkit-keyframes closeSpace {
   to {
-    max-height: 0px;
+    max-height: 0;
   }
 
   from {
@@ -104,7 +104,7 @@
 
 @-o-keyframes closeSpace {
   to {
-    max-height: 0px;
+    max-height: 0;
   }
 
   from {
@@ -114,7 +114,7 @@
 
 @keyframes closeSpace {
   to {
-    max-height: 0px;
+    max-height: 0;
   }
 
   from {
@@ -242,7 +242,7 @@
 }
 
 @-webkit-keyframes WobbleInX {
-  0% {
+  0 {
     -webkit-transform: perspective(250px) rotateX(90deg);
     transform: perspective(250px) rotateX(90deg);
     opacity: 0;
@@ -259,14 +259,14 @@
   }
 
   100% {
-    -webkit-transform: perspective(250px) rotateX(0deg);
-    transform: perspective(250px) rotateX(0deg);
+    -webkit-transform: perspective(250px) rotateX(0);
+    transform: perspective(250px) rotateX(0);
     opacity: 1;
   }
 }
 
 @-o-keyframes WobbleInX {
-  0% {
+  0 {
     -o-transform: perspective(250px) rotateX(90deg);
     transform: perspective(250px) rotateX(90deg);
     opacity: 0;
@@ -283,14 +283,14 @@
   }
 
   100% {
-    -o-transform: perspective(250px) rotateX(0deg);
-    transform: perspective(250px) rotateX(0deg);
+    -o-transform: perspective(250px) rotateX(0);
+    transform: perspective(250px) rotateX(0);
     opacity: 1;
   }
 }
 
 @keyframes WobbleInX {
-  0% {
+  0 {
     -webkit-transform: perspective(250px) rotateX(90deg);
     -ms-transform: perspective(250px) rotateX(90deg);
     -o-transform: perspective(250px) rotateX(90deg);
@@ -313,18 +313,18 @@
   }
 
   100% {
-    -webkit-transform: perspective(250px) rotateX(0deg);
-    -ms-transform: perspective(250px) rotateX(0deg);
-    -o-transform: perspective(250px) rotateX(0deg);
-    transform: perspective(250px) rotateX(0deg);
+    -webkit-transform: perspective(250px) rotateX(0);
+    -ms-transform: perspective(250px) rotateX(0);
+    -o-transform: perspective(250px) rotateX(0);
+    transform: perspective(250px) rotateX(0);
     opacity: 1;
   }
 }
 
 @-webkit-keyframes WobbleOutX {
-  0% {
-    -webkit-transform: perspective(250px) rotateX(0deg);
-    transform: perspective(250px) rotateX(0deg);
+  0 {
+    -webkit-transform: perspective(250px) rotateX(0);
+    transform: perspective(250px) rotateX(0);
     opacity: 1;
   }
 
@@ -336,9 +336,9 @@
 }
 
 @-o-keyframes WobbleOutX {
-  0% {
-    -o-transform: perspective(250px) rotateX(0deg);
-    transform: perspective(250px) rotateX(0deg);
+  0 {
+    -o-transform: perspective(250px) rotateX(0);
+    transform: perspective(250px) rotateX(0);
     opacity: 1;
   }
 
@@ -350,11 +350,11 @@
 }
 
 @keyframes WobbleOutX {
-  0% {
-    -webkit-transform: perspective(250px) rotateX(0deg);
-    -ms-transform: perspective(250px) rotateX(0deg);
-    -o-transform: perspective(250px) rotateX(0deg);
-    transform: perspective(250px) rotateX(0deg);
+  0 {
+    -webkit-transform: perspective(250px) rotateX(0);
+    -ms-transform: perspective(250px) rotateX(0);
+    -o-transform: perspective(250px) rotateX(0);
+    transform: perspective(250px) rotateX(0);
     opacity: 1;
   }
 
@@ -396,35 +396,35 @@
 }
 
 @-webkit-keyframes FlipIn {
-  0% {
+  0 {
     -webkit-transform: perspective(300px) rotateX(90deg);
     transform: perspective(300px) rotateX(90deg);
     opacity: 0;
   }
 
   100% {
-    -webkit-transform: perspective(300px) rotateX(0deg);
-    transform: perspective(300px) rotateX(0deg);
+    -webkit-transform: perspective(300px) rotateX(0);
+    transform: perspective(300px) rotateX(0);
     opacity: 1;
   }
 }
 
 @-o-keyframes FlipIn {
-  0% {
+  0 {
     -o-transform: perspective(300px) rotateX(90deg);
     transform: perspective(300px) rotateX(90deg);
     opacity: 0;
   }
 
   100% {
-    -o-transform: perspective(300px) rotateX(0deg);
-    transform: perspective(300px) rotateX(0deg);
+    -o-transform: perspective(300px) rotateX(0);
+    transform: perspective(300px) rotateX(0);
     opacity: 1;
   }
 }
 
 @keyframes FlipIn {
-  0% {
+  0 {
     -webkit-transform: perspective(300px) rotateX(90deg);
     -ms-transform: perspective(300px) rotateX(90deg);
     -o-transform: perspective(300px) rotateX(90deg);
@@ -433,18 +433,18 @@
   }
 
   100% {
-    -webkit-transform: perspective(300px) rotateX(0deg);
-    -ms-transform: perspective(300px) rotateX(0deg);
-    -o-transform: perspective(300px) rotateX(0deg);
-    transform: perspective(300px) rotateX(0deg);
+    -webkit-transform: perspective(300px) rotateX(0);
+    -ms-transform: perspective(300px) rotateX(0);
+    -o-transform: perspective(300px) rotateX(0);
+    transform: perspective(300px) rotateX(0);
     opacity: 1;
   }
 }
 
 @-webkit-keyframes FlipOut {
-  0% {
-    -webkit-transform: perspective(400px) rotateX(0deg);
-    transform: perspective(400px) rotateX(0deg);
+  0 {
+    -webkit-transform: perspective(400px) rotateX(0);
+    transform: perspective(400px) rotateX(0);
     opacity: 1;
   }
 
@@ -456,9 +456,9 @@
 }
 
 @-o-keyframes FlipOut {
-  0% {
-    -o-transform: perspective(400px) rotateX(0deg);
-    transform: perspective(400px) rotateX(0deg);
+  0 {
+    -o-transform: perspective(400px) rotateX(0);
+    transform: perspective(400px) rotateX(0);
     opacity: 1;
   }
 
@@ -470,11 +470,11 @@
 }
 
 @keyframes FlipOut {
-  0% {
-    -webkit-transform: perspective(400px) rotateX(0deg);
-    -ms-transform: perspective(400px) rotateX(0deg);
-    -o-transform: perspective(400px) rotateX(0deg);
-    transform: perspective(400px) rotateX(0deg);
+  0 {
+    -webkit-transform: perspective(400px) rotateX(0);
+    -ms-transform: perspective(400px) rotateX(0);
+    -o-transform: perspective(400px) rotateX(0);
+    transform: perspective(400px) rotateX(0);
     opacity: 1;
   }
 
@@ -512,7 +512,7 @@
 }
 
 @-webkit-keyframes fallInX {
-  0% {
+  0 {
     opacity: 0;
     -webkit-transform: translateY(-200px);
     transform: translateY(-200px);
@@ -526,7 +526,7 @@
 }
 
 @-o-keyframes fallInX {
-  0% {
+  0 {
     opacity: 0;
     -o-transform: translateY(-200px);
     transform: translateY(-200px);
@@ -540,7 +540,7 @@
 }
 
 @keyframes fallInX {
-  0% {
+  0 {
     opacity: 0;
     -webkit-transform: translateY(-200px);
     -ms-transform: translateY(-200px);
@@ -558,7 +558,7 @@
 }
 
 @-webkit-keyframes fallOffX {
-  0% {
+  0 {
     opacity: 1;
     -webkit-transform: rotateZ(0);
     transform: rotateZ(0);
@@ -572,7 +572,7 @@
 }
 
 @-o-keyframes fallOffX {
-  0% {
+  0 {
     opacity: 1;
     -o-transform: rotateZ(0);
     transform: rotateZ(0);
@@ -586,7 +586,7 @@
 }
 
 @keyframes fallOffX {
-  0% {
+  0 {
     opacity: 1;
     -webkit-transform: rotateZ(0);
     -ms-transform: rotateZ(0);
@@ -624,7 +624,7 @@
 }
 
 @-webkit-keyframes fromAbove {
-  0% {
+  0 {
     opacity: 0;
     -webkit-transform: scale(3);
     transform: scale(3);
@@ -638,7 +638,7 @@
 }
 
 @-o-keyframes fromAbove {
-  0% {
+  0 {
     opacity: 0;
     -o-transform: scale(3);
     transform: scale(3);
@@ -652,7 +652,7 @@
 }
 
 @keyframes fromAbove {
-  0% {
+  0 {
     opacity: 0;
     -webkit-transform: scale(3);
     -ms-transform: scale(3);
@@ -670,7 +670,7 @@
 }
 
 @-webkit-keyframes toAbove {
-  0% {
+  0 {
     opacity: 1;
     -webkit-transform: scale(1);
     transform: scale(1);
@@ -684,7 +684,7 @@
 }
 
 @-o-keyframes toAbove {
-  0% {
+  0 {
     opacity: 1;
     -o-transform: scale(1);
     transform: scale(1);
@@ -698,7 +698,7 @@
 }
 
 @keyframes toAbove {
-  0% {
+  0 {
     opacity: 1;
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
@@ -740,7 +740,7 @@
 }
 
 @-webkit-keyframes wobbleOutY {
-  0% {
+  0 {
     opacity: 1;
     -webkit-transform: rotateZ(0);
     transform: rotateZ(0);
@@ -784,7 +784,7 @@
 }
 
 @-o-keyframes wobbleOutY {
-  0% {
+  0 {
     opacity: 1;
     -o-transform: rotateZ(0);
     transform: rotateZ(0);
@@ -828,7 +828,7 @@
 }
 
 @keyframes wobbleOutY {
-  0% {
+  0 {
     opacity: 1;
     -webkit-transform: rotateZ(0);
     -ms-transform: rotateZ(0);
@@ -906,7 +906,7 @@
 }
 
 @-webkit-keyframes bouncySlideIn {
-  0% {
+  0 {
     opacity: 0;
     -webkit-transform: translateX(300px);
     transform: translateX(300px);
@@ -926,7 +926,7 @@
 }
 
 @-o-keyframes bouncySlideIn {
-  0% {
+  0 {
     opacity: 0;
     -o-transform: translateX(300px);
     transform: translateX(300px);
@@ -946,7 +946,7 @@
 }
 
 @keyframes bouncySlideIn {
-  0% {
+  0 {
     opacity: 0;
     -webkit-transform: translateX(300px);
     -ms-transform: translateX(300px);
@@ -972,16 +972,16 @@
 }
 
 @-webkit-keyframes fallOffY {
-  0% {
+  0 {
     opacity: 1;
-    -webkit-transform: translateX(0) translateY(0) rotateZ(0deg);
-    transform: translateX(0) translateY(0) rotateZ(0deg);
+    -webkit-transform: translateX(0) translateY(0) rotateZ(0);
+    transform: translateX(0) translateY(0) rotateZ(0);
   }
 
   50% {
     opacity: 1;
-    -webkit-transform: translateX(-50%) translateY(0) rotateZ(0deg);
-    transform: translateX(-50%) translateY(0) rotateZ(0deg);
+    -webkit-transform: translateX(-50%) translateY(0) rotateZ(0);
+    transform: translateX(-50%) translateY(0) rotateZ(0);
   }
 
   75% {
@@ -998,16 +998,16 @@
 }
 
 @-o-keyframes fallOffY {
-  0% {
+  0 {
     opacity: 1;
-    -o-transform: translateX(0) translateY(0) rotateZ(0deg);
-    transform: translateX(0) translateY(0) rotateZ(0deg);
+    -o-transform: translateX(0) translateY(0) rotateZ(0);
+    transform: translateX(0) translateY(0) rotateZ(0);
   }
 
   50% {
     opacity: 1;
-    -o-transform: translateX(-50%) translateY(0) rotateZ(0deg);
-    transform: translateX(-50%) translateY(0) rotateZ(0deg);
+    -o-transform: translateX(-50%) translateY(0) rotateZ(0);
+    transform: translateX(-50%) translateY(0) rotateZ(0);
   }
 
   75% {
@@ -1024,20 +1024,20 @@
 }
 
 @keyframes fallOffY {
-  0% {
+  0 {
     opacity: 1;
-    -webkit-transform: translateX(0) translateY(0) rotateZ(0deg);
-    -ms-transform: translateX(0) translateY(0) rotateZ(0deg);
-    -o-transform: translateX(0) translateY(0) rotateZ(0deg);
-    transform: translateX(0) translateY(0) rotateZ(0deg);
+    -webkit-transform: translateX(0) translateY(0) rotateZ(0);
+    -ms-transform: translateX(0) translateY(0) rotateZ(0);
+    -o-transform: translateX(0) translateY(0) rotateZ(0);
+    transform: translateX(0) translateY(0) rotateZ(0);
   }
 
   50% {
     opacity: 1;
-    -webkit-transform: translateX(-50%) translateY(0) rotateZ(0deg);
-    -ms-transform: translateX(-50%) translateY(0) rotateZ(0deg);
-    -o-transform: translateX(-50%) translateY(0) rotateZ(0deg);
-    transform: translateX(-50%) translateY(0) rotateZ(0deg);
+    -webkit-transform: translateX(-50%) translateY(0) rotateZ(0);
+    -ms-transform: translateX(-50%) translateY(0) rotateZ(0);
+    -o-transform: translateX(-50%) translateY(0) rotateZ(0);
+    transform: translateX(-50%) translateY(0) rotateZ(0);
   }
 
   75% {

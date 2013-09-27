@@ -190,7 +190,7 @@
     transform: translateZ(-500px) translateX(-200%); } }
 
 @keyframes scaleDownSlideFromRight {
-  0%, 25% {
+  0, 25% {
     opacity: 0.5;
     transform: translateZ(-500px) translateX(200%); }
 
@@ -203,7 +203,7 @@
     transform: translateZ(0) translateX(0); } }
 
 @keyframes scaleDownSlideFromLeft {
-  0%, 25% {
+  0, 25% {
     opacity: 0.5;
     transform: translateZ(-500px) translateX(-200%); }
 
@@ -213,7 +213,7 @@
 
   100% {
     opacity: 1;
-    transform: translateZ(0) translateX(0%); } }
+    transform: translateZ(0) translateX(0); } }
 
 @keyframes scaleDownSlideToRight {
   25% {
@@ -229,7 +229,7 @@
     transform: translateZ(-500px) translateX(200%); } }
 
 @keyframes scaleDownSlideFromTop {
-  0%, 25% {
+  0, 25% {
     opacity: 0.5;
     transform: translateZ(-500px) translateY(-200%); }
 
@@ -239,7 +239,7 @@
 
   100% {
     opacity: 1;
-    transform: translateZ(0) translateY(0%); } }
+    transform: translateZ(0) translateY(0); } }
 
 @keyframes scaleDownSlideToBottom {
   25% {
@@ -255,7 +255,7 @@
     transform: translateZ(-500px) translateY(200%); } }
 
 @keyframes scaleDownSlideFromBottom {
-  0%, 25% {
+  0, 25% {
     opacity: 0.5;
     transform: translateZ(-500px) translateY(200%); }
 
@@ -265,7 +265,7 @@
 
   100% {
     opacity: 1;
-    transform: translateZ(0) translateY(0%); } }
+    transform: translateZ(0) translateY(0); } }
 
 @keyframes scaleDownSlideToTop {
   25% {

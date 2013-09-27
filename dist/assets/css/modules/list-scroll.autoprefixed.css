@@ -40,17 +40,17 @@
   -ms-perspective: 600px;
   -o-perspective: 600px;
   perspective: 600px;
-  -webkit-perspective-origin: 0% 50%;
-  -ms-perspective-origin: 0% 50%;
-  -o-perspective-origin: 0% 50%;
-  perspective-origin: 0% 50%;
+  -webkit-perspective-origin: 0 50%;
+  -ms-perspective-origin: 0 50%;
+  -o-perspective-origin: 0 50%;
+  perspective-origin: 0 50%;
   -webkit-transition: all 500ms ease, opacity 166.66667ms ease;
   -o-transition: all 500ms ease, opacity 166.66667ms ease;
   transition: all 500ms ease, opacity 166.66667ms ease;
-  -webkit-transform-origin: 0% 0%;
-  -ms-transform-origin: 0% 0%;
-  -o-transform-origin: 0% 0%;
-  transform-origin: 0% 0%;
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  transform-origin: 0 0;
   -webkit-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
   -o-backface-visibility: hidden;
@@ -97,10 +97,10 @@
   -webkit-transition: all 500ms cubic-bezier(0.39, 0.575, 0.565, 1);
   -o-transition: all 500ms cubic-bezier(0.39, 0.575, 0.565, 1);
   transition: all 500ms cubic-bezier(0.39, 0.575, 0.565, 1);
-  -webkit-transform-origin: 0% 0%;
-  -ms-transform-origin: 0% 0%;
-  -o-transform-origin: 0% 0%;
-  transform-origin: 0% 0%;
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  transform-origin: 0 0;
 }
 
 [data-effeckt-type="fan"] li.past {
@@ -351,10 +351,10 @@
   -webkit-transition: all 500ms ease, opacity 250ms ease;
   -o-transition: all 500ms ease, opacity 250ms ease;
   transition: all 500ms ease, opacity 250ms ease;
-  -webkit-transform-origin: 0% 0%;
-  -ms-transform-origin: 0% 0%;
-  -o-transform-origin: 0% 0%;
-  transform-origin: 0% 0%;
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  transform-origin: 0 0;
 }
 
 [data-effeckt-type="door"] li.past,
@@ -381,10 +381,10 @@
   -webkit-transition: all 500ms ease, opacity 250ms ease;
   -o-transition: all 500ms ease, opacity 250ms ease;
   transition: all 500ms ease, opacity 250ms ease;
-  -webkit-transform-origin: 0% 0%;
-  -ms-transform-origin: 0% 0%;
-  -o-transform-origin: 0% 0%;
-  transform-origin: 0% 0%;
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  transform-origin: 0 0;
 }
 
 [data-effeckt-type="climb"] li.past {
