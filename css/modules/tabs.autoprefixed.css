@@ -71,10 +71,10 @@
 }
 
 .effeckt-tabs-wrap[data-effeckt-type='slide-left'] .effeckt-tabs-container .effeckt-tab-content.effeckt-show {
-  -webkit-transform: translateX(0%);
-  -ms-transform: translateX(0%);
-  -o-transform: translateX(0%);
-  transform: translateX(0%);
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
   -webkit-transition-delay: 0.3s;
   -o-transition-delay: 0.3s;
   transition-delay: 0.3s;
@@ -94,10 +94,10 @@
 }
 
 .effeckt-tabs-wrap[data-effeckt-type='slide-right'] .effeckt-tabs-container .effeckt-tab-content.effeckt-show {
-  -webkit-transform: translateX(0%);
-  -ms-transform: translateX(0%);
-  -o-transform: translateX(0%);
-  transform: translateX(0%);
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
   -webkit-transition-delay: 0.3s;
   -o-transition-delay: 0.3s;
   transition-delay: 0.3s;
@@ -117,10 +117,10 @@
 }
 
 .effeckt-tabs-wrap[data-effeckt-type='slide-up'] .effeckt-tabs-container .effeckt-tab-content.effeckt-show {
-  -webkit-transform: translateY(0%);
-  -ms-transform: translateY(0%);
-  -o-transform: translateY(0%);
-  transform: translateY(0%);
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
   -webkit-transition-delay: 0.3s;
   -o-transition-delay: 0.3s;
   transition-delay: 0.3s;
@@ -140,10 +140,10 @@
 }
 
 .effeckt-tabs-wrap[data-effeckt-type='slide-down'] .effeckt-tabs-container .effeckt-tab-content.effeckt-show {
-  -webkit-transform: translateX(0%);
-  -ms-transform: translateX(0%);
-  -o-transform: translateX(0%);
-  transform: translateX(0%);
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
   -webkit-transition-delay: 0.3s;
   -o-transition-delay: 0.3s;
   transition-delay: 0.3s;
@@ -163,10 +163,10 @@
 }
 
 .effeckt-tabs-wrap[data-effeckt-type='flip'] .effeckt-tabs-container .effeckt-tab-content.effeckt-show {
-  -webkit-transform: rotateY(0deg) scale(1);
-  -ms-transform: rotateY(0deg) scale(1);
-  -o-transform: rotateY(0deg) scale(1);
-  transform: rotateY(0deg) scale(1);
+  -webkit-transform: rotateY(0) scale(1);
+  -ms-transform: rotateY(0) scale(1);
+  -o-transform: rotateY(0) scale(1);
+  transform: rotateY(0) scale(1);
   -webkit-transition-delay: 0.3s;
   -o-transition-delay: 0.3s;
   transition-delay: 0.3s;

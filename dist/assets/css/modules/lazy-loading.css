@@ -55,7 +55,7 @@
 @keyframes fall {
   to {
     opacity: 1;
-    transform: translateZ(0px) translateY(0px) rotateX(0deg); } }
+    transform: translateZ(0px) translateY(0px) rotateX(0); } }
 
 [data-effeckt-type="fly"] {
   perspective: 1300px; }
@@ -68,21 +68,21 @@
 @keyframes fly {
   to {
     opacity: 1;
-    transform: rotateX(0deg); } }
+    transform: rotateX(0); } }
 
 [data-effeckt-type="sign-3D"] {
   perspective: 1300px; }
   [data-effeckt-type="sign-3D"] .effeckt-lazy-loading-element.animating {
     opacity: 0;
     transform-style: preserve-3d;
-    transform-origin: 0% 0%;
+    transform-origin: 0 0;
     transform: rotateX(-80deg);
     animation: sign3D 0.5s ease-in-out forwards; }
 
 @keyframes sign3D {
   to {
     opacity: 1;
-    transform: rotateX(0deg); } }
+    transform: rotateX(0); } }
 
 [data-effeckt-type="helix"] {
   perspective: 1300px; }
@@ -95,7 +95,7 @@
 @keyframes helix {
   to {
     opacity: 1;
-    transform: rotateY(0deg); } }
+    transform: rotateY(0); } }
 
 [data-effeckt-type="popup"] {
   perspective: 1300px; }

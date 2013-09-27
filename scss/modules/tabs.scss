@@ -16,8 +16,8 @@
 			transition: all $effeckt-tabs-transition-duration/2 ease-in-out;
 		}
 	}
-	
-	
+
+
 	&[data-effeckt-type='scale'] {
 		.effeckt-tab-content {
 			&.effeckt-hide {
@@ -55,7 +55,7 @@
 					opacity:0;
 				}
 				&.effeckt-show {
-					transform: translateX(0%);
+					transform: translateX(0);
 					transition-delay: 0.3s;
 					opacity: 1;
 				}
@@ -72,7 +72,7 @@
 					opacity:0;
 				}
 				&.effeckt-show {
-					transform: translateX(0%);
+					transform: translateX(0);
 					transition-delay: 0.3s;
 					opacity: 1;
 				}
@@ -89,7 +89,7 @@
 					opacity:0;
 				}
 				&.effeckt-show {
-					transform: translateY(0%);
+					transform: translateY(0);
 					transition-delay: 0.3s;
 					opacity: 1;
 				}
@@ -106,7 +106,7 @@
 					opacity:0;
 				}
 				&.effeckt-show {
-					transform: translateX(0%);
+					transform: translateX(0);
 					transition-delay: 0.3s;
 					opacity: 1;
 				}
@@ -123,7 +123,7 @@
 					opacity:0;
 				}
 				&.effeckt-show {
-					transform: rotateY(0deg) scale(1);
+					transform: rotateY(0) scale(1);
 					transition-delay: 0.3s;
 					opacity: 1;
 				}

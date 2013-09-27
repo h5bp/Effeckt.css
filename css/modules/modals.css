@@ -99,7 +99,7 @@
   transition: 500ms; }
 
 .effeckt-show.newspaper .effeckt-modal {
-  transform: scale(1) rotate(0deg);
+  transform: scale(1) rotate(0);
   opacity: 1; }
 
 .side-fall.effeckt-modal-wrap {
@@ -112,7 +112,7 @@
 
 .effeckt-show.side-fall .effeckt-modal {
   transition: 500ms ease-in;
-  transform: translateZ(0) translateX(0) rotate(0deg);
+  transform: translateZ(0) translateX(0) rotate(0);
   opacity: 1; }
 
 .effeckt-hide.side-fall .effeckt-modal {
@@ -141,7 +141,7 @@
   opacity: 0; }
 
 .effeckt-show.flip-horizontal-3D .effeckt-modal {
-  transform: rotateY(0deg);
+  transform: rotateY(0);
   opacity: 1; }
 
 .flip-vertical-3D {
@@ -154,7 +154,7 @@
   opacity: 0; }
 
 .effeckt-show.flip-vertical-3D .effeckt-modal {
-  transform: rotateX(0deg);
+  transform: rotateX(0);
   opacity: 1; }
 
 .sign-3D {
@@ -168,7 +168,7 @@
   transition: 500ms; }
 
 .effeckt-show.sign-3D .effeckt-modal {
-  transform: rotateX(0deg);
+  transform: rotateX(0);
   opacity: 1; }
 
 .just-me .effeckt-modal {
@@ -207,7 +207,7 @@
     animation-timing-function: ease-in; }
 
   100% {
-    transform: translateZ(0) rotateY(0deg);
+    transform: translateZ(0) rotateY(0);
     opacity: 1; } }
 
 .rotate-from-bottom-3D {
@@ -221,7 +221,7 @@
   transition: all 500ms ease-out; }
 
 .effeckt-show.rotate-from-bottom-3D .effeckt-modal {
-  transform: translateY(0%) rotateX(0deg);
+  transform: translateY(0) rotateX(0);
   opacity: 1; }
 
 .rotate-from-left-3D {
@@ -235,7 +235,7 @@
   transition: all 500ms; }
 
 .effeckt-show.rotate-from-left-3D .effeckt-modal {
-  transform: translateZ(0px) translateX(0%) rotateY(0deg);
+  transform: translateZ(0px) translateX(0) rotateY(0);
   opacity: 1; }
 
 .effeckt-show.blur ~ .md-overlay {
@@ -260,7 +260,7 @@
 
 .effeckt-show.let-me-in ~ [data-effeckt-page], .effeckt-show.let-me-in ~ .effeckt-overlay {
   transform: rotateX(-2deg);
-  transform-origin: 50% 0%;
+  transform-origin: 50% 0;
   transform-style: preserve-3d; }
 
 .let-me-in .effeckt-modal {
@@ -287,7 +287,7 @@
 
 .effeckt-show.make-way ~ [data-effeckt-page], .effeckt-show.make-way ~ .effeckt-overlay {
   transform-style: preserve-3d;
-  transform-origin: 0% 50%;
+  transform-origin: 0 50%;
   animation: makeWay 500ms forwards ease-in; }
 
 .make-way .effeckt-modal {
@@ -519,7 +519,7 @@
   opacity: 0; }
 
 @keyframes modalShake {
-  0%, 100% {
+  0, 100% {
     transform: translateX(0); }
 
   10%, 30%, 50%, 70%, 90% {
@@ -540,7 +540,7 @@
   opacity: 0; }
 
 @keyframes modalBounce {
-  0%, 20%, 50%, 80%, 100% {
+  0, 20%, 50%, 80%, 100% {
     transform: translateY(0); }
 
   40% {
@@ -561,7 +561,7 @@
   opacity: 0; }
 
 @keyframes modalPulse {
-  0% {
+  0 {
     transform: scale(1); }
 
   50% {
@@ -582,8 +582,8 @@
   opacity: 0; }
 
 @keyframes modalWobble {
-  0% {
-    transform: translateX(0%); }
+  0 {
+    transform: translateX(0); }
 
   15% {
     transform: translateX(-25%) rotate(-5deg); }
@@ -601,10 +601,10 @@
     transform: translateX(-5%) rotate(-1deg); }
 
   100% {
-    transform: translateX(0%); } }
+    transform: translateX(0); } }
 
 .swing .effeckt-modal {
-  transform-origin: 50% 0%;
+  transform-origin: 50% 0;
   transition: 500ms ease-in-out;
   opacity: 0; }
 
@@ -629,7 +629,7 @@
     transform: rotate(-5deg); }
 
   100% {
-    transform: rotate(0deg); } }
+    transform: rotate(0); } }
 
 .tada .effeckt-modal {
   transition: 500ms ease-in-out;
@@ -643,7 +643,7 @@
   opacity: 0; }
 
 @keyframes modalTada {
-  0% {
+  0 {
     transform: scale(1); }
 
   10%, 20% {

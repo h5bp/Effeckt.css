@@ -101,7 +101,7 @@
   position: relative; }
 
 .effeckt-button[data-effeckt-type="slide-right"] .spinner {
-  left: 0%; }
+  left: 0; }
 
 .effeckt-button[data-effeckt-type="slide-right"][data-loading] .label {
   opacity: 0;
@@ -137,7 +137,7 @@
 
 .effeckt-button[data-effeckt-type="slide-down"] .spinner {
   left: 50%;
-  top: 0%; }
+  top: 0; }
 
 .effeckt-button[data-effeckt-type="slide-down"][data-loading] .label {
   opacity: 0;
@@ -333,12 +333,12 @@ Example markup:
   background: #e96a6a;
   color: #a33a3a;
   content: attr(data-effeckt-message);
-  transform-origin: 0% 0%;
+  transform-origin: 0 0;
   transform: rotateX(-90deg);
   backface-visibility: hidden; }
 
 .effeckt-button[data-effeckt-type="3d-rotate-error"][data-loading] {
-  transform-origin: 50% 0%;
+  transform-origin: 50% 0;
   transform: rotateX(90deg) translateY(-100%); }
 
 .effeckt-button[data-effeckt-type="3d-rotate-success"]:after {
@@ -352,7 +352,7 @@ Example markup:
   background: #7aca7c;
   color: #358337;
   content: attr(data-effeckt-message);
-  transform-origin: 0% 100%;
+  transform-origin: 0 100%;
   transform: rotateX(90deg);
   backface-visibility: hidden; }
 

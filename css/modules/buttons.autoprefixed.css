@@ -145,7 +145,7 @@
 }
 
 .effeckt-button[data-effeckt-type="slide-right"] .spinner {
-  left: 0%;
+  left: 0;
 }
 
 .effeckt-button[data-effeckt-type="slide-right"][data-loading] .label {
@@ -191,7 +191,7 @@
 
 .effeckt-button[data-effeckt-type="slide-down"] .spinner {
   left: 50%;
-  top: 0%;
+  top: 0;
 }
 
 .effeckt-button[data-effeckt-type="slide-down"][data-loading] .label {
@@ -529,10 +529,10 @@ Example markup:
   background: #e96a6a;
   color: #a33a3a;
   content: attr(data-effeckt-message);
-  -webkit-transform-origin: 0% 0%;
-  -ms-transform-origin: 0% 0%;
-  -o-transform-origin: 0% 0%;
-  transform-origin: 0% 0%;
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  transform-origin: 0 0;
   -webkit-transform: rotateX(-90deg);
   -ms-transform: rotateX(-90deg);
   -o-transform: rotateX(-90deg);
@@ -544,10 +544,10 @@ Example markup:
 }
 
 .effeckt-button[data-effeckt-type="3d-rotate-error"][data-loading] {
-  -webkit-transform-origin: 50% 0%;
-  -ms-transform-origin: 50% 0%;
-  -o-transform-origin: 50% 0%;
-  transform-origin: 50% 0%;
+  -webkit-transform-origin: 50% 0;
+  -ms-transform-origin: 50% 0;
+  -o-transform-origin: 50% 0;
+  transform-origin: 50% 0;
   -webkit-transform: rotateX(90deg) translateY(-100%);
   -ms-transform: rotateX(90deg) translateY(-100%);
   -o-transform: rotateX(90deg) translateY(-100%);
@@ -565,10 +565,10 @@ Example markup:
   background: #7aca7c;
   color: #358337;
   content: attr(data-effeckt-message);
-  -webkit-transform-origin: 0% 100%;
-  -ms-transform-origin: 0% 100%;
-  -o-transform-origin: 0% 100%;
-  transform-origin: 0% 100%;
+  -webkit-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  -o-transform-origin: 0 100%;
+  transform-origin: 0 100%;
   -webkit-transform: rotateX(90deg);
   -ms-transform: rotateX(90deg);
   -o-transform: rotateX(90deg);

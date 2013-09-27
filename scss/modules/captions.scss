@@ -125,7 +125,7 @@
     }
     &:hover, &:active {
       figcaption {
-        transform: translateX(0) rotate(0deg);
+        transform: translateX(0) rotate(0);
         opacity: 1;
       }
     }
@@ -244,7 +244,7 @@
     }
     &:hover, &:active {
       figcaption {
-        transform: perspective(1300px) rotateY(0deg);
+        transform: perspective(1300px) rotateY(0);
       }
       img {
         transform: perspective(1300px) rotateY(-180deg);
@@ -316,7 +316,7 @@
     }
     &:hover, &:active {
       figcaption {
-        transform: perspective(1300px) rotateX(0deg);
+        transform: perspective(1300px) rotateX(0);
       }
       img {
         transform: perspective(1300px) rotateX(-180deg);
