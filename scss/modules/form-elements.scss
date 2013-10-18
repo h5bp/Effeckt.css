@@ -7,7 +7,7 @@
 // Apply this style only on WebKit
 // To prevent ugly styles on non-WebKit Browser
 @media screen and (-webkit-min-device-pixel-ratio:0) {
-  
+
   .effeckt-ckbox-ios7[type=checkbox],
 .effeckt-rdio-ios7[type=radio] {
 
@@ -97,12 +97,59 @@
   -webkit-transition: all 0.1s ease-in 0.1s;
   -o-transition: all 0.1s ease-in 0.1s;
   transition: all 0.1s ease-in 0.1s;
-  background: #4d4d4d; 
+  background: #4d4d4d;
 }
 
 .effeckt-ckbox-android[type="checkbox"]:checked:after,
 .effeckt-rdio-android[type="radio"]:checked:after {
   left: 43px;
+}
+
+// Android Alt
+
+.effeckt-ckbox-android-alt[type=checkbox],
+.effeckt-rdio-android-alt[type=radio] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: inset 0px 0px 0px 1px #666666;
+  border-radius: 1px;
+  cursor: pointer;
+  display: inline-block;
+  height: 21px;
+  padding: 1px;
+  position: relative;
+  margin: 0px;
+  width: 72px;
+  background: #333;
+}
+
+.effeckt-ckbox-android-alt[type=checkbox]:after,
+.effeckt-rdio-android-alt[type=radio]:after {
+  box-shadow: 0px 0px 0px 0px ;
+  border-radius: 1px;
+  content: '';
+  cursor: pointer;
+  height: 18px;
+  position: absolute;
+  width: 35px;
+  background-color: rgb(77,77,77);
+  border-top: 1px solid rgb(92,92,92);
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  line-height: 18px;
+  border-radius: 1px;
+  -webkit-transition: left 0.1s ease-in 0.1s;
+  -o-transition: left 0.1s ease-in 0.1s;
+  transition: left 0.1s ease-in 0.1s;
+}
+
+.effeckt-ckbox-android-alt[type="checkbox"]:checked:after,
+.effeckt-rdio-android-alt[type="radio"]:checked:after {
+  left: 36px;
+  background-color: rgb(40,150,255);
+  border-top: 1px solid rgb(55,185,255);
 }
 
 }
