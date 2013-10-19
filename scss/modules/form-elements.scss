@@ -112,33 +112,27 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  box-shadow: inset 0px 0px 0px 1px #666666;
-  border-radius: 1px;
   cursor: pointer;
   display: inline-block;
-  height: 21px;
-  padding: 1px;
   position: relative;
-  margin: 0px;
+  height: 21px;
   width: 72px;
+  padding: 1px;
+  margin: 0px;
+  border-radius: 1px;
   background: #333;
 }
 
 .effeckt-ckbox-android-alt[type=checkbox]:after,
 .effeckt-rdio-android-alt[type=radio]:after {
-  box-shadow: 0px 0px 0px 0px ;
-  border-radius: 1px;
   content: '';
   cursor: pointer;
   height: 18px;
   position: absolute;
+  left: 1px;
   width: 35px;
-  background-color: rgb(77,77,77);
-  border-top: 1px solid rgb(92,92,92);
-  text-align: center;
-  color: white;
-  font-size: 12px;
-  line-height: 18px;
+  background-color: rgb(80,80,80);
+  border-top: 1px solid rgb(95,95,95);
   border-radius: 1px;
   -webkit-transition: left 0.1s ease-in 0.1s;
   -o-transition: left 0.1s ease-in 0.1s;
@@ -148,8 +142,8 @@
 .effeckt-ckbox-android-alt[type="checkbox"]:checked:after,
 .effeckt-rdio-android-alt[type="radio"]:checked:after {
   left: 36px;
-  background-color: rgb(40,150,255);
-  border-top: 1px solid rgb(55,185,255);
+  background-color: rgb(80,150,255);
+  border-color: rgb(95,165,255);
 }
 
 }
