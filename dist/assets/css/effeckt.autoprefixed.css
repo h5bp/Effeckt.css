@@ -8070,6 +8070,45 @@ Example markup:
   .effeckt-rdio-android[type="radio"]:checked:after {
     left: 43px;
   }
+
+  .effeckt-ckbox-android-alt[type=checkbox],
+  .effeckt-rdio-android-alt[type=radio] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    height: 21px;
+    width: 72px;
+    padding: 1px;
+    margin: 0px;
+    border-radius: 1px;
+    background: #333333;
+  }
+
+  .effeckt-ckbox-android-alt[type=checkbox]:after,
+  .effeckt-rdio-android-alt[type=radio]:after {
+    content: '';
+    cursor: pointer;
+    height: 18px;
+    position: absolute;
+    left: 1px;
+    width: 35px;
+    background-color: #505050;
+    border-top: 1px solid #5f5f5f;
+    border-radius: 1px;
+    -webkit-transition: left 0.1s ease-in 0.1s;
+    -o-transition: left 0.1s ease-in 0.1s;
+    transition: left 0.1s ease-in 0.1s;
+  }
+
+  .effeckt-ckbox-android-alt[type="checkbox"]:checked:after,
+  .effeckt-rdio-android-alt[type="radio"]:checked:after {
+    left: 36px;
+    background-color: #5096ff;
+    border-color: #5fa5ff;
+  }
 }
 
 .effeckt-tabs-wrap {

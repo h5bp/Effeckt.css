@@ -7,7 +7,7 @@
 // Apply this style only on WebKit
 // To prevent ugly styles on non-WebKit Browser
 @media screen and (-webkit-min-device-pixel-ratio:0) {
-  
+
   .effeckt-ckbox-ios7[type=checkbox],
 .effeckt-rdio-ios7[type=radio] {
 
@@ -97,12 +97,53 @@
   -webkit-transition: all 0.1s ease-in 0.1s;
   -o-transition: all 0.1s ease-in 0.1s;
   transition: all 0.1s ease-in 0.1s;
-  background: #4d4d4d; 
+  background: #4d4d4d;
 }
 
 .effeckt-ckbox-android[type="checkbox"]:checked:after,
 .effeckt-rdio-android[type="radio"]:checked:after {
   left: 43px;
+}
+
+// Android Alt
+
+.effeckt-ckbox-android-alt[type=checkbox],
+.effeckt-rdio-android-alt[type=radio] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  height: 21px;
+  width: 72px;
+  padding: 1px;
+  margin: 0px;
+  border-radius: 1px;
+  background: #333;
+}
+
+.effeckt-ckbox-android-alt[type=checkbox]:after,
+.effeckt-rdio-android-alt[type=radio]:after {
+  content: '';
+  cursor: pointer;
+  height: 18px;
+  position: absolute;
+  left: 1px;
+  width: 35px;
+  background-color: rgb(80,80,80);
+  border-top: 1px solid rgb(95,95,95);
+  border-radius: 1px;
+  -webkit-transition: left 0.1s ease-in 0.1s;
+  -o-transition: left 0.1s ease-in 0.1s;
+  transition: left 0.1s ease-in 0.1s;
+}
+
+.effeckt-ckbox-android-alt[type="checkbox"]:checked:after,
+.effeckt-rdio-android-alt[type="radio"]:checked:after {
+  left: 36px;
+  background-color: rgb(80,150,255);
+  border-color: rgb(95,165,255);
 }
 
 }
