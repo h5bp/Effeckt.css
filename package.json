@@ -11,7 +11,8 @@
     "grunt-contrib-copy": "~0.4.1",
     "assemble": "~0.4.0",
     "grunt-gh-pages": "~0.6.0",
-    "grunt-sass": "~0.6.0"
+    "grunt-sass": "~0.6.0",
+    "grunt-build-control": "~0.1.1"
   },
   "engines": {
     "node": ">=0.10"
