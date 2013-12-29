@@ -477,7 +477,7 @@ ul.effeckt-tabs {
     display: inline-block;
     background: #dddddd;
     color: white;
-    border: 1px solid #cccccc;
+    border: 2px solid rgba(0, 0, 0, 0.7);
     width: 100%;
     height: 250px; }
   .effeckt-lazy-loading a:hover {
