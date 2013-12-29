@@ -607,10 +607,14 @@ ul.effeckt-tabs {
   }
   a {
     display: inline-block;
-    background: #DDD;
+    background: #ddd;
+    color: #fff;
     border:1px solid #ccc;
     width: 100%;
     height: 250px;
+  }
+  a:hover{
+    color:#000;
   }
 
   li:nth-child(1) a,
@@ -622,5 +626,24 @@ ul.effeckt-tabs {
   }
   li:nth-child(5n+5) a {
     height: 200px;
+  }
+
+  li:nth-child(6n+1) a{ 
+    background: #0ac2d2;
+  }
+  li:nth-child(6n+2) a{ 
+    background: #7bb7fa;
+  }
+  li:nth-child(6n+3) a{ 
+    background: #60d7a9;
+  }
+  li:nth-child(6n+4) a{ 
+    background: #fdc162;
+  }
+  li:nth-child(6n+5) a{ 
+    background: #fd6a62;
+  }
+  li:nth-child(6n) a{ 
+    background: #f68dbb;
   }
 }
