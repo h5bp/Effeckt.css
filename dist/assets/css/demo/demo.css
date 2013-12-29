@@ -476,12 +476,27 @@ ul.effeckt-tabs {
   .effeckt-lazy-loading a {
     display: inline-block;
     background: #dddddd;
-    border: 1px solid #cccccc;
+    color: white;
+    border: 3px solid rgba(0, 0, 0, 0.2);
     width: 100%;
     height: 250px; }
+  .effeckt-lazy-loading a:hover {
+    color: black; }
   .effeckt-lazy-loading li:nth-child(1) a, .effeckt-lazy-loading li:nth-child(12n+12) a {
     height: 500px; }
   .effeckt-lazy-loading li:nth-child(3n+3) a {
     height: 350px; }
   .effeckt-lazy-loading li:nth-child(5n+5) a {
     height: 200px; }
+  .effeckt-lazy-loading li:nth-child(6n+1) a {
+    background: #0ac2d2; }
+  .effeckt-lazy-loading li:nth-child(6n+2) a {
+    background: #7bb7fa; }
+  .effeckt-lazy-loading li:nth-child(6n+3) a {
+    background: #60d7a9; }
+  .effeckt-lazy-loading li:nth-child(6n+4) a {
+    background: #fdc162; }
+  .effeckt-lazy-loading li:nth-child(6n+5) a {
+    background: #fd6a62; }
+  .effeckt-lazy-loading li:nth-child(6n) a {
+    background: #f68dbb; }
