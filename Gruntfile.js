@@ -53,10 +53,9 @@ module.exports = function(grunt) {
         },
         files: [
           {
-            src : ['**/*.css', '!**/*autoprefixed.css'],
+            src : ['**/*.css'],
             cwd : 'css',
             dest : 'css',
-            ext : '.autoprefixed.css',
             expand : true
           }
         ]

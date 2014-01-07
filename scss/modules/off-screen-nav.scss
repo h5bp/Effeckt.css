@@ -29,7 +29,7 @@
 .effeckt-off-screen-nav-left-overlay {
   transform: translateX(-100%);
   transition: $effeckt-off-screen-navigation-transition-duration cubic-bezier(.09,.68,0,.99);
-  
+
   &.effeckt-show {
     transform: translateX(0);
   }
@@ -201,7 +201,7 @@
 
     ~ [data-effeckt-page].effeckt-page-active {
       transform: translateX(260px) rotateY(15deg);
-      
+
       // Prevent scrolling
       overflow: hidden;
     }
@@ -397,7 +397,7 @@
 
     ~ [data-effeckt-page] {
       transform: translateX(-260px) rotateY(-15deg);
-      
+
       // Prevent scrolling
       overflow: hidden;
     }
@@ -427,7 +427,7 @@
   &.effeckt-show {
     transform: translateY(0%);
   }
-  
+
   h4 {
     position: relative;
     z-index: 300;
@@ -474,7 +474,7 @@
   &.effeckt-show {
     transform: translateY(0%);
   }
-  
+
   h4 {
     position: relative;
     z-index: 300;
@@ -624,7 +624,7 @@
 
     ~ [data-effeckt-page].effeckt-page-active {
       transform: translateY(-260px) rotateX(15deg);
-      
+
       // Prevent scrolling
       overflow: hidden;
     }
@@ -664,7 +664,7 @@
 
     ~ [data-effeckt-page].effeckt-page-active {
       transform: translateY(260px) rotateX(-15deg);
-      
+
       // Prevent scrolling
       overflow: hidden;
     }
@@ -690,11 +690,12 @@
   }
 }
 
+@mixin minimize-reveal-list-items-fade {
+  transform: translateX(0);
+  opacity: 1;
+}
+
 @mixin minimize-reveal-list-items-shown {
-  @mixin minimize-reveal-list-items-fade {
-    transform: translateX(0);
-    opacity: 1;
-  }
   h4 {
     @include minimize-reveal-list-items-fade();
     //fade in header first.
