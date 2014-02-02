@@ -41,6 +41,7 @@
 // Effect: Stick Up
 .sticky-up {
   top: 0;
+  transform: translate(-50%, 0);
 }
 .sticky-up .effeckt-modal {
   transform: translateY(-100%);
