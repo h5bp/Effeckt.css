@@ -46,6 +46,8 @@
 // is needed for overlay
 html, body {
   height: 100%;
+  // testing
+  overflow: hidden;
 }
 
 body {
@@ -322,7 +324,7 @@ h1 span:nth-of-type(11) {
   padding: 1rem;
 }
 
-.effeckt-overlay {
+.effeckt-modal-overlay {
   z-index: 1000;
   background: rgba(black, 0.5);
 }

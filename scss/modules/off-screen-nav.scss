@@ -3,27 +3,6 @@
 // TODO: translateX(-260px) or translateY(-260px) need to be nav size
 // this need to be handle by JS or CSS Variable
 
-// Also used in modals
-// Class name required for some body 3D effects
-// Should probably be renamed, "md" is kinda meaningless
-// Perhaps "effeckt-fullpage-perspective"
-.md-perspective,
-.md-perspective body {
-  height: 100%;
-
-  // This is necessary because the scrollbar is
-  // weird with this effect, but, it causes
-  // jerky behavior when the scrollbar comes and goes.
-  overflow: hidden;
-}
-.md-perspective body  {
-  perspective: 600px;
-}
-
-.effeckt-show {
-  visibility: visible;
-}
-
 
 // 1 Left Overlay
 .effeckt-off-screen-nav-left-overlay {

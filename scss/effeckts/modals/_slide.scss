@@ -1,0 +1,101 @@
+// Effect: Slide from the top
+.slide-in-top .effeckt-modal {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+.effeckt-show.slide-in-top .effeckt-modal {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+// Effect: Slide from the right
+.slide-in-right .effeckt-modal {
+  transform: translateX(30%);
+  opacity: 0;
+}
+.effeckt-show.slide-in-right .effeckt-modal {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+// Effect: Slide from the bottom
+.slide-in-bottom .effeckt-modal {
+  transform: translateY(30%);
+  opacity: 0;
+}
+.effeckt-show.slide-in-bottom .effeckt-modal {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+// Effect: Slide from the left
+.slide-in-left .effeckt-modal {
+  transform: translateX(-30%);
+  opacity: 0;
+}
+.effeckt-show.slide-in-left .effeckt-modal {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+// Effect: Stick Up
+.sticky-up {
+  top: 0;
+}
+.sticky-up .effeckt-modal {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+.effeckt-show.sticky-up .effeckt-modal {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+// Effect:  Slip in from the top with perspective on container
+.effeckt-show.slip-in-from-top ~ [data-effeckt-page],
+.effeckt-show.slip-in-from-top ~ .effeckt-modal-overlay {
+  transform-style: preserve-3d;
+  transform-origin: 50% 100%;
+  animation: OpenTop $effeckt-modal-transition-duration forwards ease-in;
+}
+
+.slip-in-from-top .effeckt-modal {
+  transform: translateY(-200%);
+  opacity: 0;
+}
+.effeckt-show.slip-in-from-top .effeckt-modal {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+@keyframes OpenTop {
+  50% {
+    transform: rotateX(10deg);
+    animation-timing-function: ease-out;
+  }
+}
+
+// Effeckt Out: Slide Out Bottom
+.slide-out-bottom .effeckt-modal {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+// Effeckt Out: Slide Out Top
+.slide-out-top .effeckt-modal {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+// Effeckt Out: Slide Out Right
+.slide-out-right .effeckt-modal {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+// Effeckt Out: Slide Out Left
+.slide-out-left .effeckt-modal {
+  transform: translateX(-100%);
+  opacity: 0;
+}

@@ -12,10 +12,11 @@
  */
 var EffecktModals = {
 
-  overlay: $('#effeckt-overlay'),
+  overlay: $('#effeckt-modal-overlay'),
   modalWrap: $("#effeckt-modal-wrap"),
   modal: $("#effeckt-modal"),
-  modalStyle: "",
+  modalEffeckt: "",
+  modalEffecktOut: "",
 
   init: function() {
     this.bindUIActions();
@@ -33,7 +34,7 @@ var EffecktModals = {
       self.closeModal(this);
     });
 
-    $(".effeckt-overlay").on( Effeckt.buttonPressedEvent, function() {
+    $(".effeckt-modal-overlay").on( Effeckt.buttonPressedEvent, function() {
       self.closeModal();
     });
 
@@ -48,27 +49,29 @@ var EffecktModals = {
     var button = $(el),
         self = this;
 
-    this.modalWrap.show();
-    
-    this.modalStyle = button.data("effeckt-type");
+    // Modal Effeckt-Type
+    this.modalEffeckt = button.data( 'effeckt-type' );
+    this.modalEffecktOut = button.data( 'effeckt-out-type' );
 
-    this.modalWrap.addClass(this.modalStyle);
+    if ( button.data( 'effeckt-needs-perspective' ) ) {
+      $('body').addClass( 'effeckt-perspective' );
+    }
 
-    this.modalWrap.data("effeckt-needs-hide-class", button.data("effeckt-needs-hide-class"));
+    // check if the effeckt class is already added
+    if ( this.modalWrap.hasClass( this.modalEffeckt ) ) {
 
-    
-    
-    this.overlay.on( Effeckt.transitionAnimationEndEvent, function () {
-      self.overlay.off( Effeckt.transitionAnimationEndEvent );
-      self.modalWrap.addClass("effeckt-show");
+      this.modalWrap.addClass( 'effeckt-show' );
 
-      if (button.data("effeckt-needs-perspective")) {
-        $("html").addClass("md-perspective");
-      }
-    });
+    } else {
 
-    this.showOverlay();
+      this.modalWrap.addClass( this.modalEffeckt );
 
+      this.modalWrap.on( Effeckt.transitionAnimationEndEvent, function() {
+        self.modalWrap.off( Effeckt.transitionEndEventName );
+        self.modalWrap.addClass( 'effeckt-show' );
+      });
+
+    }
   },
 
   closeModal: function(el) {
@@ -79,33 +82,24 @@ var EffecktModals = {
       self.hideModal();
     });
 
-    this.hideOverlay();
-    //Not the cleanest way
-    this.modalWrap.removeClass("effeckt-show");
+    this.modalWrap.removeClass( 'effeckt-show' );
 
-    if( this.modalWrap.data("effeckt-needs-hide-class") ){
-      this.modalWrap.addClass("effeckt-hide");
+    if ( this.modalEffecktOut ) {
+      this.modalWrap.addClass( this.modalEffecktOut );
     }
-  },
-
-  showOverlay: function() {
-    this.overlay.addClass("effeckt-show");
-  },
-
-  hideOverlay: function() {
-    this.overlay.removeClass("effeckt-show");
   },
 
   hideModal: function() {
 
     // Only remove effeckt-hide class if it's any
-    if( this.modalWrap.data("effeckt-needs-hide-class") ){
-      this.modalWrap.removeClass("effeckt-hide");
+    if ( this.modalEffecktOut ){
+      this.modalWrap.removeClass( this.modalEffecktOut );
+      this.modalEffecktOut = '';
     }
 
-    this.modalWrap.removeClass(this.modalStyle);
-    $("html").removeClass("md-perspective");
-    this.modalWrap.hide();
+    $('body').removeClass("effeckt-perspective");
+    this.modalWrap.removeClass(this.modalEffeckt);
+    this.modalEffeckt = '';
   }
 
 };
