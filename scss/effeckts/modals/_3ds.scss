@@ -1,10 +1,10 @@
 // Effect: 3D flip horizontal
 .flip-horizontal-3D {
   perspective: $effeckt-perspective;
-  transform-style: preserve-3d;
 }
 .flip-horizontal-3D .effeckt-modal {
   transform: rotateY(-70deg);
+  transform-style: preserve-3d;
   opacity: 0;
 }
 .effeckt-show.flip-horizontal-3D .effeckt-modal {
@@ -16,10 +16,10 @@
 // Effect: 3D flip vertical
 .flip-vertical-3D {
   perspective: $effeckt-perspective;
-  transform-style: preserve-3d;
 }
 .flip-vertical-3D .effeckt-modal {
   transform: rotateX(-70deg);
+  transform-style: preserve-3d;
   opacity: 0;
 }
 .effeckt-show.flip-vertical-3D .effeckt-modal {
@@ -31,11 +31,11 @@
 // Effect: 3D sign
 .sign-3D {
   perspective: $effeckt-perspective;
-  transform-style: preserve-3d;
 }
 .sign-3D .effeckt-modal {
   transform: rotateX(-60deg);
   transform-origin: 50% 0;
+  transform-style: preserve-3d;
   opacity: 0;
 }
 .effeckt-show.sign-3D .effeckt-modal {
@@ -47,10 +47,10 @@
 // Effect: 3D Slit
 .slit-3D {
   perspective: $effeckt-perspective;
-  transform-style: preserve-3d;
 }
 .slit-3D .effeckt-modal {
   transform: translateZ(-3000px) rotateY(90deg);
+  transform-style: preserve-3d;
   opacity: 0;
 }
 .effeckt-show.slit-3D .effeckt-modal {
@@ -73,10 +73,10 @@
 // Effect:  3D Rotate from bottom
 .rotate-from-bottom-3D {
   perspective: $effeckt-perspective;
-  transform-style: preserve-3d;
 }
 .rotate-from-bottom-3D .effeckt-modal {
   transform: translateY(100%) rotateX(90deg);
+  transform-style: preserve-3d;
   transform-origin: 0 100%;
   opacity: 0;
 }
@@ -89,10 +89,10 @@
 // Effect:  3D Rotate in from left
 .rotate-from-left-3D {
   perspective: $effeckt-perspective;
-  transform-style: preserve-3d;
 }
 .rotate-from-left-3D .effeckt-modal {
   transform: translateZ(100px) translateX(-30%) rotateY(90deg);
+  transform-style: preserve-3d;
   transform-origin: 0 100%;
   opacity: 0;
 }
@@ -106,16 +106,19 @@
 .let-me-in ~ [data-effeckt-page] {
   transition: $effeckt-modal-transition-duration;
 }
-
-.effeckt-show.let-me-in ~ [data-effeckt-page],
-.effeckt-show.let-me-in ~ .effeckt-modal-overlay  {
-  transform: rotateX(-2deg);
+.let-me-in ~ [data-effeckt-page],
+.let-me-in ~ .effeckt-modal-overlay  {
   transform-origin: 50% 0%;
   transform-style: preserve-3d;
 }
 .let-me-in .effeckt-modal {
   opacity: 0;
   transform: translateY(200%);
+}
+.effeckt-show.let-me-in ~ [data-effeckt-page],
+.effeckt-show.let-me-in ~ .effeckt-modal-overlay  {
+  transform: rotateX(-2deg);
+  opacity: 1;
 }
 .effeckt-show.let-me-in .effeckt-modal {
   transform: translateY(-50%);
@@ -124,16 +127,20 @@
 
 
 // Effect: Make way
-.effeckt-show.make-way ~ [data-effeckt-page] {
+.make-way {
+  perspective: $effeckt-perspective;
+}
+.make-way ~ [data-effeckt-page] {
   transform-style: preserve-3d;
   transform-origin: 0% 50%;
-  animation: makeWay $effeckt-modal-transition-duration forwards ease-in;
-  overflow: visible;
 }
-
 .make-way .effeckt-modal {
   transform: translateX(200%);
   opacity: 0;
+}
+.effeckt-show.make-way ~ [data-effeckt-page] {
+  animation: makeWay $effeckt-modal-transition-duration forwards ease-in;
+  overflow: visible;
 }
 .effeckt-show.make-way .effeckt-modal {
   transform: translateX(0);
