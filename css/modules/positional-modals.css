@@ -4,15 +4,6 @@
   display: none;
 }
 
-.effeckt-positional-modal-wrap .effeckt-modal {
-  padding: 10px;
-  background: #cccccc;
-}
-
-.effeckt-positional-modal-wrap .effeckt-modal-content {
-  background: white;
-}
-
 .effeckt-positional-modal-wrap.effeckt-front {
   z-index: 20;
 }

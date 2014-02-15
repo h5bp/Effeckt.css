@@ -7,13 +7,7 @@
   position: absolute;
   z-index: 10;
   display: none;
-  .effeckt-modal {
-    padding: 10px;
-    background: #ccc;
-  }
-  .effeckt-modal-content {
-    background: white;
-  }
+
   &.effeckt-front {
     z-index: 20;
   }

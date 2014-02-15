@@ -1,39 +1,39 @@
 // Effect: Slide from the top
-.slide-in-top .effeckt-modal {
+.slide-in-top .effeckt-content {
   transform: translateY(-100%);
   opacity: 0;
 }
-.effeckt-show.slide-in-top .effeckt-modal {
+.effeckt-show.slide-in-top .effeckt-content {
   transform: translateY(0);
   opacity: 1;
 }
 
 // Effect: Slide from the right
-.slide-in-right .effeckt-modal {
+.slide-in-right .effeckt-content {
   transform: translateX(30%);
   opacity: 0;
 }
-.effeckt-show.slide-in-right .effeckt-modal {
+.effeckt-show.slide-in-right .effeckt-content {
   transform: translateX(0);
   opacity: 1;
 }
 
 // Effect: Slide from the bottom
-.slide-in-bottom .effeckt-modal {
+.slide-in-bottom .effeckt-content {
   transform: translateY(30%);
   opacity: 0;
 }
-.effeckt-show.slide-in-bottom .effeckt-modal {
+.effeckt-show.slide-in-bottom .effeckt-content {
   transform: translateY(0);
   opacity: 1;
 }
 
 // Effect: Slide from the left
-.slide-in-left .effeckt-modal {
+.slide-in-left .effeckt-content {
   transform: translateX(-30%);
   opacity: 0;
 }
-.effeckt-show.slide-in-left .effeckt-modal {
+.effeckt-show.slide-in-left .effeckt-content {
   transform: translateX(0);
   opacity: 1;
 }
@@ -43,11 +43,11 @@
   top: 0;
   transform: translate(-50%, 0);
 }
-.sticky-up .effeckt-modal {
+.sticky-up .effeckt-content {
   transform: translateY(-100%);
   opacity: 0;
 }
-.effeckt-show.sticky-up .effeckt-modal {
+.effeckt-show.sticky-up .effeckt-content {
   transform: translateY(0);
   opacity: 1;
 }
@@ -55,19 +55,19 @@
 
 // Effect:  Slip in from the top with perspective on container
 .slip-in-from-top ~ [data-effeckt-page],
-.slip-in-from-top ~ .effeckt-modal-overlay {
+.slip-in-from-top ~ .effeckt-overlay {
   transform-style: preserve-3d;
   transform-origin: 50% 100%;
 }
-.slip-in-from-top .effeckt-modal {
+.slip-in-from-top .effeckt-content {
   transform: translateY(-200%);
   opacity: 0;
 }
 .effeckt-show.slip-in-from-top ~ [data-effeckt-page],
-.effeckt-show.slip-in-from-top ~ .effeckt-modal-overlay {
+.effeckt-show.slip-in-from-top ~ .effeckt-overlay {
   animation: OpenTop $effeckt-modal-transition-duration forwards ease-in;
 }
-.effeckt-show.slip-in-from-top .effeckt-modal {
+.effeckt-show.slip-in-from-top .effeckt-content {
   transform: translateY(0);
   opacity: 1;
 }
@@ -80,25 +80,25 @@
 }
 
 // Effeckt Out: Slide Out Bottom
-.slide-out-bottom .effeckt-modal {
+.slide-out-bottom .effeckt-content {
   transform: translateY(100%);
   opacity: 0;
 }
 
 // Effeckt Out: Slide Out Top
-.slide-out-top .effeckt-modal {
+.slide-out-top .effeckt-content {
   transform: translateY(-100%);
   opacity: 0;
 }
 
 // Effeckt Out: Slide Out Right
-.slide-out-right .effeckt-modal {
+.slide-out-right .effeckt-content {
   transform: translateX(100%);
   opacity: 0;
 }
 
 // Effeckt Out: Slide Out Left
-.slide-out-left .effeckt-modal {
+.slide-out-left .effeckt-content {
   transform: translateX(-100%);
   opacity: 0;
 }
