@@ -66,7 +66,7 @@ module.exports = function(grunt) {
       server: {
         options: {
           port: 8000,
-          base: './'
+          base: 'dist/'
         }
       }
     },
@@ -106,6 +106,20 @@ module.exports = function(grunt) {
           { expand: true, cwd: './js', src: ['./**/*.*'], dest: 'dist/assets/js' }
         ]
       }
+    },
+    buildcontrol: {
+      options: {
+        dir: 'dist',
+        commit: true,
+        push: true,
+        message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+      },
+      pages: {
+        options: {
+          remote: 'https://github.com/h5bp/Effeckt.css.git',
+          branch: 'gh-pages'
+        }
+      },
     }
 
   });
@@ -121,6 +135,7 @@ module.exports = function(grunt) {
   grunt.registerTask('demo', ['copy:demo', 'assemble:demo']);
   grunt.registerTask('deploy', ['gh-pages']);
 
+  grunt.registerTask('deploy', ['default', 'buildcontrol']);
   grunt.loadNpmTasks('assemble');
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 };
