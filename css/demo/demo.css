@@ -471,6 +471,15 @@ h1 span:nth-of-type(11) {
   background: rgba(0, 0, 0, 0.5);
 }
 
+.effeckt-positional-modal-wrap .effeckt-modal {
+  padding: 10px;
+  background: #cccccc;
+}
+
+.effeckt-positional-modal-wrap .effeckt-modal-content {
+  background: white;
+}
+
 .effeckt-button {
   background: #444444;
   color: white;

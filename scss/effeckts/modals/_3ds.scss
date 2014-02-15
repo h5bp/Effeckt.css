@@ -2,12 +2,12 @@
 .flip-horizontal-3D {
   perspective: $effeckt-perspective;
 }
-.flip-horizontal-3D .effeckt-modal {
+.flip-horizontal-3D .effeckt-content {
   transform: rotateY(-70deg);
   transform-style: preserve-3d;
   opacity: 0;
 }
-.effeckt-show.flip-horizontal-3D .effeckt-modal {
+.effeckt-show.flip-horizontal-3D .effeckt-content {
   transform: rotateY(0deg);
   opacity: 1;
 }
@@ -17,12 +17,12 @@
 .flip-vertical-3D {
   perspective: $effeckt-perspective;
 }
-.flip-vertical-3D .effeckt-modal {
+.flip-vertical-3D .effeckt-content {
   transform: rotateX(-70deg);
   transform-style: preserve-3d;
   opacity: 0;
 }
-.effeckt-show.flip-vertical-3D .effeckt-modal {
+.effeckt-show.flip-vertical-3D .effeckt-content {
   transform: rotateX(0deg);
   opacity: 1;
 }
@@ -32,13 +32,13 @@
 .sign-3D {
   perspective: $effeckt-perspective;
 }
-.sign-3D .effeckt-modal {
+.sign-3D .effeckt-content {
   transform: rotateX(-60deg);
   transform-origin: 50% 0;
   transform-style: preserve-3d;
   opacity: 0;
 }
-.effeckt-show.sign-3D .effeckt-modal {
+.effeckt-show.sign-3D .effeckt-content {
   transform: rotateX(0deg);
   opacity: 1;
 }
@@ -48,12 +48,12 @@
 .slit-3D {
   perspective: $effeckt-perspective;
 }
-.slit-3D .effeckt-modal {
+.slit-3D .effeckt-content {
   transform: translateZ(-3000px) rotateY(90deg);
   transform-style: preserve-3d;
   opacity: 0;
 }
-.effeckt-show.slit-3D .effeckt-modal {
+.effeckt-show.slit-3D .effeckt-content {
   animation: modalSlit 0.7s forwards ease-out;
 }
 
@@ -74,13 +74,13 @@
 .rotate-from-bottom-3D {
   perspective: $effeckt-perspective;
 }
-.rotate-from-bottom-3D .effeckt-modal {
+.rotate-from-bottom-3D .effeckt-content {
   transform: translateY(100%) rotateX(90deg);
   transform-style: preserve-3d;
   transform-origin: 0 100%;
   opacity: 0;
 }
-.effeckt-show.rotate-from-bottom-3D .effeckt-modal {
+.effeckt-show.rotate-from-bottom-3D .effeckt-content {
   transform: translateY(0%) rotateX(0deg);
   opacity: 1;
 }
@@ -90,13 +90,13 @@
 .rotate-from-left-3D {
   perspective: $effeckt-perspective;
 }
-.rotate-from-left-3D .effeckt-modal {
+.rotate-from-left-3D .effeckt-content {
   transform: translateZ(100px) translateX(-30%) rotateY(90deg);
   transform-style: preserve-3d;
   transform-origin: 0 100%;
   opacity: 0;
 }
-.effeckt-show.rotate-from-left-3D .effeckt-modal {
+.effeckt-show.rotate-from-left-3D .effeckt-content {
   transform: translateZ(0px) translateX(0%) rotateY(0deg);
   opacity: 1;
 }
@@ -107,20 +107,20 @@
   transition: $effeckt-modal-transition-duration;
 }
 .let-me-in ~ [data-effeckt-page],
-.let-me-in ~ .effeckt-modal-overlay  {
+.let-me-in ~ .effeckt-overlay  {
   transform-origin: 50% 0%;
   transform-style: preserve-3d;
 }
-.let-me-in .effeckt-modal {
+.let-me-in .effeckt-content {
   opacity: 0;
   transform: translateY(200%);
 }
 .effeckt-show.let-me-in ~ [data-effeckt-page],
-.effeckt-show.let-me-in ~ .effeckt-modal-overlay  {
+.effeckt-show.let-me-in ~ .effeckt-overlay  {
   transform: rotateX(-2deg);
   opacity: 1;
 }
-.effeckt-show.let-me-in .effeckt-modal {
+.effeckt-show.let-me-in .effeckt-content {
   transform: translateY(-50%);
   opacity: 1;
 }
@@ -134,7 +134,7 @@
   transform-style: preserve-3d;
   transform-origin: 0% 50%;
 }
-.make-way .effeckt-modal {
+.make-way .effeckt-content {
   transform: translateX(200%);
   opacity: 0;
 }
@@ -142,7 +142,7 @@
   animation: makeWay $effeckt-modal-transition-duration forwards ease-in;
   overflow: visible;
 }
-.effeckt-show.make-way .effeckt-modal {
+.effeckt-show.make-way .effeckt-content {
   transform: translateX(0);
   opacity: 1;
 }
@@ -159,7 +159,7 @@
 
 
 // Effect: Deep Content
-.deep-content .effeckt-modal {
+.deep-content .effeckt-content {
   transform: scale(0.7);
   opacity: 0;
 }
@@ -174,9 +174,8 @@
 .effeckt-show.deep-content ~ [data-effeckt-page] {
   transform: scale(0.85);
   filter: blur(3px);
-  //overflow: visible;
 }
-.effeckt-show.deep-content .effeckt-modal {
+.effeckt-show.deep-content .effeckt-content {
   transform: scale(1.1);
   opacity: 1;
 }

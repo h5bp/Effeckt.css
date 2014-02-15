@@ -41,7 +41,7 @@
   height: 100%;
   visibility: hidden;
   opacity: 0;
-  transition: $effeckt-modal-transition-duration;
+  transition-duration: $effeckt-modal-transition-duration;
 }
 
 .effeckt-show.effeckt-modal-wrap {

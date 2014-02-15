@@ -41,17 +41,17 @@ var EffecktPositionalModals = {
     if (this.contains($el)) {
       return false;
     }
-    
-    var modal = this.createModal($("#effeckt-modal-wrap").html(), style, position);
 
+    var modal = this.createModal($("#effeckt-modal-wrap").html(), style, position);
     modal.show();
+    console.log(modal.width());
 
     // append to dom, add to list
     this.add($el, modal);
 
     // TODO: check if modal window is outside the view.
     // If it's outside switch position
-    
+
     // change based on position
     switch ( position ) {
 
@@ -115,7 +115,7 @@ var EffecktPositionalModals = {
   },
 
   createModal: function(content, style, position) {
-    var modalWrap = 
+    var modalWrap =
       $('<div>')
         .addClass('effeckt-positional-modal-wrap ' + style)
         .attr('data-effeckt-position', position);
@@ -141,8 +141,8 @@ var EffecktPositionalModals = {
     $('.effeckt-page-active').append(modal);
 
     // add element to modal list
-    this.modalsList.push({ 
-      element: $el, 
+    this.modalsList.push({
+      element: $el,
       'modal': modal
     });
   },

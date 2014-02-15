@@ -1,9 +1,9 @@
 // Effect: Newspaper
-.newspaper .effeckt-modal {
+.newspaper .effeckt-content {
   transform: scale(0.5) rotate(720deg);
   opacity: 0;
 }
-.effeckt-show.newspaper .effeckt-modal {
+.effeckt-show.newspaper .effeckt-content {
   transform: scale(1) rotate(0deg);
   opacity: 1;
 }
@@ -13,23 +13,23 @@
   perspective: $effeckt-perspective;
   transform-style: preserve-3d;
 }
-.side-fall .effeckt-modal {
+.side-fall .effeckt-content {
   transition-timing-function: ease-out;
   transform: translateZ(600px) translateX(30%) rotate(10deg);
   opacity: 0;
 }
 
-.effeckt-show.side-fall .effeckt-modal {
+.effeckt-show.side-fall .effeckt-content {
   transition-timing-function: ease-in;
   transform: translateZ(0) translateX(0) rotate(0deg);
   opacity: 1;
 }
 
 // Effect: Fade In (Just me)
-.fade-in .effeckt-modal {
+.fade-in .effeckt-content {
   opacity: 0;
 }
-.effeckt-show.fade-in .effeckt-modal {
+.effeckt-show.fade-in .effeckt-content {
   opacity: 1;
 }
 
@@ -37,28 +37,28 @@
 .effeckt-show.blur ~ [data-effeckt-page] {
   filter: blur(3px);
 }
-.blur .effeckt-modal {
+.blur .effeckt-content {
   opacity: 0;
 }
 .effeckt-show.blur ~ [data-effeckt-page] {
   transition: all $effeckt-modal-transition-duration ease;
 }
-.effeckt-show.blur .effeckt-modal {
+.effeckt-show.blur .effeckt-content {
   opacity: 1;
 }
 
 // Effect: Tilt Fall / From the top to bottom with left tilt on the way out */
-.tilt-fall .effeckt-modal {
+.tilt-fall .effeckt-content {
   transform: translateY(100%) rotate(-25deg);
   opacity: 0;
 }
 
 
 // Effect: Shake
-.shake .effeckt-modal {
+.shake .effeckt-content {
   opacity: 0;
 }
-.effeckt-show.shake .effeckt-modal {
+.effeckt-show.shake .effeckt-content {
   opacity: 1;
   animation-name: shake;
 }
@@ -70,10 +70,10 @@
 
 
 // Effect: Bounce
-.bounce .effeckt-modal {
+.bounce .effeckt-content {
   opacity: 0;
 }
-.effeckt-show.bounce .effeckt-modal {
+.effeckt-show.bounce .effeckt-content {
   opacity: 1;
   animation-name: bounce;
 }
@@ -85,10 +85,10 @@
 
 
 // Effect: Pulse
-.pulse .effeckt-modal {
+.pulse .effeckt-content {
   opacity: 0;
 }
-.effeckt-show.pulse .effeckt-modal {
+.effeckt-show.pulse .effeckt-content {
   opacity: 1;
   animation-name: pulse;
 }
@@ -99,10 +99,10 @@
 }
 
 // Effect: wobble
-.wobble .effeckt-modal {
+.wobble .effeckt-content {
   opacity: 0;
 }
-.effeckt-show.wobble .effeckt-modal {
+.effeckt-show.wobble .effeckt-content {
   opacity: 1;
   animation-name: wobble;
 }
@@ -117,11 +117,11 @@
 }
 
 // Effect: Swing
-.swing .effeckt-modal {
+.swing .effeckt-content {
   transform-origin: 50% 0%;
   opacity: 0;
 }
-.effeckt-show.swing .effeckt-modal {
+.effeckt-show.swing .effeckt-content {
   opacity: 1;
   animation-name: swing;
 }
@@ -134,10 +134,10 @@
 }
 
 // Effect: Tada
-.tada .effeckt-modal {
+.tada .effeckt-content {
   opacity: 0;
 }
-.effeckt-show.tada .effeckt-modal {
+.effeckt-show.tada .effeckt-content {
   opacity: 1;
   animation-name: tada;
 }
