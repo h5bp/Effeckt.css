@@ -181,6 +181,23 @@
     }
   }
 
+  // Effect 9: Blurry
+  &[data-effeckt-type="blurry"] {
+    figcaption {
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+      filter: blur(8px);
+    }
+    &:hover, &:active {
+      figcaption {
+        filter: blur(0);
+        opacity: 1;
+      }
+    }
+  }
+
+
   // Effect 15 - Cover Slide Top
   &[data-effeckt-type="cover-slide-top"] {
     figcaption {

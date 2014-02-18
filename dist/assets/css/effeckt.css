@@ -803,6 +803,21 @@ Example markup:
   transform: translateX(100%);
 }
 
+.effeckt-caption[data-effeckt-type="blurry"] figcaption {
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-filter: blur(8px);
+  filter: blur(8px);
+}
+
+.effeckt-caption[data-effeckt-type="blurry"]:hover figcaption,
+.effeckt-caption[data-effeckt-type="blurry"]:active figcaption {
+  -webkit-filter: blur(0);
+  filter: blur(0);
+  opacity: 1;
+}
+
 .effeckt-caption[data-effeckt-type="cover-slide-top"] figcaption {
   top: 0;
   left: 0;
