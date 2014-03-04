@@ -106,6 +106,13 @@ module.exports = function(grunt) {
           { expand: true, cwd: './js', src: ['./**/*.*'], dest: 'dist/assets/js' }
         ]
       }
+    },
+
+    'gh-pages': {
+      options: {
+        base: 'dist'
+      },
+      src: '**/*'
     }
 
   });
