@@ -66,7 +66,7 @@ module.exports = function(grunt) {
       server: {
         options: {
           port: 8000,
-          base: './'
+          base: './dist/'
         }
       }
     },
@@ -106,6 +106,13 @@ module.exports = function(grunt) {
           { expand: true, cwd: './js', src: ['./**/*.*'], dest: 'dist/assets/js' }
         ]
       }
+    },
+
+    'gh-pages': {
+      options: {
+        base: 'dist'
+      },
+      src: '**/*'
     }
 
   });
