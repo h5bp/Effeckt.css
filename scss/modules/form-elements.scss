@@ -7,15 +7,14 @@
 // Apply this style only on WebKit
 // To prevent ugly styles on non-WebKit Browser
 @media screen and (-webkit-min-device-pixel-ratio:0) {
-  
-  .effeckt-ckbox-ios7[type=checkbox],
-.effeckt-rdio-ios7[type=radio] {
 
+  .effeckt-ckbox-ios7[type="checkbox"],
+.effeckt-rdio-ios7[type="radio"] {
   // Not caught by autoprefixer
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-
+  outline: none; // remove outline
   box-shadow: inset 0px 0px 0px 1px #e6e6e6;
   border-radius: $effeckt-form-element-ckradio-ios7border-radius;
   cursor: pointer;
@@ -30,13 +29,13 @@
   background: $effeckt-form-element-ckradio-ios7bg-off;
 }
 
-.effeckt-ckbox-ios7[type=checkbox]:checked,
+.effeckt-ckbox-ios7[type="checkbox"]:checked,
 .effeckt-rdio-ios7:checked {
   box-shadow: inset 0px 0px 0px 20px $effeckt-form-element-ckradio-ios7bg-on;
 }
 
-.effeckt-ckbox-ios7[type=checkbox]:after,
-.effeckt-rdio-ios7[type=radio]:after {
+.effeckt-ckbox-ios7[type="checkbox"]:after,
+.effeckt-rdio-ios7[type="radio"]:after {
   box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: $effeckt-form-element-ckradio-ios7border-radius;
   content: '';
@@ -56,11 +55,12 @@
 
 // Android
 
-.effeckt-ckbox-android[type=checkbox],
-.effeckt-rdio-android[type=radio] {
+.effeckt-ckbox-android[type="checkbox"],
+.effeckt-rdio-android[type="radio"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  outline: none; // remove outline
   box-shadow: inset 0px 0px 0px 1px #e6e6e6;
   border-radius: 1px;
   cursor: pointer;
@@ -80,13 +80,13 @@
   background: #333;
 }
 
-.effeckt-ckbox-android[type=checkbox]:checked,
+.effeckt-ckbox-android[type="checkbox"]:checked,
 .effeckt-rdio-android:checked {
   box-shadow: inset 0px 0px 0px 20px #666666;
 }
 
-.effeckt-ckbox-android[type=checkbox]:after,
-.effeckt-rdio-android[type=radio]:after {
+.effeckt-ckbox-android[type="checkbox"]:after,
+.effeckt-rdio-android[type="radio"]:after {
   box-shadow: 0px 0px 0px 0px ;
   border-radius: 1px;
   content: '';
@@ -97,7 +97,7 @@
   -webkit-transition: all 0.1s ease-in 0.1s;
   -o-transition: all 0.1s ease-in 0.1s;
   transition: all 0.1s ease-in 0.1s;
-  background: #4d4d4d; 
+  background: #4d4d4d;
 }
 
 .effeckt-ckbox-android[type="checkbox"]:checked:after,
