@@ -1,10 +1,8 @@
 module.exports = function(grunt) {
 
-  // Grunt Loaded Tasks
-  // npm install --save-dev matchdep
-  // http://chrisawren.com/posts/Advanced-Grunt-tooling
-  // ------------------------------------------------
-  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+  // Load NPM Tasks
+  // https://github.com/shootaroo/jit-grunt
+  require('jit-grunt')(grunt);
 
   grunt.initConfig({
     pkg: grunt.file.readJSON( 'package.json' ),

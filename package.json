@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "devDependencies": {
     "grunt": "~0.4.1",
-    "matchdep": "~0.1.2",
     "autoprefixer": "~0.5.20130629",
     "grunt-autoprefixer": "~0.1.20130615",
     "grunt-contrib-watch": "~0.4.4",
@@ -12,7 +11,8 @@
     "assemble": "~0.4.0",
     "grunt-gh-pages": "~0.6.0",
     "grunt-sass": "~0.6.0",
-    "grunt-dev-update": "^0.5.3"
+    "grunt-dev-update": "^0.5.3",
+    "jit-grunt": "^0.2.3"
   },
   "engines": {
     "node": ">=0.10"
