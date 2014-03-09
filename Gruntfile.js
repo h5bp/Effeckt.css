@@ -1,7 +1,27 @@
 module.exports = function(grunt) {
 
+  // Grunt Loaded Tasks
+  // npm install --save-dev matchdep
+  // http://chrisawren.com/posts/Advanced-Grunt-tooling
+  // ------------------------------------------------
+  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+
   grunt.initConfig({
     pkg: grunt.file.readJSON( 'package.json' ),
+
+    // == Grunt Dev Update
+    // https://npmjs.org/package/grunt-dev-update
+    // http://pgilad.github.io/grunt-dev-update
+    devUpdate: {
+      main: {
+        options: {
+          // Report updated dependencies? 'false' | 'true'
+          reportUpdated: false,
+          // 'force'|'report'|'prompt'
+          updateType   : "force"
+        }
+      }
+    },
 
     watch: {
       scss: {
@@ -65,8 +85,20 @@ module.exports = function(grunt) {
     connect: {
       server: {
         options: {
-          port: 8000,
-          base: './dist/'
+          port: 9001,
+          protocol: 'http',
+          hostname: 'localhost',
+
+          // '.' operates from the root of your Gruntfile,
+          // otherwise you gotta do something like this...
+          // Users/user-name/www-directory/website-directory
+          base: './dist/',
+
+          // set to false to work side by side w/watch task.
+          keepalive: false,
+
+          livereload: true,
+          open: true
         }
       }
     },
@@ -117,6 +149,9 @@ module.exports = function(grunt) {
 
   });
 
+  // Update NPM Modules
+  grunt.registerTask('update', ['devUpdate']);
+
   // Default task
   grunt.registerTask('default', ['sass', 'autoprefixer', 'assemble', 'copy']);
 
@@ -129,5 +164,4 @@ module.exports = function(grunt) {
   grunt.registerTask('deploy', ['gh-pages']);
 
   grunt.loadNpmTasks('assemble');
-  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 };
