@@ -1,4 +1,6 @@
+.grunt
 /.sass-cache/
+dist
 node_modules/
 /tmp/
 .DS_Store
