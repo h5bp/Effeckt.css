@@ -1,32 +1,48 @@
-var Effeckt = {
+;(function(window, Modernizr){
 
-  isTouchDevice: Modernizr.touch,
-  buttonPressedEvent: ( this.isTouchDevice ) ? 'touchstart' : 'click',
+  var
+    // Is Modernizr defined on the global scope
+    Modernizr = typeof Modernizr !== "undefined" ? Modernizr : false,
 
-  animationEndEventNames: {
-    'WebkitAnimation' : 'webkitAnimationEnd',
-    'OAnimation' : 'oAnimationEnd',
-    'msAnimation' : 'MSAnimationEnd',
-    'animation' : 'animationend'
-  },
+    // whether or not is a touch device
+    isTouchDevice = Modernizr ? Modernizr.touch : !!('ontouchstart' in window || 'onmsgesturechange' in window),
 
-  transitionEndEventNames: {
-    'WebkitTransition' : 'webkitTransitionEnd',
-    'OTransition' : 'oTransitionEnd',
-    'msTransition' : 'MSTransitionEnd',
-    'transition' : 'transitionend'
-  },
+    // Are we expecting a touch or a click?
+    buttonPressedEvent = ( isTouchDevice ) ? 'touchstart' : 'click',
 
-  init: function() {
+    // List of all animation/transition properties
+    // with its animationEnd/transitionEnd event
+    animationEndEventNames = {
+      'WebkitAnimation' : 'webkitAnimationEnd',
+      'OAnimation' : 'oAnimationEnd',
+      'msAnimation' : 'MSAnimationEnd',
+      'animation' : 'animationend'
+    },
+
+    transitionEndEventNames = {
+      'WebkitTransition' : 'webkitTransitionEnd',
+      'OTransition' : 'oTransitionEnd',
+      'msTransition' : 'MSTransitionEnd',
+      'transition' : 'transitionend'
+    },
+
+    Effeckt = function() {
+      this.init();
+    };
+
+  // Current version.
+  Effeckt.prototype.version = '0.0.1';
+
+  // Initialization method
+  Effeckt.prototype.init = function() {
 
     //event trigger after animation/transition end.
-    this.transitionEndEventName = this.transitionEndEventNames[Modernizr.prefixed('transition')];
-    this.animationEndEventName = this.animationEndEventNames[Modernizr.prefixed('animation')];
+    this.transitionEndEventName = Modernizr ? transitionEndEventNames[Modernizr.prefixed('transition')] : getTransitionEndEventNames();
+    this.animationEndEventName  = Modernizr ? animationEndEventNames[Modernizr.prefixed('animation')] : getAnimationEndEventNames();
     this.transitionAnimationEndEvent = this.animationEndEventName + ' ' + this.transitionEndEventName;
+  };
 
-  },
-
-  getViewportHeight: function() {
+  Effeckt.prototype.getViewportHeight = function() {
 
     var docElement = document.documentElement,
       client = docElement['clientHeight'],
@@ -36,7 +52,28 @@ var Effeckt = {
       return inner;
     else
       return client;
-  },
-}
+  };
 
-Effeckt.init();
+  // Get all the properties for transition/animation end
+  function getTransitionEndEventNames() {
+    return _getEndEventNames( transitionEndEventNames );
+  }
+
+  function getAnimationEndEventNames() {
+    return _getEndEventNames( animationEndEventNames );
+  }
+
+  function _getEndEventNames(obj) {
+    var events = [];
+
+    for ( var eventName in obj ) {
+      events.push( obj[ eventName ] );
+    }
+
+    return events.join(' ');
+  }
+
+  // Creates a Effeckt object.
+  window.Effeckt = new Effeckt();
+
+})(this, Modernizr);
