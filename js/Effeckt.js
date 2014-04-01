@@ -31,10 +31,11 @@
     };
 
   // Current version.
-  Effeckt.prototype.version = '0.0.1';
+  Effeckt.version = '0.0.1';
 
   // Initialization method
   Effeckt.prototype.init = function() {
+    this.buttonPressedEvent = buttonPressedEvent;
 
     //event trigger after animation/transition end.
     this.transitionEndEventName = Modernizr ? transitionEndEventNames[Modernizr.prefixed('transition')] : getTransitionEndEventNames();
