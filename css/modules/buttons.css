@@ -359,3 +359,26 @@ Example markup:
 .effeckt-button[data-effeckt-type="3d-rotate-success"][data-loading] {
   transform-origin: 50% 100%;
   transform: rotateX(-90deg) translateY(100%); }
+.effeckt-button[data-effeckt-type="cover-button"]{
+  background:transparent;
+  border:2px solid #444444;
+  z-index:1;position:relative;
+}
+.effeckt-button[data-effeckt-type="cover-button"]:after{
+  display:block;
+  z-index:-1;
+  position:absolute;
+  top:0;left:0;right:0;
+  width:100%;
+  height:0;
+}
+.effeckt-button[data-effeckt-type="cover-button"]:hover{
+  color:#FFF;
+}
+.effeckt-button[data-effeckt-type="cover-button"]:hover:after{
+  -webkit-transition:all 0.2s ease-in-out;
+  -moz-transition:all 0.2s ease-in-out;
+  -ms-transition:all 0.2s ease-in-out;
+  -o-transition:all 0.2s ease-in-out;
+  height:100%;
+}
