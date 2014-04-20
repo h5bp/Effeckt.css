@@ -11,7 +11,6 @@ Designing and developing UIs for the mobile web is tricky, but it's extremely di
 
 Originally started at [h5bp/lazyweb-requests#122](https://github.com/h5bp/lazyweb-requests/issues/122)
 
-
 ### Issues or Feedback?
 Head here → [http://github.com/h5bp/Effeckt.css/issues](https://github.com/h5bp/Effeckt.css/issues)
 
@@ -37,7 +36,6 @@ Please keep your commits targeted and in a logical fashion in order to keep code
 - Prefix classes/variables with `effeckt-`
 - Data attributes can be `data-effeckt` or prefixed with that
 
-
 ### Tech
 
 - [Sass](http://sass-lang.com/)
@@ -51,10 +49,10 @@ Please keep your commits targeted and in a logical fashion in order to keep code
 You'll have to:
 
 1. Fork the project and pull down your copy
-1. Run `npm install`
-1. Make sure you have the Grunt command-line interface with `npm install -g grunt-cli` or alternatively `sudo npm install -g grunt-cli` if you encounter permissions issues
-1. Run `grunt dev` to start watching for file saves & run a local web server at port 8000 ([localhost:8000](http://localhost:8000/)).
-
+2. Run `npm install`
+3. Make sure you have the Grunt command-line interface with `npm install -g grunt-cli` or alternatively `sudo npm install -g grunt-cli` if you encounter permissions issues
+4. Run `grunt dev` to start watching for file changes & run a local web server on [localhost:9001](localhost:9001).
+5. To Compile simply run ``grunt`` **NOTE:** Make sure you're always editing the Sass files and not the actual CSS files if you're making any style adjustments.
 
 ### Examples To Add
 
@@ -80,7 +78,6 @@ Because there are so many, I expect we could **group things by role**:
 * modal/notification transition
 * attention attractors
 
-
 ## Goals
 
 This library/framework would come with some **goals**:
@@ -94,7 +91,6 @@ This library/framework would come with some **goals**:
 1. Guidelines on what to avoid when styling these affected elements (avoid expensive CSS)
 1. Deliver a builder so users can pull only the CSS they need.
 1. There is no hover on the mobile web, so any hover-based effects would be excluded or have a tap-based equivalent.
-
 
 ## Action
 
