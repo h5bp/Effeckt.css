@@ -13,10 +13,8 @@ module.exports = function(grunt) {
     devUpdate: {
       main: {
         options: {
-          // Report updated dependencies? 'false' | 'true'
-          reportUpdated: false,
-          // 'force'|'report'|'prompt'
-          updateType   : "force"
+          reportUpdated: false,  // Report updated dependencies? 'false' | 'true'
+          updateType   : "force" // 'force'|'report'|'prompt'
         }
       }
     },
@@ -86,15 +84,8 @@ module.exports = function(grunt) {
           port: 9001,
           protocol: 'http',
           hostname: 'localhost',
-
-          // '.' operates from the root of your Gruntfile,
-          // otherwise you gotta do something like this...
-          // Users/user-name/www-directory/website-directory
-          base: './dist/',
-
-          // set to false to work side by side w/watch task.
-          keepalive: false,
-
+          base: './dist/',  // '.' operates from the root of your Gruntfile, otherwise -> 'Users/user-name/www-directory/website-directory'
+          keepalive: false, // set to false to work side by side w/watch task.
           livereload: true,
           open: true
         }
@@ -147,19 +138,12 @@ module.exports = function(grunt) {
 
   });
 
-  // Update NPM Modules
   grunt.registerTask('update', ['devUpdate']);
-
-  // Default task
   grunt.registerTask('default', ['sass', 'autoprefixer', 'assemble', 'copy']);
-
   grunt.registerTask('scss', ['sass', 'autoprefixer', 'copy:css']);
   grunt.registerTask('html', ['assemble']);
   grunt.registerTask('js', ['copy:js']);
-
   grunt.registerTask('dev', ['connect', 'watch']);
   grunt.registerTask('demo', ['copy:demo', 'assemble:demo']);
   grunt.registerTask('deploy', ['gh-pages']);
-
-  grunt.loadNpmTasks('assemble');
 };
