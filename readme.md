@@ -1,7 +1,7 @@
 Effeckt.css
 ===========
 
-**Performant Transitions &amp; Animations**
+**A Performant Transitions and Animations Library**
 
 Ever notice how small flourishes and subtle transitions dramatically increases the value of the experience you enjoy with an app or site?
 
@@ -11,48 +11,21 @@ Designing and developing UIs for the mobile web is tricky, but it's extremely di
 
 Originally started at [h5bp/lazyweb-requests#122](https://github.com/h5bp/lazyweb-requests/issues/122)
 
+### Live Demo
+
+- [http://h5bp.github.io/Effeckt.css](http://h5bp.github.io/Effeckt.css)
+
+### Getting Started
+
+- [https://github.com/h5bp/Effeckt.css/wiki/Getting-Started](https://github.com/h5bp/Effeckt.css/wiki/Getting-Started)
+
+### Code Style Guide
+
+- [https://github.com/h5bp/Effeckt.css/wiki/Code-Style-Guide](https://github.com/h5bp/Effeckt.css/wiki/Code-Style-Guide)
+
 ### Issues or Feedback?
-Head here → [http://github.com/h5bp/Effeckt.css/issues](https://github.com/h5bp/Effeckt.css/issues)
 
-### Work In Progress Demo Page
-Head here → [http://h5bp.github.io/Effeckt.css/](http://h5bp.github.io/Effeckt.css/)
-
-### ✭ Contributing & Pull Requests
-If you'd like to contribute to the [Effeckt.css](https://github.com/h5bp/Effeckt.css) project (btw you're awesome for doing so) then we suggest you do the following…
-
-1. [Fork this Repo](https://github.com/h5bp/Effeckt.css)
-2. Create a new branch on your forked copy of this project.
-3. Submit your branch to [this repo](https://github.com/h5bp/Effeckt.css) as a PR.
-4. Wait for unicorns to appear.
-
-**:heavy_exclamation_mark: A Note Regarding Pull Requests :**
-Please keep your commits targeted and in a logical fashion in order to keep code review and merges as clean as possible. Generally commits shouldn't be a "save" for authors. Multiple commits sent via a PR can also create chaos when doing something like a ``git bisect`` later on. Rebasing commits from a repo where other contributors have acces can cause major conflicts for those tracking the project through a fork.
-
-- How to rebase your commits before submitting a PR: [http://gitready.com/advanced/2009/02/10/squashing-commits-with-rebase.html](http://gitready.com/advanced/2009/02/10/squashing-commits-with-rebase.html)
-
-### General CSS style guide:
-
-- Two spaces
-- Prefix classes/variables with `effeckt-`
-- Data attributes can be `data-effeckt` or prefixed with that
-
-### Tech
-
-- [Sass](http://sass-lang.com/)
-- [Node](http://nodejs.org/) and [npm](https://npmjs.org/) so we can...
-  1. Use [Grunt](http://gruntjs.com/)
-  1. Grunt will process .scss on file saves
-  1. Grunt will run [autoprefixer](https://github.com/ai/autoprefixer)
-  1. Grunt will [LiveReload](http://livereload.com/) the browser (style injection, you'll need the [browser extensions](http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-))
-- [jQuery](http://jquery.com/) manipulates the classes used for the effects.
-
-You'll have to:
-
-1. Fork the project and pull down your copy
-2. Run `npm install`
-3. Make sure you have the Grunt command-line interface with `npm install -g grunt-cli` or alternatively `sudo npm install -g grunt-cli` if you encounter permissions issues
-4. Run `grunt dev` to start watching for file changes & run a local web server on [localhost:9001](localhost:9001).
-5. To Compile simply run ``grunt`` **NOTE:** Make sure you're always editing the Sass files and not the actual CSS files if you're making any style adjustments.
+- [http://github.com/h5bp/Effeckt.css/issues](https://github.com/h5bp/Effeckt.css/issues)
 
 ### Examples To Add
 
