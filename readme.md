@@ -1,7 +1,7 @@
 Effeckt.css
 ===========
 
-**A Performant Transitions and Animations Library**
+**A Performant Transitions and Animations Library** : [http://h5bp.github.io/Effeckt.css](http://h5bp.github.io/Effeckt.css)
 
 Ever notice how small flourishes and subtle transitions dramatically increases the value of the experience you enjoy with an app or site?
 
@@ -11,29 +11,11 @@ Designing and developing UIs for the mobile web is tricky, but it's extremely di
 
 Originally started at [h5bp/lazyweb-requests#122](https://github.com/h5bp/lazyweb-requests/issues/122)
 
-### Live Demo
+#### Effeckt Trailer
 
-- [http://h5bp.github.io/Effeckt.css](http://h5bp.github.io/Effeckt.css)
+<a href="http://youtu.be/Qc40YDFA4Bg">![image](https://f.cloud.github.com/assets/39191/725426/aa3af38c-e067-11e2-82e4-269086cb845d.png)</a>
 
-### Getting Started
-
-- [https://github.com/h5bp/Effeckt.css/wiki/Getting-Started](https://github.com/h5bp/Effeckt.css/wiki/Getting-Started)
-
-### Code Style Guide
-
-- [https://github.com/h5bp/Effeckt.css/wiki/Code-Style-Guide](https://github.com/h5bp/Effeckt.css/wiki/Code-Style-Guide)
-
-### Issues or Feedback?
-
-- [http://github.com/h5bp/Effeckt.css/issues](https://github.com/h5bp/Effeckt.css/issues)
-
-### Examples To Add
-
-Here's a **few pieces of excellent work**:
-
-<a href="http://youtu.be/Qc40YDFA4Bg">
-![image](https://f.cloud.github.com/assets/39191/725426/aa3af38c-e067-11e2-82e4-269086cb845d.png)
-</a>
+## Examples To Add
 
 * [tympanus.net/Development/ModalWindowEffects/](http://tympanus.net/Development/ModalWindowEffects/)
 * [tympanus.net/Development/PageTransitions/](http://tympanus.net/Development/PageTransitions/)
@@ -53,9 +35,7 @@ Because there are so many, I expect we could **group things by role**:
 
 ## Goals
 
-This library/framework would come with some **goals**:
-
-1. It provides very little UI. It's only hooks for transitions/animations.
+1. Provide a minimal UI. Only use style hooks for transitions and animations.
 1. Designer-curated set of classy and reasonable effects. (no [`easeInBounce`](http://easings.net/#easeInBounce))
 1. Establish browser support guidelines (e.g. Android 2.3 would gracefully degrade)
 1. CSS performance regression testing (a la [bench.topcoat.io](http://bench.topcoat.io))
@@ -70,3 +50,19 @@ This library/framework would come with some **goals**:
 * If you know other transition/animation based demos/experiments that make sense to include here, file a ticket.
 * If you're interested in helping to define the API, let's hear it! File a ticket.
 * A web-based builder is a must. A command-line builder isn't important for this.
+
+## Getting Started
+
+- [https://github.com/h5bp/Effeckt.css/wiki/Getting-Started](https://github.com/h5bp/Effeckt.css/wiki/Getting-Started)
+
+## Code Style Guide
+
+- [https://github.com/h5bp/Effeckt.css/wiki/Code-Style-Guide](https://github.com/h5bp/Effeckt.css/wiki/Code-Style-Guide)
+
+## General Inquiries & Support
+
+- Effeckt.css Mailing List [https://groups.google.com/d/forum/effeckt](https://groups.google.com/d/forum/effeckt)
+
+## Bug Reports & Feature Requests
+
+- [http://github.com/h5bp/Effeckt.css/issues](https://github.com/h5bp/Effeckt.css/issues)
