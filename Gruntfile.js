@@ -13,10 +13,8 @@ module.exports = function(grunt) {
     devUpdate: {
       main: {
         options: {
-          // Report updated dependencies? 'false' | 'true'
-          reportUpdated: false,
-          // 'force'|'report'|'prompt'
-          updateType   : "force"
+          reportUpdated: false, // Report updated dependencies: 'false' | 'true'
+          updateType   : "force" // 'force'|'report'|'prompt'
         }
       }
     },
@@ -91,10 +89,7 @@ module.exports = function(grunt) {
           // otherwise you gotta do something like this...
           // Users/user-name/www-directory/website-directory
           base: './dist/',
-
-          // set to false to work side by side w/watch task.
-          keepalive: false,
-
+          keepalive: false, // set to false to work side by side w/watch task.
           livereload: true,
           open: true
         }

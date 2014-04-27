@@ -494,23 +494,31 @@ h1 span:nth-of-type(11) {
 }
 
 
+// The Captions
 .effeckt-caption {
+  float: left;
+  overflow: hidden;
   width: 48%;
   margin: 0 4% 1rem 0;
+
   &:nth-child(2n) {
     margin-right: 0;
   }
+
   img {
     width: 100%;
     display: block;
   }
+
   figcaption {
     background: rgba(black, 0.8);
     color: white;
     padding: 1rem;
+
     h3 {
       font-size: 1.2rem;
     }
+
     p {
       margin: 0;
     }
