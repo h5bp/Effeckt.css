@@ -13,7 +13,7 @@ module.exports = function(grunt) {
     devUpdate: {
       main: {
         options: {
-          reportUpdated: false,  // Report updated dependencies? 'false' | 'true'
+          reportUpdated: false, // Report updated dependencies: 'false' | 'true'
           updateType   : "force" // 'force'|'report'|'prompt'
         }
       }

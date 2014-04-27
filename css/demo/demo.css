@@ -644,6 +644,8 @@ h1 span:nth-of-type(11) {
 }
 
 .effeckt-caption {
+  float: left;
+  overflow: hidden;
   width: 48%;
   margin: 0 4% 1rem 0;
 }

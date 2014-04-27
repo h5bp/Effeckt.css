@@ -1,0 +1,123 @@
+@mixin effecktCaptionFade() {
+  figcaption {
+    opacity: 1;
+  }
+}
+
+@mixin effecktCaptionOffset() {
+  figcaption {
+    transform: translate(15px, 15px);
+    opacity: 1;
+    z-index: 100; //prevent ovarslap
+    overflow: hidden;
+  }
+}
+
+@mixin effecktCaptionSlide() {
+  img {
+    transform: translateY(-50%);
+  }
+
+  figcaption {
+    transform: translateY(50%);
+  }
+}
+
+@mixin effecktCaptionGuillotine($direction) {
+  img {
+    transform: translateY($direction);
+  }
+}
+
+@mixin effecktQrtrSlideUp() {
+  figcaption {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@mixin effecktSqoosh() {
+  .effeckt-figcaption-wrap {
+    opacity: 1;
+    transition-delay: 0.25s;
+  }
+
+  img {
+    transform: scale(0.5) translateY(-80px);
+    transition-delay: 0;
+  }
+}
+
+@mixin effecktQrtrSlide() {
+  figcaption {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@mixin effecktQrtrFall() {
+  figcaption {
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@mixin effecktQrtrTwoStep() {
+  figcaption {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .effeckt-figcaption-wrap {
+    transform: translateX(0);
+  }
+}
+
+@mixin effecktCoverPushRight() {
+  figcaption {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  img {
+    transform: translateX(100%);
+  }
+}
+
+@mixin effecktCoverSlideTop() {
+  figcaption {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@mixin effecktQrtrZoom() {
+  figcaption {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  img {
+    transform: scale(1.1);
+  }
+}
+
+@mixin effecktRevolvingDoor($rotate-dir: y, $perspective:1300px, $rotate-start:0, $rotate-end: -180deg) {
+  @if $rotate-dir == y {
+    figcaption {
+      transform: perspective($perspective) rotateY($rotate-start);
+    }
+
+    img {
+      transform: perspective($perspective) rotateY($rotate-end);
+    }
+  } @else {
+    figcaption {
+      transform: perspective($perspective) rotateX($rotate-start);
+    }
+
+    img {
+      transform: perspective($perspective) rotateX($rotate-end);
+    }
+  }
+}

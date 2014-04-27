@@ -10,7 +10,6 @@ $effeckt-modal-animation-duration: $effeckt-modal-transition-duration*2 !default
 // Forcing size so we can center w/o translate()
 $effeckt-modal-min-width: 320px !default;
 $effeckt-modal-max-width: 320px !default;
-
 $effeckt-modal-z-index: 2000 !default;
 
 
@@ -27,14 +26,8 @@ $effeckt-page-transition-duration: $effeckt-transition-duration * 2 !default;
 
 
 
-
 // Off Screen Nav
 $effeckt-off-screen-navigation-transition-duration: $effeckt-transition-duration !default;
-
-
-
-// Captions
-$effeckt-caption-transition-duration: $effeckt-transition-duration !default;
 
 
 
