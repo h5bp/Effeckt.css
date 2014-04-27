@@ -1,52 +1,36 @@
 /*!
  * captions.js
  *
- * author: Dennis Gaebel (@gryghostvisuals)
+ * author: Effeckt.css
  *
  * Licensed under the MIT license
  */
 
-var Captions = {
+var effecktCaptions = {
 
   init: function() {
-
     this.bindUIActions();
-
   },
 
   bindUIActions: function() {
-
-    //keep a reference to this (Captions) object.
-    var self = this;
+    var self = this; //keep a reference to this (Captions) object.
 
     $('[data-effeckt-type]').on(Effeckt.buttonPressedEvent, function(event) {
-
       self.activateCaptions(this);
-
       event.preventDefault();
-
     });
-
   },
 
   activateCaptions: function(el) {
-
     var activeClass = 'active';
 
-    // classList detection
     if (document.documentElement.classList) {
-
       el.classList.toggle(activeClass);
-
     } else {
-
-      // classList Fallback using jQuery
       var $caption = $(el);
-
       $caption.toggleClass(activeClass);
-
     }
   }
 };
 
-Captions.init();
+effecktCaptions.init();
