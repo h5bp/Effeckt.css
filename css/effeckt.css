@@ -7598,6 +7598,7 @@ offset | guillotine-reverse | half-slide | sqkwoosh | tunnel>"
     position: relative;
     margin: 0px;
     width: 52px;
+    outline: 0;
     -webkit-transition: all 0.3s ease-out;
     -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
@@ -7647,6 +7648,7 @@ offset | guillotine-reverse | half-slide | sqkwoosh | tunnel>"
     position: relative;
     margin: 0px;
     width: 72px;
+    outline: 0;
     -webkit-transition: all 0.3s ease-out;
     -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
