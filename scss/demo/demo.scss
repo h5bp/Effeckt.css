@@ -443,9 +443,10 @@ h1 span:nth-of-type(11) {
 
 .effeckt-off-screen-nav-close {
   position: absolute;
-  right: 0;
+  right: 1rem;
   top: 0.65rem;
-  font-size: 150%;
+  font-size: 100%;
+  z-index: 300;
   &:hover, &:focus {
     color: red;
   }
