@@ -571,6 +571,10 @@ h1 span:nth-of-type(11) {
   background: #222222;
 }
 
+.effeckt-off-screen-nav header {
+  position: relative;
+}
+
 .effeckt-off-screen-nav h4 {
   color: white;
   background: #333333;
@@ -585,9 +589,10 @@ h1 span:nth-of-type(11) {
 
 .effeckt-off-screen-nav-close {
   position: absolute;
-  right: 0;
+  right: 1rem;
   top: 0.65rem;
-  font-size: 150%;
+  font-size: 100%;
+  z-index: 300;
 }
 
 .effeckt-off-screen-nav-close:hover,
