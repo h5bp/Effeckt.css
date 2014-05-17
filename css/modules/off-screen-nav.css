@@ -290,6 +290,7 @@
 .effeckt-off-screen-nav-left-rotate ~ .effeckt-overlay {
   z-index: 900;
   visibility: visible;
+  opacity: 1;
 }
 
 .effeckt-off-screen-nav-left-rotate.effeckt-show {
@@ -305,6 +306,10 @@
   -o-transform: translateX(260px) rotateY(15deg);
   transform: translateX(260px) rotateY(15deg);
   overflow: hidden;
+}
+
+.effeckt-off-screen-nav-left-rotate.effeckt-show ~ [data-effeckt-page].effeckt-page-active:after {
+  background: none;
 }
 
 .effeckt-off-screen-nav-left-rotate.effeckt-show ~ [data-effeckt-page] .off-screen-nav-cover {
@@ -825,6 +830,7 @@
 .effeckt-off-screen-nav-right-rotate ~ .effeckt-overlay {
   z-index: 900;
   visibility: visible;
+  opacity: 1;
 }
 
 .effeckt-off-screen-nav-right-rotate.effeckt-show {
@@ -840,6 +846,10 @@
   -o-transform: translateX(-260px) rotateY(-15deg);
   transform: translateX(-260px) rotateY(-15deg);
   overflow: hidden;
+}
+
+.effeckt-off-screen-nav-right-rotate.effeckt-show ~ [data-effeckt-page]:after {
+  background: none;
 }
 
 .effeckt-off-screen-nav-right-rotate.effeckt-show ~ [data-effeckt-page] .off-screen-nav-cover {
@@ -1417,6 +1427,7 @@
 .effeckt-off-screen-nav-bottom-rotate ~ .effeckt-overlay {
   z-index: 900;
   visibility: visible;
+  opacity: 1;
 }
 
 .effeckt-off-screen-nav-bottom-rotate.effeckt-show {
@@ -1432,6 +1443,10 @@
   -o-transform: translateY(-260px) rotateX(15deg);
   transform: translateY(-260px) rotateX(15deg);
   overflow: hidden;
+}
+
+.effeckt-off-screen-nav-bottom-rotate.effeckt-show ~ [data-effeckt-page].effeckt-page-active:after {
+  background: none;
 }
 
 .effeckt-off-screen-nav-bottom-rotate.effeckt-show ~ [data-effeckt-page] .off-screen-nav-cover {
@@ -1471,6 +1486,7 @@
 .effeckt-off-screen-nav-top-rotate ~ .effeckt-overlay {
   z-index: 900;
   visibility: visible;
+  opacity: 1;
 }
 
 .effeckt-off-screen-nav-top-rotate.effeckt-show {
@@ -1486,6 +1502,10 @@
   -o-transform: translateY(260px) rotateX(-15deg);
   transform: translateY(260px) rotateX(-15deg);
   overflow: hidden;
+}
+
+.effeckt-off-screen-nav-top-rotate.effeckt-show ~ [data-effeckt-page].effeckt-page-active:after {
+  background: none;
 }
 
 .effeckt-off-screen-nav-top-rotate.effeckt-show ~ [data-effeckt-page] .off-screen-nav-cover {
