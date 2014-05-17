@@ -63,6 +63,8 @@ var EffecktOffScreenNav = {
       this.nav.on( Effeckt.transitionAnimationEndEvent, function () {
         self.nav.off( Effeckt.transitionAnimationEndEvent );
         self.nav.addClass("effeckt-show");
+
+        $('[data-effeckt-page].effeckt-page-active').on( Effeckt.buttonPressedEvent, self.toggleNav.bind(self));
       });
 
       // check if need more coding done
@@ -80,6 +82,8 @@ var EffecktOffScreenNav = {
       this.nav.on( Effeckt.transitionAnimationEndEvent, function () {
         self.nav.off( Effeckt.transitionAnimationEndEvent );
         self.hideNav();
+
+        $('[data-effeckt-page].effeckt-page-active').off( Effeckt.buttonPressedEvent );
       });
 
       if( this.nav.data("effeckt-needs-hide-class") ){

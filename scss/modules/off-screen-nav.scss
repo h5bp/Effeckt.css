@@ -3,6 +3,28 @@
 // TODO: translateX(-260px) or translateY(-260px) need to be nav size
 // this need to be handle by JS or CSS Variable
 
+// Nav Overlay
+.effeckt-off-screen-nav {
+  ~ [data-effeckt-page].effeckt-page-active:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: $effeckt-off-screen-navigation-transition-duration;
+  }
+
+  &.effeckt-show {
+    ~ [data-effeckt-page].effeckt-page-active:after {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
 
 // 1 Left Overlay
 .effeckt-off-screen-nav-left-overlay {
@@ -753,8 +775,3 @@
 
   }
 }
-
-
-
-
-
