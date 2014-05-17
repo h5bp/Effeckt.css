@@ -48,12 +48,12 @@ var EffecktOffScreenNav = {
 
     // Show
     if (!this.nav.hasClass("effeckt-show")) {
-      
+
       this.nav.addClass(this.effeckt_type);
       this.closeButton.data("effeckt-type", this.effeckt_type);
 
       if (this.threedee) {
-        $("html").addClass("md-perspective");
+        $("body").addClass("effeckt-perspective");
       }
 
       if (button.data("effeckt-needs-hide-class")) {
@@ -63,16 +63,18 @@ var EffecktOffScreenNav = {
       this.nav.on( Effeckt.transitionAnimationEndEvent, function () {
         self.nav.off( Effeckt.transitionAnimationEndEvent );
         self.nav.addClass("effeckt-show");
+
+        $('[data-effeckt-page].effeckt-page-active').on( Effeckt.buttonPressedEvent, self.toggleNav.bind(self));
       });
 
       // check if need more coding done
       // to make the effect works
       // beyond css
-      this._checkForMoreOnShow()
+      this._checkForMoreOnShow();
 
     // Hide
     } else {
-      
+
       var self = this;
 
       this.nav.removeClass("effeckt-show");
@@ -80,8 +82,10 @@ var EffecktOffScreenNav = {
       this.nav.on( Effeckt.transitionAnimationEndEvent, function () {
         self.nav.off( Effeckt.transitionAnimationEndEvent );
         self.hideNav();
+
+        $('[data-effeckt-page].effeckt-page-active').off( Effeckt.buttonPressedEvent );
       });
-      
+
       if( this.nav.data("effeckt-needs-hide-class") ){
         this.nav.addClass("effeckt-hide");
       }
@@ -89,9 +93,9 @@ var EffecktOffScreenNav = {
       // check if need more coding done
       // to make the effect works
       // beyond css
-      this._checkForMoreOnHide()
+      this._checkForMoreOnHide();
 
-    }    
+    }
 
   },
 
@@ -103,7 +107,7 @@ var EffecktOffScreenNav = {
     this.nav.removeClass("effeckt-hide");
     this.nav.removeData("effeckt-needs-hide-class");
 
-    $("html").removeClass("md-perspective");
+    $("body").removeClass("effeckt-perspective");
   },
 
   // Check for more thing to do using javascript
@@ -176,7 +180,7 @@ var EffecktOffScreenNav = {
 
     li.removeAttr('style');
     this.nav.removeClass('shown');
-      
+
     li.each(function(index){
       $(this).css(Modernizr.prefixed('transform'), 'translateY(' + (index*2) + 'px)')
         .css('z-index', li.length - index)
@@ -222,7 +226,7 @@ var EffecktOffScreenNav = {
 
     li.removeAttr('style');
     this.nav.removeClass('shown');
-      
+
     li.each(function(index){
       $(this).css(Modernizr.prefixed('transform'), 'translateY(-' + (index*2) + 'px)')
         .css('z-index', li.length - index)
@@ -258,7 +262,7 @@ var EffecktOffScreenNav = {
   _callThisMethod: function(methodName){
     // TODO: check if is an existing method
     if ( typeof methodName !== 'undefined' ) {
-      this[methodName]();  
+      this[methodName]();
     }
   }
 
