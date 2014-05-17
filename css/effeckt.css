@@ -3995,6 +3995,26 @@ offset | guillotine-reverse | half-slide | sqkwoosh | tunnel>"
   }
 }
 
+.effeckt-off-screen-nav ~ [data-effeckt-page].effeckt-page-active:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+}
+
+.effeckt-off-screen-nav.effeckt-show ~ [data-effeckt-page].effeckt-page-active:after {
+  opacity: 1;
+  visibility: visible;
+}
+
 .effeckt-off-screen-nav-left-overlay {
   -webkit-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
