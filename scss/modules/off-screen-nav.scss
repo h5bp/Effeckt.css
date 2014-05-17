@@ -195,6 +195,7 @@
   ~ .effeckt-overlay {
     z-index:900;
     visibility: visible;
+    opacity: 1;
   }
 
   &.effeckt-show {
@@ -205,6 +206,10 @@
 
       // Prevent scrolling
       overflow: hidden;
+
+      &:after {
+        background: none;
+      }
     }
 
     // dont nest > 3 levels deep
@@ -391,6 +396,7 @@
   ~ .effeckt-overlay {
     z-index:900;
     visibility: visible;
+    opacity: 1;
   }
 
   &.effeckt-show {
@@ -401,6 +407,10 @@
 
       // Prevent scrolling
       overflow: hidden;
+
+      &:after {
+        background: none;
+      }
     }
 
     // dont nest > 3 levels deep
@@ -618,6 +628,7 @@
   ~ .effeckt-overlay {
     z-index:900;
     visibility: visible;
+    opacity: 1;
   }
 
   &.effeckt-show {
@@ -628,6 +639,10 @@
 
       // Prevent scrolling
       overflow: hidden;
+
+      &:after {
+        background: none;
+      }
     }
 
     // dont nest > 3 levels deep
@@ -658,6 +673,7 @@
   ~ .effeckt-overlay {
     z-index:900;
     visibility: visible;
+    opacity: 1;
   }
 
   &.effeckt-show {
@@ -668,6 +684,10 @@
 
       // Prevent scrolling
       overflow: hidden;
+
+      &:after {
+        background: none;
+      }
     }
 
     // dont nest > 3 levels deep
