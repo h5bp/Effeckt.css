@@ -1,72 +1,271 @@
-;(function( window ){
+var EffecktOffScreenNav = {
 
-  var $nav            = $('#effeckt-off-screen-nav'),
-      $pages          = $('[data-effeckt-page]'),
-      $closeButton    = $('#effeckt-off-screen-nav-close'),
-      $openButtons    = $('.off-screen-nav-button'),
-      effecktType     = 'abc',
-      threedee        = false,
-      Effeckt         = window.Effeckt;
+  nav: $("#effeckt-off-screen-nav"),
+  closeButton: $("#effeckt-off-screen-nav-close"),
 
+  effeckt_type: '',
+  threedee: false,
 
-  // Constructor
-  var OffScreenNav = function() {
-    if ( !(this instanceof OffScreenNav) ) {
-      return new obj;
+  _checkForMore: {
+    'effeckt-off-screen-nav-top-card-deck': {
+      'showMethod': '_showCardDeckTop',
+      'hideMethod': '_hideCardDeckTop',
+      'initMethod': '_initCardDeckTop',
+      'endMethod': '_endCardDeck'
+    },
+    'effeckt-off-screen-nav-bottom-card-deck': {
+      'showMethod': '_showCardDeckBottom',
+      'hideMethod': '_hideCardDeckBottom',
+      'initMethod': '_initCardDeckBottom',
+      'endMethod': '_endCardDeck'
     }
+  },
 
-    this.isNavOpen = false;
-  };
 
-  // bind all the events
-  OffScreenNav.prototype.bindUIActions = function() {
+  init: function() {
+
+    this.bindUIActions();
+
+  },
+
+  bindUIActions: function() {
+
     var self = this;
 
-    $openButtons.on( Effeckt.buttonPressedEvent, this.toggleNav.bind(this) );
-    $closeButton.on( Effeckt.buttonPressedEvent, this.toggleNav.bind(this) )
-    /*$(".off-screen-nav-button, #effeckt-off-screen-nav-close").on( Effeckt.buttonPressedEvent, function(e) {
+    $(".off-screen-nav-button, #effeckt-off-screen-nav-close").on( Effeckt.buttonPressedEvent, function() {
       self.toggleNav(this);
+    });
 
-      return false;
-    });*/
-  };
+  },
 
-  // Toggle Off-Screen Nav
-  OffScreenNav.prototype.toggleNav = function( evt ) {
-    var $button = $(evt.target);
+  toggleNav: function(el) {
 
-    if ( ! this.isNavOpen ) {
-      // Effeckt Type and whether it needs perspective
-      effecktType = $button.data("effeckt-type");
-      threedee    = $button.data("threedee");
+    var button = $(el),
+        self = this;
 
-      $nav.addClass( effecktType + '-animated effeckt-show' );
+    this.effeckt_type = button.data("effeckt-type");
+    this.threedee = button.data("threedee");
+
+    // Show
+    if (!this.nav.hasClass("effeckt-show")) {
+
+      this.nav.addClass(this.effeckt_type);
+      this.closeButton.data("effeckt-type", this.effeckt_type);
+
+      if (this.threedee) {
+        $("body").addClass("effeckt-perspective");
+      }
+
+      if (button.data("effeckt-needs-hide-class")) {
+        this.nav.data("effeckt-needs-hide-class", button.data("effeckt-needs-hide-class"));
+      }
+
+      this.nav.on( Effeckt.transitionAnimationEndEvent, function () {
+        self.nav.off( Effeckt.transitionAnimationEndEvent );
+        self.nav.addClass("effeckt-show");
+
+        $('[data-effeckt-page].effeckt-page-active').on( Effeckt.buttonPressedEvent, self.toggleNav.bind(self));
+      });
+
+      // check if need more coding done
+      // to make the effect works
+      // beyond css
+      this._checkForMoreOnShow();
+
+    // Hide
     } else {
-      $nav.addClass( 'effeckt-hide' );
 
-      $nav.on( Effeckt.transitionAnimationEndEvent, this.clearClasses.bind(this) );
-      $pages.on( Effeckt.transitionAnimationEndEvent, this.clearClasses.bind(this) );
+      var self = this;
+
+      this.nav.removeClass("effeckt-show");
+
+      this.nav.on( Effeckt.transitionAnimationEndEvent, function () {
+        self.nav.off( Effeckt.transitionAnimationEndEvent );
+        self.hideNav();
+
+        $('[data-effeckt-page].effeckt-page-active').off( Effeckt.buttonPressedEvent );
+      });
+
+      if( this.nav.data("effeckt-needs-hide-class") ){
+        this.nav.addClass("effeckt-hide");
+      }
+
+      // check if need more coding done
+      // to make the effect works
+      // beyond css
+      this._checkForMoreOnHide();
+
     }
 
-    this.isNavOpen = !(this.isNavOpen);
-  };
+  },
 
-  // Init the Off-Screen Object
-  OffScreenNav.prototype.init = function() {
-    this.bindUIActions();
+  hideNav: function() {
+
+    //var self = this;
+
+    this.nav.removeClass(this.closeButton.data("effeckt-type"));
+    this.nav.removeClass("effeckt-hide");
+    this.nav.removeData("effeckt-needs-hide-class");
+
+    $("body").removeClass("effeckt-perspective");
+  },
+
+  // Check for more thing to do using javascript
+  // that is beyond CSS
+  _checkForMoreOnShow: function() {
+
+    // Iterate each effeckt_type declared before
+    // which need more thing do to
+    for ( effeckt_type in this._checkForMore ) {
+
+      if ( effeckt_type !== this.effeckt_type ) {
+        continue;
+      }
+
+      var hideMethod = this._checkForMore[effeckt_type]['hideMethod'],
+          initMethod = this._checkForMore[effeckt_type]['initMethod'];
+
+      this._callThisMethod(hideMethod);
+      this._callThisMethod(initMethod);
+
+      // Break on first match
+      // because we are only working with only one effect at time
+      break;
+
+    }
+  },
+
+  _checkForMoreOnHide: function() {
+
+    for ( effeckt_type in this._checkForMore ) {
+
+      if ( effeckt_type !== this.effeckt_type ) {
+        continue;
+      }
+
+      var hideMethod = this._checkForMore[effeckt_type]['hideMethod'],
+          endMethod = this._checkForMore[effeckt_type]['endMethod'];
+
+      this._callThisMethod(hideMethod);
+      this._callThisMethod(endMethod);
+
+      // Break on first match
+      // because we are only working with only one effect at time
+      break;
+
+    }
+  },
+
+  //--------------------------------
+  // Methods for Card Deck From Top
+  //--------------------------------
+  _initCardDeckTop: function() {
+
+    var self = this;
+
+    this.nav.find('h4').on( Effeckt.buttonPressedEvent, function(e){
+      e.preventDefault();
+
+      if ( self.nav.hasClass('shown') ) {
+        self._hideCardDeckTop();
+      } else {
+        self._showCardDeckTop();
+      }
+
+    });
+  },
+
+  _hideCardDeckTop: function() {
+    var li = this.nav.find('li');
+
+    li.removeAttr('style');
+    this.nav.removeClass('shown');
+
+    li.each(function(index){
+      $(this).css(Modernizr.prefixed('transform'), 'translateY(' + (index*2) + 'px)')
+        .css('z-index', li.length - index)
+        .css("width" , (100 - index/2)+'%')
+        .css("margin-left" , index/4+'%');
+    });
+  },
+
+  _showCardDeckTop: function() {
+    var li = this.nav.find('li');
+    li.removeAttr('style');
+    this.nav.addClass('shown');
+
+    li.each(function(index){
+      var height = $(this).height();
+
+      $(this).css(Modernizr.prefixed('transform'), 'translateY(' + (index+1) * height + 'px)')
+        .css("width" , '100%');
+    });
+  },
+
+  //--------------------------------
+  // Methods for Card Deck From Bottom
+  //--------------------------------
+  _initCardDeckBottom: function() {
+
+    var self = this;
+
+    this.nav.find('h4').on( Effeckt.buttonPressedEvent, function(e){
+      e.preventDefault();
+
+      if ( self.nav.hasClass('shown') ) {
+        self._hideCardDeckBottom();
+      } else {
+        self._showCardDeckBottom();
+      }
+
+    });
+  },
+
+  _hideCardDeckBottom: function() {
+    var li = this.nav.find('li');
+
+    li.removeAttr('style');
+    this.nav.removeClass('shown');
+
+    li.each(function(index){
+      $(this).css(Modernizr.prefixed('transform'), 'translateY(-' + (index*2) + 'px)')
+        .css('z-index', li.length - index)
+        .css("width" , (100 - index/2)+'%')
+        .css("margin-left" , index/4+'%');
+    });
+  },
+
+  _showCardDeckBottom: function() {
+    var li = this.nav.find('li');
+    li.removeAttr('style');
+    this.nav.addClass('shown');
+
+    li.each(function(index){
+      var height = $(this).height();
+
+      $(this).css(Modernizr.prefixed('transform'), 'translateY(-' + (index+1) * height + 'px)')
+        .css("width" , '100%');
+    });
+  },
+
+  // Card Deck
+  // unbind on click event
+  // after we closed the nav
+  _endCardDeck: function() {
+    var li = this.nav.find('li');
+    li.removeAttr('style');
+    this.nav.find('h4').off( Effeckt.buttonPressedEvent );
+  },
+
+  // This check if the method exists first
+  // before call it
+  _callThisMethod: function(methodName){
+    // TODO: check if is an existing method
+    if ( typeof methodName !== 'undefined' ) {
+      this[methodName]();
+    }
   }
 
-  OffScreenNav.prototype.clearClasses = function() {
-    $nav.off( Effeckt.transitionAnimationEndEvent );
-    $pages.off( Effeckt.transitionAnimationEndEvent );
+};
 
-    $nav.removeClass( effecktType + '-animated effeckt-show effeckt-hide' );
-    effecktType = '';
-    threedee = false;
-  }
-
-
-  Effeckt.OffScreenNav = new OffScreenNav;
-  Effeckt.OffScreenNav.init();
-
-})( this );
+EffecktOffScreenNav.init();
