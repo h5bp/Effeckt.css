@@ -7,6 +7,12 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON( 'package.json' ),
 
+    // Copied from Bootstrap
+    banner: '/*!\n' +
+            ' * Effeckt v<%= pkg.version %>\n' +
+            ' */\n',
+    jqueryCheck: 'if (typeof jQuery === \'undefined\') { throw new Error(\'Effeckt\\\'s JavaScript requires jQuery\') }\n\n',
+
     // == Grunt Dev Update
     // https://npmjs.org/package/grunt-dev-update
     // http://pgilad.github.io/grunt-dev-update
@@ -129,6 +135,28 @@ module.exports = function(grunt) {
       }
     },
 
+    concat: {
+      options: {
+        banner: '<%= banner %>\n<%= jqueryCheck %>',
+        stripBanners: false
+      },
+      bootstrap: {
+        src: [
+          'js/modules/core.js',
+          'js/modules/buttons.js',
+          'js/modules/captions.js',
+          'js/modules/list-items.js',
+          'js/modules/list-scroll.js',
+          'js/modules/modals.js',
+          'js/modules/off-screen-nav.js',
+          'js/modules/page-transition.js',
+          'js/modules/positional-modals.js',
+          'js/modules/tabs.js'
+        ],
+        dest: 'dist/assets/js/<%= pkg.name %>.js'
+      }
+    },
+
     'gh-pages': {
       options: {
         base: 'dist'
@@ -142,7 +170,7 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['sass', 'autoprefixer', 'assemble', 'copy']);
   grunt.registerTask('scss', ['sass', 'autoprefixer', 'copy:css']);
   grunt.registerTask('html', ['assemble']);
-  grunt.registerTask('js', ['copy:js']);
+  grunt.registerTask('js', ['copy:js', 'concat']);
   grunt.registerTask('dev', ['connect', 'watch']);
   grunt.registerTask('demo', ['copy:demo', 'assemble:demo']);
   grunt.registerTask('deploy', ['gh-pages']);

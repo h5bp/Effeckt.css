@@ -12,7 +12,8 @@
     "grunt-gh-pages": "~0.6.0",
     "grunt-sass": "~0.6.0",
     "grunt-dev-update": "^0.5.3",
-    "jit-grunt": "^0.2.3"
+    "jit-grunt": "^0.2.3",
+    "grunt-contrib-concat": "~0.4.0"
   },
   "engines": {
     "node": ">=0.10"
