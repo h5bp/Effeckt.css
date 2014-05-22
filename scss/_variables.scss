@@ -4,8 +4,8 @@ $effeckt-perspective: 600px !default;
 
 
 // Modals
-$effeckt-modal-transition-duration: $effeckt-transition-duration !default;
-$effeckt-modal-animation-duration: $effeckt-modal-transition-duration*2 !default;
+$effeckt-modal-transition-duration: 300ms !default;
+$effeckt-modal-animation-duration: $effeckt-modal-transition-duration*3 !default;
 
 // Forcing size so we can center w/o translate()
 $effeckt-modal-min-width: 320px !default;
