@@ -70,7 +70,8 @@
     </div>
   </div>
   <!-- overlay coming after is important for ~ selector -->
-  <div class="effeckt-overlay effeckt-modal-overlay" id="effeckt-modal-overlay"></div>
+  <!-- this is going to be used if there is not javascript involved -->
+  <!-- <div class="effeckt-overlay effeckt-modal-overlay" id="effeckt-modal-overlay"></div> -->
 
 
   <div data-effeckt-page="page-1">
@@ -136,7 +137,7 @@
     <button class="effeckt-modal-button" data-effeckt-type="let-me-in" data-effeckt-needs-perspective="true">Let Me In</button>
     <button class="effeckt-modal-button" data-effeckt-type="make-way" data-effeckt-needs-perspective="true">Make Way!</button>
     <button class="effeckt-modal-button" data-effeckt-type="deep-content" data-effeckt-needs-perspective="true">Deep Content</button>
-    <button class="effeckt-modal-button" data-effeckt-type="slip-in-from-top" data-effeckt-needs-perspective="true" data-needs-hide-class="true">Slip From Top</button>
+    <button class="effeckt-modal-button" data-effeckt-type="slip-in-from-top" data-effeckt-needs-perspective="true">Slip From Top</button>
 
     <button class="effeckt-modal-button" data-effeckt-type="slide-in-top" data-effeckt-out-type="tilt-fall">From Top, Tilt Fall</button>
     <button class="effeckt-modal-button" data-effeckt-type="slide-in-top" data-effeckt-out-type="slide-out-bottom">From Top to Bottom</button>
@@ -145,12 +146,12 @@
     <button class="effeckt-modal-button" data-effeckt-type="slide-in-right" data-effeckt-out-type="slide-out-left">From Right to Left</button>
     <button class="effeckt-modal-button" data-effeckt-type="from-above" data-effeckt-out-type="to-below">From Above to Below</button>
     <button class="effeckt-modal-button" data-effeckt-type="from-below" data-effeckt-out-type="to-above">From Below to Above</button>
-    <button class="effeckt-modal-button" data-effeckt-type="shake" data-effeckt-needs-hide-class="true">Shake</button>
-    <button class="effeckt-modal-button" data-effeckt-type="bounce" data-effeckt-needs-hide-class="true">Bounce</button>
-    <button class="effeckt-modal-button" data-effeckt-type="pulse" data-effeckt-needs-hide-class="true">Pulse</button>
-    <button class="effeckt-modal-button" data-effeckt-type="wobble" data-effeckt-needs-hide-class="true">Wobble</button>
-    <button class="effeckt-modal-button" data-effeckt-type="swing" data-effeckt-needs-hide-class="true">Swing</button>
-    <button class="effeckt-modal-button" data-effeckt-type="tada" data-effeckt-needs-hide-class="true">Tada</button>
+    <button class="effeckt-modal-button" data-effeckt-type="shake">Shake</button>
+    <button class="effeckt-modal-button" data-effeckt-type="bounce">Bounce</button>
+    <button class="effeckt-modal-button" data-effeckt-type="pulse">Pulse</button>
+    <button class="effeckt-modal-button" data-effeckt-type="wobble">Wobble</button>
+    <button class="effeckt-modal-button" data-effeckt-type="swing">Swing</button>
+    <button class="effeckt-modal-button" data-effeckt-type="tada">Tada</button>
   </div>
 
 </div>
@@ -257,8 +258,8 @@
   <!-- Individual module JS files here -->
   <!-- Should we combine or not combine? -->
   <!-- Should we provide minified versions? -->
-  <script src="assets/js/Effeckt.js"></script>
-  <script src="assets/js/modules/modals.js"></script>
+  <script src="assets/js/core.js"></script>
+  <script src="assets/js/modules/modal.js"></script>
   <script src="assets/js/modules/buttons.js"></script>
   <script src="assets/js/modules/list-items.js"></script>
   <script src="assets/js/modules/off-screen-nav.js"></script>
