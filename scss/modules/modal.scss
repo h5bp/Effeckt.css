@@ -56,11 +56,11 @@
 
 .effeckt-modal {
   transition-property: all;
-  transition-timing-function: ease;
+  //transition-timing-function: ease;
   transition-duration: $effeckt-modal-transition-duration;
   animation-duration: $effeckt-modal-animation-duration;
   animation-fill-mode: forwards;
-  animation-timing-function: ease;
+  //animation-timing-function: ease;
 }
 
 @import "../effeckts/modals/scale";

@@ -1,4 +1,4 @@
-;(function(window, Modernizr){
+;(function(window){
 
   var
     // Is Modernizr defined on the global scope
@@ -77,4 +77,4 @@
   // Creates a Effeckt object.
   window.Effeckt = new Effeckt();
 
-})(this, Modernizr);
+})(this);

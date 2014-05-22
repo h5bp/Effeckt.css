@@ -1,40 +1,40 @@
 // Effect: Slide from the top
 .slide-in-top .effeckt-content {
-  transform: translateY(-100%);
+  transform: translate3d(0, -100%, 0);
   opacity: 0;
 }
 .effeckt-show.slide-in-top .effeckt-content {
-  transform: translateY(0);
+  transform: translate3d(0, 0, 0);
   opacity: 1;
 }
 
 // Effect: Slide from the right
 .slide-in-right .effeckt-content {
-  transform: translateX(30%);
+  transform: translate3d(30%, 0, 0);
   opacity: 0;
 }
 .effeckt-show.slide-in-right .effeckt-content {
-  transform: translateX(0);
+  transform: translate3d(0, 0, 0);
   opacity: 1;
 }
 
 // Effect: Slide from the bottom
 .slide-in-bottom .effeckt-content {
-  transform: translateY(30%);
+  transform: translate3d(0, 30%, 0);
   opacity: 0;
 }
 .effeckt-show.slide-in-bottom .effeckt-content {
-  transform: translateY(0);
+  transform: translate3d(0, 0, 0);
   opacity: 1;
 }
 
 // Effect: Slide from the left
 .slide-in-left .effeckt-content {
-  transform: translateX(-30%);
+  transform: translate3d(-30%, 0, 0);
   opacity: 0;
 }
 .effeckt-show.slide-in-left .effeckt-content {
-  transform: translateX(0);
+  transform: translate3d(0, 0, 0);
   opacity: 1;
 }
 
@@ -44,11 +44,11 @@
   transform: translate(-50%, 0);
 }
 .sticky-up .effeckt-content {
-  transform: translateY(-100%);
+  transform: translate3d(0, -100%, 0);
   opacity: 0;
 }
 .effeckt-show.sticky-up .effeckt-content {
-  transform: translateY(0);
+  transform: translate3d(0, 0, 0);
   opacity: 1;
 }
 
