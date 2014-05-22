@@ -2702,9 +2702,9 @@ offset | guillotine-reverse | half-slide | sqkwoosh | tunnel>"
   height: 100%;
   visibility: hidden;
   opacity: 0;
-  -webkit-transition-duration: 500ms;
-  -o-transition-duration: 500ms;
-  transition-duration: 500ms;
+  -webkit-transition-duration: 300ms;
+  -o-transition-duration: 300ms;
+  transition-duration: 300ms;
 }
 
 .effeckt-show.effeckt-modal-wrap {
@@ -2720,28 +2720,22 @@ offset | guillotine-reverse | half-slide | sqkwoosh | tunnel>"
   -webkit-transition-property: all;
   -o-transition-property: all;
   transition-property: all;
-  -webkit-transition-timing-function: ease;
-  -o-transition-timing-function: ease;
-  transition-timing-function: ease;
-  -webkit-transition-duration: 500ms;
-  -o-transition-duration: 500ms;
-  transition-duration: 500ms;
-  -webkit-animation-duration: 1000ms;
-  -o-animation-duration: 1000ms;
-  animation-duration: 1000ms;
+  -webkit-transition-duration: 300ms;
+  -o-transition-duration: 300ms;
+  transition-duration: 300ms;
+  -webkit-animation-duration: 900ms;
+  -o-animation-duration: 900ms;
+  animation-duration: 900ms;
   -webkit-animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-  -webkit-animation-timing-function: ease;
-  -o-animation-timing-function: ease;
-  animation-timing-function: ease;
 }
 
 .from-below .effeckt-content {
-  -webkit-transform: scale(0.5);
-  -ms-transform: scale(0.5);
-  -o-transform: scale(0.5);
-  transform: scale(0.5);
+  -webkit-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  -o-transform: scale(0.7);
+  transform: scale(0.7);
   opacity: 0;
 }
 
@@ -2754,10 +2748,10 @@ offset | guillotine-reverse | half-slide | sqkwoosh | tunnel>"
 }
 
 .from-above .effeckt-content {
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  -o-transform: scale(1.5);
-  transform: scale(1.5);
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  -o-transform: scale(1.3);
+  transform: scale(1.3);
   opacity: 0;
 }
 
@@ -2770,82 +2764,82 @@ offset | guillotine-reverse | half-slide | sqkwoosh | tunnel>"
 }
 
 .to-below .effeckt-content {
-  -webkit-transform: scale(0.5);
-  -ms-transform: scale(0.5);
-  -o-transform: scale(0.5);
-  transform: scale(0.5);
+  -webkit-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  -o-transform: scale(0.7);
+  transform: scale(0.7);
   opacity: 0;
 }
 
 .to-above .effeckt-content {
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  -o-transform: scale(1.5);
-  transform: scale(1.5);
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  -o-transform: scale(1.3);
+  transform: scale(1.3);
   opacity: 0;
 }
 
 .slide-in-top .effeckt-content {
-  -webkit-transform: translateY(-100%);
-  -ms-transform: translateY(-100%);
-  -o-transform: translateY(-100%);
-  transform: translateY(-100%);
+  -webkit-transform: translate3d(0, -100%, 0);
+  -ms-transform: translate3d(0, -100%, 0);
+  -o-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
   opacity: 0;
 }
 
 .effeckt-show.slide-in-top .effeckt-content {
-  -webkit-transform: translateY(0);
-  -ms-transform: translateY(0);
-  -o-transform: translateY(0);
-  transform: translateY(0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   opacity: 1;
 }
 
 .slide-in-right .effeckt-content {
-  -webkit-transform: translateX(30%);
-  -ms-transform: translateX(30%);
-  -o-transform: translateX(30%);
-  transform: translateX(30%);
+  -webkit-transform: translate3d(30%, 0, 0);
+  -ms-transform: translate3d(30%, 0, 0);
+  -o-transform: translate3d(30%, 0, 0);
+  transform: translate3d(30%, 0, 0);
   opacity: 0;
 }
 
 .effeckt-show.slide-in-right .effeckt-content {
-  -webkit-transform: translateX(0);
-  -ms-transform: translateX(0);
-  -o-transform: translateX(0);
-  transform: translateX(0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   opacity: 1;
 }
 
 .slide-in-bottom .effeckt-content {
-  -webkit-transform: translateY(30%);
-  -ms-transform: translateY(30%);
-  -o-transform: translateY(30%);
-  transform: translateY(30%);
+  -webkit-transform: translate3d(0, 30%, 0);
+  -ms-transform: translate3d(0, 30%, 0);
+  -o-transform: translate3d(0, 30%, 0);
+  transform: translate3d(0, 30%, 0);
   opacity: 0;
 }
 
 .effeckt-show.slide-in-bottom .effeckt-content {
-  -webkit-transform: translateY(0);
-  -ms-transform: translateY(0);
-  -o-transform: translateY(0);
-  transform: translateY(0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   opacity: 1;
 }
 
 .slide-in-left .effeckt-content {
-  -webkit-transform: translateX(-30%);
-  -ms-transform: translateX(-30%);
-  -o-transform: translateX(-30%);
-  transform: translateX(-30%);
+  -webkit-transform: translate3d(-30%, 0, 0);
+  -ms-transform: translate3d(-30%, 0, 0);
+  -o-transform: translate3d(-30%, 0, 0);
+  transform: translate3d(-30%, 0, 0);
   opacity: 0;
 }
 
 .effeckt-show.slide-in-left .effeckt-content {
-  -webkit-transform: translateX(0);
-  -ms-transform: translateX(0);
-  -o-transform: translateX(0);
-  transform: translateX(0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   opacity: 1;
 }
 
@@ -2858,18 +2852,18 @@ offset | guillotine-reverse | half-slide | sqkwoosh | tunnel>"
 }
 
 .sticky-up .effeckt-content {
-  -webkit-transform: translateY(-100%);
-  -ms-transform: translateY(-100%);
-  -o-transform: translateY(-100%);
-  transform: translateY(-100%);
+  -webkit-transform: translate3d(0, -100%, 0);
+  -ms-transform: translate3d(0, -100%, 0);
+  -o-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
   opacity: 0;
 }
 
 .effeckt-show.sticky-up .effeckt-content {
-  -webkit-transform: translateY(0);
-  -ms-transform: translateY(0);
-  -o-transform: translateY(0);
-  transform: translateY(0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   opacity: 1;
 }
 
@@ -2895,9 +2889,9 @@ offset | guillotine-reverse | half-slide | sqkwoosh | tunnel>"
 
 .effeckt-show.slip-in-from-top ~ [data-effeckt-page],
 .effeckt-show.slip-in-from-top ~ .effeckt-overlay {
-  -webkit-animation: OpenTop 500ms forwards ease-in;
-  -o-animation: OpenTop 500ms forwards ease-in;
-  animation: OpenTop 500ms forwards ease-in;
+  -webkit-animation: OpenTop 300ms forwards ease-in;
+  -o-animation: OpenTop 300ms forwards ease-in;
+  animation: OpenTop 300ms forwards ease-in;
 }
 
 .effeckt-show.slip-in-from-top .effeckt-content {
@@ -3196,9 +3190,9 @@ offset | guillotine-reverse | half-slide | sqkwoosh | tunnel>"
 }
 
 .let-me-in ~ [data-effeckt-page] {
-  -webkit-transition: 500ms;
-  -o-transition: 500ms;
-  transition: 500ms;
+  -webkit-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
 }
 
 .let-me-in ~ [data-effeckt-page],
@@ -3265,9 +3259,9 @@ offset | guillotine-reverse | half-slide | sqkwoosh | tunnel>"
 }
 
 .effeckt-show.make-way ~ [data-effeckt-page] {
-  -webkit-animation: makeWay 500ms forwards ease-in;
-  -o-animation: makeWay 500ms forwards ease-in;
-  animation: makeWay 500ms forwards ease-in;
+  -webkit-animation: makeWay 300ms forwards ease-in;
+  -o-animation: makeWay 300ms forwards ease-in;
+  animation: makeWay 300ms forwards ease-in;
   overflow: visible;
 }
 
@@ -3339,9 +3333,9 @@ offset | guillotine-reverse | half-slide | sqkwoosh | tunnel>"
   -ms-transform: scale(1);
   -o-transform: scale(1);
   transform: scale(1);
-  -webkit-transition: 500ms;
-  -o-transition: 500ms;
-  transition: 500ms;
+  -webkit-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
   height: 100%;
   overflow: hidden;
 }
@@ -3430,9 +3424,9 @@ offset | guillotine-reverse | half-slide | sqkwoosh | tunnel>"
 }
 
 .effeckt-show.blur ~ [data-effeckt-page] {
-  -webkit-transition: all 500ms ease;
-  -o-transition: all 500ms ease;
-  transition: all 500ms ease;
+  -webkit-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
 }
 
 .effeckt-show.blur .effeckt-content {
