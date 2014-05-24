@@ -36,6 +36,7 @@
 // Effect:  Blur
 .effeckt-show.blur ~ [data-effeckt-page] {
   filter: blur(3px);
+  transform: translate3d(0, 0, 0);
 }
 .blur .effeckt-content {
   opacity: 0;
