@@ -105,23 +105,25 @@
 // Let me in
 .let-me-in ~ [data-effeckt-page] {
   transition: $effeckt-modal-transition-duration;
-}
-.let-me-in ~ [data-effeckt-page],
-.let-me-in ~ .effeckt-overlay  {
+  transform: translate3d(0, 0, 0);
   transform-origin: 50% 0%;
   transform-style: preserve-3d;
 }
 .let-me-in .effeckt-content {
   opacity: 0;
-  transform: translateY(200%);
+  transform: translate3d(0, 200%, 0);
 }
-.effeckt-show.let-me-in ~ [data-effeckt-page],
-.effeckt-show.let-me-in ~ .effeckt-overlay  {
-  transform: rotateX(-2deg);
+.effeckt-show.let-me-in ~ [data-effeckt-page].effeckt-page-active {
+  transform: rotateX(-7deg);
   opacity: 1;
+
+  &:after {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 .effeckt-show.let-me-in .effeckt-content {
-  transform: translateY(-50%);
+  transform: translate3d(0, -50%, 0);
   opacity: 1;
 }
 
@@ -135,47 +137,44 @@
   transform-origin: 0% 50%;
 }
 .make-way .effeckt-content {
-  transform: translateX(200%);
+  transform: translate3d(200%, 0, 0);
   opacity: 0;
 }
 .effeckt-show.make-way ~ [data-effeckt-page] {
   animation: makeWay $effeckt-modal-transition-duration forwards ease-in;
-  overflow: visible;
 }
 .effeckt-show.make-way .effeckt-content {
-  transform: translateX(0);
+  transform: translate3d(0, 0, 0);
   opacity: 1;
 }
 
 @keyframes makeWay {
   50% {
-    transform: translateZ(-50px) rotateY(5deg);
-    animation-timing-function: ease-out;
+    transform: translate3d(0, 0, -50px) rotateY(5deg);
   }
   100% {
-    transform: translateZ(-200px);
+    transform: translate3d(0, 0, -200px);
   }
 }
 
 
 // Effect: Deep Content
 .deep-content .effeckt-content {
-  transform: scale(0.7);
+  transform: scale(0.8);
   opacity: 0;
 }
 
-.deep-content ~ [data-effeckt-page] {
-  transform: scale(1);
-  transition: $effeckt-modal-transition-duration;
-  height: 100%;
-  overflow: hidden;
-}
-
-.effeckt-show.deep-content ~ [data-effeckt-page] {
-  transform: scale(0.85);
-  filter: blur(3px);
-}
 .effeckt-show.deep-content .effeckt-content {
   transform: scale(1.1);
   opacity: 1;
+}
+
+.deep-content ~ [data-effeckt-page].effeckt-page-active {
+  transform: scale(1) translate3d(0, 0, 0);
+  transition: $effeckt-modal-transition-duration;
+}
+
+.effeckt-show.deep-content ~ [data-effeckt-page].effeckt-page-active {
+  transform: scale(0.85);
+  filter: blur(3px);
 }

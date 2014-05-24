@@ -26,7 +26,7 @@
 
   EffecktModal.prototype.init = function() {
     this.$body                = $('body');
-    this.$element             = null; //$('#effeckt-modal-wrap');
+    this.$element             = null;
     this.$overlay             = null;
     this.isShown              = false;
     this.hasPerspective       = false;
