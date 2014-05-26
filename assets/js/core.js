@@ -55,7 +55,7 @@
       return client;
   };
 
-  // Get all the properties for transition/animation end
+  // Get all the properties for transition / animation end
   function getTransitionEndEventNames() {
     return _getEndEventNames( transitionEndEventNames );
   }
