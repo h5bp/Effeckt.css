@@ -103,7 +103,7 @@
 
 
 // Let me in
-.let-me-in ~ [data-effeckt-page] {
+.let-me-in ~ [data-effeckt-page].effeckt-page-active {
   transition: $effeckt-modal-transition-duration;
   transform: translate3d(0, 0, 0);
   transform-origin: 50% 0%;
@@ -132,7 +132,7 @@
 .make-way {
   perspective: $effeckt-perspective;
 }
-.make-way ~ [data-effeckt-page] {
+.make-way ~ [data-effeckt-page].effeckt-page-active {
   transform-style: preserve-3d;
   transform-origin: 0% 50%;
 }
@@ -140,7 +140,7 @@
   transform: translate3d(200%, 0, 0);
   opacity: 0;
 }
-.effeckt-show.make-way ~ [data-effeckt-page] {
+.effeckt-show.make-way ~ [data-effeckt-page].effeckt-page-active {
   animation: makeWay $effeckt-modal-transition-duration forwards ease-in;
 }
 .effeckt-show.make-way .effeckt-content {
@@ -170,11 +170,11 @@
 }
 
 .deep-content ~ [data-effeckt-page].effeckt-page-active {
-  transform: scale(1) translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   transition: $effeckt-modal-transition-duration;
 }
 
 .effeckt-show.deep-content ~ [data-effeckt-page].effeckt-page-active {
-  transform: scale(0.85);
+  transform: translate3d(0, 0, -85px);
   filter: blur(3px);
 }
