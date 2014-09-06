@@ -24,9 +24,9 @@
   height: 100%;
   visibility: hidden;
   opacity: 0;
-  -webkit-transition-duration: 300ms;
-  -o-transition-duration: 300ms;
-  transition-duration: 300ms;
+  -webkit-transition-duration: 500ms;
+  -o-transition-duration: 500ms;
+  transition-duration: 500ms;
 }
 
 .effeckt-show.effeckt-modal-wrap {
@@ -42,15 +42,33 @@
   -webkit-transition-property: all;
   -o-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: 300ms;
-  -o-transition-duration: 300ms;
-  transition-duration: 300ms;
-  -webkit-animation-duration: 900ms;
-  -o-animation-duration: 900ms;
-  animation-duration: 900ms;
+  -webkit-transition-duration: 500ms;
+  -o-transition-duration: 500ms;
+  transition-duration: 500ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0, 1.5);
+  -o-transition-timing-function: cubic-bezier(0.4, 0, 0, 1.5);
+  transition-timing-function: cubic-bezier(0.4, 0, 0, 1.5);
+  -webkit-animation-duration: 1000ms;
+  -o-animation-duration: 1000ms;
+  animation-duration: 1000ms;
   -webkit-animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
+  -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0, 1.5);
+  -o-animation-timing-function: cubic-bezier(0.4, 0, 0, 1.5);
+  animation-timing-function: cubic-bezier(0.4, 0, 0, 1.5);
+}
+
+.effeckt-show .effeckt-modal {
+  -webkit-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 500ms;
+  -o-transition-duration: 500ms;
+  transition-duration: 500ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0, 1.5);
+  -o-transition-timing-function: cubic-bezier(0.4, 0, 0, 1.5);
+  transition-timing-function: cubic-bezier(0.4, 0, 0, 1.5);
 }
 
 .from-below .effeckt-content {
@@ -211,9 +229,9 @@
 
 .effeckt-show.slip-in-from-top ~ [data-effeckt-page],
 .effeckt-show.slip-in-from-top ~ .effeckt-overlay {
-  -webkit-animation: OpenTop 300ms forwards ease-in;
-  -o-animation: OpenTop 300ms forwards ease-in;
-  animation: OpenTop 300ms forwards ease-in;
+  -webkit-animation: OpenTop 500ms forwards ease-in;
+  -o-animation: OpenTop 500ms forwards ease-in;
+  animation: OpenTop 500ms forwards ease-in;
 }
 
 .effeckt-show.slip-in-from-top .effeckt-content {
@@ -512,9 +530,9 @@
 }
 
 .let-me-in ~ [data-effeckt-page].effeckt-page-active {
-  -webkit-transition: 300ms;
-  -o-transition: 300ms;
-  transition: 300ms;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
   -webkit-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
   -o-transform: translate3d(0, 0, 0);
@@ -585,9 +603,9 @@
 }
 
 .effeckt-show.make-way ~ [data-effeckt-page].effeckt-page-active {
-  -webkit-animation: makeWay 300ms forwards ease-in;
-  -o-animation: makeWay 300ms forwards ease-in;
-  animation: makeWay 300ms forwards ease-in;
+  -webkit-animation: makeWay 500ms forwards ease-in;
+  -o-animation: makeWay 500ms forwards ease-in;
+  animation: makeWay 500ms forwards ease-in;
 }
 
 .effeckt-show.make-way .effeckt-content {
@@ -659,9 +677,9 @@
   -ms-transform: translate3d(0, 0, 0);
   -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  -webkit-transition: 300ms;
-  -o-transition: 300ms;
-  transition: 300ms;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
 }
 
 .effeckt-show.deep-content ~ [data-effeckt-page].effeckt-page-active {
@@ -744,9 +762,9 @@
 }
 
 .effeckt-show.blur ~ [data-effeckt-page] {
-  -webkit-transition: all 300ms ease;
-  -o-transition: all 300ms ease;
-  transition: all 300ms ease;
+  -webkit-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
 }
 
 .effeckt-show.blur .effeckt-content {
@@ -770,6 +788,9 @@
   -webkit-animation-name: shake;
   -o-animation-name: shake;
   animation-name: shake;
+  -webkit-animation-timing-function: ease;
+  -o-animation-timing-function: ease;
+  animation-timing-function: ease;
 }
 
 @-webkit-keyframes shake {
@@ -838,6 +859,9 @@
   -webkit-animation-name: bounce;
   -o-animation-name: bounce;
   animation-name: bounce;
+  -webkit-animation-timing-function: ease;
+  -o-animation-timing-function: ease;
+  animation-timing-function: ease;
 }
 
 @-webkit-keyframes bounce {
@@ -906,6 +930,9 @@
   -webkit-animation-name: pulse;
   -o-animation-name: pulse;
   animation-name: pulse;
+  -webkit-animation-timing-function: ease;
+  -o-animation-timing-function: ease;
+  animation-timing-function: ease;
 }
 
 @-webkit-keyframes pulse {
@@ -974,6 +1001,9 @@
   -webkit-animation-name: wobble;
   -o-animation-name: wobble;
   animation-name: wobble;
+  -webkit-animation-timing-function: ease;
+  -o-animation-timing-function: ease;
+  animation-timing-function: ease;
 }
 
 @-webkit-keyframes wobble {
@@ -1114,6 +1144,9 @@
   -webkit-animation-name: swing;
   -o-animation-name: swing;
   animation-name: swing;
+  -webkit-animation-timing-function: ease;
+  -o-animation-timing-function: ease;
+  animation-timing-function: ease;
 }
 
 @-webkit-keyframes swing {
@@ -1216,6 +1249,9 @@
   -webkit-animation-name: tada;
   -o-animation-name: tada;
   animation-name: tada;
+  -webkit-animation-timing-function: ease;
+  -o-animation-timing-function: ease;
+  animation-timing-function: ease;
 }
 
 @-webkit-keyframes tada {

@@ -62,6 +62,7 @@
 .effeckt-show.shake .effeckt-content {
   opacity: 1;
   animation-name: shake;
+  animation-timing-function: ease;
 }
 @keyframes shake {
   0%, 100% {transform: translateX(0);}
@@ -77,6 +78,7 @@
 .effeckt-show.bounce .effeckt-content {
   opacity: 1;
   animation-name: bounce;
+  animation-timing-function: ease;
 }
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
@@ -92,6 +94,7 @@
 .effeckt-show.pulse .effeckt-content {
   opacity: 1;
   animation-name: pulse;
+  animation-timing-function: ease;
 }
 @keyframes pulse {
   0% { transform: scale(1); }
@@ -106,6 +109,7 @@
 .effeckt-show.wobble .effeckt-content {
   opacity: 1;
   animation-name: wobble;
+  animation-timing-function: ease;
 }
 @keyframes wobble {
   0% { transform: translateX(0%); }
@@ -125,6 +129,7 @@
 .effeckt-show.swing .effeckt-content {
   opacity: 1;
   animation-name: swing;
+  animation-timing-function: ease;
 }
 @keyframes swing {
   20% { transform: rotate(15deg); }
@@ -141,6 +146,7 @@
 .effeckt-show.tada .effeckt-content {
   opacity: 1;
   animation-name: tada;
+  animation-timing-function: ease;
 }
 @keyframes tada {
   0% {transform: scale(1);}
