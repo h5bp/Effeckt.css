@@ -2737,18 +2737,6 @@ offset | guillotine-reverse | half-slide | sqkwoosh | tunnel>"
   animation-timing-function: cubic-bezier(0.4, 0, 0, 1.5);
 }
 
-.effeckt-show .effeckt-modal {
-  -webkit-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 500ms;
-  -o-transition-duration: 500ms;
-  transition-duration: 500ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0, 1.5);
-  -o-transition-timing-function: cubic-bezier(0.4, 0, 0, 1.5);
-  transition-timing-function: cubic-bezier(0.4, 0, 0, 1.5);
-}
-
 .from-below .effeckt-content {
   -webkit-transform: scale(0.5);
   -ms-transform: scale(0.5);

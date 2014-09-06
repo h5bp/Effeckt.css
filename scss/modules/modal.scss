@@ -61,12 +61,6 @@
   animation-duration: $effeckt-modal-animation-duration;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(.4, 0, 0, 1.5);
-
-  .effeckt-show & {
-    transition-property: all;
-    transition-duration: $effeckt-modal-transition-duration;
-    transition-timing-function: cubic-bezier(.4, 0, 0, 1.5);
-  }
 }
 
 @import "../effeckts/modals/scale";
