@@ -1,5 +1,6 @@
 // TODO
 // Use variables where we can in here
+// Adjust position based on $effeckt-tooltip-arrow-size
 
 @import "../_variables";
 
@@ -67,10 +68,10 @@
   }
 
   &::before {
-    border-top: 5px solid $effeckt-tooltip-background;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    margin-bottom: -4px; // one less pixel to prevent occational 1px gap
+    border-top: $effeckt-tooltip-arrow-size solid $effeckt-tooltip-background;
+    border-left: $effeckt-tooltip-arrow-size solid transparent;
+    border-right: $effeckt-tooltip-arrow-size solid transparent;
+    margin-bottom: -($effeckt-tooltip-arrow-size - 1); // one less pixel to prevent occational 1px gap
   }
 
   &:hover::before, &:hover::after {
@@ -84,10 +85,10 @@
   }
 
   &::before {
-    border-bottom: 5px solid $effeckt-tooltip-background;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    margin-top: -4px; // one less pixel to prevent occational 1px gap
+    border-bottom: $effeckt-tooltip-arrow-size solid $effeckt-tooltip-background;
+    border-left: $effeckt-tooltip-arrow-size solid transparent;
+    border-right: $effeckt-tooltip-arrow-size solid transparent;
+    margin-top: -($effeckt-tooltip-arrow-size - 1); // one less pixel to prevent occational 1px gap
   }
 
   &:hover::before, &:hover::after {
@@ -113,10 +114,10 @@
   }
 
   &::before {
-    border-right: 5px solid $effeckt-tooltip-background;
-    border-top: 5px solid transparent;
-    border-bottom: 5px solid transparent;
-    margin-left: -4px; // one less pixel to prevent occational 1px gap
+    border-right: $effeckt-tooltip-arrow-size solid $effeckt-tooltip-background;
+    border-top: $effeckt-tooltip-arrow-size solid transparent;
+    border-bottom: $effeckt-tooltip-arrow-size solid transparent;
+    margin-left: -($effeckt-tooltip-arrow-size - 1); // one less pixel to prevent occational 1px gap
   }
 
   &:hover::before, &:hover::after {
@@ -132,10 +133,10 @@
   }
 
   &::before {
-    border-left: 5px solid $effeckt-tooltip-background;
-    border-top: 5px solid transparent;
-    border-bottom: 5px solid transparent;
-    margin-right: -4px; // one less pixel to prevent occational 1px gap
+    border-left: $effeckt-tooltip-arrow-size solid $effeckt-tooltip-background;
+    border-top: $effeckt-tooltip-arrow-size solid transparent;
+    border-bottom: $effeckt-tooltip-arrow-size solid transparent;
+    margin-right: -($effeckt-tooltip-arrow-size - 1); // one less pixel to prevent occational 1px gap
   }
 
   &:hover::before, &:hover::after {
