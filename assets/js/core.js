@@ -4,11 +4,8 @@
     // Is Modernizr defined on the global scope
     Modernizr = typeof Modernizr !== "undefined" ? Modernizr : false,
 
-    // whether or not is a touch device
-    isTouchDevice = Modernizr ? Modernizr.touch : !!('ontouchstart' in window || 'onmsgesturechange' in window),
-
-    // Are we expecting a touch or a click?
-    buttonPressedEvent = ( isTouchDevice ) ? 'touchstart' : 'click',
+    // Always expect both kinds of event
+    buttonPressedEvent = 'touchstart click',
 
     // List of all animation/transition properties
     // with its animationEnd/transitionEnd event
@@ -55,7 +52,7 @@
       return client;
   };
 
-  // Get all the properties for transition / animation end
+  // Get all the properties for transition/animation end
   function getTransitionEndEventNames() {
     return _getEndEventNames( transitionEndEventNames );
   }
