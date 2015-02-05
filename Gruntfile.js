@@ -161,7 +161,13 @@ module.exports = function(grunt) {
       options: {
         base: 'dist'
       },
-      src: '**/*'
+      'remote': {
+        options: {
+          base: 'dist',
+          repo: 'https://github.com/h5bp/Effeckt.css'
+        },
+        src: ['**/*'],
+      }
     }
 
   });
@@ -173,5 +179,5 @@ module.exports = function(grunt) {
   grunt.registerTask('js', ['copy:js', 'concat']);
   grunt.registerTask('dev', ['connect', 'watch']);
   grunt.registerTask('demo', ['copy:demo', 'assemble:demo']);
-  grunt.registerTask('deploy', ['gh-pages']);
+  grunt.registerTask('deploy', ['gh-pages:remote']);
 };
