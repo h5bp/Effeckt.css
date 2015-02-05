@@ -161,12 +161,18 @@ module.exports = function(grunt) {
       options: {
         base: 'dist'
       },
+      'forked': {
+        options: {
+          base: 'dist'
+        },
+        src: ['**/*']
+      },
       'remote': {
         options: {
           base: 'dist',
           repo: 'https://github.com/h5bp/Effeckt.css'
         },
-        src: ['**/*'],
+        src: ['**/*']
       }
     }
 
