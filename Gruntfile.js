@@ -157,17 +157,17 @@ module.exports = function(grunt) {
       }
     },
 
-    'gh-pages': {
+    gh-pages: {
       options: {
         base: 'dist'
       },
-      'forked': {
+      forked: {
         options: {
           base: 'dist'
         },
         src: ['**/*']
       },
-      'remote': {
+      remote: {
         options: {
           base: 'dist',
           repo: 'https://github.com/h5bp/Effeckt.css'
