@@ -157,7 +157,7 @@ module.exports = function(grunt) {
       }
     },
 
-    gh-pages: {
+    'gh-pages': {
       options: {
         base: 'dist'
       },
