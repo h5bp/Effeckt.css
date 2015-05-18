@@ -1,0 +1,32 @@
+{
+  "name": "Effeckt.css",
+  "version": "1.0.0",
+  "homepage": "https://github.com/h5bp/Effeckt.css",
+  "authors": [
+    "h5bp",
+    "github contributors"
+  ],
+  "description": "A Performant Transitions and Animations Library",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "effeckt",
+    "css",
+    "animations",
+    "css3",
+    "jquery"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jQuery": "~2.1.4",
+    "modernizr": "~2.8.3"
+  }
+}
