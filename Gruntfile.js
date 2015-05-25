@@ -120,7 +120,9 @@ module.exports = function(grunt) {
       demo: {
         files: [
           { expand: true, cwd: './css', src: ['./**/*.*'], dest: 'dist/assets/css' },
-          { expand: true, cwd: './js', src: ['./**/*.*'], dest: 'dist/assets/js' }
+          { expand: true, cwd: './js', src: ['./**/*.*'], dest: 'dist/assets/js' },
+          { expand: true, flatten: true, cwd: './bower_components/jQuery', src:['./dist/*.min.*'], dest: 'dist/assets/js/libs/' },
+          { expand: true, flatten: true, cwd: './bower_components/modernizr', src:['./modernizr.js'], dest: 'dist/assets/js/libs/' }
         ]
       },
       css: {
@@ -130,6 +132,8 @@ module.exports = function(grunt) {
       },
       js: {
         files: [
+          { expand: true, flatten: true, cwd: './bower_components/jQuery', src: ['./dist/*.min.*'], dest: 'dist/assets/js/libs/' },
+          { expand: true, flatten: true, cwd: './bower_components/modernizr', src: ['./modernizr.js'], dest: 'dist/assets/js/libs/' },
           { expand: true, cwd: './js', src: ['./**/*.*'], dest: 'dist/assets/js' }
         ]
       }
