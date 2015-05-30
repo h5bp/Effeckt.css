@@ -26,15 +26,14 @@ var EffecktLazyLoading = {
 
   bindUIActions: function() {
 
-    var self = this,
-      windowObj = $(window);
+    var self = this;
 
     $('.effeckt-page-active').on( 'scroll', function(){
       self._onScrollMethod();
     });
 
-    windowObj.on( 'resize', function() {
-      self.viewportHeight = windowObj.height();
+    $(window).on( 'resize', function() {
+      self.viewportHeight = $(window).height();
     });
 
     $('.effeckt-lazy-loading-options input[type=radio]').on( 'click', function(){
