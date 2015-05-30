@@ -92,7 +92,7 @@ var EffecktLazyLoading = {
         self._scrollPage();
       }, 1000 / 60);
     }
-  }
+  },
 
 };
 
