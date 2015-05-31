@@ -3,7 +3,7 @@
 // because it's change according to the scroll
 var EffecktLazyLoading = {
 
-  init: function(window) {
+  init: function() {
 
     var self = this;
 
@@ -74,6 +74,7 @@ var EffecktLazyLoading = {
       scrolled = $('.effeckt-page-active').scrollTop(),
       viewed = scrolled + this.viewportHeight,
       elTop = $(el).offset().top,
+      elBottom = elTop + elHeight,
       // if 0, the element is considered in the viewport as soon as it enters.
       // if 1, the element is considered in the viewport only when it's fully inside
       // value in percentage (1 >= h >= 0)
@@ -96,4 +97,4 @@ var EffecktLazyLoading = {
 
 };
 
-EffecktLazyLoading.init(window);
+EffecktLazyLoading.init();
