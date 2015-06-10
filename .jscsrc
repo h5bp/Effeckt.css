@@ -2,5 +2,17 @@
   "excludeFiles": ["node_modules/**", "bower_components/**"],
   "validateIndentation": 2,
   "disallowMixedSpacesAndTabs": true,
-  "disallowMultipleSpaces":true
+  "disallowMultipleSpaces":true,
+  "requireSemicolons":true,
+  "requireSpaceAfterObjectKeys": true,
+  "requireSpaceAfterLineComment":true,
+  "disallowTrailingComma":true,
+  "requireMultipleVarDecl":true,
+  "disallowSpaceAfterPrefixUnaryOperators":["++", "--", "+", "-", "~", "!"],
+  "requireLineFeedAtFileEnd":true,
+  "validateParameterSeparator":", ",
+  "requireSpaceAfterObjectKeys":true,
+  "requireSpaceAfterBinaryOperators":["="],
+  "requireSpaceBeforeBinaryOperators":["="],
+  "requireSpacesInsideParentheses":"all"
 }
