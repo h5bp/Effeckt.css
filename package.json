@@ -12,6 +12,7 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-dev-update": "^0.9.0",
     "grunt-gh-pages": "^0.9.1",
+    "grunt-jscs": "^1.8.0",
     "grunt-sass": "^0.14.2",
     "jit-grunt": "^0.8.0",
     "jscs": "^1.13.1"
