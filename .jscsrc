@@ -11,8 +11,8 @@
   "disallowSpaceAfterPrefixUnaryOperators":["++", "--", "+", "-", "~", "!"],
   "requireLineFeedAtFileEnd":true,
   "validateParameterSeparator":", ",
-  "requireSpaceAfterObjectKeys":true,
   "requireSpaceAfterBinaryOperators":["="],
   "requireSpaceBeforeBinaryOperators":["="],
-  "requireSpacesInsideParentheses":"all"
+  "requireSpacesInsideParentheses":"all",
+  "requireSpacesInsideArrayBrackets": "all"
 }

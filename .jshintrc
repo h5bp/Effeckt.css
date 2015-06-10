@@ -1,0 +1,11 @@
+{
+  "bitwise": true,
+  "curly": true,
+  "eqeqeq": true,
+  "freeze": true,
+  "quotmark": "single",
+  "undef": true,
+  "unused": true,
+  "strict": false,
+  "validthis": false
+}
