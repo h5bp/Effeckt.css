@@ -36,7 +36,7 @@ module.exports = function(grunt) {
       },
       js: {
         files: ['js/**/*.js'],
-        tasks: 'js'
+        tasks: ['jshint','jscs','js']
       },
       livereload: {
         options: {
@@ -178,8 +178,18 @@ module.exports = function(grunt) {
         },
         src: ['**/*']
       }
-    }
+    },
 
+    jshint:{
+      demo:['js/demo/*.js'],
+      modules:['js/modules/*.js'],
+      all:['js/**/*.js']
+    },
+    jscs:{
+      demo:['js/demo/*.js'],
+      modules:['js/modules/*.js'],
+      all:['js/**/*.js']
+    }
   });
 
   grunt.registerTask('update', ['devUpdate']);

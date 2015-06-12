@@ -14,5 +14,24 @@
   "requireSpaceAfterBinaryOperators":["="],
   "requireSpaceBeforeBinaryOperators":["="],
   "requireSpacesInsideParentheses":"all",
-  "requireSpacesInsideArrayBrackets": "all"
+  "requireSpacesInsideArrayBrackets": "all",
+  "disallowSpaceAfterBinaryOperators":[","],
+  "requireSpacesInAnonymousFunctionExpression":{
+    "beforeOpeningCurlyBrace": true
+  },
+  "requireSpacesInCallExpression":true,
+  "requireSpacesInConditionalExpression":true,
+  "requireSpacesInForStatement":true,
+  "requireSpacesInFunctionDeclaration":{
+    "beforeOpeningCurlyBrace": true
+  },
+  "requireSpacesInFunctionExpression":{
+    "beforeOpeningCurlyBrace": true
+  },
+  "requireSpacesInFunction":{
+    "beforeOpeningCurlyBrace": true
+  },
+  "requireSpacesInNamedFunctionExpression":{
+    "beforeOpeningCurlyBrace": true
+  }
 }
