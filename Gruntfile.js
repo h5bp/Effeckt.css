@@ -200,5 +200,5 @@ module.exports = function(grunt) {
   grunt.registerTask('dev', ['connect', 'watch']);
   grunt.registerTask('demo', ['copy:demo', 'assemble:demo']);
   grunt.registerTask('deploy', ['gh-pages:remote']);
-  grunt.registerTask('quality', ['jshint','jscs']);
+  grunt.registerTask('quality', ['jshint:all','jscs:all']);
 };
