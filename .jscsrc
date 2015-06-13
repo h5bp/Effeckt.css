@@ -33,5 +33,6 @@
   },
   "requireSpacesInNamedFunctionExpression":{
     "beforeOpeningCurlyBrace": true
-  }
+  },
+  "requireDollarBeforejQueryAssignment":true
 }
