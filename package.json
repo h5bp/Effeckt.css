@@ -15,11 +15,9 @@
     "grunt-gh-pages": "^0.9.1",
     "grunt-jscs": "^1.8.0",
     "grunt-sass": "^0.14.2",
-    "jit-grunt": "^0.8.0",
-    "jscs": "^1.13.1",
-    "jshint": "^2.8.0"
+    "jit-grunt": "^0.8.0"
   },
   "engines": {
-    "node": ">=0.10"
+    "node": ">=0.12.4"
   }
 }
