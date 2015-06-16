@@ -1,11 +1,11 @@
-module.exports = function(grunt) {
+module.exports = function ( grunt ) {
 
   // Load NPM Tasks
   // https://github.com/shootaroo/jit-grunt
-  require('jit-grunt')(grunt);
+  require ( 'jit-grunt' ) ( grunt );
 
-  grunt.initConfig({
-    pkg: grunt.file.readJSON( 'package.json' ),
+  grunt.initConfig ( {
+    pkg: grunt.file.readJSON ( 'package.json' ),
 
     // Copied from Bootstrap
     banner: '/*!\n' +
@@ -20,23 +20,23 @@ module.exports = function(grunt) {
       main: {
         options: {
           reportUpdated: false, // Report updated dependencies: 'false' | 'true'
-          updateType   : "force" // 'force'|'report'|'prompt'
+          updateType: 'force' // 'force'|'report'|'prompt'
         }
       }
     },
 
     watch: {
       scss: {
-        files: ['scss/**/*.scss'],
+        files: [ 'scss/**/*.scss' ],
         tasks: 'scss'
       },
       html: {
-        files: ['src/**/*.hbs'],
+        files: [ 'src/**/*.hbs' ],
         tasks: 'html'
       },
       js: {
-        files: ['js/**/*.js'],
-        tasks: ['jshint','jscs','js']
+        files: [ 'js/**/*.js' ],
+        tasks: [ 'jshint','jscs','js' ]
       },
       livereload: {
         options: {
@@ -54,15 +54,15 @@ module.exports = function(grunt) {
       build: {
         files : [
           {
-            src : ['**/*.scss', '!**/_*.scss'],
-            cwd : 'scss',
-            dest : 'css',
-            ext : '.css',
-            expand : true
+            src: [ '**/*.scss', '!**/_*.scss' ],
+            cwd: 'scss',
+            dest: 'css',
+            ext: '.css',
+            expand: true
           }
         ],
-        options : {
-          style : 'expanded'
+        options: {
+          style: 'expanded'
         }
       }
     },
@@ -71,14 +71,14 @@ module.exports = function(grunt) {
     autoprefixer: {
       build: {
         options: {
-          browsers: ['last 2 versions', '> 1%']
+          browsers: [ 'last 2 versions', '> 1%' ]
         },
         files: [
           {
-            src : ['**/*.css'],
-            cwd : 'css',
-            dest : 'css',
-            expand : true
+            src: [ '**/*.css' ],
+            cwd: 'css',
+            dest: 'css',
+            expand: true
           }
         ]
       }
@@ -90,7 +90,7 @@ module.exports = function(grunt) {
           port: 9001,
           protocol: 'http',
           hostname: 'localhost',
-          base: './dist/',  // '.' operates from the root of your Gruntfile, otherwise -> 'Users/user-name/www-directory/website-directory'
+          base: './dist/',// '.' operates from the root of your Gruntfile, otherwise -> 'Users/user-name/www-directory/website-directory'
           keepalive: false, // set to false to work side by side w/watch task.
           livereload: true,
           open: true
@@ -104,14 +104,14 @@ module.exports = function(grunt) {
         layout: 'layout.hbs',
         layoutdir: 'src/templates/layouts',
         assets: 'dist/assets',
-        partials: ['src/templates/pages/*.hbs', 'src/templates/parts/*.hbs']
+        partials: [ 'src/templates/pages/*.hbs', 'src/templates/parts/*.hbs' ]
       },
       demo: {
         options: {
-          data: ['src/data/*.{json,yml}']
+          data: [ 'src/data/*.{json,yml}' ]
         },
         files: {
-          'dist/': ['src/templates/pages/*.hbs']
+          'dist/': [ 'src/templates/pages/*.hbs' ]
         }
       }
     },
@@ -119,22 +119,22 @@ module.exports = function(grunt) {
     copy: {
       demo: {
         files: [
-          { expand: true, cwd: './css', src: ['./**/*.*'], dest: 'dist/assets/css' },
-          { expand: true, cwd: './js', src: ['./**/*.*'], dest: 'dist/assets/js' },
-          { expand: true, flatten: true, cwd: './bower_components/jQuery', src:['./dist/*.min.*'], dest: 'dist/assets/js/libs/' },
-          { expand: true, flatten: true, cwd: './bower_components/modernizr', src:['./modernizr.js'], dest: 'dist/assets/js/libs/' }
+          { expand: true, cwd: './css', src: [ './**/*.*' ], dest: 'dist/assets/css' },
+          { expand: true, cwd: './js', src: [ './**/*.*' ], dest: 'dist/assets/js' },
+          { expand: true, flatten: true, cwd: './bower_components/jQuery', src:[ './dist/*.min.*' ], dest: 'dist/assets/js/libs/' },
+          { expand: true, flatten: true, cwd: './bower_components/modernizr', src:[ './modernizr.js' ], dest: 'dist/assets/js/libs/' }
         ]
       },
       css: {
         files: [
-          { expand: true, cwd: './css', src: ['./**/*.*'], dest: 'dist/assets/css' }
+          { expand: true, cwd: './css', src: [ './**/*.*' ], dest: 'dist/assets/css' }
         ]
       },
       js: {
         files: [
-          { expand: true, flatten: true, cwd: './bower_components/jQuery', src: ['./dist/*.min.*'], dest: 'dist/assets/js/libs/' },
-          { expand: true, flatten: true, cwd: './bower_components/modernizr', src: ['./modernizr.js'], dest: 'dist/assets/js/libs/' },
-          { expand: true, cwd: './js', src: ['./**/*.*'], dest: 'dist/assets/js' }
+          { expand: true, flatten: true, cwd: './bower_components/jQuery', src: [ './dist/*.min.*' ], dest: 'dist/assets/js/libs/' },
+          { expand: true, flatten: true, cwd: './bower_components/modernizr', src: [ './modernizr.js' ], dest: 'dist/assets/js/libs/' },
+          { expand: true, cwd: './js', src: [ './**/*.*' ], dest: 'dist/assets/js' }
         ]
       }
     },
@@ -176,29 +176,29 @@ module.exports = function(grunt) {
           base: 'dist',
           repo: 'https://github.com/h5bp/Effeckt.css'
         },
-        src: ['**/*']
+        src: [ '**/*' ]
       }
     },
 
-    jshint:{
-      demo:['js/demo/*.js'],
-      modules:['js/modules/*.js'],
-      all:['js/**/*.js']
+    jshint: {
+      demo:[ 'js/demo/*.js' ],
+      modules:[ 'js/modules/*.js' ],
+      all:[ 'js/**/*.js' ]
     },
-    jscs:{
-      demo:['js/demo/*.js'],
-      modules:['js/modules/*.js'],
-      all:['js/**/*.js']
+    jscs: {
+      demo:[ 'js/demo/*.js' ],
+      modules:[ 'js/modules/*.js' ],
+      all:[ 'js/**/*.js' ]
     }
   });
 
-  grunt.registerTask('update', ['devUpdate']);
-  grunt.registerTask('default', ['sass', 'autoprefixer', 'assemble', 'copy']);
-  grunt.registerTask('scss', ['sass', 'autoprefixer', 'copy:css']);
-  grunt.registerTask('html', ['assemble']);
-  grunt.registerTask('js', ['copy:js', 'concat']);
-  grunt.registerTask('dev', ['connect', 'watch']);
-  grunt.registerTask('demo', ['copy:demo', 'assemble:demo']);
-  grunt.registerTask('deploy', ['gh-pages:remote']);
-  grunt.registerTask('quality', ['jshint:all','jscs:all']);
+  grunt.registerTask( 'update', [ 'devUpdate' ] );
+  grunt.registerTask( 'default', [ 'sass', 'autoprefixer', 'assemble', 'copy' ] );
+  grunt.registerTask( 'scss', [ 'sass', 'autoprefixer', 'copy:css' ] );
+  grunt.registerTask( 'html', [ 'assemble' ] );
+  grunt.registerTask( 'js', [ 'copy:js', 'concat' ] );
+  grunt.registerTask( 'dev', [ 'connect', 'watch' ] );
+  grunt.registerTask( 'demo', [ 'copy:demo', 'assemble:demo' ] );
+  grunt.registerTask( 'deploy', [ 'gh-pages:remote' ] );
+  grunt.registerTask( 'quality', [ 'jshint:all','jscs:all' ] );
 };

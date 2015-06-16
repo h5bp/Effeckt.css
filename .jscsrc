@@ -4,7 +4,6 @@
   "disallowMixedSpacesAndTabs": true,
   "disallowMultipleSpaces":true,
   "requireSemicolons":true,
-  "requireSpaceAfterObjectKeys": true,
   "requireSpaceAfterLineComment":true,
   "disallowTrailingComma":true,
   "requireMultipleVarDecl":true,
@@ -15,7 +14,7 @@
   "requireSpaceBeforeBinaryOperators":["="],
   "requireSpacesInsideParentheses":"all",
   "requireSpacesInsideArrayBrackets": "all",
-  "disallowSpaceAfterBinaryOperators":[","],
+  "disallowSpaceBeforeBinaryOperators":[","],
   "requireSpacesInAnonymousFunctionExpression":{
     "beforeOpeningCurlyBrace": true
   },
