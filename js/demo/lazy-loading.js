@@ -13,7 +13,7 @@ var EffecktLazyLoading = {
     this.wrapper = $('.effeckt-lazy-loading');
     this.needsPerspective = this.wrapper.data('effeckt-needs-perspective')?true:false;
 
-    this.viewportHeight = this.getViewportHeight();
+    this.viewportHeight = $(window).height();
 
     this.elements.each( function( i, el ) {
 
@@ -33,7 +33,7 @@ var EffecktLazyLoading = {
     });
 
     $(window).on( 'resize', function() {
-      self.viewportHeight = self.getViewportHeight();
+      self.viewportHeight = $(window).height();
     });
 
     $('.effeckt-lazy-loading-options input[type=radio]').on( 'click', function(){
@@ -45,7 +45,7 @@ var EffecktLazyLoading = {
   _scrollPage: function() {
 
     var self = this;
-    
+
     this.didScroll = false;
 
     if ( self.needsPerspective ) {
@@ -80,18 +80,6 @@ var EffecktLazyLoading = {
       // value in percentage (1 >= h >= 0)
       h = 0.75;
     return (elTop + (elHeight * h) + scrolled) <= viewed;
-  },
-
-  getViewportHeight: function() {
-
-    var docElement = document.documentElement,
-      client = docElement['clientHeight'],
-      inner = window['innerHeight'];
-
-    if( client < inner )
-      return inner;
-    else
-      return client;
   },
 
   _onScrollMethod : function() {

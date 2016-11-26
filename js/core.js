@@ -40,18 +40,6 @@
     this.transitionAnimationEndEvent = this.animationEndEventName + ' ' + this.transitionEndEventName;
   };
 
-  Effeckt.prototype.getViewportHeight = function() {
-
-    var docElement = document.documentElement,
-      client = docElement['clientHeight'],
-      inner = window['innerHeight'];
-
-    if( client < inner )
-      return inner;
-    else
-      return client;
-  };
-
   // Get all the properties for transition/animation end
   function getTransitionEndEventNames() {
     return _getEndEventNames( transitionEndEventNames );
